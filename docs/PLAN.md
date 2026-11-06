@@ -82,7 +82,7 @@ Download, pulizia ed export girano in locale su CPU: la GPU del PC (MX130, 2 GB)
 | # | Fase | Note |
 |---|---|---|
 | 0 | Setup, piano, `CLAUDE.md`, repository | ✅ 2026-11-06 |
-| 1 | Catalogo: album + lista specie in un file → validazione → `species.json`, schema, foglio di verifica con link (Portale della Flora d'Italia, Acta Plantarum, POWO) | si contano le foto iNat per specie: con troppe poche si cambia specie o si passa al genere |
+| 1 | Catalogo: album + lista specie in un file → validazione → `species.json`, schema, foglio di verifica con link (Portale della Flora d'Italia, Acta Plantarum, POWO) | ✅ 2026-11-06; i testi restano da verificare con `catalog/review/index.html` |
 | 2 | Design: `impeccable teach`, 3 mockup statici (2 Impeccable, 1 Taste) → scelta | |
 | 3 | Scheletro PWA: navigazione, temi, font offline, Dexie, offline, guida all'installazione, avviso iOS, deploy | anche skill `mobile-native` |
 | 4 | Fotocamera + mock + scatto → carta → collezione, animazione di spacchettamento | |

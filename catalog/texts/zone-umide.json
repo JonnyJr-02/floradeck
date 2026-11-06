@@ -1,0 +1,155 @@
+{
+  "iris-pseudacorus": {
+    "habitat": "Rive di fossi, canali, stagni e paludi",
+    "sizeNote": "Fiore 7–10 cm",
+    "description": "Grandi fiori giallo vivo, con i tepali esterni ricadenti e venati di bruno, su foglie a spada lunghe fino a un metro. Cresce con i piedi nell'acqua.",
+    "funFact": "Si dice che il giglio stilizzato dello stemma francese, il fleur-de-lis, sia proprio questo iris.",
+    "toxic": true,
+    "toxicNote": "Velenoso, soprattutto il rizoma."
+  },
+  "lythrum-salicaria": {
+    "habitat": "Rive, fossi, canneti e prati umidi",
+    "sizeNote": "Spighe 10–30 cm; fiori 1–2 cm",
+    "description": "Lunghe spighe di fiori magenta a sei petali stropicciati, che d'estate colorano le rive di fossi e canali. Attira moltissime api e farfalle.",
+    "funFact": "Darwin studiò a lungo i suoi fiori, che esistono in tre forme con stami e stili di lunghezze diverse."
+  },
+  "caltha-palustris": {
+    "habitat": "Prati umidi, sorgenti, rive di ruscelli e paludi",
+    "sizeNote": "Fiore 2,5–5 cm",
+    "description": "Grandi fiori giallo oro e lucidi, come smaltati, su foglie rotonde e carnose che crescono nell'acqua bassa. Fiorisce in primavera nei prati più bagnati.",
+    "funFact": "Visti in ultravioletto, come li vedono le api, i fiori mostrano un bersaglio scuro al centro.",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikes": ["ficaria-verna"]
+  },
+  "nuphar-lutea": {
+    "habitat": "Laghi, stagni e fiumi lenti",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "Fiori gialli quasi sferici che emergono dall'acqua su lunghi steli, tra grandi foglie galleggianti a cuore. Hanno un odore di alcol e frutta.",
+    "funFact": "In inglese è detto brandy-bottle, «bottiglia di brandy», per l'odore dei fiori e la forma dei frutti.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare."
+  },
+  "nymphaea": {
+    "habitat": "Laghi, stagni, canali e laghetti dei parchi",
+    "sizeNote": "Fiore 10–20 cm",
+    "description": "Grandi fiori bianchi o rosa che galleggiano tra foglie rotonde, aprendosi al mattino e chiudendosi nel pomeriggio. Nei laghetti dei parchi ci sono anche ibridi di tanti colori.",
+    "funFact": "Monet ne dipinse circa 250 quadri nel suo giardino di Giverny.",
+    "protected": null,
+    "protectionNote": "La ninfea bianca spontanea è tutelata in alcune regioni: da verificare."
+  },
+  "epilobium-hirsutum": {
+    "habitat": "Fossi, canali, rive e prati umidi",
+    "sizeNote": "Fiore 2–2,5 cm",
+    "description": "Fiori rosa intenso a quattro petali, con lo stigma bianco a croce, su piante alte e pelose lungo i fossi. I semi volano via con un ciuffo di peli bianchi.",
+    "funFact": "In inglese è detto codlins-and-cream, «mele cotte e panna», per il profumo delle foglie stropicciate.",
+    "lookalikes": ["chamaenerion-angustifolium"]
+  },
+  "lysimachia-vulgaris": {
+    "habitat": "Rive, fossi, paludi e boschi umidi",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Pannocchie di fiori giallo oro a stella, spesso con l'occhio arancio, in cima a fusti alti tra canne e carici. Fiorisce in piena estate.",
+    "funFact": "Un'ape solitaria, Macropis, raccoglie dai suoi fiori olio invece di nettare.",
+    "lookalikesOutside": ["Lysimachia punctata"]
+  },
+  "symphytum-officinale": {
+    "habitat": "Prati umidi, fossi e rive",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Grappoli ricurvi di campanelle viola, rosa o color crema, su piante ruvide con grandi foglie pelose. Fiorisce a lungo, da primavera a estate.",
+    "funFact": "Il nome viene dal greco «unire»: si credeva aiutasse a saldare le ossa rotte.",
+    "toxic": true,
+    "toxicNote": "Tossica se ingerita."
+  },
+  "impatiens-glandulifera": {
+    "habitat": "Rive dei fiumi, fossi e boschi umidi",
+    "sizeNote": "Fiore 2,5–4 cm; pianta fino a 2,5 m",
+    "description": "Fiori rosa a elmetto, profumati, su piante gigantesche e acquose lungo i fiumi. Arrivata dall'Himalaya, è diventata invasiva.",
+    "funFact": "Le capsule mature esplodono al minimo tocco e lanciano i semi a metri di distanza."
+  },
+  "menyanthes-trifoliata": {
+    "habitat": "Torbiere, paludi e rive di laghetti di montagna",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Fiori bianchi a stella, rosa in bocciolo, con i petali coperti da una frangia di peli candidi. Le foglie a tre foglioline emergono dall'acqua bassa.",
+    "funFact": "Tutta la pianta è amarissima: un tempo si usava al posto del luppolo nella birra.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare."
+  },
+  "butomus-umbellatus": {
+    "habitat": "Rive di fiumi, canali e stagni",
+    "sizeNote": "Fiori 2–3 cm, in ombrelle",
+    "description": "Ombrelle di fiori rosa a sei tepali in cima a steli lisci e alti, tra foglie strette e triangolari. È una delle piante acquatiche più eleganti.",
+    "funFact": "Nonostante il nome non è un giunco: è l'unica specie della sua famiglia."
+  },
+  "leucojum-aestivum": {
+    "habitat": "Prati umidi, boschi ripariali e rive, molto localizzato",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Campanelle bianche pendenti con la punta di ogni tepalo segnata da una macchia verde, a grappoli su steli alti. Nonostante il nome, fiorisce in primavera.",
+    "funFact": "Dal suo bulbo si estrae la galantamina, un farmaco usato contro l'Alzheimer.",
+    "protected": null,
+    "protectionNote": "Tutelato in diverse regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Bulbo velenoso.",
+    "lookalikes": ["galanthus-nivalis"],
+    "lookalikesOutside": ["Leucojum vernum"]
+  },
+  "calystegia-sepium": {
+    "habitat": "Siepi, canneti, rive e incolti umidi",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "Grandi trombe candide su liane che si avvolgono attorno a canne e arbusti. Alla base del fiore due grandi brattee verdi lo distinguono dal vilucchio comune.",
+    "funFact": "Le sue liane si avvolgono sempre nello stesso verso, in senso antiorario.",
+    "lookalikes": ["convolvulus-arvensis"]
+  },
+  "lychnis-flos-cuculi": {
+    "habitat": "Prati umidi, fossi e paludi",
+    "sizeNote": "Fiore 3–4 cm",
+    "description": "Fiori rosa con i petali divisi in quattro sottili lacinie, come stelle sfilacciate. Fioriscono in primavera nei prati più umidi.",
+    "funFact": "Il nome ricorda il periodo di fioritura, che coincide con il ritorno del cuculo."
+  },
+  "eupatorium-cannabinum": {
+    "habitat": "Rive, fossi e radure umide",
+    "sizeNote": "Infiorescenze 10–20 cm",
+    "description": "Grandi mazzi di fiorellini rosa-malva, simili a piumini, su piante alte con foglie divise come quelle della canapa. A fine estate attira moltissime farfalle.",
+    "funFact": "Il nome ricorda Mitridate Eupatore, re del Ponto, famoso per i suoi studi sui veleni.",
+    "toxic": true,
+    "toxicNote": "Tossica se ingerita."
+  },
+  "filipendula-ulmaria": {
+    "habitat": "Prati umidi, fossi e rive",
+    "sizeNote": "Infiorescenze 10–20 cm",
+    "description": "Nuvole di fiorellini color crema, profumati di mandorla e miele, in cima a fusti alti. Cresce in colonie nei prati più bagnati.",
+    "funFact": "Dai suoi fiori si isolò l'acido salicilico: la parola aspirina viene dal suo vecchio nome, Spiraea."
+  },
+  "ranunculus-acquatici": {
+    "habitat": "Ruscelli, fossi e stagni con acqua pulita",
+    "sizeNote": "Fiore 1–2 cm",
+    "description": "Tappeti di fiori bianchi dal centro giallo che galleggiano sull'acqua, sopra foglie sommerse sottili come capelli. Dove la corrente è lenta imbiancano interi ruscelli.",
+    "funFact": "Molte specie hanno due tipi di foglie: filiformi sott'acqua e lobate in superficie.",
+    "toxic": true,
+    "toxicNote": "Velenoso."
+  },
+  "persicaria-amphibia": {
+    "habitat": "Stagni, canali, rive e terreni umidi",
+    "sizeNote": "Spiga 2–4 cm",
+    "description": "Spighe dense di fiori rosa che spuntano dall'acqua tra foglie galleggianti ovali. Sa vivere sia in acqua sia sulla terraferma.",
+    "funFact": "La forma che cresce sulla terraferma ha foglie diverse e pelose: sembra un'altra pianta."
+  },
+  "parnassia-palustris": {
+    "habitat": "Prati umidi, torbiere e sorgenti di montagna",
+    "sizeNote": "Fiore 1,5–3 cm",
+    "description": "Un fiore bianco solitario, con i petali percorsi da venature trasparenti, in cima a uno stelo con una sola foglia a cuore. Al centro ha piccole frange con finte goccioline di nettare.",
+    "funFact": "Le finte gocce di nettare luccicano al sole e ingannano le mosche che lo impollinano."
+  },
+  "impatiens-noli-tangere": {
+    "habitat": "Boschi umidi, rive ombrose e sorgenti",
+    "sizeNote": "Fiore 2–3,5 cm",
+    "description": "Fiori giallo limone a forma di cornucopia, pendenti sotto le foglie e punteggiati di rosso all'interno. Ama l'ombra e l'umidità.",
+    "funFact": "Noli tangere significa «non toccarmi»: le capsule mature esplodono al minimo contatto."
+  },
+  "mentha-aquatica": {
+    "habitat": "Rive, fossi, paludi e prati umidi",
+    "sizeNote": "Infiorescenza 2–3 cm",
+    "description": "Teste rotonde di fiorellini lilla in cima ai fusti, tra foglie che profumano intensamente di menta. Cresce con i piedi nell'acqua o nel fango.",
+    "funFact": "È uno dei genitori della menta piperita, nata da un incrocio con la menta verde.",
+    "lookalikesOutside": ["Mentha"]
+  }
+}

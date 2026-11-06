@@ -1,0 +1,228 @@
+{
+  "leontopodium-nivale": {
+    "habitat": "Rupi, pendii erbosi sassosi e creste calcaree d'alta quota",
+    "sizeNote": "Infiorescenza 3–5 cm",
+    "description": "Una stella di brattee lanose bianco-argento che circonda un piccolo grappolo di capolini giallastri. Il feltro di peli la protegge dal freddo, dal vento e dalla luce intensa dell'alta quota.",
+    "funFact": "È il simbolo delle Alpi e dell'alpinismo; il nome scientifico significa «piede di leone».",
+    "protected": true,
+    "protectionNote": "Tutelata dalle leggi regionali dove cresce (da verificare regione per regione)."
+  },
+  "gentiana-acaulis-gruppo": {
+    "habitat": "Pascoli e pendii erbosi di montagna",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "Grandi trombe blu cobalto che sembrano spuntare direttamente dal terreno, quasi senza stelo. All'interno la gola è macchiata di verde.",
+    "funFact": "Il fiore si chiude quando il cielo si copre: è un piccolo barometro naturale.",
+    "protected": null,
+    "protectionNote": "Tutelata in diverse regioni: da verificare."
+  },
+  "gentiana-lutea": {
+    "habitat": "Pascoli e radure di montagna, su suoli profondi",
+    "sizeNote": "Fiori 3–4 cm; pianta 50–150 cm",
+    "description": "Una pianta robusta e alta, con grandi foglie a coppia e palchi di fiori giallo oro a stella. Le radici possono vivere per decenni.",
+    "funFact": "Dalle radici amarissime si ricavano amari e liquori. Attenzione: da giovane somiglia al veratro, che è velenosissimo.",
+    "protected": true,
+    "protectionNote": "Direttiva Habitat UE, allegato V: raccolta regolamentata.",
+    "lookalikesOutside": ["Veratrum album"]
+  },
+  "trollius-europaeus": {
+    "habitat": "Prati umidi e pascoli di montagna",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Fiori globosi giallo limone, con i sepali che restano chiusi a sfera come un bottone. Per entrare, piccoli insetti devono infilarsi da una fessura in cima.",
+    "funFact": "Alcune piccole mosche depongono le uova proprio dentro i fiori e, in cambio, li impollinano.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Velenoso."
+  },
+  "arnica-montana": {
+    "habitat": "Pascoli magri e brughiere di montagna, su suoli acidi",
+    "sizeNote": "Capolino 5–8 cm",
+    "description": "Grandi capolini giallo arancio dai petali un po' scomposti, su steli con poche foglie opposte. Cresce nei pascoli acidi e poveri, dove l'erba è bassa.",
+    "funFact": "È una celebre pianta medicinale per le contusioni, da usare solo sulla pelle: ingerita è tossica.",
+    "protected": true,
+    "protectionNote": "Direttiva Habitat UE, allegato V: raccolta regolamentata.",
+    "toxic": true,
+    "toxicNote": "Tossica se ingerita.",
+    "lookalikesOutside": ["Doronicum", "Senecio doronicum"]
+  },
+  "crocus-vernus": {
+    "habitat": "Prati e pascoli di montagna, appena si scioglie la neve",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Calici bianchi o viola che spuntano a migliaia appena la neve si ritira, con stami arancio vivo. Si aprono al sole e si chiudono al freddo.",
+    "funFact": "È parente stretto dello zafferano, ma i suoi stigmi non hanno lo stesso aroma.",
+    "lookalikes": ["colchicum-autumnale", "crocus-sativus"]
+  },
+  "soldanella": {
+    "habitat": "Vallette nivali, pascoli umidi e boschi di montagna",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Campanelle viola pendenti, sfrangiate sul bordo come piccoli ombrelli. Spesso fioriscono bucando lo strato di neve che si sta sciogliendo.",
+    "funFact": "Il nome viene da «soldo», per le foglie rotonde come monete."
+  },
+  "rhododendron-alpino": {
+    "habitat": "Pendii, boschi radi e brughiere di alta montagna",
+    "sizeNote": "Fiore 1,5–2 cm; arbusto fino a 1 m",
+    "description": "Arbusti bassi coperti a inizio estate da mazzetti di campanelle rosso-rosa. Il rododendro ferrugineo ha le foglie rugginose sotto; quello irsuto ha il bordo delle foglie peloso.",
+    "funFact": "Il miele di rododendro, raro e pregiato, si produce solo dove questi arbusti tappezzano i versanti.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Foglie velenose."
+  },
+  "pulsatilla-alpina": {
+    "habitat": "Pascoli e pendii sassosi di montagna",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "Grandi fiori bianchi, o gialli su suoli acidi, con un cuore di stami dorati su steli pelosi. Dopo la fioritura si trasformano in pennacchi argentei e arruffati.",
+    "funFact": "I frutti piumati vengono trasportati dal vento, come quelli della vitalba.",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikesOutside": ["Pulsatilla vernalis"]
+  },
+  "lilium-martagon": {
+    "habitat": "Boschi chiari, radure e prati di montagna",
+    "sizeNote": "Fiore 3–5 cm; pianta fino a 1,5 m",
+    "description": "Fiori rosa punteggiati di porpora, pendenti, con i tepali arrotolati all'indietro come un turbante. Ogni stelo può portarne una decina, disposti a candelabro.",
+    "funFact": "In inglese si chiama Turk's cap lily, «giglio a turbante», proprio per la forma dei fiori.",
+    "protected": null,
+    "protectionNote": "Tutelato in diverse regioni: da verificare."
+  },
+  "aster-alpinus": {
+    "habitat": "Pascoli sassosi e rupi soleggiate, su calcare",
+    "sizeNote": "Capolino 3–5 cm",
+    "description": "Capolini solitari con una raggiera di petali viola-lilla attorno a un disco giallo oro. Cresce a ciuffi bassi tra le rocce soleggiate.",
+    "funFact": "Aster in greco significa «stella», per la forma dei capolini.",
+    "lookalikesOutside": ["Erigeron alpinus"]
+  },
+  "paradisea-liliastrum": {
+    "habitat": "Prati e pascoli di montagna",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Fiori bianco candido a imbuto, profumati, rivolti tutti da un lato su uno stelo sottile. A inizio estate punteggiano i prati alpini come piccoli gigli.",
+    "funFact": "Il nome Paradisea ricorda il conte Giovanni Paradisi, politico e studioso modenese.",
+    "lookalikesOutside": ["Anthericum liliago"]
+  },
+  "campanula-barbata": {
+    "habitat": "Pascoli e prati di montagna, su suoli acidi",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Campanelle azzurro chiaro pendenti, con il bordo interno ornato da lunghi peli bianchi, come una barbetta. Sono tutte rivolte dallo stesso lato dello stelo.",
+    "funFact": "Campanula significa «piccola campana»."
+  },
+  "gentiana-verna": {
+    "habitat": "Pascoli e prati di montagna, appena si scioglie la neve",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Piccole stelle a cinque petali di un blu intensissimo, con la gola bianca, che spuntano da una rosetta di foglie. È tra le prime fioriture in quota.",
+    "funFact": "Il suo blu spicca anche da lontano, sull'erba ancora gialla dopo l'inverno.",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare.",
+    "lookalikesOutside": ["Gentiana brachyphylla", "Gentiana bavarica", "Gentiana nivalis"]
+  },
+  "viola-calcarata": {
+    "habitat": "Pascoli alpini e vallette nivali",
+    "sizeNote": "Fiore 2,5–4 cm",
+    "description": "Grandi fiori viola, talvolta gialli, con un lungo sperone, che sembrano enormi rispetto alla pianta minuscola. A inizio estate colorano interi pascoli alpini.",
+    "funFact": "Calcarata viene dal latino calcar, «sperone», per l'appendice posteriore del fiore."
+  },
+  "silene-acaulis": {
+    "habitat": "Rupi, creste e detriti d'alta quota",
+    "sizeNote": "Fiore 1 cm; cuscinetto fino a 30 cm",
+    "description": "Cuscinetti verdi e compatti che d'estate si coprono di fiorellini rosa, come un pouf ricamato. La forma a cuscino trattiene il calore e resiste al vento.",
+    "funFact": "Un cuscinetto cresce di pochi millimetri all'anno e può vivere per decenni."
+  },
+  "dryas-octopetala": {
+    "habitat": "Detriti, rupi e pendii sassosi calcarei d'alta quota",
+    "sizeNote": "Fiore 2,5–4 cm",
+    "description": "Fiori bianchi a otto petali con un ciuffo di stami gialli, su un tappeto di foglioline simili a quelle della quercia. Dopo la fioritura lascia pennacchi piumosi e attorcigliati.",
+    "funFact": "Il nome Dryas viene dalle driadi, le ninfe delle querce, per la forma delle foglie."
+  },
+  "ranunculus-glacialis": {
+    "habitat": "Morene, detriti e creste silicee d'alta quota",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Fiori bianchi che col tempo si tingono di rosa, su foglie carnose tra le pietre d'alta quota. È una delle piante che crescono più in alto in Europa.",
+    "funFact": "È stato trovato fiorito oltre i 4000 metri, sul Finsteraarhorn in Svizzera.",
+    "toxic": true,
+    "toxicNote": "Velenoso."
+  },
+  "saxifraga-oppositifolia": {
+    "habitat": "Rupi, detriti e creste d'alta quota",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Tappetini di foglioline minuscole che a inizio estate si coprono di fiori viola-porpora. È tra le prime piante a fiorire quando la neve si scioglie.",
+    "funFact": "Saxifraga significa «spaccasassi»: cresce nelle fessure delle rocce."
+  },
+  "primula-auricula": {
+    "habitat": "Rupi e pareti calcaree di montagna",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Mazzetti di fiori giallo intenso e profumati, su foglie carnose coperte da una polvere farinosa. Cresce sulle pareti rocciose, spesso in punti inaccessibili.",
+    "funFact": "Tra Seicento e Settecento le sue varietà coltivate erano collezionate con passione e mostrate in piccoli «teatri».",
+    "protected": null,
+    "protectionNote": "Tutelata in diverse regioni: da verificare."
+  },
+  "linaria-alpina": {
+    "habitat": "Ghiaioni e detriti d'alta quota",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Piccole bocche viola con il palato arancione acceso, su cuscinetti di foglioline azzurrognole tra i sassi. Sembra impossibile che un fiore così delicato viva nei ghiaioni.",
+    "funFact": "Radici lunghe e fusti flessibili le permettono di sopravvivere ai sassi che scivolano."
+  },
+  "aconitum-napellus": {
+    "habitat": "Pascoli umidi, radure e bordi dei torrenti, spesso vicino alle malghe",
+    "sizeNote": "Fiore 2–3 cm; pianta fino a 1,5 m",
+    "description": "Alte spighe di fiori blu-viola a forma di elmo, con il sepalo superiore a cappuccio. Cresce spesso attorno alle malghe, dove il terreno è ricco.",
+    "funFact": "È una delle piante più velenose d'Europa: le sue tossine passano anche attraverso la pelle.",
+    "toxic": true,
+    "toxicNote": "Velenosissimo: non toccarlo."
+  },
+  "astrantia-major": {
+    "habitat": "Prati e boschi chiari di montagna",
+    "sizeNote": "Ombrella 2–3 cm",
+    "description": "Piccole ombrelle di fiori bianco-rosati circondate da un collare di brattee appuntite, come una stella di carta. È un'ombrellifera insolita, che sembra quasi una margherita.",
+    "funFact": "Il nome viene da aster, «stella», per la forma delle brattee."
+  },
+  "phyteuma": {
+    "habitat": "Prati, pascoli e rupi di montagna",
+    "sizeNote": "Infiorescenza 1,5–4 cm",
+    "description": "Capolini sferici o allungati di fiori blu-viola stretti e ricurvi come artigli. A seconda della specie la testa è rotonda o a spiga.",
+    "funFact": "Fa parte della famiglia delle campanule, anche se non lo sembra."
+  },
+  "lilium-bulbiferum": {
+    "habitat": "Prati, pascoli e rupi di montagna",
+    "sizeNote": "Fiore 6–10 cm",
+    "description": "Grandi coppe arancio fuoco, punteggiate di scuro e rivolte verso l'alto. Fiorisce attorno alla festa di San Giovanni, a fine giugno.",
+    "funFact": "In alcune popolazioni alpine porta piccoli bulbilli all'ascella delle foglie, da cui il nome bulbiferum.",
+    "protected": null,
+    "protectionNote": "Tutelato in diverse regioni: da verificare.",
+    "lookalikes": ["hemerocallis-fulva"]
+  },
+  "bistorta-officinalis": {
+    "habitat": "Prati umidi e pascoli di montagna",
+    "sizeNote": "Spiga 3–7 cm",
+    "description": "Spighe rosa a forma di piccolo scovolino in cima a steli alti, spesso a migliaia nei prati umidi. Viste da lontano sembrano una nebbia rosa sull'erba.",
+    "funFact": "Il nome viene dal rizoma, contorto due volte su se stesso: bis torta."
+  },
+  "chamaenerion-angustifolium": {
+    "habitat": "Radure, tagli dei boschi, frane e bordi dei sentieri",
+    "sizeNote": "Fiore 2–3 cm; pianta fino a 1,5 m",
+    "description": "Alte spighe di fiori magenta a quattro petali, che colonizzano radure, frane e boschi bruciati. I semi, con un ciuffo di peli bianchi, volano lontano.",
+    "funFact": "In inglese si chiama fireweed, «erba del fuoco», perché è tra le prime piante a crescere dopo gli incendi.",
+    "lookalikes": ["epilobium-hirsutum"]
+  },
+  "pinguicula": {
+    "habitat": "Rocce stillicidiose, torbiere e prati umidi di montagna",
+    "sizeNote": "Fiore 1,5–3 cm",
+    "description": "Fiori viola con uno sperone, su una rosetta di foglie verde-giallastre, lucide e appiccicose. Le foglie catturano piccoli insetti e li digeriscono.",
+    "funFact": "Il nome viene dal latino pinguis, «grasso», per la superficie untuosa delle foglie.",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare."
+  },
+  "centaurea-montana-gruppo": {
+    "habitat": "Prati, radure e boschi chiari di montagna",
+    "sizeNote": "Capolino 5–8 cm",
+    "description": "Grandi capolini blu-viola, con i fiori esterni lunghi e sfrangiati come zampe di ragno e il centro porpora. Ricorda un fiordaliso, ma più grande e scompigliato.",
+    "funFact": "Le brattee del capolino sono bordate di nero, come ciglia: un buon indizio per riconoscerlo.",
+    "lookalikes": ["centaurea-cyanus"]
+  },
+  "sempervivum": {
+    "habitat": "Rupi, muri a secco e pendii sassosi di montagna",
+    "sizeNote": "Rosetta 2–8 cm; fiori 1,5–2,5 cm",
+    "description": "Rosette carnose come piccoli carciofi, da cui si alzano steli con fiori a stella rosa o porpora. Ogni rosetta fiorisce una sola volta e poi muore, lasciando il posto alle «figlie».",
+    "funFact": "Un tempo si piantava sui tetti perché si credeva tenesse lontani i fulmini."
+  }
+}

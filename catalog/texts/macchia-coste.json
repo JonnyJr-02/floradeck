@@ -1,0 +1,178 @@
+{
+  "cistus-creticus": {
+    "habitat": "Macchia, garighe e pinete costiere",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "Fiori rosa-porpora con i petali stropicciati come carta crespa e un cuore di stami gialli. Ogni fiore dura un solo giorno, ma l'arbusto ne produce a centinaia.",
+    "funFact": "Dalle foglie appiccicose di alcuni cisti si ricava il labdano, una resina usata in profumeria fin dall'antichità.",
+    "lookalikesOutside": ["Cistus albidus"]
+  },
+  "myrtus-communis": {
+    "habitat": "Macchia mediterranea e boschi costieri",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Fiori bianchi profumati con un ciuffo di stami lunghissimi, come piccoli fuochi d'artificio. In inverno lascia bacche blu-nere ricoperte di pruina.",
+    "funFact": "Nell'antica Roma era la pianta di Venere; in Sardegna le bacche danno il celebre liquore di mirto."
+  },
+  "lavandula-stoechas": {
+    "habitat": "Garighe, macchia bassa e pinete su suoli acidi",
+    "sizeNote": "Spiga 2–4 cm",
+    "description": "Spighe compatte di fiorellini viola scuro, sormontate da un ciuffo di brattee lilla come orecchie di coniglio. Tutta la pianta ha un profumo intenso e resinoso.",
+    "funFact": "Il nome stoechas viene dalle isole Stecadi, le attuali isole di Hyères in Francia.",
+    "lookalikes": ["lavandula-giardino"]
+  },
+  "spartium-junceum": {
+    "habitat": "Scarpate, macchia, incolti e bordi delle strade",
+    "sizeNote": "Fiore 2–2,5 cm; arbusto fino a 3 m",
+    "description": "Arbusti dai fusti verdi e sottili come giunchi, che a inizio estate si coprono di fiori gialli profumatissimi. Colonizza scarpate e terreni franosi.",
+    "funFact": "È la ginestra di Leopardi, «contenta dei deserti», che fiorisce sulle pendici del Vesuvio.",
+    "toxic": true,
+    "toxicNote": "Semi tossici.",
+    "lookalikesOutside": ["Cytisus scoparius", "Genista", "Calicotome"]
+  },
+  "asphodelus": {
+    "habitat": "Pascoli aridi, garighe e incolti",
+    "sizeNote": "Fiore 2–4 cm; pianta fino a 1,5 m",
+    "description": "Alte spighe di fiori bianchi a stella, con ogni tepalo percorso da una sottile riga bruna. In primavera trasforma i pascoli mediterranei in distese bianche.",
+    "funFact": "Nella mitologia greca i prati di asfodelo erano il luogo dove vagavano le anime dei morti."
+  },
+  "centranthus-ruber": {
+    "habitat": "Rupi, muri e ruderi, soprattutto vicino al mare",
+    "sizeNote": "Fiori 1 cm, in mazzetti",
+    "description": "Mazzetti rotondi di fiorellini rosso-rosa, a volte bianchi, su piante cespugliose dalle foglie glauche. Fiorisce su muri, scogliere e ruderi per gran parte dell'anno.",
+    "funFact": "Ogni fiore ha un lungo sperone sottile: solo le farfalle, con la loro proboscide, arrivano al nettare."
+  },
+  "capparis-spinosa": {
+    "habitat": "Muri, rupi e scogliere soleggiate",
+    "sizeNote": "Fiore 5–7 cm",
+    "description": "Grandi fiori bianchi o rosati con un ciuffo di lunghissimi stami viola, che si aprono la sera e appassiscono il giorno dopo. Cresce aggrappato a muri e scogliere.",
+    "funFact": "I capperi sono i boccioli chiusi; il frutto, più grosso, è il cucuncio."
+  },
+  "carpobrotus": {
+    "habitat": "Dune, scogliere e scarpate costiere",
+    "sizeNote": "Fiore 6–10 cm",
+    "description": "Grandi fiori magenta o gialli, simili a margherite lucide, su foglie carnose a sezione triangolare. Forma tappeti fitti che ricoprono dune e scogliere.",
+    "funFact": "Arriva dal Sudafrica ed è una delle piante invasive più dannose per le dune italiane."
+  },
+  "glaucium-flavum": {
+    "habitat": "Spiagge, dune e ghiaie costiere",
+    "sizeNote": "Fiore 5–7 cm",
+    "description": "Grandi fiori giallo limone dai petali sottili come seta, su foglie grigio-azzurre e carnose. Dopo la fioritura produce frutti lunghissimi e ricurvi, come corna.",
+    "funFact": "Le sue capsule possono superare i 20 centimetri di lunghezza.",
+    "toxic": true,
+    "toxicNote": "Velenoso."
+  },
+  "calystegia-soldanella": {
+    "habitat": "Dune e spiagge sabbiose",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Imbuti rosa con cinque strisce più chiare, su foglie carnose a forma di rene che strisciano sulla sabbia. È una delle piante che tengono ferme le dune.",
+    "funFact": "Come la soldanella di montagna, deve il nome alle foglie rotonde simili a monete, i «soldi».",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare.",
+    "lookalikes": ["convolvulus-arvensis"]
+  },
+  "eryngium-maritimum": {
+    "habitat": "Dune e spiagge sabbiose",
+    "sizeNote": "Capolino 1,5–3 cm; pianta 20–50 cm",
+    "description": "Una pianta argentea e spinosa, con foglie rigide come cuoio e capolini azzurro acciaio. Sembra un cardo, ma è parente della carota.",
+    "funFact": "Le foglie cerose riflettono la luce e limitano la perdita d'acqua sotto il sole delle dune.",
+    "protected": null,
+    "protectionNote": "Tutelata in diverse regioni: da verificare."
+  },
+  "pancratium-maritimum": {
+    "habitat": "Dune sabbiose costiere",
+    "sizeNote": "Fiore 10–15 cm",
+    "description": "Grandi fiori bianchi profumatissimi con una coroncina centrale, che sbocciano in piena estate direttamente sulla sabbia. Profumano soprattutto di sera, per attirare le falene.",
+    "funFact": "Per impollinarlo serve una falena notturna, la sfinge del convolvolo, con la sua lunghissima proboscide.",
+    "protected": null,
+    "protectionNote": "Tutelato in diverse regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Bulbo velenoso."
+  },
+  "cistus-salviifolius": {
+    "habitat": "Macchia, garighe e pinete",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Fiori bianchi con una macchietta gialla alla base dei petali, su un arbusto basso dalle foglie rugose simili alla salvia. È il cisto più diffuso nella macchia.",
+    "funFact": "Dopo gli incendi i semi dei cisti germinano in massa: il calore rompe il loro rivestimento duro.",
+    "lookalikesOutside": ["Cistus monspeliensis"]
+  },
+  "opuntia-ficus-indica": {
+    "habitat": "Rupi, muri e terreni aridi, soprattutto al Sud e nelle isole",
+    "sizeNote": "Fiore 5–7 cm",
+    "description": "Pale carnose e spinose da cui spuntano fiori giallo-arancio a coppa e frutti colorati. Arrivato dal Messico, è ormai un simbolo del paesaggio mediterraneo.",
+    "funFact": "Le pale non sono foglie ma fusti appiattiti; le foglie vere si sono trasformate in spine."
+  },
+  "phlomis-fruticosa": {
+    "habitat": "Garighe e macchia su calcare, soprattutto al Sud e nelle isole",
+    "sizeNote": "Fiore 2,5–3,5 cm",
+    "description": "Arbusti grigio-verdi con verticilli di grandi fiori gialli a labbro, disposti a piani lungo i fusti. Le foglie sono lanose come velluto.",
+    "funFact": "Il nome phlomis viene dal greco «fiamma»: un tempo le foglie lanose di piante simili si usavano come stoppini."
+  },
+  "anemone-coronaria": {
+    "habitat": "Prati aridi, oliveti e incolti mediterranei",
+    "sizeNote": "Fiore 4–7 cm",
+    "description": "Grandi coppe rosse, blu, viola o bianche con un cuore nero di stami, su un collare di foglie finemente divise. In alcune zone fiorisce a tappeto tra gli ulivi.",
+    "funFact": "Il mito greco la fa nascere dal sangue di Adone, l'amato di Venere.",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikes": ["anemone-hortensis"]
+  },
+  "erica-arborea": {
+    "habitat": "Macchia, boschi radi e pendii su suoli acidi",
+    "sizeNote": "Fiori 3 mm, in masse fitte; arbusto fino a 4 m",
+    "description": "Arbusti alti avvolti in primavera da una nuvola di minuscole campanelle bianche, profumate di miele. Da lontano sembrano spolverati di neve.",
+    "funFact": "Le pipe di radica si ricavano dal ciocco legnoso alla base delle sue radici."
+  },
+  "achillea-maritima": {
+    "habitat": "Dune e spiagge sabbiose",
+    "sizeNote": "Capolini 0,8–1 cm, a mazzetti",
+    "description": "Una pianta argentata e lanosa, quasi bianca, con mazzetti di bottoncini giallo oro. Il feltro di peli la protegge dal sole e dal sale.",
+    "funFact": "È diventata rara su molte coste italiane per l'erosione e il calpestio delle dune.",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare.",
+    "lookalikes": ["helichrysum"]
+  },
+  "cakile-maritima": {
+    "habitat": "Spiagge sabbiose, al limite delle onde",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Piccoli fiori lilla a quattro petali su una pianta carnosa che cresce fin dove arrivano le mareggiate. È spesso la prima pianta che si incontra dopo la battigia.",
+    "funFact": "I suoi frutti galleggiano e viaggiano con le correnti, colonizzando nuove spiagge."
+  },
+  "limonium": {
+    "habitat": "Scogliere, saline e terreni salati costieri",
+    "sizeNote": "Fiori 5–8 mm, in pannocchie",
+    "description": "Nuvole di minuscoli fiori lilla su steli ramificati e quasi senza foglie, sulle rocce battute dal mare. Le foglie, raccolte in rosetta, eliminano il sale in eccesso.",
+    "funFact": "In Italia ne esistono decine di specie, molte delle quali vivono su un solo tratto di costa.",
+    "protected": null,
+    "protectionNote": "Diverse specie endemiche sono tutelate: da verificare."
+  },
+  "matthiola": {
+    "habitat": "Scogliere, dune e muri vicino al mare",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Fiori viola, rosa o porpora a quattro petali, profumati soprattutto la sera, su foglie grigio-feltrose. Le specie selvatiche crescono su rupi e dune costiere.",
+    "funFact": "Il nome ricorda Pietro Andrea Mattioli, medico e botanico senese del Cinquecento."
+  },
+  "helichrysum": {
+    "habitat": "Garighe, dune e rupi costiere",
+    "sizeNote": "Capolini 3–5 mm, a mazzetti",
+    "description": "Mazzetti di bottoncini giallo oro su un cespuglio argentato, profumato di curry e liquirizia. I fiori secchi conservano il colore a lungo.",
+    "funFact": "Il nome significa «sole d'oro» in greco; in inglese è detto everlasting, «eterno», perché non appassisce.",
+    "lookalikes": ["achillea-maritima"]
+  },
+  "teucrium-fruticans": {
+    "habitat": "Rupi e macchia costiera; coltivato nelle siepi",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Fiori azzurro pallido con un grande labbro inferiore e stami lunghi e arcuati, su rami argentei. Spesso fiorisce anche in pieno inverno.",
+    "funFact": "Il fiore non ha il labbro superiore: stami e stilo sporgono liberi verso l'alto."
+  },
+  "tamarix": {
+    "habitat": "Coste, foci dei fiumi e terreni salati",
+    "sizeNote": "Grappoli 3–5 cm; arbusto o alberello",
+    "description": "Rami sottili coperti di foglioline a squama e, in primavera, di piumini rosa fatti di fiori minuscoli. Resiste al sale, al vento e alla sabbia.",
+    "funFact": "Le foglie espellono il sale in eccesso, che a volte si vede come una brina bianca sui rami."
+  },
+  "vitex-agnus-castus": {
+    "habitat": "Greti, foci e terreni umidi vicino al mare",
+    "sizeNote": "Spighe 10–20 cm; arbusto fino a 4 m",
+    "description": "Arbusti aromatici con foglie a forma di mano e lunghe spighe di fiori viola-lilla a fine estate. Cresce lungo i torrenti e le foci, vicino al mare.",
+    "funFact": "La pianta aveva fama di calmare i desideri: nei monasteri i suoi semi sostituivano il pepe."
+  }
+}

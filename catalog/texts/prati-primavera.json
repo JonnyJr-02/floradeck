@@ -1,0 +1,188 @@
+{
+  "bellis-perennis": {
+    "habitat": "Prati, pascoli, giardini e bordi dei sentieri",
+    "sizeNote": "Capolino 1,5–3 cm",
+    "description": "Il fiore più familiare dei prati: un piccolo capolino dal cuore giallo e una corona di petali bianchi, spesso sfumati di rosa sul bordo. Fiorisce quasi tutto l'anno e la sera, o quando piove, richiude i capolini.",
+    "funFact": "Il nome inglese daisy viene da «day's eye», l'occhio del giorno, perché si apre al mattino e si chiude al tramonto.",
+    "lookalikes": ["leucanthemum-vulgare"],
+    "lookalikesOutside": ["Erigeron annuus"]
+  },
+  "taraxacum": {
+    "habitat": "Prati, incolti, giardini e bordi delle strade, dalla pianura alla montagna",
+    "sizeNote": "Capolino 3–5 cm",
+    "description": "Un capolino giallo intenso su uno stelo cavo che, se spezzato, emette un lattice bianco. Dopo la fioritura si trasforma nel celebre soffione, una sfera di semi piumati che il vento disperde lontano.",
+    "funFact": "Le foglie dentellate gli hanno dato il nome «dente di leone», dal francese dent-de-lion.",
+    "lookalikesOutside": ["Hypochaeris radicata", "Crepis", "Leontodon"]
+  },
+  "primula-veris": {
+    "habitat": "Prati e pascoli asciutti, radure e margini dei boschi",
+    "sizeNote": "Fiori 1–1,5 cm, riuniti in un'ombrella",
+    "description": "Su uno stelo peloso si apre un mazzetto di campanelle giallo intenso, tutte rivolte dallo stesso lato, con una macchia arancio alla base dei petali. Il calice gonfio e chiaro e il profumo delicato la distinguono dalle altre primule.",
+    "funFact": "In tedesco si chiama Himmelsschlüssel, «chiave del cielo»: la leggenda vuole che sia nata dalle chiavi cadute a San Pietro.",
+    "lookalikes": ["primula-vulgaris"],
+    "lookalikesOutside": ["Primula elatior"]
+  },
+  "viola-odorata-gruppo": {
+    "habitat": "Siepi, margini dei boschi, prati ombrosi e giardini",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Piccoli fiori viola o bianchi con uno sperone posteriore, nascosti tra foglie a cuore. La mammola vera è profumatissima; le viole dei boschi, quasi identiche, non hanno profumo.",
+    "funFact": "Il profumo della mammola sembra svanire dopo pochi respiri: lo ionone che contiene «spegne» per un attimo i recettori dell'olfatto.",
+    "lookalikes": ["viola-wittrockiana"]
+  },
+  "muscari": {
+    "habitat": "Prati, oliveti, vigneti e incolti erbosi",
+    "sizeNote": "Infiorescenza 2–4 cm",
+    "description": "Spighe dense di minuscoli fiori blu a forma di campanella chiusa, come un grappolo d'uva in miniatura. Spuntano a inizio primavera e spesso colorano di blu interi prati e oliveti.",
+    "funFact": "Il nome viene dal greco moschos, il muschio profumato: alcune specie hanno un leggero odore muschiato.",
+    "lookalikes": ["leopoldia-comosa"]
+  },
+  "myosotis": {
+    "habitat": "Prati, boschi chiari, campi e rive umide",
+    "sizeNote": "Fiore 5–10 mm, in grappoli",
+    "description": "Piccoli fiori azzurro cielo con l'occhio giallo, riuniti in grappoli che si srotolano man mano che fioriscono. Il bocciolo è spesso rosato e diventa azzurro quando si apre.",
+    "funFact": "Il nome scientifico significa «orecchio di topo», per le foglie piccole e pelose; quello comune viene da una leggenda tedesca su due innamorati."
+  },
+  "salvia-pratensis": {
+    "habitat": "Prati aridi, pascoli e scarpate soleggiate",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Spighe di fiori blu-viola a forma di labbra spalancate, che si alzano da una rosetta di foglie rugose. Quando un bombo entra nel fiore, uno stame basculante gli spolvera il polline sulla schiena.",
+    "funFact": "Questo meccanismo a leva è uno degli esempi più eleganti di impollinazione studiati dai botanici.",
+    "lookalikes": ["salvia-officinalis"],
+    "lookalikesOutside": ["Salvia verbenaca"]
+  },
+  "ajuga-reptans": {
+    "habitat": "Prati umidi, radure e margini dei boschi",
+    "sizeNote": "Spiga 5–15 cm",
+    "description": "Spighe compatte di fiori blu-violetti a piani sovrapposti, spesso con le foglie superiori soffuse di viola. Si diffonde con stoloni striscianti e forma piccoli tappeti fioriti.",
+    "funFact": "Reptans significa «strisciante», per gli stoloni con cui colonizza il terreno.",
+    "lookalikesOutside": ["Ajuga genevensis", "Prunella vulgaris", "Glechoma hederacea"]
+  },
+  "trifolium-pratense": {
+    "habitat": "Prati, pascoli e bordi delle strade",
+    "sizeNote": "Capolino 2–3 cm",
+    "description": "Capolini rosa-porpora fatti di tanti piccoli fiori tubolari, sopra foglie a tre foglioline spesso segnate da una «V» chiara. È una delle piante più amate da api e bombi.",
+    "funFact": "Come le altre leguminose arricchisce il terreno di azoto, grazie ai batteri che vivono nelle sue radici.",
+    "lookalikes": ["trifolium-repens"],
+    "lookalikesOutside": ["Trifolium medium", "Trifolium incarnatum"]
+  },
+  "leucanthemum-vulgare": {
+    "habitat": "Prati, pascoli e scarpate, dalla pianura alla montagna",
+    "sizeNote": "Capolino 3–6 cm",
+    "description": "La classica margherita dei prati: un grande capolino con il disco giallo e una raggiera di petali bianchi, su steli alti e sottili. Fiorisce da primavera a estate e attira moltissimi insetti.",
+    "funFact": "Il gioco del «m'ama, non m'ama» si fa staccando i suoi «petali», che in realtà sono fiori interi.",
+    "lookalikes": ["bellis-perennis"],
+    "lookalikesOutside": ["Anthemis", "Tripleurospermum inodorum"]
+  },
+  "narcissus-poeticus": {
+    "habitat": "Prati e pascoli di montagna, su suoli freschi",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "Fiori candidi e profumatissimi con una piccola corona centrale gialla orlata di rosso. In alcuni pascoli appenninici e alpini fiorisce a migliaia, imbiancando interi versanti a maggio.",
+    "funFact": "Il nome rimanda al mito di Narciso, il giovane che si innamorò del proprio riflesso.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Bulbi e foglie velenosi.",
+    "lookalikes": ["narcissus-tazetta"]
+  },
+  "ornithogalum-umbellatum": {
+    "habitat": "Prati, oliveti, vigneti e incolti",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Stelle bianche a sei tepali, segnate all'esterno da una banda verde, riunite in un mazzetto piatto. I fiori si aprono solo con il sole e si richiudono nel pomeriggio.",
+    "funFact": "In inglese è la «stella di Betlemme», per la forma stellata dei fiori.",
+    "toxic": true,
+    "toxicNote": "Bulbo velenoso.",
+    "lookalikesOutside": ["Ornithogalum divergens"]
+  },
+  "ranunculus-acris-gruppo": {
+    "habitat": "Prati, pascoli e campi umidi",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Fiori giallo brillante con petali lucidi, come laccati, che riflettono la luce. I ranuncoli dei prati sono così simili tra loro che qui valgono come un'unica carta.",
+    "funFact": "La lucentezza viene da uno strato di cellule che riflette la luce come uno specchio: è il riflesso giallo del gioco del fiore sotto il mento.",
+    "toxic": true,
+    "toxicNote": "Tossico se ingerito, irritante per la pelle.",
+    "lookalikes": ["ficaria-verna"],
+    "lookalikesOutside": ["Potentilla"]
+  },
+  "trifolium-repens": {
+    "habitat": "Prati, tappeti erbosi e bordi dei sentieri",
+    "sizeNote": "Capolino 1,5–2,5 cm",
+    "description": "Capolini globosi bianchi o appena rosati su steli che partono da fusti striscianti. È il trifoglio dei prati falciati e dei giardini, dove forma tappeti fitti.",
+    "funFact": "Il quadrifoglio porta fortuna proprio perché in questa specie le foglie hanno quasi sempre tre foglioline.",
+    "lookalikes": ["trifolium-pratense"]
+  },
+  "ficaria-verna": {
+    "habitat": "Prati umidi, siepi, boschi chiari e argini",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Fiori giallo lucido a stella, con 8–12 petali, sopra foglie a cuore lucide e carnose. È tra le prime fioriture di fine inverno e scompare del tutto entro l'estate.",
+    "funFact": "Alla base delle foglie può formare piccoli bulbilli che si staccano e danno nuove piantine.",
+    "toxic": true,
+    "toxicNote": "Velenosa da cruda.",
+    "lookalikes": ["ranunculus-acris-gruppo", "caltha-palustris", "anemone-ranunculoides"]
+  },
+  "knautia": {
+    "habitat": "Prati, pascoli e bordi delle strade",
+    "sizeNote": "Capolino 2–4 cm",
+    "description": "Capolini piatti lilla, come piccoli puntaspilli, in cima a steli alti e ramificati. I fiori del bordo sono più grandi di quelli centrali e attirano farfalle e api.",
+    "funFact": "Un tempo si chiamava Scabiosa arvensis: il nome viene dalla scabbia, che si credeva potesse curare.",
+    "lookalikesOutside": ["Scabiosa"]
+  },
+  "lotus-corniculatus": {
+    "habitat": "Prati, pascoli, scarpate e bordi delle strade",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Piccoli fiori gialli a forma di farfalla, spesso tinti di rosso in bocciolo, riuniti in coroncine. I baccelli sottili, aperti a raggiera, ricordano una zampa d'uccello.",
+    "funFact": "In inglese ha decine di nomi popolari, tra cui «uova e pancetta», per il giallo e il rosso dei fiori.",
+    "lookalikesOutside": ["Hippocrepis comosa", "Lotus"]
+  },
+  "geranium-sanguineum": {
+    "habitat": "Prati aridi, margini dei boschi e pendii rocciosi",
+    "sizeNote": "Fiore 2,5–4 cm",
+    "description": "Fiori magenta intenso a cinque petali, solitari su lunghi peduncoli, tra foglie profondamente divise. In autunno le foglie si tingono di rosso, da cui il nome.",
+    "funFact": "Il frutto, allungato come un becco di gru, ha dato il nome al genere: geranos in greco significa gru."
+  },
+  "dianthus-carthusianorum-gruppo": {
+    "habitat": "Prati aridi, pendii sassosi e pascoli",
+    "sizeNote": "Fiori 1,5–2 cm, a mazzetti",
+    "description": "Mazzetti di fiori magenta con i petali dentellati, in cima a steli sottili e rigidi. Le brattee brunastre alla base dei fiori sono un buon indizio per riconoscerlo.",
+    "funFact": "Si dice che i monaci certosini lo coltivassero nei loro orti: da qui il nome."
+  },
+  "anemone-hortensis": {
+    "habitat": "Prati aridi, garighe, oliveti e incolti mediterranei",
+    "sizeNote": "Fiore 3–4 cm",
+    "description": "Un fiore a stella rosa o lilla con un ciuffo di stami blu scuro al centro, che spunta a fine inverno tra l'erba. È una delle prime fioriture dei prati mediterranei.",
+    "funFact": "Anemone viene dal greco anemos, «vento»: i fiori ondeggiano a ogni brezza sui loro steli sottili.",
+    "toxic": true,
+    "toxicNote": "Velenosa, come molte ranuncolacee.",
+    "lookalikes": ["anemone-coronaria"]
+  },
+  "narcissus-tazetta": {
+    "habitat": "Prati umidi, oliveti e incolti, soprattutto vicino al mare",
+    "sizeNote": "Fiori 2,5–4 cm, a mazzetti",
+    "description": "Mazzetti di fiori bianchi e profumati con una piccola coppa gialla al centro, già in pieno inverno. Ogni stelo porta da tre a dieci fiori.",
+    "funFact": "Il nome tazetta viene dall'italiano «tazzetta», per la piccola coppa al centro del fiore.",
+    "toxic": true,
+    "toxicNote": "Bulbi e foglie velenosi.",
+    "lookalikes": ["narcissus-poeticus"]
+  },
+  "rhinanthus": {
+    "habitat": "Prati da sfalcio e pascoli",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Fiori gialli a forma di bocca socchiusa, che spuntano da un calice gonfio e appiattito. Quando i semi maturano, il calice secco suona come un sonaglio se si scuote la pianta.",
+    "funFact": "È una semiparassita: con le radici sottrae acqua e nutrienti alle graminacee vicine, e così lascia più spazio agli altri fiori."
+  },
+  "anthyllis-vulneraria": {
+    "habitat": "Prati aridi, pendii sassosi e scarpate",
+    "sizeNote": "Capolino 2–4 cm",
+    "description": "Capolini rotondi di fiori gialli, a volte rossastri, avvolti in un calice lanoso e bianco. Spesso i capolini sono appaiati, come due pompon.",
+    "funFact": "Il nome viene dal latino vulnus, «ferita»: un tempo la si usava per curare le ferite."
+  },
+  "fritillaria": {
+    "habitat": "Prati umidi, pascoli e boschi radi, molto localizzata",
+    "sizeNote": "Fiore 2–4 cm",
+    "description": "Un'unica campanella pendente, a scacchi viola e porpora come un tessuto, in cima a uno stelo sottile. È tra i fiori più eleganti e più rari dei prati italiani.",
+    "funFact": "Il nome viene dal latino fritillus, il bussolotto dei dadi, forse per il disegno a scacchiera dei tepali.",
+    "protected": null,
+    "protectionNote": "Tutelata in diverse regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Bulbo velenoso."
+  }
+}

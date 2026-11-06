@@ -1,0 +1,156 @@
+{
+  "anacamptis-morio": {
+    "habitat": "Prati, pascoli e radure, dalla pianura alla montagna",
+    "sizeNote": "Fiore 1,5–2 cm; pianta 10–30 cm",
+    "description": "Spighe di fiori viola-porpora, a volte rosa o bianchi, con il cappuccio striato di venature verdi. È una delle orchidee più comuni nei prati di primavera.",
+    "funFact": "Le venature verdi del cappuccio le hanno dato il nome inglese green-winged orchid.",
+    "lookalikes": ["orchis-mascula"],
+    "lookalikesOutside": ["Anacamptis laxiflora"]
+  },
+  "anacamptis-pyramidalis": {
+    "habitat": "Prati aridi, scarpate e bordi delle strade",
+    "sizeNote": "Spiga 3–7 cm",
+    "description": "Spighe dense di fiori rosa acceso disposte a piramide, che si allungano man mano che fioriscono. Spesso cresce anche lungo le strade.",
+    "funFact": "Il polline si attacca alla proboscide delle farfalle come una minuscola sella.",
+    "lookalikes": ["gymnadenia-conopsea"]
+  },
+  "anacamptis-papilionacea": {
+    "habitat": "Prati aridi, garighe e oliveti, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Pochi fiori grandi, con il labello a ventaglio rosa striato di porpora sotto un cappuccio scuro. Ricorda davvero una farfalla posata.",
+    "funFact": "Papilionacea viene da papilio, «farfalla» in latino."
+  },
+  "orchis-purpurea": {
+    "habitat": "Boschi chiari, radure e prati, su calcare",
+    "sizeNote": "Spiga 5–15 cm; pianta fino a 80 cm",
+    "description": "Una grande spiga con il cappuccio porpora scuro e il labello chiaro punteggiato, come una dama con la gonna a pois. È una delle orchidee più grandi d'Italia.",
+    "funFact": "In inglese si chiama lady orchid, «orchidea della dama», proprio per quella silhouette.",
+    "lookalikesOutside": ["Orchis militaris"]
+  },
+  "orchis-simia": {
+    "habitat": "Prati aridi e boschi chiari su calcare",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Ogni fiore sembra una piccola scimmia: braccia e gambe sottili e ricurve, rosa-porpora, attorno a un corpo bianco punteggiato. La spiga è compatta e rotonda, e ogni fiore ha anche una piccola coda.",
+    "funFact": "A differenza di quasi tutte le orchidee, la sua spiga comincia a fiorire dalla cima.",
+    "lookalikesOutside": ["Orchis militaris"]
+  },
+  "orchis-italica": {
+    "habitat": "Prati aridi, garighe e oliveti, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Spighe dense e rotonde di fiori rosa, ognuno con un labello a forma di omino con braccia e gambe. Le foglie sono spesso ondulate e macchiate.",
+    "funFact": "Per la forma dei fiori in inglese è detta naked man orchid, «orchidea dell'uomo nudo»."
+  },
+  "orchis-mascula": {
+    "habitat": "Prati, pascoli e boschi chiari, fino in montagna",
+    "sizeNote": "Spiga 5–15 cm",
+    "description": "Spighe di fiori porpora con i sepali laterali alzati come ali e uno sperone rivolto verso l'alto. Le foglie sono spesso macchiate di scuro.",
+    "funFact": "Orchis in greco significa «testicolo», per la forma dei due tuberi.",
+    "lookalikes": ["anacamptis-morio"]
+  },
+  "neotinea-tridentata": {
+    "habitat": "Prati aridi e boschi chiari su calcare",
+    "sizeNote": "Spiga 2–4 cm",
+    "description": "Spighe rotonde e compatte di fiorellini rosa chiaro, con il labello punteggiato di porpora e diviso in tre lobi. Da lontano la spiga sembra un piccolo pompon rosa.",
+    "funFact": "Il nome tridentata si riferisce ai dentelli del labello."
+  },
+  "himantoglossum-robertianum": {
+    "habitat": "Prati, garighe, oliveti e bordi delle strade, soprattutto al Centro-Sud",
+    "sizeNote": "Spiga 10–25 cm; pianta fino a 60 cm",
+    "description": "Una grande orchidea robusta, con una spiga densa di fiori rosa-porpora e verdastri. È tra le prime orchidee a fiorire, già a gennaio sulle coste.",
+    "funFact": "Le grandi foglie lucide compaiono in autunno e restano verdi per tutto l'inverno."
+  },
+  "ophrys-apifera": {
+    "habitat": "Prati aridi, scarpate e incolti",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Sepali rosa aperti a stella attorno a un labello vellutato bruno e giallo che imita un'ape. È uno dei fiori più sorprendenti d'Europa.",
+    "funFact": "Le altre ofridi ingannano i maschi degli insetti; questa invece si autoimpollina quasi sempre.",
+    "lookalikesOutside": ["Ophrys"]
+  },
+  "ophrys-bertolonii": {
+    "habitat": "Prati aridi e garighe su calcare, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Sepali rosa vivo e un labello nero vellutato a forma di sella, con una placca lucida blu-viola come uno specchio. Cresce quasi solo in Italia e sulle coste dell'Adriatico.",
+    "funFact": "Il nome ricorda Antonio Bertoloni, autore della prima grande Flora Italica nell'Ottocento."
+  },
+  "ophrys-lutea-gruppo": {
+    "habitat": "Garighe, prati aridi e oliveti mediterranei",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Il labello ha un largo bordo giallo vivo attorno a una zona centrale bruna, come un insetto posato su un fiore giallo. Fiorisce in primavera nelle zone più calde e soleggiate.",
+    "funFact": "Inganna i maschi di alcune api solitarie, che provano ad accoppiarsi con il labello e si caricano di polline."
+  },
+  "ophrys-fuciflora-gruppo": {
+    "habitat": "Prati aridi e radure su calcare",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Sepali rosa e un labello largo e vellutato, bruno, con disegni chiari che sembrano geroglifici. Ogni pianta ha un disegno un po' diverso.",
+    "funFact": "Il suo profumo imita quello delle femmine di alcune api: i maschi ci cascano e la impollinano."
+  },
+  "ophrys-tenthredinifera": {
+    "habitat": "Garighe, prati aridi e oliveti, soprattutto al Sud e nelle isole",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Sepali rosa e un labello quadrato e peloso, bruno con un bordo giallo-verde. Fiorisce presto, a fine inverno, nelle zone più calde.",
+    "funFact": "Il nome viene dalle tentredini, insetti simili a vespe che un tempo si credeva la impollinassero."
+  },
+  "serapias": {
+    "habitat": "Prati umidi, garighe e oliveti, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 2–4 cm",
+    "description": "Fiori rosso-bruni a forma di lingua che sporge da un cappuccio a punta. Le diverse specie si distinguono soprattutto dalle dimensioni del labello.",
+    "funFact": "Alcuni insetti usano i suoi fiori a tubo come rifugio per la notte, e così li impollinano."
+  },
+  "cephalanthera-bianche": {
+    "habitat": "Boschi di faggio, di quercia e pinete",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Fiori bianchi o color crema, quasi sempre socchiusi, lungo uno stelo nel sottobosco. Sembrano piccole uova di porcellana.",
+    "funFact": "Vive in simbiosi con funghi del suolo legati alle radici degli alberi."
+  },
+  "cephalanthera-rubra": {
+    "habitat": "Boschi chiari e pinete, su calcare",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Fiori rosa-magenta a stella, ben aperti, lungo uno stelo sottile nella penombra dei boschi. Fiorisce in estate.",
+    "funFact": "Imita i fiori delle campanule per attirare le api che di solito le visitano."
+  },
+  "dactylorhiza-sambucina": {
+    "habitat": "Prati e pascoli di montagna",
+    "sizeNote": "Spiga 4–8 cm",
+    "description": "Spighe dense di fiori giallo pallido oppure rosso porpora, spesso mescolati nello stesso prato. Fiorisce in primavera in montagna.",
+    "funFact": "Il nome viene dal profumo, che ricorda quello dei fiori di sambuco."
+  },
+  "dactylorhiza-maculata-gruppo": {
+    "habitat": "Prati umidi, pascoli e boschi chiari",
+    "sizeNote": "Spiga 4–10 cm",
+    "description": "Spighe di fiori rosa chiaro disegnati con puntini e linee porpora, su foglie macchiate di scuro. Ogni fiore ha un disegno un po' diverso, come un ricamo.",
+    "funFact": "Dactylorhiza significa «radice a dita», per la forma dei tuberi."
+  },
+  "gymnadenia-conopsea": {
+    "habitat": "Prati e pascoli, dalla collina alla montagna",
+    "sizeNote": "Spiga 5–15 cm",
+    "description": "Spighe slanciate di fiori rosa-lilla con un lunghissimo sperone sottile, profumati di garofano. In montagna può colorare di rosa interi prati.",
+    "funFact": "Il lungo sperone è fatto per le farfalle: solo loro arrivano al nettare.",
+    "lookalikes": ["anacamptis-pyramidalis"]
+  },
+  "nigritella": {
+    "habitat": "Pascoli alpini e prati di montagna",
+    "sizeNote": "Infiorescenza 1,5–3 cm",
+    "description": "Piccole teste coniche di fiori rosso scuro o rosa, quasi neri in alcune specie, che profumano intensamente di vaniglia e cioccolato. Cresce nei pascoli alpini, tra l'erba bassa, ed è facile non notarla.",
+    "funFact": "Alcune specie fanno semi senza impollinazione: le piantine figlie sono cloni della madre.",
+    "lookalikes": ["traunsteinera-globosa"]
+  },
+  "limodorum-abortivum": {
+    "habitat": "Boschi radi e pinete, su calcare",
+    "sizeNote": "Fiore 3–4 cm; pianta fino a 80 cm",
+    "description": "Un'orchidea senza foglie verdi: stelo e fiori sono viola, come un asparago fiorito. Spunta a fine primavera nella penombra delle pinete e dei boschi radi.",
+    "funFact": "Ha pochissima clorofilla e si nutre soprattutto grazie ai funghi del suolo a cui è legata."
+  },
+  "platanthera": {
+    "habitat": "Prati, pascoli e boschi chiari",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Spighe di fiori bianchi con un labello stretto come una lingua e uno sperone lunghissimo. La sera profumano intensamente.",
+    "funFact": "Il profumo serale attira le falene notturne, che la impollinano."
+  },
+  "traunsteinera-globosa": {
+    "habitat": "Prati e pascoli di montagna",
+    "sizeNote": "Infiorescenza 2–3 cm",
+    "description": "Una sfera compatta di fiorellini rosa, con i petali che terminano in piccole punte a spatola, in cima a uno stelo sottile. Fiorisce in estate nei prati di montagna.",
+    "funFact": "Prende il nome da Joseph Traunsteiner, farmacista e botanico austriaco dell'Ottocento.",
+    "lookalikes": ["nigritella"]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "rosa-canina": {
+    "habitat": "Siepi, margini dei boschi e pascoli",
+    "sizeNote": "Frutto 1,5–2 cm",
+    "description": "I cinorrodi, ovali e rosso lucido, restano sui rami spinosi fino a inverno inoltrato. In primavera la pianta ha fiori semplici rosa pallido.",
+    "funFact": "I cinorrodi sono ricchissimi di vitamina C: durante la Seconda guerra mondiale in Inghilterra se ne raccoglievano tonnellate per farne sciroppi."
+  },
+  "crataegus-monogyna": {
+    "habitat": "Siepi, margini dei boschi e pascoli",
+    "sizeNote": "Frutto 0,8–1 cm",
+    "description": "Grappoli di piccoli frutti rosso scuro, ognuno con un solo nocciolo, su rami spinosi dalle foglie lobate. In primavera la siepe è bianca di fiori.",
+    "funFact": "Monogyna significa «con un solo stilo»: per questo ogni frutto ha un solo nocciolo.",
+    "lookalikes": ["pyracantha", "cotoneaster"],
+    "lookalikesOutside": ["Crataegus laevigata"]
+  },
+  "pyracantha": {
+    "habitat": "Siepi, giardini e parchi",
+    "sizeNote": "Frutto 0,5–0,8 cm",
+    "description": "Arbusti spinosi carichi in autunno di grappoli fittissimi di bacche arancio o rosse, che restano sui rami per tutto l'inverno. Si usa molto per le siepi difensive, proprio per le sue spine.",
+    "funFact": "Il nome significa «spina di fuoco» in greco, per il colore delle bacche.",
+    "lookalikes": ["cotoneaster", "crataegus-monogyna"]
+  },
+  "euonymus-europaeus": {
+    "habitat": "Siepi, boschi e rive",
+    "sizeNote": "Frutto 1–1,5 cm",
+    "description": "Capsule rosa acceso a quattro lobi che si aprono mostrando semi arancioni: sembrano piccoli cappelli da prete. In autunno anche le foglie diventano rosse.",
+    "funFact": "Il legno, duro e compatto, si usava per fare i fusi: da qui il nome fusaggine.",
+    "toxic": true,
+    "toxicNote": "Frutti e semi velenosi."
+  },
+  "ruscus-aculeatus": {
+    "habitat": "Boschi, macchia e siepi",
+    "sizeNote": "Bacca 1–1,5 cm",
+    "description": "Un arbusto basso con «foglie» rigide e appuntite, al centro delle quali spunta una bacca rosso vivo. In realtà quelle foglie sono rami appiattiti.",
+    "funFact": "Un tempo si metteva attorno ai salumi appesi per tenere lontani i topi.",
+    "protected": true,
+    "protectionNote": "Direttiva Habitat UE, allegato V; raccolta regolamentata in molte regioni."
+  },
+  "arbutus-unedo": {
+    "habitat": "Macchia mediterranea e boschi costieri",
+    "sizeNote": "Frutto 1,5–2,5 cm",
+    "description": "In autunno porta insieme fiori bianchi a campanella e frutti rossi e granulosi come fragole. I frutti impiegano un anno intero a maturare.",
+    "funFact": "Con foglie verdi, fiori bianchi e frutti rossi ricorda il tricolore: Pascoli gli dedicò l'ode «Al corbezzolo»."
+  },
+  "physalis-alkekengi": {
+    "habitat": "Margini dei boschi, vigneti e giardini",
+    "sizeNote": "Lanterna 3–5 cm",
+    "description": "Lanterne di carta arancio vivo che avvolgono una bacca rossa, appese ai fusti in autunno. Seccandosi, la lanterna diventa una delicata reticella.",
+    "funFact": "In inglese si chiama Chinese lantern, «lanterna cinese».",
+    "toxic": true,
+    "toxicNote": "Foglie e frutti acerbi tossici."
+  },
+  "viburnum-opulus": {
+    "habitat": "Boschi umidi, siepi e rive",
+    "sizeNote": "Frutto 0,8–1 cm",
+    "description": "Grappoli pendenti di bacche rosso brillante e traslucide, come perle di vetro, tra foglie lobate che in autunno diventano porpora. In primavera porta ombrelle bianche con un anello di grandi fiori sterili.",
+    "funFact": "È la pianta simbolo dell'Ucraina, dove si chiama kalyna.",
+    "toxic": true,
+    "toxicNote": "Bacche crude tossiche.",
+    "lookalikesOutside": ["Viburnum lantana"]
+  },
+  "arum-italicum": {
+    "habitat": "Siepi, boschi, oliveti e incolti ombrosi",
+    "sizeNote": "Spiga di bacche 5–10 cm",
+    "description": "In estate, quando le foglie sono già sparite, resta in piedi una spiga di bacche lucide che passano dal verde all'arancio al rosso. In primavera ha uno strano fiore a cappuccio.",
+    "funFact": "Il fiore si scalda di diversi gradi per diffondere un odore che attira i moscerini.",
+    "toxic": true,
+    "toxicNote": "Tutta la pianta è velenosa, bacche comprese.",
+    "lookalikesOutside": ["Arum maculatum"]
+  },
+  "sorbus-aucuparia": {
+    "habitat": "Boschi di montagna, radure e pascoli",
+    "sizeNote": "Frutti 0,8–1 cm, a grappoli",
+    "description": "Grandi grappoli di bacche arancio-rosso su un alberello dalle foglie divise come quelle del frassino. In autunno è una festa per tordi e merli.",
+    "funFact": "Gli uccellatori usavano le sue bacche come esca per catturare gli uccelli: da qui il nome.",
+    "toxic": true,
+    "toxicNote": "Bacche crude tossiche."
+  },
+  "ilex-aquifolium": {
+    "habitat": "Boschi di faggio e di quercia, siepi e giardini",
+    "sizeNote": "Bacca 0,7–1 cm",
+    "description": "Bacche rosso vivo tra foglie lucide e spinose, sempreverdi. Solo le piante femminili portano le bacche.",
+    "funFact": "Le foglie più in alto, fuori dalla portata degli animali, spesso non hanno spine.",
+    "protected": null,
+    "protectionNote": "Tutelato in diverse regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Bacche velenose."
+  },
+  "iris-foetidissima": {
+    "habitat": "Boschi, siepi e macchia ombrosa",
+    "sizeNote": "Capsula 4–6 cm",
+    "description": "In autunno le capsule si aprono in tre valve e mostrano file di semi rosso-arancio lucidi, che restano attaccati per mesi. In primavera ha fiori viola-grigiastri poco vistosi.",
+    "funFact": "Le foglie stropicciate hanno un odore che ricorda la carne arrosto.",
+    "toxic": true,
+    "toxicNote": "Velenoso."
+  },
+  "cornus-mas": {
+    "habitat": "Boschi, siepi e pendii soleggiati",
+    "sizeNote": "Frutto 1,5–2 cm",
+    "description": "In estate maturano drupe rosso ciliegia, allungate e lucide; a fine inverno i rami spogli si coprono di piccoli fiori gialli. È uno dei primi arbusti a fiorire, quando il bosco è ancora spoglio.",
+    "funFact": "Il legno è durissimo e serviva per le lance: secondo il mito, quella che Romolo scagliò sul Palatino mise radici."
+  },
+  "smilax-aspera": {
+    "habitat": "Macchia, siepi e boschi mediterranei",
+    "sizeNote": "Bacche 0,5–0,8 cm, a grappoli",
+    "description": "Una liana spinosa dalle foglie a cuore che in autunno e inverno porta grappoli di bacche rosse lucide. Si arrampica su tutta la macchia.",
+    "funFact": "In alcune zone è detta «stracciabraghe», per le spine che si impigliano nei vestiti."
+  },
+  "solanum-dulcamara": {
+    "habitat": "Siepi, rive, fossi e boschi umidi",
+    "sizeNote": "Bacca 1 cm",
+    "description": "Grappoli di bacche ovali che passano dal verde all'arancio al rosso, spesso insieme a fiori viola con un cono giallo al centro. È una liana erbacea che si appoggia a siepi e canneti.",
+    "funFact": "Il nome significa «dolce-amara», per il sapore dei fusti.",
+    "toxic": true,
+    "toxicNote": "Bacche e foglie velenose."
+  },
+  "prunus-spinosa": {
+    "habitat": "Siepi, margini dei boschi e pascoli",
+    "sizeNote": "Frutto 1–1,5 cm",
+    "description": "Piccole susine blu-nere coperte di pruina azzurrina, su rami fitti e spinosi. A marzo, prima delle foglie, la siepe si copre di fiori bianchi.",
+    "funFact": "Le prugnole diventano meno aspre dopo le prime gelate."
+  },
+  "phytolacca-americana": {
+    "habitat": "Incolti, margini dei boschi e bordi delle strade",
+    "sizeNote": "Grappoli 10–20 cm",
+    "description": "Grappoli pendenti di bacche nero-viola lucide su fusti rosso acceso, alti fino a due metri. Arriva dall'America ed è invasiva.",
+    "funFact": "Il succo delle bacche, rosso vivo, si usava un tempo per colorare il vino.",
+    "toxic": true,
+    "toxicNote": "Tutta la pianta è velenosa."
+  },
+  "berberis-vulgaris": {
+    "habitat": "Siepi, pendii aridi e boschi radi di montagna",
+    "sizeNote": "Bacca 1 cm",
+    "description": "Grappoli pendenti di bacche rosse allungate, su rami armati di spine a tre punte. In primavera ha fiorellini gialli.",
+    "funFact": "Se si tocca la base degli stami, scattano verso il centro del fiore e cospargono l'insetto di polline."
+  },
+  "hippophae-rhamnoides": {
+    "habitat": "Greti dei fiumi alpini e dune costiere",
+    "sizeNote": "Bacca 0,6–0,8 cm",
+    "description": "Rami spinosi letteralmente rivestiti di bacche arancio vivo, tra foglie strette e argentee. Cresce su ghiaie e sabbie dove poche piante resistono.",
+    "funFact": "Le bacche contengono moltissima vitamina C, più delle arance."
+  },
+  "vaccinium-myrtillus": {
+    "habitat": "Boschi di conifere, brughiere e pascoli di montagna",
+    "sizeNote": "Bacca 0,6–1 cm",
+    "description": "Piccoli arbusti con bacche blu-nere coperte di pruina, nascoste tra le foglioline. Il succo colora di viola le dita, e la lingua.",
+    "funFact": "A differenza del mirtillo coltivato, la polpa del mirtillo selvatico è viola anche dentro."
+  },
+  "vaccinium-vitis-idaea": {
+    "habitat": "Boschi di conifere e brughiere di montagna",
+    "sizeNote": "Bacca 0,5–1 cm",
+    "description": "Bacche rosso lucido a grappoli su un arbusto basso dalle foglie piccole, coriacee e sempreverdi. Spesso cresce accanto al mirtillo nero.",
+    "funFact": "Vitis-idaea significa «vite del monte Ida»."
+  },
+  "fragaria-vesca": {
+    "habitat": "Radure, margini dei boschi e scarpate",
+    "sizeNote": "Frutto 1–1,5 cm",
+    "description": "Piccole fragole rosse e profumatissime, pendenti tra foglie a tre foglioline dentate. Fiori bianchi e frutti spesso convivono sulla stessa pianta.",
+    "funFact": "I veri frutti sono i puntini sulla superficie: la parte rossa è il ricettacolo ingrossato.",
+    "lookalikesOutside": ["Potentilla indica"]
+  },
+  "rubus": {
+    "habitat": "Siepi, incolti e margini dei boschi",
+    "sizeNote": "Frutto 1–2 cm",
+    "description": "More nere e lucide, prima rosse e poi scure, su rami arcuati e spinosi. In estate la stessa pianta porta fiori bianchi o rosa, more acerbe e more mature.",
+    "funFact": "In Europa esistono centinaia di specie di rovo, che solo gli specialisti sanno distinguere."
+  },
+  "taxus-baccata": {
+    "habitat": "Boschi di montagna, forre e giardini",
+    "sizeNote": "Arillo 0,8–1 cm",
+    "description": "Coppe carnose rosso corallo, aperte in cima, che avvolgono un seme scuro, tra aghi piatti e lucidi. Solo le piante femminili le portano.",
+    "funFact": "È uno degli alberi più longevi d'Europa: alcuni esemplari hanno più di mille anni.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Tutta la pianta è velenosissima, seme compreso."
+  },
+  "cotoneaster": {
+    "habitat": "Giardini, siepi e rupi di montagna",
+    "sizeNote": "Bacca 0,5–1 cm",
+    "description": "Arbusti dai rami a spina di pesce o ricadenti, coperti in autunno di bacche rosse. Molte specie sono coltivate; alcune crescono spontanee sulle rupi.",
+    "funFact": "Il nome significa «simile al cotogno», per la forma delle foglie.",
+    "lookalikes": ["pyracantha", "crataegus-monogyna"]
+  },
+  "colchicum-autumnale": {
+    "habitat": "Prati e pascoli umidi, dalla collina alla montagna",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "In autunno spuntano dal prato fiori rosa-lilla senza foglie, simili a crochi; le foglie compaiono solo la primavera dopo. Somiglia allo zafferano, ma è velenosissimo.",
+    "funFact": "Ha sei stami, mentre i crochi ne hanno tre: è il modo più sicuro per distinguerli.",
+    "toxic": true,
+    "toxicNote": "Velenosissimo in ogni sua parte.",
+    "lookalikes": ["crocus-vernus", "crocus-sativus"]
+  },
+  "sternbergia-lutea": {
+    "habitat": "Pendii aridi, oliveti e prati sassosi, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 4–5 cm",
+    "description": "Calici giallo oro, simili a grossi crochi, che spuntano a fine estate e in autunno tra foglie verdi e lucide. Cresce in colonie che in autunno accendono di giallo i pendii aridi.",
+    "funFact": "Secondo alcuni studiosi i «gigli del campo» del Vangelo potrebbero essere proprio questi fiori.",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Bulbo velenoso."
+  },
+  "symphyotrichum": {
+    "habitat": "Rive dei fiumi, incolti e giardini",
+    "sizeNote": "Capolino 2–4 cm",
+    "description": "Nuvole di capolini lilla o viola dal centro giallo, che fioriscono a fine estate e in autunno. Arrivati dall'America come piante ornamentali, oggi crescono lungo molti fiumi.",
+    "funFact": "In inglese sono detti Michaelmas daisies, perché fioriscono attorno a San Michele, il 29 settembre."
+  },
+  "solidago": {
+    "habitat": "Incolti, rive, ferrovie e margini dei boschi",
+    "sizeNote": "Pannocchie 10–30 cm",
+    "description": "Pennacchi di minuscoli fiori giallo oro in cima a fusti alti, che a fine estate colorano incolti e argini. Le specie americane sono diventate invasive.",
+    "funFact": "Thomas Edison tentò di ricavarne gomma per gli pneumatici."
+  }
+}

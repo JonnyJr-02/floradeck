@@ -1,0 +1,203 @@
+{
+  "papaver-rhoeas": {
+    "habitat": "Campi di cereali, incolti, scarpate e bordi delle strade",
+    "sizeNote": "Fiore 5–10 cm",
+    "description": "Petali rossi sottili come carta velina, spesso con una macchia nera alla base, che si aprono da boccioli pelosi e penduli. Ogni fiore dura appena un giorno, ma la pianta ne produce in continuazione per settimane.",
+    "funFact": "I suoi semi restano vivi nel terreno per decenni e germogliano quando la terra viene smossa: per questo i papaveri fiorirono sui campi di battaglia della Grande Guerra.",
+    "lookalikesOutside": ["Papaver dubium"]
+  },
+  "centaurea-cyanus": {
+    "habitat": "Campi di cereali, incolti e prati seminati",
+    "sizeNote": "Capolino 2–3 cm",
+    "description": "Capolini di un blu intenso, con i fiori del bordo grandi e frangiati come piccole trombette. Un tempo comunissimo nel grano, oggi è più raro a causa dei diserbanti.",
+    "funFact": "Il suo blu è così puro che in inglese ha dato il nome a una tonalità, il cornflower blue.",
+    "lookalikes": ["centaurea-montana-gruppo"]
+  },
+  "cichorium-intybus": {
+    "habitat": "Bordi delle strade, incolti e prati aridi",
+    "sizeNote": "Capolino 3–4 cm",
+    "description": "Capolini azzurro cielo dai petali dentellati, sparsi lungo fusti rigidi e quasi senza foglie. I fiori si aprono al mattino e si chiudono verso mezzogiorno.",
+    "funFact": "Linneo la inserì nel suo «orologio dei fiori», perché apre e chiude i capolini a orari regolari.",
+    "lookalikesOutside": ["Lactuca perennis"]
+  },
+  "echium-vulgare": {
+    "habitat": "Incolti sassosi, scarpate, bordi delle strade e massicciate",
+    "sizeNote": "Fiore 1,5–2 cm; pianta 30–100 cm",
+    "description": "Una spiga ispida di fiori a imbuto che passano dal rosa al blu intenso, con lunghi stami rossi sporgenti. Cresce nei luoghi più aridi e sassosi, anche sulle massicciate ferroviarie.",
+    "funFact": "Il nome viene dal greco echis, «vipera»: i semi ricordano la testa di un serpente e un tempo la si credeva utile contro i morsi.",
+    "toxic": true,
+    "toxicNote": "Tossica se ingerita.",
+    "lookalikesOutside": ["Echium plantagineum"]
+  },
+  "convolvulus-arvensis": {
+    "habitat": "Campi, orti, incolti e bordi delle strade",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Piccoli imbuti bianchi o rosati, spesso con raggi più scuri, su fusti che si avvolgono a spirale attorno a ogni sostegno. È un'erbaccia tenacissima, dai fiori delicatissimi.",
+    "funFact": "Le radici possono scendere per diversi metri nel terreno: per questo è così difficile da estirpare.",
+    "lookalikes": ["calystegia-sepium", "calystegia-soldanella"]
+  },
+  "malva-sylvestris": {
+    "habitat": "Incolti, bordi delle strade, macerie e campi",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Grandi fiori rosa-viola con cinque petali smarginati, percorsi da venature più scure. Fiorisce per mesi, dalla primavera all'autunno, lungo strade e ruderi.",
+    "funFact": "È una delle piante medicinali più antiche d'Europa: «la malva, da ogni mal ti salva», dice il proverbio.",
+    "lookalikesOutside": ["Malva neglecta", "Malva olbia"]
+  },
+  "linaria-vulgaris": {
+    "habitat": "Incolti, scarpate, bordi delle strade e massicciate",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Spighe di fiori gialli con la bocca arancione e un lungo sperone, simili a piccole bocche di leone. Per entrare nel fiore serve un insetto robusto, come un bombo, capace di aprirne le labbra.",
+    "funFact": "Le foglie strette e fitte ricordano quelle del lino, da cui il nome."
+  },
+  "verbascum": {
+    "habitat": "Incolti, scarpate, radure e bordi delle strade",
+    "sizeNote": "Fiore 2–3 cm; pianta fino a 2 m",
+    "description": "Alte candele di fiori gialli che si aprono pochi alla volta, spesso su foglie grandi e vellutate. Le diverse specie si distinguono soprattutto dai peli degli stami.",
+    "funFact": "Un tempo gli steli secchi, intinti nel grasso, si usavano come torce: in inglese una specie è detta ancora «candela delle streghe»."
+  },
+  "silene-vulgaris": {
+    "habitat": "Prati aridi, incolti, scarpate e bordi delle strade",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Fiori bianchi dai petali profondamente incisi, che escono da un calice gonfio come un palloncino venato di rosa. Se si schiaccia il calice, scoppia con un piccolo schiocco.",
+    "funFact": "Nella cucina tradizionale è nota come strigoli, sclopit o bubbolini, a seconda della regione."
+  },
+  "calendula-arvensis": {
+    "habitat": "Campi, vigneti, oliveti e incolti, soprattutto al Centro-Sud",
+    "sizeNote": "Capolino 1–2 cm",
+    "description": "Piccoli capolini arancio intenso che punteggiano campi e vigneti anche in pieno inverno. I frutti, curvi e uncinati, sembrano minuscoli artigli.",
+    "funFact": "Il nome Calendula viene dalle calende, il primo giorno del mese: si diceva che fiorisse a ogni inizio di mese.",
+    "lookalikes": ["calendula-officinalis"]
+  },
+  "gladiolus-italicus": {
+    "habitat": "Campi di cereali, prati e incolti, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 3–4 cm",
+    "description": "Una spiga di fiori magenta, tutti rivolti dallo stesso lato, su foglie a forma di spada. Fiorisce in primavera tra il grano ancora verde.",
+    "funFact": "Gladiolus significa «piccola spada», per la forma delle foglie."
+  },
+  "hypericum-perforatum": {
+    "habitat": "Prati aridi, radure, scarpate e bordi delle strade",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Fiori giallo oro con cinque petali e un fitto ciuffo di stami, spesso con puntini neri sul bordo. Guardata controluce, una foglia appare bucherellata da minuscoli punti trasparenti.",
+    "funFact": "Fiorisce attorno al 24 giugno, festa di San Giovanni: la tradizione voleva che si raccogliesse quella notte.",
+    "toxic": true,
+    "toxicNote": "Può rendere la pelle sensibile al sole; interagisce con molti farmaci.",
+    "lookalikesOutside": ["Hypericum"]
+  },
+  "silybum-marianum": {
+    "habitat": "Incolti, pascoli, ruderi e bordi delle strade",
+    "sizeNote": "Capolino 4–8 cm; pianta fino a 1,5 m",
+    "description": "Grandi capolini porpora protetti da brattee spinose, sopra foglie lucide marmorizzate di bianco. È il cardo più facile da riconoscere, proprio per quelle venature candide.",
+    "funFact": "Una leggenda dice che le macchie bianche siano gocce del latte della Madonna: da qui il nome «mariano»."
+  },
+  "nigella-damascena": {
+    "habitat": "Campi, incolti e prati aridi, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 3–4 cm",
+    "description": "Un fiore azzurro pallido circondato da un velo di foglie sottilissime, come capelli scompigliati. Dopo la fioritura resta una capsula gonfia e striata, molto decorativa.",
+    "funFact": "In inglese si chiama love-in-a-mist, «amore nella nebbia», per quel velo di foglie attorno al fiore."
+  },
+  "leopoldia-comosa": {
+    "habitat": "Campi, vigneti, oliveti e prati aridi",
+    "sizeNote": "Pianta 20–50 cm",
+    "description": "Una spiga con fiori bruni in basso e, in cima, un ciuffo di fiori sterili viola acceso su lunghi peduncoli. Il ciuffo, che fa da richiamo per gli insetti, lo rende inconfondibile.",
+    "funFact": "Nel Sud Italia i suoi bulbi sono i lampascioni, una specialità della cucina tradizionale.",
+    "lookalikes": ["muscari"]
+  },
+  "lamium-purpureum": {
+    "habitat": "Orti, campi, giardini e incolti",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Piccoli fiori rosa-porpora a labbro, nascosti tra foglie superiori che si tingono di viola. Somiglia a un'ortica, ma non punge affatto.",
+    "funFact": "È una delle prime fonti di nettare per le api a fine inverno.",
+    "lookalikesOutside": ["Lamium amplexicaule"]
+  },
+  "dipsacus-fullonum": {
+    "habitat": "Incolti, fossi, bordi delle strade e campi abbandonati",
+    "sizeNote": "Capolino 5–8 cm; pianta fino a 2 m",
+    "description": "Capolini ovali e spinosi su cui i fiori lilla si aprono ad anelli, partendo dal centro. Le foglie, unite alla base, formano piccole coppe che raccolgono l'acqua piovana.",
+    "funFact": "I capolini secchi di una specie parente servivano a cardare la lana: da qui il nome."
+  },
+  "daucus-carota": {
+    "habitat": "Prati aridi, incolti e bordi delle strade",
+    "sizeNote": "Ombrella 5–10 cm",
+    "description": "Ombrelle piatte di minuscoli fiori bianchi, spesso con un unico fiorellino porpora al centro; dopo la fioritura l'ombrella si richiude a nido d'uccello. Attenzione: ombrellifere simili, come la cicuta, sono velenosissime.",
+    "funFact": "È l'antenata selvatica della carota dell'orto, che deve il colore arancione a una selezione fatta molti secoli dopo.",
+    "lookalikesOutside": ["Conium maculatum", "Ammi majus", "Orlaya grandiflora", "Torilis"]
+  },
+  "oenothera": {
+    "habitat": "Greti dei fiumi, massicciate e incolti sabbiosi",
+    "sizeNote": "Fiore 3–6 cm",
+    "description": "Grandi fiori giallo limone a quattro petali, che si aprono al tramonto e appassiscono il giorno dopo. Arrivate dall'America, oggi colonizzano greti e massicciate.",
+    "funFact": "I fiori si spalancano in pochi minuti al crepuscolo e attirano le falene con il loro profumo."
+  },
+  "cymbalaria-muralis": {
+    "habitat": "Vecchi muri, rocce e fessure ombrose",
+    "sizeNote": "Fiore 0,8–1,2 cm",
+    "description": "Minuscoli fiori lilla con una macchia gialla sul labbro, che pendono dai muri tra foglioline rotonde e lobate. È uno dei fiori più comuni delle città storiche.",
+    "funFact": "Dopo la fioritura i peduncoli si voltano verso il muro e «piantano» i semi nelle fessure."
+  },
+  "antirrhinum-majus": {
+    "habitat": "Muri, rupi e giardini; naturalizzata in molte città",
+    "sizeNote": "Fiore 3–4 cm",
+    "description": "Spighe di fiori rosa o porpora a forma di bocca chiusa, che si apre se si stringono i lati. Spontanea sulle rupi mediterranee, oggi fiorisce anche su muri e marciapiedi.",
+    "funFact": "Solo bombi abbastanza pesanti riescono ad aprire la «bocca» e raggiungere il nettare."
+  },
+  "lathyrus-latifolius": {
+    "habitat": "Siepi, scarpate, bordi delle strade e incolti",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Grappoli di fiori a farfalla rosa-magenta su fusti alati che si arrampicano con i viticci. Somiglia a un pisello odoroso, ma senza profumo.",
+    "funFact": "È parente stretta del pisello odoroso dei giardini, Lathyrus odoratus.",
+    "toxic": true,
+    "toxicNote": "Semi tossici.",
+    "lookalikesOutside": ["Lathyrus sylvestris"]
+  },
+  "tragopogon-porrifolius": {
+    "habitat": "Prati aridi, incolti e bordi delle strade, soprattutto al Centro-Sud",
+    "sizeNote": "Capolino 4–6 cm",
+    "description": "Capolini viola con lunghe brattee verdi che sporgono oltre i fiori come i raggi di una stella. Si aprono al mattino e si chiudono prima di mezzogiorno.",
+    "funFact": "Dopo la fioritura forma un soffione enorme, simile a quello del tarassaco ma grande come una palla da tennis."
+  },
+  "legousia-speculum-veneris": {
+    "habitat": "Campi di cereali e incolti",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Piccoli fiori viola a stella, larghi e piatti, che si aprono al sole tra le spighe del grano. È diventato raro con l'agricoltura intensiva.",
+    "funFact": "Il nome viene dai semi lucidi e piatti, che ricordano minuscoli specchi."
+  },
+  "glebionis-coronaria": {
+    "habitat": "Incolti, bordi delle strade e campi, soprattutto al Sud e nelle isole",
+    "sizeNote": "Capolino 3–6 cm",
+    "description": "Capolini giallo oro, a volte con i petali bianchi all'esterno e gialli al centro, che in primavera tingono di giallo intere scarpate. Le foglie sono finemente divise.",
+    "funFact": "In Asia orientale una sua varietà si coltiva come verdura: è lo shungiku della cucina giapponese."
+  },
+  "saponaria-officinalis": {
+    "habitat": "Greti, fossi, bordi delle strade e incolti umidi",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Mazzetti di fiori rosa pallido, profumati la sera, con cinque petali ben separati. Forma colonie lungo i fiumi e le strade di campagna.",
+    "funFact": "Le radici, strofinate nell'acqua, fanno schiuma: un tempo servivano a lavare i tessuti delicati.",
+    "toxic": true,
+    "toxicNote": "Tossica se ingerita (saponine)."
+  },
+  "anchusa-azurea": {
+    "habitat": "Campi, incolti e bordi delle strade, soprattutto al Centro-Sud",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Fiori di un blu elettrico con un piccolo anello bianco al centro, su piante ispide e ramificate. Spicca da lontano tra il grano e le erbe secche.",
+    "funFact": "Il nome buglossa significa «lingua di bue», per le foglie ruvide e allungate.",
+    "lookalikes": ["borago-officinalis"]
+  },
+  "foeniculum-vulgare": {
+    "habitat": "Incolti, scarpate e bordi delle strade, soprattutto al Centro-Sud",
+    "sizeNote": "Ombrella 5–15 cm; pianta fino a 2 m",
+    "description": "Alte piante con foglie sottili come capelli e ombrelle di fiori giallo vivo, profumate di anice. In estate disegnano nuvole gialle lungo le strade di campagna.",
+    "funFact": "I suoi semi aromatici si usano da millenni in cucina e nelle tisane digestive.",
+    "lookalikesOutside": ["Ferula communis"]
+  },
+  "tulipa-sylvestris": {
+    "habitat": "Vigneti, oliveti, frutteti e prati, molto localizzato",
+    "sizeNote": "Fiore 4–6 cm",
+    "description": "Un tulipano giallo e profumato, con i tepali appuntiti e il bocciolo che pende come se si inchinasse. Cresce soprattutto nelle colture tradizionali, dove il terreno non viene lavorato in profondità.",
+    "funFact": "La parola tulipano viene dal turco tülbent, «turbante», per la forma del fiore.",
+    "protected": null,
+    "protectionNote": "Tutelato in diverse regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Bulbo tossico.",
+    "lookalikes": ["tulipa-gesneriana"]
+  }
+}

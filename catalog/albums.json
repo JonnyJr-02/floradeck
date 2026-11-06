@@ -1,0 +1,82 @@
+[
+  {
+    "id": "prati-primavera",
+    "name": "Prati di primavera",
+    "description": "Fioriture di prati e pascoli di pianura e collina, da marzo a giugno.",
+    "order": 1,
+    "speciesCount": 24,
+    "rareSpeciesId": "fritillaria"
+  },
+  {
+    "id": "campi-bordi-strada",
+    "name": "Campi e bordi di strada",
+    "description": "Fiori di campi coltivati, incolti, bordi delle strade e vecchi muri.",
+    "order": 2,
+    "speciesCount": 29,
+    "rareSpeciesId": "tulipa-sylvestris"
+  },
+  {
+    "id": "montagna-pascoli",
+    "name": "Montagna e pascoli alpini",
+    "description": "Pascoli, rocce e pendii di montagna, in gran parte sopra i 1000 m.",
+    "order": 3,
+    "speciesCount": 30,
+    "rareSpeciesId": "leontopodium-nivale"
+  },
+  {
+    "id": "macchia-coste",
+    "name": "Macchia mediterranea e coste",
+    "description": "Macchia, garighe, dune e scogliere.",
+    "order": 4,
+    "speciesCount": 25,
+    "rareSpeciesId": "pancratium-maritimum"
+  },
+  {
+    "id": "boschi-sottobosco",
+    "name": "Boschi e sottobosco",
+    "description": "Boschi e radure; molte fioriture tra fine inverno e primavera, prima che gli alberi mettano le foglie.",
+    "order": 5,
+    "speciesCount": 26,
+    "rareSpeciesId": "paeonia-officinalis"
+  },
+  {
+    "id": "zone-umide",
+    "name": "Zone umide, fossi e laghi",
+    "description": "Rive, fossi, stagni e prati umidi.",
+    "order": 6,
+    "speciesCount": 21,
+    "rareSpeciesId": "leucojum-aestivum"
+  },
+  {
+    "id": "giardini-balconi",
+    "name": "Giardini, parchi e balconi",
+    "description": "Piante coltivate comunissime in giardini, parchi, vasi e balconi; la rara è naturalizzata.",
+    "order": 7,
+    "speciesCount": 30,
+    "rareSpeciesId": "nelumbo-nucifera"
+  },
+  {
+    "id": "bacche-autunno",
+    "name": "Bacche e colori d'autunno",
+    "description": "Frutti e semi da collezionare, più qualche fioritura d'autunno.",
+    "order": 8,
+    "speciesCount": 29,
+    "rareSpeciesId": "iris-foetidissima"
+  },
+  {
+    "id": "orchidee",
+    "name": "Orchidee spontanee",
+    "description": "Tutte tutelate: si fotografano e non si raccolgono.",
+    "order": 9,
+    "speciesCount": 24,
+    "rareSpeciesId": "ophrys-bertolonii"
+  },
+  {
+    "id": "orto-frutteto",
+    "name": "Orto, frutteto ed erbe aromatiche",
+    "description": "Orti, frutteti, campi coltivati ed erbe aromatiche; per alcune specie contano i frutti.",
+    "order": 10,
+    "speciesCount": 22,
+    "rareSpeciesId": "crocus-sativus"
+  }
+]

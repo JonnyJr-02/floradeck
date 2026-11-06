@@ -1,0 +1,221 @@
+{
+  "anemone-nemorosa": {
+    "habitat": "Boschi di latifoglie, siepi e prati ombrosi",
+    "sizeNote": "Fiore 2–4 cm",
+    "description": "Fiori bianchi a stella, spesso sfumati di rosa all'esterno, che tappezzano il sottobosco prima che gli alberi mettano le foglie. Seguono il sole e si chiudono la sera.",
+    "funFact": "Si diffonde lentissimamente: una distesa di anemoni indica spesso un bosco antico.",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikesOutside": ["Anemone trifolia"]
+  },
+  "hepatica-nobilis": {
+    "habitat": "Boschi di latifoglie e sottobosco su calcare",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Fiori azzurro-viola, raramente rosa o bianchi, che sbocciano a fine inverno prima delle nuove foglie. Le foglie hanno tre lobi, come un trifoglio carnoso.",
+    "funFact": "Le foglie a tre lobi ricordavano il fegato: per questo si credeva che curassero le malattie epatiche.",
+    "toxic": true,
+    "toxicNote": "Velenosa da fresca."
+  },
+  "primula-vulgaris": {
+    "habitat": "Boschi chiari, siepi, prati ombrosi e scarpate",
+    "sizeNote": "Fiore 2–3,5 cm",
+    "description": "Fiori giallo pallido con il centro più scuro, ognuno sul proprio peduncolo, che spuntano a mazzetti da una rosetta di foglie rugose. È il simbolo della primavera.",
+    "funFact": "Primula viene da primus, «primo»: è tra i primi fiori dell'anno.",
+    "lookalikes": ["primula-veris"],
+    "lookalikesOutside": ["Primula elatior"]
+  },
+  "galanthus-nivalis": {
+    "habitat": "Boschi umidi, prati ombrosi e rive dei torrenti",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Una goccia bianca pendente: tre tepali esterni candidi e una coroncina interna segnata da un archetto verde. Fiorisce in pieno inverno, spesso tra la neve.",
+    "funFact": "Il nome Galanthus significa «fiore di latte».",
+    "protected": true,
+    "protectionNote": "Direttiva Habitat UE, allegato V: raccolta regolamentata.",
+    "toxic": true,
+    "toxicNote": "Bulbo velenoso.",
+    "lookalikes": ["leucojum-aestivum"],
+    "lookalikesOutside": ["Leucojum vernum"]
+  },
+  "erythronium-dens-canis": {
+    "habitat": "Boschi di latifoglie, castagneti e prati di montagna",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Un fiore rosa pendente con i tepali arrovesciati all'indietro, come un piccolo ciclamino, sopra due foglie maculate di porpora. Fiorisce a fine inverno.",
+    "funFact": "Il nome viene dal bulbo, bianco e appuntito come un canino.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare."
+  },
+  "pulmonaria": {
+    "habitat": "Boschi di latifoglie, siepi e radure",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Grappoli di fiori a imbuto che passano dal rosa al blu-viola, così che sulla stessa pianta ci sono fiori di due colori. Le foglie sono spesso maculate di bianco.",
+    "funFact": "Il cambio di colore indica agli impollinatori quali fiori hanno ancora nettare."
+  },
+  "scilla-bifolia": {
+    "habitat": "Boschi di latifoglie, prati e radure",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Piccole stelle blu intenso, a grappoli, su uno stelo che spunta tra due sole foglie. A fine inverno colorano di blu il sottobosco.",
+    "funFact": "Bifolia significa «a due foglie».",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikesOutside": ["Chionodoxa", "Scilla siberica"]
+  },
+  "vinca-minor": {
+    "habitat": "Boschi di latifoglie, siepi e giardini ombrosi",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "Fiori blu-violetti a cinque petali, un po' asimmetrici come eliche, su fusti striscianti dalle foglie lucide e sempreverdi. Forma tappeti fitti nel sottobosco.",
+    "funFact": "Il colore pervinca, a metà tra il blu e il viola, prende il nome proprio da questo fiore.",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikesOutside": ["Vinca major"]
+  },
+  "cyclamen": {
+    "habitat": "Boschi, siepi, muretti e pendii ombrosi",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Fiori rosa con i petali rivolti all'indietro, come piccole fiamme, su foglie a cuore spesso marmorizzate d'argento. Alcune specie fioriscono in autunno, altre in primavera o in estate.",
+    "funFact": "Dopo la fioritura il peduncolo si arrotola a molla e porta i semi vicino al terreno, dove li raccolgono le formiche.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Tubero velenoso.",
+    "lookalikes": ["cyclamen-persicum"]
+  },
+  "helleborus-niger": {
+    "habitat": "Boschi di faggio e di conifere su calcare, al Nord; comune nei giardini",
+    "sizeNote": "Fiore 5–8 cm",
+    "description": "Grandi fiori bianchi, che col tempo diventano rosati, sbocciano in pieno inverno, a volte sotto la neve. Le foglie sono scure, coriacee e sempreverdi.",
+    "funFact": "Si chiama niger per le radici nere, non per i fiori.",
+    "protected": null,
+    "protectionNote": "Tutelato in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Velenoso."
+  },
+  "aquilegia": {
+    "habitat": "Boschi chiari, radure e prati di montagna",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Fiori pendenti blu-viola con cinque speroni ricurvi, come colombe che bevono in cerchio. Le foglie, divise in tre, sono di un verde glauco.",
+    "funFact": "Il nome viene da aquila, per gli speroni simili ad artigli; il nome inglese columbine la paragona invece alle colombe.",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Velenosa."
+  },
+  "paeonia-officinalis": {
+    "habitat": "Boschi radi, radure e prati di montagna, molto localizzata",
+    "sizeNote": "Fiore 7–13 cm",
+    "description": "Un grande fiore rosso-rosa, il più vistoso dei nostri boschi, con un ciuffo di stami gialli al centro. Fiorisce solo per pochi giorni, tra maggio e giugno.",
+    "funFact": "Il nome viene da Peone, il medico degli dei, che secondo il mito guarì Plutone con questa pianta.",
+    "protected": null,
+    "protectionNote": "Tutelata in diverse regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikesOutside": ["Paeonia lactiflora"]
+  },
+  "daphne-mezereum": {
+    "habitat": "Boschi di latifoglie e di montagna, su calcare",
+    "sizeNote": "Fiori 1 cm, lungo i rami",
+    "description": "A fine inverno i rami ancora spogli si coprono di fiorellini rosa-porpora profumatissimi, attaccati direttamente al legno. In estate seguono bacche rosse vivaci.",
+    "funFact": "È tra le piante più velenose dei nostri boschi: bastano poche bacche per stare molto male.",
+    "protected": null,
+    "protectionNote": "Tutelata in alcune regioni: da verificare.",
+    "toxic": true,
+    "toxicNote": "Tutta la pianta, bacche comprese, è molto velenosa."
+  },
+  "convallaria-majalis": {
+    "habitat": "Boschi di latifoglie, soprattutto al Nord",
+    "sizeNote": "Fiori 0,5–1 cm, a grappolo",
+    "description": "Una fila di campanelle bianche, piccole e profumatissime, pendenti da uno stelo arcuato tra due larghe foglie. Fiorisce a fine primavera.",
+    "funFact": "In Francia il primo maggio si regala un mazzetto di mughetti come portafortuna.",
+    "toxic": true,
+    "toxicNote": "Tutta la pianta è velenosa."
+  },
+  "lathyrus-vernus": {
+    "habitat": "Boschi di latifoglie su calcare",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "Fiori a farfalla che sbocciano rosso-porpora e virano al blu-viola, su ciuffi di foglie lucide. Fiorisce nel sottobosco a inizio primavera.",
+    "funFact": "Come la polmonaria cambia colore invecchiando: i fiori blu sono i più vecchi.",
+    "toxic": true,
+    "toxicNote": "Semi tossici."
+  },
+  "anemone-ranunculoides": {
+    "habitat": "Boschi umidi di latifoglie e rive ombrose",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Fiori giallo burro a stella, uno o due per stelo, sopra un collare di foglie divise. Spesso cresce insieme all'anemone bianca.",
+    "funFact": "Le due anemoni a volte si incrociano, dando fiori giallo pallido.",
+    "toxic": true,
+    "toxicNote": "Velenosa.",
+    "lookalikes": ["ficaria-verna"]
+  },
+  "corydalis": {
+    "habitat": "Boschi umidi di latifoglie e siepi",
+    "sizeNote": "Fiore 1,5–2,5 cm",
+    "description": "Grappoli di fiori allungati, viola o bianchi, ognuno con uno sperone come un piccolo uccello in volo. Fioriscono a inizio primavera, poi la pianta scompare sotto terra.",
+    "funFact": "I semi hanno un'appendice grassa che piace alle formiche, che così li trasportano lontano.",
+    "toxic": true,
+    "toxicNote": "Tossica."
+  },
+  "oxalis-acetosella": {
+    "habitat": "Boschi freschi, soprattutto di faggio e di abete",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Piccoli fiori bianchi venati di lilla, tra foglie a tre foglioline a cuore come un trifoglio. Le foglie si richiudono a ombrello quando fa buio o piove.",
+    "funFact": "Il sapore acidulo delle foglie viene dall'acido ossalico, da cui il nome Oxalis."
+  },
+  "geranium-robertianum": {
+    "habitat": "Boschi, muri ombrosi, siepi e ruderi",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Piccoli fiori rosa con venature bianche, su fusti rossastri e foglie molto divise. Tutta la pianta ha un odore pungente quando la si sfiora.",
+    "funFact": "In autunno le foglie diventano rosso fuoco.",
+    "lookalikesOutside": ["Geranium purpureum"]
+  },
+  "melittis-melissophyllum": {
+    "habitat": "Boschi chiari e radure",
+    "sizeNote": "Fiore 2,5–4 cm",
+    "description": "Grandi fiori a labbro, bianchi con una macchia rosa-porpora, all'ascella di foglie che profumano di miele. Fiorisce a fine primavera.",
+    "funFact": "Melittis viene dal greco melitta, «ape»: è molto visitata da api e bombi."
+  },
+  "digitalis": {
+    "habitat": "Radure, boschi chiari e scarpate di montagna",
+    "sizeNote": "Fiore 2–5 cm; pianta fino a 1,5 m",
+    "description": "Alte spighe di fiori a ditale, pendenti tutti da un lato, gialli o porpora a seconda della specie. Dentro il fiore macchie e peli guidano gli insetti verso il nettare.",
+    "funFact": "Da questa pianta velenosissima si ricavano farmaci per il cuore; il nome viene da digitus, «dito».",
+    "toxic": true,
+    "toxicNote": "Velenosissima."
+  },
+  "lonicera-caprifogli": {
+    "habitat": "Siepi, boschi chiari e macchia",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Fiori tubolari bianchi, crema o rosati riuniti a corona, profumatissimi soprattutto la sera. Le liane si avvolgono a spirale attorno ad arbusti e alberi.",
+    "funFact": "Il profumo serale attira le falene, che hanno una proboscide abbastanza lunga da raggiungere il nettare.",
+    "toxic": true,
+    "toxicNote": "Bacche tossiche."
+  },
+  "clematis-vitalba": {
+    "habitat": "Siepi, boschi, scarpate e incolti",
+    "sizeNote": "Fiori 1,5–2 cm, in grandi mazzi",
+    "description": "Una liana vigorosa che d'estate si copre di mazzi di fiorellini bianchi e, in autunno, di pennacchi argentati e piumosi. Avvolge siepi e alberi come una tenda.",
+    "funFact": "In inglese si chiama old man's beard, «barba di vecchio», per i frutti piumosi.",
+    "toxic": true,
+    "toxicNote": "Velenosa e irritante.",
+    "lookalikesOutside": ["Clematis flammula"]
+  },
+  "sambucus-nigra": {
+    "habitat": "Siepi, boschi, incolti e vicino alle case",
+    "sizeNote": "Infiorescenze 10–20 cm",
+    "description": "Grandi ombrelle piatte di fiorellini color crema, profumati di miele, a maggio; in estate diventano grappoli di bacche nere e lucide. Attenzione al sosia erbaceo, il sambuco lebbio, che è velenoso.",
+    "funFact": "Con i suoi fiori si preparano sciroppi e frittelle in molte cucine regionali.",
+    "toxic": true,
+    "toxicNote": "Foglie, corteccia e bacche acerbe sono tossiche.",
+    "lookalikesOutside": ["Sambucus ebulus"]
+  },
+  "calluna-vulgaris": {
+    "habitat": "Brughiere, boschi radi e pascoli su suoli acidi",
+    "sizeNote": "Fiori 3–4 mm, in spighe",
+    "description": "Un piccolo arbusto che a fine estate si copre di minuscoli fiori rosa-lilla, trasformando brughiere e pascoli in distese colorate. Le foglioline sono a squama.",
+    "funFact": "Il nome Calluna viene dal greco «spazzare»: i suoi rami servivano a fare scope."
+  },
+  "erica-carnea": {
+    "habitat": "Pinete, pendii sassosi e pascoli su calcare",
+    "sizeNote": "Fiori 5–6 mm",
+    "description": "Bassi cuscini sempreverdi che a fine inverno si coprono di campanelle rosa carne, spesso appena la neve si ritira. È tra le prime fonti di nettare per le api.",
+    "funFact": "Prepara i boccioli già in autunno, così può fiorire appena la neve si scioglie."
+  }
+}

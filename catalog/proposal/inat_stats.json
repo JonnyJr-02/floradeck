@@ -78,6 +78,13 @@
     "north": 1143,
     "center": 106,
     "south": 55
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 94,
+    "p05": 9,
+    "p50": 250,
+    "p95": 1788
    }
   },
   "leontopodium-nivale": {
@@ -135,6 +142,13 @@
     "north": 3085,
     "center": 116,
     "south": 0
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 95,
+    "p05": 1495,
+    "p50": 2220,
+    "p95": 2665
    }
   },
   "crocus-vernus": {
@@ -192,6 +206,13 @@
     "north": 1629,
     "center": 244,
     "south": 75
+   },
+   "family": "Iridaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 1171,
+    "p50": 1672,
+    "p95": 2110
    }
   },
   "nigritella": {
@@ -242,6 +263,13 @@
     "north": 1628,
     "center": 8,
     "south": 4
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 84,
+    "p05": 1687,
+    "p50": 2182,
+    "p95": 2512
    }
   },
   "cistus-creticus": {
@@ -292,6 +320,13 @@
     "north": 44,
     "center": 956,
     "south": 1283
+   },
+   "family": "Cistaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 0,
+    "p50": 236,
+    "p95": 797
    }
   },
   "capparis-spinosa": {
@@ -349,6 +384,13 @@
     "north": 237,
     "center": 377,
     "south": 333
+   },
+   "family": "Capparaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 6,
+    "p50": 67,
+    "p95": 361
    }
   },
   "hepatica-nobilis": {
@@ -406,6 +448,13 @@
     "north": 4754,
     "center": 412,
     "south": 71
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 309,
+    "p50": 908,
+    "p95": 1776
    }
   },
   "lavandula-giardino": {
@@ -463,7 +512,8 @@
     "north": 383,
     "center": 150,
     "south": 103
-   }
+   },
+   "family": "Lamiaceae"
   },
   "physalis-alkekengi": {
    "key": "physalis-alkekengi",
@@ -520,6 +570,13 @@
     "north": 496,
     "center": 24,
     "south": 2
+   },
+   "family": "Solanaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 28,
+    "p50": 249,
+    "p95": 1023
    }
   },
   "bellis-perennis": {
@@ -570,6 +627,13 @@
     "north": 4027,
     "center": 1578,
     "south": 533
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 100,
+    "p05": 6,
+    "p50": 249,
+    "p95": 1696
    }
   },
   "primula-veris": {
@@ -620,6 +684,13 @@
     "north": 1576,
     "center": 140,
     "south": 0
+   },
+   "family": "Primulaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 897,
+    "p50": 1459,
+    "p95": 1972
    }
   },
   "viola-odorata-gruppo": {
@@ -698,6 +769,13 @@
     "north": 2975,
     "center": 259,
     "south": 137
+   },
+   "family": "Violaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 67,
+    "p50": 486,
+    "p95": 1229
    }
   },
   "muscari": {
@@ -762,6 +840,13 @@
     "north": 1145,
     "center": 541,
     "south": 162
+   },
+   "family": "Asparagaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 80,
+    "p50": 905,
+    "p95": 1577
    }
   },
   "myosotis": {
@@ -812,6 +897,13 @@
     "north": 1574,
     "center": 129,
     "south": 81
+   },
+   "family": "Boraginaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 97,
+    "p50": 1962,
+    "p95": 2748
    }
   },
   "salvia-pratensis": {
@@ -862,6 +954,13 @@
     "north": 3819,
     "center": 157,
     "south": 37
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 83,
+    "p50": 710,
+    "p95": 1750
    }
   },
   "ajuga-reptans": {
@@ -912,6 +1011,13 @@
     "north": 3199,
     "center": 771,
     "south": 316
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 55,
+    "p50": 851,
+    "p95": 1463
    }
   },
   "trifolium-pratense": {
@@ -962,6 +1068,13 @@
     "north": 4556,
     "center": 951,
     "south": 369
+   },
+   "family": "Fabaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 13,
+    "p50": 382,
+    "p95": 1966
    }
   },
   "anacamptis-morio": {
@@ -1012,6 +1125,13 @@
     "north": 2220,
     "center": 1789,
     "south": 1872
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 74,
+    "p05": 64,
+    "p50": 681,
+    "p95": 1496
    }
   },
   "ophrys-apifera": {
@@ -1062,6 +1182,13 @@
     "north": 922,
     "center": 819,
     "south": 493
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 92,
+    "p05": 126,
+    "p50": 729,
+    "p95": 1247
    }
   },
   "leucanthemum-vulgare": {
@@ -1119,6 +1246,13 @@
     "north": 840,
     "center": 40,
     "south": 8
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 99,
+    "p05": 91,
+    "p50": 249,
+    "p95": 1818
    }
   },
   "narcissus-poeticus": {
@@ -1169,6 +1303,13 @@
     "north": 1198,
     "center": 279,
     "south": 131
+   },
+   "family": "Amaryllidaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 533,
+    "p50": 1302,
+    "p95": 1736
    }
   },
   "ornithogalum-umbellatum": {
@@ -1219,6 +1360,13 @@
     "north": 759,
     "center": 120,
     "south": 46
+   },
+   "family": "Asparagaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 56,
+    "p50": 224,
+    "p95": 894
    }
   },
   "ranunculus-acris-gruppo": {
@@ -1283,6 +1431,13 @@
     "north": 1829,
     "center": 89,
     "south": 16
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 125,
+    "p50": 801,
+    "p95": 1762
    }
   },
   "papaver-rhoeas": {
@@ -1333,6 +1488,13 @@
     "north": 2252,
     "center": 1118,
     "south": 968
+   },
+   "family": "Papaveraceae",
+   "elevation": {
+    "n": 99,
+    "p05": 8,
+    "p50": 101,
+    "p95": 1308
    }
   },
   "centaurea-cyanus": {
@@ -1383,6 +1545,13 @@
     "north": 558,
     "center": 132,
     "south": 23
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 96,
+    "p05": 72,
+    "p50": 271,
+    "p95": 1409
    }
   },
   "cichorium-intybus": {
@@ -1433,6 +1602,13 @@
     "north": 1703,
     "center": 1184,
     "south": 523
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 100,
+    "p05": 0,
+    "p50": 138,
+    "p95": 643
    }
   },
   "echium-vulgare": {
@@ -1483,6 +1659,13 @@
     "north": 2600,
     "center": 729,
     "south": 259
+   },
+   "family": "Boraginaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 92,
+    "p50": 846,
+    "p95": 1972
    }
   },
   "convolvulus-arvensis": {
@@ -1533,6 +1716,13 @@
     "north": 2343,
     "center": 1103,
     "south": 625
+   },
+   "family": "Convolvulaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 12,
+    "p50": 142,
+    "p95": 535
    }
   },
   "malva-sylvestris": {
@@ -1583,6 +1773,13 @@
     "north": 1957,
     "center": 1729,
     "south": 578
+   },
+   "family": "Malvaceae",
+   "elevation": {
+    "n": 91,
+    "p05": 1,
+    "p50": 90,
+    "p95": 556
    }
   },
   "linaria-vulgaris": {
@@ -1633,6 +1830,13 @@
     "north": 1715,
     "center": 795,
     "south": 111
+   },
+   "family": "Plantaginaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 4,
+    "p50": 144,
+    "p95": 814
    }
   },
   "verbascum": {
@@ -1683,6 +1887,13 @@
     "north": 2660,
     "center": 1134,
     "south": 878
+   },
+   "family": "Scrophulariaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 2,
+    "p50": 142,
+    "p95": 1092
    }
   },
   "silene-vulgaris": {
@@ -1733,6 +1944,13 @@
     "north": 3215,
     "center": 430,
     "south": 613
+   },
+   "family": "Caryophyllaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 28,
+    "p50": 371,
+    "p95": 2097
    }
   },
   "calendula-arvensis": {
@@ -1783,6 +2001,13 @@
     "north": 117,
     "center": 721,
     "south": 495
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 97,
+    "p05": 7,
+    "p50": 227,
+    "p95": 639
    }
   },
   "gladiolus-italicus": {
@@ -1833,6 +2058,13 @@
     "north": 391,
     "center": 414,
     "south": 354
+   },
+   "family": "Iridaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 3,
+    "p50": 262,
+    "p95": 765
    }
   },
   "tulipa-sylvestris": {
@@ -1883,6 +2115,13 @@
     "north": 578,
     "center": 36,
     "south": 35
+   },
+   "family": "Liliaceae",
+   "elevation": {
+    "n": 88,
+    "p05": 40,
+    "p50": 1456,
+    "p95": 2248
    }
   },
   "hypericum-perforatum": {
@@ -1933,6 +2172,13 @@
     "north": 1616,
     "center": 688,
     "south": 312
+   },
+   "family": "Hypericaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 28,
+    "p50": 535,
+    "p95": 1972
    }
   },
   "silybum-marianum": {
@@ -1983,6 +2229,13 @@
     "north": 685,
     "center": 956,
     "south": 602
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 96,
+    "p05": 0,
+    "p50": 136,
+    "p95": 567
    }
   },
   "nigella-damascena": {
@@ -2033,6 +2286,13 @@
     "north": 242,
     "center": 485,
     "south": 296
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 62,
+    "p50": 255,
+    "p95": 806
    }
   },
   "anacamptis-pyramidalis": {
@@ -2083,6 +2343,13 @@
     "north": 2299,
     "center": 1485,
     "south": 1158
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 88,
+    "p05": 61,
+    "p50": 668,
+    "p95": 1739
    }
   },
   "gentiana-acaulis-gruppo": {
@@ -2140,6 +2407,13 @@
     "north": 3192,
     "center": 7,
     "south": 0
+   },
+   "family": "Gentianaceae",
+   "elevation": {
+    "n": 89,
+    "p05": 1330,
+    "p50": 2166,
+    "p95": 2508
    }
   },
   "gentiana-lutea": {
@@ -2190,6 +2464,13 @@
     "north": 717,
     "center": 171,
     "south": 53
+   },
+   "family": "Gentianaceae",
+   "elevation": {
+    "n": 89,
+    "p05": 1273,
+    "p50": 1842,
+    "p95": 2316
    }
   },
   "trollius-europaeus": {
@@ -2240,6 +2521,13 @@
     "north": 2124,
     "center": 9,
     "south": 1
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 1207,
+    "p50": 1816,
+    "p95": 2435
    }
   },
   "arnica-montana": {
@@ -2290,6 +2578,13 @@
     "north": 1394,
     "center": 1,
     "south": 0
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 97,
+    "p05": 1537,
+    "p50": 2090,
+    "p95": 2444
    }
   },
   "soldanella": {
@@ -2340,6 +2635,13 @@
     "north": 1594,
     "center": 15,
     "south": 17
+   },
+   "family": "Primulaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 1491,
+    "p50": 2282,
+    "p95": 2566
    }
   },
   "rhododendron-alpino": {
@@ -2397,6 +2699,13 @@
     "north": 3825,
     "center": 4,
     "south": 0
+   },
+   "family": "Ericaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 1148,
+    "p50": 1972,
+    "p95": 2270
    }
   },
   "pulsatilla-alpina": {
@@ -2447,6 +2756,13 @@
     "north": 2430,
     "center": 198,
     "south": 10
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 1511,
+    "p50": 2051,
+    "p95": 2420
    }
   },
   "lilium-martagon": {
@@ -2497,6 +2813,13 @@
     "north": 3189,
     "center": 180,
     "south": 24
+   },
+   "family": "Liliaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 1047,
+    "p50": 1643,
+    "p95": 2207
    }
   },
   "aster-alpinus": {
@@ -2547,6 +2870,13 @@
     "north": 1387,
     "center": 90,
     "south": 0
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 96,
+    "p05": 1615,
+    "p50": 2167,
+    "p95": 2614
    }
   },
   "paradisea-liliastrum": {
@@ -2597,6 +2927,13 @@
     "north": 889,
     "center": 1,
     "south": 0
+   },
+   "family": "Asparagaceae",
+   "elevation": {
+    "n": 92,
+    "p05": 1140,
+    "p50": 1681,
+    "p95": 1995
    }
   },
   "campanula-barbata": {
@@ -2647,6 +2984,13 @@
     "north": 1728,
     "center": 0,
     "south": 0
+   },
+   "family": "Campanulaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 1418,
+    "p50": 2011,
+    "p95": 2415
    }
   },
   "gentiana-verna": {
@@ -2697,6 +3041,13 @@
     "north": 2067,
     "center": 289,
     "south": 37
+   },
+   "family": "Gentianaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 1511,
+    "p50": 2077,
+    "p95": 2474
    }
   },
   "myrtus-communis": {
@@ -2747,6 +3098,13 @@
     "north": 178,
     "center": 539,
     "south": 1030
+   },
+   "family": "Myrtaceae",
+   "elevation": {
+    "n": 87,
+    "p05": 1,
+    "p50": 32,
+    "p95": 442
    }
   },
   "lavandula-stoechas": {
@@ -2797,6 +3155,13 @@
     "north": 45,
     "center": 247,
     "south": 368
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 3,
+    "p50": 134,
+    "p95": 800
    }
   },
   "spartium-junceum": {
@@ -2847,6 +3212,13 @@
     "north": 824,
     "center": 1284,
     "south": 911
+   },
+   "family": "Fabaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 13,
+    "p50": 382,
+    "p95": 1078
    }
   },
   "asphodelus": {
@@ -2897,6 +3269,13 @@
     "north": 449,
     "center": 510,
     "south": 1661
+   },
+   "family": "Asphodelaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 29,
+    "p50": 1108,
+    "p95": 1676
    }
   },
   "centranthus-ruber": {
@@ -2947,6 +3326,13 @@
     "north": 1562,
     "center": 783,
     "south": 1414
+   },
+   "family": "Caprifoliaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 31,
+    "p50": 264,
+    "p95": 1898
    }
   },
   "carpobrotus": {
@@ -2997,6 +3383,13 @@
     "north": 50,
     "center": 217,
     "south": 531
+   },
+   "family": "Aizoaceae",
+   "elevation": {
+    "n": 77,
+    "p05": 0,
+    "p50": 4,
+    "p95": 67
    }
   },
   "glaucium-flavum": {
@@ -3047,6 +3440,13 @@
     "north": 62,
     "center": 212,
     "south": 1123
+   },
+   "family": "Papaveraceae",
+   "elevation": {
+    "n": 81,
+    "p05": 0,
+    "p50": 10,
+    "p95": 1088
    }
   },
   "calystegia-soldanella": {
@@ -3097,6 +3497,13 @@
     "north": 144,
     "center": 156,
     "south": 227
+   },
+   "family": "Convolvulaceae",
+   "elevation": {
+    "n": 86,
+    "p05": 0,
+    "p50": 1,
+    "p95": 5
    }
   },
   "eryngium-maritimum": {
@@ -3147,6 +3554,13 @@
     "north": 174,
     "center": 347,
     "south": 932
+   },
+   "family": "Apiaceae",
+   "elevation": {
+    "n": 79,
+    "p05": -1,
+    "p50": 1,
+    "p95": 7
    }
   },
   "pancratium-maritimum": {
@@ -3197,6 +3611,13 @@
     "north": 27,
     "center": 626,
     "south": 1907
+   },
+   "family": "Amaryllidaceae",
+   "elevation": {
+    "n": 77,
+    "p05": 0,
+    "p50": 3,
+    "p95": 10
    }
   },
   "cistus-salviifolius": {
@@ -3247,6 +3668,13 @@
     "north": 523,
     "center": 781,
     "south": 1191
+   },
+   "family": "Cistaceae",
+   "elevation": {
+    "n": 90,
+    "p05": 1,
+    "p50": 291,
+    "p95": 954
    }
   },
   "opuntia-ficus-indica": {
@@ -3297,6 +3725,13 @@
     "north": 136,
     "center": 206,
     "south": 1591
+   },
+   "family": "Cactaceae",
+   "elevation": {
+    "n": 87,
+    "p05": 2,
+    "p50": 85,
+    "p95": 470
    }
   },
   "phlomis-fruticosa": {
@@ -3347,6 +3782,13 @@
     "north": 18,
     "center": 15,
     "south": 331
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 4,
+    "p50": 74,
+    "p95": 453
    }
   },
   "anemone-nemorosa": {
@@ -3397,6 +3839,13 @@
     "north": 3553,
     "center": 236,
     "south": 15
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 172,
+    "p50": 1172,
+    "p95": 1650
    }
   },
   "primula-vulgaris": {
@@ -3447,6 +3896,13 @@
     "north": 4214,
     "center": 574,
     "south": 162
+   },
+   "family": "Primulaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 209,
+    "p50": 843,
+    "p95": 1461
    }
   },
   "galanthus-nivalis": {
@@ -3497,6 +3953,13 @@
     "north": 1404,
     "center": 300,
     "south": 102
+   },
+   "family": "Amaryllidaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 147,
+    "p50": 701,
+    "p95": 1439
    }
   },
   "erythronium-dens-canis": {
@@ -3547,6 +4010,13 @@
     "north": 2537,
     "center": 61,
     "south": 0
+   },
+   "family": "Liliaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 223,
+    "p50": 663,
+    "p95": 1364
    }
   },
   "pulmonaria": {
@@ -3597,6 +4067,13 @@
     "north": 1930,
     "center": 76,
     "south": 29
+   },
+   "family": "Boraginaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 114,
+    "p50": 780,
+    "p95": 1779
    }
   },
   "scilla-bifolia": {
@@ -3647,6 +4124,13 @@
     "north": 1767,
     "center": 424,
     "south": 197
+   },
+   "family": "Asparagaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 125,
+    "p50": 1551,
+    "p95": 1930
    }
   },
   "vinca-minor": {
@@ -3697,6 +4181,13 @@
     "north": 2699,
     "center": 179,
     "south": 89
+   },
+   "family": "Apocynaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 121,
+    "p50": 422,
+    "p95": 1146
    }
   },
   "cyclamen": {
@@ -3761,6 +4252,13 @@
     "north": 2666,
     "center": 2383,
     "south": 1763
+   },
+   "family": "Primulaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 61,
+    "p50": 444,
+    "p95": 1182
    }
   },
   "helleborus-niger": {
@@ -3811,6 +4309,13 @@
     "north": 1787,
     "center": 0,
     "south": 0
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 362,
+    "p50": 936,
+    "p95": 1527
    }
   },
   "aquilegia": {
@@ -3861,6 +4366,13 @@
     "north": 2726,
     "center": 51,
     "south": 17
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 703,
+    "p50": 1312,
+    "p95": 2160
    }
   },
   "paeonia-officinalis": {
@@ -3911,6 +4423,13 @@
     "north": 624,
     "center": 138,
     "south": 0
+   },
+   "family": "Paeoniaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 388,
+    "p50": 1195,
+    "p95": 1609
    }
   },
   "daphne-mezereum": {
@@ -3961,6 +4480,13 @@
     "north": 2024,
     "center": 55,
     "south": 27
+   },
+   "family": "Thymelaeaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 769,
+    "p50": 1873,
+    "p95": 2329
    }
   },
   "convallaria-majalis": {
@@ -4011,6 +4537,13 @@
     "north": 1064,
     "center": 6,
     "south": 2
+   },
+   "family": "Asparagaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 159,
+    "p50": 966,
+    "p95": 1778
    }
   },
   "lathyrus-vernus": {
@@ -4061,6 +4594,13 @@
     "north": 1189,
     "center": 60,
     "south": 11
+   },
+   "family": "Fabaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 348,
+    "p50": 1049,
+    "p95": 1530
    }
   },
   "iris-pseudacorus": {
@@ -4111,6 +4651,13 @@
     "north": 1488,
     "center": 311,
     "south": 100
+   },
+   "family": "Iridaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 4,
+    "p50": 144,
+    "p95": 824
    }
   },
   "lythrum-salicaria": {
@@ -4161,6 +4708,13 @@
     "north": 2305,
     "center": 401,
     "south": 137
+   },
+   "family": "Lythraceae",
+   "elevation": {
+    "n": 98,
+    "p05": 2,
+    "p50": 138,
+    "p95": 584
    }
   },
   "caltha-palustris": {
@@ -4211,6 +4765,13 @@
     "north": 1071,
     "center": 14,
     "south": 26
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 1010,
+    "p50": 1740,
+    "p95": 2145
    }
   },
   "nuphar-lutea": {
@@ -4261,6 +4822,13 @@
     "north": 407,
     "center": 32,
     "south": 9
+   },
+   "family": "Nymphaeaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 2,
+    "p50": 147,
+    "p95": 732
    }
   },
   "nymphaea": {
@@ -4311,7 +4879,8 @@
     "north": 557,
     "center": 187,
     "south": 159
-   }
+   },
+   "family": "Nymphaeaceae"
   },
   "epilobium-hirsutum": {
    "key": "epilobium-hirsutum",
@@ -4361,6 +4930,13 @@
     "north": 802,
     "center": 180,
     "south": 121
+   },
+   "family": "Onagraceae",
+   "elevation": {
+    "n": 94,
+    "p05": 15,
+    "p50": 321,
+    "p95": 1260
    }
   },
   "lysimachia-vulgaris": {
@@ -4411,6 +4987,13 @@
     "north": 678,
     "center": 32,
     "south": 16
+   },
+   "family": "Primulaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 3,
+    "p50": 330,
+    "p95": 1121
    }
   },
   "symphytum-officinale": {
@@ -4461,6 +5044,13 @@
     "north": 659,
     "center": 24,
     "south": 13
+   },
+   "family": "Boraginaceae",
+   "elevation": {
+    "n": 99,
+    "p05": -1,
+    "p50": 69,
+    "p95": 1288
    }
   },
   "impatiens-glandulifera": {
@@ -4511,6 +5101,13 @@
     "north": 1310,
     "center": 0,
     "south": 1
+   },
+   "family": "Balsaminaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 196,
+    "p50": 725,
+    "p95": 1409
    }
   },
   "menyanthes-trifoliata": {
@@ -4561,6 +5158,13 @@
     "north": 295,
     "center": 2,
     "south": 0
+   },
+   "family": "Menyanthaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 344,
+    "p50": 1341,
+    "p95": 2043
    }
   },
   "butomus-umbellatus": {
@@ -4611,6 +5215,13 @@
     "north": 316,
     "center": 7,
     "south": 0
+   },
+   "family": "Butomaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 3,
+    "p50": 124,
+    "p95": 214
    }
   },
   "leucojum-aestivum": {
@@ -4661,6 +5272,13 @@
     "north": 185,
     "center": 12,
     "south": 16
+   },
+   "family": "Amaryllidaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 0,
+    "p50": 23,
+    "p95": 851
    }
   },
   "calystegia-sepium": {
@@ -4711,6 +5329,13 @@
     "north": 612,
     "center": 121,
     "south": 49
+   },
+   "family": "Convolvulaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 2,
+    "p50": 157,
+    "p95": 551
    }
   },
   "iris-sibirica": {
@@ -4761,7 +5386,8 @@
     "north": 107,
     "center": 0,
     "south": 0
-   }
+   },
+   "family": "Iridaceae"
   },
   "nymphoides-peltata": {
    "key": "nymphoides-peltata",
@@ -4811,7 +5437,8 @@
     "north": 73,
     "center": 7,
     "south": 1
-   }
+   },
+   "family": "Menyanthaceae"
   },
   "hydrangea-macrophylla": {
    "key": "hydrangea-macrophylla",
@@ -4861,7 +5488,8 @@
     "north": 489,
     "center": 130,
     "south": 131
-   }
+   },
+   "family": "Hydrangeaceae"
   },
   "wisteria": {
    "key": "wisteria",
@@ -4911,7 +5539,8 @@
     "north": 858,
     "center": 526,
     "south": 331
-   }
+   },
+   "family": "Fabaceae"
   },
   "nerium-oleander": {
    "key": "nerium-oleander",
@@ -4961,7 +5590,8 @@
     "north": 1272,
     "center": 1068,
     "south": 1743
-   }
+   },
+   "family": "Apocynaceae"
   },
   "bougainvillea": {
    "key": "bougainvillea",
@@ -5011,7 +5641,8 @@
     "north": 331,
     "center": 464,
     "south": 1057
-   }
+   },
+   "family": "Nyctaginaceae"
   },
   "pelargonium": {
    "key": "pelargonium",
@@ -5061,7 +5692,8 @@
     "north": 529,
     "center": 283,
     "south": 707
-   }
+   },
+   "family": "Geraniaceae"
   },
   "camellia": {
    "key": "camellia",
@@ -5111,7 +5743,8 @@
     "north": 407,
     "center": 137,
     "south": 125
-   }
+   },
+   "family": "Theaceae"
   },
   "syringa-vulgaris": {
    "key": "syringa-vulgaris",
@@ -5161,7 +5794,8 @@
     "north": 352,
     "center": 94,
     "south": 41
-   }
+   },
+   "family": "Oleaceae"
   },
   "cercis-siliquastrum": {
    "key": "cercis-siliquastrum",
@@ -5211,7 +5845,8 @@
     "north": 675,
     "center": 824,
     "south": 469
-   }
+   },
+   "family": "Fabaceae"
   },
   "passiflora-caerulea": {
    "key": "passiflora-caerulea",
@@ -5261,7 +5896,8 @@
     "north": 849,
     "center": 451,
     "south": 263
-   }
+   },
+   "family": "Passifloraceae"
   },
   "agapanthus": {
    "key": "agapanthus",
@@ -5311,7 +5947,8 @@
     "north": 174,
     "center": 133,
     "south": 106
-   }
+   },
+   "family": "Amaryllidaceae"
   },
   "jasminum-nudiflorum": {
    "key": "jasminum-nudiflorum",
@@ -5361,7 +5998,8 @@
     "north": 213,
     "center": 36,
     "south": 6
-   }
+   },
+   "family": "Oleaceae"
   },
   "nelumbo-nucifera": {
    "key": "nelumbo-nucifera",
@@ -5411,7 +6049,8 @@
     "north": 133,
     "center": 46,
     "south": 13
-   }
+   },
+   "family": "Nelumbonaceae"
   },
   "lagerstroemia-indica": {
    "key": "lagerstroemia-indica",
@@ -5461,7 +6100,8 @@
     "north": 381,
     "center": 103,
     "south": 42
-   }
+   },
+   "family": "Lythraceae"
   },
   "rosa-canina": {
    "key": "rosa-canina",
@@ -5511,6 +6151,13 @@
     "north": 584,
     "center": 111,
     "south": 56
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 46,
+    "p50": 257,
+    "p95": 1774
    }
   },
   "crataegus-monogyna": {
@@ -5561,6 +6208,13 @@
     "north": 1872,
     "center": 783,
     "south": 298
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 37,
+    "p50": 333,
+    "p95": 1218
    }
   },
   "pyracantha": {
@@ -5611,7 +6265,8 @@
     "north": 507,
     "center": 276,
     "south": 145
-   }
+   },
+   "family": "Rosaceae"
   },
   "euonymus-europaeus": {
    "key": "euonymus-europaeus",
@@ -5661,6 +6316,13 @@
     "north": 2418,
     "center": 634,
     "south": 255
+   },
+   "family": "Celastraceae",
+   "elevation": {
+    "n": 95,
+    "p05": 5,
+    "p50": 254,
+    "p95": 1017
    }
   },
   "ruscus-aculeatus": {
@@ -5711,6 +6373,13 @@
     "north": 2460,
     "center": 1232,
     "south": 766
+   },
+   "family": "Asparagaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 13,
+    "p50": 319,
+    "p95": 842
    }
   },
   "arbutus-unedo": {
@@ -5761,6 +6430,13 @@
     "north": 449,
     "center": 880,
     "south": 934
+   },
+   "family": "Ericaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 7,
+    "p50": 191,
+    "p95": 700
    }
   },
   "viburnum-opulus": {
@@ -5811,6 +6487,13 @@
     "north": 1012,
     "center": 8,
     "south": 2
+   },
+   "family": "Viburnaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 17,
+    "p50": 247,
+    "p95": 1145
    }
   },
   "arum-italicum": {
@@ -5861,6 +6544,13 @@
     "north": 1565,
     "center": 1290,
     "south": 697
+   },
+   "family": "Araceae",
+   "elevation": {
+    "n": 97,
+    "p05": 8,
+    "p50": 81,
+    "p95": 520
    }
   },
   "sorbus-aucuparia": {
@@ -5911,6 +6601,13 @@
     "north": 1443,
     "center": 54,
     "south": 38
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 577,
+    "p50": 1417,
+    "p95": 1883
    }
   },
   "ilex-aquifolium": {
@@ -5961,6 +6658,13 @@
     "north": 1331,
     "center": 320,
     "south": 297
+   },
+   "family": "Aquifoliaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 261,
+    "p50": 675,
+    "p95": 1364
    }
   },
   "iris-foetidissima": {
@@ -6011,6 +6715,13 @@
     "north": 298,
     "center": 122,
     "south": 62
+   },
+   "family": "Iridaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 2,
+    "p50": 187,
+    "p95": 739
    }
   },
   "cornus-mas": {
@@ -6061,6 +6772,13 @@
     "north": 1446,
     "center": 402,
     "south": 80
+   },
+   "family": "Cornaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 78,
+    "p50": 475,
+    "p95": 1036
    }
   },
   "smilax-aspera": {
@@ -6111,6 +6829,13 @@
     "north": 449,
     "center": 913,
     "south": 1292
+   },
+   "family": "Smilacaceae",
+   "elevation": {
+    "n": 92,
+    "p05": 6,
+    "p50": 139,
+    "p95": 423
    }
   },
   "solanum-dulcamara": {
@@ -6161,6 +6886,13 @@
     "north": 957,
     "center": 138,
     "south": 74
+   },
+   "family": "Solanaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 30,
+    "p50": 542,
+    "p95": 1425
    }
   },
   "cypripedium-calceolus": {
@@ -6211,6 +6943,13 @@
     "north": 365,
     "center": 1,
     "south": 23
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 70,
+    "p05": 630,
+    "p50": 1419,
+    "p95": 2065
    }
   },
   "cardamine-pratensis": {
@@ -6261,7 +7000,8 @@
     "north": 35,
     "center": 0,
     "south": 0
-   }
+   },
+   "family": "Brassicaceae"
   },
   "ficaria-verna": {
    "key": "ficaria-verna",
@@ -6311,6 +7051,13 @@
     "north": 2933,
     "center": 715,
     "south": 538
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 16,
+    "p50": 508,
+    "p95": 1570
    }
   },
   "lotus-corniculatus": {
@@ -6361,6 +7108,13 @@
     "north": 2100,
     "center": 188,
     "south": 34
+   },
+   "family": "Fabaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 8,
+    "p50": 1221,
+    "p95": 2378
    }
   },
   "geranium-sanguineum": {
@@ -6411,6 +7165,13 @@
     "north": 1299,
     "center": 195,
     "south": 95
+   },
+   "family": "Geraniaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 199,
+    "p50": 683,
+    "p95": 1318
    }
   },
   "dianthus-carthusianorum-gruppo": {
@@ -6468,6 +7229,13 @@
     "north": 1067,
     "center": 337,
     "south": 33
+   },
+   "family": "Caryophyllaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 141,
+    "p50": 1033,
+    "p95": 1906
    }
   },
   "anemone-hortensis": {
@@ -6518,6 +7286,13 @@
     "north": 329,
     "center": 1095,
     "south": 1153
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 30,
+    "p50": 453,
+    "p95": 1103
    }
   },
   "narcissus-tazetta": {
@@ -6568,6 +7343,13 @@
     "north": 120,
     "center": 251,
     "south": 344
+   },
+   "family": "Amaryllidaceae",
+   "elevation": {
+    "n": 89,
+    "p05": 0,
+    "p50": 234,
+    "p95": 987
    }
   },
   "rhinanthus": {
@@ -6618,6 +7400,13 @@
     "north": 1096,
     "center": 99,
     "south": 16
+   },
+   "family": "Orobanchaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 638,
+    "p50": 1640,
+    "p95": 2117
    }
   },
   "anthyllis-vulneraria": {
@@ -6668,6 +7457,13 @@
     "north": 2452,
     "center": 220,
     "south": 405
+   },
+   "family": "Fabaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 595,
+    "p50": 2066,
+    "p95": 2523
    }
   },
   "fritillaria": {
@@ -6746,6 +7542,13 @@
     "north": 71,
     "center": 74,
     "south": 7
+   },
+   "family": "Liliaceae",
+   "elevation": {
+    "n": 74,
+    "p05": 343,
+    "p50": 1082,
+    "p95": 1609
    }
   },
   "trifolium-repens": {
@@ -6796,6 +7599,13 @@
     "north": 2465,
     "center": 568,
     "south": 403
+   },
+   "family": "Fabaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 9,
+    "p50": 249,
+    "p95": 1941
    }
   },
   "prunella-vulgaris": {
@@ -6846,7 +7656,8 @@
     "north": 1602,
     "center": 308,
     "south": 109
-   }
+   },
+   "family": "Lamiaceae"
   },
   "leopoldia-comosa": {
    "key": "leopoldia-comosa",
@@ -6903,6 +7714,13 @@
     "north": 2198,
     "center": 1270,
     "south": 950
+   },
+   "family": "Asparagaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 17,
+    "p50": 495,
+    "p95": 1157
    }
   },
   "lamium-purpureum": {
@@ -6953,6 +7771,13 @@
     "north": 3330,
     "center": 484,
     "south": 124
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 7,
+    "p50": 275,
+    "p95": 991
    }
   },
   "dipsacus-fullonum": {
@@ -7003,6 +7828,13 @@
     "north": 1042,
     "center": 654,
     "south": 314
+   },
+   "family": "Caprifoliaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 2,
+    "p50": 337,
+    "p95": 1384
    }
   },
   "daucus-carota": {
@@ -7053,6 +7885,13 @@
     "north": 1310,
     "center": 692,
     "south": 1076
+   },
+   "family": "Apiaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 10,
+    "p50": 247,
+    "p95": 904
    }
   },
   "oenothera": {
@@ -7103,6 +7942,13 @@
     "north": 316,
     "center": 71,
     "south": 32
+   },
+   "family": "Onagraceae",
+   "elevation": {
+    "n": 89,
+    "p05": -1,
+    "p50": 104,
+    "p95": 727
    }
   },
   "cymbalaria-muralis": {
@@ -7153,6 +7999,13 @@
     "north": 2603,
     "center": 1475,
     "south": 601
+   },
+   "family": "Plantaginaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 7,
+    "p50": 243,
+    "p95": 895
    }
   },
   "antirrhinum-majus": {
@@ -7203,6 +8056,13 @@
     "north": 308,
     "center": 133,
     "south": 73
+   },
+   "family": "Plantaginaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 17,
+    "p50": 264,
+    "p95": 1009
    }
   },
   "lathyrus-latifolius": {
@@ -7253,6 +8113,13 @@
     "north": 432,
     "center": 343,
     "south": 65
+   },
+   "family": "Fabaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 43,
+    "p50": 437,
+    "p95": 1117
    }
   },
   "tragopogon-porrifolius": {
@@ -7303,6 +8170,13 @@
     "north": 74,
     "center": 102,
     "south": 150
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 93,
+    "p05": 1,
+    "p50": 161,
+    "p95": 941
    }
   },
   "adonis": {
@@ -7374,7 +8248,8 @@
     "north": 31,
     "center": 42,
     "south": 27
-   }
+   },
+   "family": "Ranunculaceae"
   },
   "legousia-speculum-veneris": {
    "key": "legousia-speculum-veneris",
@@ -7424,6 +8299,13 @@
     "north": 224,
     "center": 126,
     "south": 85
+   },
+   "family": "Campanulaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 18,
+    "p50": 274,
+    "p95": 937
    }
   },
   "glebionis-coronaria": {
@@ -7474,6 +8356,13 @@
     "north": 3,
     "center": 23,
     "south": 405
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 92,
+    "p05": 1,
+    "p50": 33,
+    "p95": 327
    }
   },
   "saponaria-officinalis": {
@@ -7524,6 +8413,13 @@
     "north": 1760,
     "center": 224,
     "south": 129
+   },
+   "family": "Caryophyllaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 69,
+    "p50": 276,
+    "p95": 1088
    }
   },
   "anchusa-azurea": {
@@ -7574,6 +8470,13 @@
     "north": 51,
     "center": 148,
     "south": 152
+   },
+   "family": "Boraginaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 7,
+    "p50": 212,
+    "p95": 820
    }
   },
   "anagallis-arvensis": {
@@ -7624,7 +8527,8 @@
     "north": 1006,
     "center": 843,
     "south": 1020
-   }
+   },
+   "family": "Primulaceae"
   },
   "consolida": {
    "key": "consolida",
@@ -7695,7 +8599,8 @@
     "north": 219,
     "center": 80,
     "south": 19
-   }
+   },
+   "family": "Ranunculaceae"
   },
   "foeniculum-vulgare": {
    "key": "foeniculum-vulgare",
@@ -7745,6 +8650,13 @@
     "north": 134,
     "center": 547,
     "south": 669
+   },
+   "family": "Apiaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 2,
+    "p50": 78,
+    "p95": 538
    }
   },
   "viola-calcarata": {
@@ -7795,6 +8707,13 @@
     "north": 324,
     "center": 1,
     "south": 0
+   },
+   "family": "Violaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 1544,
+    "p50": 2162,
+    "p95": 2737
    }
   },
   "silene-acaulis": {
@@ -7845,6 +8764,13 @@
     "north": 1906,
     "center": 67,
     "south": 5
+   },
+   "family": "Caryophyllaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 1934,
+    "p50": 2407,
+    "p95": 2822
    }
   },
   "dryas-octopetala": {
@@ -7895,6 +8821,13 @@
     "north": 1876,
     "center": 72,
     "south": 6
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 1560,
+    "p50": 2177,
+    "p95": 2419
    }
   },
   "ranunculus-glacialis": {
@@ -7945,6 +8878,13 @@
     "north": 706,
     "center": 0,
     "south": 0
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 2256,
+    "p50": 2633,
+    "p95": 3136
    }
   },
   "saxifraga-oppositifolia": {
@@ -7995,6 +8935,13 @@
     "north": 610,
     "center": 30,
     "south": 3
+   },
+   "family": "Saxifragaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 2094,
+    "p50": 2694,
+    "p95": 3073
    }
   },
   "primula-auricula": {
@@ -8045,6 +8992,13 @@
     "north": 538,
     "center": 68,
     "south": 16
+   },
+   "family": "Primulaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 781,
+    "p50": 1705,
+    "p95": 2299
    }
   },
   "linaria-alpina": {
@@ -8095,6 +9049,13 @@
     "north": 1379,
     "center": 22,
     "south": 0
+   },
+   "family": "Plantaginaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 1618,
+    "p50": 2308,
+    "p95": 2827
    }
   },
   "aconitum-napellus": {
@@ -8145,6 +9106,13 @@
     "north": 485,
     "center": 0,
     "south": 0
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 1166,
+    "p50": 1818,
+    "p95": 2466
    }
   },
   "astrantia-major": {
@@ -8195,6 +9163,13 @@
     "north": 1286,
     "center": 12,
     "south": 0
+   },
+   "family": "Apiaceae",
+   "elevation": {
+    "n": 100,
+    "p05": 593,
+    "p50": 1425,
+    "p95": 1993
    }
   },
   "phyteuma": {
@@ -8245,6 +9220,13 @@
     "north": 5673,
     "center": 95,
     "south": 12
+   },
+   "family": "Campanulaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 663,
+    "p50": 1947,
+    "p95": 2628
    }
   },
   "lilium-bulbiferum": {
@@ -8295,6 +9277,13 @@
     "north": 2322,
     "center": 444,
     "south": 138
+   },
+   "family": "Liliaceae",
+   "elevation": {
+    "n": 91,
+    "p05": 385,
+    "p50": 1389,
+    "p95": 1987
    }
   },
   "bistorta-officinalis": {
@@ -8345,6 +9334,13 @@
     "north": 1305,
     "center": 16,
     "south": 3
+   },
+   "family": "Polygonaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 1151,
+    "p50": 1787,
+    "p95": 2119
    }
   },
   "chamaenerion-angustifolium": {
@@ -8395,6 +9391,13 @@
     "north": 2742,
     "center": 80,
     "south": 62
+   },
+   "family": "Onagraceae",
+   "elevation": {
+    "n": 99,
+    "p05": 1296,
+    "p50": 1857,
+    "p95": 2481
    }
   },
   "pinguicula": {
@@ -8445,6 +9448,13 @@
     "north": 2013,
     "center": 37,
     "south": 52
+   },
+   "family": "Lentibulariaceae",
+   "elevation": {
+    "n": 83,
+    "p05": 431,
+    "p50": 2015,
+    "p95": 2412
    }
   },
   "centaurea-montana-gruppo": {
@@ -8502,6 +9512,13 @@
     "north": 866,
     "center": 216,
     "south": 44
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 98,
+    "p05": 373,
+    "p50": 1459,
+    "p95": 1964
    }
   },
   "sempervivum": {
@@ -8552,6 +9569,13 @@
     "north": 4047,
     "center": 288,
     "south": 78
+   },
+   "family": "Crassulaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 576,
+    "p50": 1869,
+    "p95": 2543
    }
   },
   "globularia": {
@@ -8602,7 +9626,8 @@
     "north": 2454,
     "center": 498,
     "south": 100
-   }
+   },
+   "family": "Plantaginaceae"
   },
   "gentiana-asclepiadea": {
    "key": "gentiana-asclepiadea",
@@ -8652,7 +9677,8 @@
     "north": 1600,
     "center": 14,
     "south": 0
-   }
+   },
+   "family": "Gentianaceae"
   },
   "anemone-coronaria": {
    "key": "anemone-coronaria",
@@ -8702,6 +9728,13 @@
     "north": 28,
     "center": 258,
     "south": 130
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 35,
+    "p50": 127,
+    "p95": 548
    }
   },
   "erica-arborea": {
@@ -8752,6 +9785,13 @@
     "north": 518,
     "center": 632,
     "south": 449
+   },
+   "family": "Ericaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 9,
+    "p50": 318,
+    "p95": 781
    }
   },
   "achillea-maritima": {
@@ -8809,6 +9849,13 @@
     "north": 0,
     "center": 110,
     "south": 424
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 74,
+    "p05": 0,
+    "p50": 1,
+    "p95": 8
    }
   },
   "cakile-maritima": {
@@ -8859,6 +9906,13 @@
     "north": 338,
     "center": 434,
     "south": 759
+   },
+   "family": "Brassicaceae",
+   "elevation": {
+    "n": 79,
+    "p05": -1,
+    "p50": 1,
+    "p95": 10
    }
   },
   "limonium": {
@@ -8909,6 +9963,13 @@
     "north": 131,
     "center": 186,
     "south": 500
+   },
+   "family": "Plumbaginaceae",
+   "elevation": {
+    "n": 68,
+    "p05": -2,
+    "p50": 3,
+    "p95": 71
    }
   },
   "matthiola": {
@@ -8959,6 +10020,13 @@
     "north": 173,
     "center": 95,
     "south": 464
+   },
+   "family": "Brassicaceae",
+   "elevation": {
+    "n": 75,
+    "p05": 0,
+    "p50": 35,
+    "p95": 1198
    }
   },
   "helichrysum": {
@@ -9023,6 +10091,13 @@
     "north": 196,
     "center": 452,
     "south": 283
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 94,
+    "p05": 7,
+    "p50": 389,
+    "p95": 1208
    }
   },
   "teucrium-fruticans": {
@@ -9073,6 +10148,13 @@
     "north": 8,
     "center": 134,
     "south": 326
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 4,
+    "p50": 81,
+    "p95": 418
    }
   },
   "tamarix": {
@@ -9123,6 +10205,13 @@
     "north": 25,
     "center": 16,
     "south": 86
+   },
+   "family": "Tamaricaceae",
+   "elevation": {
+    "n": 92,
+    "p05": 0,
+    "p50": 5,
+    "p95": 74
    }
   },
   "vitex-agnus-castus": {
@@ -9173,6 +10262,13 @@
     "north": 32,
     "center": 57,
     "south": 279
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 87,
+    "p05": 2,
+    "p50": 13,
+    "p95": 193
    }
   },
   "erica-multiflora": {
@@ -9223,7 +10319,8 @@
     "north": 1,
     "center": 165,
     "south": 133
-   }
+   },
+   "family": "Ericaceae"
   },
   "anemone-ranunculoides": {
    "key": "anemone-ranunculoides",
@@ -9273,6 +10370,13 @@
     "north": 771,
     "center": 93,
     "south": 19
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 275,
+    "p50": 1107,
+    "p95": 1565
    }
   },
   "corydalis": {
@@ -9330,6 +10434,13 @@
     "north": 1123,
     "center": 186,
     "south": 71
+   },
+   "family": "Papaveraceae",
+   "elevation": {
+    "n": 99,
+    "p05": 269,
+    "p50": 1113,
+    "p95": 1643
    }
   },
   "oxalis-acetosella": {
@@ -9380,6 +10491,13 @@
     "north": 1350,
     "center": 30,
     "south": 36
+   },
+   "family": "Oxalidaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 438,
+    "p50": 1415,
+    "p95": 2023
    }
   },
   "geranium-robertianum": {
@@ -9430,6 +10548,13 @@
     "north": 2232,
     "center": 271,
     "south": 199
+   },
+   "family": "Geraniaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 263,
+    "p50": 1211,
+    "p95": 1730
    }
   },
   "melittis-melissophyllum": {
@@ -9480,6 +10605,13 @@
     "north": 1529,
     "center": 364,
     "south": 63
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 298,
+    "p50": 775,
+    "p95": 1349
    }
   },
   "digitalis": {
@@ -9530,6 +10662,13 @@
     "north": 1384,
     "center": 554,
     "south": 338
+   },
+   "family": "Plantaginaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 481,
+    "p50": 1284,
+    "p95": 1887
    }
   },
   "lonicera-caprifogli": {
@@ -9608,6 +10747,13 @@
     "north": 1921,
     "center": 758,
     "south": 563
+   },
+   "family": "Caprifoliaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 2,
+    "p50": 222,
+    "p95": 692
    }
   },
   "clematis-vitalba": {
@@ -9658,6 +10804,13 @@
     "north": 2586,
     "center": 1089,
     "south": 493
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 71,
+    "p50": 399,
+    "p95": 1017
    }
   },
   "sambucus-nigra": {
@@ -9708,6 +10861,13 @@
     "north": 3885,
     "center": 972,
     "south": 478
+   },
+   "family": "Viburnaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 57,
+    "p50": 354,
+    "p95": 1225
    }
   },
   "calluna-vulgaris": {
@@ -9758,6 +10918,13 @@
     "north": 1899,
     "center": 115,
     "south": 0
+   },
+   "family": "Ericaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 146,
+    "p50": 1061,
+    "p95": 2133
    }
   },
   "erica-carnea": {
@@ -9808,6 +10975,13 @@
     "north": 2290,
     "center": 7,
     "south": 0
+   },
+   "family": "Ericaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 402,
+    "p50": 1446,
+    "p95": 2233
    }
   },
   "lamium-maculatum": {
@@ -9858,7 +11032,8 @@
     "north": 1528,
     "center": 770,
     "south": 109
-   }
+   },
+   "family": "Lamiaceae"
   },
   "campanula-trachelium": {
    "key": "campanula-trachelium",
@@ -9908,7 +11083,8 @@
     "north": 2080,
     "center": 404,
     "south": 90
-   }
+   },
+   "family": "Campanulaceae"
   },
   "lychnis-flos-cuculi": {
    "key": "lychnis-flos-cuculi",
@@ -9958,6 +11134,13 @@
     "north": 1436,
     "center": 450,
     "south": 53
+   },
+   "family": "Caryophyllaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 65,
+    "p50": 370,
+    "p95": 1960
    }
   },
   "eupatorium-cannabinum": {
@@ -10008,6 +11191,13 @@
     "north": 1516,
     "center": 410,
     "south": 164
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 97,
+    "p05": 1,
+    "p50": 323,
+    "p95": 1146
    }
   },
   "filipendula-ulmaria": {
@@ -10058,6 +11248,13 @@
     "north": 432,
     "center": 2,
     "south": 4
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 102,
+    "p50": 647,
+    "p95": 1491
    }
   },
   "sagittaria-sagittifolia": {
@@ -10108,7 +11305,8 @@
     "north": 79,
     "center": 0,
     "south": 0
-   }
+   },
+   "family": "Alismataceae"
   },
   "ranunculus-acquatici": {
    "key": "ranunculus-acquatici",
@@ -10186,6 +11384,13 @@
     "north": 92,
     "center": 33,
     "south": 38
+   },
+   "family": "Ranunculaceae",
+   "elevation": {
+    "n": 86,
+    "p05": 28,
+    "p50": 495,
+    "p95": 2346
    }
   },
   "persicaria-amphibia": {
@@ -10236,6 +11441,13 @@
     "north": 104,
     "center": 15,
     "south": 21
+   },
+   "family": "Polygonaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 3,
+    "p50": 1002,
+    "p95": 2007
    }
   },
   "parnassia-palustris": {
@@ -10286,6 +11498,13 @@
     "north": 1891,
     "center": 26,
     "south": 7
+   },
+   "family": "Celastraceae",
+   "elevation": {
+    "n": 97,
+    "p05": 653,
+    "p50": 1765,
+    "p95": 2322
    }
   },
   "impatiens-noli-tangere": {
@@ -10336,6 +11555,13 @@
     "north": 344,
     "center": 9,
     "south": 2
+   },
+   "family": "Balsaminaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 409,
+    "p50": 1087,
+    "p95": 1418
    }
   },
   "hibiscus": {
@@ -10393,7 +11619,8 @@
     "north": 733,
     "center": 336,
     "south": 444
-   }
+   },
+   "family": "Malvaceae"
   },
   "tulipa-gesneriana": {
    "key": "tulipa-gesneriana",
@@ -10443,7 +11670,8 @@
     "north": 270,
     "center": 46,
     "south": 16
-   }
+   },
+   "family": "Liliaceae"
   },
   "hyacinthus-orientalis": {
    "key": "hyacinthus-orientalis",
@@ -10493,7 +11721,8 @@
     "north": 302,
     "center": 47,
     "south": 20
-   }
+   },
+   "family": "Asparagaceae"
   },
   "magnolia": {
    "key": "magnolia",
@@ -10543,7 +11772,8 @@
     "north": 1729,
     "center": 520,
     "south": 328
-   }
+   },
+   "family": "Magnoliaceae"
   },
   "lantana-camara": {
    "key": "lantana-camara",
@@ -10593,7 +11823,8 @@
     "north": 75,
     "center": 194,
     "south": 809
-   }
+   },
+   "family": "Verbenaceae"
   },
   "petunia": {
    "key": "petunia",
@@ -10643,7 +11874,8 @@
     "north": 384,
     "center": 128,
     "south": 187
-   }
+   },
+   "family": "Solanaceae"
   },
   "trachelospermum-jasminoides": {
    "key": "trachelospermum-jasminoides",
@@ -10693,7 +11925,8 @@
     "north": 635,
     "center": 341,
     "south": 198
-   }
+   },
+   "family": "Apocynaceae"
   },
   "forsythia": {
    "key": "forsythia",
@@ -10743,7 +11976,8 @@
     "north": 372,
     "center": 45,
     "south": 12
-   }
+   },
+   "family": "Oleaceae"
   },
   "strelitzia-reginae": {
    "key": "strelitzia-reginae",
@@ -10793,7 +12027,8 @@
     "north": 46,
     "center": 59,
     "south": 196
-   }
+   },
+   "family": "Strelitziaceae"
   },
   "aloe-arborescens": {
    "key": "aloe-arborescens",
@@ -10843,7 +12078,8 @@
     "north": 71,
     "center": 65,
     "south": 199
-   }
+   },
+   "family": "Asphodelaceae"
   },
   "hemerocallis-fulva": {
    "key": "hemerocallis-fulva",
@@ -10893,7 +12129,8 @@
     "north": 661,
     "center": 39,
     "south": 8
-   }
+   },
+   "family": "Asphodelaceae"
   },
   "iris-germanica": {
    "key": "iris-germanica",
@@ -10950,7 +12187,8 @@
     "north": 384,
     "center": 159,
     "south": 66
-   }
+   },
+   "family": "Iridaceae"
   },
   "viola-wittrockiana": {
    "key": "viola-wittrockiana",
@@ -11000,7 +12238,8 @@
     "north": 188,
     "center": 27,
     "south": 24
-   }
+   },
+   "family": "Violaceae"
   },
   "cyclamen-persicum": {
    "key": "cyclamen-persicum",
@@ -11050,7 +12289,8 @@
     "north": 80,
     "center": 58,
     "south": 90
-   }
+   },
+   "family": "Primulaceae"
   },
   "euphorbia-pulcherrima": {
    "key": "euphorbia-pulcherrima",
@@ -11100,7 +12340,8 @@
     "north": 73,
     "center": 29,
     "south": 108
-   }
+   },
+   "family": "Euphorbiaceae"
   },
   "callistemon": {
    "key": "callistemon",
@@ -11171,7 +12412,8 @@
     "north": 155,
     "center": 199,
     "south": 325
-   }
+   },
+   "family": "Myrtaceae"
   },
   "buddleja-davidii": {
    "key": "buddleja-davidii",
@@ -11221,7 +12463,8 @@
     "north": 2599,
     "center": 110,
     "south": 50
-   }
+   },
+   "family": "Scrophulariaceae"
   },
   "dahlia": {
    "key": "dahlia",
@@ -11271,7 +12514,8 @@
     "north": 180,
     "center": 44,
     "south": 27
-   }
+   },
+   "family": "Asteraceae"
   },
   "mirabilis-jalapa": {
    "key": "mirabilis-jalapa",
@@ -11321,7 +12565,8 @@
     "north": 367,
     "center": 396,
     "south": 575
-   }
+   },
+   "family": "Nyctaginaceae"
   },
   "plumbago-auriculata": {
    "key": "plumbago-auriculata",
@@ -11371,7 +12616,8 @@
     "north": 198,
     "center": 349,
     "south": 463
-   }
+   },
+   "family": "Plumbaginaceae"
   },
   "narcissus-pseudonarcissus": {
    "key": "narcissus-pseudonarcissus",
@@ -11421,7 +12667,8 @@
     "north": 387,
     "center": 67,
     "south": 12
-   }
+   },
+   "family": "Amaryllidaceae"
   },
   "prunus-spinosa": {
    "key": "prunus-spinosa",
@@ -11471,6 +12718,13 @@
     "north": 1313,
     "center": 905,
     "south": 256
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 9,
+    "p50": 538,
+    "p95": 1385
    }
   },
   "phytolacca-americana": {
@@ -11521,6 +12775,13 @@
     "north": 4115,
     "center": 885,
     "south": 390
+   },
+   "family": "Phytolaccaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 11,
+    "p50": 125,
+    "p95": 678
    }
   },
   "berberis-vulgaris": {
@@ -11571,6 +12832,13 @@
     "north": 733,
     "center": 13,
     "south": 6
+   },
+   "family": "Berberidaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 180,
+    "p50": 1247,
+    "p95": 1972
    }
   },
   "hippophae-rhamnoides": {
@@ -11621,6 +12889,13 @@
     "north": 176,
     "center": 1,
     "south": 0
+   },
+   "family": "Elaeagnaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 3,
+    "p50": 779,
+    "p95": 1668
    }
   },
   "vaccinium-myrtillus": {
@@ -11671,6 +12946,13 @@
     "north": 1367,
     "center": 23,
     "south": 0
+   },
+   "family": "Ericaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 553,
+    "p50": 1558,
+    "p95": 2219
    }
   },
   "vaccinium-vitis-idaea": {
@@ -11721,6 +13003,13 @@
     "north": 1037,
     "center": 0,
     "south": 0
+   },
+   "family": "Ericaceae",
+   "elevation": {
+    "n": 96,
+    "p05": 1456,
+    "p50": 1868,
+    "p95": 2241
    }
   },
   "fragaria-vesca": {
@@ -11771,6 +13060,13 @@
     "north": 1309,
     "center": 221,
     "south": 112
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 97,
+    "p05": 111,
+    "p50": 894,
+    "p95": 1715
    }
   },
   "rubus": {
@@ -11835,6 +13131,13 @@
     "north": 746,
     "center": 244,
     "south": 356
+   },
+   "family": "Rosaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 34,
+    "p50": 249,
+    "p95": 975
    }
   },
   "taxus-baccata": {
@@ -11885,6 +13188,13 @@
     "north": 555,
     "center": 121,
     "south": 124
+   },
+   "family": "Taxaceae",
+   "elevation": {
+    "n": 94,
+    "p05": 65,
+    "p50": 367,
+    "p95": 1383
    }
   },
   "cotoneaster": {
@@ -11935,7 +13245,8 @@
     "north": 563,
     "center": 90,
     "south": 39
-   }
+   },
+   "family": "Rosaceae"
   },
   "colchicum-autumnale": {
    "key": "colchicum-autumnale",
@@ -11985,6 +13296,13 @@
     "north": 2354,
     "center": 311,
     "south": 77
+   },
+   "family": "Colchicaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 23,
+    "p50": 645,
+    "p95": 1797
    }
   },
   "sternbergia-lutea": {
@@ -12035,6 +13353,13 @@
     "north": 158,
     "center": 204,
     "south": 279
+   },
+   "family": "Amaryllidaceae",
+   "elevation": {
+    "n": 91,
+    "p05": 23,
+    "p50": 348,
+    "p95": 985
    }
   },
   "symphyotrichum": {
@@ -12099,6 +13424,13 @@
     "north": 139,
     "center": 0,
     "south": 0
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 100,
+    "p05": 26,
+    "p50": 147,
+    "p95": 818
    }
   },
   "solidago": {
@@ -12149,6 +13481,13 @@
     "north": 1932,
     "center": 118,
     "south": 39
+   },
+   "family": "Asteraceae",
+   "elevation": {
+    "n": 95,
+    "p05": 70,
+    "p50": 481,
+    "p95": 1218
    }
   },
   "viburnum-lantana": {
@@ -12199,7 +13538,8 @@
     "north": 1454,
     "center": 40,
     "south": 4
-   }
+   },
+   "family": "Viburnaceae"
   },
   "symphoricarpos-albus": {
    "key": "symphoricarpos-albus",
@@ -12249,7 +13589,8 @@
     "north": 96,
     "center": 13,
     "south": 13
-   }
+   },
+   "family": "Caprifoliaceae"
   },
   "anacamptis-papilionacea": {
    "key": "anacamptis-papilionacea",
@@ -12299,6 +13640,13 @@
     "north": 188,
     "center": 687,
     "south": 1740
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 53,
+    "p05": 46,
+    "p50": 481,
+    "p95": 1274
    }
   },
   "orchis-purpurea": {
@@ -12349,6 +13697,13 @@
     "north": 2722,
     "center": 2243,
     "south": 354
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 89,
+    "p05": 94,
+    "p50": 574,
+    "p95": 1401
    }
   },
   "orchis-simia": {
@@ -12399,6 +13754,13 @@
     "north": 671,
     "center": 312,
     "south": 81
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 81,
+    "p05": 116,
+    "p50": 497,
+    "p95": 1264
    }
   },
   "orchis-italica": {
@@ -12449,6 +13811,13 @@
     "north": 1,
     "center": 372,
     "south": 1546
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 83,
+    "p05": 68,
+    "p50": 454,
+    "p95": 1117
    }
   },
   "orchis-mascula": {
@@ -12499,6 +13868,13 @@
     "north": 2408,
     "center": 361,
     "south": 293
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 85,
+    "p05": 503,
+    "p50": 1652,
+    "p95": 2268
    }
   },
   "neotinea-tridentata": {
@@ -12549,6 +13925,13 @@
     "north": 1652,
     "center": 683,
     "south": 524
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 86,
+    "p05": 257,
+    "p50": 947,
+    "p95": 1549
    }
   },
   "himantoglossum-robertianum": {
@@ -12606,6 +13989,13 @@
     "north": 903,
     "center": 276,
     "south": 992
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 72,
+    "p05": 12,
+    "p50": 349,
+    "p95": 800
    }
   },
   "ophrys-bertolonii": {
@@ -12656,6 +14046,13 @@
     "north": 627,
     "center": 804,
     "south": 1134
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 87,
+    "p05": 67,
+    "p50": 458,
+    "p95": 1030
    }
   },
   "ophrys-lutea-gruppo": {
@@ -12720,6 +14117,13 @@
     "north": 2,
     "center": 97,
     "south": 1364
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 71,
+    "p05": 53,
+    "p50": 440,
+    "p95": 938
    }
   },
   "ophrys-fuciflora-gruppo": {
@@ -12777,6 +14181,13 @@
     "north": 1341,
     "center": 617,
     "south": 697
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 78,
+    "p05": 65,
+    "p50": 461,
+    "p95": 1259
    }
   },
   "ophrys-tenthredinifera": {
@@ -12827,6 +14238,13 @@
     "north": 1,
     "center": 73,
     "south": 1414
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 42,
+    "p05": 21,
+    "p50": 598,
+    "p95": 1081
    }
   },
   "serapias": {
@@ -12877,6 +14295,13 @@
     "north": 655,
     "center": 1146,
     "south": 1940
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 86,
+    "p05": 15,
+    "p50": 271,
+    "p95": 751
    }
   },
   "cephalanthera-bianche": {
@@ -12934,6 +14359,13 @@
     "north": 3637,
     "center": 650,
     "south": 271
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 74,
+    "p05": 397,
+    "p50": 1074,
+    "p95": 1483
    }
   },
   "cephalanthera-rubra": {
@@ -12984,6 +14416,13 @@
     "north": 591,
     "center": 192,
     "south": 94
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 86,
+    "p05": 5,
+    "p50": 1016,
+    "p95": 1645
    }
   },
   "dactylorhiza-sambucina": {
@@ -13034,6 +14473,13 @@
     "north": 2167,
     "center": 574,
     "south": 248
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 88,
+    "p05": 1209,
+    "p50": 1671,
+    "p95": 2148
    }
   },
   "dactylorhiza-maculata-gruppo": {
@@ -13091,6 +14537,13 @@
     "north": 3831,
     "center": 219,
     "south": 171
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 93,
+    "p05": 986,
+    "p50": 1632,
+    "p95": 2244
    }
   },
   "gymnadenia-conopsea": {
@@ -13141,6 +14594,13 @@
     "north": 2782,
     "center": 263,
     "south": 49
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 95,
+    "p05": 1052,
+    "p50": 1821,
+    "p95": 2475
    }
   },
   "limodorum-abortivum": {
@@ -13191,6 +14651,13 @@
     "north": 1047,
     "center": 326,
     "south": 283
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 87,
+    "p05": 238,
+    "p50": 696,
+    "p95": 1383
    }
   },
   "platanthera": {
@@ -13248,6 +14715,13 @@
     "north": 1940,
     "center": 190,
     "south": 64
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 81,
+    "p05": 526,
+    "p50": 1285,
+    "p95": 2120
    }
   },
   "traunsteinera-globosa": {
@@ -13298,6 +14772,13 @@
     "north": 835,
     "center": 2,
     "south": 0
+   },
+   "family": "Orchidaceae",
+   "elevation": {
+    "n": 83,
+    "p05": 1026,
+    "p50": 1757,
+    "p95": 2369
    }
   },
   "orchis-militaris": {
@@ -13348,7 +14829,8 @@
     "north": 735,
     "center": 60,
     "south": 7
-   }
+   },
+   "family": "Orchidaceae"
   },
   "anacamptis-coriophora": {
    "key": "anacamptis-coriophora",
@@ -13398,7 +14880,8 @@
     "north": 278,
     "center": 81,
     "south": 11
-   }
+   },
+   "family": "Orchidaceae"
   },
   "ophrys-sphegodes-gruppo": {
    "key": "ophrys-sphegodes-gruppo",
@@ -13469,7 +14952,8 @@
     "north": 1080,
     "center": 1263,
     "south": 2238
-   }
+   },
+   "family": "Orchidaceae"
   },
   "himantoglossum-hircinum-gruppo": {
    "key": "himantoglossum-hircinum-gruppo",
@@ -13526,7 +15010,8 @@
     "north": 608,
     "center": 501,
     "south": 145
-   }
+   },
+   "family": "Orchidaceae"
   },
   "borago-officinalis": {
    "key": "borago-officinalis",
@@ -13576,7 +15061,8 @@
     "north": 739,
     "center": 1361,
     "south": 1241
-   }
+   },
+   "family": "Boraginaceae"
   },
   "tropaeolum-majus": {
    "key": "tropaeolum-majus",
@@ -13626,7 +15112,8 @@
     "north": 138,
     "center": 79,
     "south": 231
-   }
+   },
+   "family": "Tropaeolaceae"
   },
   "cucurbita": {
    "key": "cucurbita",
@@ -13676,7 +15163,8 @@
     "north": 197,
     "center": 78,
     "south": 64
-   }
+   },
+   "family": "Cucurbitaceae"
   },
   "phaseolus-coccineus": {
    "key": "phaseolus-coccineus",
@@ -13726,7 +15214,8 @@
     "north": 5,
     "center": 11,
     "south": 1
-   }
+   },
+   "family": "Fabaceae"
   },
   "cynara-cardunculus": {
    "key": "cynara-cardunculus",
@@ -13776,7 +15265,8 @@
     "north": 155,
     "center": 178,
     "south": 273
-   }
+   },
+   "family": "Asteraceae"
   },
   "allium-schoenoprasum": {
    "key": "allium-schoenoprasum",
@@ -13826,7 +15316,8 @@
     "north": 415,
     "center": 23,
     "south": 14
-   }
+   },
+   "family": "Amaryllidaceae"
   },
   "salvia-officinalis": {
    "key": "salvia-officinalis",
@@ -13876,7 +15367,8 @@
     "north": 333,
     "center": 176,
     "south": 160
-   }
+   },
+   "family": "Lamiaceae"
   },
   "salvia-rosmarinus": {
    "key": "salvia-rosmarinus",
@@ -13926,7 +15418,8 @@
     "north": 887,
     "center": 841,
     "south": 1181
-   }
+   },
+   "family": "Lamiaceae"
   },
   "calendula-officinalis": {
    "key": "calendula-officinalis",
@@ -13976,7 +15469,8 @@
     "north": 286,
     "center": 87,
     "south": 66
-   }
+   },
+   "family": "Asteraceae"
   },
   "punica-granatum": {
    "key": "punica-granatum",
@@ -14026,7 +15520,8 @@
     "north": 746,
     "center": 480,
     "south": 550
-   }
+   },
+   "family": "Lythraceae"
   },
   "diospyros-kaki": {
    "key": "diospyros-kaki",
@@ -14076,7 +15571,8 @@
     "north": 373,
     "center": 185,
     "south": 85
-   }
+   },
+   "family": "Ebenaceae"
   },
   "citrus": {
    "key": "citrus",
@@ -14126,7 +15622,8 @@
     "north": 762,
     "center": 691,
     "south": 1153
-   }
+   },
+   "family": "Rutaceae"
   },
   "prunus-dulcis": {
    "key": "prunus-dulcis",
@@ -14176,7 +15673,8 @@
     "north": 156,
     "center": 131,
     "south": 305
-   }
+   },
+   "family": "Rosaceae"
   },
   "cydonia-oblonga": {
    "key": "cydonia-oblonga",
@@ -14226,7 +15724,8 @@
     "north": 157,
     "center": 103,
     "south": 100
-   }
+   },
+   "family": "Rosaceae"
   },
   "vitis-vinifera": {
    "key": "vitis-vinifera",
@@ -14276,7 +15775,8 @@
     "north": 305,
     "center": 207,
     "south": 212
-   }
+   },
+   "family": "Vitaceae"
   },
   "solanum-lycopersicum": {
    "key": "solanum-lycopersicum",
@@ -14326,7 +15826,8 @@
     "north": 312,
     "center": 213,
     "south": 153
-   }
+   },
+   "family": "Solanaceae"
   },
   "capsicum-annuum": {
    "key": "capsicum-annuum",
@@ -14376,7 +15877,8 @@
     "north": 78,
     "center": 101,
     "south": 104
-   }
+   },
+   "family": "Solanaceae"
   },
   "solanum-melongena": {
    "key": "solanum-melongena",
@@ -14426,7 +15928,8 @@
     "north": 27,
     "center": 26,
     "south": 28
-   }
+   },
+   "family": "Solanaceae"
   },
   "helianthus-annuus": {
    "key": "helianthus-annuus",
@@ -14476,7 +15979,8 @@
     "north": 233,
     "center": 105,
     "south": 47
-   }
+   },
+   "family": "Asteraceae"
   },
   "phacelia-tanacetifolia": {
    "key": "phacelia-tanacetifolia",
@@ -14526,7 +16030,8 @@
     "north": 299,
     "center": 36,
     "south": 12
-   }
+   },
+   "family": "Boraginaceae"
   },
   "crocus-sativus": {
    "key": "crocus-sativus",
@@ -14576,7 +16081,8 @@
     "north": 21,
     "center": 7,
     "south": 2
-   }
+   },
+   "family": "Iridaceae"
   },
   "prunus-persica": {
    "key": "prunus-persica",
@@ -14626,7 +16132,8 @@
     "north": 378,
     "center": 98,
     "south": 149
-   }
+   },
+   "family": "Rosaceae"
   },
   "origanum-vulgare": {
    "key": "origanum-vulgare",
@@ -14676,7 +16183,8 @@
     "north": 520,
     "center": 100,
     "south": 66
-   }
+   },
+   "family": "Lamiaceae"
   },
   "knautia": {
    "key": "knautia",
@@ -14726,6 +16234,13 @@
     "north": 795,
     "center": 55,
     "south": 50
+   },
+   "family": "Caprifoliaceae",
+   "elevation": {
+    "n": 99,
+    "p05": 26,
+    "p50": 668,
+    "p95": 1972
    }
   },
   "mentha-aquatica": {
@@ -14776,6 +16291,13 @@
     "north": 337,
     "center": 83,
     "south": 72
+   },
+   "family": "Lamiaceae",
+   "elevation": {
+    "n": 98,
+    "p05": 7,
+    "p50": 196,
+    "p95": 1064
    }
   }
  }

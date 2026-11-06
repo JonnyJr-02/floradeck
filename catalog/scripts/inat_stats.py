@@ -11,7 +11,9 @@ iNaturalist taxa (reporting synonyms and names it cannot find), then collects:
 - the same for Europe, only when the Italian pool is small, and for the
   whole world when the European pool is small too;
 - research-grade observations in northern, central and southern Italy,
-  plus the same counts for all plants as a baseline for observer density.
+  plus the same counts for all plants as a baseline for observer density;
+- the botanical family, and for wild catalogue species the altitude range of a
+  sample of Italian observations (EU-DEM elevations via OpenTopoData).
 
 Candidates flagged "cultivated" (garden plants) also count casual
 observations, because iNaturalist never marks cultivated plants research grade.
@@ -37,8 +39,13 @@ from datetime import date
 from pathlib import Path
 
 API = "https://api.inaturalist.org/v1"
+API_V2 = "https://api.inaturalist.org/v2"
+# EU-DEM 25 m through the public OpenTopoData API: 100 points per call, 1 call/s, 1000 calls/day.
+ELEVATION_API = "https://api.opentopodata.org/v1/eudem25m"
 USER_AGENT = "FloraDeck-catalog-stats/0.1 (personal non-commercial project)"
-MIN_INTERVAL_S = 1.0  # iNaturalist asks API clients for about one request per second
+MIN_INTERVAL_S = 1.0  # both services ask for about one request per second
+ELEVATION_SAMPLE = 100  # observation points per species used to estimate the altitude range
+MIN_ELEVATION_POINTS = 20
 
 CATALOG_DIR = Path(__file__).resolve().parents[1]
 CANDIDATES = CATALOG_DIR / "proposal" / "candidates.json"
@@ -63,15 +70,20 @@ AREAS = {
     "south": {"swlat": 35.0, "nelat": 41.8},
 }
 
-_last_request = 0.0
+_last_request: dict[str, float] = {}
 _network_requests = 0
 
 
-def get_json(path: str, params: dict) -> dict:
-    """GET an API endpoint, with an on-disk cache, rate limiting and retries."""
-    global _last_request, _network_requests
+def get_json(path: str, params: dict, api: str = API) -> dict:
+    """GET an iNaturalist endpoint (v1 unless told otherwise)."""
     query = urllib.parse.urlencode(sorted(params.items()))
-    url = f"{API}/{path}?{query}"
+    return fetch_json(f"{api}/{path}?{query}")
+
+
+def fetch_json(url: str) -> dict:
+    """GET a URL, with an on-disk cache, per-host rate limiting and retries."""
+    global _network_requests
+    host = urllib.parse.urlsplit(url).netloc
     cache_file = CACHE_DIR / f"{hashlib.sha1(url.encode()).hexdigest()}.json"
     if cache_file.exists():
         return json.loads(cache_file.read_text(encoding="utf-8"))
@@ -80,10 +92,10 @@ def get_json(path: str, params: dict) -> dict:
         url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"}
     )
     for attempt in range(5):
-        wait = MIN_INTERVAL_S - (time.monotonic() - _last_request)
+        wait = MIN_INTERVAL_S - (time.monotonic() - _last_request.get(host, 0.0))
         if wait > 0:
             time.sleep(wait)
-        _last_request = time.monotonic()
+        _last_request[host] = time.monotonic()
         _network_requests += 1
         try:
             with urllib.request.urlopen(request, timeout=60) as response:
@@ -128,6 +140,37 @@ def month_histogram(params: dict) -> dict[int, int]:
     return {int(month): value for month, value in months.items()}
 
 
+def family_of(taxon_id: int) -> str | None:
+    results = get_json(f"taxa/{taxon_id}", {}).get("results", [])
+    ancestors = results[0].get("ancestors", []) if results else []
+    return next((a["name"] for a in ancestors if a.get("rank") == "family"), None)
+
+
+def elevation_profile(italy: dict) -> dict:
+    """Altitude percentiles of a sample of non-obscured Italian observations."""
+    observations = get_json(
+        "observations", {**italy, "per_page": ELEVATION_SAMPLE, "fields": "location,obscured"}, api=API_V2
+    ).get("results", [])
+    points = []
+    for observation in observations:
+        if observation.get("obscured") or not observation.get("location"):
+            continue
+        lat, lng = (float(v) for v in observation["location"].split(","))
+        points.append(f"{lat:.5f},{lng:.5f}")
+    if len(points) < MIN_ELEVATION_POINTS:
+        return {"n": len(points)}
+    query = urllib.parse.urlencode({"locations": "|".join(points)}, safe=",|")
+    results = fetch_json(f"{ELEVATION_API}?{query}").get("results", [])
+    heights = sorted(r["elevation"] for r in results if r.get("elevation") is not None)
+    if len(heights) < MIN_ELEVATION_POINTS:
+        return {"n": len(heights)}
+
+    def percentile(share: float) -> int:
+        return round(heights[round(share * (len(heights) - 1))])
+
+    return {"n": len(heights), "p05": percentile(0.05), "p50": percentile(0.5), "p95": percentile(0.95)}
+
+
 def stats_for(candidate: dict) -> dict:
     resolved = [resolve_taxon(name) for name in candidate["taxa"]]
     entry: dict = {"key": candidate["key"], "taxa": resolved}
@@ -159,6 +202,10 @@ def stats_for(candidate: dict) -> dict:
         else None
     )
     entry["areas"] = {area: count({**italy, **band, **LNG_RANGE}) for area, band in AREAS.items()}
+    entry["family"] = family_of(ids[0])
+    # Altitude only makes sense for wild plants, and only the catalogue needs it.
+    if candidate["status"] == "main" and not candidate.get("cultivated"):
+        entry["elevation"] = elevation_profile(italy)
     return entry
 
 

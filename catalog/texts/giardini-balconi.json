@@ -1,0 +1,207 @@
+{
+  "hydrangea-macrophylla": {
+    "habitat": "Giardini, parchi e vasi, in posizioni fresche",
+    "sizeNote": "Infiorescenze 10–20 cm",
+    "description": "Grandi palle di fiori blu, rosa o bianchi che durano tutta l'estate. Il colore dipende dal terreno: blu se è acido, rosa se è calcareo.",
+    "funFact": "Il blu dipende dall'alluminio, che la pianta riesce ad assorbire solo dai terreni acidi.",
+    "toxic": true,
+    "toxicNote": "Tossica se ingerita."
+  },
+  "wisteria": {
+    "habitat": "Pergolati, facciate, parchi e giardini",
+    "sizeNote": "Grappoli 20–50 cm",
+    "description": "Cascate di grappoli lilla profumatissimi che in primavera coprono pergolati e facciate, prima o insieme alle foglie. Le liane possono diventare grosse come tronchi.",
+    "funFact": "Il glicine cinese si avvolge in senso antiorario, quello giapponese in senso orario.",
+    "toxic": true,
+    "toxicNote": "Semi e baccelli velenosi."
+  },
+  "nerium-oleander": {
+    "habitat": "Giardini, viali e spartitraffico; spontaneo nei greti del Sud",
+    "sizeNote": "Fiore 3–5 cm",
+    "description": "Arbusti sempreverdi con foglie lunghe e coriacee e mazzi di fiori rosa, bianchi o rossi per tutta l'estate. Resiste a siccità, smog e salsedine.",
+    "funFact": "È tra le piante coltivate più velenose: anche il fumo dei rami bruciati è tossico.",
+    "toxic": true,
+    "toxicNote": "Tutta la pianta è molto velenosa."
+  },
+  "bougainvillea": {
+    "habitat": "Muri, pergolati e giardini, soprattutto al Sud e sulle coste",
+    "sizeNote": "Brattee 3–5 cm",
+    "description": "Cascate di colore magenta, porpora o arancio su muri e pergolati. Il colore non viene dai fiori, piccoli e bianchi, ma dalle tre brattee che li circondano.",
+    "funFact": "Prende il nome dall'esploratore Louis-Antoine de Bougainville, ma a raccoglierla fu la botanica Jeanne Baret, imbarcata travestita da uomo."
+  },
+  "pelargonium": {
+    "habitat": "Balconi, davanzali e giardini",
+    "sizeNote": "Fiori 2–4 cm, a mazzetti",
+    "description": "Mazzetti di fiori rossi, rosa o bianchi su foglie rotonde e profumate, da primavera ad autunno. Sono i fiori simbolo dei balconi italiani.",
+    "funFact": "I gerani da balcone non sono veri gerani: appartengono al genere Pelargonium, originario del Sudafrica."
+  },
+  "camellia": {
+    "habitat": "Giardini e parchi, soprattutto sui laghi del Nord e in Toscana",
+    "sizeNote": "Fiore 5–12 cm",
+    "description": "Grandi fiori rossi, rosa o bianchi su foglie lucide e scure, in pieno inverno o a inizio primavera. Alcune varietà hanno fiori doppi perfettamente geometrici.",
+    "funFact": "Anche il tè è una camelia: Camellia sinensis."
+  },
+  "syringa-vulgaris": {
+    "habitat": "Giardini, siepi e parchi; inselvatichito in alcune zone",
+    "sizeNote": "Pannocchie 10–20 cm",
+    "description": "Pannocchie dense di fiorellini lilla, bianchi o porpora, dal profumo intenso e inconfondibile, ad aprile e maggio. Originario dei Balcani, in alcune zone si è inselvatichito lungo siepi e scarpate.",
+    "funFact": "Il colore lilla prende il nome proprio da questo fiore."
+  },
+  "cercis-siliquastrum": {
+    "habitat": "Viali, parchi e giardini; spontaneo in alcune zone",
+    "sizeNote": "Fiore 1,5–2 cm",
+    "description": "In primavera i rami ancora spogli, e perfino il tronco, si coprono di fiori rosa-magenta a farfalla. Le foglie, rotonde come monete, arrivano dopo.",
+    "funFact": "Una leggenda dice che Giuda si impiccò a un albero come questo, e che i fiori arrossirono di vergogna."
+  },
+  "passiflora-caerulea": {
+    "habitat": "Recinzioni, pergolati e giardini; a volte inselvatichita",
+    "sizeNote": "Fiore 6–9 cm",
+    "description": "Un fiore incredibile: petali bianchi, una corona di filamenti blu, bianchi e viola, stami e stili disposti come le lancette di un orologio. Dà frutti arancioni ovali.",
+    "funFact": "I missionari vi videro i simboli della Passione: la corona di spine, i chiodi e le piaghe."
+  },
+  "agapanthus": {
+    "habitat": "Giardini, aiuole e vasi",
+    "sizeNote": "Ombrelle 10–20 cm",
+    "description": "Grandi ombrelle sferiche di fiori blu o bianchi in cima a steli alti e nudi, sopra ciuffi di foglie a nastro. Fiorisce in piena estate.",
+    "funFact": "Il nome significa «fiore dell'amore» in greco."
+  },
+  "jasminum-nudiflorum": {
+    "habitat": "Muri, scarpate e giardini",
+    "sizeNote": "Fiore 2–2,5 cm",
+    "description": "Rami verdi e ricadenti che in pieno inverno, ancora senza foglie, si coprono di fiori giallo vivo. A differenza degli altri gelsomini non profuma.",
+    "funFact": "È uno dei pochi fiori che sbocciano davvero a gennaio.",
+    "lookalikes": ["forsythia"]
+  },
+  "nelumbo-nucifera": {
+    "habitat": "Laghi, stagni e orti botanici; naturalizzato nei laghi di Mantova",
+    "sizeNote": "Fiore 15–25 cm",
+    "description": "Grandi fiori rosa che si alzano sopra l'acqua su steli robusti, tra foglie rotonde che respingono l'acqua. Il frutto è un ricettacolo forato come un soffione di doccia.",
+    "funFact": "Le foglie si puliscono da sole: le gocce scivolano via portando lo sporco, il famoso «effetto loto»."
+  },
+  "lagerstroemia-indica": {
+    "habitat": "Viali, parchi e giardini",
+    "sizeNote": "Pannocchie 10–20 cm",
+    "description": "Alberelli con pannocchie di fiori increspati rosa, lilla o bianchi, che fioriscono in piena estate. Il tronco liscio e maculato si sfoglia come quello del platano.",
+    "funFact": "Linneo la dedicò all'amico Magnus von Lagerström, direttore della Compagnia svedese delle Indie Orientali."
+  },
+  "hibiscus": {
+    "habitat": "Giardini, siepi e vasi",
+    "sizeNote": "Fiore 6–15 cm",
+    "description": "Grandi fiori a coppa con una lunga colonna di stami al centro: rosa, lilla o bianchi nell'ibisco di Siria, rosso fuoco in quello cinese. Ogni fiore dura un solo giorno.",
+    "funFact": "Il fiore rosso dell'ibisco cinese è il simbolo nazionale della Malesia."
+  },
+  "tulipa-gesneriana": {
+    "habitat": "Aiuole, giardini e vasi",
+    "sizeNote": "Fiore 5–10 cm",
+    "description": "Coppe dai colori vivissimi su steli dritti, tra foglie larghe e glauche, a inizio primavera. Ne esistono migliaia di varietà.",
+    "funFact": "Nell'Olanda del Seicento un solo bulbo raro arrivò a costare quanto una casa: fu la «tulipomania».",
+    "toxic": true,
+    "toxicNote": "Bulbo tossico.",
+    "lookalikes": ["tulipa-sylvestris"]
+  },
+  "hyacinthus-orientalis": {
+    "habitat": "Aiuole, vasi e giardini",
+    "sizeNote": "Spiga 10–20 cm",
+    "description": "Spighe fitte di fiori a campanella, blu, rosa o bianchi, dal profumo intenso, a inizio primavera. Originario del Medio Oriente, si coltiva da secoli in giardini e vasi.",
+    "funFact": "Il mito greco lo fa nascere dal sangue di Giacinto, il giovane amato da Apollo.",
+    "toxic": true,
+    "toxicNote": "Bulbo tossico e irritante."
+  },
+  "magnolia": {
+    "habitat": "Parchi, viali e giardini",
+    "sizeNote": "Fiore 10–25 cm",
+    "description": "Grandi fiori bianchi o rosa a coppa: quelli della magnolia sempreverde sbocciano in estate, quelli delle magnolie a foglia caduca su rami ancora spogli a fine inverno. Molte specie arrivano dall'Asia orientale e dall'America.",
+    "funFact": "Le magnolie sono tra le piante da fiore più antiche: esistevano già prima delle api ed erano impollinate dai coleotteri."
+  },
+  "lantana-camara": {
+    "habitat": "Giardini, aiuole e vasi; spontaneizzata al Sud",
+    "sizeNote": "Infiorescenze 3–5 cm",
+    "description": "Piccoli mazzetti tondi di fiori che cambiano colore dal giallo all'arancio e al rosso, così che ogni mazzetto è multicolore. Fiorisce tutta l'estate.",
+    "funFact": "Nei tropici è una delle piante invasive più temute del mondo.",
+    "toxic": true,
+    "toxicNote": "Bacche e foglie tossiche."
+  },
+  "petunia": {
+    "habitat": "Balconi, fioriere e aiuole",
+    "sizeNote": "Fiore 5–8 cm",
+    "description": "Fiori a trombetta, vellutati e un po' appiccicosi, in tutti i colori dal bianco al viola scuro. Riempiono balconi e fioriere da maggio all'autunno.",
+    "funFact": "Il nome viene da petun, parola sudamericana per «tabacco», di cui è parente.",
+    "lookalikesOutside": ["Calibrachoa"]
+  },
+  "trachelospermum-jasminoides": {
+    "habitat": "Recinzioni, pergolati e muri",
+    "sizeNote": "Fiore 2–2,5 cm",
+    "description": "Fiori bianchi a girandola, con i petali ruotati come eliche, profumatissimi tra maggio e giugno. Le foglie sono lucide e sempreverdi.",
+    "funFact": "Non è un gelsomino: fa parte della famiglia dell'oleandro."
+  },
+  "forsythia": {
+    "habitat": "Siepi, giardini e parchi",
+    "sizeNote": "Fiore 2–3 cm",
+    "description": "A fine inverno i rami spogli si coprono di campanelle giallo oro a quattro petali, prima che spuntino le foglie. È uno degli arbusti più comuni nelle siepi dei giardini.",
+    "funFact": "Prende il nome da William Forsyth, giardiniere reale scozzese del Settecento.",
+    "lookalikes": ["jasminum-nudiflorum"]
+  },
+  "strelitzia-reginae": {
+    "habitat": "Giardini delle coste e del Sud; in vaso al Nord",
+    "sizeNote": "Fiore 10–15 cm",
+    "description": "Un fiore che sembra la testa di un uccello esotico: una cresta arancio e blu che esce da un becco verde-viola. Arriva dal Sudafrica e da noi resiste all'aperto solo dove gli inverni sono miti.",
+    "funFact": "In inglese si chiama bird of paradise, «uccello del paradiso»; reginae onora la regina Carlotta d'Inghilterra."
+  },
+  "aloe-arborescens": {
+    "habitat": "Giardini costieri, rupi e scarpate vicino al mare",
+    "sizeNote": "Infiorescenze 20–30 cm",
+    "description": "Cespugli di foglie carnose e dentate che in pieno inverno alzano candele di fiori tubolari rosso-arancio. Arriva dal Sudafrica e da noi cresce bene soprattutto vicino al mare, dove gli inverni sono miti.",
+    "funFact": "In Sudafrica, da dove viene, i suoi fiori invernali nutrono gli uccelli nettarivori."
+  },
+  "hemerocallis-fulva": {
+    "habitat": "Giardini, fossi e bordi delle strade, dove si è inselvatichita",
+    "sizeNote": "Fiore 7–10 cm",
+    "description": "Grandi fiori arancio a imbuto su steli alti e nudi, sopra ciuffi di foglie a nastro. Ogni fiore dura un solo giorno.",
+    "funFact": "Hemerocallis significa «bellezza di un giorno».",
+    "lookalikes": ["lilium-bulbiferum"]
+  },
+  "iris-germanica": {
+    "habitat": "Giardini, muri, scarpate e oliveti, dove si è inselvatichito",
+    "sizeNote": "Fiore 8–12 cm",
+    "description": "Grandi fiori viola-azzurri e profumati, con i tepali esterni ricadenti ornati da una barba gialla. A maggio fioriscono su muri, terrazzamenti e giardini.",
+    "funFact": "Il giaggiolo è il simbolo di Firenze, e dai suoi rizomi si ricava una preziosa essenza per profumi.",
+    "toxic": true,
+    "toxicNote": "Rizomi tossici."
+  },
+  "viola-wittrockiana": {
+    "habitat": "Vasi, fioriere e aiuole, soprattutto in autunno e inverno",
+    "sizeNote": "Fiore 4–8 cm",
+    "description": "Fiori larghi e piatti, con una faccina scura al centro, in mille combinazioni di colori. Fioriscono anche al freddo, nelle fioriere d'inverno.",
+    "funFact": "In francese pensée significa «pensiero»: il fiore ricordava un volto chino e pensoso.",
+    "lookalikes": ["viola-odorata-gruppo"]
+  },
+  "cyclamen-persicum": {
+    "habitat": "Vasi e fioriere, soprattutto in autunno e inverno",
+    "sizeNote": "Fiore 3–6 cm",
+    "description": "Grandi fiori rossi, rosa o bianchi con i petali arrovesciati, su foglie marmorizzate. È il ciclamino dei fiorai, molto più grande di quelli selvatici.",
+    "funFact": "Discende da un ciclamino selvatico del Mediterraneo orientale.",
+    "toxic": true,
+    "toxicNote": "Tubero velenoso.",
+    "lookalikes": ["cyclamen"]
+  },
+  "euphorbia-pulcherrima": {
+    "habitat": "Vasi in casa; al Sud anche in giardino",
+    "sizeNote": "Brattee 5–10 cm",
+    "description": "Stelle di brattee rosso vivo, rosa o crema attorno a piccoli fiori gialli. In Messico, da dove viene, diventa un arbusto alto alcuni metri.",
+    "funFact": "Le brattee si colorano solo quando le notti diventano lunghe: per questo è pronta a Natale.",
+    "toxic": true,
+    "toxicNote": "Lattice irritante."
+  },
+  "callistemon": {
+    "habitat": "Giardini, viali e siepi, soprattutto vicino al mare",
+    "sizeNote": "Spighe 5–10 cm",
+    "description": "Spighe rosse fatte quasi solo di lunghi stami, identiche a scovolini per bottiglie. Arrivano dall'Australia e fioriscono più volte l'anno.",
+    "funFact": "Callistemon significa «stami belli» in greco."
+  },
+  "buddleja-davidii": {
+    "habitat": "Giardini, ferrovie, macerie e greti",
+    "sizeNote": "Pannocchie 10–30 cm",
+    "description": "Lunghe pannocchie di fiorellini viola, profumati di miele, su arbusti dai rami arcuati. In estate è letteralmente coperta di farfalle.",
+    "funFact": "Prende il nome dal botanico inglese Adam Buddle; davidii ricorda il missionario Armand David, che la scoprì in Cina."
+  }
+}

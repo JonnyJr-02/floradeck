@@ -38,6 +38,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 - **Stack:** Vite + React + TS, Tailwind CSS v4, Motion (ex Framer Motion), Dexie + `navigator.storage.persist()`, vite-plugin-pwa (Workbox), ONNX Runtime Web in a Web Worker (WASM-SIMD by default; WebGPU only if benchmarks justify it), Vitest + fake-indexeddb, Playwright Test (Android/Chromium and iPhone/WebKit projects).
 - **Hosting:** GitHub Pages via GitHub Actions, public repo (user's GitHub account still to confirm before phase 3). Fallback: Cloudflare Pages.
 - **Catalog:** 10 albums × 20–30 species (about 260; the user changed this from 8 × 10–12 on 2026-11-06), exactly 1 rare per album, plus 1 secret legendary species (Cypripedium calceolus). Albums added: "Orchidee spontanee" and "Orto, frutteto ed erbe aromatiche"; all orchids live in the orchid album. Species widespread across Italy (user's region unknown). `catalog/` is the single source of truth: schema-validated, read by `ml/`, imported by the app at build time.
+- **Catalog data:** `species.json` is generated, never edited by hand. Months (`bloomMonths`, with `phenology` flowering/fruiting), `regions` (north/centre/south shares corrected for observer density), `altitude` (5th–95th percentile of EU-DEM elevations at iNaturalist observation points; wild species only) and `family` come from data. Habitat, size, description, fun fact and safety flags are hand-written in `catalog/texts/<album>.json` and stay `textStatus: "da-verificare"` until the user ticks them in the review page. `protected`: true = legally protected, null = possibly protected in some regions (to verify), false = no. `toxic`: true shows a warning; false only means no warning, the app never claims a plant is edible. "Fotografala, non raccoglierla" is shown for every non-cultivated species, stronger for protected ones.
 - **Illustrations:** public-domain botanical plates (Thomé, Sturm, Köhler, Curtis's Botanical Magazine, Sibthorp) from Wikimedia Commons/BHL, with attributions; empty-slot silhouettes derived by script.
 - **ML:** approach A: fine-tune a mobile CNN with timm (bake-off: MobileNetV4-M, EfficientNet-B0, ConvNeXt-Nano) on catalog species plus an "altro" class. The model also outputs its penultimate embedding for a prototype-distance OOD score (idea from approach C). Targets: < 30 MB, < 2 s, top-1 ≥ 85 %, top-3 ≥ 95 % on the catalog test set. With ~260 classes these targets are tight: after the phase-6 confusion analysis, merge confusable classes to group/genus level or swap them. Species whose card covers flowers and fruits (e.g. Punica) train on both phases.
 - **Data:** iNaturalist research grade, CC0/CC-BY/CC-BY-NC, Italy first then Europe, prefer phenology annotations (flowering/fruiting); attributions CSV. Split by observation; test set also grouped by observer. No hue jitter in augmentation (colour is the key feature). Cultivated plants are always "casual" on iNaturalist, so garden species need casual observations too; genus/group classes can also use observations identified only to genus.
@@ -53,8 +54,8 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 | # | Phase | Status |
 |---|---|---|
 | 0 | Setup, plan, CLAUDE.md, repo | ✅ 2026-11-06 |
-| 1 | Catalog: albums + species list → user validates → `species.json`, schema, review sheet; iNat photo counts per species | next |
-| 2 | Design: `impeccable teach`, 3 static mockups (2 Impeccable, 1 Taste) → user picks | |
+| 1 | Catalog: albums + species list → user validates → `species.json`, schema, review sheet; iNat photo counts per species | ✅ 2026-11-06 (texts still to verify) |
+| 2 | Design: `impeccable teach`, 3 static mockups (2 Impeccable, 1 Taste) → user picks | next |
 | 3 | PWA skeleton: nav, themes, offline fonts, Dexie, offline, install guide + iOS warning, deploy | |
 | 4 | Camera + mock recognizer + shot → card → collection, unpacking animation | |
 | 5 | Albums, rarity, duplicates, cover photo, diary, "In fiore questo mese", celebrations, legendary card, backup | |
@@ -68,6 +69,11 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 Catalog (Python 3.13, standard library only; run from the repo root):
 - `py -3.13 catalog/scripts/inat_stats.py`: fetch iNaturalist stats for `catalog/proposal/candidates.json` (responses cached in `catalog/.cache/`, about 1 request/s; `--only <key> ...` refreshes single entries).
 - `py -3.13 catalog/scripts/render_proposal.py`: regenerate `catalog/proposta-specie.md` from the candidates and the stats.
+- `py -3.13 catalog/scripts/build_catalog.py`: build `catalog/species.json` and `catalog/albums.json` (candidates + stats + `texts/` + optional `review/status.json`).
+- `py -3.13 catalog/scripts/validate_catalog.py`: check the built catalogue (errors fail; warnings list what to complete).
+- `py -3.13 -m unittest discover -s catalog/scripts -p "test_*.py"`: catalog unit tests.
+- `py -3.13 catalog/scripts/build_review.py`: build the review page `catalog/review/index.html` (open it in a browser; its export goes to `catalog/review/status.json`).
+- To change a species: edit `catalog/proposal/candidates.json` (and its text in `catalog/texts/`), run `inat_stats.py --only <key>`, then build, validate, review.
 
 Dev, build, test and training commands are added here as each phase lands.
 
@@ -82,8 +88,14 @@ floradeck/
 │  ├─ src/features/    explore · albums · journal · couple · settings
 │  ├─ src/ui/          design system components, tokens, themes, fonts
 │  └─ e2e/             Playwright tests
-├─ catalog/          proposal/ (candidates.json, inat_stats.json), scripts/, proposta-specie.md;
-│                    then species.json, albums.json, schema, illustrations + attributions
+├─ catalog/
+│  ├─ species.json, albums.json   generated catalogue (do not edit)
+│  ├─ proposal/        candidates.json (species choice), inat_stats.json (data)
+│  ├─ texts/           hand-written Italian texts per album
+│  ├─ schema/          species.schema.json
+│  ├─ review/          index.html (review page), status.json (user's checks)
+│  ├─ scripts/         stats, build, validate, review, tests
+│  └─ proposta-specie.md   the validated proposal (tables with data)
 ├─ ml/               Python pipeline: download, clean, split, train, eval, export; Colab notebook (phase 6)
 ├─ docs/             SPEC.md, PLAN.md, mockups/ (phase 2)
 ├─ .claude/skills/   project skills (git-ignored)

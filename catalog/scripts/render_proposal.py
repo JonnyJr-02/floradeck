@@ -13,61 +13,22 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from catalog_lib import area_shares, compress_months, selected_months
+
 CATALOG_DIR = Path(__file__).resolve().parents[1]
 CANDIDATES = CATALOG_DIR / "proposal" / "candidates.json"
 STATS = CATALOG_DIR / "proposal" / "inat_stats.json"
 OUTPUT = CATALOG_DIR / "proposta-specie.md"
 
-MONTHS = ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"]
 RARITY = {"common": "comune", "uncommon": "non comune", "rare": "**rara**", "legendary": "**leggendaria**"}
 LEVEL = {"species": "specie", "group": "gruppo", "genus": "genere"}
 
-# A month counts when it has at least this share of the peak month's observations.
-# Fruits need a higher bar: the annotation also covers unripe fruits.
-PEAK_SHARE = {"flowering": 0.15, "fruiting": 0.35}
-MIN_PHENOLOGY = 30  # with fewer annotated observations, fall back to all observations
 ENOUGH_PHOTOS = 300  # open-licence observations considered enough to train a class
-MIN_AREA_TOTAL = 20  # with fewer observations, the north/centre/south split is not shown
-
-
-def compress_months(selected: set[int]) -> str:
-    """{11, 12, 1, 2} -> 'nov–feb'; handles ranges across the new year."""
-    if not selected:
-        return "—"
-    if len(selected) == 12:
-        return "tutto l'anno"
-    first_gap = next(month for month in range(1, 13) if month not in selected)
-    order = [(first_gap + offset - 1) % 12 + 1 for offset in range(1, 13)]
-    runs: list[list[int]] = []
-    run: list[int] = []
-    for month in order:
-        if month in selected:
-            run.append(month)
-        elif run:
-            runs.append(run)
-            run = []
-    if run:
-        runs.append(run)
-    return ", ".join(
-        MONTHS[r[0] - 1] if len(r) == 1 else f"{MONTHS[r[0] - 1]}–{MONTHS[r[-1] - 1]}" for r in runs
-    )
-
-
-def as_months(raw: dict | None) -> dict[int, int]:
-    return {int(month): value for month, value in (raw or {}).items()}
 
 
 def period_cell(stats: dict, phenology: str) -> str:
-    months = as_months(stats.get("itPhenologyMonths"))
-    marker = ""
-    if sum(months.values()) < MIN_PHENOLOGY:
-        months = as_months(stats.get("itMonths"))
-        marker = "\\*"
-    peak = max(months.values(), default=0)
-    if peak == 0:
-        return "—"
-    share = PEAK_SHARE[phenology]
-    return compress_months({m for m, v in months.items() if v >= share * peak}) + marker
+    months, fallback = selected_months(stats, phenology)
+    return (compress_months(months) if months else "—") + ("\\*" if fallback and months else "")
 
 
 def photo_status(stats: dict) -> str:
@@ -94,25 +55,9 @@ def photo_cell(stats: dict, cultivated: bool) -> str:
     return f"{mark} {stats['itOpen']}{dagger}" + (f" ({', '.join(extra)})" if extra else "")
 
 
-AREA_KEYS = ("north", "center", "south")
-
-
 def areas_cell(stats: dict, baseline: dict) -> str:
-    """Share of observations per area, divided by the share of all plant observations there.
-
-    iNaturalist has far more observers in the north, so raw shares overstate it;
-    after the correction, 33 · 33 · 33 means "equally frequent everywhere".
-    """
-    areas = stats.get("areas") or {}
-    total = sum(areas.values())
-    if total < MIN_AREA_TOTAL:
-        return "pochi dati"
-    weights = [areas.get(a, 0) / total for a in AREA_KEYS]
-    if baseline and all(baseline.get(a) for a in AREA_KEYS):
-        base_total = sum(baseline[a] for a in AREA_KEYS)
-        weights = [w / (baseline[a] / base_total) for w, a in zip(weights, AREA_KEYS)]
-    weight_sum = sum(weights)
-    return " · ".join(str(round(100 * w / weight_sum)) for w in weights)
+    shares = area_shares(stats, baseline)
+    return " · ".join(map(str, shares)) if shares else "pochi dati"
 
 
 def name_cell(candidate: dict) -> str:
