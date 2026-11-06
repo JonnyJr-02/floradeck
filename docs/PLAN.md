@@ -43,7 +43,7 @@ floradeck/
 
 ### Le tre strade
 
-- **A — fine-tuning** di un CNN mobile (MobileNetV4-M, EfficientNet-B0 o ConvNeXt-Nano, via timm): ~5–16 MB in int8. Stima 88–94 % top-1 e 96–99 % top-3 su foto in stile iNaturalist; meno su foto reali, che misureremo con un set di foto vostre. È l'unica strada che rispetta insieme dimensione, tempi e accuratezza.
+- **A — fine-tuning** di un CNN mobile (MobileNetV4-M, EfficientNet-B0 o ConvNeXt-Nano, via timm): ~5–16 MB in int8. Stima 88–94 % top-1 e 96–99 % top-3 su foto in stile iNaturalist con ~95 specie (82–90 % e 93–97 % con le ~260 attuali, vedi Aggiornamenti); meno su foto reali, che misureremo con un set di foto vostre. È l'unica strada che rispetta insieme dimensione, tempi e accuratezza.
 - **B — modello già pronto:** l'unico piccolo e aperto (Google AIY Plants, ~2000 specie, 2019) è debole e copre in modo incerto la flora italiana; quelli buoni (BioCLIP, il ViT-B di PlantCLEF) pesano ~90 MB anche in int8 e sul telefono sono lenti. Scartata.
 - **C — embedding + kNN** (ad es. DINOv2 ViT-S, ~22 MB): aggiungere specie senza riaddestrare è comodo, ma le feature congelate di solito restano qualche punto sotto il fine-tuning.
 
@@ -103,6 +103,12 @@ Siamo a novembre: fino a marzo i test sul campo si potranno fare quasi solo con 
 5. Carta leggendaria nella fase 5, sfide settimanali nella fase 9.
 6. Posizione solo su permesso, arrotondata a ~1 km, con il comune più vicino calcolato offline (elenco ISTAT).
 7. Nessuna ipotesi sui telefoni: le prestazioni si misurano sui vostri.
+
+## Aggiornamenti
+
+- **2026-11-06 — catalogo più grande, su richiesta:** 10 album da 20–30 specie (circa 260) più la leggendaria, invece di 8 album da 10–12. Nuovi album: *Orchidee spontanee* (tutte le orchidee del catalogo stanno qui) e *Orto, frutteto ed erbe aromatiche*. Resta una sola specie rara per album.
+  - Effetto sul modello: dimensione e tempi non cambiano (cresce solo l'ultimo strato), ma con ~260 classi l'accuratezza attesa scende. Stima rivista: 82–90 % top-1 e 93–97 % top-3 su foto in stile iNaturalist. Dopo l'analisi delle confusioni (fase 6) le classi che il modello confonde si accorpano a livello di gruppo/genere o si sostituiscono.
+  - Effetto sui dati: circa 170 000 foto (~10 GB a 500 px), da scaricare in qualche ora nei limiti chiesti da iNaturalist; training su Colab di diverse ore, con checkpoint su Drive.
 
 ## Punti aperti
 

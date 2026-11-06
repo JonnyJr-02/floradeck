@@ -71,14 +71,13 @@ def period_cell(stats: dict, phenology: str) -> str:
 
 
 def photo_status(stats: dict) -> str:
-    italy, europe = stats.get("itOpen"), stats.get("euOpen")
+    italy = stats.get("itOpen")
     if italy is None:
         return "unknown"
     if italy >= ENOUGH_PHOTOS:
         return "ok"
-    if europe is not None and europe >= ENOUGH_PHOTOS:
-        return "europe"
-    return "low"
+    elsewhere = max(stats.get("euOpen") or 0, stats.get("worldOpen") or 0)
+    return "europe" if elsewhere >= ENOUGH_PHOTOS else "low"
 
 
 def photo_cell(stats: dict, cultivated: bool) -> str:
@@ -87,9 +86,12 @@ def photo_cell(stats: dict, cultivated: bool) -> str:
         return "❓"
     mark = {"ok": "✅", "europe": "🟡", "low": "🔴"}[status]
     dagger = "†" if cultivated else ""
-    europe = stats.get("euOpen")
-    extra = f" (UE {europe})" if status != "ok" and europe is not None else ""
-    return f"{mark} {stats['itOpen']}{dagger}{extra}"
+    extra = []
+    if status != "ok" and stats.get("euOpen") is not None:
+        extra.append(f"UE {stats['euOpen']}")
+    if status != "ok" and stats.get("worldOpen") is not None:
+        extra.append(f"mondo {stats['worldOpen']}")
+    return f"{mark} {stats['itOpen']}{dagger}" + (f" ({', '.join(extra)})" if extra else "")
 
 
 AREA_KEYS = ("north", "center", "south")
@@ -182,7 +184,7 @@ def main() -> int:
     add(
         "- **Foto**: osservazioni iNaturalist verificate dalla comunità (\"research grade\") in Italia, con foto a licenza "
         "CC0, CC-BY o CC-BY-NC: è il materiale per addestrare il modello. ✅ almeno 300 · 🟡 meno di 300 in Italia ma "
-        "almeno 300 in Europa · 🔴 pochi dati. † = conta anche le piante coltivate, che iNaturalist non marca mai come verificate."
+        "almeno 300 in Europa (o nel mondo, per le coltivate) · 🔴 pochi dati. † = conta anche le piante coltivate, che iNaturalist non marca mai come verificate."
     )
     add(
         "- **N · C · S**: dove la si trova in Italia. Nord sopra i 44° N (circa la linea Genova–Ravenna), Centro fino "

@@ -8,7 +8,8 @@ iNaturalist taxa (reporting synonyms and names it cannot find), then collects:
 - the same restricted to the "Flowers" or "Fruits or Seeds" annotation;
 - research-grade observations in Italy with an open photo licence
   (CC0, CC-BY, CC-BY-NC): the pool usable for training;
-- the same for Europe, only when the Italian pool is small;
+- the same for Europe, only when the Italian pool is small, and for the
+  whole world when the European pool is small too;
 - research-grade observations in northern, central and southern Italy,
   plus the same counts for all plants as a baseline for observer density.
 
@@ -52,6 +53,7 @@ PHENOLOGY_TERM = 12
 PHENOLOGY_VALUES = {"flowering": 13, "fruiting": 14}
 OPEN_LICENSES = "cc0,cc-by,cc-by-nc"
 EUROPE_THRESHOLD = 300  # below this many open Italian observations, also count Europe
+WORLD_THRESHOLD = 1000  # below this many open European observations, also count the whole world
 
 # Latitude bands, combined with place_id=Italy so neighbouring countries are excluded.
 LNG_RANGE = {"swlng": 6.5, "nelng": 19.0}
@@ -149,6 +151,11 @@ def stats_for(candidate: dict) -> dict:
     entry["euOpen"] = (
         count({**base, "place_id": PLACE_EUROPE, "photo_license": OPEN_LICENSES})
         if entry["itOpen"] < EUROPE_THRESHOLD
+        else None
+    )
+    entry["worldOpen"] = (
+        count({**base, "photo_license": OPEN_LICENSES})
+        if entry["euOpen"] is not None and entry["euOpen"] < WORLD_THRESHOLD
         else None
     )
     entry["areas"] = {area: count({**italy, **band, **LNG_RANGE}) for area, band in AREAS.items()}
