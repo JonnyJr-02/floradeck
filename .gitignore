@@ -29,6 +29,7 @@ catalog/.cache/
 __pycache__/
 *.py[cod]
 .venv/
+*.egg-info/
 .ipynb_checkpoints/
 ml/data/
 ml/runs/
