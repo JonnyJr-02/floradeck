@@ -10,14 +10,11 @@ from collections import Counter
 from collections.abc import Callable, Hashable, Iterable, Iterator, Sequence
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field, replace
-from typing import TypeVar
 
 from .records import Observation, Photo
 from .tiers import Tier
 
 PageFetcher = Callable[[Tier, int | None], tuple[list[Observation], int]]
-T = TypeVar("T")
-R = TypeVar("R")
 PhotoFilter = Callable[[Sequence[Photo]], Sequence[Photo]]
 
 
@@ -191,7 +188,7 @@ def claim(selection: Selection, taken_observations: set[str], taken_photos: set[
     return dropped
 
 
-def parallel_map(fn: Callable[[T], R], items: Iterable[T], workers: int) -> Iterator[R]:
+def parallel_map[T, R](fn: Callable[[T], R], items: Iterable[T], workers: int) -> Iterator[R]:
     """``map`` with a few threads, results in input order (the API client spaces the requests)."""
     items = list(items)
     if workers <= 1:

@@ -16,7 +16,6 @@ from __future__ import annotations
 import csv
 import io
 import os
-import socket
 import threading
 import time
 import urllib.error
@@ -154,7 +153,7 @@ def fetch_one(
             if err.code in (403, 404, 410):
                 return f"http-{err.code}", received
             status = f"http-{err.code}"
-        except (urllib.error.URLError, socket.timeout, ConnectionError, TimeoutError) as err:
+        except (urllib.error.URLError, ConnectionError, TimeoutError) as err:
             status = f"network: {err}"
         except OSError as err:  # undecodable image while resizing
             return f"bad-image: {err}", received

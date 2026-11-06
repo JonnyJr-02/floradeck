@@ -33,8 +33,9 @@ ml\.venv\Scripts\python -m floradeck_ml download
 # 3. Cleaning and split -> ml/data/dataset.csv
 ml\.venv\Scripts\python -m floradeck_ml clean
 
-# Tests
+# Tests, and lint (ruff comes with the dev extra: pip install -e "ml[dev]")
 ml\.venv\Scripts\python -m unittest discover -s ml\tests
+ml\.venv\Scripts\python -m ruff check ml
 ```
 
 Useful options: `fetch --only bellis-perennis taraxacum` (a few classes, written to

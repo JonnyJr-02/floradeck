@@ -11,7 +11,6 @@ import gzip
 import hashlib
 import json
 import os
-import socket
 import threading
 import time
 import urllib.error
@@ -169,7 +168,7 @@ class ApiClient:
                 else:
                     detail = err.read()[:300].decode("utf-8", "replace")
                     raise ApiError(f"HTTP {err.code} for {url}: {detail}") from err
-            except (urllib.error.URLError, socket.timeout, ConnectionError) as err:
+            except (urllib.error.URLError, ConnectionError, TimeoutError) as err:
                 last_error = err
                 delay = 5.0 * 2**attempt
             if attempt < self.retries:

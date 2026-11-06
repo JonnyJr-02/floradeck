@@ -73,7 +73,7 @@ def resolve_lookalikes(
     names = sorted(listed)
     found = parallel_map(lambda name: inat.search_taxon(client, name), names, workers)
     resolved = []
-    for name, taxon in zip(names, found):
+    for name, taxon in zip(names, found, strict=True):
         by = tuple(c.id for c in listed[name])
         values = tuple(sorted({v for c in listed[name] for v in c.phenology_values}))
         if taxon is None:

@@ -17,3 +17,14 @@ floradeck-ml = "floradeck_ml.cli:main"
 
 [tool.setuptools]
 packages = ["floradeck_ml"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.8"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "SIM"]
+ignore = ["E501", "SIM905"]

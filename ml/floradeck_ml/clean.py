@@ -107,7 +107,7 @@ def analyse_all(paths: Sequence[Path], root: Path, cache_path: Path, workers: in
     if todo:
         with ProcessPoolExecutor(max_workers=workers or os.cpu_count() or 1) as pool:
             for index, (item, info) in enumerate(
-                zip(todo, pool.map(analyse, [str(t[1]) for t in todo], chunksize=64)), start=1
+                zip(todo, pool.map(analyse, [str(t[1]) for t in todo], chunksize=64), strict=True), start=1
             ):
                 key, _, size, mtime = item
                 cache[key] = (size, mtime, info)
@@ -207,7 +207,11 @@ def build_dataset(
         )
     labels_present = {row["label"] for row in rows}
     classes = [label for label in class_order if label in labels_present]
-    return {"rows": rows, "rejected": rejected, "classes": classes, "groups": len(groups)}
+    selected = {o.label for o in observations}
+    missing = [label for label in class_order if label in selected and label not in labels_present]
+    if missing:
+        log(f"WARNING: {len(missing)} selected classes have no usable image: {', '.join(missing)}")
+    return {"rows": rows, "rejected": rejected, "classes": classes, "missing": missing, "groups": len(groups)}
 
 
 def write_dataset(result: dict, dataset_path: Path, rejected_path: Path, classes_path: Path, report_path: Path) -> None:
@@ -250,6 +254,10 @@ def render_clean_report(result: dict) -> str:
         + (" (" + ", ".join(f"{r} {n:,}" for r, n in reasons.most_common()) + ")." if reasons else "."),
         f"- Gruppi di quasi-duplicati: {result['groups']:,}.",
         f"- Osservatori in test: {len(test_observers):,}; in comune con train/val: {len(test_observers & other_observers)}.",
+    ]
+    if result.get("missing"):
+        lines.append(f"- **Classi del manifest senza immagini utilizzabili** (escluse da classes.json): {', '.join(result['missing'])}.")
+    lines += [
         "",
         "| Classe | Train | Val | Test |",
         "|---|---:|---:|---:|",

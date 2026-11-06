@@ -81,7 +81,7 @@ ML dataset (Python 3.13 venv in `ml/.venv`, Pillow + numpy; run from the repo ro
 - `ml\.venv\Scripts\python -m floradeck_ml fetch --dry-run`: select iNaturalist observations for every class and "altro" (API cached in `ml/data/cache/`, ~1 request/s), estimate the download, write `ml/reports/dataset-plan.md` and `ml/reports/altro-sources.md`; downloads no image. `--only <class> ...` for a few classes.
 - `ml\.venv\Scripts\python -m floradeck_ml fetch`: the same selection, then the resumable download (≤ 5 GB/hour, ≤ 24 GB per run) and `ml/data/attributions.csv`; `... download` resumes from the manifest.
 - `ml\.venv\Scripts\python -m floradeck_ml clean`: decode check, size filter, pHash dedupe, observer-grouped split → `ml/data/dataset.csv`, `ml/data/classes.json`.
-- `ml\.venv\Scripts\python -m unittest discover -s ml\tests`: dataset pipeline tests.
+- `ml\.venv\Scripts\python -m unittest discover -s ml\tests`: dataset pipeline tests; `ml\.venv\Scripts\python -m ruff check ml` lints (dev extra: `pip install -e "ml[dev]"`).
 
 Dev, build, test and training commands are added here as each phase lands.
 

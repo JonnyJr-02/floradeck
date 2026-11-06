@@ -29,7 +29,7 @@ def near_duplicate_groups(hashes: Sequence[int], max_distance: int, bits: int = 
 
     blocks = max_distance + 1
     bounds = [round(b * bits / blocks) for b in range(blocks + 1)]
-    for start, end in zip(bounds, bounds[1:]):
+    for start, end in zip(bounds, bounds[1:], strict=False):
         mask = (1 << (end - start)) - 1
         buckets: dict[int, list[int]] = defaultdict(list)
         for index, value in enumerate(hashes):
