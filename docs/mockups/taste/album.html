@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="it" data-theme="light" data-radius="round">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FloraDeck · Foto in primo piano · Album</title>
+<script>(function () { var t = new URLSearchParams(location.search).get("tema"); document.documentElement.dataset.theme = t === "scuro" ? "dark" : t === "chiaro" ? "light" : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); })();</script>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="screen">
+  <section class="head">
+    <h1>Campi e bordi di strada</h1>
+    <div class="progress"><b>17 di 29</b><span class="track" style="--p:59%"><i></i></span><span>12 da trovare</span></div>
+  </section>
+
+  <div class="filters" role="toolbar" aria-label="Filtra le carte">
+    <a class="chip on" href="#">Tutte</a><a class="chip" href="#">Trovate</a><a class="chip" href="#">Da trovare</a><a class="chip" href="#">In fiore ora</a>
+  </div>
+
+  <a class="rare" href="#">
+    <span class="tile-miss">28</span>
+    <div><h2>Tulipano selvatico</h2><p>Gialla · vigneti, oliveti e frutteti · marzo–giugno</p></div>
+    <span class="pill">Rara</span>
+  </a>
+
+  <section class="tiles" aria-label="Carte dell'album">
+    <a class="tile" href="carta.html"><span class="img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/medium.jpeg" alt=""><span class="num">01</span></span><span class="nm">Papavero comune</span></a>
+    <a class="tile" href="#"><span class="img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/43890086/medium.jpg" alt=""><span class="num">02</span></span><span class="nm">Fiordaliso</span></a>
+    <a class="tile" href="#"><span class="img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/131872714/medium.jpeg" alt=""><span class="num">03</span></span><span class="nm">Cicoria selvatica</span></a>
+    <a class="tile" href="#"><span class="img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/388984184/medium.jpeg" alt=""><span class="num">04</span></span><span class="nm">Viperina azzurra</span></a>
+    <div class="tile"><span class="tile-miss">05</span><span class="hint"><span><i class="dot" style="background:#f4f1ea"></i><i class="dot" style="background:#e7b8c4"></i>bianco o rosa</span><span>campi e orti</span><span>mag–ago</span></span></div>
+    <a class="tile" href="#"><span class="img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/727341743/medium.jpg" alt=""><span class="num">06</span></span><span class="nm">Malva selvatica</span></a>
+    <a class="tile" href="#"><span class="img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/590058704/medium.jpg" alt=""><span class="num">07</span></span><span class="nm">Linajola comune</span></a>
+    <div class="tile"><span class="tile-miss">08</span><span class="hint"><span><i class="dot" style="background:#e9c43c"></i>giallo</span><span>incolti</span><span>mag–ott</span></span></div>
+    <a class="tile" href="#"><span class="img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/603943852/medium.jpg" alt=""><span class="num">09</span></span><span class="nm">Silene rigonfia</span></a>
+  </section>
+
+  <nav class="tabs" aria-label="Sezioni">
+    <a class="tab" href="esplora.html"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg></span>Esplora</a>
+    <a class="tab" href="album.html" aria-current="page"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></span>Album</a>
+    <a class="tab" href="#"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M12 6.5c-1.8-1.3-4.3-2-7-2v13c2.7 0 5.2.7 7 2 1.8-1.3 4.3-2 7-2v-13c-2.7 0-5.2.7-7 2z"/><path d="M12 6.5v13"/></svg></span>Diario</a>
+    <a class="tab" href="#"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M12 19.5s-7-4.3-7-9.2A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 7 2.3c0 4.9-7 9.2-7 9.2z"/></svg></span>Coppia</a>
+  </nav>
+</main>
+</body>
+</html>

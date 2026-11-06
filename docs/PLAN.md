@@ -83,7 +83,7 @@ Download, pulizia ed export girano in locale su CPU: la GPU del PC (MX130, 2 GB)
 |---|---|---|
 | 0 | Setup, piano, `CLAUDE.md`, repository | ✅ 2026-11-06 |
 | 1 | Catalogo: album + lista specie in un file → validazione → `species.json`, schema, foglio di verifica con link (Portale della Flora d'Italia, Acta Plantarum, POWO) | ✅ 2026-11-06; i testi restano da verificare con `catalog/review/index.html` |
-| 2 | Design: `impeccable teach`, 3 mockup statici (2 Impeccable, 1 Taste) → scelta | |
+| 2 | Design: `impeccable teach`, 3 mockup statici (2 Impeccable, 1 Taste) → scelta | mockup pronti il 2026-11-06 in `docs/mockups/` (aprire `index.html`), in attesa della scelta |
 | 3 | Scheletro PWA: navigazione, temi, font offline, Dexie, offline, guida all'installazione, avviso iOS, deploy | anche skill `mobile-native` |
 | 4 | Fotocamera + mock + scatto → carta → collezione, animazione di spacchettamento | |
 | 5 | Album, rarità, doppioni, copertina, diario, "In fiore questo mese", celebrazioni, carta leggendaria, **backup** | backup anticipato: su iPhone serve appena si inizia a collezionare |
@@ -113,6 +113,6 @@ Siamo a novembre: fino a marzo i test sul campo si potranno fare quasi solo con 
 ## Punti aperti
 
 - Regione e zone frequentate, per affinare il catalogo (fase 1).
-- Account GitHub ed email dei commit in un repo pubblico (prima della fase 3).
+- Account GitHub ed email dei commit in un repo pubblico (prima della fase 3). Il repo sarà leggibile da chiunque, compreso il fatto che l'app è una sorpresa (lo dice `PRODUCT.md`).
 - Modelli dei telefoni e versioni di Android/iOS.
 - Backend: da decidere nella fase 8, dopo aver ricontrollato i limiti gratuiti.

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it" data-theme="light" data-radius="round">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FloraDeck · Foto in primo piano · Carta appena trovata</title>
+<script>(function () { var t = new URLSearchParams(location.search).get("tema"); document.documentElement.dataset.theme = t === "scuro" ? "dark" : t === "chiaro" ? "light" : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); })();</script>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="screen">
+  <div class="hero">
+    <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/large.jpeg" alt="Papavero comune fotografato in un campo">
+    <a class="round" href="esplora.html" aria-label="Chiudi"><svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+  </div>
+
+  <section class="card-body">
+    <h1>Papavero comune</h1>
+    <p class="latin">Papaver rhoeas · Papaveraceae</p>
+    <div class="chips"><span class="chip">Comune</span><span class="chip">01 di 29</span><span class="chip">Campi e bordi di strada</span></div>
+    <p class="meta">Trovata il 14 maggio 2026 · Colli fiorentini</p>
+    <p class="lede">Petali rossi sottili come carta velina, spesso con una macchia nera alla base. Ogni fiore dura appena un giorno.</p>
+  </section>
+
+  <footer class="actions">
+    <a class="btn" href="album.html">Metti nell'album</a>
+    <a class="btn ghost" href="#">Leggi la scheda</a>
+  </footer>
+</main>
+</body>
+</html>

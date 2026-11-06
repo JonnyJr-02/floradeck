@@ -21,6 +21,8 @@ blob-report/
 
 # Agent skills are installed per project (reinstall from skills-lock.json)
 .claude/skills/
+# Taste skill's local history of dealt fonts and palettes
+.taste-skill/
 
 # API response caches
 catalog/.cache/

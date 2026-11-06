@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FloraDeck · Figurina · Carta appena trovata</title>
+<script>(function () { var t = new URLSearchParams(location.search).get("tema"); document.documentElement.dataset.theme = t === "scuro" ? "dark" : t === "chiaro" ? "light" : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); })();</script>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="screen">
+  <header class="top">
+    <a class="close" href="esplora.html" aria-label="Chiudi"><svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+    <span>Bustina n. 37</span>
+  </header>
+
+  <div class="stage">
+    <div class="packet" aria-hidden="true">
+      <svg class="tear" viewBox="0 0 312 12" preserveAspectRatio="none"><path fill="currentColor" d="M0 12V6l6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6H312V12z"/></svg>
+      <div class="body"><p class="brand">FloraDeck</p><p class="what">Campi e bordi di strada · 1 figurina</p></div>
+    </div>
+    <figure class="sticker">
+      <div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/large.jpeg" alt="Papavero comune fotografato in un campo"></div>
+      <figcaption class="strip"><span class="no">01</span><span class="nm">Papavero comune<span class="al">Campi e bordi di strada</span></span></figcaption>
+    </figure>
+  </div>
+
+  <section class="caption">
+    <h1>Papavero comune</h1>
+    <p class="latin">Papaver rhoeas · Papaveraceae</p>
+    <p class="facts"><span>Figurina <b>01</b> di 29</span><span>Comune</span></p>
+    <p class="found">Trovata da te il 14 maggio 2026, sui colli fiorentini.</p>
+  </section>
+
+  <footer class="actions">
+    <a class="btn" href="album.html">Attacca nell'album</a>
+    <a class="link" href="#">Leggi la scheda</a>
+  </footer>
+</main>
+</body>
+</html>

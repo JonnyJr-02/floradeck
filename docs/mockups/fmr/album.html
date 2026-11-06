@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FloraDeck · Tavola · Album</title>
+<script>(function () { var t = new URLSearchParams(location.search).get("tema"); document.documentElement.dataset.theme = t === "scuro" ? "dark" : t === "chiaro" ? "light" : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); })();</script>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="screen">
+  <header class="folio"><b>FloraDeck</b><span>Album II di X</span></header>
+
+  <nav aria-label="I dieci album">
+    <div class="issues">
+      <a class="issue" style="--p:.38" title="Prati di primavera, 9 di 24" href="#"></a>
+      <a class="issue" style="--p:.59" title="Campi e bordi di strada, 17 di 29" aria-current="page" href="#"></a>
+      <a class="issue" style="--p:0" title="Montagna e pascoli alpini, 0 di 30" href="#"></a>
+      <a class="issue" style="--p:.12" title="Macchia mediterranea e coste, 3 di 25" href="#"></a>
+      <a class="issue" style="--p:.23" title="Boschi e sottobosco, 6 di 26" href="#"></a>
+      <a class="issue" style="--p:.1" title="Zone umide, fossi e laghi, 2 di 21" href="#"></a>
+      <a class="issue" style="--p:.47" title="Giardini, parchi e balconi, 14 di 30" href="#"></a>
+      <a class="issue" style="--p:.17" title="Bacche e colori d'autunno, 5 di 29" href="#"></a>
+      <a class="issue" style="--p:0" title="Orchidee spontanee, 0 di 24" href="#"></a>
+      <a class="issue" style="--p:.36" title="Orto, frutteto ed erbe aromatiche, 8 di 22" href="#"></a>
+    </div>
+    <div class="issue-nums" aria-hidden="true"><span>I</span><span>II</span><span>III</span><span>IV</span><span>V</span><span>VI</span><span>VII</span><span>VIII</span><span>IX</span><span>X</span></div>
+  </nav>
+
+  <section class="album-head">
+    <h1>Campi e bordi di strada</h1>
+    <p class="count"><span><b>17</b> di 29 tavole</span><span>12 da trovare</span></p>
+    <div class="bar" style="--p:59%"><i></i></div>
+  </section>
+
+  <a class="rare" href="#">
+    <div class="uninked">28</div>
+    <div>
+      <h2>Tulipano selvatico</h2>
+      <p><b>Rara</b> · giallo · vigneti, oliveti e frutteti · marzo–giugno</p>
+    </div>
+  </a>
+
+  <section class="grid" aria-label="Tavole dell'album">
+    <a class="slot" href="carta.html"><div class="frame"><div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/medium.jpeg" alt=""></div></div><span class="no">Tav. 01</span><span class="name">Papavero comune</span></a>
+    <a class="slot" href="#"><div class="frame"><div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/43890086/medium.jpg" alt=""></div></div><span class="no">Tav. 02</span><span class="name">Fiordaliso</span></a>
+    <a class="slot" href="#"><div class="frame"><div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/131872714/medium.jpeg" alt=""></div></div><span class="no">Tav. 03</span><span class="name">Cicoria selvatica</span></a>
+    <a class="slot" href="#"><div class="frame"><div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/388984184/medium.jpeg" alt=""></div></div><span class="no">Tav. 04</span><span class="name">Viperina azzurra</span></a>
+    <div class="slot"><div class="uninked">05</div><span class="hint"><span><i class="dot" style="background:#f4f1ea"></i><i class="dot" style="background:#e7b8c4"></i>bianco o rosa</span><span>campi e orti</span><span>mag–ago</span></span></div>
+    <a class="slot" href="#"><div class="frame"><div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/727341743/medium.jpg" alt=""></div></div><span class="no">Tav. 06</span><span class="name">Malva selvatica</span></a>
+    <a class="slot" href="#"><div class="frame"><div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/590058704/medium.jpg" alt=""></div></div><span class="no">Tav. 07</span><span class="name">Linajola comune</span></a>
+    <div class="slot"><div class="uninked">08</div><span class="hint"><span><i class="dot" style="background:#e9c43c"></i>giallo</span><span>incolti e scarpate</span><span>mag–ott</span></span></div>
+    <a class="slot" href="#"><div class="frame"><div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/603943852/medium.jpg" alt=""></div></div><span class="no">Tav. 09</span><span class="name">Silene rigonfia</span></a>
+  </section>
+
+  <nav class="tabs" aria-label="Sezioni">
+    <a class="tab" href="esplora.html"><svg class="icon" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg>Esplora</a>
+    <a class="tab" href="album.html" aria-current="page"><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>Album</a>
+    <a class="tab" href="#"><svg class="icon" viewBox="0 0 24 24"><path d="M12 6.5c-1.8-1.3-4.3-2-7-2v13c2.7 0 5.2.7 7 2 1.8-1.3 4.3-2 7-2v-13c-2.7 0-5.2.7-7 2z"/><path d="M12 6.5v13"/></svg>Diario</a>
+    <a class="tab" href="#"><svg class="icon" viewBox="0 0 24 24"><path d="M12 19.5s-7-4.3-7-9.2A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 7 2.3c0 4.9-7 9.2-7 9.2z"/></svg>Coppia</a>
+  </nav>
+</main>
+</body>
+</html>

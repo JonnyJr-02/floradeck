@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FloraDeck · tre proposte di design</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { --bg: #f4f2ed; --ink: #1f1d19; --muted: #5f594f; --line: #d9d3c6; color-scheme: light; }
+  [data-theme="dark"] { --bg: #11141c; --ink: #ece8df; --muted: #a3a6ae; --line: #2b303d; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header, section, footer { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+  header { padding-top: 36px; }
+  h1 { font-size: 28px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lead { color: var(--muted); max-width: 72ch; margin: 0; }
+  .toggle { margin-top: 18px; display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .toggle button { font: inherit; padding: 8px 18px; border: 0; background: transparent; color: inherit; cursor: pointer; }
+  .toggle button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  section { margin-top: 52px; }
+  h2 { font-size: 22px; margin: 0; }
+  .who { color: var(--muted); font-size: 13.5px; margin: 2px 0 12px; }
+  .about { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; }
+  .about p { margin: 0 0 10px; max-width: 70ch; }
+  dl { display: grid; grid-template-columns: auto 1fr; align-content: start; gap: 6px 16px; margin: 0; font-size: 14px; }
+  dt { color: var(--muted); }
+  dd { margin: 0; }
+  ul.raises { margin: 0; padding-left: 18px; }
+  ul.raises li { margin-bottom: 3px; }
+  .phones { display: flex; gap: 24px; margin-top: 20px; overflow-x: auto; padding: 4px 2px 10px; }
+  .phone { flex: none; width: 312px; margin: 0; }
+  .phone .frame { width: 312px; height: 676px; border-radius: 30px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14); background: #000; }
+  .phone iframe { width: 390px; height: 844px; border: 0; transform: scale(0.8); transform-origin: 0 0; }
+  .phone figcaption { margin: 9px 4px 0; font-size: 13px; color: var(--muted); }
+  .phone a { color: inherit; }
+  footer { margin: 60px auto 44px; font-size: 12.5px; color: var(--muted); max-width: 1240px; }
+  @media (max-width: 820px) { .about { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>FloraDeck · tre proposte di design</h1>
+  <p class="lead">Ogni proposta mostra le stesse tre schermate: la carta appena trovata (il momento che deve convincere di più), l'album e la fotocamera quando il riconoscimento non è sicuro. Foto vere da iNaturalist, dati di esempio. Toccando le schermate si passa dall'una all'altra.</p>
+  <div class="toggle" role="group" aria-label="Tema delle schermate">
+    <button type="button" data-tema="chiaro" aria-pressed="true">Giorno</button>
+    <button type="button" data-tema="scuro" aria-pressed="false">Sera</button>
+  </div>
+</header>
+
+<section id="tavola">
+  <h2>A · Tavola</h2>
+  <p class="who">La direzione assegnata da Impeccable</p>
+  <div class="about">
+    <div>
+      <p>Ogni carta è una tavola d'arte incollata sulla pagina, come nelle riviste di Franco Maria Ricci: passe-partout, angolini dorati, la velina da sollevare con il dito per scoprire la foto e un timbro con il numero d'esemplare che chiude il momento. Di giorno carta avorio, di sera seta blu notte.</p>
+      <p><b>Rischio:</b> è la più raffinata e un po' seria. Il gioco deve venire dai gesti (la velina, il timbro), non dalla grafica.</p>
+    </div>
+    <dl>
+      <dt>Caratteri</dt><dd>Bodoni Moda per i titoli, Jost per i comandi</dd>
+      <dt>Colori</dt><dd>avorio, inchiostro e oro; un solo colore acceso, quello del fiore</dd>
+      <dt>Prese dalle alternative scartate</dt><dd><ul class="raises">
+        <li>dal mercato delle ombre: ogni carta ha il suo cartellino d'origine, che la segue anche quando viene regalata</li>
+        <li>dal teatrino di carta: un solo colore acceso per volta, quello del fiore in primo piano</li>
+        <li>dalla sigla dei film di spionaggio: il momento si chiude con un unico segno deciso, il timbro</li>
+        <li>dalla scena in caratteri di macchina da scrivere: le specie mancanti sono lastre non ancora inchiostrate</li>
+        <li>dalla fila di VU-meter: i dieci album come fascicoli identici, che si leggono a colpo d'occhio</li>
+      </ul></dd>
+    </dl>
+  </div>
+  <div class="phones">
+    <figure class="phone"><div class="frame"><iframe src="fmr/carta.html?tema=chiaro" title="Tavola: carta appena trovata"></iframe></div><figcaption>Carta appena trovata · <a href="fmr/carta.html">apri</a></figcaption></figure>
+    <figure class="phone"><div class="frame"><iframe src="fmr/album.html?tema=chiaro" title="Tavola: album"></iframe></div><figcaption>Album · <a href="fmr/album.html">apri</a></figcaption></figure>
+    <figure class="phone"><div class="frame"><iframe src="fmr/esplora.html?tema=chiaro" title="Tavola: fotocamera"></iframe></div><figcaption>Fotocamera, «Non sono sicuro» · <a href="fmr/esplora.html">apri</a></figcaption></figure>
+  </div>
+</section>
+
+<section id="figurina">
+  <h2>B · Figurina</h2>
+  <p class="who">La proposta che Impeccable aggiunge come sua preferita</p>
+  <div class="about">
+    <div>
+      <p>Il rito degli album di figurine, in versione adulta: la bustina da strappare, la figurina lucida da attaccare, la cornice numerata che aspetta. Ogni album ha il suo colore pieno, i numeri sono grandi e si parla come da bambini, «ce l'hai», «ti mancano», con l'elenco dei numeri da spuntare e i doppioni da regalare.</p>
+      <p><b>Rischio:</b> è la strada più familiare per un gioco da collezione e la più vicina all'infantile, quindi va tenuta sobria.</p>
+    </div>
+    <dl>
+      <dt>Caratteri</dt><dd>Gloock per i titoli, Barlow e Barlow Condensed per testi e numeri</dd>
+      <dt>Colori</dt><dd>carta bianca, un colore pieno per album, oro metallizzato per la rara</dd>
+    </dl>
+  </div>
+  <div class="phones">
+    <figure class="phone"><div class="frame"><iframe src="figurine/carta.html?tema=chiaro" title="Figurina: carta appena trovata"></iframe></div><figcaption>Carta appena trovata · <a href="figurine/carta.html">apri</a></figcaption></figure>
+    <figure class="phone"><div class="frame"><iframe src="figurine/album.html?tema=chiaro" title="Figurina: album"></iframe></div><figcaption>Album · <a href="figurine/album.html">apri</a></figcaption></figure>
+    <figure class="phone"><div class="frame"><iframe src="figurine/esplora.html?tema=chiaro" title="Figurina: fotocamera"></iframe></div><figcaption>Fotocamera, «Non sono sicuro» · <a href="figurine/esplora.html">apri</a></figcaption></figure>
+  </div>
+</section>
+
+<section id="foto">
+  <h2>C · Foto in primo piano</h2>
+  <p class="who">La proposta della Taste skill</p>
+  <div class="about">
+    <div>
+      <p>Un'interfaccia pulita e luminosa: la foto grande, poco testo, pulsanti arrotondati e un filtro «In fiore ora» nell'album. Palette generata dalla Taste skill a partire dai colori della specifica, con il serif richiesto per i titoli.</p>
+      <p><b>Rischio:</b> è la più sicura ma la meno «figurina»: può sembrare un'app di riconoscimento qualsiasi, e il gioco andrebbe aggiunto con le animazioni.</p>
+    </div>
+    <dl>
+      <dt>Caratteri</dt><dd>Fraunces per i titoli, Figtree per i testi</dd>
+      <dt>Colori</dt><dd>avorio e blu notte, rosso papavero come accento</dd>
+      <dt>Nota</dt><dd>la Taste skill è pensata per i siti web: qui ho usato la sua palette, i caratteri e le regole generali, non i suoi controlli automatici</dd>
+    </dl>
+  </div>
+  <div class="phones">
+    <figure class="phone"><div class="frame"><iframe src="taste/carta.html?tema=chiaro" title="Foto in primo piano: carta appena trovata"></iframe></div><figcaption>Carta appena trovata · <a href="taste/carta.html">apri</a></figcaption></figure>
+    <figure class="phone"><div class="frame"><iframe src="taste/album.html?tema=chiaro" title="Foto in primo piano: album"></iframe></div><figcaption>Album · <a href="taste/album.html">apri</a></figcaption></figure>
+    <figure class="phone"><div class="frame"><iframe src="taste/esplora.html?tema=chiaro" title="Foto in primo piano: fotocamera"></iframe></div><figcaption>Fotocamera, «Non sono sicuro» · <a href="taste/esplora.html">apri</a></figcaption></figure>
+  </div>
+</section>
+
+<footer>
+  Foto da iNaturalist: Gianni Del Bufalo (papavero, malva, linajola), Valentina Caviglia (fiordaliso), Marianna Boi (viperina), Francesco Santoro (silene), Marco Mussita (saponaria), con licenza CC BY; cicoria e geranio sanguigno, CC0. Elenco completo in <a href="photos.json">photos.json</a>.
+</footer>
+
+<script>
+  document.querySelectorAll("[data-tema]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var tema = button.dataset.tema;
+      document.querySelectorAll("[data-tema]").forEach(function (other) { other.setAttribute("aria-pressed", String(other === button)); });
+      document.documentElement.dataset.theme = tema === "scuro" ? "dark" : "light";
+      document.querySelectorAll("iframe").forEach(function (frame) { frame.src = frame.src.replace(/tema=\w+/, "tema=" + tema); });
+    });
+  });
+</script>
+</body>
+</html>

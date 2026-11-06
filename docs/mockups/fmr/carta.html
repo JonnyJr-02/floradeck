@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FloraDeck · Tavola · Carta appena trovata</title>
+<script>(function () { var t = new URLSearchParams(location.search).get("tema"); document.documentElement.dataset.theme = t === "scuro" ? "dark" : t === "chiaro" ? "light" : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); })();</script>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="screen">
+  <header class="folio">
+    <a class="close" href="esplora.html" aria-label="Chiudi"><svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+    <span>Campi e bordi di strada</span>
+  </header>
+
+  <figure class="plate">
+    <div class="tissue" aria-hidden="true"><span>Papaver rhoeas · Tav. I</span></div>
+    <div class="mount">
+      <div class="photo"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/large.jpeg" alt="Papavero comune fotografato in un campo"></div>
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    </div>
+    <div class="seal" role="img" aria-label="Esemplare 1 di 29, trovato il 14 maggio 2026">
+      <span class="of">Esemplare</span><span class="n">01</span><span class="date">di 29</span>
+    </div>
+  </figure>
+
+  <section class="legend">
+    <h1>Papavero comune</h1>
+    <p class="latin"><i>Papaver rhoeas</i> · Papaveraceae</p>
+    <dl class="ticket">
+      <div><dt>Rarità</dt><dd>Comune</dd></div>
+      <div><dt>Tavola</dt><dd>01 di 29</dd></div>
+      <div><dt>Trovata da te</dt><dd>14 maggio 2026</dd></div>
+      <div><dt>Dove</dt><dd>Colli fiorentini</dd></div>
+    </dl>
+    <p class="lede">Petali rossi sottili come carta velina, spesso con una macchia nera alla base. Ogni fiore dura appena un giorno.</p>
+  </section>
+
+  <footer class="actions">
+    <a class="btn" href="album.html">Metti nell'album</a>
+    <a class="link" href="#">Leggi la scheda</a>
+  </footer>
+</main>
+</body>
+</html>

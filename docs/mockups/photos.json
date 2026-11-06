@@ -1,0 +1,82 @@
+{
+  "papaver-rhoeas": {
+    "name": "Papavero comune",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/large.jpeg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/medium.jpeg",
+    "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/214611040"
+  },
+  "cichorium-intybus": {
+    "name": "Cicoria selvatica",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/131872714/large.jpeg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/131872714/medium.jpeg",
+    "attribution": "no rights reserved",
+    "license": "cc0",
+    "observation": "https://www.inaturalist.org/observations/80456537"
+  },
+  "malva-sylvestris": {
+    "name": "Malva selvatica",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/727341743/large.jpg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/727341743/medium.jpg",
+    "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/396616204"
+  },
+  "echium-vulgare": {
+    "name": "Viperina azzurra",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/388984184/large.jpeg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/388984184/medium.jpeg",
+    "attribution": "(c) Marianna Boi, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/219713909"
+  },
+  "calendula-arvensis": {
+    "name": "Fiorrancio selvatico",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/351604538/large.gif",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/351604538/medium.gif",
+    "attribution": "(c) Golfopolikayak, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/199380322"
+  },
+  "centaurea-cyanus": {
+    "name": "Fiordaliso",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/43890086/large.jpg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/43890086/medium.jpg",
+    "attribution": "(c) Valentina Caviglia, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/28166628"
+  },
+  "geranium-sanguineum": {
+    "name": "Geranio sanguigno",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/130665792/large.jpeg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/130665792/medium.jpeg",
+    "attribution": "no rights reserved",
+    "license": "cc0",
+    "observation": "https://www.inaturalist.org/observations/79760143"
+  },
+  "saponaria-officinalis": {
+    "name": "Saponaria comune",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/406520499/large.jpeg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/406520499/medium.jpeg",
+    "attribution": "(c) Marco Mussita, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/229041803"
+  },
+  "linaria-vulgaris": {
+    "name": "Linajola comune",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/590058704/large.jpg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/590058704/medium.jpg",
+    "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/325855649"
+  },
+  "silene-vulgaris": {
+    "name": "Silene rigonfia",
+    "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/603943852/large.jpg",
+    "medium": "https://inaturalist-open-data.s3.amazonaws.com/photos/603943852/medium.jpg",
+    "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "observation": "https://www.inaturalist.org/observations/332748417"
+  }
+}

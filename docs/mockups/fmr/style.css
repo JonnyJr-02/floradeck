@@ -1,0 +1,203 @@
+/* Proposta A · "Tavola": la carta come tavola d'arte incollata sulla pagina di una rivista. */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@400;500&display=swap");
+
+:root {
+  --ground: #f2ecdf;          /* carta avorio, pagina interna */
+  --ground-2: #e8e0cf;
+  --mat: #fbf8f1;             /* passe-partout della tavola */
+  --ink: #1c1a16;
+  --ink-2: #5a5347;
+  --gold: #957434;
+  --gold-soft: rgba(149, 116, 52, 0.42);
+  --rule: rgba(28, 26, 22, 0.16);
+  --accent: #a8251d;          /* il colore del fiore in primo piano, uno solo per volta */
+  --tissue: rgba(255, 255, 255, 0.42);
+  --shadow: 0 1px 1px rgba(28, 26, 22, 0.08), 0 10px 26px rgba(28, 26, 22, 0.14);
+  --display: "Bodoni Moda", Didot, "Bodoni 72", serif;
+  --ui: "Jost", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --ground: #0d1220;          /* seta blu notte, la copertina */
+  --ground-2: #161c2c;
+  --mat: #1a2133;
+  --ink: #ece5d5;
+  --ink-2: #a9a497;
+  --gold: #c9a55c;
+  --gold-soft: rgba(201, 165, 92, 0.5);
+  --rule: rgba(236, 229, 213, 0.14);
+  --accent: #e7685a;
+  --tissue: rgba(236, 229, 213, 0.08);
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; }
+html { scrollbar-width: thin; scrollbar-color: var(--gold-soft) transparent; }
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 15px/1.45 var(--ui);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+::selection { background: var(--gold); color: var(--ground); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+svg.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+.screen { position: relative; max-width: 430px; min-height: 100vh; margin: 0 auto; display: flex; flex-direction: column; }
+
+/* Testatina corrente, come il titolo in cima alla pagina di una rivista */
+.folio {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px 10px;
+  font: 500 11px/1 var(--ui); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2);
+}
+.folio .close { display: grid; place-items: center; width: 36px; height: 36px; margin-left: -8px; color: var(--ink); }
+.folio b { font-weight: 500; color: var(--ink); }
+
+/* ---------- Carta appena trovata ---------- */
+.plate { position: relative; margin: 10px auto 0; width: min(300px, 78vw); }
+.tissue {
+  position: absolute; inset: -12px 10px 14px -16px;
+  background: var(--tissue);
+  border: 1px solid var(--rule);
+  backdrop-filter: blur(1.5px);
+  transform: rotate(-3.2deg);
+  box-shadow: 0 6px 18px rgba(28, 26, 22, 0.06);
+}
+.tissue span {
+  position: absolute; left: 14px; bottom: 10px;
+  font: italic 400 11px/1 var(--display); color: var(--ink-2); opacity: 0.8;
+}
+.mount { position: relative; background: var(--mat); padding: 11px; border: 1px solid var(--gold-soft); box-shadow: var(--shadow); }
+.mount .photo { aspect-ratio: 4 / 5; overflow: hidden; }
+.corner { position: absolute; width: 18px; height: 18px; }
+.corner.tl { top: 6px; left: 6px; background: linear-gradient(135deg, var(--gold) 50%, transparent 50.5%); }
+.corner.tr { top: 6px; right: 6px; background: linear-gradient(225deg, var(--gold) 50%, transparent 50.5%); }
+.corner.bl { bottom: 6px; left: 6px; background: linear-gradient(45deg, var(--gold) 50%, transparent 50.5%); }
+.corner.br { bottom: 6px; right: 6px; background: linear-gradient(315deg, var(--gold) 50%, transparent 50.5%); }
+
+/* Il timbro: l'unico segno deciso, nel colore del fiore */
+.seal {
+  position: absolute; right: -14px; bottom: -18px;
+  width: 84px; height: 84px; border-radius: 50%;
+  display: grid; place-content: center; text-align: center;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  box-shadow: inset 0 0 0 3px var(--ground), inset 0 0 0 4px var(--accent);
+  background: var(--ground);
+  transform: rotate(-9deg);
+}
+.seal .n { font: 600 24px/1 var(--display); font-variant-numeric: lining-nums; margin: 2px 0 1px; }
+.seal .of, .seal .date { font: 500 7.5px/1.2 var(--ui); letter-spacing: 0.1em; text-transform: uppercase; }
+
+.legend { padding: 28px 28px 0; }
+.legend h1 { font: 400 36px/1.02 var(--display); letter-spacing: -0.01em; font-variation-settings: "opsz" 72; }
+.latin { margin-top: 6px; font: 400 15px/1.3 var(--display); color: var(--ink-2); }
+.latin i { color: var(--ink); }
+.ticket { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.ticket dt { font: 500 10px/1 var(--ui); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); }
+.ticket dd { margin-top: 4px; font: 400 14.5px/1.25 var(--display); }
+.lede { margin-top: 14px; font: 400 15px/1.5 var(--display); font-variation-settings: "opsz" 11; color: var(--ink); }
+
+.actions { margin-top: auto; padding: 18px 28px 26px; display: grid; gap: 12px; justify-items: center; }
+.btn {
+  display: block; width: 100%; padding: 15px 18px; text-align: center; text-decoration: none;
+  background: var(--ink); color: var(--ground);
+  font: 500 13px/1 var(--ui); letter-spacing: 0.18em; text-transform: uppercase;
+  border-radius: 2px;
+  transition: transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 160ms;
+}
+.btn:active { transform: scale(0.98); }
+.link { font: italic 400 15px/1 var(--display); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--gold); }
+
+/* ---------- Album ---------- */
+.issues { display: grid; grid-template-columns: repeat(10, 1fr); gap: 7px; padding: 6px 20px 0; }
+.issue { position: relative; height: 38px; border: 1px solid var(--rule); }
+.issue::after { content: ""; position: absolute; left: 2px; right: 2px; bottom: 2px; height: calc((100% - 4px) * var(--p)); background: var(--ink); opacity: 0.82; }
+.issue[aria-current] { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+.issue-nums { display: grid; grid-template-columns: repeat(10, 1fr); gap: 7px; padding: 5px 20px 0; font: italic 400 10.5px/1 var(--display); color: var(--ink-2); text-align: center; }
+
+.album-head { padding: 18px 20px 0; }
+.album-head h1 { font: 400 31px/1.05 var(--display); letter-spacing: -0.01em; font-variation-settings: "opsz" 60; }
+.count { display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; font: 500 12px/1 var(--ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+.count b { font: 400 17px/1 var(--display); letter-spacing: 0; text-transform: none; color: var(--ink); }
+.bar { height: 1px; background: var(--rule); margin-top: 9px; }
+.bar i { display: block; height: 1px; width: var(--p); background: var(--ink); box-shadow: 0 0 0 0.5px var(--ink); }
+
+.rare { text-decoration: none; display: grid; grid-template-columns: 74px 1fr; gap: 14px; align-items: center; margin: 16px 20px 0; padding: 10px; border: 1px solid var(--gold); outline: 1px solid var(--gold-soft); outline-offset: 3px; }
+.rare .uninked { aspect-ratio: 4 / 5; }
+.rare h2 { font: 400 18px/1.15 var(--display); }
+.rare p { margin-top: 4px; font: 400 13px/1.35 var(--ui); color: var(--ink-2); }
+.rare p b { font-weight: 500; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; font-size: 10.5px; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 12px; padding: 20px 20px 110px; }
+.slot { display: grid; gap: 7px; text-decoration: none; }
+.slot .frame { background: var(--mat); padding: 5px; border: 1px solid var(--gold-soft); box-shadow: 0 1px 1px rgba(28, 26, 22, 0.06), 0 4px 10px rgba(28, 26, 22, 0.08); }
+.slot .frame .photo { aspect-ratio: 4 / 5; overflow: hidden; }
+.slot .no { font: italic 400 11px/1 var(--display); color: var(--ink-2); }
+.slot .name { font: 400 13.5px/1.2 var(--display); }
+.uninked {
+  aspect-ratio: 4 / 5; display: grid; place-items: center;
+  background: var(--ground-2);
+  box-shadow: inset 0 0 0 1px var(--rule), inset 0 2px 6px rgba(28, 26, 22, 0.07);
+  font: 400 26px/1 var(--display); color: var(--ink-2); opacity: 0.9;
+}
+.hint { font: 400 11.5px/1.35 var(--ui); color: var(--ink-2); }
+.hint span { display: block; }
+.hint .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 3px; vertical-align: 0; box-shadow: 0 0 0 1px var(--rule); }
+
+/* ---------- Esplora ---------- */
+.viewfinder { position: absolute; inset: 0; background: #111; }
+.viewfinder img { filter: saturate(1.05); }
+.viewfinder::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 22%, transparent 48%, rgba(0, 0, 0, 0.25)); }
+.frame-guide { position: absolute; left: 50%; top: 31%; width: 220px; height: 260px; transform: translate(-50%, -50%); }
+.frame-guide i { position: absolute; width: 26px; height: 26px; border-color: #f3e6c4; border-style: solid; border-width: 0; }
+.frame-guide i:nth-child(1) { top: 0; left: 0; border-top-width: 1.5px; border-left-width: 1.5px; }
+.frame-guide i:nth-child(2) { top: 0; right: 0; border-top-width: 1.5px; border-right-width: 1.5px; }
+.frame-guide i:nth-child(3) { bottom: 0; left: 0; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+.frame-guide i:nth-child(4) { bottom: 0; right: 0; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+.tip {
+  position: absolute; top: 18px; left: 50%; transform: translateX(-50%);
+  padding: 9px 14px; white-space: nowrap;
+  background: rgba(13, 18, 32, 0.62); color: #f3ecdc;
+  font: italic 400 14px/1 var(--display);
+  border: 1px solid rgba(243, 230, 196, 0.35);
+}
+.slip {
+  position: absolute; left: 12px; right: 12px; bottom: 88px;
+  background: var(--ground); color: var(--ink);
+  border: 1px solid var(--gold-soft); box-shadow: var(--shadow);
+  padding: 18px 18px 14px;
+}
+.slip h1 { font: 400 25px/1.05 var(--display); }
+.slip > p { margin-top: 6px; font: 400 13.5px/1.4 var(--ui); color: var(--ink-2); }
+.guesses { list-style: none; margin-top: 12px; border-top: 1px solid var(--rule); }
+.guess { display: grid; grid-template-columns: 46px 1fr auto 18px; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
+.guess .thumb { background: var(--mat); padding: 3px; border: 1px solid var(--gold-soft); }
+.guess .thumb .photo { aspect-ratio: 4 / 5; overflow: hidden; }
+.guess .nm { font: 400 16px/1.15 var(--display); }
+.guess .nm i { display: block; font-size: 12.5px; color: var(--ink-2); }
+.guess .pc { font: 500 14px/1 var(--ui); font-variant-numeric: tabular-nums; }
+.guess svg.icon { width: 18px; height: 18px; color: var(--ink-2); }
+.slip .again { display: block; margin-top: 12px; text-align: center; font: italic 400 15px/1 var(--display); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--gold); }
+
+/* ---------- Navigazione ---------- */
+.tabs {
+  position: fixed; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 100%; max-width: 430px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  padding: 8px 6px calc(10px + env(safe-area-inset-bottom));
+  background: var(--ground); border-top: 1px solid var(--rule);
+}
+.tabs.on-camera { background: rgba(13, 18, 32, 0.82); border-top-color: rgba(243, 230, 196, 0.2); color: #e9e1cf; backdrop-filter: blur(10px); }
+.tab { position: relative; display: grid; justify-items: center; gap: 4px; padding-top: 6px; text-decoration: none; color: var(--ink-2); font: 500 10.5px/1 var(--ui); letter-spacing: 0.12em; text-transform: uppercase; }
+.tabs.on-camera .tab { color: rgba(233, 225, 207, 0.72); }
+.tab[aria-current] { color: var(--ink); }
+.tabs.on-camera .tab[aria-current] { color: #f3ecdc; }
+.tab[aria-current]::before { content: ""; position: absolute; top: -9px; width: 22px; height: 2px; background: var(--gold); }

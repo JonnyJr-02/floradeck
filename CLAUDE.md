@@ -25,7 +25,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 
 ## Skills and MCP
 
-- **Design:** `impeccable` (v4.8) is the main design skill for all UI work except motion. `/teach-impeccable` is now `impeccable teach` (alias of `init`, writes PRODUCT.md). Its Windows launcher downloads an engine binary on first run: ask first. Run its critique/audit/polish at the end of every UI phase.
+- **Design:** `impeccable` (v4.8) is the main design skill for all UI work except motion. `/teach-impeccable` is now `impeccable teach` (alias of `init`, writes PRODUCT.md). Its Windows launcher (`.claude/skills/impeccable/scripts/impeccable.cmd`) runs an engine binary downloaded on 2026-11-06 with the user's OK; ask again before any new download. Run its critique/audit/polish at the end of every UI phase.
 - **Motion:** Emil Kowalski's skills only (`animate`, `choreograph`, `apple-design`, `animation-performance`, `emil-design-eng`). Do not use Impeccable's `animate` command (overlapping rules). Also `mobile-native` for native feel on phones, `break-ui` for worst-case data.
 - `review-animations`, `prototype` and `pick-ui-library` cannot be model-invoked. Before closing a phase with animations: ask the user to run `/review-animations`, or read `.claude/skills/review-animations/SKILL.md` and `STANDARDS.md` and apply them, saying so.
 - `design-taste-frontend`: only for one of the phase-2 mockups. If the user picks that direction, it replaces Impeccable as the main design skill. Never combine two general design skills with conflicting rules: ask.
@@ -48,6 +48,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 - **Location:** opt-in only, rounded to ~1 km, nearest comune computed offline (ISTAT list).
 - **Gifts and couple:** serverless first. A gift is a link with the payload in the URL fragment (or a `.floradeck` file): species id, compressed photo (~15–20 KB), date, sender, message, unique `giftId`. On iPhone the link opens in Safari, whose storage is separate from the Home-screen app → bridge "Copia regalo" → "Incolla regalo". QR codes for pairing and progress snapshots (≈3 KB max, no photos). The duplicate leaves the sender's collection when the gift is created (resend = same `giftId`); the receiver stores imported `giftId`s, also in backups. Partner albums are read-only snapshots; the couple album is the union. Optional backend in phase 8 (Supabase free pauses idle projects; also evaluate Cloudflare Workers + D1).
 - **Order:** backup export/import moved to phase 5; ML scripts start right after phase 1 and run in parallel with the UI phases (the user runs Colab training); weekly challenges in phase 9.
+- **Design (phase 2):** `PRODUCT.md` holds the product context for Impeccable (users, purpose, principles, accessibility). The app is a surprise for the partner: the first opening should feel like a present. Three code-led mockups in `docs/mockups/`, each with the same three screens (new card, album, unsure camera) in light and dark: A "Tavola" (Impeccable's assigned direction, seed:5b4c644d814e5e2d), B "Figurina" (Impeccable's pick), C "Foto in primo piano" (Taste). The user picks in chat from the built mockups instead of Impeccable's decision page. After the pick: send Impeccable's concept-seed telemetry for the chosen card kind, write the direction contract into the surface brief, and write DESIGN.md when the design system lands in phase 3.
 
 ## Phases
 
@@ -55,7 +56,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 |---|---|---|
 | 0 | Setup, plan, CLAUDE.md, repo | ✅ 2026-11-06 |
 | 1 | Catalog: albums + species list → user validates → `species.json`, schema, review sheet; iNat photo counts per species | ✅ 2026-11-06 (texts still to verify) |
-| 2 | Design: `impeccable teach`, 3 static mockups (2 Impeccable, 1 Taste) → user picks | next |
+| 2 | Design: `impeccable teach`, 3 static mockups (2 Impeccable, 1 Taste) → user picks | mockups ready 2026-11-06, waiting for the pick |
 | 3 | PWA skeleton: nav, themes, offline fonts, Dexie, offline, install guide + iOS warning, deploy | |
 | 4 | Camera + mock recognizer + shot → card → collection, unpacking animation | |
 | 5 | Albums, rarity, duplicates, cover photo, diary, "In fiore questo mese", celebrations, legendary card, backup | |
@@ -74,6 +75,8 @@ Catalog (Python 3.13, standard library only; run from the repo root):
 - `py -3.13 -m unittest discover -s catalog/scripts -p "test_*.py"`: catalog unit tests.
 - `py -3.13 catalog/scripts/build_review.py`: build the review page `catalog/review/index.html` (open it in a browser; its export goes to `catalog/review/status.json`).
 - To change a species: edit `catalog/proposal/candidates.json` (and its text in `catalog/texts/`), run `inat_stats.py --only <key>`, then build, validate, review.
+
+Design mockups: `py -3.13 -m http.server 8766 --bind 127.0.0.1 --directory docs/mockups`, then open http://127.0.0.1:8766/ (the Playwright MCP blocks `file:` URLs). Photos and fonts load from the internet.
 
 Dev, build, test and training commands are added here as each phase lands.
 
@@ -97,9 +100,10 @@ floradeck/
 │  ├─ scripts/         stats, build, validate, review, tests
 │  └─ proposta-specie.md   the validated proposal (tables with data)
 ├─ ml/               Python pipeline: download, clean, split, train, eval, export; Colab notebook (phase 6)
-├─ docs/             SPEC.md, PLAN.md, mockups/ (phase 2)
+├─ docs/             SPEC.md, PLAN.md, mockups/ (index.html compares A fmr/, B figurine/, C taste/; photos.json credits)
 ├─ .claude/skills/   project skills (git-ignored)
 ├─ .mcp.json         Playwright MCP
 ├─ skills-lock.json  skill sources and hashes
+├─ PRODUCT.md        product context for Impeccable (users, purpose, principles)
 └─ CLAUDE.md
 ```
