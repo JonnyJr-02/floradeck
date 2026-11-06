@@ -40,7 +40,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 - **Catalog:** 8 albums × 10–12 species, exactly 1 rare per album, plus 1 secret legendary species. Species widespread across Italy (user's region unknown). `catalog/` is the single source of truth: schema-validated, read by `ml/`, imported by the app at build time.
 - **Illustrations:** public-domain botanical plates (Thomé, Sturm, Köhler, Curtis's Botanical Magazine, Sibthorp) from Wikimedia Commons/BHL, with attributions; empty-slot silhouettes derived by script.
 - **ML:** approach A: fine-tune a mobile CNN with timm (bake-off: MobileNetV4-M, EfficientNet-B0, ConvNeXt-Nano) on catalog species plus an "altro" class. The model also outputs its penultimate embedding for a prototype-distance OOD score (idea from approach C). Targets: < 30 MB, < 2 s, top-1 ≥ 85 %, top-3 ≥ 95 % on the catalog test set.
-- **Data:** iNaturalist research grade, CC0/CC-BY/CC-BY-NC, Italy first then Europe, prefer phenology annotations (flowering/fruiting); attributions CSV. Split by observation; test set also grouped by observer. No hue jitter in augmentation (colour is the key feature).
+- **Data:** iNaturalist research grade, CC0/CC-BY/CC-BY-NC, Italy first then Europe, prefer phenology annotations (flowering/fruiting); attributions CSV. Split by observation; test set also grouped by observer. No hue jitter in augmentation (colour is the key feature). Cultivated plants are always "casual" on iNaturalist, so garden species need casual observations too; genus/group classes can also use observations identified only to genus.
 - **Calibration:** temperature scaling; threshold from a risk–coverage curve on in- and out-of-catalog validation data. Parity test checks model and preprocessing separately. `ml/` exports `labels.json` plus metadata (temperature, thresholds, normalisation, version): no hard-coded constants in the app.
 - **Recognition UX:** confidence ≥ threshold → card; grey zone → "Non sono sicuro" + top-3 to confirm; "altro"/OOD → not in catalog + shooting tips. 2–3 crop TTA. `MockRecognizer` with forceable scenarios (sure / unsure / out of catalog) behind the same interface until the real model ships.
 - **Photos:** long side 1080 px; WebP when the browser can encode it, else JPEG (runtime check); separate thumbnail.
@@ -65,7 +65,11 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 
 ## Commands
 
-None yet: dev, build, test and training commands are added here as each phase lands.
+Catalog (Python 3.13, standard library only; run from the repo root):
+- `py -3.13 catalog/scripts/inat_stats.py`: fetch iNaturalist stats for `catalog/proposal/candidates.json` (responses cached in `catalog/.cache/`, about 1 request/s; `--only <key> ...` refreshes single entries).
+- `py -3.13 catalog/scripts/render_proposal.py`: regenerate `catalog/proposta-specie.md` from the candidates and the stats.
+
+Dev, build, test and training commands are added here as each phase lands.
 
 ## Structure
 
@@ -78,7 +82,8 @@ floradeck/
 │  ├─ src/features/    explore · albums · journal · couple · settings
 │  ├─ src/ui/          design system components, tokens, themes, fonts
 │  └─ e2e/             Playwright tests
-├─ catalog/          species.json, albums.json, schema, illustrations + attributions, review scripts (phase 1)
+├─ catalog/          proposal/ (candidates.json, inat_stats.json), scripts/, proposta-specie.md;
+│                    then species.json, albums.json, schema, illustrations + attributions
 ├─ ml/               Python pipeline: download, clean, split, train, eval, export; Colab notebook (phase 6)
 ├─ docs/             SPEC.md, PLAN.md, mockups/ (phase 2)
 ├─ .claude/skills/   project skills (git-ignored)

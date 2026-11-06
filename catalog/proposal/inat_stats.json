@@ -1,0 +1,6131 @@
+{
+ "fetched": "2026-11-06",
+ "source": "iNaturalist API v1, research-grade observations",
+ "placeItaly": 6973,
+ "placeEurope": 97391,
+ "openLicenses": "cc0,cc-by,cc-by-nc",
+ "areas": {
+  "north": {
+   "swlat": 44.0,
+   "nelat": 47.2,
+   "swlng": 6.5,
+   "nelng": 19.0
+  },
+  "center": {
+   "swlat": 41.8,
+   "nelat": 44.0,
+   "swlng": 6.5,
+   "nelng": 19.0
+  },
+  "south": {
+   "swlat": 35.0,
+   "nelat": 41.8,
+   "swlng": 6.5,
+   "nelng": 19.0
+  }
+ },
+ "baselinePlantaeAreas": {
+  "north": 836652,
+  "center": 229134,
+  "south": 233060
+ },
+ "species": {
+  "taraxacum": {
+   "key": "taraxacum",
+   "taxa": [
+    {
+     "query": "Taraxacum",
+     "id": 47603,
+     "name": "Taraxacum",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 32,
+    "2": 50,
+    "3": 232,
+    "4": 404,
+    "5": 211,
+    "6": 102,
+    "7": 50,
+    "8": 25,
+    "9": 49,
+    "10": 65,
+    "11": 41,
+    "12": 43
+   },
+   "itTotal": 1304,
+   "itPhenologyMonths": {
+    "1": 3,
+    "2": 4,
+    "3": 25,
+    "4": 50,
+    "5": 26,
+    "6": 14,
+    "7": 3,
+    "8": 1,
+    "9": 6,
+    "10": 8,
+    "11": 5,
+    "12": 4
+   },
+   "itOpen": 865,
+   "euOpen": null,
+   "areas": {
+    "north": 1143,
+    "center": 106,
+    "south": 55
+   }
+  },
+  "leontopodium-nivale": {
+   "key": "leontopodium-nivale",
+   "taxa": [
+    {
+     "query": "Leontopodium nivale",
+     "id": 326185,
+     "name": "Leontopodium nivale",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Leontopodium alpinum",
+     "id": 332306,
+     "name": "Leontopodium nivale alpinum",
+     "rank": "subspecies",
+     "synonym": true
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 2,
+    "5": 5,
+    "6": 279,
+    "7": 1306,
+    "8": 1230,
+    "9": 321,
+    "10": 55,
+    "11": 2,
+    "12": 1
+   },
+   "itTotal": 3201,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 2,
+    "6": 42,
+    "7": 146,
+    "8": 155,
+    "9": 19,
+    "10": 2,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 2177,
+   "euOpen": null,
+   "areas": {
+    "north": 3085,
+    "center": 116,
+    "south": 0
+   }
+  },
+  "crocus-vernus": {
+   "key": "crocus-vernus",
+   "taxa": [
+    {
+     "query": "Crocus vernus",
+     "id": 1371920,
+     "name": "Crocus vernus",
+     "rank": "complex",
+     "synonym": false
+    },
+    {
+     "query": "Crocus albiflorus",
+     "id": 55769,
+     "name": "Crocus vernus",
+     "rank": "species",
+     "synonym": true
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 17,
+    "2": 256,
+    "3": 592,
+    "4": 587,
+    "5": 371,
+    "6": 111,
+    "7": 12,
+    "8": 0,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 1
+   },
+   "itTotal": 1948,
+   "itPhenologyMonths": {
+    "1": 6,
+    "2": 62,
+    "3": 145,
+    "4": 178,
+    "5": 151,
+    "6": 36,
+    "7": 2,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 1292,
+   "euOpen": null,
+   "areas": {
+    "north": 1629,
+    "center": 244,
+    "south": 75
+   }
+  },
+  "nigritella": {
+   "key": "nigritella",
+   "taxa": [
+    {
+     "query": "Nigritella",
+     "id": 1256692,
+     "name": "Nigritella",
+     "rank": "subgenus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 1,
+    "6": 444,
+    "7": 1057,
+    "8": 137,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 1640,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 44,
+    "7": 87,
+    "8": 21,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1051,
+   "euOpen": null,
+   "areas": {
+    "north": 1628,
+    "center": 8,
+    "south": 4
+   }
+  },
+  "cistus-creticus": {
+   "key": "cistus-creticus",
+   "taxa": [
+    {
+     "query": "Cistus creticus",
+     "id": 64318,
+     "name": "Cistus creticus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 52,
+    "2": 38,
+    "3": 87,
+    "4": 585,
+    "5": 788,
+    "6": 308,
+    "7": 117,
+    "8": 60,
+    "9": 89,
+    "10": 85,
+    "11": 36,
+    "12": 38
+   },
+   "itTotal": 2283,
+   "itPhenologyMonths": {
+    "1": 3,
+    "2": 1,
+    "3": 2,
+    "4": 50,
+    "5": 85,
+    "6": 33,
+    "7": 9,
+    "8": 1,
+    "9": 1,
+    "10": 3,
+    "11": 0,
+    "12": 3
+   },
+   "itOpen": 1529,
+   "euOpen": null,
+   "areas": {
+    "north": 44,
+    "center": 956,
+    "south": 1283
+   }
+  },
+  "capparis-spinosa": {
+   "key": "capparis-spinosa",
+   "taxa": [
+    {
+     "query": "Capparis spinosa",
+     "id": 67715,
+     "name": "Capparis spinosa",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Capparis orientalis",
+     "id": 545878,
+     "name": "Capparis orientalis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 26,
+    "2": 3,
+    "3": 12,
+    "4": 95,
+    "5": 87,
+    "6": 162,
+    "7": 155,
+    "8": 151,
+    "9": 125,
+    "10": 84,
+    "11": 25,
+    "12": 22
+   },
+   "itTotal": 947,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5,
+    "5": 15,
+    "6": 41,
+    "7": 51,
+    "8": 27,
+    "9": 15,
+    "10": 4,
+    "11": 1,
+    "12": 0
+   },
+   "itOpen": 630,
+   "euOpen": null,
+   "areas": {
+    "north": 237,
+    "center": 377,
+    "south": 333
+   }
+  },
+  "hepatica-nobilis": {
+   "key": "hepatica-nobilis",
+   "taxa": [
+    {
+     "query": "Hepatica nobilis",
+     "id": 639660,
+     "name": "Hepatica nobilis",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Anemone hepatica",
+     "id": 639660,
+     "name": "Hepatica nobilis",
+     "rank": "species",
+     "synonym": true
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 182,
+    "2": 1064,
+    "3": 1775,
+    "4": 1079,
+    "5": 410,
+    "6": 159,
+    "7": 146,
+    "8": 139,
+    "9": 100,
+    "10": 70,
+    "11": 49,
+    "12": 64
+   },
+   "itTotal": 5237,
+   "itPhenologyMonths": {
+    "1": 85,
+    "2": 179,
+    "3": 260,
+    "4": 128,
+    "5": 35,
+    "6": 2,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 3,
+    "12": 9
+   },
+   "itOpen": 3406,
+   "euOpen": null,
+   "areas": {
+    "north": 4754,
+    "center": 412,
+    "south": 71
+   }
+  },
+  "lavandula-giardino": {
+   "key": "lavandula-giardino",
+   "taxa": [
+    {
+     "query": "Lavandula angustifolia",
+     "id": 133395,
+     "name": "Lavandula angustifolia",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Lavandula × intermedia",
+     "id": 469711,
+     "name": "Lavandula × intermedia",
+     "rank": "hybrid",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 8,
+    "2": 7,
+    "3": 28,
+    "4": 76,
+    "5": 78,
+    "6": 148,
+    "7": 127,
+    "8": 60,
+    "9": 49,
+    "10": 30,
+    "11": 12,
+    "12": 8
+   },
+   "itTotal": 631,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 5,
+    "6": 16,
+    "7": 19,
+    "8": 6,
+    "9": 2,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 380,
+   "euOpen": null,
+   "areas": {
+    "north": 383,
+    "center": 150,
+    "south": 103
+   }
+  },
+  "physalis-alkekengi": {
+   "key": "physalis-alkekengi",
+   "taxa": [
+    {
+     "query": "Physalis alkekengi",
+     "id": 575102,
+     "name": "Alkekengi officinarum",
+     "rank": "species",
+     "synonym": true
+    },
+    {
+     "query": "Alkekengi officinarum",
+     "id": 575102,
+     "name": "Alkekengi officinarum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 7,
+    "2": 4,
+    "3": 3,
+    "4": 8,
+    "5": 68,
+    "6": 33,
+    "7": 58,
+    "8": 127,
+    "9": 109,
+    "10": 60,
+    "11": 31,
+    "12": 14
+   },
+   "itTotal": 522,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 2,
+    "3": 0,
+    "4": 0,
+    "5": 2,
+    "6": 1,
+    "7": 6,
+    "8": 18,
+    "9": 13,
+    "10": 10,
+    "11": 8,
+    "12": 1
+   },
+   "itOpen": 350,
+   "euOpen": null,
+   "areas": {
+    "north": 496,
+    "center": 24,
+    "south": 2
+   }
+  },
+  "bellis-perennis": {
+   "key": "bellis-perennis",
+   "taxa": [
+    {
+     "query": "Bellis perennis",
+     "id": 55563,
+     "name": "Bellis perennis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 238,
+    "2": 680,
+    "3": 1269,
+    "4": 1865,
+    "5": 1251,
+    "6": 292,
+    "7": 88,
+    "8": 47,
+    "9": 67,
+    "10": 111,
+    "11": 89,
+    "12": 141
+   },
+   "itTotal": 6138,
+   "itPhenologyMonths": {
+    "1": 110,
+    "2": 202,
+    "3": 187,
+    "4": 249,
+    "5": 197,
+    "6": 39,
+    "7": 13,
+    "8": 7,
+    "9": 10,
+    "10": 16,
+    "11": 10,
+    "12": 48
+   },
+   "itOpen": 4322,
+   "euOpen": null,
+   "areas": {
+    "north": 4027,
+    "center": 1578,
+    "south": 533
+   }
+  },
+  "primula-veris": {
+   "key": "primula-veris",
+   "taxa": [
+    {
+     "query": "Primula veris",
+     "id": 55819,
+     "name": "Primula veris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 2,
+    "2": 20,
+    "3": 135,
+    "4": 782,
+    "5": 585,
+    "6": 157,
+    "7": 29,
+    "8": 3,
+    "9": 0,
+    "10": 0,
+    "11": 1,
+    "12": 2
+   },
+   "itTotal": 1716,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 18,
+    "4": 112,
+    "5": 110,
+    "6": 25,
+    "7": 3,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1138,
+   "euOpen": null,
+   "areas": {
+    "north": 1576,
+    "center": 140,
+    "south": 0
+   }
+  },
+  "viola-odorata-gruppo": {
+   "key": "viola-odorata-gruppo",
+   "taxa": [
+    {
+     "query": "Viola odorata",
+     "id": 55845,
+     "name": "Viola odorata",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Viola hirta",
+     "id": 286612,
+     "name": "Viola hirta",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Viola alba",
+     "id": 450816,
+     "name": "Viola alba",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 29,
+    "2": 598,
+    "3": 1389,
+    "4": 187,
+    "5": 29,
+    "6": 9,
+    "7": 6,
+    "8": 1,
+    "9": 13,
+    "10": 7,
+    "11": 9,
+    "12": 16
+   },
+   "itTotal": 2293,
+   "itPhenologyMonths": {
+    "1": 4,
+    "2": 179,
+    "3": 279,
+    "4": 21,
+    "5": 1,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 1,
+    "11": 1,
+    "12": 3
+   },
+   "itOpen": 1651,
+   "euOpen": null,
+   "areas": {
+    "north": 2012,
+    "center": 196,
+    "south": 85
+   }
+  },
+  "muscari": {
+   "key": "muscari",
+   "taxa": [
+    {
+     "query": "Muscari neglectum",
+     "id": 1097919,
+     "name": "Muscari neglectum",
+     "rank": "complex",
+     "synonym": false
+    },
+    {
+     "query": "Muscari botryoides",
+     "id": 56134,
+     "name": "Muscari botryoides",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Muscari armeniacum",
+     "id": 57847,
+     "name": "Muscari armeniacum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 50,
+    "3": 859,
+    "4": 769,
+    "5": 146,
+    "6": 23,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 1848,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 20,
+    "3": 194,
+    "4": 164,
+    "5": 52,
+    "6": 8,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1214,
+   "euOpen": null,
+   "areas": {
+    "north": 1145,
+    "center": 541,
+    "south": 162
+   }
+  },
+  "myosotis": {
+   "key": "myosotis",
+   "taxa": [
+    {
+     "query": "Myosotis",
+     "id": 49131,
+     "name": "Myosotis",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 6,
+    "2": 16,
+    "3": 141,
+    "4": 406,
+    "5": 466,
+    "6": 328,
+    "7": 242,
+    "8": 137,
+    "9": 22,
+    "10": 12,
+    "11": 6,
+    "12": 2
+   },
+   "itTotal": 1784,
+   "itPhenologyMonths": {
+    "1": 3,
+    "2": 6,
+    "3": 27,
+    "4": 62,
+    "5": 67,
+    "6": 39,
+    "7": 30,
+    "8": 24,
+    "9": 2,
+    "10": 5,
+    "11": 4,
+    "12": 1
+   },
+   "itOpen": 1223,
+   "euOpen": null,
+   "areas": {
+    "north": 1574,
+    "center": 129,
+    "south": 81
+   }
+  },
+  "salvia-pratensis": {
+   "key": "salvia-pratensis",
+   "taxa": [
+    {
+     "query": "Salvia pratensis",
+     "id": 85338,
+     "name": "Salvia pratensis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 14,
+    "2": 16,
+    "3": 79,
+    "4": 994,
+    "5": 1317,
+    "6": 605,
+    "7": 330,
+    "8": 184,
+    "9": 165,
+    "10": 190,
+    "11": 91,
+    "12": 28
+   },
+   "itTotal": 4013,
+   "itPhenologyMonths": {
+    "1": 4,
+    "2": 1,
+    "3": 8,
+    "4": 128,
+    "5": 184,
+    "6": 79,
+    "7": 62,
+    "8": 23,
+    "9": 27,
+    "10": 47,
+    "11": 25,
+    "12": 4
+   },
+   "itOpen": 2663,
+   "euOpen": null,
+   "areas": {
+    "north": 3819,
+    "center": 157,
+    "south": 37
+   }
+  },
+  "ajuga-reptans": {
+   "key": "ajuga-reptans",
+   "taxa": [
+    {
+     "query": "Ajuga reptans",
+     "id": 56099,
+     "name": "Ajuga reptans",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 13,
+    "2": 34,
+    "3": 761,
+    "4": 2467,
+    "5": 755,
+    "6": 168,
+    "7": 22,
+    "8": 21,
+    "9": 21,
+    "10": 13,
+    "11": 7,
+    "12": 4
+   },
+   "itTotal": 4286,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 4,
+    "3": 108,
+    "4": 350,
+    "5": 154,
+    "6": 31,
+    "7": 2,
+    "8": 1,
+    "9": 1,
+    "10": 0,
+    "11": 3,
+    "12": 2
+   },
+   "itOpen": 2884,
+   "euOpen": null,
+   "areas": {
+    "north": 3199,
+    "center": 771,
+    "south": 316
+   }
+  },
+  "trifolium-pratense": {
+   "key": "trifolium-pratense",
+   "taxa": [
+    {
+     "query": "Trifolium pratense",
+     "id": 51875,
+     "name": "Trifolium pratense",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 39,
+    "2": 65,
+    "3": 181,
+    "4": 1272,
+    "5": 1721,
+    "6": 828,
+    "7": 641,
+    "8": 376,
+    "9": 285,
+    "10": 276,
+    "11": 134,
+    "12": 58
+   },
+   "itTotal": 5876,
+   "itPhenologyMonths": {
+    "1": 7,
+    "2": 7,
+    "3": 15,
+    "4": 132,
+    "5": 238,
+    "6": 110,
+    "7": 103,
+    "8": 58,
+    "9": 44,
+    "10": 29,
+    "11": 17,
+    "12": 9
+   },
+   "itOpen": 4143,
+   "euOpen": null,
+   "areas": {
+    "north": 4556,
+    "center": 951,
+    "south": 369
+   }
+  },
+  "anacamptis-morio": {
+   "key": "anacamptis-morio",
+   "taxa": [
+    {
+     "query": "Anacamptis morio",
+     "id": 59318,
+     "name": "Anacamptis morio",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 4,
+    "2": 36,
+    "3": 559,
+    "4": 3724,
+    "5": 1505,
+    "6": 52,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 5881,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 7,
+    "3": 73,
+    "4": 679,
+    "5": 416,
+    "6": 30,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 3742,
+   "euOpen": null,
+   "areas": {
+    "north": 2220,
+    "center": 1789,
+    "south": 1872
+   }
+  },
+  "ophrys-apifera": {
+   "key": "ophrys-apifera",
+   "taxa": [
+    {
+     "query": "Ophrys apifera",
+     "id": 83816,
+     "name": "Ophrys apifera",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 2,
+    "2": 2,
+    "3": 1,
+    "4": 203,
+    "5": 1476,
+    "6": 543,
+    "7": 3,
+    "8": 1,
+    "9": 1,
+    "10": 0,
+    "11": 1,
+    "12": 1
+   },
+   "itTotal": 2234,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 15,
+    "5": 213,
+    "6": 118,
+    "7": 1,
+    "8": 1,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1375,
+   "euOpen": null,
+   "areas": {
+    "north": 922,
+    "center": 819,
+    "south": 493
+   }
+  },
+  "leucanthemum-vulgare": {
+   "key": "leucanthemum-vulgare",
+   "taxa": [
+    {
+     "query": "Leucanthemum vulgare",
+     "id": 1404861,
+     "name": "Leucanthemum vulgare",
+     "rank": "complex",
+     "synonym": false
+    },
+    {
+     "query": "Leucanthemum ircutianum",
+     "id": 403427,
+     "name": "Leucanthemum ircutianum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 7,
+    "2": 3,
+    "3": 13,
+    "4": 141,
+    "5": 248,
+    "6": 136,
+    "7": 143,
+    "8": 81,
+    "9": 38,
+    "10": 42,
+    "11": 29,
+    "12": 7
+   },
+   "itTotal": 888,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 3,
+    "4": 8,
+    "5": 24,
+    "6": 19,
+    "7": 19,
+    "8": 9,
+    "9": 5,
+    "10": 3,
+    "11": 7,
+    "12": 1
+   },
+   "itOpen": 674,
+   "euOpen": null,
+   "areas": {
+    "north": 840,
+    "center": 40,
+    "south": 8
+   }
+  },
+  "narcissus-poeticus": {
+   "key": "narcissus-poeticus",
+   "taxa": [
+    {
+     "query": "Narcissus poeticus",
+     "id": 61334,
+     "name": "Narcissus poeticus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 28,
+    "4": 577,
+    "5": 808,
+    "6": 190,
+    "7": 4,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 1608,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 4,
+    "4": 84,
+    "5": 171,
+    "6": 39,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1028,
+   "euOpen": null,
+   "areas": {
+    "north": 1198,
+    "center": 279,
+    "south": 131
+   }
+  },
+  "ornithogalum-umbellatum": {
+   "key": "ornithogalum-umbellatum",
+   "taxa": [
+    {
+     "query": "Ornithogalum umbellatum",
+     "id": 1125873,
+     "name": "Ornithogalum umbellatum",
+     "rank": "complex",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 7,
+    "3": 102,
+    "4": 625,
+    "5": 155,
+    "6": 34,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 1
+   },
+   "itTotal": 925,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 30,
+    "4": 110,
+    "5": 20,
+    "6": 6,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 564,
+   "euOpen": null,
+   "areas": {
+    "north": 759,
+    "center": 120,
+    "south": 46
+   }
+  },
+  "ranunculus-acris-gruppo": {
+   "key": "ranunculus-acris-gruppo",
+   "taxa": [
+    {
+     "query": "Ranunculus acris",
+     "id": 56064,
+     "name": "Ranunculus acris",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Ranunculus bulbosus",
+     "id": 78820,
+     "name": "Ranunculus bulbosus",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Ranunculus repens",
+     "id": 48229,
+     "name": "Ranunculus repens",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 39,
+    "2": 113,
+    "3": 322,
+    "4": 723,
+    "5": 334,
+    "6": 108,
+    "7": 70,
+    "8": 72,
+    "9": 57,
+    "10": 43,
+    "11": 33,
+    "12": 20
+   },
+   "itTotal": 1934,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 10,
+    "3": 21,
+    "4": 65,
+    "5": 36,
+    "6": 6,
+    "7": 5,
+    "8": 3,
+    "9": 3,
+    "10": 3,
+    "11": 3,
+    "12": 1
+   },
+   "itOpen": 1361,
+   "euOpen": null,
+   "areas": {
+    "north": 1829,
+    "center": 89,
+    "south": 16
+   }
+  },
+  "papaver-rhoeas": {
+   "key": "papaver-rhoeas",
+   "taxa": [
+    {
+     "query": "Papaver rhoeas",
+     "id": 54404,
+     "name": "Papaver rhoeas",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 15,
+    "2": 14,
+    "3": 124,
+    "4": 1449,
+    "5": 1944,
+    "6": 657,
+    "7": 94,
+    "8": 18,
+    "9": 10,
+    "10": 7,
+    "11": 2,
+    "12": 4
+   },
+   "itTotal": 4338,
+   "itPhenologyMonths": {
+    "1": 5,
+    "2": 2,
+    "3": 17,
+    "4": 223,
+    "5": 221,
+    "6": 61,
+    "7": 12,
+    "8": 2,
+    "9": 3,
+    "10": 2,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 2836,
+   "euOpen": null,
+   "areas": {
+    "north": 2252,
+    "center": 1118,
+    "south": 968
+   }
+  },
+  "centaurea-cyanus": {
+   "key": "centaurea-cyanus",
+   "taxa": [
+    {
+     "query": "Centaurea cyanus",
+     "id": 933404,
+     "name": "Centaurea cyanus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 2,
+    "2": 0,
+    "3": 5,
+    "4": 68,
+    "5": 330,
+    "6": 206,
+    "7": 74,
+    "8": 17,
+    "9": 4,
+    "10": 3,
+    "11": 1,
+    "12": 3
+   },
+   "itTotal": 713,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 8,
+    "5": 36,
+    "6": 20,
+    "7": 14,
+    "8": 1,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 409,
+   "euOpen": null,
+   "areas": {
+    "north": 558,
+    "center": 132,
+    "south": 23
+   }
+  },
+  "cichorium-intybus": {
+   "key": "cichorium-intybus",
+   "taxa": [
+    {
+     "query": "Cichorium intybus",
+     "id": 52913,
+     "name": "Cichorium intybus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 7,
+    "2": 1,
+    "3": 7,
+    "4": 56,
+    "5": 188,
+    "6": 556,
+    "7": 805,
+    "8": 505,
+    "9": 615,
+    "10": 513,
+    "11": 137,
+    "12": 20
+   },
+   "itTotal": 3410,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 2,
+    "5": 22,
+    "6": 74,
+    "7": 97,
+    "8": 84,
+    "9": 114,
+    "10": 90,
+    "11": 30,
+    "12": 2
+   },
+   "itOpen": 2266,
+   "euOpen": null,
+   "areas": {
+    "north": 1703,
+    "center": 1184,
+    "south": 523
+   }
+  },
+  "echium-vulgare": {
+   "key": "echium-vulgare",
+   "taxa": [
+    {
+     "query": "Echium vulgare",
+     "id": 56174,
+     "name": "Echium vulgare",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 9,
+    "2": 23,
+    "3": 50,
+    "4": 226,
+    "5": 757,
+    "6": 1139,
+    "7": 606,
+    "8": 339,
+    "9": 222,
+    "10": 141,
+    "11": 59,
+    "12": 17
+   },
+   "itTotal": 3588,
+   "itPhenologyMonths": {
+    "1": 2,
+    "2": 3,
+    "3": 7,
+    "4": 43,
+    "5": 128,
+    "6": 143,
+    "7": 99,
+    "8": 59,
+    "9": 40,
+    "10": 15,
+    "11": 9,
+    "12": 3
+   },
+   "itOpen": 2526,
+   "euOpen": null,
+   "areas": {
+    "north": 2600,
+    "center": 729,
+    "south": 259
+   }
+  },
+  "convolvulus-arvensis": {
+   "key": "convolvulus-arvensis",
+   "taxa": [
+    {
+     "query": "Convolvulus arvensis",
+     "id": 53021,
+     "name": "Convolvulus arvensis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 4,
+    "2": 1,
+    "3": 20,
+    "4": 229,
+    "5": 989,
+    "6": 1124,
+    "7": 830,
+    "8": 504,
+    "9": 245,
+    "10": 109,
+    "11": 10,
+    "12": 6
+   },
+   "itTotal": 4071,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 24,
+    "5": 298,
+    "6": 279,
+    "7": 184,
+    "8": 89,
+    "9": 40,
+    "10": 7,
+    "11": 1,
+    "12": 1
+   },
+   "itOpen": 2888,
+   "euOpen": null,
+   "areas": {
+    "north": 2343,
+    "center": 1103,
+    "south": 625
+   }
+  },
+  "malva-sylvestris": {
+   "key": "malva-sylvestris",
+   "taxa": [
+    {
+     "query": "Malva sylvestris",
+     "id": 56162,
+     "name": "Malva sylvestris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 57,
+    "2": 78,
+    "3": 137,
+    "4": 511,
+    "5": 1018,
+    "6": 868,
+    "7": 430,
+    "8": 322,
+    "9": 306,
+    "10": 318,
+    "11": 126,
+    "12": 93
+   },
+   "itTotal": 4264,
+   "itPhenologyMonths": {
+    "1": 6,
+    "2": 14,
+    "3": 21,
+    "4": 56,
+    "5": 126,
+    "6": 115,
+    "7": 62,
+    "8": 51,
+    "9": 47,
+    "10": 50,
+    "11": 21,
+    "12": 15
+   },
+   "itOpen": 2956,
+   "euOpen": null,
+   "areas": {
+    "north": 1957,
+    "center": 1729,
+    "south": 578
+   }
+  },
+  "linaria-vulgaris": {
+   "key": "linaria-vulgaris",
+   "taxa": [
+    {
+     "query": "Linaria vulgaris",
+     "id": 50790,
+     "name": "Linaria vulgaris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 8,
+    "2": 3,
+    "3": 14,
+    "4": 35,
+    "5": 63,
+    "6": 89,
+    "7": 196,
+    "8": 371,
+    "9": 673,
+    "10": 935,
+    "11": 201,
+    "12": 33
+   },
+   "itTotal": 2621,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 4,
+    "5": 3,
+    "6": 13,
+    "7": 32,
+    "8": 73,
+    "9": 125,
+    "10": 189,
+    "11": 46,
+    "12": 10
+   },
+   "itOpen": 1834,
+   "euOpen": null,
+   "areas": {
+    "north": 1715,
+    "center": 795,
+    "south": 111
+   }
+  },
+  "verbascum": {
+   "key": "verbascum",
+   "taxa": [
+    {
+     "query": "Verbascum",
+     "id": 56165,
+     "name": "Verbascum",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 58,
+    "2": 90,
+    "3": 111,
+    "4": 433,
+    "5": 528,
+    "6": 998,
+    "7": 880,
+    "8": 570,
+    "9": 479,
+    "10": 323,
+    "11": 128,
+    "12": 74
+   },
+   "itTotal": 4672,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 19,
+    "5": 53,
+    "6": 138,
+    "7": 144,
+    "8": 76,
+    "9": 51,
+    "10": 38,
+    "11": 17,
+    "12": 1
+   },
+   "itOpen": 3167,
+   "euOpen": null,
+   "areas": {
+    "north": 2660,
+    "center": 1134,
+    "south": 878
+   }
+  },
+  "silene-vulgaris": {
+   "key": "silene-vulgaris",
+   "taxa": [
+    {
+     "query": "Silene vulgaris",
+     "id": 55721,
+     "name": "Silene vulgaris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 24,
+    "2": 27,
+    "3": 47,
+    "4": 484,
+    "5": 761,
+    "6": 799,
+    "7": 799,
+    "8": 561,
+    "9": 384,
+    "10": 265,
+    "11": 72,
+    "12": 35
+   },
+   "itTotal": 4258,
+   "itPhenologyMonths": {
+    "1": 2,
+    "2": 1,
+    "3": 1,
+    "4": 15,
+    "5": 53,
+    "6": 63,
+    "7": 71,
+    "8": 57,
+    "9": 31,
+    "10": 30,
+    "11": 5,
+    "12": 4
+   },
+   "itOpen": 2933,
+   "euOpen": null,
+   "areas": {
+    "north": 3215,
+    "center": 430,
+    "south": 613
+   }
+  },
+  "calendula-arvensis": {
+   "key": "calendula-arvensis",
+   "taxa": [
+    {
+     "query": "Calendula arvensis",
+     "id": 59260,
+     "name": "Calendula arvensis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 166,
+    "2": 284,
+    "3": 315,
+    "4": 289,
+    "5": 38,
+    "6": 10,
+    "7": 2,
+    "8": 4,
+    "9": 6,
+    "10": 42,
+    "11": 59,
+    "12": 118
+   },
+   "itTotal": 1333,
+   "itPhenologyMonths": {
+    "1": 22,
+    "2": 48,
+    "3": 57,
+    "4": 29,
+    "5": 4,
+    "6": 2,
+    "7": 0,
+    "8": 1,
+    "9": 1,
+    "10": 6,
+    "11": 6,
+    "12": 13
+   },
+   "itOpen": 926,
+   "euOpen": null,
+   "areas": {
+    "north": 117,
+    "center": 721,
+    "south": 495
+   }
+  },
+  "gladiolus-italicus": {
+   "key": "gladiolus-italicus",
+   "taxa": [
+    {
+     "query": "Gladiolus italicus",
+     "id": 71162,
+     "name": "Gladiolus italicus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 16,
+    "4": 478,
+    "5": 599,
+    "6": 63,
+    "7": 2,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 1159,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 50,
+    "5": 100,
+    "6": 6,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 766,
+   "euOpen": null,
+   "areas": {
+    "north": 391,
+    "center": 414,
+    "south": 354
+   }
+  },
+  "tulipa-sylvestris": {
+   "key": "tulipa-sylvestris",
+   "taxa": [
+    {
+     "query": "Tulipa sylvestris",
+     "id": 1206014,
+     "name": "Tulipa sylvestris",
+     "rank": "complex",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 5,
+    "3": 121,
+    "4": 200,
+    "5": 150,
+    "6": 164,
+    "7": 8,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 649,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 87,
+    "4": 172,
+    "5": 102,
+    "6": 157,
+    "7": 8,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 391,
+   "euOpen": null,
+   "areas": {
+    "north": 578,
+    "center": 36,
+    "south": 35
+   }
+  },
+  "hypericum-perforatum": {
+   "key": "hypericum-perforatum",
+   "taxa": [
+    {
+     "query": "Hypericum perforatum",
+     "id": 56077,
+     "name": "Hypericum perforatum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 7,
+    "2": 11,
+    "3": 14,
+    "4": 105,
+    "5": 331,
+    "6": 982,
+    "7": 592,
+    "8": 339,
+    "9": 142,
+    "10": 58,
+    "11": 22,
+    "12": 13
+   },
+   "itTotal": 2616,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 2,
+    "3": 2,
+    "4": 5,
+    "5": 35,
+    "6": 157,
+    "7": 114,
+    "8": 66,
+    "9": 16,
+    "10": 7,
+    "11": 3,
+    "12": 2
+   },
+   "itOpen": 1829,
+   "euOpen": null,
+   "areas": {
+    "north": 1616,
+    "center": 688,
+    "south": 312
+   }
+  },
+  "silybum-marianum": {
+   "key": "silybum-marianum",
+   "taxa": [
+    {
+     "query": "Silybum marianum",
+     "id": 52586,
+     "name": "Silybum marianum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 92,
+    "2": 91,
+    "3": 240,
+    "4": 737,
+    "5": 616,
+    "6": 164,
+    "7": 39,
+    "8": 37,
+    "9": 23,
+    "10": 75,
+    "11": 61,
+    "12": 68
+   },
+   "itTotal": 2243,
+   "itPhenologyMonths": {
+    "1": 2,
+    "2": 0,
+    "3": 15,
+    "4": 248,
+    "5": 320,
+    "6": 111,
+    "7": 7,
+    "8": 0,
+    "9": 2,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1460,
+   "euOpen": null,
+   "areas": {
+    "north": 685,
+    "center": 956,
+    "south": 602
+   }
+  },
+  "nigella-damascena": {
+   "key": "nigella-damascena",
+   "taxa": [
+    {
+     "query": "Nigella damascena",
+     "id": 62313,
+     "name": "Nigella damascena",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 6,
+    "2": 5,
+    "3": 6,
+    "4": 119,
+    "5": 494,
+    "6": 309,
+    "7": 39,
+    "8": 24,
+    "9": 5,
+    "10": 6,
+    "11": 4,
+    "12": 6
+   },
+   "itTotal": 1023,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 13,
+    "5": 72,
+    "6": 78,
+    "7": 5,
+    "8": 1,
+    "9": 0,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 635,
+   "euOpen": null,
+   "areas": {
+    "north": 242,
+    "center": 485,
+    "south": 296
+   }
+  },
+  "anacamptis-pyramidalis": {
+   "key": "anacamptis-pyramidalis",
+   "taxa": [
+    {
+     "query": "Anacamptis pyramidalis",
+     "id": 83085,
+     "name": "Anacamptis pyramidalis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 3,
+    "2": 1,
+    "3": 16,
+    "4": 552,
+    "5": 1953,
+    "6": 2143,
+    "7": 267,
+    "8": 4,
+    "9": 1,
+    "10": 0,
+    "11": 2,
+    "12": 0
+   },
+   "itTotal": 4942,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 43,
+    "5": 227,
+    "6": 407,
+    "7": 53,
+    "8": 1,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 3138,
+   "euOpen": null,
+   "areas": {
+    "north": 2299,
+    "center": 1485,
+    "south": 1158
+   }
+  },
+  "gentiana-acaulis-gruppo": {
+   "key": "gentiana-acaulis-gruppo",
+   "taxa": [
+    {
+     "query": "Gentiana acaulis",
+     "id": 130558,
+     "name": "Gentiana acaulis",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Gentiana clusii",
+     "id": 131140,
+     "name": "Gentiana clusii",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 2,
+    "2": 0,
+    "3": 19,
+    "4": 346,
+    "5": 1066,
+    "6": 1192,
+    "7": 471,
+    "8": 52,
+    "9": 20,
+    "10": 22,
+    "11": 8,
+    "12": 1
+   },
+   "itTotal": 3199,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 4,
+    "4": 39,
+    "5": 114,
+    "6": 125,
+    "7": 50,
+    "8": 2,
+    "9": 2,
+    "10": 0,
+    "11": 2,
+    "12": 0
+   },
+   "itOpen": 2120,
+   "euOpen": null,
+   "areas": {
+    "north": 3192,
+    "center": 7,
+    "south": 0
+   }
+  },
+  "gentiana-lutea": {
+   "key": "gentiana-lutea",
+   "taxa": [
+    {
+     "query": "Gentiana lutea",
+     "id": 142299,
+     "name": "Gentiana lutea",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 34,
+    "6": 333,
+    "7": 385,
+    "8": 151,
+    "9": 27,
+    "10": 8,
+    "11": 2,
+    "12": 0
+   },
+   "itTotal": 941,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 33,
+    "7": 25,
+    "8": 5,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 601,
+   "euOpen": null,
+   "areas": {
+    "north": 717,
+    "center": 171,
+    "south": 53
+   }
+  },
+  "trollius-europaeus": {
+   "key": "trollius-europaeus",
+   "taxa": [
+    {
+     "query": "Trollius europaeus",
+     "id": 59552,
+     "name": "Trollius europaeus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 2,
+    "4": 18,
+    "5": 394,
+    "6": 1204,
+    "7": 367,
+    "8": 69,
+    "9": 58,
+    "10": 19,
+    "11": 2,
+    "12": 0
+   },
+   "itTotal": 2134,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 67,
+    "6": 161,
+    "7": 48,
+    "8": 3,
+    "9": 6,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1404,
+   "euOpen": null,
+   "areas": {
+    "north": 2124,
+    "center": 9,
+    "south": 1
+   }
+  },
+  "arnica-montana": {
+   "key": "arnica-montana",
+   "taxa": [
+    {
+     "query": "Arnica montana",
+     "id": 56229,
+     "name": "Arnica montana",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 14,
+    "6": 413,
+    "7": 748,
+    "8": 205,
+    "9": 14,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 1395,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 1,
+    "6": 50,
+    "7": 102,
+    "8": 30,
+    "9": 3,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 925,
+   "euOpen": null,
+   "areas": {
+    "north": 1394,
+    "center": 1,
+    "south": 0
+   }
+  },
+  "soldanella": {
+   "key": "soldanella",
+   "taxa": [
+    {
+     "query": "Soldanella",
+     "id": 132619,
+     "name": "Soldanella",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 101,
+    "5": 553,
+    "6": 628,
+    "7": 284,
+    "8": 41,
+    "9": 11,
+    "10": 6,
+    "11": 1,
+    "12": 1
+   },
+   "itTotal": 1626,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 14,
+    "5": 85,
+    "6": 87,
+    "7": 30,
+    "8": 1,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1102,
+   "euOpen": null,
+   "areas": {
+    "north": 1594,
+    "center": 15,
+    "south": 17
+   }
+  },
+  "rhododendron-alpino": {
+   "key": "rhododendron-alpino",
+   "taxa": [
+    {
+     "query": "Rhododendron ferrugineum",
+     "id": 130539,
+     "name": "Rhododendron ferrugineum",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Rhododendron hirsutum",
+     "id": 143417,
+     "name": "Rhododendron hirsutum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 35,
+    "2": 38,
+    "3": 41,
+    "4": 47,
+    "5": 185,
+    "6": 1161,
+    "7": 1311,
+    "8": 565,
+    "9": 217,
+    "10": 159,
+    "11": 44,
+    "12": 26
+   },
+   "itTotal": 3829,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 1,
+    "5": 9,
+    "6": 140,
+    "7": 171,
+    "8": 44,
+    "9": 15,
+    "10": 5,
+    "11": 1,
+    "12": 0
+   },
+   "itOpen": 2633,
+   "euOpen": null,
+   "areas": {
+    "north": 3825,
+    "center": 4,
+    "south": 0
+   }
+  },
+  "pulsatilla-alpina": {
+   "key": "pulsatilla-alpina",
+   "taxa": [
+    {
+     "query": "Pulsatilla alpina",
+     "id": 85428,
+     "name": "Pulsatilla alpina",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 2,
+    "3": 0,
+    "4": 22,
+    "5": 507,
+    "6": 1312,
+    "7": 513,
+    "8": 214,
+    "9": 56,
+    "10": 10,
+    "11": 0,
+    "12": 2
+   },
+   "itTotal": 2638,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 7,
+    "5": 158,
+    "6": 306,
+    "7": 44,
+    "8": 17,
+    "9": 6,
+    "10": 2,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 1708,
+   "euOpen": null,
+   "areas": {
+    "north": 2430,
+    "center": 198,
+    "south": 10
+   }
+  },
+  "lilium-martagon": {
+   "key": "lilium-martagon",
+   "taxa": [
+    {
+     "query": "Lilium martagon",
+     "id": 85027,
+     "name": "Lilium martagon",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 2,
+    "2": 0,
+    "3": 6,
+    "4": 55,
+    "5": 146,
+    "6": 1142,
+    "7": 1848,
+    "8": 160,
+    "9": 30,
+    "10": 4,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 3393,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 129,
+    "7": 292,
+    "8": 18,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 2189,
+   "euOpen": null,
+   "areas": {
+    "north": 3189,
+    "center": 180,
+    "south": 24
+   }
+  },
+  "aster-alpinus": {
+   "key": "aster-alpinus",
+   "taxa": [
+    {
+     "query": "Aster alpinus",
+     "id": 123449,
+     "name": "Aster alpinus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 35,
+    "6": 355,
+    "7": 801,
+    "8": 265,
+    "9": 15,
+    "10": 1,
+    "11": 3,
+    "12": 0
+   },
+   "itTotal": 1477,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 6,
+    "6": 104,
+    "7": 150,
+    "8": 56,
+    "9": 5,
+    "10": 0,
+    "11": 1,
+    "12": 0
+   },
+   "itOpen": 970,
+   "euOpen": null,
+   "areas": {
+    "north": 1387,
+    "center": 90,
+    "south": 0
+   }
+  },
+  "paradisea-liliastrum": {
+   "key": "paradisea-liliastrum",
+   "taxa": [
+    {
+     "query": "Paradisea liliastrum",
+     "id": 132432,
+     "name": "Paradisea liliastrum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 1,
+    "5": 89,
+    "6": 638,
+    "7": 157,
+    "8": 2,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 2
+   },
+   "itTotal": 890,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 24,
+    "6": 77,
+    "7": 10,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 2
+   },
+   "itOpen": 570,
+   "euOpen": null,
+   "areas": {
+    "north": 889,
+    "center": 1,
+    "south": 0
+   }
+  },
+  "campanula-barbata": {
+   "key": "campanula-barbata",
+   "taxa": [
+    {
+     "query": "Campanula barbata",
+     "id": 56300,
+     "name": "Campanula barbata",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 0,
+    "6": 189,
+    "7": 945,
+    "8": 443,
+    "9": 96,
+    "10": 45,
+    "11": 9,
+    "12": 0
+   },
+   "itTotal": 1728,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 61,
+    "7": 272,
+    "8": 99,
+    "9": 17,
+    "10": 16,
+    "11": 4,
+    "12": 0
+   },
+   "itOpen": 1175,
+   "euOpen": null,
+   "areas": {
+    "north": 1728,
+    "center": 0,
+    "south": 0
+   }
+  },
+  "gentiana-verna": {
+   "key": "gentiana-verna",
+   "taxa": [
+    {
+     "query": "Gentiana verna",
+     "id": 132603,
+     "name": "Gentiana verna",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 5,
+    "2": 6,
+    "3": 6,
+    "4": 171,
+    "5": 806,
+    "6": 891,
+    "7": 254,
+    "8": 30,
+    "9": 74,
+    "10": 110,
+    "11": 28,
+    "12": 12
+   },
+   "itTotal": 2393,
+   "itPhenologyMonths": {
+    "1": 4,
+    "2": 2,
+    "3": 2,
+    "4": 39,
+    "5": 180,
+    "6": 191,
+    "7": 60,
+    "8": 13,
+    "9": 16,
+    "10": 20,
+    "11": 9,
+    "12": 4
+   },
+   "itOpen": 1564,
+   "euOpen": null,
+   "areas": {
+    "north": 2067,
+    "center": 289,
+    "south": 37
+   }
+  },
+  "myrtus-communis": {
+   "key": "myrtus-communis",
+   "taxa": [
+    {
+     "query": "Myrtus communis",
+     "id": 78159,
+     "name": "Myrtus communis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 63,
+    "2": 48,
+    "3": 78,
+    "4": 199,
+    "5": 156,
+    "6": 352,
+    "7": 141,
+    "8": 102,
+    "9": 162,
+    "10": 210,
+    "11": 144,
+    "12": 92
+   },
+   "itTotal": 1747,
+   "itPhenologyMonths": {
+    "1": 7,
+    "2": 3,
+    "3": 5,
+    "4": 7,
+    "5": 50,
+    "6": 203,
+    "7": 66,
+    "8": 13,
+    "9": 20,
+    "10": 33,
+    "11": 14,
+    "12": 10
+   },
+   "itOpen": 1107,
+   "euOpen": null,
+   "areas": {
+    "north": 178,
+    "center": 539,
+    "south": 1030
+   }
+  },
+  "lavandula-stoechas": {
+   "key": "lavandula-stoechas",
+   "taxa": [
+    {
+     "query": "Lavandula stoechas",
+     "id": 61904,
+     "name": "Lavandula stoechas",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 11,
+    "2": 16,
+    "3": 72,
+    "4": 277,
+    "5": 140,
+    "6": 39,
+    "7": 22,
+    "8": 27,
+    "9": 17,
+    "10": 28,
+    "11": 4,
+    "12": 7
+   },
+   "itTotal": 660,
+   "itPhenologyMonths": {
+    "1": 2,
+    "2": 2,
+    "3": 6,
+    "4": 36,
+    "5": 13,
+    "6": 2,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 439,
+   "euOpen": null,
+   "areas": {
+    "north": 45,
+    "center": 247,
+    "south": 368
+   }
+  },
+  "spartium-junceum": {
+   "key": "spartium-junceum",
+   "taxa": [
+    {
+     "query": "Spartium junceum",
+     "id": 47406,
+     "name": "Spartium junceum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 47,
+    "2": 63,
+    "3": 68,
+    "4": 598,
+    "5": 946,
+    "6": 670,
+    "7": 224,
+    "8": 144,
+    "9": 88,
+    "10": 87,
+    "11": 34,
+    "12": 50
+   },
+   "itTotal": 3019,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 3,
+    "3": 5,
+    "4": 35,
+    "5": 121,
+    "6": 71,
+    "7": 24,
+    "8": 5,
+    "9": 0,
+    "10": 1,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 2018,
+   "euOpen": null,
+   "areas": {
+    "north": 824,
+    "center": 1284,
+    "south": 911
+   }
+  },
+  "asphodelus": {
+   "key": "asphodelus",
+   "taxa": [
+    {
+     "query": "Asphodelus",
+     "id": 71991,
+     "name": "Asphodelus",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 80,
+    "2": 228,
+    "3": 428,
+    "4": 1120,
+    "5": 478,
+    "6": 191,
+    "7": 24,
+    "8": 9,
+    "9": 12,
+    "10": 16,
+    "11": 9,
+    "12": 24
+   },
+   "itTotal": 2619,
+   "itPhenologyMonths": {
+    "1": 5,
+    "2": 33,
+    "3": 48,
+    "4": 90,
+    "5": 48,
+    "6": 60,
+    "7": 2,
+    "8": 3,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 1583,
+   "euOpen": null,
+   "areas": {
+    "north": 449,
+    "center": 510,
+    "south": 1661
+   }
+  },
+  "centranthus-ruber": {
+   "key": "centranthus-ruber",
+   "taxa": [
+    {
+     "query": "Centranthus ruber",
+     "id": 57283,
+     "name": "Centranthus ruber",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 79,
+    "2": 54,
+    "3": 127,
+    "4": 737,
+    "5": 1127,
+    "6": 508,
+    "7": 287,
+    "8": 275,
+    "9": 202,
+    "10": 216,
+    "11": 70,
+    "12": 77
+   },
+   "itTotal": 3759,
+   "itPhenologyMonths": {
+    "1": 6,
+    "2": 3,
+    "3": 6,
+    "4": 67,
+    "5": 126,
+    "6": 67,
+    "7": 30,
+    "8": 44,
+    "9": 24,
+    "10": 29,
+    "11": 15,
+    "12": 13
+   },
+   "itOpen": 2537,
+   "euOpen": null,
+   "areas": {
+    "north": 1562,
+    "center": 783,
+    "south": 1414
+   }
+  },
+  "carpobrotus": {
+   "key": "carpobrotus",
+   "taxa": [
+    {
+     "query": "Carpobrotus",
+     "id": 49323,
+     "name": "Carpobrotus",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 5,
+    "2": 10,
+    "3": 44,
+    "4": 429,
+    "5": 192,
+    "6": 31,
+    "7": 22,
+    "8": 20,
+    "9": 24,
+    "10": 9,
+    "11": 6,
+    "12": 6
+   },
+   "itTotal": 798,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 2,
+    "3": 7,
+    "4": 62,
+    "5": 30,
+    "6": 1,
+    "7": 1,
+    "8": 0,
+    "9": 2,
+    "10": 1,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 496,
+   "euOpen": null,
+   "areas": {
+    "north": 50,
+    "center": 217,
+    "south": 531
+   }
+  },
+  "glaucium-flavum": {
+   "key": "glaucium-flavum",
+   "taxa": [
+    {
+     "query": "Glaucium flavum",
+     "id": 77279,
+     "name": "Glaucium flavum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 19,
+    "2": 24,
+    "3": 24,
+    "4": 408,
+    "5": 315,
+    "6": 205,
+    "7": 108,
+    "8": 94,
+    "9": 70,
+    "10": 70,
+    "11": 38,
+    "12": 22
+   },
+   "itTotal": 1397,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 15,
+    "5": 40,
+    "6": 19,
+    "7": 12,
+    "8": 11,
+    "9": 5,
+    "10": 4,
+    "11": 2,
+    "12": 1
+   },
+   "itOpen": 768,
+   "euOpen": null,
+   "areas": {
+    "north": 62,
+    "center": 212,
+    "south": 1123
+   }
+  },
+  "calystegia-soldanella": {
+   "key": "calystegia-soldanella",
+   "taxa": [
+    {
+     "query": "Calystegia soldanella",
+     "id": 60880,
+     "name": "Calystegia soldanella",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 5,
+    "2": 1,
+    "3": 10,
+    "4": 108,
+    "5": 187,
+    "6": 77,
+    "7": 33,
+    "8": 23,
+    "9": 33,
+    "10": 35,
+    "11": 12,
+    "12": 3
+   },
+   "itTotal": 527,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 10,
+    "5": 35,
+    "6": 11,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 367,
+   "euOpen": null,
+   "areas": {
+    "north": 144,
+    "center": 156,
+    "south": 227
+   }
+  },
+  "eryngium-maritimum": {
+   "key": "eryngium-maritimum",
+   "taxa": [
+    {
+     "query": "Eryngium maritimum",
+     "id": 162707,
+     "name": "Eryngium maritimum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 13,
+    "2": 8,
+    "3": 13,
+    "4": 217,
+    "5": 221,
+    "6": 275,
+    "7": 256,
+    "8": 196,
+    "9": 112,
+    "10": 92,
+    "11": 28,
+    "12": 22
+   },
+   "itTotal": 1453,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 7,
+    "6": 39,
+    "7": 18,
+    "8": 6,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 928,
+   "euOpen": null,
+   "areas": {
+    "north": 174,
+    "center": 347,
+    "south": 932
+   }
+  },
+  "pancratium-maritimum": {
+   "key": "pancratium-maritimum",
+   "taxa": [
+    {
+     "query": "Pancratium maritimum",
+     "id": 78334,
+     "name": "Pancratium maritimum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 23,
+    "2": 12,
+    "3": 44,
+    "4": 285,
+    "5": 100,
+    "6": 124,
+    "7": 538,
+    "8": 724,
+    "9": 452,
+    "10": 188,
+    "11": 33,
+    "12": 37
+   },
+   "itTotal": 2560,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 17,
+    "7": 135,
+    "8": 270,
+    "9": 188,
+    "10": 43,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1461,
+   "euOpen": null,
+   "areas": {
+    "north": 27,
+    "center": 626,
+    "south": 1907
+   }
+  },
+  "cistus-salviifolius": {
+   "key": "cistus-salviifolius",
+   "taxa": [
+    {
+     "query": "Cistus salviifolius",
+     "id": 76365,
+     "name": "Cistus salviifolius",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 18,
+    "2": 29,
+    "3": 150,
+    "4": 1206,
+    "5": 680,
+    "6": 146,
+    "7": 73,
+    "8": 43,
+    "9": 78,
+    "10": 39,
+    "11": 14,
+    "12": 19
+   },
+   "itTotal": 2495,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 11,
+    "4": 131,
+    "5": 65,
+    "6": 16,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 1,
+    "12": 1
+   },
+   "itOpen": 1643,
+   "euOpen": null,
+   "areas": {
+    "north": 523,
+    "center": 781,
+    "south": 1191
+   }
+  },
+  "opuntia-ficus-indica": {
+   "key": "opuntia-ficus-indica",
+   "taxa": [
+    {
+     "query": "Opuntia ficus-indica",
+     "id": 64119,
+     "name": "Opuntia ficus-indica",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 34,
+    "2": 39,
+    "3": 59,
+    "4": 549,
+    "5": 270,
+    "6": 170,
+    "7": 137,
+    "8": 189,
+    "9": 213,
+    "10": 178,
+    "11": 49,
+    "12": 46
+   },
+   "itTotal": 1933,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 2,
+    "5": 34,
+    "6": 38,
+    "7": 5,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1227,
+   "euOpen": null,
+   "areas": {
+    "north": 136,
+    "center": 206,
+    "south": 1591
+   }
+  },
+  "phlomis-fruticosa": {
+   "key": "phlomis-fruticosa",
+   "taxa": [
+    {
+     "query": "Phlomis fruticosa",
+     "id": 135327,
+     "name": "Phlomis fruticosa",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 5,
+    "2": 6,
+    "3": 33,
+    "4": 143,
+    "5": 93,
+    "6": 21,
+    "7": 7,
+    "8": 14,
+    "9": 15,
+    "10": 14,
+    "11": 9,
+    "12": 4
+   },
+   "itTotal": 364,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 10,
+    "5": 10,
+    "6": 2,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 249,
+   "euOpen": 1235,
+   "areas": {
+    "north": 18,
+    "center": 15,
+    "south": 331
+   }
+  },
+  "anemone-nemorosa": {
+   "key": "anemone-nemorosa",
+   "taxa": [
+    {
+     "query": "Anemone nemorosa",
+     "id": 950603,
+     "name": "Anemonoides nemorosa",
+     "rank": "species",
+     "synonym": true
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 3,
+    "2": 217,
+    "3": 2011,
+    "4": 1233,
+    "5": 292,
+    "6": 34,
+    "7": 9,
+    "8": 0,
+    "9": 1,
+    "10": 2,
+    "11": 2,
+    "12": 0
+   },
+   "itTotal": 3804,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 28,
+    "3": 226,
+    "4": 126,
+    "5": 32,
+    "6": 7,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 2446,
+   "euOpen": null,
+   "areas": {
+    "north": 3553,
+    "center": 236,
+    "south": 15
+   }
+  },
+  "primula-vulgaris": {
+   "key": "primula-vulgaris",
+   "taxa": [
+    {
+     "query": "Primula vulgaris",
+     "id": 56136,
+     "name": "Primula vulgaris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 333,
+    "2": 1308,
+    "3": 2026,
+    "4": 908,
+    "5": 106,
+    "6": 24,
+    "7": 18,
+    "8": 15,
+    "9": 15,
+    "10": 18,
+    "11": 45,
+    "12": 134
+   },
+   "itTotal": 4950,
+   "itPhenologyMonths": {
+    "1": 63,
+    "2": 224,
+    "3": 300,
+    "4": 141,
+    "5": 16,
+    "6": 2,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 2,
+    "11": 8,
+    "12": 40
+   },
+   "itOpen": 3410,
+   "euOpen": null,
+   "areas": {
+    "north": 4214,
+    "center": 574,
+    "south": 162
+   }
+  },
+  "galanthus-nivalis": {
+   "key": "galanthus-nivalis",
+   "taxa": [
+    {
+     "query": "Galanthus nivalis",
+     "id": 51606,
+     "name": "Galanthus nivalis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 168,
+    "2": 1006,
+    "3": 514,
+    "4": 95,
+    "5": 11,
+    "6": 1,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 11
+   },
+   "itTotal": 1806,
+   "itPhenologyMonths": {
+    "1": 78,
+    "2": 194,
+    "3": 108,
+    "4": 57,
+    "5": 4,
+    "6": 1,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 5
+   },
+   "itOpen": 1163,
+   "euOpen": null,
+   "areas": {
+    "north": 1404,
+    "center": 300,
+    "south": 102
+   }
+  },
+  "erythronium-dens-canis": {
+   "key": "erythronium-dens-canis",
+   "taxa": [
+    {
+     "query": "Erythronium dens-canis",
+     "id": 162719,
+     "name": "Erythronium dens-canis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 550,
+    "3": 1592,
+    "4": 412,
+    "5": 37,
+    "6": 4,
+    "7": 0,
+    "8": 1,
+    "9": 0,
+    "10": 0,
+    "11": 1,
+    "12": 0
+   },
+   "itTotal": 2598,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 78,
+    "3": 191,
+    "4": 23,
+    "5": 1,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1665,
+   "euOpen": null,
+   "areas": {
+    "north": 2537,
+    "center": 61,
+    "south": 0
+   }
+  },
+  "pulmonaria": {
+   "key": "pulmonaria",
+   "taxa": [
+    {
+     "query": "Pulmonaria",
+     "id": 125137,
+     "name": "Pulmonaria",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 37,
+    "2": 340,
+    "3": 703,
+    "4": 523,
+    "5": 183,
+    "6": 78,
+    "7": 28,
+    "8": 36,
+    "9": 37,
+    "10": 31,
+    "11": 20,
+    "12": 19
+   },
+   "itTotal": 2035,
+   "itPhenologyMonths": {
+    "1": 4,
+    "2": 57,
+    "3": 80,
+    "4": 57,
+    "5": 22,
+    "6": 4,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 1
+   },
+   "itOpen": 1353,
+   "euOpen": null,
+   "areas": {
+    "north": 1930,
+    "center": 76,
+    "south": 29
+   }
+  },
+  "scilla-bifolia": {
+   "key": "scilla-bifolia",
+   "taxa": [
+    {
+     "query": "Scilla bifolia",
+     "id": 56934,
+     "name": "Scilla bifolia",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 6,
+    "2": 565,
+    "3": 1175,
+    "4": 465,
+    "5": 157,
+    "6": 14,
+    "7": 3,
+    "8": 0,
+    "9": 3,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 2388,
+   "itPhenologyMonths": {
+    "1": 3,
+    "2": 171,
+    "3": 326,
+    "4": 207,
+    "5": 88,
+    "6": 9,
+    "7": 3,
+    "8": 0,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1492,
+   "euOpen": null,
+   "areas": {
+    "north": 1767,
+    "center": 424,
+    "south": 197
+   }
+  },
+  "vinca-minor": {
+   "key": "vinca-minor",
+   "taxa": [
+    {
+     "query": "Vinca minor",
+     "id": 55844,
+     "name": "Vinca minor",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 93,
+    "2": 293,
+    "3": 1092,
+    "4": 836,
+    "5": 265,
+    "6": 84,
+    "7": 28,
+    "8": 42,
+    "9": 65,
+    "10": 56,
+    "11": 50,
+    "12": 63
+   },
+   "itTotal": 2967,
+   "itPhenologyMonths": {
+    "1": 21,
+    "2": 71,
+    "3": 284,
+    "4": 192,
+    "5": 59,
+    "6": 5,
+    "7": 0,
+    "8": 3,
+    "9": 6,
+    "10": 16,
+    "11": 14,
+    "12": 33
+   },
+   "itOpen": 1968,
+   "euOpen": null,
+   "areas": {
+    "north": 2699,
+    "center": 179,
+    "south": 89
+   }
+  },
+  "cyclamen": {
+   "key": "cyclamen",
+   "taxa": [
+    {
+     "query": "Cyclamen hederifolium",
+     "id": 127355,
+     "name": "Cyclamen hederifolium",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Cyclamen purpurascens",
+     "id": 131847,
+     "name": "Cyclamen purpurascens",
+     "rank": "species",
+     "synonym": false
+    },
+    {
+     "query": "Cyclamen repandum",
+     "id": 59293,
+     "name": "Cyclamen repandum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 133,
+    "2": 147,
+    "3": 386,
+    "4": 1309,
+    "5": 460,
+    "6": 224,
+    "7": 420,
+    "8": 866,
+    "9": 1182,
+    "10": 1200,
+    "11": 352,
+    "12": 133
+   },
+   "itTotal": 6812,
+   "itPhenologyMonths": {
+    "1": 5,
+    "2": 3,
+    "3": 63,
+    "4": 261,
+    "5": 95,
+    "6": 49,
+    "7": 135,
+    "8": 327,
+    "9": 435,
+    "10": 424,
+    "11": 100,
+    "12": 13
+   },
+   "itOpen": 4667,
+   "euOpen": null,
+   "areas": {
+    "north": 2666,
+    "center": 2383,
+    "south": 1763
+   }
+  },
+  "helleborus-niger": {
+   "key": "helleborus-niger",
+   "taxa": [
+    {
+     "query": "Helleborus niger",
+     "id": 55841,
+     "name": "Helleborus niger",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 339,
+    "2": 395,
+    "3": 331,
+    "4": 213,
+    "5": 137,
+    "6": 65,
+    "7": 39,
+    "8": 35,
+    "9": 28,
+    "10": 26,
+    "11": 46,
+    "12": 133
+   },
+   "itTotal": 1787,
+   "itPhenologyMonths": {
+    "1": 52,
+    "2": 58,
+    "3": 44,
+    "4": 14,
+    "5": 6,
+    "6": 0,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 6,
+    "12": 39
+   },
+   "itOpen": 1201,
+   "euOpen": null,
+   "areas": {
+    "north": 1787,
+    "center": 0,
+    "south": 0
+   }
+  },
+  "aquilegia": {
+   "key": "aquilegia",
+   "taxa": [
+    {
+     "query": "Aquilegia",
+     "id": 48245,
+     "name": "Aquilegia",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 3,
+    "2": 4,
+    "3": 2,
+    "4": 143,
+    "5": 913,
+    "6": 998,
+    "7": 593,
+    "8": 115,
+    "9": 14,
+    "10": 8,
+    "11": 1,
+    "12": 0
+   },
+   "itTotal": 2794,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 36,
+    "5": 196,
+    "6": 196,
+    "7": 131,
+    "8": 43,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1784,
+   "euOpen": null,
+   "areas": {
+    "north": 2726,
+    "center": 51,
+    "south": 17
+   }
+  },
+  "paeonia-officinalis": {
+   "key": "paeonia-officinalis",
+   "taxa": [
+    {
+     "query": "Paeonia officinalis",
+     "id": 128167,
+     "name": "Paeonia officinalis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 3,
+    "3": 17,
+    "4": 127,
+    "5": 344,
+    "6": 200,
+    "7": 39,
+    "8": 19,
+    "9": 9,
+    "10": 4,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 762,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 24,
+    "5": 59,
+    "6": 55,
+    "7": 5,
+    "8": 1,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 512,
+   "euOpen": null,
+   "areas": {
+    "north": 624,
+    "center": 138,
+    "south": 0
+   }
+  },
+  "daphne-mezereum": {
+   "key": "daphne-mezereum",
+   "taxa": [
+    {
+     "query": "Daphne mezereum",
+     "id": 133034,
+     "name": "Daphne mezereum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 45,
+    "3": 353,
+    "4": 455,
+    "5": 319,
+    "6": 211,
+    "7": 358,
+    "8": 285,
+    "9": 55,
+    "10": 17,
+    "11": 5,
+    "12": 2
+   },
+   "itTotal": 2106,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 10,
+    "3": 55,
+    "4": 63,
+    "5": 54,
+    "6": 20,
+    "7": 3,
+    "8": 0,
+    "9": 0,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1411,
+   "euOpen": null,
+   "areas": {
+    "north": 2024,
+    "center": 55,
+    "south": 27
+   }
+  },
+  "convallaria-majalis": {
+   "key": "convallaria-majalis",
+   "taxa": [
+    {
+     "query": "Convallaria majalis",
+     "id": 48206,
+     "name": "Convallaria majalis",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 12,
+    "4": 367,
+    "5": 399,
+    "6": 163,
+    "7": 48,
+    "8": 50,
+    "9": 24,
+    "10": 7,
+    "11": 1,
+    "12": 0
+   },
+   "itTotal": 1072,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 105,
+    "5": 67,
+    "6": 10,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 690,
+   "euOpen": null,
+   "areas": {
+    "north": 1064,
+    "center": 6,
+    "south": 2
+   }
+  },
+  "lathyrus-vernus": {
+   "key": "lathyrus-vernus",
+   "taxa": [
+    {
+     "query": "Lathyrus vernus",
+     "id": 126756,
+     "name": "Lathyrus vernus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 3,
+    "3": 177,
+    "4": 654,
+    "5": 312,
+    "6": 69,
+    "7": 24,
+    "8": 10,
+    "9": 5,
+    "10": 4,
+    "11": 1,
+    "12": 1
+   },
+   "itTotal": 1260,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 27,
+    "4": 95,
+    "5": 66,
+    "6": 11,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 890,
+   "euOpen": null,
+   "areas": {
+    "north": 1189,
+    "center": 60,
+    "south": 11
+   }
+  },
+  "iris-pseudacorus": {
+   "key": "iris-pseudacorus",
+   "taxa": [
+    {
+     "query": "Iris pseudacorus",
+     "id": 47779,
+     "name": "Iris pseudacorus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 7,
+    "3": 35,
+    "4": 458,
+    "5": 1208,
+    "6": 121,
+    "7": 31,
+    "8": 11,
+    "9": 14,
+    "10": 7,
+    "11": 4,
+    "12": 2
+   },
+   "itTotal": 1899,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 52,
+    "5": 145,
+    "6": 9,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1242,
+   "euOpen": null,
+   "areas": {
+    "north": 1488,
+    "center": 311,
+    "south": 100
+   }
+  },
+  "lythrum-salicaria": {
+   "key": "lythrum-salicaria",
+   "taxa": [
+    {
+     "query": "Lythrum salicaria",
+     "id": 61321,
+     "name": "Lythrum salicaria",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 3,
+    "2": 1,
+    "3": 1,
+    "4": 24,
+    "5": 60,
+    "6": 417,
+    "7": 1010,
+    "8": 847,
+    "9": 430,
+    "10": 39,
+    "11": 9,
+    "12": 2
+   },
+   "itTotal": 2843,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 1,
+    "6": 48,
+    "7": 123,
+    "8": 114,
+    "9": 67,
+    "10": 4,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 2004,
+   "euOpen": null,
+   "areas": {
+    "north": 2305,
+    "center": 401,
+    "south": 137
+   }
+  },
+  "caltha-palustris": {
+   "key": "caltha-palustris",
+   "taxa": [
+    {
+     "query": "Caltha palustris",
+     "id": 56224,
+     "name": "Caltha palustris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 3,
+    "3": 44,
+    "4": 254,
+    "5": 373,
+    "6": 297,
+    "7": 88,
+    "8": 20,
+    "9": 18,
+    "10": 11,
+    "11": 2,
+    "12": 0
+   },
+   "itTotal": 1111,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 2,
+    "3": 21,
+    "4": 39,
+    "5": 81,
+    "6": 169,
+    "7": 39,
+    "8": 9,
+    "9": 8,
+    "10": 6,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 729,
+   "euOpen": null,
+   "areas": {
+    "north": 1071,
+    "center": 14,
+    "south": 26
+   }
+  },
+  "nuphar-lutea": {
+   "key": "nuphar-lutea",
+   "taxa": [
+    {
+     "query": "Nuphar lutea",
+     "id": 57850,
+     "name": "Nuphar lutea",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 2,
+    "2": 0,
+    "3": 5,
+    "4": 42,
+    "5": 135,
+    "6": 80,
+    "7": 76,
+    "8": 67,
+    "9": 35,
+    "10": 2,
+    "11": 3,
+    "12": 1
+   },
+   "itTotal": 448,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 4,
+    "5": 14,
+    "6": 10,
+    "7": 11,
+    "8": 3,
+    "9": 6,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 293,
+   "euOpen": 15393,
+   "areas": {
+    "north": 407,
+    "center": 32,
+    "south": 9
+   }
+  },
+  "nymphaea": {
+   "key": "nymphaea",
+   "taxa": [
+    {
+     "query": "Nymphaea",
+     "id": 51122,
+     "name": "Nymphaea",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 1,
+    "2": 2,
+    "3": 4,
+    "4": 59,
+    "5": 220,
+    "6": 200,
+    "7": 144,
+    "8": 113,
+    "9": 95,
+    "10": 44,
+    "11": 6,
+    "12": 1
+   },
+   "itTotal": 889,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 7,
+    "5": 38,
+    "6": 27,
+    "7": 26,
+    "8": 29,
+    "9": 19,
+    "10": 10,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 586,
+   "euOpen": null,
+   "areas": {
+    "north": 557,
+    "center": 187,
+    "south": 159
+   }
+  },
+  "epilobium-hirsutum": {
+   "key": "epilobium-hirsutum",
+   "taxa": [
+    {
+     "query": "Epilobium hirsutum",
+     "id": 84517,
+     "name": "Epilobium hirsutum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 2,
+    "5": 10,
+    "6": 92,
+    "7": 292,
+    "8": 360,
+    "9": 255,
+    "10": 87,
+    "11": 2,
+    "12": 0
+   },
+   "itTotal": 1103,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 10,
+    "7": 49,
+    "8": 52,
+    "9": 34,
+    "10": 10,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 810,
+   "euOpen": null,
+   "areas": {
+    "north": 802,
+    "center": 180,
+    "south": 121
+   }
+  },
+  "lysimachia-vulgaris": {
+   "key": "lysimachia-vulgaris",
+   "taxa": [
+    {
+     "query": "Lysimachia vulgaris",
+     "id": 62338,
+     "name": "Lysimachia vulgaris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 4,
+    "5": 42,
+    "6": 193,
+    "7": 316,
+    "8": 143,
+    "9": 19,
+    "10": 7,
+    "11": 1,
+    "12": 0
+   },
+   "itTotal": 726,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 17,
+    "7": 38,
+    "8": 17,
+    "9": 2,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 504,
+   "euOpen": null,
+   "areas": {
+    "north": 678,
+    "center": 32,
+    "south": 16
+   }
+  },
+  "symphytum-officinale": {
+   "key": "symphytum-officinale",
+   "taxa": [
+    {
+     "query": "Symphytum officinale",
+     "id": 1247945,
+     "name": "Symphytum officinale",
+     "rank": "complex",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 32,
+    "4": 191,
+    "5": 194,
+    "6": 111,
+    "7": 50,
+    "8": 51,
+    "9": 35,
+    "10": 29,
+    "11": 1,
+    "12": 2
+   },
+   "itTotal": 696,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 3,
+    "4": 37,
+    "5": 49,
+    "6": 24,
+    "7": 20,
+    "8": 9,
+    "9": 6,
+    "10": 8,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 493,
+   "euOpen": null,
+   "areas": {
+    "north": 659,
+    "center": 24,
+    "south": 13
+   }
+  },
+  "impatiens-glandulifera": {
+   "key": "impatiens-glandulifera",
+   "taxa": [
+    {
+     "query": "Impatiens glandulifera",
+     "id": 47892,
+     "name": "Impatiens glandulifera",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 8,
+    "4": 12,
+    "5": 41,
+    "6": 120,
+    "7": 277,
+    "8": 475,
+    "9": 304,
+    "10": 73,
+    "11": 1,
+    "12": 0
+   },
+   "itTotal": 1311,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 11,
+    "7": 49,
+    "8": 67,
+    "9": 39,
+    "10": 12,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 794,
+   "euOpen": null,
+   "areas": {
+    "north": 1310,
+    "center": 0,
+    "south": 1
+   }
+  },
+  "menyanthes-trifoliata": {
+   "key": "menyanthes-trifoliata",
+   "taxa": [
+    {
+     "query": "Menyanthes trifoliata",
+     "id": 78016,
+     "name": "Menyanthes trifoliata",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 25,
+    "5": 45,
+    "6": 119,
+    "7": 65,
+    "8": 35,
+    "9": 5,
+    "10": 2,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 297,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 9,
+    "5": 12,
+    "6": 29,
+    "7": 4,
+    "8": 1,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 202,
+   "euOpen": 9692,
+   "areas": {
+    "north": 295,
+    "center": 2,
+    "south": 0
+   }
+  },
+  "butomus-umbellatus": {
+   "key": "butomus-umbellatus",
+   "taxa": [
+    {
+     "query": "Butomus umbellatus",
+     "id": 60462,
+     "name": "Butomus umbellatus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 43,
+    "6": 55,
+    "7": 101,
+    "8": 99,
+    "9": 23,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 323,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 11,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 189,
+   "euOpen": 8692,
+   "areas": {
+    "north": 316,
+    "center": 7,
+    "south": 0
+   }
+  },
+  "leucojum-aestivum": {
+   "key": "leucojum-aestivum",
+   "taxa": [
+    {
+     "query": "Leucojum aestivum",
+     "id": 55809,
+     "name": "Leucojum aestivum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 28,
+    "4": 149,
+    "5": 32,
+    "6": 4,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 213,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 2,
+    "4": 16,
+    "5": 3,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 145,
+   "euOpen": 2715,
+   "areas": {
+    "north": 185,
+    "center": 12,
+    "south": 16
+   }
+  },
+  "calystegia-sepium": {
+   "key": "calystegia-sepium",
+   "taxa": [
+    {
+     "query": "Calystegia sepium",
+     "id": 57481,
+     "name": "Calystegia sepium",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 23,
+    "5": 88,
+    "6": 181,
+    "7": 232,
+    "8": 160,
+    "9": 69,
+    "10": 27,
+    "11": 1,
+    "12": 0
+   },
+   "itTotal": 782,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 2,
+    "5": 20,
+    "6": 42,
+    "7": 57,
+    "8": 38,
+    "9": 13,
+    "10": 4,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 530,
+   "euOpen": null,
+   "areas": {
+    "north": 612,
+    "center": 121,
+    "south": 49
+   }
+  },
+  "iris-sibirica": {
+   "key": "iris-sibirica",
+   "taxa": [
+    {
+     "query": "Iris sibirica",
+     "id": 59943,
+     "name": "Iris sibirica",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 9,
+    "5": 87,
+    "6": 10,
+    "7": 1,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 107,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 25,
+    "6": 2,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 60,
+   "euOpen": 4290,
+   "areas": {
+    "north": 107,
+    "center": 0,
+    "south": 0
+   }
+  },
+  "nymphoides-peltata": {
+   "key": "nymphoides-peltata",
+   "taxa": [
+    {
+     "query": "Nymphoides peltata",
+     "id": 78237,
+     "name": "Nymphoides peltata",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 1,
+    "5": 7,
+    "6": 11,
+    "7": 13,
+    "8": 25,
+    "9": 17,
+    "10": 6,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 81,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 7,
+    "7": 6,
+    "8": 10,
+    "9": 10,
+    "10": 5,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 60,
+   "euOpen": 1657,
+   "areas": {
+    "north": 73,
+    "center": 7,
+    "south": 1
+   }
+  },
+  "hydrangea-macrophylla": {
+   "key": "hydrangea-macrophylla",
+   "taxa": [
+    {
+     "query": "Hydrangea macrophylla",
+     "id": 122034,
+     "name": "Hydrangea macrophylla",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 1,
+    "2": 1,
+    "3": 22,
+    "4": 103,
+    "5": 135,
+    "6": 215,
+    "7": 133,
+    "8": 55,
+    "9": 38,
+    "10": 21,
+    "11": 14,
+    "12": 5
+   },
+   "itTotal": 743,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 4,
+    "5": 10,
+    "6": 28,
+    "7": 20,
+    "8": 6,
+    "9": 2,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 465,
+   "euOpen": null,
+   "areas": {
+    "north": 489,
+    "center": 130,
+    "south": 131
+   }
+  },
+  "wisteria": {
+   "key": "wisteria",
+   "taxa": [
+    {
+     "query": "Wisteria",
+     "id": 51267,
+     "name": "Wisteria",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 5,
+    "2": 9,
+    "3": 89,
+    "4": 917,
+    "5": 196,
+    "6": 158,
+    "7": 114,
+    "8": 89,
+    "9": 58,
+    "10": 31,
+    "11": 22,
+    "12": 6
+   },
+   "itTotal": 1694,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 7,
+    "4": 113,
+    "5": 29,
+    "6": 15,
+    "7": 8,
+    "8": 10,
+    "9": 2,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 996,
+   "euOpen": null,
+   "areas": {
+    "north": 858,
+    "center": 526,
+    "south": 331
+   }
+  },
+  "nerium-oleander": {
+   "key": "nerium-oleander",
+   "taxa": [
+    {
+     "query": "Nerium oleander",
+     "id": 47563,
+     "name": "Nerium oleander",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 96,
+    "2": 74,
+    "3": 101,
+    "4": 510,
+    "5": 451,
+    "6": 860,
+    "7": 724,
+    "8": 450,
+    "9": 392,
+    "10": 253,
+    "11": 89,
+    "12": 63
+   },
+   "itTotal": 4063,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 14,
+    "5": 17,
+    "6": 93,
+    "7": 76,
+    "8": 48,
+    "9": 38,
+    "10": 8,
+    "11": 1,
+    "12": 1
+   },
+   "itOpen": 2451,
+   "euOpen": null,
+   "areas": {
+    "north": 1272,
+    "center": 1068,
+    "south": 1743
+   }
+  },
+  "bougainvillea": {
+   "key": "bougainvillea",
+   "taxa": [
+    {
+     "query": "Bougainvillea",
+     "id": 53804,
+     "name": "Bougainvillea",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 41,
+    "2": 17,
+    "3": 26,
+    "4": 255,
+    "5": 219,
+    "6": 311,
+    "7": 323,
+    "8": 188,
+    "9": 199,
+    "10": 140,
+    "11": 62,
+    "12": 51
+   },
+   "itTotal": 1832,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 3,
+    "5": 5,
+    "6": 11,
+    "7": 25,
+    "8": 5,
+    "9": 6,
+    "10": 7,
+    "11": 3,
+    "12": 1
+   },
+   "itOpen": 1053,
+   "euOpen": null,
+   "areas": {
+    "north": 331,
+    "center": 464,
+    "south": 1057
+   }
+  },
+  "pelargonium": {
+   "key": "pelargonium",
+   "taxa": [
+    {
+     "query": "Pelargonium",
+     "id": 72281,
+     "name": "Pelargonium",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 16,
+    "2": 5,
+    "3": 34,
+    "4": 502,
+    "5": 322,
+    "6": 229,
+    "7": 163,
+    "8": 97,
+    "9": 70,
+    "10": 44,
+    "11": 14,
+    "12": 7
+   },
+   "itTotal": 1503,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 1,
+    "3": 11,
+    "4": 39,
+    "5": 63,
+    "6": 53,
+    "7": 33,
+    "8": 11,
+    "9": 22,
+    "10": 3,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 737,
+   "euOpen": null,
+   "areas": {
+    "north": 529,
+    "center": 283,
+    "south": 707
+   }
+  },
+  "camellia": {
+   "key": "camellia",
+   "taxa": [
+    {
+     "query": "Camellia",
+     "id": 83058,
+     "name": "Camellia",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 28,
+    "2": 41,
+    "3": 150,
+    "4": 251,
+    "5": 44,
+    "6": 13,
+    "7": 17,
+    "8": 17,
+    "9": 17,
+    "10": 34,
+    "11": 21,
+    "12": 31
+   },
+   "itTotal": 664,
+   "itPhenologyMonths": {
+    "1": 3,
+    "2": 3,
+    "3": 34,
+    "4": 22,
+    "5": 8,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 1,
+    "10": 1,
+    "11": 2,
+    "12": 2
+   },
+   "itOpen": 377,
+   "euOpen": null,
+   "areas": {
+    "north": 407,
+    "center": 137,
+    "south": 125
+   }
+  },
+  "syringa-vulgaris": {
+   "key": "syringa-vulgaris",
+   "taxa": [
+    {
+     "query": "Syringa vulgaris",
+     "id": 83072,
+     "name": "Syringa vulgaris",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 2,
+    "2": 0,
+    "3": 8,
+    "4": 289,
+    "5": 76,
+    "6": 41,
+    "7": 15,
+    "8": 13,
+    "9": 9,
+    "10": 11,
+    "11": 10,
+    "12": 0
+   },
+   "itTotal": 474,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 66,
+    "5": 12,
+    "6": 3,
+    "7": 1,
+    "8": 0,
+    "9": 1,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 300,
+   "euOpen": null,
+   "areas": {
+    "north": 352,
+    "center": 94,
+    "south": 41
+   }
+  },
+  "cercis-siliquastrum": {
+   "key": "cercis-siliquastrum",
+   "taxa": [
+    {
+     "query": "Cercis siliquastrum",
+     "id": 153440,
+     "name": "Cercis siliquastrum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 15,
+    "2": 11,
+    "3": 129,
+    "4": 983,
+    "5": 225,
+    "6": 123,
+    "7": 92,
+    "8": 89,
+    "9": 111,
+    "10": 111,
+    "11": 43,
+    "12": 27
+   },
+   "itTotal": 1959,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 7,
+    "4": 127,
+    "5": 12,
+    "6": 1,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 2,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1177,
+   "euOpen": null,
+   "areas": {
+    "north": 675,
+    "center": 824,
+    "south": 469
+   }
+  },
+  "passiflora-caerulea": {
+   "key": "passiflora-caerulea",
+   "taxa": [
+    {
+     "query": "Passiflora caerulea",
+     "id": 51454,
+     "name": "Passiflora caerulea",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 14,
+    "2": 13,
+    "3": 14,
+    "4": 85,
+    "5": 319,
+    "6": 340,
+    "7": 215,
+    "8": 208,
+    "9": 172,
+    "10": 117,
+    "11": 24,
+    "12": 22
+   },
+   "itTotal": 1543,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 4,
+    "5": 53,
+    "6": 60,
+    "7": 25,
+    "8": 31,
+    "9": 36,
+    "10": 20,
+    "11": 4,
+    "12": 2
+   },
+   "itOpen": 915,
+   "euOpen": null,
+   "areas": {
+    "north": 849,
+    "center": 451,
+    "south": 263
+   }
+  },
+  "agapanthus": {
+   "key": "agapanthus",
+   "taxa": [
+    {
+     "query": "Agapanthus",
+     "id": 56020,
+     "name": "Agapanthus",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 2,
+    "2": 1,
+    "3": 2,
+    "4": 15,
+    "5": 12,
+    "6": 125,
+    "7": 186,
+    "8": 38,
+    "9": 13,
+    "10": 6,
+    "11": 7,
+    "12": 2
+   },
+   "itTotal": 409,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 9,
+    "7": 24,
+    "8": 0,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 215,
+   "euOpen": 2984,
+   "areas": {
+    "north": 174,
+    "center": 133,
+    "south": 106
+   }
+  },
+  "jasminum-nudiflorum": {
+   "key": "jasminum-nudiflorum",
+   "taxa": [
+    {
+     "query": "Jasminum nudiflorum",
+     "id": 164232,
+     "name": "Jasminum nudiflorum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 64,
+    "2": 92,
+    "3": 41,
+    "4": 13,
+    "5": 11,
+    "6": 1,
+    "7": 4,
+    "8": 0,
+    "9": 1,
+    "10": 5,
+    "11": 2,
+    "12": 20
+   },
+   "itTotal": 254,
+   "itPhenologyMonths": {
+    "1": 27,
+    "2": 39,
+    "3": 9,
+    "4": 1,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 1,
+    "12": 7
+   },
+   "itOpen": 153,
+   "euOpen": 1392,
+   "areas": {
+    "north": 213,
+    "center": 36,
+    "south": 6
+   }
+  },
+  "nelumbo-nucifera": {
+   "key": "nelumbo-nucifera",
+   "taxa": [
+    {
+     "query": "Nelumbo nucifera",
+     "id": 82814,
+     "name": "Nelumbo nucifera",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 3,
+    "2": 1,
+    "3": 5,
+    "4": 4,
+    "5": 10,
+    "6": 22,
+    "7": 55,
+    "8": 38,
+    "9": 32,
+    "10": 15,
+    "11": 3,
+    "12": 3
+   },
+   "itTotal": 191,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 4,
+    "7": 8,
+    "8": 4,
+    "9": 0,
+    "10": 1,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 128,
+   "euOpen": 723,
+   "areas": {
+    "north": 133,
+    "center": 46,
+    "south": 13
+   }
+  },
+  "lagerstroemia-indica": {
+   "key": "lagerstroemia-indica",
+   "taxa": [
+    {
+     "query": "Lagerstroemia indica",
+     "id": 135394,
+     "name": "Lagerstroemia indica",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 1,
+    "2": 1,
+    "3": 8,
+    "4": 22,
+    "5": 20,
+    "6": 14,
+    "7": 146,
+    "8": 176,
+    "9": 95,
+    "10": 31,
+    "11": 8,
+    "12": 0
+   },
+   "itTotal": 522,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 41,
+    "8": 38,
+    "9": 10,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 328,
+   "euOpen": null,
+   "areas": {
+    "north": 381,
+    "center": 103,
+    "south": 42
+   }
+  },
+  "hibiscus-syriacus": {
+   "key": "hibiscus-syriacus",
+   "taxa": [
+    {
+     "query": "Hibiscus syriacus",
+     "id": 126585,
+     "name": "Hibiscus syriacus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 3,
+    "2": 5,
+    "3": 7,
+    "4": 39,
+    "5": 38,
+    "6": 123,
+    "7": 235,
+    "8": 252,
+    "9": 271,
+    "10": 99,
+    "11": 15,
+    "12": 3
+   },
+   "itTotal": 1090,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 1,
+    "6": 17,
+    "7": 39,
+    "8": 48,
+    "9": 54,
+    "10": 9,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 665,
+   "euOpen": null,
+   "areas": {
+    "north": 674,
+    "center": 272,
+    "south": 151
+   }
+  },
+  "rosa-canina": {
+   "key": "rosa-canina",
+   "taxa": [
+    {
+     "query": "Rosa canina",
+     "id": 55884,
+     "name": "Rosa canina",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 18,
+    "2": 13,
+    "3": 16,
+    "4": 49,
+    "5": 310,
+    "6": 67,
+    "7": 17,
+    "8": 25,
+    "9": 80,
+    "10": 80,
+    "11": 43,
+    "12": 33
+   },
+   "itTotal": 751,
+   "itPhenologyMonths": {
+    "1": 12,
+    "2": 2,
+    "3": 1,
+    "4": 1,
+    "5": 2,
+    "6": 1,
+    "7": 0,
+    "8": 5,
+    "9": 12,
+    "10": 12,
+    "11": 7,
+    "12": 4
+   },
+   "itOpen": 476,
+   "euOpen": null,
+   "areas": {
+    "north": 584,
+    "center": 111,
+    "south": 56
+   }
+  },
+  "crataegus-monogyna": {
+   "key": "crataegus-monogyna",
+   "taxa": [
+    {
+     "query": "Crataegus monogyna",
+     "id": 1437600,
+     "name": "Crataegus monogyna",
+     "rank": "complex",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 17,
+    "2": 20,
+    "3": 93,
+    "4": 840,
+    "5": 522,
+    "6": 223,
+    "7": 113,
+    "8": 200,
+    "9": 379,
+    "10": 402,
+    "11": 116,
+    "12": 28
+   },
+   "itTotal": 2953,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 3,
+    "3": 3,
+    "4": 3,
+    "5": 2,
+    "6": 9,
+    "7": 5,
+    "8": 22,
+    "9": 54,
+    "10": 36,
+    "11": 6,
+    "12": 1
+   },
+   "itOpen": 2021,
+   "euOpen": null,
+   "areas": {
+    "north": 1872,
+    "center": 783,
+    "south": 298
+   }
+  },
+  "pyracantha": {
+   "key": "pyracantha",
+   "taxa": [
+    {
+     "query": "Pyracantha",
+     "id": 54052,
+     "name": "Pyracantha",
+     "rank": "genus",
+     "synonym": false
+    }
+   ],
+   "quality": "research,casual",
+   "itMonths": {
+    "1": 33,
+    "2": 21,
+    "3": 24,
+    "4": 86,
+    "5": 137,
+    "6": 34,
+    "7": 17,
+    "8": 48,
+    "9": 158,
+    "10": 189,
+    "11": 116,
+    "12": 60
+   },
+   "itTotal": 923,
+   "itPhenologyMonths": {
+    "1": 13,
+    "2": 3,
+    "3": 6,
+    "4": 1,
+    "5": 4,
+    "6": 3,
+    "7": 0,
+    "8": 15,
+    "9": 31,
+    "10": 38,
+    "11": 22,
+    "12": 13
+   },
+   "itOpen": 562,
+   "euOpen": null,
+   "areas": {
+    "north": 507,
+    "center": 276,
+    "south": 145
+   }
+  },
+  "euonymus-europaeus": {
+   "key": "euonymus-europaeus",
+   "taxa": [
+    {
+     "query": "Euonymus europaeus",
+     "id": 55847,
+     "name": "Euonymus europaeus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 113,
+    "2": 25,
+    "3": 121,
+    "4": 512,
+    "5": 410,
+    "6": 155,
+    "7": 90,
+    "8": 118,
+    "9": 236,
+    "10": 572,
+    "11": 640,
+    "12": 315
+   },
+   "itTotal": 3307,
+   "itPhenologyMonths": {
+    "1": 17,
+    "2": 1,
+    "3": 2,
+    "4": 0,
+    "5": 9,
+    "6": 15,
+    "7": 8,
+    "8": 17,
+    "9": 34,
+    "10": 90,
+    "11": 75,
+    "12": 50
+   },
+   "itOpen": 2156,
+   "euOpen": null,
+   "areas": {
+    "north": 2418,
+    "center": 634,
+    "south": 255
+   }
+  },
+  "ruscus-aculeatus": {
+   "key": "ruscus-aculeatus",
+   "taxa": [
+    {
+     "query": "Ruscus aculeatus",
+     "id": 82904,
+     "name": "Ruscus aculeatus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 322,
+    "2": 444,
+    "3": 543,
+    "4": 843,
+    "5": 493,
+    "6": 280,
+    "7": 198,
+    "8": 240,
+    "9": 262,
+    "10": 330,
+    "11": 226,
+    "12": 277
+   },
+   "itTotal": 4458,
+   "itPhenologyMonths": {
+    "1": 51,
+    "2": 61,
+    "3": 49,
+    "4": 56,
+    "5": 23,
+    "6": 19,
+    "7": 10,
+    "8": 15,
+    "9": 14,
+    "10": 35,
+    "11": 25,
+    "12": 47
+   },
+   "itOpen": 3010,
+   "euOpen": null,
+   "areas": {
+    "north": 2460,
+    "center": 1232,
+    "south": 766
+   }
+  },
+  "arbutus-unedo": {
+   "key": "arbutus-unedo",
+   "taxa": [
+    {
+     "query": "Arbutus unedo",
+     "id": 82689,
+     "name": "Arbutus unedo",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 116,
+    "2": 54,
+    "3": 89,
+    "4": 286,
+    "5": 188,
+    "6": 115,
+    "7": 122,
+    "8": 129,
+    "9": 263,
+    "10": 503,
+    "11": 245,
+    "12": 153
+   },
+   "itTotal": 2263,
+   "itPhenologyMonths": {
+    "1": 13,
+    "2": 1,
+    "3": 3,
+    "4": 33,
+    "5": 18,
+    "6": 13,
+    "7": 19,
+    "8": 19,
+    "9": 40,
+    "10": 84,
+    "11": 37,
+    "12": 17
+   },
+   "itOpen": 1472,
+   "euOpen": null,
+   "areas": {
+    "north": 449,
+    "center": 880,
+    "south": 934
+   }
+  },
+  "viburnum-opulus": {
+   "key": "viburnum-opulus",
+   "taxa": [
+    {
+     "query": "Viburnum opulus",
+     "id": 1622164,
+     "name": "Viburnum opulus",
+     "rank": "complex",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 5,
+    "2": 2,
+    "3": 10,
+    "4": 186,
+    "5": 285,
+    "6": 92,
+    "7": 81,
+    "8": 147,
+    "9": 100,
+    "10": 87,
+    "11": 18,
+    "12": 9
+   },
+   "itTotal": 1022,
+   "itPhenologyMonths": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 0,
+    "5": 2,
+    "6": 5,
+    "7": 12,
+    "8": 15,
+    "9": 7,
+    "10": 10,
+    "11": 1,
+    "12": 1
+   },
+   "itOpen": 613,
+   "euOpen": null,
+   "areas": {
+    "north": 1012,
+    "center": 8,
+    "south": 2
+   }
+  },
+  "arum-italicum": {
+   "key": "arum-italicum",
+   "taxa": [
+    {
+     "query": "Arum italicum",
+     "id": 61168,
+     "name": "Arum italicum",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 316,
+    "2": 366,
+    "3": 508,
+    "4": 958,
+    "5": 383,
+    "6": 142,
+    "7": 186,
+    "8": 40,
+    "9": 19,
+    "10": 207,
+    "11": 184,
+    "12": 243
+   },
+   "itTotal": 3552,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 3,
+    "5": 14,
+    "6": 30,
+    "7": 41,
+    "8": 9,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 2429,
+   "euOpen": null,
+   "areas": {
+    "north": 1565,
+    "center": 1290,
+    "south": 697
+   }
+  },
+  "sorbus-aucuparia": {
+   "key": "sorbus-aucuparia",
+   "taxa": [
+    {
+     "query": "Sorbus aucuparia",
+     "id": 56063,
+     "name": "Sorbus aucuparia",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 5,
+    "2": 3,
+    "3": 3,
+    "4": 89,
+    "5": 155,
+    "6": 177,
+    "7": 227,
+    "8": 519,
+    "9": 222,
+    "10": 103,
+    "11": 21,
+    "12": 11
+   },
+   "itTotal": 1535,
+   "itPhenologyMonths": {
+    "1": 2,
+    "2": 3,
+    "3": 0,
+    "4": 1,
+    "5": 0,
+    "6": 4,
+    "7": 19,
+    "8": 73,
+    "9": 32,
+    "10": 13,
+    "11": 7,
+    "12": 2
+   },
+   "itOpen": 1047,
+   "euOpen": null,
+   "areas": {
+    "north": 1443,
+    "center": 54,
+    "south": 38
+   }
+  },
+  "ilex-aquifolium": {
+   "key": "ilex-aquifolium",
+   "taxa": [
+    {
+     "query": "Ilex aquifolium",
+     "id": 53856,
+     "name": "Ilex aquifolium",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 146,
+    "2": 183,
+    "3": 207,
+    "4": 265,
+    "5": 222,
+    "6": 144,
+    "7": 100,
+    "8": 124,
+    "9": 125,
+    "10": 166,
+    "11": 115,
+    "12": 151
+   },
+   "itTotal": 1948,
+   "itPhenologyMonths": {
+    "1": 7,
+    "2": 15,
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 6,
+    "7": 2,
+    "8": 6,
+    "9": 9,
+    "10": 9,
+    "11": 9,
+    "12": 11
+   },
+   "itOpen": 1345,
+   "euOpen": null,
+   "areas": {
+    "north": 1331,
+    "center": 320,
+    "south": 297
+   }
+  },
+  "iris-foetidissima": {
+   "key": "iris-foetidissima",
+   "taxa": [
+    {
+     "query": "Iris foetidissima",
+     "id": 64331,
+     "name": "Iris foetidissima",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 29,
+    "2": 40,
+    "3": 31,
+    "4": 38,
+    "5": 148,
+    "6": 41,
+    "7": 11,
+    "8": 10,
+    "9": 15,
+    "10": 60,
+    "11": 30,
+    "12": 29
+   },
+   "itTotal": 482,
+   "itPhenologyMonths": {
+    "1": 6,
+    "2": 4,
+    "3": 1,
+    "4": 0,
+    "5": 3,
+    "6": 1,
+    "7": 1,
+    "8": 2,
+    "9": 2,
+    "10": 10,
+    "11": 4,
+    "12": 7
+   },
+   "itOpen": 312,
+   "euOpen": null,
+   "areas": {
+    "north": 298,
+    "center": 122,
+    "south": 62
+   }
+  },
+  "cornus-mas": {
+   "key": "cornus-mas",
+   "taxa": [
+    {
+     "query": "Cornus mas",
+     "id": 55858,
+     "name": "Cornus mas",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 9,
+    "2": 326,
+    "3": 694,
+    "4": 139,
+    "5": 77,
+    "6": 68,
+    "7": 161,
+    "8": 303,
+    "9": 117,
+    "10": 23,
+    "11": 8,
+    "12": 3
+   },
+   "itTotal": 1928,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 3,
+    "5": 3,
+    "6": 2,
+    "7": 23,
+    "8": 69,
+    "9": 23,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 1150,
+   "euOpen": null,
+   "areas": {
+    "north": 1446,
+    "center": 402,
+    "south": 80
+   }
+  },
+  "smilax-aspera": {
+   "key": "smilax-aspera",
+   "taxa": [
+    {
+     "query": "Smilax aspera",
+     "id": 82903,
+     "name": "Smilax aspera",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 148,
+    "2": 110,
+    "3": 135,
+    "4": 538,
+    "5": 258,
+    "6": 153,
+    "7": 175,
+    "8": 214,
+    "9": 327,
+    "10": 354,
+    "11": 133,
+    "12": 109
+   },
+   "itTotal": 2654,
+   "itPhenologyMonths": {
+    "1": 26,
+    "2": 4,
+    "3": 7,
+    "4": 12,
+    "5": 7,
+    "6": 6,
+    "7": 7,
+    "8": 14,
+    "9": 16,
+    "10": 25,
+    "11": 19,
+    "12": 9
+   },
+   "itOpen": 1720,
+   "euOpen": null,
+   "areas": {
+    "north": 449,
+    "center": 913,
+    "south": 1292
+   }
+  },
+  "solanum-dulcamara": {
+   "key": "solanum-dulcamara",
+   "taxa": [
+    {
+     "query": "Solanum dulcamara",
+     "id": 55620,
+     "name": "Solanum dulcamara",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 4,
+    "2": 3,
+    "3": 2,
+    "4": 15,
+    "5": 82,
+    "6": 191,
+    "7": 259,
+    "8": 316,
+    "9": 167,
+    "10": 84,
+    "11": 36,
+    "12": 10
+   },
+   "itTotal": 1169,
+   "itPhenologyMonths": {
+    "1": 2,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 0,
+    "6": 5,
+    "7": 14,
+    "8": 32,
+    "9": 12,
+    "10": 12,
+    "11": 11,
+    "12": 2
+   },
+   "itOpen": 792,
+   "euOpen": null,
+   "areas": {
+    "north": 957,
+    "center": 138,
+    "south": 74
+   }
+  },
+  "cypripedium-calceolus": {
+   "key": "cypripedium-calceolus",
+   "taxa": [
+    {
+     "query": "Cypripedium calceolus",
+     "id": 54638,
+     "name": "Cypripedium calceolus",
+     "rank": "species",
+     "synonym": false
+    }
+   ],
+   "quality": "research",
+   "itMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 2,
+    "5": 49,
+    "6": 300,
+    "7": 32,
+    "8": 4,
+    "9": 2,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itTotal": 389,
+   "itPhenologyMonths": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 22,
+    "6": 83,
+    "7": 4,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0
+   },
+   "itOpen": 238,
+   "euOpen": 5284,
+   "areas": {
+    "north": 365,
+    "center": 1,
+    "south": 23
+   }
+  }
+ }
+}

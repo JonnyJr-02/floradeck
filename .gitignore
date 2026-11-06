@@ -22,6 +22,9 @@ blob-report/
 # Agent skills are installed per project (reinstall from skills-lock.json)
 .claude/skills/
 
+# API response caches
+catalog/.cache/
+
 # Python / ML
 __pycache__/
 *.py[cod]
