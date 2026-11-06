@@ -1,0 +1,88 @@
+# FloraDeck
+
+Personal PWA for collecting Italian wild flowers and plants as trading cards ("figurine"), for two players: the user and their partner. On-device plant recognition, albums to complete, gifts between the two phones.
+
+- Original spec (Italian, authoritative for requirements): [docs/SPEC.md](docs/SPEC.md)
+- Agreed plan with rationale (Italian): [docs/PLAN.md](docs/PLAN.md)
+
+## Working agreement
+
+- Talk to the user in Italian. Code, comments and commit messages in English; all app UI copy in Italian.
+- One phase at a time. At the end of each phase: run build and tests, list what to try by hand on the phones (Android Chrome, iPhone Safari PWA), then stop and wait.
+- Commit at the end of every significant step.
+- Ask before any global install or any command that changes the system outside this folder (npm -g, winget, Playwright browser downloads, Impeccable engine download, pip outside a venv).
+- Budget zero: free tools and services only, no Apple/Google developer accounts.
+- Never invent botanical data: leave the field empty and flag it. Italian species texts stay marked "da verificare" until the user checks them.
+- Keep this file current: decisions, commands, structure.
+
+## Environment
+
+- Windows 11, PowerShell (ExecutionPolicy RemoteSigned); Git Bash also available. If `npx` misbehaves, use `npx.cmd`.
+- Node 26.13, npm 11.20, git 2.56 (identity configured globally). No `gh` CLI.
+- Python: use `py -3.13` (plain `python` is 3.9).
+- GPU: GeForce MX130 2 GB, not usable for training. Training runs on Google Colab (free T4); download, cleaning and ONNX export run locally on CPU.
+- Google Chrome is installed (Playwright MCP default browser). No Playwright-managed browsers yet: downloading WebKit needs the user's OK.
+
+## Skills and MCP
+
+- **Design:** `impeccable` (v4.8) is the main design skill for all UI work except motion. `/teach-impeccable` is now `impeccable teach` (alias of `init`, writes PRODUCT.md). Its Windows launcher downloads an engine binary on first run: ask first. Run its critique/audit/polish at the end of every UI phase.
+- **Motion:** Emil Kowalski's skills only (`animate`, `choreograph`, `apple-design`, `animation-performance`, `emil-design-eng`). Do not use Impeccable's `animate` command (overlapping rules). Also `mobile-native` for native feel on phones, `break-ui` for worst-case data.
+- `review-animations`, `prototype` and `pick-ui-library` cannot be model-invoked. Before closing a phase with animations: ask the user to run `/review-animations`, or read `.claude/skills/review-animations/SKILL.md` and `STANDARDS.md` and apply them, saying so.
+- `design-taste-frontend`: only for one of the phase-2 mockups. If the user picks that direction, it replaces Impeccable as the main design skill. Never combine two general design skills with conflicting rules: ask.
+- State in one line which skill is in use at every UI step.
+- **Playwright MCP** (`.mcp.json`, verified 2026-11-06): after every UI change check 390×844 and 360×800, light and dark; fix visual issues; also test WebKit. Real camera and real iOS cannot be tested here: give the user a manual checklist. Screenshots land in `.playwright-mcp/` (git-ignored).
+- Skills are installed per project in `.claude/skills/` (sources and hashes in `skills-lock.json`); that folder is git-ignored like a dependency folder.
+
+## Decisions (2026-11-06)
+
+- **Stack:** Vite + React + TS, Tailwind CSS v4, Motion (ex Framer Motion), Dexie + `navigator.storage.persist()`, vite-plugin-pwa (Workbox), ONNX Runtime Web in a Web Worker (WASM-SIMD by default; WebGPU only if benchmarks justify it), Vitest + fake-indexeddb, Playwright Test (Android/Chromium and iPhone/WebKit projects).
+- **Hosting:** GitHub Pages via GitHub Actions, public repo (user's GitHub account still to confirm before phase 3). Fallback: Cloudflare Pages.
+- **Catalog:** 8 albums × 10–12 species, exactly 1 rare per album, plus 1 secret legendary species. Species widespread across Italy (user's region unknown). `catalog/` is the single source of truth: schema-validated, read by `ml/`, imported by the app at build time.
+- **Illustrations:** public-domain botanical plates (Thomé, Sturm, Köhler, Curtis's Botanical Magazine, Sibthorp) from Wikimedia Commons/BHL, with attributions; empty-slot silhouettes derived by script.
+- **ML:** approach A: fine-tune a mobile CNN with timm (bake-off: MobileNetV4-M, EfficientNet-B0, ConvNeXt-Nano) on catalog species plus an "altro" class. The model also outputs its penultimate embedding for a prototype-distance OOD score (idea from approach C). Targets: < 30 MB, < 2 s, top-1 ≥ 85 %, top-3 ≥ 95 % on the catalog test set.
+- **Data:** iNaturalist research grade, CC0/CC-BY/CC-BY-NC, Italy first then Europe, prefer phenology annotations (flowering/fruiting); attributions CSV. Split by observation; test set also grouped by observer. No hue jitter in augmentation (colour is the key feature).
+- **Calibration:** temperature scaling; threshold from a risk–coverage curve on in- and out-of-catalog validation data. Parity test checks model and preprocessing separately. `ml/` exports `labels.json` plus metadata (temperature, thresholds, normalisation, version): no hard-coded constants in the app.
+- **Recognition UX:** confidence ≥ threshold → card; grey zone → "Non sono sicuro" + top-3 to confirm; "altro"/OOD → not in catalog + shooting tips. 2–3 crop TTA. `MockRecognizer` with forceable scenarios (sure / unsure / out of catalog) behind the same interface until the real model ships.
+- **Photos:** long side 1080 px; WebP when the browser can encode it, else JPEG (runtime check); separate thumbnail.
+- **Location:** opt-in only, rounded to ~1 km, nearest comune computed offline (ISTAT list).
+- **Gifts and couple:** serverless first. A gift is a link with the payload in the URL fragment (or a `.floradeck` file): species id, compressed photo (~15–20 KB), date, sender, message, unique `giftId`. On iPhone the link opens in Safari, whose storage is separate from the Home-screen app → bridge "Copia regalo" → "Incolla regalo". QR codes for pairing and progress snapshots (≈3 KB max, no photos). The duplicate leaves the sender's collection when the gift is created (resend = same `giftId`); the receiver stores imported `giftId`s, also in backups. Partner albums are read-only snapshots; the couple album is the union. Optional backend in phase 8 (Supabase free pauses idle projects; also evaluate Cloudflare Workers + D1).
+- **Order:** backup export/import moved to phase 5; ML scripts start right after phase 1 and run in parallel with the UI phases (the user runs Colab training); weekly challenges in phase 9.
+
+## Phases
+
+| # | Phase | Status |
+|---|---|---|
+| 0 | Setup, plan, CLAUDE.md, repo | ✅ 2026-11-06 |
+| 1 | Catalog: albums + species list → user validates → `species.json`, schema, review sheet; iNat photo counts per species | next |
+| 2 | Design: `impeccable teach`, 3 static mockups (2 Impeccable, 1 Taste) → user picks | |
+| 3 | PWA skeleton: nav, themes, offline fonts, Dexie, offline, install guide + iOS warning, deploy | |
+| 4 | Camera + mock recognizer + shot → card → collection, unpacking animation | |
+| 5 | Albums, rarity, duplicates, cover photo, diary, "In fiore questo mese", celebrations, legendary card, backup | |
+| 6 | ML pipeline, Colab notebook, evaluation, ONNX export (scripts start after phase 1) | |
+| 7 | Real model in the app, threshold calibration, tests on real photos | |
+| 8 | Profiles, gifts, couple features; optional backend | |
+| 9 | Polish (Impeccable audit/polish, animation review), device tests, weekly challenges, optional Capacitor APK | |
+
+## Commands
+
+None yet: dev, build, test and training commands are added here as each phase lands.
+
+## Structure
+
+```
+floradeck/
+├─ app/              PWA (Vite + React + TS), from phase 3
+│  ├─ src/domain/      pure logic: collection, duplicates, gifts, seasonality (fully unit-tested)
+│  ├─ src/db/          Dexie schema, migrations, backup
+│  ├─ src/recognition/ Recognizer interface, mock, ONNX worker, preprocessing
+│  ├─ src/features/    explore · albums · journal · couple · settings
+│  ├─ src/ui/          design system components, tokens, themes, fonts
+│  └─ e2e/             Playwright tests
+├─ catalog/          species.json, albums.json, schema, illustrations + attributions, review scripts (phase 1)
+├─ ml/               Python pipeline: download, clean, split, train, eval, export; Colab notebook (phase 6)
+├─ docs/             SPEC.md, PLAN.md, mockups/ (phase 2)
+├─ .claude/skills/   project skills (git-ignored)
+├─ .mcp.json         Playwright MCP
+├─ skills-lock.json  skill sources and hashes
+└─ CLAUDE.md
+```

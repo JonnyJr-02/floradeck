@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dev-dist/
+*.tsbuildinfo
+
+# Test and tool output
+coverage/
+playwright-report/
+test-results/
+blob-report/
+.playwright-mcp/
+
+# Environment and local settings
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+
+# Agent skills are installed per project (reinstall from skills-lock.json)
+.claude/skills/
+
+# Python / ML
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+ml/data/
+ml/runs/
+ml/artifacts/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
