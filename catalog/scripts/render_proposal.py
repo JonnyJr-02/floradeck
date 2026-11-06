@@ -259,7 +259,7 @@ def main() -> int:
     add("- Il dettaglio per mese e per area è in `catalog/proposal/inat_stats.json`.")
     add("")
 
-    OUTPUT.write_text("\n".join(lines), encoding="utf-8")
+    OUTPUT.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(f"Wrote {OUTPUT.relative_to(CATALOG_DIR.parent)}")
     return 0
 

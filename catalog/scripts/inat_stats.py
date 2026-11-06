@@ -96,7 +96,7 @@ def get_json(path: str, params: dict) -> dict:
         time.sleep(5 * (attempt + 1))
 
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    cache_file.write_text(json.dumps(data), encoding="utf-8")
+    cache_file.write_text(json.dumps(data), encoding="utf-8", newline="\n")
     return data
 
 
@@ -195,7 +195,7 @@ def main() -> int:
         "baselinePlantaeAreas": baseline,
         "species": {key: value for key, value in species.items() if key in keys},
     }
-    OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     print(f"Wrote {OUTPUT.relative_to(CATALOG_DIR.parent)} ({_network_requests} network requests)")
     return 0
 

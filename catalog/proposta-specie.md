@@ -257,3 +257,4 @@ _Un solo fiore segreto, fuori dagli album._
 - Nomi che iNaturalist tratta come sinonimi (i conteggi li includono): *Leontopodium alpinum* → *Leontopodium nivale alpinum*; *Crocus albiflorus* → *Crocus vernus*; *Anemone nemorosa* → *Anemonoides nemorosa*; *Anemone hepatica* → *Hepatica nobilis*; *Physalis alkekengi* → *Alkekengi officinarum*.
 - I conteggi sono osservazioni, non foto: un'osservazione ha di solito 1–4 foto. Per gli album di genere o gruppo nella fase ML si potranno usare anche osservazioni identificate solo a livello di genere.
 - Il dettaglio per mese e per area è in `catalog/proposal/inat_stats.json`.
+
