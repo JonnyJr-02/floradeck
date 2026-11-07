@@ -41,3 +41,6 @@ ml/artifacts/
 Thumbs.db
 desktop.ini
 *.log
+
+# Local launcher for the desktop app preview (machine-specific paths)
+.claude/launch.json

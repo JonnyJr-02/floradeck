@@ -1,0 +1,501 @@
+@import "tailwindcss";
+
+/*
+ * Fonts ship with the app, so it works offline. Only the Latin subsets: they cover Italian and
+ * scientific names and keep the precache small. Fraunces "full" carries the SOFT/WONK axes.
+ */
+@font-face {
+  font-family: "Fraunces Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2")
+    format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Figtree Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 900;
+  src: url("../../node_modules/@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2")
+    format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Figtree Variable";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300 900;
+  src: url("../../node_modules/@fontsource-variable/figtree/files/figtree-latin-wght-italic.woff2")
+    format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/*
+ * Direction C, "Foto in primo piano" (Taste skill): tokens from
+ * `start.mjs brand --page software --type fraunces --radius round` with the spec's colours.
+ * Keep --p-bg in step with THEME_COLORS in src/domain/theme.ts (a unit test checks it).
+ */
+:root {
+  --p-bg: #f2ede3;
+  --p-surface: #e8e1d3;
+  --p-ink: #1d1a15;
+  --p-muted: #655e53;
+  --p-accent: #a83e2b;
+  --p-accent-ink: #f2ede3;
+  --p-line: rgb(29 26 21 / 0.12);
+  --p-lift: 0 1px 2px rgb(29 26 21 / 0.08), 0 8px 22px rgb(29 26 21 / 0.1);
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --p-bg: #0f1320;
+  --p-surface: #181d2c;
+  --p-ink: #eee9df;
+  --p-muted: #a3a8b5;
+  --p-accent: #e58a6e;
+  --p-accent-ink: #0f1320;
+  --p-line: rgb(238 233 223 / 0.12);
+  --p-lift: 0 1px 2px rgb(0 0 0 / 0.4), 0 10px 26px rgb(0 0 0 / 0.45);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--p-bg);
+  --color-surface: var(--p-surface);
+  --color-ink: var(--p-ink);
+  --color-muted: var(--p-muted);
+  --color-accent: var(--p-accent);
+  --color-accent-ink: var(--p-accent-ink);
+  --color-line: var(--p-line);
+  --shadow-lift: var(--p-lift);
+}
+
+@theme {
+  --font-sans: "Figtree Variable", system-ui, sans-serif;
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --color-camera: #0b0f19;
+  --color-camera-ink: #eee9df;
+  --radius-card: 1.25rem;
+  --radius-tile: 1rem;
+  /* Motion tokens from Emil Kowalski's animate skill. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@layer base {
+  html {
+    /* mobile-native: no grey flash on tap, no font inflation, no pull-to-refresh in an app. */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overscroll-behavior: none;
+    background: var(--p-bg);
+  }
+  /* iPhone only: follow the system text size (Dynamic Type); every rem scales with it. */
+  @supports (font: -apple-system-body) and (-webkit-touch-callout: none) {
+    html {
+      font: -apple-system-body;
+    }
+  }
+  body {
+    min-height: 100dvh;
+    background: var(--p-bg);
+    color: var(--p-ink);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    font-variation-settings: "SOFT" 30, "WONK" 0;
+    text-wrap: balance;
+  }
+  /* Under 16 px iOS zooms into the field and never zooms back. */
+  input,
+  textarea,
+  select {
+    font-size: max(1rem, 16px);
+  }
+  a,
+  button,
+  label,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+  /* Controls are not text: no selection or callout on long press. Content stays selectable. */
+  button,
+  [role="button"],
+  .control {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--p-accent);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--p-accent);
+    color: var(--p-accent-ink);
+  }
+}
+
+@layer components {
+  .page {
+    width: 100%;
+    max-width: 30rem;
+    margin-inline: auto;
+    padding: calc(1.25rem + env(safe-area-inset-top, 0px)) 1.25rem calc(6.75rem + env(safe-area-inset-bottom, 0px));
+  }
+  .page--plain {
+    padding-bottom: calc(2.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* One button pair: filled for the main action, ghost for the second one. */
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.875rem 1.25rem;
+    border-radius: 999px;
+    background: var(--p-accent);
+    color: var(--p-accent-ink);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.15;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+  .btn--ghost {
+    background: transparent;
+    color: var(--p-ink);
+    box-shadow: inset 0 0 0 1.5px var(--p-line);
+  }
+  .btn:disabled {
+    opacity: 0.45;
+  }
+
+  .round-btn {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    background: var(--p-surface);
+    color: var(--p-ink);
+    -webkit-touch-callout: none;
+  }
+
+  .text-link {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Press feedback (animate skill, "Button press"): instant and physical. */
+  .press {
+    transition: transform 160ms var(--ease-out);
+  }
+  .press:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+
+  .card {
+    border-radius: var(--radius-card);
+    background: var(--p-surface);
+    padding: 1rem 1.125rem;
+  }
+
+  .track {
+    display: block;
+    height: 0.5rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--p-bg);
+  }
+  .track > i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--p-accent);
+  }
+
+  .notice {
+    border-radius: var(--radius-card);
+    padding: 1rem 1.125rem;
+    box-shadow: inset 0 0 0 1.5px var(--p-accent);
+  }
+
+  .steps {
+    display: grid;
+    gap: 0.875rem;
+    counter-reset: step;
+  }
+  .steps > li {
+    display: grid;
+    grid-template-columns: 1.75rem 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    counter-increment: step;
+  }
+  .steps > li::before {
+    content: counter(step);
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 999px;
+    background: var(--p-surface);
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .inline-icon {
+    display: inline-block;
+    width: 1.15em;
+    height: 1.15em;
+    vertical-align: -0.2em;
+  }
+
+  .segmented {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 999px;
+    background: var(--p-surface);
+  }
+  .segmented label {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 2.5rem;
+    padding-inline: 0.75rem;
+    border-radius: 999px;
+    color: var(--p-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .segmented label:has(:checked) {
+    background: var(--p-ink);
+    color: var(--p-bg);
+  }
+  .segmented label:has(:focus-visible) {
+    outline: 2px solid var(--p-accent);
+    outline-offset: 2px;
+  }
+  .segmented input {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Bottom navigation, from mockup C. */
+  .tabbar {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 30rem;
+    margin-inline: auto;
+    padding: 0.5rem 0.5rem calc(0.625rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--p-line);
+    background: var(--p-bg);
+    color: var(--p-muted);
+  }
+  .tabbar--camera {
+    border-top-color: rgb(238 233 223 / 0.12);
+    background: var(--color-camera);
+    color: rgb(238 233 223 / 0.72);
+  }
+  .tab {
+    display: grid;
+    justify-items: center;
+    gap: 0.25rem;
+    padding-block: 0.125rem;
+    color: inherit;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+  .tab__icon {
+    display: grid;
+    place-items: center;
+    width: 3.5rem;
+    height: 1.875rem;
+    border-radius: 999px;
+  }
+  .tab[aria-current="page"] {
+    color: var(--p-ink);
+  }
+  .tab[aria-current="page"] .tab__icon {
+    background: var(--p-surface);
+  }
+  .tabbar--camera .tab[aria-current="page"] {
+    color: var(--color-camera-ink);
+  }
+  .tabbar--camera .tab[aria-current="page"] .tab__icon {
+    background: #232a3d;
+  }
+
+  /* Explore: a full-screen viewfinder (the real camera arrives in phase 4). */
+  .camera {
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(0.875rem + env(safe-area-inset-top, 0px)) 1.25rem calc(6.25rem + env(safe-area-inset-bottom, 0px));
+    background: var(--color-camera);
+    color: var(--color-camera-ink);
+  }
+  .camera .round-btn {
+    background: rgb(238 233 223 / 0.12);
+    color: var(--color-camera-ink);
+  }
+  .camera__tip {
+    padding: 0.625rem 1rem;
+    border-radius: 999px;
+    background: var(--p-bg);
+    color: var(--p-ink);
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: var(--p-lift);
+  }
+  .camera__frame {
+    width: min(68vw, 15rem);
+    aspect-ratio: 1;
+    border-radius: 1.75rem;
+    box-shadow: 0 0 0 2px rgb(255 255 255 / 0.85);
+  }
+  .shutter {
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 4px solid rgb(238 233 223 / 0.9);
+    border-radius: 999px;
+    background: rgb(238 233 223 / 0.16);
+  }
+  .shutter:disabled {
+    opacity: 0.55;
+  }
+  .nudge {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.875rem 0.625rem 0.875rem 1rem;
+    border-radius: var(--radius-card);
+    background: var(--p-bg);
+    color: var(--p-ink);
+    box-shadow: var(--p-lift);
+  }
+
+  /*
+   * Status messages (animate skill, "Toast"): transitions, so they can be interrupted; they leave the
+   * way they came. 400 ms `ease` is above the 300 ms UI budget on purpose: the recipe tunes toasts to
+   * an unhurried, Sonner-like personality, and these messages are occasional.
+   */
+  .toast-region {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    z-index: 30;
+    padding: calc(0.75rem + env(safe-area-inset-top, 0px)) 0.75rem 0;
+    pointer-events: none;
+  }
+  .toast {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    max-width: 28.5rem;
+    margin-inline: auto;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border: 1px solid var(--p-line);
+    border-radius: var(--radius-card);
+    background: var(--p-bg);
+    color: var(--p-ink);
+    box-shadow: var(--p-lift);
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 400ms ease,
+      transform 400ms ease;
+  }
+  @starting-style {
+    .toast {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  .toast[data-closing] {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  .toast__action {
+    flex: none;
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: var(--p-accent);
+    color: var(--p-accent-ink);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .toast .round-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  /* Reduced motion: fewer and gentler, not zero. Keep the fades, drop the movement. */
+  @media (prefers-reduced-motion: reduce) {
+    .press {
+      transition: opacity 160ms ease;
+    }
+    .press:active:not(:disabled) {
+      transform: none;
+      opacity: 0.8;
+    }
+    .toast {
+      transform: none;
+      transition: opacity 200ms ease;
+    }
+    @starting-style {
+      .toast {
+        transform: none;
+      }
+    }
+    .toast[data-closing] {
+      transform: none;
+    }
+  }
+}

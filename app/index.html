@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <title>FloraDeck</title>
+    <meta name="description" content="Fiori e piante d'Italia da fotografare e collezionare come figurine, in due." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2ede3" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f1320" />
+    <meta name="apple-mobile-web-app-title" content="FloraDeck" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+    <script>
+      // Apply the saved theme before the first paint, so dark mode never flashes light.
+      (function () {
+        try {
+          var preference = localStorage.getItem("floradeck:theme");
+          var dark =
+            preference === "dark" ||
+            (preference !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.dataset.theme = dark ? "dark" : "light";
+        } catch (error) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
