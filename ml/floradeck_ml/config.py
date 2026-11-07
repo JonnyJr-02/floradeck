@@ -55,7 +55,7 @@ class InatSettings:
 @dataclass(frozen=True)
 class ClassSettings:
     target_min: int = 300
-    target_max: int = 800
+    target_max: int = 500
     max_per_observer: int = 20
     photos_per_observation: int = 1
     photos_per_observation_low: int = 2

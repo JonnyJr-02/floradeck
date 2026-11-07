@@ -1,6 +1,6 @@
 # Fonti della classe "altro"
 
-Generato il 2026-11-07 alle 11:19:09 da `python -m floradeck_ml fetch`. Ogni immagine scaricata ha una riga in `ml/data/attributions.csv` (id foto, id osservazione, autore, licenza, URL).
+Generato il 2026-11-07 alle 11:42:52 da `python -m floradeck_ml fetch`. Ogni immagine scaricata ha una riga in `ml/data/attributions.csv` (id foto, id osservazione, autore, licenza, URL).
 
 | Parte | Da dove | Licenza |
 |---|---|---|

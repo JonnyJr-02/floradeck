@@ -109,6 +109,7 @@ Siamo a novembre: fino a marzo i test sul campo si potranno fare quasi solo con 
 - **2026-11-06 — catalogo più grande, su richiesta:** 10 album da 20–30 specie (circa 260) più la leggendaria, invece di 8 album da 10–12. Nuovi album: *Orchidee spontanee* (tutte le orchidee del catalogo stanno qui) e *Orto, frutteto ed erbe aromatiche*. Resta una sola specie rara per album.
   - Effetto sul modello: dimensione e tempi non cambiano (cresce solo l'ultimo strato), ma con ~260 classi l'accuratezza attesa scende. Stima rivista: 82–90 % top-1 e 93–97 % top-3 su foto in stile iNaturalist. Dopo l'analisi delle confusioni (fase 6) le classi che il modello confonde si accorpano a livello di gruppo/genere o si sostituiscono.
   - Effetto sui dati: circa 170 000 foto (~10 GB a 500 px), da scaricare in qualche ora nei limiti chiesti da iNaturalist; training su Colab di diverse ore, con checkpoint su Drive.
+- **2026-11-07 — dataset più leggero, su richiesta:** obiettivo 300–500 osservazioni per classe invece di 300–800. Le foto "medium" recenti di iNaturalist pesano ~145 KB, non ~60: con 800 il download sarebbe stato ~33 GB, con 500 è ~22 GB (~4,4 ore), ~9 GB su disco dopo la ricompressione a qualità 90. Costo stimato: 1–2 punti di top-1. La selezione a 500 è contenuta in quella a 800: se l'analisi delle confusioni lo chiede, si alza l'obiettivo e si scaricano solo le foto in più. I dati stanno in `C:\Users\jjarb\floradeck\ml\data\`.
 
 ## Punti aperti
 

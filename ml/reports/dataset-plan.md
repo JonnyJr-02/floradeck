@@ -1,29 +1,29 @@
 # Dataset FloraDeck: piano del download (dry run)
 
-Generato il 2026-11-07 alle 11:19:09. Nessuna immagine scaricata: solo metadati (risposte dell'API di iNaturalist, indice di Open Images e richieste HEAD su un campione di foto per stimarne il peso).
+Generato il 2026-11-07 alle 11:42:52. Nessuna immagine scaricata: solo metadati (risposte dell'API di iNaturalist, indice di Open Images e richieste HEAD su un campione di foto per stimarne il peso).
 
 ## Riepilogo
 
 | | Classi | Osservazioni | Immagini | Download stimato |
 |---|---:|---:|---:|---:|
-| Catalogo | 261 | 208,262 | 208,350 | 30.0 GB ± 2.2 GB |
-| Altro | 1 | 17,873 | 17,873 | 2.9 GB ± 0.2 GB |
-| **Totale** | 262 | **226,135** | **226,223** | **32.9 GB ± 2.4 GB** |
+| Catalogo | 261 | 130,264 | 130,352 | 19.3 GB ± 1.5 GB |
+| Altro | 1 | 17,873 | 17,873 | 3.0 GB ± 0.2 GB |
+| **Totale** | 262 | **148,137** | **148,225** | **22.2 GB ± 1.7 GB** |
 
-- Peso medio di una foto iNaturalist "medium" (500 px sul lato lungo): 144 KB (mediana 135 KB, campione di 150 foto).
+- Peso medio di una foto iNaturalist "medium" (500 px sul lato lungo): 148 KB (mediana 141 KB, campione di 150 foto).
 - Peso medio di un file Open Images: 304 KB (campione di 40); dopo il ridimensionamento a 500 px occupa molto meno.
-- Spazio su disco dopo la ricompressione a qualità 90: circa 13.1 GB (il 40% del download, misurato su un campione di 42 foto).
-- Tempo di download al limite di 5 GB/ora: circa 6.6 ore, in 2 giorni al limite di 24 GB/giorno.
-- Obiettivo per classe: 300–800 osservazioni, al massimo 20 per osservatore; 1 foto per osservazione (2 nelle classi sotto 300).
-- Richieste all'API: 0 in rete, 2,418 dalla cache.
+- Spazio su disco dopo la ricompressione a qualità 90: circa 8.9 GB (il 40% del download, misurato su un campione di 42 foto).
+- Tempo di download al limite di 5 GB/ora: circa 4.4 ore.
+- Obiettivo per classe: 300–500 osservazioni, al massimo 20 per osservatore; 1 foto per osservazione (2 nelle classi sotto 300).
+- Richieste all'API: 0 in rete, 1,946 dalla cache.
 
 ## Da tenere d'occhio
 
 - **1 classe sotto 300 osservazioni** (da accorpare o sostituire, se serve, dopo l'analisi delle confusioni): `crocus-sativus` (272).
-- Classi che usano anche foto extra-europee: `phlomis-fruticosa` (28), `bougainvillea` (135), `camellia` (393), `agapanthus` (166), `jasminum-nudiflorum` (110), `nelumbo-nucifera` (319), `lagerstroemia-indica` (486), `trachelospermum-jasminoides` (457), `strelitzia-reginae` (105), `aloe-arborescens` (377), `cyclamen-persicum` (460), `euphorbia-pulcherrima` (199), `callistemon` (478), `phaseolus-coccineus` (689), `diospyros-kaki` (98), `capsicum-annuum` (610), `solanum-melongena` (669), `crocus-sativus` (125).
-- Classi coltivate con più di metà delle foto da osservazioni "casual" (piante coltivate, identificazione confermata da almeno un'altra persona salvo dove indicato): `wisteria`, `nerium-oleander`, `bougainvillea`, `pelargonium`, `passiflora-caerulea`, `magnolia`, `strelitzia-reginae`, `euphorbia-pulcherrima`, `diospyros-kaki`, `citrus`, `crocus-sativus`.
+- Classi che usano anche foto extra-europee: `camellia` (93), `nelumbo-nucifera` (19), `lagerstroemia-indica` (186), `trachelospermum-jasminoides` (157), `aloe-arborescens` (77), `cyclamen-persicum` (160), `callistemon` (178), `phaseolus-coccineus` (389), `capsicum-annuum` (310), `solanum-melongena` (369), `crocus-sativus` (125).
+- Classi coltivate con più di metà delle foto da osservazioni "casual" (piante coltivate, identificazione confermata da almeno un'altra persona salvo dove indicato): `wisteria`, `nerium-oleander`, `bougainvillea`, `pelargonium`, `camellia`, `passiflora-caerulea`, `magnolia`, `trachelospermum-jasminoides`, `strelitzia-reginae`, `euphorbia-pulcherrima`, `callistemon`, `diospyros-kaki`, `citrus`, `crocus-sativus`.
 - Sosia `Ornithogalum divergens` escluso da "altro": è già compreso nella classe `ornithogalum-umbellatum`.
-- 10 osservazioni compaiono in due classi (la stessa foto in due osservazioni, o un'identificazione cambiata fra due richieste): restano solo nella prima classe, in ordine di catalogo.
+- 8 osservazioni compaiono in due classi (la stessa foto in due osservazioni, o un'identificazione cambiata fra due richieste): restano solo nella prima classe, in ordine di catalogo.
 
 ## Classi del catalogo
 
@@ -31,276 +31,276 @@ Colonne IT/EU/mondo: osservazioni per provenienza (le query non si sovrappongono
 
 | # | Classe | Oss. | IT | EU | mondo | Annotate | Osservatori | Immagini | MB | Note |
 |---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | `bellis-perennis` | 800 | 800 | 0 | 0 | 706 | 478 | 800 | 115 |  |
-| 2 | `taraxacum` | 800 | 800 | 0 | 0 | 270 | 526 | 800 | 115 | 174 identificate solo al genere/gruppo |
-| 3 | `primula-veris` | 800 | 800 | 0 | 0 | 181 | 410 | 800 | 115 |  |
-| 4 | `viola-odorata-gruppo` | 800 | 800 | 0 | 0 | 490 | 359 | 800 | 115 |  |
-| 5 | `muscari` | 800 | 800 | 0 | 0 | 280 | 429 | 800 | 115 |  |
-| 6 | `myosotis` | 800 | 800 | 0 | 0 | 171 | 375 | 800 | 115 |  |
-| 7 | `salvia-pratensis` | 800 | 800 | 0 | 0 | 377 | 490 | 800 | 115 |  |
-| 8 | `ajuga-reptans` | 800 | 800 | 0 | 0 | 401 | 459 | 800 | 115 |  |
-| 9 | `trifolium-pratense` | 800 | 800 | 0 | 0 | 498 | 473 | 800 | 115 |  |
-| 10 | `leucanthemum-vulgare` | 800 | 568 | 232 | 0 | 326 | 402 | 800 | 115 | 133 identificate solo al genere/gruppo |
-| 11 | `narcissus-poeticus` | 800 | 800 | 0 | 0 | 185 | 445 | 800 | 115 |  |
-| 12 | `ornithogalum-umbellatum` | 800 | 531 | 269 | 0 | 383 | 527 | 800 | 115 |  |
-| 13 | `ranunculus-acris-gruppo` | 800 | 754 | 46 | 0 | 154 | 365 | 800 | 115 |  |
-| 14 | `ficaria-verna` | 800 | 800 | 0 | 0 | 800 | 454 | 800 | 115 |  |
-| 15 | `knautia` | 800 | 714 | 86 | 0 | 244 | 418 | 800 | 115 | 232 identificate solo al genere/gruppo |
-| 16 | `lotus-corniculatus` | 800 | 800 | 0 | 0 | 205 | 400 | 800 | 115 |  |
-| 17 | `geranium-sanguineum` | 800 | 800 | 0 | 0 | 268 | 422 | 800 | 115 |  |
-| 18 | `dianthus-carthusianorum-gruppo` | 800 | 800 | 0 | 0 | 173 | 432 | 800 | 115 |  |
-| 19 | `anemone-hortensis` | 800 | 800 | 0 | 0 | 502 | 460 | 800 | 115 |  |
-| 20 | `narcissus-tazetta` | 800 | 423 | 377 | 0 | 340 | 526 | 800 | 115 |  |
-| 21 | `rhinanthus` | 800 | 775 | 25 | 0 | 181 | 383 | 800 | 115 | 66 identificate solo al genere/gruppo |
-| 22 | `anthyllis-vulneraria` | 800 | 800 | 0 | 0 | 543 | 484 | 800 | 115 |  |
-| 23 | `fritillaria` | 800 | 105 | 695 | 0 | 730 | 423 | 800 | 115 |  |
-| 24 | `trifolium-repens` | 800 | 800 | 0 | 0 | 190 | 450 | 800 | 115 |  |
-| 25 | `papaver-rhoeas` | 800 | 800 | 0 | 0 | 347 | 590 | 800 | 115 |  |
-| 26 | `centaurea-cyanus` | 800 | 386 | 414 | 0 | 468 | 540 | 800 | 115 |  |
-| 27 | `cichorium-intybus` | 800 | 800 | 0 | 0 | 335 | 499 | 800 | 115 |  |
-| 28 | `echium-vulgare` | 800 | 800 | 0 | 0 | 357 | 487 | 800 | 115 |  |
-| 29 | `convolvulus-arvensis` | 800 | 800 | 0 | 0 | 584 | 536 | 800 | 115 |  |
-| 30 | `malva-sylvestris` | 800 | 800 | 0 | 0 | 387 | 520 | 800 | 115 |  |
-| 31 | `linaria-vulgaris` | 800 | 800 | 0 | 0 | 352 | 458 | 800 | 115 |  |
-| 32 | `verbascum` | 800 | 800 | 0 | 0 | 362 | 446 | 800 | 115 |  |
-| 33 | `silene-vulgaris` | 800 | 800 | 0 | 0 | 229 | 556 | 800 | 115 |  |
-| 34 | `calendula-arvensis` | 800 | 722 | 78 | 0 | 196 | 452 | 800 | 115 |  |
-| 35 | `gladiolus-italicus` | 800 | 705 | 95 | 0 | 196 | 509 | 800 | 115 |  |
-| 36 | `hypericum-perforatum` | 800 | 800 | 0 | 0 | 277 | 430 | 800 | 115 |  |
-| 37 | `silybum-marianum` | 800 | 780 | 20 | 0 | 489 | 547 | 800 | 115 |  |
-| 38 | `nigella-damascena` | 800 | 571 | 229 | 0 | 333 | 561 | 800 | 115 |  |
-| 39 | `leopoldia-comosa` | 800 | 800 | 0 | 0 | 606 | 586 | 800 | 115 |  |
-| 40 | `lamium-purpureum` | 800 | 800 | 0 | 0 | 607 | 435 | 800 | 115 |  |
-| 41 | `dipsacus-fullonum` | 800 | 684 | 116 | 0 | 190 | 476 | 800 | 115 |  |
-| 42 | `daucus-carota` | 800 | 800 | 0 | 0 | 217 | 466 | 800 | 115 |  |
-| 43 | `oenothera` | 800 | 406 | 394 | 0 | 492 | 510 | 800 | 115 | 145 identificate solo al genere/gruppo |
-| 44 | `cymbalaria-muralis` | 800 | 800 | 0 | 0 | 411 | 519 | 800 | 115 |  |
-| 45 | `antirrhinum-majus` | 800 | 295 | 505 | 0 | 575 | 565 | 800 | 115 |  |
-| 46 | `lathyrus-latifolius` | 800 | 534 | 266 | 0 | 375 | 532 | 800 | 115 |  |
-| 47 | `tragopogon-porrifolius` | 800 | 173 | 627 | 0 | 315 | 571 | 800 | 115 |  |
-| 48 | `legousia-speculum-veneris` | 800 | 255 | 545 | 0 | 167 | 505 | 800 | 115 |  |
-| 49 | `glebionis-coronaria` | 800 | 216 | 584 | 0 | 621 | 476 | 800 | 115 |  |
-| 50 | `saponaria-officinalis` | 800 | 800 | 0 | 0 | 183 | 416 | 800 | 115 |  |
-| 51 | `anchusa-azurea` | 800 | 212 | 588 | 0 | 426 | 504 | 800 | 115 |  |
-| 52 | `tulipa-sylvestris` | 800 | 362 | 438 | 0 | 737 | 445 | 800 | 115 |  |
-| 53 | `foeniculum-vulgare` | 800 | 590 | 210 | 0 | 254 | 522 | 800 | 115 |  |
-| 54 | `leontopodium-nivale` | 800 | 800 | 0 | 0 | 217 | 491 | 800 | 115 |  |
-| 55 | `gentiana-acaulis-gruppo` | 799 | 799 | 0 | 0 | 224 | 433 | 799 | 115 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 56 | `gentiana-lutea` | 800 | 438 | 362 | 0 | 308 | 545 | 800 | 115 |  |
-| 57 | `trollius-europaeus` | 800 | 800 | 0 | 0 | 171 | 534 | 800 | 115 |  |
-| 58 | `arnica-montana` | 800 | 800 | 0 | 0 | 114 | 421 | 800 | 115 |  |
-| 59 | `crocus-vernus` | 800 | 800 | 0 | 0 | 365 | 414 | 800 | 115 |  |
-| 60 | `soldanella` | 798 | 798 | 0 | 0 | 137 | 429 | 798 | 115 | 2 già usate da un'altra classe (foto o osservazione condivisa) |
-| 61 | `rhododendron-alpino` | 800 | 800 | 0 | 0 | 260 | 468 | 800 | 115 |  |
-| 62 | `pulsatilla-alpina` | 800 | 800 | 0 | 0 | 339 | 456 | 800 | 115 |  |
-| 63 | `lilium-martagon` | 800 | 800 | 0 | 0 | 276 | 508 | 800 | 115 |  |
-| 64 | `aster-alpinus` | 800 | 800 | 0 | 0 | 213 | 486 | 800 | 115 |  |
-| 65 | `paradisea-liliastrum` | 800 | 467 | 333 | 0 | 189 | 502 | 800 | 115 |  |
-| 66 | `campanula-barbata` | 800 | 800 | 0 | 0 | 305 | 455 | 800 | 115 |  |
-| 67 | `gentiana-verna` | 800 | 800 | 0 | 0 | 347 | 491 | 800 | 115 |  |
-| 68 | `viola-calcarata` | 800 | 189 | 611 | 0 | 465 | 444 | 800 | 115 |  |
-| 69 | `silene-acaulis` | 800 | 800 | 0 | 0 | 256 | 455 | 800 | 115 |  |
-| 70 | `dryas-octopetala` | 800 | 800 | 0 | 0 | 186 | 512 | 800 | 115 |  |
-| 71 | `ranunculus-glacialis` | 800 | 456 | 344 | 0 | 279 | 449 | 800 | 115 |  |
-| 72 | `saxifraga-oppositifolia` | 800 | 409 | 391 | 0 | 520 | 467 | 800 | 115 |  |
-| 73 | `primula-auricula` | 799 | 291 | 508 | 0 | 303 | 477 | 799 | 115 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 74 | `linaria-alpina` | 800 | 800 | 0 | 0 | 108 | 484 | 800 | 115 |  |
-| 75 | `aconitum-napellus` | 800 | 288 | 512 | 0 | 593 | 526 | 800 | 115 |  |
-| 76 | `astrantia-major` | 800 | 756 | 44 | 0 | 167 | 451 | 800 | 115 |  |
-| 77 | `phyteuma` | 800 | 800 | 0 | 0 | 420 | 374 | 800 | 115 |  |
-| 78 | `lilium-bulbiferum` | 800 | 800 | 0 | 0 | 227 | 525 | 800 | 115 |  |
-| 79 | `bistorta-officinalis` | 800 | 797 | 3 | 0 | 126 | 478 | 800 | 115 |  |
-| 80 | `chamaenerion-angustifolium` | 800 | 800 | 0 | 0 | 528 | 547 | 800 | 115 |  |
-| 81 | `pinguicula` | 800 | 800 | 0 | 0 | 210 | 396 | 800 | 115 |  |
-| 82 | `centaurea-montana-gruppo` | 800 | 628 | 172 | 0 | 304 | 439 | 800 | 115 |  |
-| 83 | `sempervivum` | 800 | 800 | 0 | 0 | 200 | 426 | 800 | 115 |  |
-| 84 | `cistus-creticus` | 800 | 800 | 0 | 0 | 118 | 533 | 800 | 115 |  |
-| 85 | `myrtus-communis` | 800 | 434 | 366 | 0 | 523 | 573 | 800 | 115 |  |
-| 86 | `lavandula-stoechas` | 800 | 331 | 469 | 0 | 506 | 501 | 800 | 115 |  |
-| 87 | `spartium-junceum` | 800 | 800 | 0 | 0 | 181 | 589 | 800 | 115 |  |
-| 88 | `asphodelus` | 800 | 800 | 0 | 0 | 164 | 487 | 800 | 115 |  |
-| 89 | `centranthus-ruber` | 800 | 800 | 0 | 0 | 286 | 588 | 800 | 115 |  |
-| 90 | `capparis-spinosa` | 800 | 436 | 364 | 0 | 474 | 596 | 800 | 115 |  |
-| 91 | `carpobrotus` | 800 | 415 | 385 | 0 | 463 | 557 | 800 | 115 | 32 identificate solo al genere/gruppo |
-| 92 | `glaucium-flavum` | 800 | 584 | 216 | 0 | 281 | 562 | 800 | 115 |  |
-| 93 | `calystegia-soldanella` | 800 | 252 | 548 | 0 | 427 | 608 | 800 | 115 |  |
-| 94 | `eryngium-maritimum` | 800 | 570 | 230 | 0 | 266 | 574 | 800 | 115 |  |
-| 95 | `pancratium-maritimum` | 800 | 800 | 0 | 0 | 386 | 606 | 800 | 115 |  |
-| 96 | `cistus-salviifolius` | 800 | 800 | 0 | 0 | 124 | 518 | 800 | 115 |  |
-| 97 | `opuntia-ficus-indica` | 800 | 265 | 535 | 0 | 261 | 550 | 800 | 115 |  |
-| 98 | `phlomis-fruticosa` | 800 | 178 | 594 | 28 | 90 | 584 | 800 | 115 | foto extra-europee |
-| 99 | `anemone-coronaria` | 800 | 236 | 564 | 0 | 434 | 504 | 800 | 115 |  |
-| 100 | `erica-arborea` | 800 | 672 | 128 | 0 | 201 | 511 | 800 | 115 |  |
-| 101 | `achillea-maritima` | 800 | 208 | 592 | 0 | 131 | 546 | 800 | 115 |  |
-| 102 | `cakile-maritima` | 800 | 800 | 0 | 0 | 160 | 452 | 800 | 115 |  |
-| 103 | `limonium` | 800 | 432 | 368 | 0 | 455 | 468 | 800 | 115 | 82 identificate solo al genere/gruppo |
-| 104 | `matthiola` | 800 | 360 | 440 | 0 | 517 | 503 | 800 | 115 | 30 identificate solo al genere/gruppo |
-| 105 | `helichrysum` | 800 | 414 | 386 | 0 | 477 | 480 | 800 | 115 |  |
-| 106 | `teucrium-fruticans` | 800 | 280 | 520 | 0 | 130 | 558 | 800 | 115 |  |
-| 107 | `tamarix` | 800 | 98 | 702 | 0 | 150 | 555 | 800 | 115 | 117 identificate solo al genere/gruppo |
-| 108 | `vitex-agnus-castus` | 799 | 168 | 631 | 0 | 207 | 609 | 799 | 115 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 109 | `anemone-nemorosa` | 800 | 800 | 0 | 0 | 269 | 420 | 800 | 115 |  |
-| 110 | `hepatica-nobilis` | 800 | 800 | 0 | 0 | 419 | 480 | 800 | 115 |  |
-| 111 | `primula-vulgaris` | 799 | 799 | 0 | 0 | 513 | 427 | 799 | 115 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 112 | `galanthus-nivalis` | 800 | 800 | 0 | 0 | 299 | 342 | 800 | 115 |  |
-| 113 | `erythronium-dens-canis` | 799 | 799 | 0 | 0 | 160 | 353 | 799 | 115 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 114 | `pulmonaria` | 800 | 800 | 0 | 0 | 154 | 350 | 800 | 115 |  |
-| 115 | `scilla-bifolia` | 799 | 799 | 0 | 0 | 521 | 424 | 799 | 115 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 116 | `vinca-minor` | 800 | 800 | 0 | 0 | 497 | 400 | 800 | 115 |  |
-| 117 | `cyclamen` | 800 | 800 | 0 | 0 | 800 | 511 | 800 | 115 |  |
-| 118 | `helleborus-niger` | 800 | 733 | 67 | 0 | 189 | 348 | 800 | 115 |  |
-| 119 | `aquilegia` | 800 | 800 | 0 | 0 | 372 | 459 | 800 | 115 |  |
-| 120 | `paeonia-officinalis` | 800 | 417 | 383 | 0 | 227 | 441 | 800 | 115 |  |
-| 121 | `daphne-mezereum` | 800 | 800 | 0 | 0 | 132 | 410 | 800 | 115 |  |
-| 122 | `convallaria-majalis` | 800 | 462 | 338 | 0 | 446 | 500 | 800 | 115 |  |
-| 123 | `lathyrus-vernus` | 800 | 697 | 103 | 0 | 245 | 453 | 800 | 115 |  |
-| 124 | `anemone-ranunculoides` | 800 | 571 | 229 | 0 | 290 | 408 | 800 | 115 |  |
-| 125 | `corydalis` | 800 | 800 | 0 | 0 | 182 | 408 | 800 | 115 |  |
-| 126 | `oxalis-acetosella` | 800 | 735 | 65 | 0 | 152 | 440 | 800 | 115 |  |
-| 127 | `geranium-robertianum` | 800 | 800 | 0 | 0 | 396 | 455 | 800 | 115 |  |
-| 128 | `melittis-melissophyllum` | 800 | 800 | 0 | 0 | 288 | 434 | 800 | 115 |  |
-| 129 | `digitalis` | 800 | 800 | 0 | 0 | 276 | 428 | 800 | 115 |  |
-| 130 | `lonicera-caprifogli` | 800 | 800 | 0 | 0 | 279 | 476 | 800 | 115 |  |
-| 131 | `clematis-vitalba` | 800 | 800 | 0 | 0 | 193 | 488 | 800 | 115 |  |
-| 132 | `sambucus-nigra` | 800 | 800 | 0 | 0 | 175 | 505 | 800 | 115 |  |
-| 133 | `calluna-vulgaris` | 800 | 800 | 0 | 0 | 94 | 432 | 800 | 115 |  |
-| 134 | `erica-carnea` | 800 | 800 | 0 | 0 | 215 | 427 | 800 | 115 |  |
-| 135 | `iris-pseudacorus` | 800 | 800 | 0 | 0 | 140 | 436 | 800 | 115 |  |
-| 136 | `lythrum-salicaria` | 800 | 800 | 0 | 0 | 263 | 420 | 800 | 115 |  |
-| 137 | `caltha-palustris` | 800 | 672 | 128 | 0 | 359 | 490 | 800 | 115 |  |
-| 138 | `nuphar-lutea` | 800 | 276 | 524 | 0 | 553 | 485 | 800 | 115 |  |
-| 139 | `nymphaea` | 800 | 281 | 519 | 0 | 585 | 501 | 800 | 115 | 65 casual coltivate; 22 identificate solo al genere/gruppo |
-| 140 | `epilobium-hirsutum` | 800 | 662 | 138 | 0 | 249 | 383 | 800 | 115 |  |
-| 141 | `lysimachia-vulgaris` | 800 | 440 | 360 | 0 | 416 | 421 | 800 | 115 |  |
-| 142 | `symphytum-officinale` | 800 | 416 | 384 | 0 | 493 | 448 | 800 | 115 |  |
-| 143 | `impatiens-glandulifera` | 800 | 745 | 55 | 0 | 145 | 482 | 800 | 115 |  |
-| 144 | `menyanthes-trifoliata` | 800 | 135 | 665 | 0 | 700 | 606 | 800 | 115 |  |
-| 145 | `butomus-umbellatus` | 800 | 168 | 632 | 0 | 661 | 423 | 800 | 115 |  |
-| 146 | `leucojum-aestivum` | 800 | 142 | 658 | 0 | 259 | 576 | 800 | 115 |  |
-| 147 | `calystegia-sepium` | 800 | 459 | 341 | 0 | 456 | 454 | 800 | 115 |  |
-| 148 | `lychnis-flos-cuculi` | 800 | 800 | 0 | 0 | 190 | 474 | 800 | 115 |  |
-| 149 | `eupatorium-cannabinum` | 800 | 800 | 0 | 0 | 148 | 381 | 800 | 115 |  |
-| 150 | `filipendula-ulmaria` | 800 | 220 | 580 | 0 | 637 | 528 | 800 | 115 |  |
-| 151 | `ranunculus-acquatici` | 800 | 99 | 701 | 0 | 170 | 600 | 800 | 115 |  |
-| 152 | `persicaria-amphibia` | 800 | 97 | 703 | 0 | 436 | 511 | 800 | 115 |  |
-| 153 | `parnassia-palustris` | 800 | 800 | 0 | 0 | 479 | 526 | 800 | 115 |  |
-| 154 | `impatiens-noli-tangere` | 800 | 181 | 619 | 0 | 573 | 535 | 800 | 115 |  |
-| 155 | `mentha-aquatica` | 800 | 241 | 559 | 0 | 604 | 448 | 800 | 115 |  |
-| 156 | `hydrangea-macrophylla` | 800 | 58 | 742 | 0 | 136 | 629 | 800 | 115 | 116 casual coltivate |
-| 157 | `wisteria` | 800 | 101 | 699 | 0 | 173 | 752 | 800 | 115 | 618 casual coltivate; 32 identificate solo al genere/gruppo |
-| 158 | `nerium-oleander` | 800 | 643 | 157 | 0 | 245 | 614 | 800 | 115 | 436 casual coltivate |
-| 159 | `bougainvillea` | 800 | 67 | 598 | 135 | 129 | 691 | 800 | 115 | foto extra-europee; 611 casual coltivate; 36 identificate solo al genere/gruppo |
-| 160 | `pelargonium` | 800 | 166 | 634 | 0 | 530 | 684 | 800 | 115 | 697 casual coltivate; 36 identificate solo al genere/gruppo |
-| 161 | `camellia` | 800 | 32 | 375 | 393 | 256 | 669 | 800 | 115 | foto extra-europee; 388 casual coltivate; 4 identificate solo al genere/gruppo |
-| 162 | `syringa-vulgaris` | 800 | 83 | 717 | 0 | 412 | 646 | 800 | 115 | 56 casual coltivate |
-| 163 | `cercis-siliquastrum` | 800 | 228 | 572 | 0 | 248 | 654 | 800 | 115 | 86 casual coltivate |
-| 164 | `passiflora-caerulea` | 800 | 370 | 430 | 0 | 284 | 715 | 800 | 115 | 463 casual coltivate |
-| 165 | `agapanthus` | 800 | 28 | 606 | 166 | 231 | 693 | 800 | 115 | foto extra-europee; 358 casual coltivate; 118 identificate solo al genere/gruppo |
-| 166 | `jasminum-nudiflorum` | 800 | 60 | 630 | 110 | 203 | 678 | 800 | 115 | foto extra-europee; 290 casual coltivate |
-| 167 | `nelumbo-nucifera` | 800 | 70 | 411 | 319 | 366 | 562 | 800 | 115 | foto extra-europee; 88 casual coltivate |
-| 168 | `lagerstroemia-indica` | 800 | 59 | 255 | 486 | 219 | 700 | 800 | 115 | foto extra-europee; 234 casual coltivate |
-| 169 | `hibiscus` | 800 | 216 | 584 | 0 | 143 | 678 | 800 | 115 | 177 casual coltivate |
-| 170 | `tulipa-gesneriana` | 800 | 44 | 756 | 0 | 528 | 554 | 800 | 115 | 248 casual coltivate |
-| 171 | `hyacinthus-orientalis` | 800 | 118 | 682 | 0 | 185 | 691 | 800 | 115 | 44 casual coltivate |
-| 172 | `magnolia` | 800 | 109 | 691 | 0 | 253 | 719 | 800 | 115 | 799 casual coltivate |
-| 173 | `lantana-camara` | 800 | 94 | 706 | 0 | 165 | 621 | 800 | 115 | 75 casual coltivate |
-| 174 | `petunia` | 800 | 147 | 653 | 0 | 177 | 549 | 800 | 115 | 253 casual coltivate; 101 identificate solo al genere/gruppo |
-| 175 | `trachelospermum-jasminoides` | 800 | 94 | 249 | 457 | 123 | 688 | 800 | 115 | foto extra-europee; 343 casual coltivate |
-| 176 | `forsythia` | 800 | 66 | 734 | 0 | 198 | 661 | 800 | 115 | 50 casual coltivate; 394 identificate solo al genere/gruppo |
-| 177 | `strelitzia-reginae` | 800 | 111 | 584 | 105 | 154 | 699 | 800 | 115 | foto extra-europee; 690 casual coltivate |
-| 178 | `aloe-arborescens` | 800 | 29 | 394 | 377 | 380 | 595 | 800 | 115 | foto extra-europee; 143 casual coltivate |
-| 179 | `hemerocallis-fulva` | 800 | 286 | 514 | 0 | 181 | 620 | 800 | 115 | 28 casual coltivate |
-| 180 | `iris-germanica` | 800 | 319 | 481 | 0 | 266 | 620 | 800 | 115 | 51 casual coltivate |
-| 181 | `viola-wittrockiana` | 800 | 114 | 686 | 0 | 703 | 577 | 800 | 115 | 165 casual coltivate |
-| 182 | `cyclamen-persicum` | 800 | 55 | 285 | 460 | 409 | 532 | 800 | 115 | foto extra-europee; 245 casual coltivate |
-| 183 | `euphorbia-pulcherrima` | 800 | 67 | 534 | 199 | 97 | 747 | 800 | 115 | foto extra-europee; 596 casual coltivate |
-| 184 | `callistemon` | 800 | 30 | 292 | 478 | 516 | 628 | 800 | 115 | foto extra-europee; 314 casual coltivate |
-| 185 | `buddleja-davidii` | 800 | 800 | 0 | 0 | 147 | 467 | 800 | 115 |  |
-| 186 | `rosa-canina` | 800 | 162 | 638 | 0 | 602 | 562 | 800 | 115 |  |
-| 187 | `crataegus-monogyna` | 800 | 614 | 186 | 0 | 289 | 414 | 800 | 115 |  |
-| 188 | `pyracantha` | 800 | 221 | 579 | 0 | 223 | 651 | 800 | 115 | 74 casual coltivate; 30 identificate solo al genere/gruppo |
-| 189 | `euonymus-europaeus` | 800 | 800 | 0 | 0 | 189 | 448 | 800 | 115 |  |
-| 190 | `ruscus-aculeatus` | 800 | 800 | 0 | 0 | 274 | 521 | 800 | 115 |  |
-| 191 | `arbutus-unedo` | 800 | 800 | 0 | 0 | 206 | 600 | 800 | 115 |  |
-| 192 | `physalis-alkekengi` | 800 | 206 | 594 | 0 | 340 | 569 | 800 | 115 |  |
-| 193 | `viburnum-opulus` | 800 | 266 | 534 | 0 | 567 | 530 | 800 | 115 |  |
-| 194 | `arum-italicum` | 800 | 220 | 580 | 0 | 587 | 628 | 800 | 115 |  |
-| 195 | `sorbus-aucuparia` | 800 | 503 | 297 | 0 | 386 | 544 | 800 | 115 |  |
-| 196 | `ilex-aquifolium` | 800 | 623 | 177 | 0 | 234 | 433 | 800 | 115 |  |
-| 197 | `iris-foetidissima` | 800 | 129 | 671 | 0 | 343 | 483 | 800 | 115 |  |
-| 198 | `cornus-mas` | 800 | 204 | 596 | 0 | 469 | 638 | 800 | 115 |  |
-| 199 | `smilax-aspera` | 800 | 800 | 0 | 0 | 90 | 501 | 800 | 115 |  |
-| 200 | `solanum-dulcamara` | 800 | 512 | 288 | 0 | 350 | 515 | 800 | 115 |  |
-| 201 | `prunus-spinosa` | 800 | 769 | 31 | 0 | 280 | 524 | 800 | 115 |  |
-| 202 | `phytolacca-americana` | 800 | 800 | 0 | 0 | 283 | 523 | 800 | 115 |  |
-| 203 | `berberis-vulgaris` | 800 | 162 | 638 | 0 | 416 | 539 | 800 | 115 |  |
-| 204 | `hippophae-rhamnoides` | 800 | 114 | 686 | 0 | 485 | 575 | 800 | 115 |  |
-| 205 | `vaccinium-myrtillus` | 800 | 379 | 421 | 0 | 498 | 562 | 800 | 115 |  |
-| 206 | `vaccinium-vitis-idaea` | 799 | 352 | 447 | 0 | 499 | 564 | 799 | 115 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 207 | `fragaria-vesca` | 800 | 545 | 255 | 0 | 327 | 488 | 800 | 115 |  |
-| 208 | `rubus` | 800 | 278 | 522 | 0 | 622 | 487 | 800 | 115 |  |
-| 209 | `taxus-baccata` | 800 | 497 | 303 | 0 | 0 | 532 | 800 | 115 |  |
-| 210 | `cotoneaster` | 800 | 113 | 687 | 0 | 380 | 508 | 800 | 115 | 32 casual coltivate; 10 identificate solo al genere/gruppo |
-| 211 | `colchicum-autumnale` | 800 | 800 | 0 | 0 | 363 | 483 | 800 | 115 |  |
-| 212 | `sternbergia-lutea` | 800 | 396 | 404 | 0 | 550 | 585 | 800 | 115 |  |
-| 213 | `symphyotrichum` | 800 | 87 | 713 | 0 | 258 | 516 | 800 | 115 |  |
-| 214 | `solidago` | 800 | 800 | 0 | 0 | 204 | 384 | 800 | 115 |  |
-| 215 | `anacamptis-morio` | 800 | 800 | 0 | 0 | 754 | 359 | 800 | 115 |  |
-| 216 | `anacamptis-pyramidalis` | 800 | 800 | 0 | 0 | 460 | 431 | 800 | 115 |  |
-| 217 | `anacamptis-papilionacea` | 800 | 800 | 0 | 0 | 282 | 379 | 800 | 115 |  |
-| 218 | `orchis-purpurea` | 800 | 800 | 0 | 0 | 526 | 439 | 800 | 115 |  |
-| 219 | `orchis-simia` | 800 | 637 | 163 | 0 | 251 | 383 | 800 | 115 |  |
-| 220 | `orchis-italica` | 800 | 800 | 0 | 0 | 154 | 338 | 800 | 115 |  |
-| 221 | `orchis-mascula` | 800 | 800 | 0 | 0 | 240 | 398 | 800 | 115 |  |
-| 222 | `neotinea-tridentata` | 800 | 800 | 0 | 0 | 308 | 393 | 800 | 115 |  |
-| 223 | `himantoglossum-robertianum` | 800 | 800 | 0 | 0 | 131 | 363 | 800 | 115 |  |
-| 224 | `ophrys-apifera` | 800 | 800 | 0 | 0 | 195 | 437 | 800 | 115 |  |
-| 225 | `ophrys-bertolonii` | 800 | 800 | 0 | 0 | 379 | 348 | 800 | 115 |  |
-| 226 | `ophrys-lutea-gruppo` | 800 | 800 | 0 | 0 | 169 | 244 | 800 | 115 |  |
-| 227 | `ophrys-fuciflora-gruppo` | 800 | 800 | 0 | 0 | 284 | 309 | 800 | 115 |  |
-| 228 | `ophrys-tenthredinifera` | 800 | 800 | 0 | 0 | 122 | 248 | 800 | 115 |  |
-| 229 | `serapias` | 800 | 800 | 0 | 0 | 252 | 347 | 800 | 115 |  |
-| 230 | `cephalanthera-bianche` | 800 | 800 | 0 | 0 | 508 | 396 | 800 | 115 |  |
-| 231 | `cephalanthera-rubra` | 800 | 496 | 304 | 0 | 461 | 455 | 800 | 115 |  |
-| 232 | `dactylorhiza-sambucina` | 800 | 800 | 0 | 0 | 384 | 385 | 800 | 115 |  |
-| 233 | `dactylorhiza-maculata-gruppo` | 800 | 800 | 0 | 0 | 404 | 421 | 800 | 115 |  |
-| 234 | `gymnadenia-conopsea` | 800 | 800 | 0 | 0 | 260 | 400 | 800 | 115 |  |
-| 235 | `nigritella` | 800 | 800 | 0 | 0 | 93 | 382 | 800 | 115 |  |
-| 236 | `limodorum-abortivum` | 800 | 678 | 122 | 0 | 220 | 447 | 800 | 115 |  |
-| 237 | `platanthera` | 800 | 800 | 0 | 0 | 153 | 389 | 800 | 115 |  |
-| 238 | `traunsteinera-globosa` | 800 | 475 | 325 | 0 | 208 | 403 | 800 | 115 |  |
-| 239 | `borago-officinalis` | 800 | 800 | 0 | 0 | 304 | 534 | 800 | 115 |  |
-| 240 | `tropaeolum-majus` | 800 | 147 | 653 | 0 | 359 | 607 | 800 | 115 | 23 casual coltivate |
-| 241 | `cucurbita` | 800 | 32 | 768 | 0 | 45 | 526 | 800 | 115 | 80 casual coltivate; 75 identificate solo al genere/gruppo |
-| 242 | `phaseolus-coccineus` | 800 | 1 | 110 | 689 | 126 | 560 | 800 | 115 | foto extra-europee; 45 casual coltivate |
-| 243 | `cynara-cardunculus` | 800 | 187 | 613 | 0 | 160 | 608 | 800 | 115 | 37 casual coltivate |
-| 244 | `allium-schoenoprasum` | 800 | 212 | 588 | 0 | 470 | 590 | 800 | 115 | 30 casual coltivate |
-| 245 | `salvia-officinalis` | 800 | 137 | 663 | 0 | 108 | 603 | 800 | 115 | 90 casual coltivate |
-| 246 | `salvia-rosmarinus` | 799 | 642 | 157 | 0 | 250 | 578 | 799 | 115 | 200 casual coltivate; 1 già usate da un'altra classe (foto o osservazione condivisa) |
-| 247 | `lavandula-giardino` | 800 | 77 | 723 | 0 | 129 | 570 | 800 | 115 | 190 casual coltivate |
-| 248 | `calendula-officinalis` | 800 | 106 | 694 | 0 | 532 | 601 | 800 | 115 | 25 casual coltivate |
-| 249 | `punica-granatum` | 800 | 150 | 650 | 0 | 272 | 661 | 800 | 115 | 122 casual coltivate |
-| 250 | `diospyros-kaki` | 800 | 205 | 497 | 98 | 582 | 682 | 800 | 115 | foto extra-europee; 672 casual coltivate |
-| 251 | `citrus` | 800 | 277 | 523 | 0 | 548 | 636 | 800 | 115 | 684 casual coltivate; 28 identificate solo al genere/gruppo |
-| 252 | `prunus-dulcis` | 800 | 53 | 747 | 0 | 396 | 494 | 800 | 115 | 31 casual coltivate |
-| 253 | `cydonia-oblonga` | 800 | 46 | 754 | 0 | 213 | 680 | 800 | 115 | 286 casual coltivate |
-| 254 | `vitis-vinifera` | 800 | 72 | 728 | 0 | 113 | 562 | 800 | 115 | 31 casual coltivate |
-| 255 | `solanum-lycopersicum` | 800 | 162 | 638 | 0 | 190 | 462 | 800 | 115 | 23 casual coltivate |
-| 256 | `capsicum-annuum` | 800 | 18 | 172 | 610 | 447 | 621 | 800 | 115 | foto extra-europee; 159 casual coltivate |
-| 257 | `solanum-melongena` | 800 | 4 | 127 | 669 | 50 | 695 | 800 | 115 | foto extra-europee; 110 casual coltivate |
-| 258 | `helianthus-annuus` | 800 | 99 | 701 | 0 | 255 | 581 | 800 | 115 | 45 casual coltivate |
-| 259 | `phacelia-tanacetifolia` | 800 | 152 | 648 | 0 | 652 | 642 | 800 | 115 | 11 casual coltivate |
-| 260 | `crocus-sativus` | 272 | 13 | 134 | 125 | 31 | 241 | 360 | 52 | sotto 300; foto extra-europee; 35 senza conferma della comunità; 223 casual coltivate |
-| 261 | `cypripedium-calceolus` | 800 | 213 | 587 | 0 | 653 | 496 | 800 | 115 |  |
+| 1 | `bellis-perennis` | 500 | 500 | 0 | 0 | 500 | 339 | 500 | 74 |  |
+| 2 | `taraxacum` | 500 | 500 | 0 | 0 | 96 | 337 | 500 | 74 |  |
+| 3 | `primula-veris` | 500 | 500 | 0 | 0 | 181 | 280 | 500 | 74 |  |
+| 4 | `viola-odorata-gruppo` | 500 | 500 | 0 | 0 | 490 | 251 | 500 | 74 |  |
+| 5 | `muscari` | 500 | 500 | 0 | 0 | 280 | 300 | 500 | 74 |  |
+| 6 | `myosotis` | 500 | 500 | 0 | 0 | 171 | 232 | 500 | 74 |  |
+| 7 | `salvia-pratensis` | 500 | 500 | 0 | 0 | 377 | 320 | 500 | 74 |  |
+| 8 | `ajuga-reptans` | 500 | 500 | 0 | 0 | 401 | 295 | 500 | 74 |  |
+| 9 | `trifolium-pratense` | 500 | 500 | 0 | 0 | 498 | 299 | 500 | 74 |  |
+| 10 | `leucanthemum-vulgare` | 500 | 500 | 0 | 0 | 94 | 227 | 500 | 74 | 65 identificate solo al genere/gruppo |
+| 11 | `narcissus-poeticus` | 500 | 500 | 0 | 0 | 185 | 314 | 500 | 74 |  |
+| 12 | `ornithogalum-umbellatum` | 500 | 500 | 0 | 0 | 114 | 273 | 500 | 74 |  |
+| 13 | `ranunculus-acris-gruppo` | 500 | 500 | 0 | 0 | 108 | 213 | 500 | 74 |  |
+| 14 | `ficaria-verna` | 500 | 500 | 0 | 0 | 500 | 303 | 500 | 74 |  |
+| 15 | `knautia` | 500 | 500 | 0 | 0 | 127 | 245 | 500 | 74 | 18 identificate solo al genere/gruppo |
+| 16 | `lotus-corniculatus` | 500 | 500 | 0 | 0 | 205 | 282 | 500 | 74 |  |
+| 17 | `geranium-sanguineum` | 500 | 500 | 0 | 0 | 268 | 278 | 500 | 74 |  |
+| 18 | `dianthus-carthusianorum-gruppo` | 500 | 500 | 0 | 0 | 173 | 294 | 500 | 74 |  |
+| 19 | `anemone-hortensis` | 500 | 500 | 0 | 0 | 500 | 303 | 500 | 74 |  |
+| 20 | `narcissus-tazetta` | 500 | 423 | 77 | 0 | 175 | 325 | 500 | 74 |  |
+| 21 | `rhinanthus` | 500 | 500 | 0 | 0 | 141 | 237 | 500 | 74 |  |
+| 22 | `anthyllis-vulneraria` | 500 | 500 | 0 | 0 | 500 | 334 | 500 | 74 |  |
+| 23 | `fritillaria` | 500 | 105 | 395 | 0 | 430 | 261 | 500 | 74 |  |
+| 24 | `trifolium-repens` | 500 | 500 | 0 | 0 | 190 | 288 | 500 | 74 |  |
+| 25 | `papaver-rhoeas` | 500 | 500 | 0 | 0 | 347 | 371 | 500 | 74 |  |
+| 26 | `centaurea-cyanus` | 500 | 386 | 114 | 0 | 168 | 337 | 500 | 74 |  |
+| 27 | `cichorium-intybus` | 500 | 500 | 0 | 0 | 335 | 309 | 500 | 74 |  |
+| 28 | `echium-vulgare` | 500 | 500 | 0 | 0 | 357 | 336 | 500 | 74 |  |
+| 29 | `convolvulus-arvensis` | 500 | 500 | 0 | 0 | 500 | 368 | 500 | 74 |  |
+| 30 | `malva-sylvestris` | 500 | 500 | 0 | 0 | 387 | 329 | 500 | 74 |  |
+| 31 | `linaria-vulgaris` | 500 | 500 | 0 | 0 | 352 | 303 | 500 | 74 |  |
+| 32 | `verbascum` | 500 | 500 | 0 | 0 | 362 | 297 | 500 | 74 |  |
+| 33 | `silene-vulgaris` | 500 | 500 | 0 | 0 | 229 | 356 | 500 | 74 |  |
+| 34 | `calendula-arvensis` | 500 | 500 | 0 | 0 | 118 | 301 | 500 | 74 |  |
+| 35 | `gladiolus-italicus` | 500 | 500 | 0 | 0 | 101 | 343 | 500 | 74 |  |
+| 36 | `hypericum-perforatum` | 500 | 500 | 0 | 0 | 277 | 299 | 500 | 74 |  |
+| 37 | `silybum-marianum` | 500 | 500 | 0 | 0 | 469 | 361 | 500 | 74 |  |
+| 38 | `nigella-damascena` | 500 | 500 | 0 | 0 | 104 | 346 | 500 | 74 |  |
+| 39 | `leopoldia-comosa` | 500 | 500 | 0 | 0 | 500 | 387 | 500 | 74 |  |
+| 40 | `lamium-purpureum` | 500 | 500 | 0 | 0 | 500 | 303 | 500 | 74 |  |
+| 41 | `dipsacus-fullonum` | 500 | 500 | 0 | 0 | 74 | 290 | 500 | 74 |  |
+| 42 | `daucus-carota` | 500 | 500 | 0 | 0 | 217 | 322 | 500 | 74 |  |
+| 43 | `oenothera` | 500 | 406 | 94 | 0 | 192 | 298 | 500 | 74 | 145 identificate solo al genere/gruppo |
+| 44 | `cymbalaria-muralis` | 500 | 500 | 0 | 0 | 411 | 336 | 500 | 74 |  |
+| 45 | `antirrhinum-majus` | 500 | 295 | 205 | 0 | 275 | 365 | 500 | 74 |  |
+| 46 | `lathyrus-latifolius` | 500 | 500 | 0 | 0 | 109 | 312 | 500 | 74 |  |
+| 47 | `tragopogon-porrifolius` | 500 | 173 | 327 | 0 | 315 | 364 | 500 | 74 |  |
+| 48 | `legousia-speculum-veneris` | 500 | 255 | 245 | 0 | 167 | 324 | 500 | 74 |  |
+| 49 | `glebionis-coronaria` | 500 | 216 | 284 | 0 | 321 | 320 | 500 | 74 |  |
+| 50 | `saponaria-officinalis` | 500 | 500 | 0 | 0 | 183 | 307 | 500 | 74 |  |
+| 51 | `anchusa-azurea` | 500 | 212 | 288 | 0 | 327 | 297 | 500 | 74 |  |
+| 52 | `tulipa-sylvestris` | 500 | 362 | 138 | 0 | 437 | 271 | 500 | 74 |  |
+| 53 | `foeniculum-vulgare` | 500 | 500 | 0 | 0 | 44 | 345 | 500 | 74 |  |
+| 54 | `leontopodium-nivale` | 500 | 500 | 0 | 0 | 217 | 336 | 500 | 74 |  |
+| 55 | `gentiana-acaulis-gruppo` | 499 | 499 | 0 | 0 | 224 | 281 | 499 | 74 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
+| 56 | `gentiana-lutea` | 500 | 438 | 62 | 0 | 98 | 335 | 500 | 74 |  |
+| 57 | `trollius-europaeus` | 500 | 500 | 0 | 0 | 171 | 364 | 500 | 74 |  |
+| 58 | `arnica-montana` | 500 | 500 | 0 | 0 | 114 | 302 | 500 | 74 |  |
+| 59 | `crocus-vernus` | 500 | 500 | 0 | 0 | 365 | 302 | 500 | 74 |  |
+| 60 | `soldanella` | 498 | 498 | 0 | 0 | 137 | 293 | 498 | 74 | 2 già usate da un'altra classe (foto o osservazione condivisa) |
+| 61 | `rhododendron-alpino` | 500 | 500 | 0 | 0 | 260 | 320 | 500 | 74 |  |
+| 62 | `pulsatilla-alpina` | 500 | 500 | 0 | 0 | 339 | 313 | 500 | 74 |  |
+| 63 | `lilium-martagon` | 500 | 500 | 0 | 0 | 276 | 325 | 500 | 74 |  |
+| 64 | `aster-alpinus` | 500 | 500 | 0 | 0 | 213 | 327 | 500 | 74 |  |
+| 65 | `paradisea-liliastrum` | 500 | 467 | 33 | 0 | 101 | 296 | 500 | 74 |  |
+| 66 | `campanula-barbata` | 500 | 500 | 0 | 0 | 305 | 328 | 500 | 74 |  |
+| 67 | `gentiana-verna` | 500 | 500 | 0 | 0 | 347 | 333 | 500 | 74 |  |
+| 68 | `viola-calcarata` | 500 | 189 | 311 | 0 | 413 | 282 | 500 | 74 |  |
+| 69 | `silene-acaulis` | 500 | 500 | 0 | 0 | 256 | 309 | 500 | 74 |  |
+| 70 | `dryas-octopetala` | 500 | 500 | 0 | 0 | 186 | 350 | 500 | 74 |  |
+| 71 | `ranunculus-glacialis` | 500 | 456 | 44 | 0 | 118 | 271 | 500 | 74 |  |
+| 72 | `saxifraga-oppositifolia` | 500 | 409 | 91 | 0 | 220 | 276 | 500 | 74 |  |
+| 73 | `primula-auricula` | 499 | 291 | 208 | 0 | 291 | 297 | 499 | 74 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
+| 74 | `linaria-alpina` | 500 | 500 | 0 | 0 | 108 | 332 | 500 | 74 |  |
+| 75 | `aconitum-napellus` | 500 | 288 | 212 | 0 | 293 | 338 | 500 | 74 |  |
+| 76 | `astrantia-major` | 500 | 500 | 0 | 0 | 123 | 309 | 500 | 74 |  |
+| 77 | `phyteuma` | 500 | 500 | 0 | 0 | 420 | 264 | 500 | 74 |  |
+| 78 | `lilium-bulbiferum` | 500 | 500 | 0 | 0 | 227 | 362 | 500 | 74 |  |
+| 79 | `bistorta-officinalis` | 500 | 500 | 0 | 0 | 123 | 338 | 500 | 74 |  |
+| 80 | `chamaenerion-angustifolium` | 500 | 500 | 0 | 0 | 500 | 364 | 500 | 74 |  |
+| 81 | `pinguicula` | 500 | 500 | 0 | 0 | 210 | 281 | 500 | 74 |  |
+| 82 | `centaurea-montana-gruppo` | 500 | 500 | 0 | 0 | 132 | 248 | 500 | 74 |  |
+| 83 | `sempervivum` | 500 | 500 | 0 | 0 | 200 | 287 | 500 | 74 |  |
+| 84 | `cistus-creticus` | 500 | 500 | 0 | 0 | 118 | 368 | 500 | 74 |  |
+| 85 | `myrtus-communis` | 500 | 434 | 66 | 0 | 328 | 374 | 500 | 74 |  |
+| 86 | `lavandula-stoechas` | 500 | 331 | 169 | 0 | 206 | 319 | 500 | 74 |  |
+| 87 | `spartium-junceum` | 500 | 500 | 0 | 0 | 181 | 382 | 500 | 74 |  |
+| 88 | `asphodelus` | 500 | 500 | 0 | 0 | 164 | 317 | 500 | 74 |  |
+| 89 | `centranthus-ruber` | 500 | 500 | 0 | 0 | 286 | 372 | 500 | 74 |  |
+| 90 | `capparis-spinosa` | 500 | 436 | 64 | 0 | 174 | 376 | 500 | 74 |  |
+| 91 | `carpobrotus` | 500 | 415 | 85 | 0 | 163 | 356 | 500 | 74 | 32 identificate solo al genere/gruppo |
+| 92 | `glaucium-flavum` | 500 | 500 | 0 | 0 | 65 | 366 | 500 | 74 |  |
+| 93 | `calystegia-soldanella` | 500 | 252 | 248 | 0 | 289 | 404 | 500 | 74 |  |
+| 94 | `eryngium-maritimum` | 500 | 500 | 0 | 0 | 36 | 374 | 500 | 74 |  |
+| 95 | `pancratium-maritimum` | 500 | 500 | 0 | 0 | 386 | 413 | 500 | 74 |  |
+| 96 | `cistus-salviifolius` | 500 | 500 | 0 | 0 | 124 | 346 | 500 | 74 |  |
+| 97 | `opuntia-ficus-indica` | 500 | 265 | 235 | 0 | 261 | 398 | 500 | 74 |  |
+| 98 | `phlomis-fruticosa` | 500 | 178 | 322 | 0 | 88 | 366 | 500 | 74 |  |
+| 99 | `anemone-coronaria` | 500 | 236 | 264 | 0 | 344 | 320 | 500 | 74 |  |
+| 100 | `erica-arborea` | 500 | 500 | 0 | 0 | 73 | 322 | 500 | 74 |  |
+| 101 | `achillea-maritima` | 500 | 208 | 292 | 0 | 131 | 356 | 500 | 74 |  |
+| 102 | `cakile-maritima` | 500 | 500 | 0 | 0 | 160 | 312 | 500 | 74 |  |
+| 103 | `limonium` | 500 | 432 | 68 | 0 | 155 | 297 | 500 | 74 | 82 identificate solo al genere/gruppo |
+| 104 | `matthiola` | 500 | 360 | 140 | 0 | 217 | 338 | 500 | 74 | 30 identificate solo al genere/gruppo |
+| 105 | `helichrysum` | 500 | 414 | 86 | 0 | 177 | 309 | 500 | 74 |  |
+| 106 | `teucrium-fruticans` | 500 | 280 | 220 | 0 | 130 | 389 | 500 | 74 |  |
+| 107 | `tamarix` | 500 | 98 | 402 | 0 | 103 | 368 | 500 | 74 | 60 identificate solo al genere/gruppo |
+| 108 | `vitex-agnus-castus` | 500 | 168 | 332 | 0 | 207 | 401 | 500 | 74 |  |
+| 109 | `anemone-nemorosa` | 500 | 500 | 0 | 0 | 269 | 284 | 500 | 74 |  |
+| 110 | `hepatica-nobilis` | 500 | 500 | 0 | 0 | 419 | 299 | 500 | 74 |  |
+| 111 | `primula-vulgaris` | 499 | 499 | 0 | 0 | 499 | 275 | 499 | 74 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
+| 112 | `galanthus-nivalis` | 500 | 500 | 0 | 0 | 299 | 261 | 500 | 74 |  |
+| 113 | `erythronium-dens-canis` | 499 | 499 | 0 | 0 | 160 | 269 | 499 | 74 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
+| 114 | `pulmonaria` | 500 | 500 | 0 | 0 | 154 | 253 | 500 | 74 |  |
+| 115 | `scilla-bifolia` | 499 | 499 | 0 | 0 | 499 | 302 | 499 | 74 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
+| 116 | `vinca-minor` | 500 | 500 | 0 | 0 | 497 | 264 | 500 | 74 |  |
+| 117 | `cyclamen` | 500 | 500 | 0 | 0 | 500 | 337 | 500 | 74 |  |
+| 118 | `helleborus-niger` | 500 | 500 | 0 | 0 | 122 | 224 | 500 | 74 |  |
+| 119 | `aquilegia` | 500 | 500 | 0 | 0 | 372 | 314 | 500 | 74 |  |
+| 120 | `paeonia-officinalis` | 500 | 417 | 83 | 0 | 169 | 285 | 500 | 74 |  |
+| 121 | `daphne-mezereum` | 500 | 500 | 0 | 0 | 132 | 288 | 500 | 74 |  |
+| 122 | `convallaria-majalis` | 500 | 462 | 38 | 0 | 146 | 285 | 500 | 74 |  |
+| 123 | `lathyrus-vernus` | 500 | 500 | 0 | 0 | 142 | 276 | 500 | 74 |  |
+| 124 | `anemone-ranunculoides` | 500 | 500 | 0 | 0 | 61 | 237 | 500 | 74 |  |
+| 125 | `corydalis` | 500 | 500 | 0 | 0 | 182 | 283 | 500 | 74 |  |
+| 126 | `oxalis-acetosella` | 500 | 500 | 0 | 0 | 87 | 285 | 500 | 74 |  |
+| 127 | `geranium-robertianum` | 500 | 500 | 0 | 0 | 396 | 292 | 500 | 74 |  |
+| 128 | `melittis-melissophyllum` | 500 | 500 | 0 | 0 | 288 | 301 | 500 | 74 |  |
+| 129 | `digitalis` | 500 | 500 | 0 | 0 | 276 | 288 | 500 | 74 |  |
+| 130 | `lonicera-caprifogli` | 500 | 500 | 0 | 0 | 279 | 337 | 500 | 74 |  |
+| 131 | `clematis-vitalba` | 500 | 500 | 0 | 0 | 193 | 315 | 500 | 74 |  |
+| 132 | `sambucus-nigra` | 500 | 500 | 0 | 0 | 175 | 329 | 500 | 74 |  |
+| 133 | `calluna-vulgaris` | 500 | 500 | 0 | 0 | 94 | 302 | 500 | 74 |  |
+| 134 | `erica-carnea` | 500 | 500 | 0 | 0 | 215 | 286 | 500 | 74 |  |
+| 135 | `iris-pseudacorus` | 500 | 500 | 0 | 0 | 140 | 310 | 500 | 74 |  |
+| 136 | `lythrum-salicaria` | 500 | 500 | 0 | 0 | 263 | 291 | 500 | 74 |  |
+| 137 | `caltha-palustris` | 500 | 500 | 0 | 0 | 231 | 316 | 500 | 74 |  |
+| 138 | `nuphar-lutea` | 500 | 276 | 224 | 0 | 253 | 314 | 500 | 74 |  |
+| 139 | `nymphaea` | 500 | 281 | 219 | 0 | 285 | 329 | 500 | 74 | 65 casual coltivate; 22 identificate solo al genere/gruppo |
+| 140 | `epilobium-hirsutum` | 500 | 500 | 0 | 0 | 111 | 224 | 500 | 74 |  |
+| 141 | `lysimachia-vulgaris` | 500 | 440 | 60 | 0 | 116 | 239 | 500 | 74 |  |
+| 142 | `symphytum-officinale` | 500 | 416 | 84 | 0 | 193 | 274 | 500 | 74 |  |
+| 143 | `impatiens-glandulifera` | 500 | 500 | 0 | 0 | 90 | 317 | 500 | 74 |  |
+| 144 | `menyanthes-trifoliata` | 500 | 135 | 365 | 0 | 400 | 359 | 500 | 74 |  |
+| 145 | `butomus-umbellatus` | 500 | 168 | 332 | 0 | 361 | 289 | 500 | 74 |  |
+| 146 | `leucojum-aestivum` | 500 | 142 | 358 | 0 | 259 | 332 | 500 | 74 |  |
+| 147 | `calystegia-sepium` | 500 | 459 | 41 | 0 | 156 | 272 | 500 | 74 |  |
+| 148 | `lychnis-flos-cuculi` | 500 | 500 | 0 | 0 | 190 | 346 | 500 | 74 |  |
+| 149 | `eupatorium-cannabinum` | 500 | 500 | 0 | 0 | 148 | 264 | 500 | 74 |  |
+| 150 | `filipendula-ulmaria` | 500 | 220 | 280 | 0 | 337 | 330 | 500 | 74 |  |
+| 151 | `ranunculus-acquatici` | 500 | 99 | 401 | 0 | 170 | 391 | 500 | 74 |  |
+| 152 | `persicaria-amphibia` | 500 | 97 | 403 | 0 | 419 | 317 | 500 | 74 |  |
+| 153 | `parnassia-palustris` | 500 | 500 | 0 | 0 | 479 | 352 | 500 | 74 |  |
+| 154 | `impatiens-noli-tangere` | 500 | 181 | 319 | 0 | 347 | 346 | 500 | 74 |  |
+| 155 | `mentha-aquatica` | 500 | 241 | 259 | 0 | 304 | 286 | 500 | 74 |  |
+| 156 | `hydrangea-macrophylla` | 500 | 58 | 442 | 0 | 73 | 395 | 500 | 74 | 53 casual coltivate |
+| 157 | `wisteria` | 500 | 101 | 399 | 0 | 173 | 472 | 500 | 74 | 318 casual coltivate; 32 identificate solo al genere/gruppo |
+| 158 | `nerium-oleander` | 500 | 500 | 0 | 0 | 88 | 390 | 500 | 74 | 293 casual coltivate |
+| 159 | `bougainvillea` | 500 | 67 | 433 | 0 | 59 | 441 | 500 | 74 | 446 casual coltivate; 36 identificate solo al genere/gruppo |
+| 160 | `pelargonium` | 500 | 166 | 334 | 0 | 321 | 427 | 500 | 74 | 397 casual coltivate; 36 identificate solo al genere/gruppo |
+| 161 | `camellia` | 500 | 32 | 375 | 93 | 166 | 442 | 500 | 74 | foto extra-europee; 388 casual coltivate; 4 identificate solo al genere/gruppo |
+| 162 | `syringa-vulgaris` | 500 | 83 | 417 | 0 | 412 | 396 | 500 | 74 | 56 casual coltivate |
+| 163 | `cercis-siliquastrum` | 500 | 228 | 272 | 0 | 248 | 416 | 500 | 74 | 86 casual coltivate |
+| 164 | `passiflora-caerulea` | 500 | 370 | 130 | 0 | 120 | 459 | 500 | 74 | 299 casual coltivate |
+| 165 | `agapanthus` | 500 | 28 | 472 | 0 | 65 | 434 | 500 | 74 | 224 casual coltivate; 118 identificate solo al genere/gruppo |
+| 166 | `jasminum-nudiflorum` | 500 | 60 | 440 | 0 | 157 | 425 | 500 | 74 | 100 casual coltivate |
+| 167 | `nelumbo-nucifera` | 500 | 70 | 411 | 19 | 66 | 334 | 500 | 74 | foto extra-europee; 88 casual coltivate |
+| 168 | `lagerstroemia-indica` | 500 | 59 | 255 | 186 | 219 | 434 | 500 | 74 | foto extra-europee; 234 casual coltivate |
+| 169 | `hibiscus` | 500 | 216 | 284 | 0 | 143 | 425 | 500 | 74 | 177 casual coltivate |
+| 170 | `tulipa-gesneriana` | 500 | 44 | 456 | 0 | 320 | 351 | 500 | 74 | 40 casual coltivate |
+| 171 | `hyacinthus-orientalis` | 500 | 118 | 382 | 0 | 185 | 435 | 500 | 74 | 44 casual coltivate |
+| 172 | `magnolia` | 500 | 109 | 391 | 0 | 253 | 450 | 500 | 74 | 499 casual coltivate |
+| 173 | `lantana-camara` | 500 | 94 | 406 | 0 | 165 | 399 | 500 | 74 | 75 casual coltivate |
+| 174 | `petunia` | 500 | 147 | 353 | 0 | 64 | 339 | 500 | 74 | 125 casual coltivate; 8 identificate solo al genere/gruppo |
+| 175 | `trachelospermum-jasminoides` | 500 | 94 | 249 | 157 | 123 | 456 | 500 | 74 | foto extra-europee; 343 casual coltivate |
+| 176 | `forsythia` | 500 | 66 | 434 | 0 | 198 | 397 | 500 | 74 | 50 casual coltivate; 94 identificate solo al genere/gruppo |
+| 177 | `strelitzia-reginae` | 500 | 111 | 389 | 0 | 71 | 454 | 500 | 74 | 495 casual coltivate |
+| 178 | `aloe-arborescens` | 500 | 29 | 394 | 77 | 99 | 430 | 500 | 74 | foto extra-europee; 143 casual coltivate |
+| 179 | `hemerocallis-fulva` | 500 | 286 | 214 | 0 | 181 | 379 | 500 | 74 | 28 casual coltivate |
+| 180 | `iris-germanica` | 500 | 319 | 181 | 0 | 250 | 394 | 500 | 74 | 51 casual coltivate |
+| 181 | `viola-wittrockiana` | 500 | 114 | 386 | 0 | 491 | 364 | 500 | 74 | 106 casual coltivate |
+| 182 | `cyclamen-persicum` | 500 | 55 | 285 | 160 | 200 | 390 | 500 | 74 | foto extra-europee; 245 casual coltivate |
+| 183 | `euphorbia-pulcherrima` | 500 | 67 | 433 | 0 | 13 | 462 | 500 | 74 | 495 casual coltivate |
+| 184 | `callistemon` | 500 | 30 | 292 | 178 | 243 | 435 | 500 | 74 | foto extra-europee; 314 casual coltivate |
+| 185 | `buddleja-davidii` | 500 | 500 | 0 | 0 | 147 | 333 | 500 | 74 |  |
+| 186 | `rosa-canina` | 500 | 162 | 338 | 0 | 378 | 342 | 500 | 74 |  |
+| 187 | `crataegus-monogyna` | 500 | 500 | 0 | 0 | 103 | 269 | 500 | 74 |  |
+| 188 | `pyracantha` | 500 | 221 | 279 | 0 | 223 | 408 | 500 | 74 | 74 casual coltivate; 30 identificate solo al genere/gruppo |
+| 189 | `euonymus-europaeus` | 500 | 500 | 0 | 0 | 189 | 328 | 500 | 74 |  |
+| 190 | `ruscus-aculeatus` | 500 | 500 | 0 | 0 | 274 | 333 | 500 | 74 |  |
+| 191 | `arbutus-unedo` | 500 | 500 | 0 | 0 | 206 | 402 | 500 | 74 |  |
+| 192 | `physalis-alkekengi` | 500 | 206 | 294 | 0 | 331 | 344 | 500 | 74 |  |
+| 193 | `viburnum-opulus` | 500 | 266 | 234 | 0 | 267 | 339 | 500 | 74 |  |
+| 194 | `arum-italicum` | 500 | 220 | 280 | 0 | 339 | 412 | 500 | 74 |  |
+| 195 | `sorbus-aucuparia` | 500 | 500 | 0 | 0 | 89 | 322 | 500 | 74 |  |
+| 196 | `ilex-aquifolium` | 500 | 500 | 0 | 0 | 57 | 249 | 500 | 74 |  |
+| 197 | `iris-foetidissima` | 500 | 129 | 371 | 0 | 343 | 318 | 500 | 74 |  |
+| 198 | `cornus-mas` | 500 | 204 | 296 | 0 | 364 | 415 | 500 | 74 |  |
+| 199 | `smilax-aspera` | 500 | 500 | 0 | 0 | 90 | 342 | 500 | 74 |  |
+| 200 | `solanum-dulcamara` | 500 | 500 | 0 | 0 | 62 | 300 | 500 | 74 |  |
+| 201 | `prunus-spinosa` | 500 | 500 | 0 | 0 | 249 | 338 | 500 | 74 |  |
+| 202 | `phytolacca-americana` | 500 | 500 | 0 | 0 | 283 | 325 | 500 | 74 |  |
+| 203 | `berberis-vulgaris` | 500 | 162 | 338 | 0 | 386 | 343 | 500 | 74 |  |
+| 204 | `hippophae-rhamnoides` | 500 | 114 | 386 | 0 | 396 | 339 | 500 | 74 |  |
+| 205 | `vaccinium-myrtillus` | 500 | 379 | 121 | 0 | 198 | 330 | 500 | 74 |  |
+| 206 | `vaccinium-vitis-idaea` | 499 | 352 | 147 | 0 | 199 | 354 | 499 | 74 | 1 già usate da un'altra classe (foto o osservazione condivisa) |
+| 207 | `fragaria-vesca` | 500 | 500 | 0 | 0 | 72 | 262 | 500 | 74 |  |
+| 208 | `rubus` | 500 | 278 | 222 | 0 | 322 | 325 | 500 | 74 |  |
+| 209 | `taxus-baccata` | 500 | 497 | 3 | 0 | 0 | 293 | 500 | 74 |  |
+| 210 | `cotoneaster` | 500 | 113 | 387 | 0 | 380 | 334 | 500 | 74 | 32 casual coltivate; 10 identificate solo al genere/gruppo |
+| 211 | `colchicum-autumnale` | 500 | 500 | 0 | 0 | 363 | 314 | 500 | 74 |  |
+| 212 | `sternbergia-lutea` | 500 | 396 | 104 | 0 | 250 | 379 | 500 | 74 |  |
+| 213 | `symphyotrichum` | 500 | 87 | 413 | 0 | 258 | 313 | 500 | 74 |  |
+| 214 | `solidago` | 500 | 500 | 0 | 0 | 204 | 259 | 500 | 74 |  |
+| 215 | `anacamptis-morio` | 500 | 500 | 0 | 0 | 500 | 252 | 500 | 74 |  |
+| 216 | `anacamptis-pyramidalis` | 500 | 500 | 0 | 0 | 460 | 293 | 500 | 74 |  |
+| 217 | `anacamptis-papilionacea` | 500 | 500 | 0 | 0 | 282 | 244 | 500 | 74 |  |
+| 218 | `orchis-purpurea` | 500 | 500 | 0 | 0 | 500 | 293 | 500 | 74 |  |
+| 219 | `orchis-simia` | 500 | 500 | 0 | 0 | 88 | 250 | 500 | 74 |  |
+| 220 | `orchis-italica` | 500 | 500 | 0 | 0 | 154 | 250 | 500 | 74 |  |
+| 221 | `orchis-mascula` | 500 | 500 | 0 | 0 | 240 | 258 | 500 | 74 |  |
+| 222 | `neotinea-tridentata` | 500 | 500 | 0 | 0 | 308 | 278 | 500 | 74 |  |
+| 223 | `himantoglossum-robertianum` | 500 | 500 | 0 | 0 | 131 | 254 | 500 | 74 |  |
+| 224 | `ophrys-apifera` | 500 | 500 | 0 | 0 | 195 | 297 | 500 | 74 |  |
+| 225 | `ophrys-bertolonii` | 500 | 500 | 0 | 0 | 379 | 226 | 500 | 74 |  |
+| 226 | `ophrys-lutea-gruppo` | 500 | 500 | 0 | 0 | 169 | 167 | 500 | 74 |  |
+| 227 | `ophrys-fuciflora-gruppo` | 500 | 500 | 0 | 0 | 284 | 215 | 500 | 74 |  |
+| 228 | `ophrys-tenthredinifera` | 500 | 500 | 0 | 0 | 122 | 169 | 500 | 74 |  |
+| 229 | `serapias` | 500 | 500 | 0 | 0 | 252 | 227 | 500 | 74 |  |
+| 230 | `cephalanthera-bianche` | 500 | 500 | 0 | 0 | 500 | 255 | 500 | 74 |  |
+| 231 | `cephalanthera-rubra` | 500 | 496 | 4 | 0 | 161 | 257 | 500 | 74 |  |
+| 232 | `dactylorhiza-sambucina` | 500 | 500 | 0 | 0 | 384 | 242 | 500 | 74 |  |
+| 233 | `dactylorhiza-maculata-gruppo` | 500 | 500 | 0 | 0 | 404 | 271 | 500 | 74 |  |
+| 234 | `gymnadenia-conopsea` | 500 | 500 | 0 | 0 | 260 | 274 | 500 | 74 |  |
+| 235 | `nigritella` | 500 | 500 | 0 | 0 | 93 | 263 | 500 | 74 |  |
+| 236 | `limodorum-abortivum` | 500 | 500 | 0 | 0 | 98 | 304 | 500 | 74 |  |
+| 237 | `platanthera` | 500 | 500 | 0 | 0 | 153 | 276 | 500 | 74 |  |
+| 238 | `traunsteinera-globosa` | 500 | 475 | 25 | 0 | 69 | 217 | 500 | 74 |  |
+| 239 | `borago-officinalis` | 500 | 500 | 0 | 0 | 304 | 351 | 500 | 74 |  |
+| 240 | `tropaeolum-majus` | 500 | 147 | 353 | 0 | 359 | 367 | 500 | 74 | 23 casual coltivate |
+| 241 | `cucurbita` | 500 | 32 | 468 | 0 | 31 | 323 | 500 | 74 | 16 casual coltivate |
+| 242 | `phaseolus-coccineus` | 500 | 1 | 110 | 389 | 126 | 373 | 500 | 74 | foto extra-europee; 45 casual coltivate |
+| 243 | `cynara-cardunculus` | 500 | 187 | 313 | 0 | 160 | 379 | 500 | 74 | 37 casual coltivate |
+| 244 | `allium-schoenoprasum` | 500 | 212 | 288 | 0 | 324 | 377 | 500 | 74 | 30 casual coltivate |
+| 245 | `salvia-officinalis` | 500 | 137 | 363 | 0 | 108 | 395 | 500 | 74 | 90 casual coltivate |
+| 246 | `salvia-rosmarinus` | 500 | 500 | 0 | 0 | 93 | 346 | 500 | 74 | 57 casual coltivate |
+| 247 | `lavandula-giardino` | 500 | 77 | 423 | 0 | 86 | 333 | 500 | 74 | 26 casual coltivate |
+| 248 | `calendula-officinalis` | 500 | 106 | 394 | 0 | 426 | 374 | 500 | 74 | 25 casual coltivate |
+| 249 | `punica-granatum` | 500 | 150 | 350 | 0 | 272 | 413 | 500 | 74 | 122 casual coltivate |
+| 250 | `diospyros-kaki` | 500 | 205 | 295 | 0 | 428 | 433 | 500 | 74 | 470 casual coltivate |
+| 251 | `citrus` | 500 | 277 | 223 | 0 | 248 | 440 | 500 | 74 | 384 casual coltivate; 28 identificate solo al genere/gruppo |
+| 252 | `prunus-dulcis` | 500 | 53 | 447 | 0 | 396 | 296 | 500 | 74 | 31 casual coltivate |
+| 253 | `cydonia-oblonga` | 500 | 46 | 454 | 0 | 139 | 431 | 500 | 74 | 37 casual coltivate |
+| 254 | `vitis-vinifera` | 500 | 72 | 428 | 0 | 113 | 395 | 500 | 74 | 31 casual coltivate |
+| 255 | `solanum-lycopersicum` | 500 | 162 | 338 | 0 | 190 | 318 | 500 | 74 | 23 casual coltivate |
+| 256 | `capsicum-annuum` | 500 | 18 | 172 | 310 | 328 | 400 | 500 | 74 | foto extra-europee; 159 casual coltivate |
+| 257 | `solanum-melongena` | 500 | 4 | 127 | 369 | 50 | 450 | 500 | 74 | foto extra-europee; 110 casual coltivate |
+| 258 | `helianthus-annuus` | 500 | 99 | 401 | 0 | 255 | 377 | 500 | 74 | 45 casual coltivate |
+| 259 | `phacelia-tanacetifolia` | 500 | 152 | 348 | 0 | 388 | 404 | 500 | 74 | 11 casual coltivate |
+| 260 | `crocus-sativus` | 272 | 13 | 134 | 125 | 31 | 241 | 360 | 53 | sotto 300; foto extra-europee; 35 senza conferma della comunità; 223 casual coltivate |
+| 261 | `cypripedium-calceolus` | 500 | 213 | 287 | 0 | 353 | 327 | 500 | 74 |  |
 
 ## Classe "altro"
 
 | Parte | Origine | Licenza | Gruppi | Osservazioni | Immagini | MB |
 |---|---|---|---:|---:|---:|---:|
-| Sosia fuori catalogo | iNaturalist, research grade; Italia → Europa → mondo; prima le foto annotate in fiore/frutto | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 64 | 6,376 | 6,376 | 917 |
-| Piante comuni in Italia | iNaturalist, specie vascolari più osservate in Italia (research grade) fuori dal catalogo | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 300 | 5,998 | 5,998 | 863 |
-| Specie del catalogo senza fiori né frutti | iNaturalist, specie del catalogo con l'annotazione "No Flowers or Fruits" | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 1 | 1,999 | 1,999 | 288 |
-| Non piante (iNaturalist) | iNaturalist: funghi, uccelli, mammiferi, rettili, anfibi, molluschi (niente insetti e ragni) | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 6 | 1,500 | 1,500 | 216 |
+| Sosia fuori catalogo | iNaturalist, research grade; Italia → Europa → mondo; prima le foto annotate in fiore/frutto | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 64 | 6,376 | 6,376 | 942 |
+| Piante comuni in Italia | iNaturalist, specie vascolari più osservate in Italia (research grade) fuori dal catalogo | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 300 | 5,998 | 5,998 | 886 |
+| Specie del catalogo senza fiori né frutti | iNaturalist, specie del catalogo con l'annotazione "No Flowers or Fruits" | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 1 | 1,999 | 1,999 | 295 |
+| Non piante (iNaturalist) | iNaturalist: funghi, uccelli, mammiferi, rettili, anfibi, molluschi (niente insetti e ragni) | CC0, CC BY o CC BY-NC (scelta dell'autore, foto per foto) | 6 | 1,500 | 1,500 | 222 |
 | Scene senza piante (Open Images) | Open Images V7, validation: immagini senza etichette di piante | CC BY 2.0 (foto Flickr); etichette CC BY 4.0 (Google) | 1 | 2,000 | 2,000 | 609 |
 
 L'elenco completo delle fonti di "altro" è in `ml/reports/altro-sources.md`.

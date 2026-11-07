@@ -47,7 +47,7 @@ Useful options: `fetch --only bellis-perennis taraxacum` (a few classes, written
 ## How observations are chosen
 
 For each class of `catalog/species.json` (taxa from `inatTaxonIds`), observations are taken newest
-first through ordered *tiers* until `target_max` (800) is reached:
+first through ordered *tiers* until `target_max` (500) is reached:
 
 1. **Geography:** Italy, then Europe without Italy, then the rest of the world. The queries never overlap.
 2. **Identification:** research grade first. Group/genus classes also take observations identified only
@@ -80,6 +80,10 @@ The resolved list (which taxa, how many observations) is written to
 [`reports/altro-sources.md`](reports/altro-sources.md) by every full `fetch`.
 
 ## Outputs (`ml/data/`, git-ignored)
+
+The data belongs in the main checkout, `C:\Users\jjarb\floradeck\ml\data\` (the default when running from
+there). From a git worktree, pass `--data-dir C:\Users\jjarb\floradeck\ml\data`: worktrees are deleted with
+their session, and the images would go with them.
 
 | Path | Content |
 |---|---|

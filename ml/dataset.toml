@@ -30,7 +30,8 @@ not_in_place = 97391
 
 [classes]
 target_min = 300              # widen the search (Europe, world, relaxed caps) until this many observations
-target_max = 800              # never more than this many observations per class
+target_max = 500              # never more than this many (800 would mean ~33 GB instead of ~22 GB to download;
+                              # the 500 selection is a prefix of the 800 one, so raising it later only adds photos)
 max_per_observer = 20         # observations per observer and class; relaxed only below target_min
 photos_per_observation = 1    # the observer's main photo
 photos_per_observation_low = 2  # for classes that stay below target_min
