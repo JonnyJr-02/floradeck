@@ -83,14 +83,14 @@ Download, pulizia ed export girano in locale su CPU: la GPU del PC (MX130, 2 GB)
 |---|---|---|
 | 0 | Setup, piano, `CLAUDE.md`, repository | ✅ 2026-11-06 |
 | 1 | Catalogo: album + lista specie in un file → validazione → `species.json`, schema, foglio di verifica con link (Portale della Flora d'Italia, Acta Plantarum, POWO) | ✅ 2026-11-06; i testi restano da verificare con `catalog/review/index.html` |
-| 2 | Design: `impeccable teach`, 3 mockup statici (2 Impeccable, 1 Taste) → scelta | mockup pronti il 2026-11-06 in `docs/mockups/` (aprire `index.html`), in attesa della scelta |
+| 2 | Design: `impeccable teach`, 3 mockup statici (2 Impeccable, 1 Taste) → scelta | ✅ 2026-11-07: scelta la proposta C «Foto in primo piano» (Taste skill), in `docs/mockups/taste/` |
 | 3 | Scheletro PWA: navigazione, temi, font offline, Dexie, offline, guida all'installazione, avviso iOS, deploy | anche skill `mobile-native` |
 | 4 | Fotocamera + mock + scatto → carta → collezione, animazione di spacchettamento | |
 | 5 | Album, rarità, doppioni, copertina, diario, "In fiore questo mese", celebrazioni, carta leggendaria, **backup** | backup anticipato: su iPhone serve appena si inizia a collezionare |
 | 6 | Pipeline ML, notebook Colab, valutazione, export | gli script partono subito dopo la fase 1, in parallelo alla UI |
 | 7 | Modello vero nell'app, calibrazione, test su foto reali | |
 | 8 | Profili, regali, funzioni di coppia; backend facoltativo | |
-| 9 | Rifinitura (audit/polish, review animazioni), test sui telefoni, sfide settimanali, APK Capacitor facoltativo | |
+| 9 | Rifinitura (controlli finali di design e accessibilità, review animazioni), test sui telefoni, sfide settimanali, APK Capacitor facoltativo | |
 
 Siamo a novembre: fino a marzo i test sul campo si potranno fare quasi solo con bacche e piante da giardino o balcone; per il resto si useranno foto di test.
 
@@ -109,6 +109,7 @@ Siamo a novembre: fino a marzo i test sul campo si potranno fare quasi solo con 
 - **2026-11-06 — catalogo più grande, su richiesta:** 10 album da 20–30 specie (circa 260) più la leggendaria, invece di 8 album da 10–12. Nuovi album: *Orchidee spontanee* (tutte le orchidee del catalogo stanno qui) e *Orto, frutteto ed erbe aromatiche*. Resta una sola specie rara per album.
   - Effetto sul modello: dimensione e tempi non cambiano (cresce solo l'ultimo strato), ma con ~260 classi l'accuratezza attesa scende. Stima rivista: 82–90 % top-1 e 93–97 % top-3 su foto in stile iNaturalist. Dopo l'analisi delle confusioni (fase 6) le classi che il modello confonde si accorpano a livello di gruppo/genere o si sostituiscono.
   - Effetto sui dati: circa 170 000 foto (~10 GB a 500 px), da scaricare in qualche ora nei limiti chiesti da iNaturalist; training su Colab di diverse ore, con checkpoint su Drive.
+- **2026-11-07 — direzione di design: proposta C «Foto in primo piano».** La Taste skill diventa la skill di design principale al posto di Impeccable. È pensata per i siti web, quindi per l'app se ne usano i token (Fraunces + Figtree, angoli arrotondati, avorio e blu notte con un solo accento rosso papavero) e le regole generali. Dove contrasta con la specifica o con le regole di lavoro vincono queste: animazioni con le skill di Emil Kowalski, controlli con Playwright, effetto olografico della carta leggendaria quando si inclina il telefono. Come chiede la specifica, alla direzione C vanno ancora aggiunte la leggera texture di carta, la cornice in foglia d'oro per le rare e l'olografico per la leggendaria. I mockup A e B restano in `docs/mockups/` solo come riferimento.
 
 ## Punti aperti
 

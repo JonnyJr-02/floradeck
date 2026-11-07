@@ -25,10 +25,11 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 
 ## Skills and MCP
 
-- **Design:** `impeccable` (v4.8) is the main design skill for all UI work except motion. `/teach-impeccable` is now `impeccable teach` (alias of `init`, writes PRODUCT.md). Its Windows launcher (`.claude/skills/impeccable/scripts/impeccable.cmd`) runs an engine binary downloaded on 2026-11-06 with the user's OK; ask again before any new download. Run its critique/audit/polish at the end of every UI phase.
+- **Design:** `design-taste-frontend` (tasteskill 2.5) is the main design skill for all UI work except motion, since the user picked its mockup C on 2026-11-07. It is written for websites, so for the app take its tokens and type pairing (`docs/mockups/taste/style.css`: Fraunces + Figtree, round radius, ivory / midnight blue with one poppy-red accent), its one-system rules (one button pair, one card style, one radius scale, one link look, two boxes deep at most, one heading scale, text contrast), equal edges, real photographs, and no violet or lavender as a design colour (flower photos keep theirs). Its website-only parts (page kinds, dealers, hero and one section per screen, no labels under pictures, footer credits, `consistency.mjs`) do not apply to app screens. Where it clashes with the user's rules, the user's rules win: motion follows Emil's skills, not Taste's motion layer or hover rules; checks use the Playwright MCP; the legendary card keeps the spec's tilt-driven holographic effect despite Taste's no-tilt rule.
+- **Impeccable** (v4.8) is retired from design work. `PRODUCT.md` stays as product context. Do not run its critique/audit/polish on the Taste direction (two general design skills with different rules): end-of-phase design checks are Taste's checklist where it fits an app, the Playwright checks and accessibility tests; ask the user before bringing Impeccable back. Its launcher `.claude/skills/impeccable/scripts/impeccable.cmd` uses an engine binary downloaded on 2026-11-06 with the user's OK.
 - **Motion:** Emil Kowalski's skills only (`animate`, `choreograph`, `apple-design`, `animation-performance`, `emil-design-eng`). Do not use Impeccable's `animate` command (overlapping rules). Also `mobile-native` for native feel on phones, `break-ui` for worst-case data.
 - `review-animations`, `prototype` and `pick-ui-library` cannot be model-invoked. Before closing a phase with animations: ask the user to run `/review-animations`, or read `.claude/skills/review-animations/SKILL.md` and `STANDARDS.md` and apply them, saying so.
-- `design-taste-frontend`: only for one of the phase-2 mockups. If the user picks that direction, it replaces Impeccable as the main design skill. Never combine two general design skills with conflicting rules: ask.
+- Never combine two general design skills with conflicting rules: ask.
 - State in one line which skill is in use at every UI step.
 - **Playwright MCP** (`.mcp.json`, verified 2026-11-06): after every UI change check 390×844 and 360×800, light and dark; fix visual issues; also test WebKit. Real camera and real iOS cannot be tested here: give the user a manual checklist. Screenshots land in `.playwright-mcp/` (git-ignored).
 - Skills are installed per project in `.claude/skills/` (sources and hashes in `skills-lock.json`); that folder is git-ignored like a dependency folder.
@@ -48,7 +49,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 - **Location:** opt-in only, rounded to ~1 km, nearest comune computed offline (ISTAT list).
 - **Gifts and couple:** serverless first. A gift is a link with the payload in the URL fragment (or a `.floradeck` file): species id, compressed photo (~15–20 KB), date, sender, message, unique `giftId`. On iPhone the link opens in Safari, whose storage is separate from the Home-screen app → bridge "Copia regalo" → "Incolla regalo". QR codes for pairing and progress snapshots (≈3 KB max, no photos). The duplicate leaves the sender's collection when the gift is created (resend = same `giftId`); the receiver stores imported `giftId`s, also in backups. Partner albums are read-only snapshots; the couple album is the union. Optional backend in phase 8 (Supabase free pauses idle projects; also evaluate Cloudflare Workers + D1).
 - **Order:** backup export/import moved to phase 5; ML scripts start right after phase 1 and run in parallel with the UI phases (the user runs Colab training); weekly challenges in phase 9.
-- **Design (phase 2):** `PRODUCT.md` holds the product context for Impeccable (users, purpose, principles, accessibility). The app is a surprise for the partner: the first opening should feel like a present. Three code-led mockups in `docs/mockups/`, each with the same three screens (new card, album, unsure camera) in light and dark: A "Tavola" (Impeccable's assigned direction, seed:5b4c644d814e5e2d), B "Figurina" (Impeccable's pick), C "Foto in primo piano" (Taste). The user picks in chat from the built mockups instead of Impeccable's decision page. After the pick: send Impeccable's concept-seed telemetry for the chosen card kind, write the direction contract into the surface brief, and write DESIGN.md when the design system lands in phase 3.
+- **Design (phase 2, closed 2026-11-07):** the user picked mockup C "Foto in primo piano" (`docs/mockups/taste/`): full-bleed photo with a rounded bottom edge, Fraunces titles and Figtree text, pill buttons and chips, rounded tiles, album filter chips (Tutte / Trovate / Da trovare / In fiore ora), the rare slot as an accent ring with a "Rara" pill, "Non sono sicuro" as a bottom sheet over the camera. Still to add to C because the spec asks for them: light paper texture, gold-leaf border for rare cards, light holographic legendary card. Known risk of C: it can feel like any recognition app, so the game feel must come from motion (card unpacking, slot filling, petal confetti) and from the rarity treatments. Mockups A "Tavola" and B "Figurina" (Impeccable) stay in `docs/mockups/` as references only. `PRODUCT.md` holds the product context (users, purpose, principles, accessibility). The app is a surprise for the partner: the first opening should feel like a present.
 
 ## Phases
 
@@ -56,14 +57,14 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 |---|---|---|
 | 0 | Setup, plan, CLAUDE.md, repo | ✅ 2026-11-06 |
 | 1 | Catalog: albums + species list → user validates → `species.json`, schema, review sheet; iNat photo counts per species | ✅ 2026-11-06 (texts still to verify) |
-| 2 | Design: `impeccable teach`, 3 static mockups (2 Impeccable, 1 Taste) → user picks | mockups ready 2026-11-06, waiting for the pick |
-| 3 | PWA skeleton: nav, themes, offline fonts, Dexie, offline, install guide + iOS warning, deploy | |
+| 2 | Design: `impeccable teach`, 3 static mockups (2 Impeccable, 1 Taste) → user picks | ✅ 2026-11-07: direction C (Taste) |
+| 3 | PWA skeleton: nav, themes, offline fonts, Dexie, offline, install guide + iOS warning, deploy | next |
 | 4 | Camera + mock recognizer + shot → card → collection, unpacking animation | |
 | 5 | Albums, rarity, duplicates, cover photo, diary, "In fiore questo mese", celebrations, legendary card, backup | |
 | 6 | ML pipeline, Colab notebook, evaluation, ONNX export (scripts start after phase 1) | |
 | 7 | Real model in the app, threshold calibration, tests on real photos | |
 | 8 | Profiles, gifts, couple features; optional backend | |
-| 9 | Polish (Impeccable audit/polish, animation review), device tests, weekly challenges, optional Capacitor APK | |
+| 9 | Polish (Taste checklist, accessibility, animation review), device tests, weekly challenges, optional Capacitor APK | |
 
 ## Commands
 
@@ -104,6 +105,6 @@ floradeck/
 ├─ .claude/skills/   project skills (git-ignored)
 ├─ .mcp.json         Playwright MCP
 ├─ skills-lock.json  skill sources and hashes
-├─ PRODUCT.md        product context for Impeccable (users, purpose, principles)
+├─ PRODUCT.md        product context (users, purpose, principles), written with Impeccable
 └─ CLAUDE.md
 ```
