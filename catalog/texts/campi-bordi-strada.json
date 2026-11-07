@@ -65,8 +65,7 @@
     "habitat": "Campi, vigneti, oliveti e incolti, soprattutto al Centro-Sud",
     "sizeNote": "Capolino 1–2 cm",
     "description": "Piccoli capolini arancio intenso che punteggiano campi e vigneti anche in pieno inverno. I frutti, curvi e uncinati, sembrano minuscoli artigli.",
-    "funFact": "Il nome Calendula viene dalle calende, il primo giorno del mese: si diceva che fiorisse a ogni inizio di mese.",
-    "lookalikes": ["calendula-officinalis"]
+    "funFact": "Il nome Calendula viene dalle calende, il primo giorno del mese: si diceva che fiorisse a ogni inizio di mese."
   },
   "gladiolus-italicus": {
     "habitat": "Campi di cereali, prati e incolti, soprattutto al Centro-Sud",
@@ -197,7 +196,13 @@
     "protected": null,
     "protectionNote": "Tutelato in diverse regioni: da verificare.",
     "toxic": true,
-    "toxicNote": "Bulbo tossico.",
-    "lookalikes": ["tulipa-gesneriana"]
+    "toxicNote": "Bulbo tossico."
+  },
+  "borago-officinalis": {
+    "habitat": "Campi, incolti, bordi delle strade e orti",
+    "sizeNote": "Fiore 2–2,5 cm",
+    "description": "Fiori a stella blu intenso con un cono di antere nere al centro, pendenti da una pianta ruvida e pelosa. Spesso nasce da sola negli orti.",
+    "funFact": "Il nettare dei suoi fiori si riforma in pochi minuti: per le api è una delle piante più preziose.",
+    "lookalikes": ["anchusa-azurea"]
   }
 }
