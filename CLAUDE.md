@@ -60,7 +60,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 | 3 | PWA skeleton: nav, themes, offline fonts, Dexie, offline, install guide + iOS warning, deploy | |
 | 4 | Camera + mock recognizer + shot → card → collection, unpacking animation | |
 | 5 | Albums, rarity, duplicates, cover photo, diary, "In fiore questo mese", celebrations, legendary card, backup | |
-| 6 | ML pipeline, Colab notebook, evaluation, ONNX export (scripts start after phase 1) | 6a dataset pipeline ✅ 2026-11-06 (download waits for the user's OK) |
+| 6 | ML pipeline, Colab notebook, evaluation, ONNX export (scripts start after phase 1) | 6a dataset ✅ 2026-11-07: 147,931 images (262 classes) in `ml/data/dataset.csv`; 6b Colab training next |
 | 7 | Real model in the app, threshold calibration, tests on real photos | |
 | 8 | Profiles, gifts, couple features; optional backend | |
 | 9 | Polish (Impeccable audit/polish, animation review), device tests, weekly challenges, optional Capacitor APK | |
