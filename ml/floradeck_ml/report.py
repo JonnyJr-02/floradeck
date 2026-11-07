@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+import re
 from collections import defaultdict
 from typing import Any
 
@@ -55,6 +56,22 @@ def _uncertainty(images: int, stats: dict[str, Any] | None) -> float:
     return 2.0 * images * stats["stdev"] / math.sqrt(stats["sample"])
 
 
+def _skip_reason_it(reason: str) -> str:
+    """plan.json keeps the English reason; the report speaks Italian."""
+    if reason.startswith("already inside catalogue class "):
+        return "è già compreso nella classe " + ", ".join(
+            f"`{name.strip()}`" for name in reason.removeprefix("already inside catalogue class ").split(",")
+        )
+    if reason == "not found on iNaturalist":
+        return "non trovato su iNaturalist"
+    return reason
+
+
+def _shared(selection: dict[str, Any]) -> int:
+    match = re.search(r"(\d+) observations already used by another class", selection.get("note") or "")
+    return int(match.group(1)) if match else 0
+
+
 def _flags(selection: dict[str, Any]) -> str:
     flags = []
     if selection["belowMin"]:
@@ -73,6 +90,9 @@ def _flags(selection: dict[str, Any]) -> str:
     exact = sum(n for q, n in quality.items() if q.endswith("-level"))
     if exact:
         flags.append(f"{exact} identificate solo al genere/gruppo")
+    shared = _shared(selection)
+    if shared:
+        flags.append(f"{shared} già usate da un'altra classe (foto o osservazione condivisa)")
     return "; ".join(flags)
 
 
@@ -147,7 +167,8 @@ def render_report(doc: dict[str, Any]) -> str:
     lines += ["", "## Da tenere d'occhio", ""]
     if below:
         lines.append(
-            f"- **{len(below)} classi sotto {target_min} osservazioni** (candidate ad accorpamento o sostituzione dopo "
+            f"- **{len(below)} {'classe' if len(below) == 1 else 'classi'} sotto {target_min} osservazioni** "
+            "(da accorpare o sostituire, se serve, dopo "
             "l'analisi delle confusioni): "
             + ", ".join(f"`{s['key']}` ({s['observations']})" for s in sorted(below, key=lambda r: r["observations"]))
             + "."
@@ -172,7 +193,13 @@ def render_report(doc: dict[str, Any]) -> str:
         lines.append(f"- Tassonomia: {problem}.")
     skipped = [a for a in doc.get("altroSources") or [] if a["skipReason"]]
     for item in skipped:
-        lines.append(f"- Sosia `{item['name']}` escluso da \"altro\": {item['skipReason']}.")
+        lines.append(f"- Sosia `{item['name']}` escluso da \"altro\": {_skip_reason_it(item['skipReason'])}.")
+    shared = [s for s in catalog if _shared(s)]
+    if shared:
+        lines.append(
+            f"- {sum(_shared(s) for s in shared)} osservazioni compaiono in due classi (la stessa foto in due osservazioni, "
+            "o un'identificazione cambiata fra due richieste): restano solo nella prima classe, in ordine di catalogo."
+        )
 
     lines += [
         "",
@@ -240,7 +267,14 @@ def render_altro_sources(doc: dict[str, Any]) -> str:
     for item in lookalikes:
         selection = selections.get(f"lookalike/{item['name']}")
         taxon = f"[{item['inatName']}](https://www.inaturalist.org/taxa/{item['taxonId']})" if item["taxonId"] else "—"
-        note = item["skipReason"] or (f"esclude {len(item['exclude'])} taxa del catalogo" if item["exclude"] else "")
+        notes = []
+        if item["skipReason"]:
+            notes.append(_skip_reason_it(item["skipReason"]))
+        if item["inatName"] and item["inatName"] != item["name"]:
+            notes.append(f"su iNaturalist è {item['inatName']}")
+        if item["exclude"]:
+            notes.append(f"esclude {len(item['exclude'])} taxa del catalogo")
+        note = "; ".join(notes)
         lines.append(
             f"| {item['name']} | {taxon} | {item['rank']} | {', '.join(item['listedBy'])} | "
             f"{selection['observations'] if selection else 0} | {note} |"

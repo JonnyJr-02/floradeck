@@ -21,7 +21,7 @@ All commands below run from the repository root.
 
 ```powershell
 # 1. Dry run: select observations (iNaturalist API, cached), estimate the download, write the report.
-#    No image is downloaded. About 3,000 API requests the first time (~1.5 h), seconds afterwards.
+#    No image is downloaded. About 2,400 API requests the first time (1–1.5 h), seconds afterwards.
 ml\.venv\Scripts\python -m floradeck_ml fetch --dry-run
 
 # 2. Full run: the same selection (from the cache), then the download (resumable; ~5 GB/hour cap).
