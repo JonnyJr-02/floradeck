@@ -176,6 +176,35 @@ def cmd_clean(args: argparse.Namespace, settings: Settings, paths: DataPaths) ->
     return 0
 
 
+def cmd_pack(args: argparse.Namespace, settings: Settings, paths: DataPaths) -> int:
+    from .pack import OutOfSpace, pack
+
+    if not paths.dataset.exists():
+        _log(f"No dataset at {paths.dataset}: run `python -m floradeck_ml clean` first.")
+        return 1
+    out = Path(args.out) if args.out else paths.root / "kaggle"
+    _log(f"Packing {paths.dataset} for Kaggle into {out}")
+    try:
+        result = pack(
+            paths.root,
+            CATALOG_SPECIES,
+            out,
+            excluded_per_class=args.excluded_per_class,
+            shard_gb=args.shard_gb,
+            seed=settings.split.seed,
+            max_classes=args.max_classes,
+            sample=args.sample,
+            images=not args.no_images,
+            short_side=args.short_side or None,
+            log=_log,
+        )
+    except OutOfSpace as err:
+        _log(f"Stopped: {err}. Free some space (or pass --out on another drive) and run pack again.")
+        return 2
+    _log(f"Wrote {result['rows']:,} images, {result['classes']} classes, {result['shards']} zip shards to {out}")
+    return 1 if result["empty"] else 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="python -m floradeck_ml", description="FloraDeck dataset pipeline")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG, help="settings file (default: ml/dataset.toml)")
@@ -206,6 +235,18 @@ def build_parser() -> argparse.ArgumentParser:
     clean.add_argument("--manifest", help="manifest file (default: data/manifest/selection.jsonl)")
     clean.add_argument("--workers", type=int, help="hashing processes (default: one per core)")
     clean.set_defaults(handler=cmd_clean)
+
+    pack = commands.add_parser("pack", help="bundle dataset.csv and the images for a Kaggle dataset")
+    pack.add_argument("--out", help="output folder (default: data/kaggle)")
+    pack.add_argument("--excluded-per-class", type=int, default=100,
+                      help="images of each species removed from the catalogue that become altro (default 100)")
+    pack.add_argument("--shard-gb", type=float, default=2.0, help="size of each image zip (default 2 GB)")
+    pack.add_argument("--max-classes", type=int, help="only the first N catalogue classes (quick tests)")
+    pack.add_argument("--sample", type=int, help="at most N images per class and split (quick tests)")
+    pack.add_argument("--short-side", type=int, default=320,
+                      help="shrink images to this short side in pixels (default 320; 0 keeps them as they are)")
+    pack.add_argument("--no-images", action="store_true", help="write the tables only, no zip")
+    pack.set_defaults(handler=cmd_pack)
     return parser
 
 

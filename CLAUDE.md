@@ -20,7 +20,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 - Windows 11, PowerShell (ExecutionPolicy RemoteSigned); Git Bash also available. If `npx` misbehaves, use `npx.cmd`.
 - Node 26.13, npm 11.20, git 2.56 (identity configured globally). No `gh` CLI.
 - Python: use `py -3.13` (plain `python` is 3.9).
-- GPU: GeForce MX130 2 GB, not usable for training. Training runs on Google Colab (free T4); download, cleaning and ONNX export run locally on CPU.
+- GPU: GeForce MX130 2 GB, not usable for training. Training, evaluation and ONNX export run in a Kaggle notebook (free T4, chosen over Colab on 2026-11-07: the ~9 GB dataset would fill a free Drive); download, cleaning and packing run locally on CPU.
 - Google Chrome is installed (Playwright MCP default browser). No Playwright-managed browsers yet: downloading WebKit needs the user's OK.
 
 ## Skills and MCP
@@ -37,10 +37,10 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 
 - **Stack:** Vite + React + TS, Tailwind CSS v4, Motion (ex Framer Motion), Dexie + `navigator.storage.persist()`, vite-plugin-pwa (Workbox), ONNX Runtime Web in a Web Worker (WASM-SIMD by default; WebGPU only if benchmarks justify it), Vitest + fake-indexeddb, Playwright Test (Android/Chromium and iPhone/WebKit projects).
 - **Hosting:** GitHub Pages via GitHub Actions, public repo (user's GitHub account still to confirm before phase 3). Fallback: Cloudflare Pages.
-- **Catalog:** 10 albums × 20–30 species (about 260; the user changed this from 8 × 10–12 on 2026-11-06), exactly 1 rare per album, plus 1 secret legendary species (Cypripedium calceolus). Albums added: "Orchidee spontanee" and "Orto, frutteto ed erbe aromatiche"; all orchids live in the orchid album. Species widespread across Italy (user's region unknown). `catalog/` is the single source of truth: schema-validated, read by `ml/`, imported by the app at build time.
+- **Catalog:** 8 albums × 20–30 species (210), exactly 1 rare per album, plus 1 secret legendary species (Cypripedium calceolus); all orchids live in the "Orchidee spontanee" album. Only colourful wild flowers and plants (flowers or bright berries) that catch the eye on walks and hikes: on 2026-11-07 the user dropped the "Giardini, parchi e balconi" and "Orto, frutteto ed erbe aromatiche" albums (borage and rosemary moved to wild albums). History: 8 × 10–12 → 10 × 20–30 (2026-11-06) → 8 × 20–30 wild (2026-11-07). Species widespread across Italy (user's region unknown). `catalog/` is the single source of truth: schema-validated, read by `ml/`, imported by the app at build time.
 - **Catalog data:** `species.json` is generated, never edited by hand. Months (`bloomMonths`, with `phenology` flowering/fruiting), `regions` (north/centre/south shares corrected for observer density), `altitude` (5th–95th percentile of EU-DEM elevations at iNaturalist observation points; wild species only) and `family` come from data. Habitat, size, description, fun fact and safety flags are hand-written in `catalog/texts/<album>.json` and stay `textStatus: "da-verificare"` until the user ticks them in the review page. `protected`: true = legally protected, null = possibly protected in some regions (to verify), false = no. `toxic`: true shows a warning; false only means no warning, the app never claims a plant is edible. "Fotografala, non raccoglierla" is shown for every non-cultivated species, stronger for protected ones.
 - **Illustrations:** public-domain botanical plates (Thomé, Sturm, Köhler, Curtis's Botanical Magazine, Sibthorp) from Wikimedia Commons/BHL, with attributions; empty-slot silhouettes derived by script.
-- **ML:** approach A: fine-tune a mobile CNN with timm (bake-off: MobileNetV4-M, EfficientNet-B0, ConvNeXt-Nano) on catalog species plus an "altro" class. The model also outputs its penultimate embedding for a prototype-distance OOD score (idea from approach C). Targets: < 30 MB, < 2 s, top-1 ≥ 85 %, top-3 ≥ 95 % on the catalog test set. With ~260 classes these targets are tight: after the phase-6 confusion analysis, merge confusable classes to group/genus level or swap them. Species whose card covers flowers and fruits (e.g. Punica) train on both phases.
+- **ML:** approach A: fine-tune a mobile CNN with timm (bake-off: MobileNetV4-M, EfficientNet-B0, ConvNeXt-Nano) on catalog species plus an "altro" class. The model also outputs its penultimate embedding for a prototype-distance OOD score (idea from approach C). Targets: < 30 MB, < 2 s, top-1 ≥ 85 %, top-3 ≥ 95 % on the catalog test set. With ~210 classes these targets are tight: after the phase-6 confusion analysis, merge confusable classes to group/genus level or swap them. Species removed from the catalogue keep 100 images each in "altro" (`altro/excluded`), so the app says "not in the catalogue" for garden and vegetable plants.
 - **Data:** iNaturalist research grade, CC0/CC-BY/CC-BY-NC, Italy first then Europe, prefer phenology annotations (flowering/fruiting); attributions CSV. Split by observation; test set also grouped by observer. No hue jitter in augmentation (colour is the key feature). Cultivated plants are always "casual" on iNaturalist, so garden species need casual observations too; genus/group classes can also use observations identified only to genus.
 - **Dataset selection (phase 6a, `ml/`):** per class, newest first, Italy → Europe → world; research grade, plus community-agreed genus/group-level IDs (group/genus classes) and captive casual (cultivated); annotated phase first, then unannotated from `bloomMonths`; 300–500 observations (800 until 2026-11-07, lowered by the user to cut the download; the 500 selection is a prefix of the 800 one, so raising it later only adds photos), ≤ 20 per observer; 1 photo per observation (2 below 300). Recent iNaturalist "medium" files are JPEG quality ~100 (~145 KB on average), so downloads are re-encoded at quality 90. Dry run of 2026-11-07: 148k images, ~22 GB to download (~4.4 h at 5 GB/h), ~9 GB stored; only `crocus-sativus` stays below 300 observations. Data lives in the main checkout, `C:\Users\jjarb\floradeck\ml\data\` (git-ignored), never in a worktree (worktrees get deleted): from a worktree pass `--data-dir C:\Users\jjarb\floradeck\ml\data`. "Altro" = lookalikes + 300 common Italian plants + catalogue species without flowers/fruits + non-plant iNaturalist taxa + Open Images scenes without plants (CC BY 2.0).
 - **Calibration:** temperature scaling; threshold from a risk–coverage curve on in- and out-of-catalog validation data. Parity test checks model and preprocessing separately. `ml/` exports `labels.json` plus metadata (temperature, thresholds, normalisation, version): no hard-coded constants in the app.
@@ -48,7 +48,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 - **Photos:** long side 1080 px; WebP when the browser can encode it, else JPEG (runtime check); separate thumbnail.
 - **Location:** opt-in only, rounded to ~1 km, nearest comune computed offline (ISTAT list).
 - **Gifts and couple:** serverless first. A gift is a link with the payload in the URL fragment (or a `.floradeck` file): species id, compressed photo (~15–20 KB), date, sender, message, unique `giftId`. On iPhone the link opens in Safari, whose storage is separate from the Home-screen app → bridge "Copia regalo" → "Incolla regalo". QR codes for pairing and progress snapshots (≈3 KB max, no photos). The duplicate leaves the sender's collection when the gift is created (resend = same `giftId`); the receiver stores imported `giftId`s, also in backups. Partner albums are read-only snapshots; the couple album is the union. Optional backend in phase 8 (Supabase free pauses idle projects; also evaluate Cloudflare Workers + D1).
-- **Order:** backup export/import moved to phase 5; ML scripts start right after phase 1 and run in parallel with the UI phases (the user runs Colab training); weekly challenges in phase 9.
+- **Order:** backup export/import moved to phase 5; ML scripts start right after phase 1 and run in parallel with the UI phases (the user runs the Kaggle training); weekly challenges in phase 9.
 
 ## Phases
 
@@ -60,7 +60,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 | 3 | PWA skeleton: nav, themes, offline fonts, Dexie, offline, install guide + iOS warning, deploy | |
 | 4 | Camera + mock recognizer + shot → card → collection, unpacking animation | |
 | 5 | Albums, rarity, duplicates, cover photo, diary, "In fiore questo mese", celebrations, legendary card, backup | |
-| 6 | ML pipeline, Colab notebook, evaluation, ONNX export (scripts start after phase 1) | 6a dataset ✅ 2026-11-07: 147,931 images (262 classes) in `ml/data/dataset.csv`; 6b Colab training next |
+| 6 | ML pipeline, Kaggle notebook, evaluation, ONNX export (scripts start after phase 1) | 6a dataset ✅ 2026-11-07 (147,931 images); 6b Kaggle pack + notebook ready 2026-11-07, the user runs the training |
 | 7 | Real model in the app, threshold calibration, tests on real photos | |
 | 8 | Profiles, gifts, couple features; optional backend | |
 | 9 | Polish (Impeccable audit/polish, animation review), device tests, weekly challenges, optional Capacitor APK | |
@@ -81,6 +81,8 @@ ML dataset (Python 3.13 venv in `ml/.venv`, Pillow + numpy; run from the repo ro
 - `ml\.venv\Scripts\python -m floradeck_ml fetch --dry-run`: select iNaturalist observations for every class and "altro" (API cached in `ml/data/cache/`, ~1 request/s), estimate the download, write `ml/reports/dataset-plan.md` and `ml/reports/altro-sources.md`; downloads no image. `--only <class> ...` for a few classes.
 - `ml\.venv\Scripts\python -m floradeck_ml fetch`: the same selection, then the resumable download (≤ 5 GB/hour, ≤ 24 GB per run) and `ml/data/attributions.csv`; `... download` resumes from the manifest.
 - `ml\.venv\Scripts\python -m floradeck_ml clean`: decode check, size filter, pHash dedupe, observer-grouped split → `ml/data/dataset.csv`, `ml/data/classes.json`.
+- `ml\.venv\Scripts\python -m floradeck_ml pack`: bundle for the Kaggle dataset → `ml/data/kaggle/` (current catalogue order; removed species → altro; images shrunk to a 320 px short side, ~7 GB in ~2 GB uncompressed zips; stops before the disk fills). Rerun after any catalogue change.
+- `py -3.13 ml/kaggle/make_notebook.py`: regenerate `ml/kaggle/floradeck-train.ipynb` from `ml/kaggle/floradeck_train.py` (edit the .py). Kaggle steps and outputs: `ml/kaggle/README.md`.
 - `ml\.venv\Scripts\python -m unittest discover -s ml\tests`: dataset pipeline tests; `ml\.venv\Scripts\python -m ruff check ml` lints (dev extra: `pip install -e "ml[dev]"`).
 
 Dev, build, test and training commands are added here as each phase lands.
@@ -104,9 +106,10 @@ floradeck/
 │  ├─ review/          index.html (review page), status.json (user's checks)
 │  ├─ scripts/         stats, build, validate, review, tests
 │  └─ proposta-specie.md   the validated proposal (tables with data)
-├─ ml/               Python pipeline (phase 6): dataset now; train, eval, export and Colab notebook next
+├─ ml/               Python pipeline (phase 6): dataset, Kaggle pack, training notebook
 │  ├─ floradeck_ml/    dataset package and CLI (python -m floradeck_ml): selection, download, clean, split
 │  ├─ tests/           unit tests (unittest)
+│  ├─ kaggle/          training notebook (floradeck_train.py → .ipynb) and Kaggle instructions
 │  ├─ dataset.toml     dataset settings (targets, tiers, altro sources, rate limits, split)
 │  ├─ reports/         last full dry run: dataset-plan.md, altro-sources.md (generated)
 │  └─ data/            API cache, manifest, images, attributions.csv, dataset.csv (git-ignored)

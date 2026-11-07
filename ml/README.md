@@ -33,6 +33,9 @@ ml\.venv\Scripts\python -m floradeck_ml download
 # 3. Cleaning and split -> ml/data/dataset.csv
 ml\.venv\Scripts\python -m floradeck_ml clean
 
+# 4. Bundle for the Kaggle dataset -> ml/data/kaggle/ (training: kaggle/README.md)
+ml\.venv\Scripts\python -m floradeck_ml pack
+
 # Tests, and lint (ruff comes with the dev extra: pip install -e "ml[dev]")
 ml\.venv\Scripts\python -m unittest discover -s ml\tests
 ml\.venv\Scripts\python -m ruff check ml
