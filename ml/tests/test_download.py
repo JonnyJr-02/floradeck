@@ -1,6 +1,7 @@
 """The downloader against a local HTTP server: resume, failures, attributions."""
 
 import csv
+import errno
 import functools
 import http.server
 import io
@@ -9,6 +10,7 @@ import threading
 import unittest
 from dataclasses import replace
 from pathlib import Path
+from unittest import mock
 
 from helpers import observation, photo
 from PIL import Image
@@ -84,6 +86,39 @@ class DownloadTest(unittest.TestCase):
         self.assertEqual(first["path"], "images/bellis-perennis/1.jpg")
         self.assertEqual(first["license"], "cc-by")
         self.assertEqual(first["observation_url"], "https://www.inaturalist.org/observations/1")
+
+    def test_stops_when_the_disk_is_almost_full(self):
+        counts = self.run_download(disk_free=lambda path: 1_000_000_000)  # 1 GB < 2 GB floor
+        self.assertEqual((counts["ok"], counts.get("disk_full")), (0, 1))
+        self.assertEqual(list((self.data / "images").rglob("*.jpg")), [])
+
+    def test_leftover_part_files_are_removed(self):
+        folder = self.data / "images" / "bellis-perennis"
+        folder.mkdir(parents=True)
+        (folder / "1.jpg.part").write_bytes(b"")  # a write cut short by a killed run
+        self.run_download()
+        self.assertEqual(list(folder.glob("*.part")), [])
+        self.assertTrue((folder / "1.jpg").exists())
+
+    def test_a_full_disk_stops_the_run_and_leaves_no_partial_file(self):
+        def full_disk(dest, body, sleep):
+            dest.with_name(dest.name + ".part").write_bytes(b"")
+            raise OSError(errno.ENOSPC, "No space left on device")
+
+        with mock.patch("floradeck_ml.download._store", full_disk):
+            counts = self.run_download()
+        self.assertEqual((counts["ok"], counts.get("disk_full")), (0, 1))
+        self.assertEqual(list((self.data / "images").rglob("*.part")), [])
+
+    def test_other_write_errors_are_reported_and_retried_later(self):
+        def locked(dest, body, sleep):
+            raise PermissionError(13, "Access is denied")
+
+        with mock.patch("floradeck_ml.download._store", locked):
+            counts = self.run_download()
+        self.assertEqual((counts["ok"], counts["failed"]), (0, 3))
+        self.assertEqual(permanent_failures(self.data / "download-failures.csv"), {"3": "http-404"})
+        self.assertEqual(self.run_download()["ok"], 2, "write errors are not permanent: the next run retries them")
 
 
 if __name__ == "__main__":

@@ -80,6 +80,7 @@ workers = 8                   # parallel downloads; the byte-rate cap applies to
 timeout_s = 60.0
 retries = 4
 openimages_max_side = 500     # Open Images files are larger: resized to match iNaturalist "medium"
+min_free_gb = 2.0             # a run stops before the disk fills up
 jpeg_quality = 90             # recent iNaturalist "medium" files are JPEG quality ~100 (~180 KB): re-encode; 0 = keep as is
 
 [clean]

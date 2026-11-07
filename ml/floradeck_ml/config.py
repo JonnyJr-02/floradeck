@@ -100,6 +100,7 @@ class DownloadSettings:
     retries: int = 4
     openimages_max_side: int = 500
     jpeg_quality: int = 90
+    min_free_gb: float = 2.0
 
 
 @dataclass(frozen=True)

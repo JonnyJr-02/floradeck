@@ -107,6 +107,7 @@ def cmd_fetch(args: argparse.Namespace, settings: Settings, paths: DataPaths) ->
         retries=d.retries,
         openimages_max_side=d.openimages_max_side,
         jpeg_quality=d.jpeg_quality,
+        min_free_gb=d.min_free_gb,
         failures_path=paths.download_failures,
         log=_log,
     )
@@ -136,6 +137,7 @@ def cmd_download(args: argparse.Namespace, settings: Settings, paths: DataPaths)
         retries=d.retries,
         openimages_max_side=d.openimages_max_side,
         jpeg_quality=d.jpeg_quality,
+        min_free_gb=d.min_free_gb,
         failures_path=paths.download_failures,
         log=_log,
         limit=args.limit,

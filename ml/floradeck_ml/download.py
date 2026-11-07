@@ -9,13 +9,17 @@
   ``download-failures.csv`` and skipped.
 - Files are stored as JPEG, re-encoded at quality 90 when that saves space
   (``prepare_image``); the rate cap counts the bytes actually downloaded.
+- A run stops before the disk fills up (``min_free_gb``), and a file that cannot be
+  written is not kept as a half-written ``.part``; leftovers of a killed run are removed.
 """
 
 from __future__ import annotations
 
 import csv
+import errno
 import io
 import os
+import shutil
 import threading
 import time
 import urllib.error
@@ -25,12 +29,21 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, UnidentifiedImageError
 
 from .records import OPENIMAGES, Observation, Photo, image_path
 
 Log = Callable[[str], None]
 CHUNK = 64 * 1024
+ERROR_DISK_FULL = 112  # Windows: "There is not enough space on the disk"
+
+
+class DiskFull(OSError):
+    """The disk is full: stop the run, free some space, run again."""
+
+
+def is_disk_full(err: OSError) -> bool:
+    return err.errno == errno.ENOSPC or getattr(err, "winerror", None) == ERROR_DISK_FULL
 ATTRIBUTION_FIELDS = [
     "photo_id",
     "observation_id",
@@ -119,6 +132,28 @@ def prepare_image(data: bytes, *, max_side: int | None, quality: int) -> bytes:
     return encoded
 
 
+def _store(dest: Path, body: bytes, sleep: Callable[[float], None]) -> None:
+    """Write next to the target, then rename: a reader never sees a half-written file.
+
+    On Windows a just-written file can be briefly locked (antivirus, indexer), so the
+    rename is retried a few times.
+    """
+    temp = dest.with_name(dest.name + ".part")
+    try:
+        temp.write_bytes(body)
+        for attempt in range(5):
+            try:
+                os.replace(temp, dest)
+                return
+            except PermissionError:
+                if attempt == 4:
+                    raise
+                sleep(0.5 * (attempt + 1))
+    except OSError:
+        temp.unlink(missing_ok=True)
+        raise
+
+
 def fetch_one(
     job: Job,
     *,
@@ -130,12 +165,12 @@ def fetch_one(
     quality: int,
     sleep: Callable[[float], None] = time.sleep,
 ) -> tuple[str, int]:
-    """Download one file. Returns (status, bytes received)."""
+    """Download one file. Returns (status, bytes received); raises DiskFull."""
     if job.dest.exists():
         return "exists", 0
-    job.dest.parent.mkdir(parents=True, exist_ok=True)
     request = urllib.request.Request(job.photo.url, headers={"User-Agent": user_agent})
     received = 0
+    status = ""
     for attempt in range(retries + 1):
         try:
             data = bytearray()
@@ -144,22 +179,39 @@ def fetch_one(
                     data.extend(chunk)
                     received += len(chunk)
                     limiter.consume(len(chunk))
-            body = prepare_image(bytes(data), max_side=max_side, quality=quality)
-            temp = job.dest.with_name(job.dest.name + ".part")
-            temp.write_bytes(body)
-            os.replace(temp, job.dest)
-            return "ok", received
+            break
         except urllib.error.HTTPError as err:
             if err.code in (403, 404, 410):
                 return f"http-{err.code}", received
             status = f"http-{err.code}"
         except (urllib.error.URLError, ConnectionError, TimeoutError) as err:
             status = f"network: {err}"
-        except OSError as err:  # undecodable image while resizing
-            return f"bad-image: {err}", received
         if attempt < retries:
             sleep(5.0 * 2**attempt)
-    return status, received
+    else:
+        return status, received
+    try:
+        body = prepare_image(bytes(data), max_side=max_side, quality=quality)
+    except (UnidentifiedImageError, Image.DecompressionBombError, ValueError, SyntaxError, OSError) as err:
+        return f"bad-image: {err}", received
+    try:
+        job.dest.parent.mkdir(parents=True, exist_ok=True)
+        _store(job.dest, body, sleep)
+    except OSError as err:
+        if is_disk_full(err):
+            raise DiskFull(err.errno, f"disk full while writing {job.dest.name}") from err
+        return f"write-error: {err}", received
+    return "ok", received
+
+
+def remove_partial_files(images_dir: Path) -> int:
+    """``.part`` files are unfinished writes of a run that was killed: delete them."""
+    removed = 0
+    if images_dir.exists():
+        for path in images_dir.rglob("*.part"):
+            path.unlink(missing_ok=True)
+            removed += 1
+    return removed
 
 
 def download(
@@ -178,7 +230,13 @@ def download(
     log: Log = print,
     limit: int | None = None,
     retry_failed: bool = False,
+    min_free_gb: float = 2.0,
+    disk_free: Callable[[Path], int] | None = None,
 ) -> dict[str, int]:
+    disk_free = disk_free or (lambda path: shutil.disk_usage(path).free)
+    removed = remove_partial_files(images_dir)
+    if removed:
+        log(f"Removed {removed:,} unfinished .part files from an earlier run")
     jobs = jobs_for(observations, images_dir)
     missing = [job for job in jobs if not job.dest.exists()]
     gone = {} if retry_failed else permanent_failures(failures_path)
@@ -212,9 +270,16 @@ def download(
     batch = max(64, workers * 32)
     pool = ThreadPoolExecutor(max_workers=workers)
     try:
+        images_dir.mkdir(parents=True, exist_ok=True)
         for start in range(0, len(pending), batch):
             if counts["bytes"] >= daily_cap:
                 log(f"Daily cap of {max_gb_per_day:g} GB reached: run the command again tomorrow to continue.")
+                break
+            free = disk_free(images_dir)
+            if free < min_free_gb * 1e9:
+                log(f"Stopped: only {free / 1e9:.1f} GB free on the disk (floor {min_free_gb:g} GB). "
+                    "Free some space and run the command again: it resumes where it stopped.")
+                counts["disk_full"] = 1
                 break
             for job, status, size in pool.map(work, pending[start : start + batch]):
                 done += 1
@@ -231,11 +296,15 @@ def download(
                 f"  {done:,}/{len(pending):,} files, {counts['bytes'] / 1e9:.2f} GB, "
                 f"{speed / 1e6:.2f} MB/s, {counts['failed']} failed, about {remaining / 3600:.1f} h left"
             )
+    except DiskFull as err:
+        log(f"Stopped: {err}. Free some space and run the command again: it resumes where it stopped.")
+        counts["disk_full"] = 1
     except KeyboardInterrupt:
         log("Interrupted: finishing the files in progress; run the command again to resume.")
         counts["interrupted"] = 1
     finally:
         pool.shutdown(wait=True, cancel_futures=True)
+        remove_partial_files(images_dir)
         kept = [(job, gone[job.photo.id]) for job in missing if job.photo.id in gone]
         write_failures(failures_path, failures + kept)
     return counts
