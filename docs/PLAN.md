@@ -114,6 +114,6 @@ Siamo a novembre: fino a marzo i test sul campo si potranno fare quasi solo con 
 ## Punti aperti
 
 - Regione e zone frequentate, per affinare il catalogo (fase 1).
-- Nome utente GitHub ed email dei commit nel repo pubblico (prima del primo push). Il repo sarà leggibile da chiunque, compreso il fatto che l'app è una sorpresa (lo dice `PRODUCT.md`).
+- Nome utente GitHub (prima del primo push). L'email dei commit resta quella attuale (scelta del 2026-11-07). Il repo sarà leggibile da chiunque, compreso il fatto che l'app è una sorpresa (lo dice `PRODUCT.md`).
 - Modelli dei telefoni e versioni di Android/iOS.
 - Backend: da decidere nella fase 8, dopo aver ricontrollato i limiti gratuiti.
