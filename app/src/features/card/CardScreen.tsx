@@ -6,6 +6,8 @@ import { formatFoundDate } from '../../domain/collection'
 import { IconClose } from '../../ui/icons'
 import { IN_APP } from '../../ui/Page'
 import { PhotoThumb, usePhotoUrl } from '../../ui/PhotoThumb'
+import { GOLD_COLOURS, Petals } from '../albums/Petals'
+import { DeleteCard } from './DeleteCard'
 import { RarityFrame } from './RarityFrame'
 import { at, SpeciesSheet, SpeciesTitle } from './SpeciesSheet'
 
@@ -94,10 +96,11 @@ export function CardScreen() {
   }
 
   const duplicate = data.copies > 1
-  const albumHref = entry.albumId ? `/album/${entry.albumId}` : '/album'
+  const albumHref = `/album/${entry.albumId}`
 
   return (
     <main className={reveal ? 'card-view card-view--reveal' : 'card-view'} data-rarity={entry.rarity}>
+      {reveal && entry.rarity === 'legendary' && !duplicate ? <Petals colours={GOLD_COLOURS} /> : null}
       <RarityFrame rarity={entry.rarity} reveal={reveal}>
         {photoUrl ? (
           <img src={photoUrl} alt={`La tua foto: ${entry.commonNameIt}`} />
@@ -135,15 +138,15 @@ export function CardScreen() {
         </p>
 
         <div className="reveal-item mt-6 grid gap-2.5" style={at(6)}>
-          {reveal && entry.albumId ? (
+          {reveal ? (
             <Link href={albumHref} state={{ inApp: true, fill: entry.id }} replace className="btn press">
               Metti nell&apos;album
             </Link>
-          ) : entry.albumId ? (
+          ) : (
             <Link href={albumHref} state={IN_APP} className="btn press">
               Vai all&apos;album
             </Link>
-          ) : null}
+          )}
           <Link href="/" className="btn btn--ghost press">
             Scatta un&apos;altra foto
           </Link>
@@ -151,6 +154,7 @@ export function CardScreen() {
 
         <Copies speciesId={entry.id} currentId={data.card.id} />
         <SpeciesSheet entry={entry} />
+        <DeleteCard cardId={data.card.id} copies={data.copies} speciesName={entry.commonNameIt} albumHref={albumHref} />
       </section>
     </main>
   )

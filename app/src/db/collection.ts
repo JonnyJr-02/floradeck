@@ -138,3 +138,21 @@ export function useCardCountBy(recognizer: string): number {
 export function useSpeciesCards(speciesId: string): CardRecord[] | undefined {
   return useLiveQuery(() => defaultDb.cards.where('speciesId').equals(speciesId).sortBy('foundAt'), [speciesId])
 }
+
+/**
+ * Remove one card and its photo, as if it had never been found. If it was the species' chosen
+ * cover, the cover falls back to the oldest remaining card. Returns how many cards of the species
+ * are left.
+ */
+export async function deleteCard(id: string, database: FloraDeckDB = defaultDb): Promise<number> {
+  return database.transaction('rw', database.cards, database.photos, database.settings, async () => {
+    const card = await database.cards.get(id)
+    if (!card) return 0
+    if (card.photoId) await database.photos.delete(card.photoId)
+    await database.cards.delete(id)
+    const coverKey = `${COVER_PREFIX}${card.speciesId}`
+    const cover = await database.settings.get(coverKey)
+    if (cover && String(cover.value) === id) await database.settings.delete(coverKey)
+    return database.cards.where('speciesId').equals(card.speciesId).count()
+  })
+}

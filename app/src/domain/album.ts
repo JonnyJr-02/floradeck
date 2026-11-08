@@ -1,4 +1,4 @@
-import { species as allSpecies, type Species } from './catalog'
+import { inAlbum, species as allSpecies, type Species } from './catalog'
 import type { CardLike } from './collection'
 import { monthRuns } from './seasonality'
 
@@ -9,6 +9,8 @@ export interface AlbumCard extends CardLike {
 
 export interface Slot<C extends AlbumCard = AlbumCard> {
   species: Species
+  /** The card number in this album. */
+  number: number
   /** Every card of the species, oldest first. */
   cards: C[]
   /** The card whose photo stands for the species: the chosen cover, else the first one found. */
@@ -38,13 +40,17 @@ export function albumSlots<C extends AlbumCard>(
     bySpecies.set(card.speciesId, list)
   }
   return catalogue
-    .filter((entry) => entry.albumId === albumId)
-    .sort((a, b) => (a.number ?? 0) - (b.number ?? 0))
-    .map((entry) => {
+    .flatMap((entry) => {
+      const membership = inAlbum(entry, albumId)
+      return membership ? [{ entry, number: membership.number }] : []
+    })
+    .sort((a, b) => a.number - b.number)
+    .map(({ entry, number }) => {
       const found = bySpecies.get(entry.id) ?? []
       const chosen = covers.get(entry.id)
       return {
         species: entry,
+        number,
         cards: found,
         cover: found.find((card) => card.id === chosen) ?? found[0],
         inSeason: inSeason(entry, month),
@@ -70,7 +76,7 @@ export function duplicateCount(cards: readonly CardLike[]): number {
   return cards.length - new Set(cards.map((card) => card.speciesId)).size
 }
 
-/** Species of the albums still to find that flower (or fruit) this month, in album and card order. */
+/** Species still to find that flower (or fruit) this month, by their first album and card number. */
 export function missingInSeason(
   cards: readonly CardLike[],
   month: number,
@@ -79,10 +85,8 @@ export function missingInSeason(
 ): Species[] {
   const owned = new Set(cards.map((card) => card.speciesId))
   return catalogue
-    .filter((entry) => entry.albumId !== null && !owned.has(entry.id) && inSeason(entry, month))
-    .sort(
-      (a, b) => albumOrder(a.albumId ?? '') - albumOrder(b.albumId ?? '') || (a.number ?? 0) - (b.number ?? 0),
-    )
+    .filter((entry) => !owned.has(entry.id) && inSeason(entry, month))
+    .sort((a, b) => albumOrder(a.albumId) - albumOrder(b.albumId) || a.number - b.number)
 }
 
 const SHORT_MONTHS = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'] as const

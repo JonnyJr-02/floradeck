@@ -12,7 +12,7 @@ import {
 } from '../../domain/album'
 import { albumById } from '../../domain/catalog'
 import { plateUrl } from '../../domain/plates'
-import { IconBack } from '../../ui/icons'
+import { IconBack, IconLock } from '../../ui/icons'
 import { IN_APP } from '../../ui/Page'
 import { PhotoThumb } from '../../ui/PhotoThumb'
 import { Petals } from './Petals'
@@ -62,7 +62,7 @@ function SlotImage({ slot, photos }: { slot: Slot<CardRecord>; photos: Map<strin
   return url ? (
     <img className="tile__plate" src={url} alt="" loading="lazy" decoding="async" />
   ) : (
-    <span className="tile__blank">{pad(entry.number)}</span>
+    <span className="tile__blank">{pad(slot.number)}</span>
   )
 }
 
@@ -89,7 +89,12 @@ function Tile({
       >
         <span className="tile__img">
           <SlotImage slot={slot} photos={photos} />
-          {cover || plateUrl(entry.id) ? <span className="tile__num">{pad(entry.number)}</span> : null}
+          {cover || plateUrl(entry.id) ? <span className="tile__num">{pad(slot.number)}</span> : null}
+          {cover ? null : (
+            <span className="lock" aria-hidden="true">
+              <IconLock />
+            </span>
+          )}
           {cards.length > 1 ? (
             <span className="tile__dup" aria-hidden="true">
               +{cards.length - 1}
@@ -106,29 +111,34 @@ function Tile({
   )
 }
 
-function RareSlot({ slot, photos, filling }: { slot: Slot<CardRecord>; photos: Map<string, PhotoRecord>; filling: boolean }) {
+function LegendarySlot({ slot, photos, filling }: { slot: Slot<CardRecord>; photos: Map<string, PhotoRecord>; filling: boolean }) {
   const { species: entry, cover } = slot
   return (
     <Link
       href={cover ? `/carta/${cover.id}` : `/specie/${entry.id}`}
       state={IN_APP}
-      className="rare-slot press"
+      className="rare-slot legendary-slot press"
       data-found={cover ? true : undefined}
       data-filling={filling || undefined}
     >
       <span className="rare-slot__img">
         <SlotImage slot={slot} photos={photos} />
+        {cover ? null : (
+          <span className="lock" aria-hidden="true">
+            <IconLock />
+          </span>
+        )}
       </span>
       <span className="min-w-0">
         <span className="block font-display text-[1.125rem] leading-tight">
           {entry.commonNameIt}
-          <span className="sr-only">specie rara dell&apos;album, {cover ? 'trovata' : 'da trovare'}</span>
+          <span className="sr-only">leggendaria dell&apos;album, {cover ? 'trovata' : 'da trovare'}</span>
         </span>
         <span className="mt-0.5 block text-[0.8125rem] leading-snug text-muted">
           {cover ? 'Trovata!' : `${entry.dominantColors.join(' o ')} · ${shortMonths(entry.bloomMonths)}`}
         </span>
       </span>
-      <span className="pill">Rara</span>
+      <span className="pill">Leggendaria</span>
     </Link>
   )
 }
@@ -163,10 +173,10 @@ export function AlbumScreen() {
 
   if (!album) return <Redirect to="/album" replace />
 
-  const rare = slots.find((slot) => slot.species.id === album.rareSpeciesId)
+  const legendary = slots.find((slot) => slot.species.id === album.legendarySpeciesId)
   const visible = filterSlots(slots, filter)
-  const grid = visible.filter((slot) => slot !== rare)
-  const showRare = rare !== undefined && visible.includes(rare)
+  const grid = visible.filter((slot) => slot !== legendary)
+  const showLegendary = legendary !== undefined && visible.includes(legendary)
 
   const back = () => {
     const state = window.history.state as { inApp?: boolean } | null
@@ -215,7 +225,9 @@ export function AlbumScreen() {
         ))}
       </div>
 
-      {showRare && rare ? <RareSlot slot={rare} photos={photos} filling={rare.species.id === fill} /> : null}
+      {showLegendary && legendary ? (
+        <LegendarySlot slot={legendary} photos={photos} filling={legendary.species.id === fill} />
+      ) : null}
 
       {grid.length > 0 ? (
         <ol role="list" className="tiles mt-4" aria-label={`Carte di ${album.name}`}>

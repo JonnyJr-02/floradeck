@@ -3,7 +3,7 @@ import { albumSlots, COLOR_SWATCHES, duplicateCount, filterSlots, missingInSeaso
 import { albums, species } from './catalog'
 
 const first = albums[0]!
-const inFirst = species.filter((entry) => entry.albumId === first.id)
+const inFirst = species.filter((entry) => entry.albums.some((m) => m.albumId === first.id)).sort((a, b) => a.albums.find((m) => m.albumId === first.id)!.number - b.albums.find((m) => m.albumId === first.id)!.number)
 const [a, b, c] = inFirst
 const card = (id: string, speciesId: string, foundAt: string) => ({ id, speciesId, foundAt })
 
@@ -11,7 +11,7 @@ describe('album slots', () => {
   it('lists every species of the album in card order', () => {
     const slots = albumSlots(first.id, [], new Map(), 5)
     expect(slots).toHaveLength(first.speciesCount)
-    expect(slots.map((slot) => slot.species.number)).toEqual(
+    expect(slots.map((slot) => slot.number)).toEqual(
       Array.from({ length: first.speciesCount }, (_, i) => i + 1),
     )
   })
@@ -44,11 +44,11 @@ describe('album slots', () => {
     ).toBe(2)
   })
 
-  it('lists the missing species in season, never the legendary one', () => {
+  it('lists the missing species in season', () => {
     const month = 4
     const found = [card('1', a!.id, '')]
     const list = missingInSeason(found, month)
-    expect(list.every((entry) => entry.bloomMonths.includes(month) && entry.albumId !== null)).toBe(true)
+    expect(list.every((entry) => entry.bloomMonths.includes(month))).toBe(true)
     expect(list.some((entry) => entry.id === a!.id)).toBe(false)
   })
 

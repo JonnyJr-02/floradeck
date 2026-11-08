@@ -8,49 +8,219 @@
     "type": "object",
     "additionalProperties": false,
     "required": [
-      "id", "number", "albumId", "scientificName", "taxonLevel", "commonNameIt", "family", "rarity",
-      "dominantColors", "phenology", "bloomMonths", "habitat", "altitude", "regions", "sizeNote",
-      "description", "funFact", "cultivated", "protected", "protectionNote", "toxic", "toxicNote",
-      "lookalikes", "lookalikesOutside", "modelLabels", "inatTaxonIds", "textStatus"
+      "id",
+      "number",
+      "albumId",
+      "scientificName",
+      "taxonLevel",
+      "commonNameIt",
+      "family",
+      "rarity",
+      "dominantColors",
+      "phenology",
+      "bloomMonths",
+      "habitat",
+      "altitude",
+      "regions",
+      "sizeNote",
+      "description",
+      "funFact",
+      "cultivated",
+      "protected",
+      "protectionNote",
+      "toxic",
+      "toxicNote",
+      "lookalikes",
+      "lookalikesOutside",
+      "modelLabels",
+      "inatTaxonIds",
+      "textStatus",
+      "albums",
+      "habitatGroup"
     ],
     "properties": {
-      "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Stable kebab-case id, used by the app and by labels.json." },
-      "number": { "type": ["integer", "null"], "minimum": 1, "description": "Card number inside the album (07/25); null for the legendary card." },
-      "albumId": { "type": ["string", "null"], "description": "Album id from albums.json; null only for the legendary card." },
-      "scientificName": { "type": "string", "description": "Display name; for groups and genera e.g. 'Muscari sp.' or 'Viola gr. odorata'." },
-      "taxonLevel": { "enum": ["species", "group", "genus"] },
-      "commonNameIt": { "type": "string" },
-      "family": { "type": "string", "description": "From iNaturalist taxonomy." },
-      "rarity": { "enum": ["common", "uncommon", "rare", "legendary"] },
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "description": "Stable kebab-case id, used by the app and by labels.json."
+      },
+      "number": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1,
+        "description": "Card number in the species' first colour album (repeats albums[0].number)."
+      },
+      "albumId": {
+        "type": "string",
+        "description": "The species' first colour album (repeats albums[0].albumId)."
+      },
+      "scientificName": {
+        "type": "string",
+        "description": "Display name; for groups and genera e.g. 'Muscari sp.' or 'Viola gr. odorata'."
+      },
+      "taxonLevel": {
+        "enum": [
+          "species",
+          "group",
+          "genus"
+        ]
+      },
+      "commonNameIt": {
+        "type": "string"
+      },
+      "family": {
+        "type": "string",
+        "description": "From iNaturalist taxonomy."
+      },
+      "rarity": {
+        "enum": [
+          "common",
+          "uncommon",
+          "legendary"
+        ],
+        "description": "Since 2026-11-08 every album has exactly one legendary species and no rare one."
+      },
       "dominantColors": {
         "type": "array",
         "minItems": 1,
         "uniqueItems": true,
-        "items": { "enum": ["rosso", "arancio", "giallo", "bianco", "rosa", "viola", "blu", "azzurro", "nero"] }
+        "items": {
+          "enum": [
+            "rosso",
+            "arancio",
+            "giallo",
+            "bianco",
+            "rosa",
+            "viola",
+            "blu",
+            "azzurro",
+            "nero"
+          ]
+        }
       },
-      "phenology": { "enum": ["flowering", "fruiting"], "description": "What the card collects, and what bloomMonths refers to." },
+      "phenology": {
+        "enum": [
+          "flowering",
+          "fruiting"
+        ],
+        "description": "What the card collects, and what bloomMonths refers to."
+      },
       "bloomMonths": {
         "type": "array",
         "uniqueItems": true,
-        "items": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "items": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
         "description": "Months in which the collectible part is visible in Italy, from iNaturalist annotations."
       },
-      "habitat": { "type": "string", "minLength": 1 },
-      "altitude": { "type": "string", "description": "e.g. '0–1400 m', 5th–95th percentile of observation altitudes; empty for cultivated plants." },
-      "regions": { "type": "string", "description": "Where in Italy, from observations corrected for observer density." },
-      "sizeNote": { "type": "string" },
-      "description": { "type": "string", "minLength": 1, "description": "2–4 sentences in Italian." },
-      "funFact": { "type": "string" },
-      "cultivated": { "type": "boolean", "description": "Garden and crop plants: no 'Fotografala, non raccoglierla' message." },
-      "protected": { "type": ["boolean", "null"], "description": "true = legally protected; null = possibly protected in some regions, to verify." },
-      "protectionNote": { "type": "string" },
-      "toxic": { "type": "boolean", "description": "true shows a warning. false only means 'no warning': the app never claims a plant is edible." },
-      "toxicNote": { "type": "string" },
-      "lookalikes": { "type": "array", "items": { "type": "string" }, "description": "Ids of catalogue species the model must tell apart." },
-      "lookalikesOutside": { "type": "array", "items": { "type": "string" }, "description": "Scientific names outside the catalogue (learned as 'altro')." },
-      "modelLabels": { "type": "array", "minItems": 1, "items": { "type": "string" }, "description": "Accepted iNaturalist names that make up the model class." },
-      "inatTaxonIds": { "type": "array", "minItems": 1, "items": { "type": "integer" } },
-      "textStatus": { "enum": ["da-verificare", "verificato"] }
+      "habitat": {
+        "type": "string",
+        "minLength": 1
+      },
+      "altitude": {
+        "type": "string",
+        "description": "e.g. '0–1400 m', 5th–95th percentile of observation altitudes; empty for cultivated plants."
+      },
+      "regions": {
+        "type": "string",
+        "description": "Where in Italy, from observations corrected for observer density."
+      },
+      "sizeNote": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "description": "2–4 sentences in Italian."
+      },
+      "funFact": {
+        "type": "string"
+      },
+      "cultivated": {
+        "type": "boolean",
+        "description": "Garden and crop plants: no 'Fotografala, non raccoglierla' message."
+      },
+      "protected": {
+        "type": [
+          "boolean",
+          "null"
+        ],
+        "description": "true = legally protected; null = possibly protected in some regions, to verify."
+      },
+      "protectionNote": {
+        "type": "string"
+      },
+      "toxic": {
+        "type": "boolean",
+        "description": "true shows a warning. false only means 'no warning': the app never claims a plant is edible."
+      },
+      "toxicNote": {
+        "type": "string"
+      },
+      "lookalikes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Ids of catalogue species the model must tell apart."
+      },
+      "lookalikesOutside": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Scientific names outside the catalogue (learned as 'altro')."
+      },
+      "modelLabels": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        },
+        "description": "Accepted iNaturalist names that make up the model class."
+      },
+      "inatTaxonIds": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "integer"
+        }
+      },
+      "textStatus": {
+        "enum": [
+          "da-verificare",
+          "verificato"
+        ]
+      },
+      "albums": {
+        "type": "array",
+        "minItems": 1,
+        "description": "Every colour album the species belongs to, with its card number there; a legendary species has only its own album.",
+        "items": {
+          "type": "object",
+          "required": [
+            "albumId",
+            "number"
+          ],
+          "properties": {
+            "albumId": {
+              "type": "string"
+            },
+            "number": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      },
+      "habitatGroup": {
+        "type": "string",
+        "description": "Habitat group of candidates.json (texts are filed by it)."
+      }
     }
   }
 }

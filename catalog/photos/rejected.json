@@ -1,0 +1,120 @@
+{
+ "note": "Photos checked by eye on the contact sheets (app: node scripts/plates-sheet.mjs <folder> --photos) and found unsuitable. fetch_photos.py never picks them.",
+ "rejected": [
+  {
+   "species": "arnica-montana",
+   "photoId": 146426007,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "opuntia-ficus-indica",
+   "photoId": 546804543,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "sternbergia-lutea",
+   "photoId": 439759622,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "spartium-junceum",
+   "photoId": 367234615,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "iris-pseudacorus",
+   "photoId": 73527163,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "primula-veris",
+   "photoId": 76695534,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "anemone-nemorosa",
+   "photoId": 15816,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "menyanthes-trifoliata",
+   "photoId": 191044516,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "ranunculus-acquatici",
+   "photoId": 53128472,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "papaver-rhoeas",
+   "photoId": 370227860,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "rosa-canina",
+   "photoId": 35095690,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "physalis-alkekengi",
+   "photoId": 138080853,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "taxus-baccata",
+   "photoId": 79446798,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "berberis-vulgaris",
+   "photoId": 48258942,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "serapias",
+   "photoId": 502803613,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "cornus-mas",
+   "photoId": 86935736,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "salvia-pratensis",
+   "photoId": 96177134,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "lathyrus-vernus",
+   "photoId": 653752604,
+   "reason": "flower far, tiny or missing, or an unusual form (checked on the contact sheets, 2026-11-08)"
+  },
+  {
+   "species": "arnica-montana",
+   "photoId": 146426082,
+   "reason": "second pick still unsuitable (2026-11-08)"
+  },
+  {
+   "species": "papaver-rhoeas",
+   "photoId": 370227872,
+   "reason": "second pick still unsuitable (2026-11-08)"
+  },
+  {
+   "species": "taxus-baccata",
+   "photoId": 69373138,
+   "reason": "second pick still unsuitable (2026-11-08)"
+  },
+  {
+   "species": "salvia-pratensis",
+   "photoId": 96177120,
+   "reason": "second pick still unsuitable (2026-11-08)"
+  },
+  {
+   "species": "cornus-mas",
+   "photoId": 91591936,
+   "reason": "second pick still unsuitable (2026-11-08)"
+  }
+ ]
+}

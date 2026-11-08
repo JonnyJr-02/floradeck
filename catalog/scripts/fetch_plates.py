@@ -257,6 +257,20 @@ def download(url: str, target: Path) -> None:
     target.write_bytes(data)
 
 
+def write_json(path: Path, data: dict) -> None:
+    """Write through a temporary file: on Windows a reader (antivirus, indexer) can briefly lock it."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(".tmp")
+    temporary.write_text(json.dumps(dict(sorted(data.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    for attempt in range(10):
+        try:
+            temporary.replace(path)
+            return
+        except OSError:
+            time.sleep(0.5 * (attempt + 1))
+    raise OSError(f"could not write {path}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--only", nargs="*", default=None, help="species ids to (re)fetch")
@@ -288,9 +302,7 @@ def main() -> int:
         else:
             print(f"{entry['id']}: NO PLATE (tried {', '.join(result['tried'])})")
         plates[entry["id"]] = result
-        OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-        OUTPUT.write_text(json.dumps(dict(sorted(plates.items())), ensure_ascii=False, indent=1) + "\n",
-                          encoding="utf-8")
+        write_json(OUTPUT, plates)
 
     found = sum(1 for v in plates.values() if v["status"] == "found")
     print(f"\n{found} of {len(species)} species have a plate; {len(species) - found} without.")

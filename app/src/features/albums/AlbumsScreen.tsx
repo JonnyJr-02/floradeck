@@ -2,14 +2,13 @@ import { Link } from 'wouter'
 import { useCards } from '../../db/collection'
 import { duplicateCount, missingInSeason, shortMonths } from '../../domain/album'
 import { albumById, albums, species, speciesById, totalSpecies } from '../../domain/catalog'
-import { foundPerAlbum } from '../../domain/collection'
+import { foundPerAlbum, speciesFound } from '../../domain/collection'
 import { plateUrl } from '../../domain/plates'
 import { IN_APP, Page, ScreenHeader } from '../../ui/Page'
 
-const albumOf = (speciesId: string) => speciesById(speciesId)?.albumId
+const albumsOf = (speciesId: string) => speciesById(speciesId)?.albums
 const albumOrder = (albumId: string) => albumById(albumId)?.order ?? 0
 const MONTH_NAMES = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre']
-const legendary = species.find((entry) => entry.rarity === 'legendary')
 
 /** "In fiore questo mese": missing species that flower (or fruit) now, so you know what to look for. */
 function InSeason({ owned }: { owned: Parameters<typeof missingInSeason>[0] }) {
@@ -43,40 +42,14 @@ function InSeason({ owned }: { owned: Parameters<typeof missingInSeason>[0] }) {
   )
 }
 
-function LegendaryTeaser({ allComplete, found }: { allComplete: boolean; found: string | undefined }) {
-  if (!legendary) return null
-  if (found) {
-    return (
-      <Link href={`/carta/${found}`} state={IN_APP} className="card legendary-teaser press mt-3 block">
-        <span className="pill">Leggendaria</span>
-        <h2 className="mt-2 text-[1.25rem] leading-tight">{legendary.commonNameIt}</h2>
-        <p className="mt-1 text-[0.875rem] text-muted">L&apos;hai trovata. Apri la carta e inclina il telefono.</p>
-      </Link>
-    )
-  }
-  return (
-    <section className="card legendary-teaser mt-3" aria-labelledby="legendary-title">
-      <span className="pill">Leggendaria</span>
-      <h2 id="legendary-title" className="mt-2 text-[1.25rem] leading-tight">
-        Una carta segreta
-      </h2>
-      <p className="mt-1 text-[0.875rem] leading-snug text-muted">
-        {allComplete
-          ? `Ecco l'indizio: ${legendary.habitat.toLowerCase()}, ${shortMonths(legendary.bloomMonths)}.`
-          : 'Non sta in nessun album. Completali tutti per avere un indizio su dove cercarla.'}
-      </p>
-    </section>
-  )
-}
-
 export function AlbumsScreen() {
   const cards = useCards()
   const owned = cards ?? []
-  const found = foundPerAlbum(owned, albumOf)
-  const total = [...found.values()].reduce((sum, count) => sum + count, 0)
+  const found = foundPerAlbum(owned, albumsOf)
+  const total = speciesFound(owned, speciesById)
+  const ownedIds = new Set(owned.map((card) => card.speciesId))
+  const legendaryFound = albums.filter((album) => ownedIds.has(album.legendarySpeciesId)).length
   const duplicates = duplicateCount(owned.filter((card) => speciesById(card.speciesId)))
-  const allComplete = albums.every((album) => (found.get(album.id) ?? 0) === album.speciesCount)
-  const legendaryCard = owned.find((card) => card.speciesId === legendary?.id)?.id
 
   return (
     <Page>
@@ -84,6 +57,9 @@ export function AlbumsScreen() {
         <p className="mt-2 text-muted">
           {total === 1 ? '1 specie trovata' : `${total} specie trovate`} su {totalSpecies}, in {albums.length} album
           {duplicates > 0 ? ` · ${duplicates} ${duplicates === 1 ? 'doppione' : 'doppioni'}` : ''}
+        </p>
+        <p className="mt-1 text-[0.875rem] text-muted">
+          Leggendarie: {legendaryFound} di {albums.length}, una per album.
         </p>
       </ScreenHeader>
       <ol role="list" className="mt-6 grid gap-3" aria-label="I tuoi album">
@@ -95,7 +71,11 @@ export function AlbumsScreen() {
               <Link href={`/album/${album.id}`} state={IN_APP} className="card album-row press block">
                 <span className="flex items-start justify-between gap-3">
                   <h2 className="text-[1.25rem] leading-tight">{album.name}</h2>
-                  {complete ? <span className="pill shrink-0">Completo</span> : null}
+                  {complete ? (
+                    <span className="pill shrink-0">Completo</span>
+                  ) : ownedIds.has(album.legendarySpeciesId) ? (
+                    <span className="pill pill--gold shrink-0">Leggendaria trovata</span>
+                  ) : null}
                 </span>
                 <span className="mt-1 block text-[0.875rem] leading-snug text-muted">{album.description}</span>
                 <span className="mt-3 flex items-center gap-3">
@@ -111,7 +91,6 @@ export function AlbumsScreen() {
           )
         })}
       </ol>
-      <LegendaryTeaser allComplete={allComplete} found={legendaryCard} />
       <InSeason owned={owned} />
     </Page>
   )

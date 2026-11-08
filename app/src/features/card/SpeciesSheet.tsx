@@ -2,6 +2,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { albumById, type Species } from '../../domain/catalog'
 import { cardNumberLabel, rarityLabel } from '../../domain/collection'
 import { plateCredit, plateFor, plateUrl } from '../../domain/plates'
+import { photoCredit, referencePhoto, referencePhotoUrl } from '../../domain/referencePhotos'
 import { formatMonths } from '../../domain/seasonality'
 
 /** Position in the unpacking stagger (styles.css, .reveal-item); later items share the last slot. */
@@ -9,8 +10,6 @@ export const at = (i: number) => ({ '--i': i }) as CSSProperties
 
 /** Name, scientific name and the rarity / number / album chips of a species. */
 export function SpeciesTitle({ entry, extraChips }: { entry: Species; extraChips?: ReactNode }) {
-  const album = albumById(entry.albumId)
-  const number = cardNumberLabel(entry, album)
   return (
     <>
       <h1 className="reveal-item text-[2.375rem] leading-[1.02]" style={at(1)}>
@@ -23,8 +22,14 @@ export function SpeciesTitle({ entry, extraChips }: { entry: Species; extraChips
         <li className="chip chip--rarity" data-rarity={entry.rarity}>
           {rarityLabel(entry.rarity)}
         </li>
-        {number ? <li className="chip">{number}</li> : null}
-        {album ? <li className="chip">{album.name}</li> : null}
+        {entry.albums.map((membership) => {
+          const album = albumById(membership.albumId)
+          return album ? (
+            <li key={membership.albumId} className="chip">
+              {album.name} · {cardNumberLabel(membership, album)}
+            </li>
+          ) : null
+        })}
         {extraChips}
       </ul>
     </>
@@ -69,9 +74,22 @@ export function SpeciesSheet({ entry, showPlate = true }: { entry: Species; show
     ['In Italia', entry.regions],
     ['Dimensioni', entry.sizeNote],
   ]
+  const photo = referencePhoto(entry.id)
+  const photoUrl = referencePhotoUrl(entry.id)
   return (
     <>
       <h2 className="reveal-item mt-9 text-[1.375rem] leading-tight">Scheda</h2>
+      {photo && photoUrl ? (
+        <figure className="reference reveal-item mt-4">
+          <img
+            src={photoUrl}
+            alt={`${entry.commonNameIt} fotografata da un'altra persona`}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>{photoCredit(photo)}</figcaption>
+        </figure>
+      ) : null}
       <dl className="facts reveal-item mt-4">
         {rows
           .filter(([, value]) => value)

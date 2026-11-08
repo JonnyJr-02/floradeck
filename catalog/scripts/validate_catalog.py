@@ -27,7 +27,7 @@ RARITIES = {"common", "uncommon", "rare", "legendary"}
 LEVELS = {"species", "group", "genus"}
 PHENOLOGIES = {"flowering", "fruiting"}
 TEXT_STATUSES = {"da-verificare", "verificato"}
-ALBUM_SIZE = range(20, 31)
+ALBUM_SIZE = range(10, 101)
 STRING_FIELDS = [
     "id", "scientificName", "commonNameIt", "family", "habitat", "altitude", "regions",
     "sizeNote", "description", "funFact", "protectionNote", "toxicNote", "textStatus",
@@ -65,11 +65,17 @@ def validate(species: list[dict], albums: list[dict]) -> tuple[list[str], list[s
         if s.get("textStatus") not in TEXT_STATUSES:
             errors.append(f"{sid}: unknown textStatus {s.get('textStatus')!r}")
 
-        if s.get("rarity") == "legendary":
-            if s.get("albumId") is not None or s.get("number") is not None:
-                errors.append(f"{sid}: the legendary species has no album and no number")
-        elif s.get("albumId") not in album_ids:
-            errors.append(f"{sid}: unknown albumId {s.get('albumId')!r}")
+        memberships = s.get("albums")
+        if not isinstance(memberships, list) or not memberships:
+            errors.append(f"{sid}: 'albums' must list at least one album")
+            memberships = []
+        for membership in memberships:
+            if membership.get("albumId") not in album_ids:
+                errors.append(f"{sid}: unknown album {membership.get('albumId')!r}")
+        if memberships and (s.get("albumId"), s.get("number")) != (memberships[0].get("albumId"), memberships[0].get("number")):
+            errors.append(f"{sid}: albumId/number must repeat its first album")
+        if s.get("rarity") == "legendary" and len(memberships) != 1:
+            errors.append(f"{sid}: a legendary species belongs to its own album only")
 
         colors = s.get("dominantColors")
         if not colors or not isinstance(colors, list) or not set(colors) <= COLORS:
@@ -119,27 +125,26 @@ def validate(species: list[dict], albums: list[dict]) -> tuple[list[str], list[s
             if other in by_id and s["id"] not in by_id[other].get("lookalikes", []):
                 warnings.append(f"{s['id']}: lookalike '{other}' does not list it back")
 
-    legendary = [s for s in species if s.get("rarity") == "legendary"]
-    if len(legendary) != 1:
-        errors.append(f"expected exactly 1 legendary species, found {len(legendary)}")
+    if any(s.get("rarity") == "rare" for s in species):
+        errors.append("the rare tier is gone since 2026-11-08: every album has a legendary species instead")
 
     for duplicate, n in Counter(a["id"] for a in albums).items():
         if n > 1:
             errors.append(f"duplicate album id '{duplicate}'")
     for album in albums:
-        members = [s for s in species if s.get("albumId") == album["id"]]
-        if len(members) not in ALBUM_SIZE:
-            errors.append(f"album {album['id']}: {len(members)} species (20–30 expected)")
-        if album.get("speciesCount") != len(members):
-            errors.append(f"album {album['id']}: speciesCount {album.get('speciesCount')} but {len(members)} species")
-        rares = [s["id"] for s in members if s.get("rarity") == "rare"]
-        if len(rares) != 1:
-            errors.append(f"album {album['id']}: {len(rares)} rare species (exactly 1 expected)")
-        elif album.get("rareSpeciesId") != rares[0]:
-            errors.append(f"album {album['id']}: rareSpeciesId does not match")
-        numbers = sorted(s.get("number") for s in members if isinstance(s.get("number"), int))
-        if numbers != list(range(1, len(members) + 1)):
-            errors.append(f"album {album['id']}: card numbers must run 1..{len(members)}")
+        slots = [(s, m) for s in species for m in s.get("albums") or [] if m.get("albumId") == album["id"]]
+        if len(slots) not in ALBUM_SIZE:
+            errors.append(f"album {album['id']}: {len(slots)} species ({ALBUM_SIZE.start}–{ALBUM_SIZE.stop - 1} expected)")
+        if album.get("speciesCount") != len(slots):
+            errors.append(f"album {album['id']}: speciesCount {album.get('speciesCount')} but {len(slots)} species")
+        legendary = [s["id"] for s, _ in slots if s.get("rarity") == "legendary"]
+        if len(legendary) != 1:
+            errors.append(f"album {album['id']}: {len(legendary)} legendary species (exactly 1 expected)")
+        elif album.get("legendarySpeciesId") != legendary[0]:
+            errors.append(f"album {album['id']}: legendarySpeciesId does not match")
+        numbers = sorted(m.get("number") for _, m in slots if isinstance(m.get("number"), int))
+        if numbers != list(range(1, len(slots) + 1)):
+            errors.append(f"album {album['id']}: card numbers must run 1..{len(slots)}")
     return errors, warnings
 
 

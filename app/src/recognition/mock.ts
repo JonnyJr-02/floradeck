@@ -8,13 +8,13 @@ import type { DecisionMetadata, Recognition, Recognizer } from './types'
  * screens see exactly what the model will give them.
  */
 
-/** 'legendary' is only ever forced: it lets the secret card (and its tilt sheen) be tried by hand. */
+/** 'legendary' is only ever forced: it hands out one of the legendary cards to try it by hand. */
 export type MockScenario = 'random' | 'sure' | 'unsure' | 'out' | 'legendary'
 
 export const MOCK_SCENARIOS: readonly MockScenario[] = ['random', 'sure', 'unsure', 'out', 'legendary']
 
-/** The secret legendary card is never handed out by the mock. */
-const collectable = species.filter((entry) => entry.albumId !== null)
+/** Legendary cards are only handed out when forced, so they stay special while testing. */
+const collectable = species.filter((entry) => entry.rarity !== 'legendary')
 
 /** The mock's own metadata, shaped like labels.json. These numbers are not the real model's. */
 export const MOCK_METADATA: DecisionMetadata = {
@@ -41,7 +41,7 @@ function pick<T>(random: Random, items: readonly T[]): T {
 function runnersUp(random: Random, best: Species): Species[] {
   const chosen: Species[] = []
   const add = (entry: Species | undefined) => {
-    if (entry && entry.id !== best.id && !chosen.includes(entry) && entry.albumId !== null) chosen.push(entry)
+    if (entry && entry.id !== best.id && !chosen.includes(entry) && entry.rarity !== 'legendary') chosen.push(entry)
   }
   for (const id of best.lookalikes) add(collectable.find((entry) => entry.id === id))
   const sameAlbum = collectable.filter((entry) => entry.albumId === best.albumId)
@@ -103,11 +103,11 @@ export function mockProbabilities(
   return probabilities
 }
 
-const legendary = species.find((entry) => entry.rarity === 'legendary')
+const legendaries = species.filter((entry) => entry.rarity === 'legendary')
 
 export function mockRecognition(scenario: MockScenario, random: Random = Math.random): Recognition {
-  if (scenario === 'legendary' && legendary) {
-    const best = { speciesId: legendary.id, confidence: 0.97 }
+  if (scenario === 'legendary' && legendaries.length > 0) {
+    const best = { speciesId: pick(random, legendaries).id, confidence: 0.97 }
     return { kind: 'card', best, top3: [best] }
   }
   return decide(mockProbabilities(scenario === 'legendary' ? 'sure' : scenario, random), MOCK_METADATA)

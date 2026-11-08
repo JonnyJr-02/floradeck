@@ -2,7 +2,9 @@
 """Build catalog/species.json and catalog/albums.json.
 
 Sources, all in catalog/:
-- proposal/candidates.json   albums, species chosen ("main"), names, rarity, colours
+- proposal/candidates.json   colour albums with their legendary species, habitat groups
+                             (texts are filed by them), species chosen ("main"), names,
+                             rarity, colours
 - proposal/inat_stats.json   iNaturalist data: taxa, months, areas, family, altitude
 - texts/<album>.json         Italian texts and safety flags, written by hand
 - review/status.json         optional: species the user has checked (exported
@@ -30,8 +32,7 @@ REVIEW_STATUS = CATALOG_DIR / "review" / "status.json"
 SPECIES_OUT = CATALOG_DIR / "species.json"
 ALBUMS_OUT = CATALOG_DIR / "albums.json"
 
-LEGENDARY_ALBUM = "leggendaria"
-ORCHID_ALBUM = "orchidee"
+ORCHID_GROUP = "orchidee"
 ORCHID_PROTECTION = "Orchidea: commercio regolato dalla CITES e raccolta vietata in molte regioni."
 
 
@@ -60,20 +61,23 @@ def unique(items):
     return list(dict.fromkeys(items))
 
 
-def build_species(candidate: dict, number: int | None, stats: dict, text: dict, baseline: dict, verified: set[str]) -> dict:
+def build_species(candidate: dict, stats: dict, text: dict, baseline: dict, verified: set[str]) -> dict:
     phenology = candidate.get("phenology", "flowering")
     months, _ = selected_months(stats, phenology)
     resolved = [t for t in stats.get("taxa", []) if t.get("id")]
     cultivated = bool(candidate.get("cultivated"))
-    in_orchid_album = candidate["album"] == ORCHID_ALBUM
+    in_orchid_album = candidate["album"] == ORCHID_GROUP
 
     protected = text.get("protected", True if in_orchid_album else False)
     protection_note = text.get("protectionNote", ORCHID_PROTECTION if in_orchid_album else "")
 
     return {
         "id": candidate["key"],
-        "number": number,
-        "albumId": None if candidate["album"] == LEGENDARY_ALBUM else candidate["album"],
+        # Filled by assign_albums: the first colour album and the card number in it, then all of them.
+        "number": None,
+        "albumId": None,
+        "albums": [],
+        "habitatGroup": candidate["album"],
         "scientificName": candidate.get("label") or candidate["taxa"][0],
         "taxonLevel": candidate["level"],
         "commonNameIt": candidate["commonNameIt"],
@@ -101,6 +105,50 @@ def build_species(candidate: dict, number: int | None, stats: dict, text: dict, 
     }
 
 
+def assign_albums(species: list[dict], color_albums: list[dict], group_order: list[str]) -> list[dict]:
+    """Put every species in the album of each of its colours (a white-and-pink flower is in both).
+
+    Each album has exactly one legendary species, which stays in its own album only. Cards are
+    numbered by habitat group, then by their order in candidates.json; the legendary card is last.
+    """
+    album_of_color = {color: album["id"] for album in color_albums for color in album["colors"]}
+    legendary_album = {album["legendary"]: album["id"] for album in color_albums}
+    rank = {group: i for i, group in enumerate(group_order)}
+    ordered = sorted(enumerate(species), key=lambda item: (rank.get(item[1]["habitatGroup"], len(rank)), item[0]))
+    members: dict[str, list[dict]] = {album["id"]: [] for album in color_albums}
+    for _, entry in ordered:
+        if entry["id"] in legendary_album:
+            targets = [legendary_album[entry["id"]]]
+        else:
+            targets = list(dict.fromkeys(album_of_color[color] for color in entry["dominantColors"]))
+        for album_id in targets:
+            members[album_id].append(entry)
+    for album in color_albums:
+        lst = members[album["id"]]
+        lst.sort(key=lambda entry: entry["id"] == album["legendary"])  # stable: legendary last
+        for number, entry in enumerate(lst, start=1):
+            entry["albums"].append({"albumId": album["id"], "number": number})
+    album_rank = {album["id"]: i for i, album in enumerate(color_albums)}
+    for entry in species:
+        # Keep the order of the species' own colours: its main colour's album comes first.
+        colour_rank = {album_of_color[c]: i for i, c in reversed(list(enumerate(entry["dominantColors"])))}
+        entry["albums"].sort(key=lambda m: (colour_rank.get(m["albumId"], 99), album_rank[m["albumId"]]))
+        entry["albumId"] = entry["albums"][0]["albumId"]
+        entry["number"] = entry["albums"][0]["number"]
+    return [
+        {
+            "id": album["id"],
+            "name": album["name"],
+            "description": album["note"],
+            "order": order,
+            "colors": album["colors"],
+            "speciesCount": len(members[album["id"]]),
+            "legendarySpeciesId": album["legendary"],
+        }
+        for order, album in enumerate(color_albums, start=1)
+    ]
+
+
 def main() -> int:
     data = load_json(CANDIDATES)
     stats_file = load_json(STATS)
@@ -118,24 +166,8 @@ def main() -> int:
     if extra_texts:
         print(f"Warning: texts without a catalogue species (ignored): {extra_texts}", file=sys.stderr)
 
-    species, albums = [], []
-    for order, album in enumerate(data["albums"], start=1):
-        entries = [c for c in main_entries if c["album"] == album["id"]]
-        legendary = album["id"] == LEGENDARY_ALBUM
-        for number, candidate in enumerate(entries, start=1):
-            species.append(
-                build_species(candidate, None if legendary else number, stats[candidate["key"]], texts[candidate["key"]], baseline, verified)
-            )
-        if not legendary:
-            rare = [c["key"] for c in entries if c["rarity"] == "rare"]
-            albums.append({
-                "id": album["id"],
-                "name": album["name"],
-                "description": album["note"],
-                "order": order,
-                "speciesCount": len(entries),
-                "rareSpeciesId": rare[0] if len(rare) == 1 else None,
-            })
+    species = [build_species(c, stats[c["key"]], texts[c["key"]], baseline, verified) for c in main_entries]
+    albums = assign_albums(species, data["colorAlbums"], [g["id"] for g in data["albums"]])
 
     SPECIES_OUT.write_text(json.dumps(species, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     ALBUMS_OUT.write_text(json.dumps(albums, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")

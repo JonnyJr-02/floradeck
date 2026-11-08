@@ -15,8 +15,8 @@ function seeded(seed: number) {
 }
 
 describe('mock recogniser', () => {
-  it('has one class per collectable species plus "altro", without the legendary one', () => {
-    expect(MOCK_METADATA.classes).toHaveLength(210)
+  it('has one class per species plus "altro"; legendary cards only come when forced', () => {
+    expect(MOCK_METADATA.classes).toHaveLength(205)
     expect(MOCK_METADATA.classes.at(-1)).toBe('altro')
     expect(MOCK_METADATA.classes).not.toContain('cypripedium-calceolus')
   })
@@ -32,11 +32,11 @@ describe('mock recogniser', () => {
 
   it('hands out the legendary card only when forced', () => {
     const forced = mockRecognition('legendary')
-    expect(forced.kind === 'card' && forced.best.speciesId).toBe('cypripedium-calceolus')
+    expect(forced.kind === 'card' && speciesById(forced.best.speciesId)?.rarity).toBe('legendary')
     const random = seeded(9)
     for (let i = 0; i < 300; i++) {
       const result = mockRecognition('random', random)
-      expect(result.top3.some((c) => c.speciesId === 'cypripedium-calceolus')).toBe(false)
+      expect(result.top3.some((c) => speciesById(c.speciesId)?.rarity === 'legendary')).toBe(false)
     }
   })
 
@@ -54,7 +54,7 @@ describe('mock recogniser', () => {
       const result = mockRecognition('unsure', random)
       const ids = result.top3.map((c) => c.speciesId)
       expect(new Set(ids).size).toBe(3)
-      for (const id of ids) expect(speciesById(id)?.albumId).toBeTruthy()
+      for (const id of ids) expect(speciesById(id)?.rarity).not.toBe('legendary')
     }
   })
 

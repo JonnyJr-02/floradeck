@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { addCard, deleteCardsBy, getCard, getCovers, photoBlob, setCover, type NewCard } from './collection'
+import { addCard, deleteCard, deleteCardsBy, getCard, getCovers, photoBlob, setCover, type NewCard } from './collection'
 import { FloraDeckDB } from './db'
 
 let db: FloraDeckDB
@@ -90,5 +90,27 @@ describe('covers and test cards', () => {
     expect(await db.cards.toCollection().primaryKeys()).toEqual([real.card.id])
     expect(await db.photos.count()).toBe(1)
     expect([...(await getCovers(db)).keys()]).toEqual(['bellis-perennis'])
+  })
+})
+
+describe('deleting a card', () => {
+  it('removes the card and its photo, and the species is missing again', async () => {
+    const { card } = await addCard(shot('papaver-rhoeas'), db)
+    expect(await deleteCard(card.id, db)).toBe(0)
+    expect(await db.cards.count()).toBe(0)
+    expect(await db.photos.count()).toBe(0)
+  })
+
+  it('keeps the other copies and drops a cover that pointed to the deleted card', async () => {
+    const first = await addCard(shot('papaver-rhoeas'), db)
+    const second = await addCard(shot('papaver-rhoeas'), db)
+    await setCover('papaver-rhoeas', second.card.id, db)
+    expect(await deleteCard(second.card.id, db)).toBe(1)
+    expect((await getCovers(db)).has('papaver-rhoeas')).toBe(false)
+    expect((await getCard(first.card.id, db))?.copies).toBe(1)
+  })
+
+  it('does nothing for a card that is gone', async () => {
+    expect(await deleteCard('missing', db)).toBe(0)
   })
 })

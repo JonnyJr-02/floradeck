@@ -4,7 +4,7 @@
 
 ## Come leggerla
 
-- **8 album, 209 specie + 1 leggendaria**, una specie rara per album. Dopo ogni album ci sono alcune riserve (19 in tutto) per gli scambi.
+- **7 album, 204 specie + 1 leggendaria**, una specie rara per album. Dopo ogni album ci sono alcune riserve (19 in tutto) per gli scambi.
 - **Periodo**: i mesi in cui la pianta viene fotografata in fiore in Italia (con i frutti, per l'album delle bacche), secondo le annotazioni di iNaturalist. Conta un mese se ha almeno il 15% delle osservazioni del mese di picco (35% per i frutti, perché l'annotazione comprende anche quelli acerbi). L'asterisco indica che le annotazioni erano poche e ho usato tutte le osservazioni.
 - **Foto**: osservazioni iNaturalist verificate dalla comunità ("research grade") in Italia, con foto a licenza CC0, CC-BY o CC-BY-NC: è il materiale per addestrare il modello. ✅ almeno 300 · 🟡 meno di 300 in Italia ma almeno 300 in Europa (o nel mondo, per le coltivate) · 🔴 pochi dati. † = conta anche le piante coltivate, che iNaturalist non marca mai come verificate.
 - **N · C · S**: dove la si trova in Italia. Nord sopra i 44° N (circa la linea Genova–Ravenna), Centro fino ai 41,8° N (circa Roma), poi Sud e isole. Le percentuali sono corrette per il numero di osservazioni di piante in ciascuna area, perché al Nord gli utenti di iNaturalist sono molti di più: 33 · 33 · 33 vuol dire "ugualmente frequente ovunque". Utile per capire cosa trovate vicino a voi.
@@ -15,15 +15,14 @@
 
 | Album | Specie | Comuni / non comuni / rare | Foto ✅ / 🟡 / 🔴 |
 |---|---|---|---|
-| Prati di primavera | 24 | 16 / 7 / 1 | 23 / 1 / 0 |
-| Campi e bordi di strada | 30 | 23 / 6 / 1 | 25 / 5 / 0 |
-| Montagna e pascoli alpini | 30 | 16 / 13 / 1 | 28 / 2 / 0 |
-| Macchia mediterranea e coste | 25 | 14 / 10 / 1 | 21 / 4 / 0 |
-| Boschi e sottobosco | 26 | 17 / 8 / 1 | 26 / 0 / 0 |
-| Zone umide, fossi e laghi | 21 | 13 / 7 / 1 | 13 / 8 / 0 |
-| Bacche e colori d'autunno | 29 | 20 / 8 / 1 | 27 / 2 / 0 |
-| Orchidee spontanee | 24 | 8 / 15 / 1 | 24 / 0 / 0 |
-| Carta leggendaria (segreta) | 1 | leggendaria | 0 / 1 / 0 |
+| Prati di primavera | 24 | 16 / 7 / 0 | 23 / 1 / 0 |
+| Campi e bordi di strada | 30 | 23 / 6 / 0 | 25 / 5 / 0 |
+| Montagna e pascoli alpini | 30 | 16 / 13 / 0 | 28 / 2 / 0 |
+| Macchia mediterranea e coste | 25 | 14 / 11 / 0 | 21 / 4 / 0 |
+| Boschi e sottobosco | 26 | 17 / 8 / 0 | 26 / 0 / 0 |
+| Zone umide, fossi e laghi | 21 | 13 / 8 / 0 | 13 / 8 / 0 |
+| Bacche e colori d'autunno | 29 | 20 / 8 / 0 | 27 / 2 / 0 |
+| Orchidee spontanee | 25 | 8 / 16 / 0 | 24 / 1 / 0 |
 
 Specie con poche foto in Italia: Fritillaria (🟡 113 (UE 5103)), Enotera (🟡 292 (UE 15559)), Barba di becco violetta (🟡 191 (UE 2755)), Specchio di Venere (🟡 279 (UE 1060)), Crisantemo coronario (🟡 237 (UE 4489)), Buglossa azzurra (🟡 234 (UE 2678)), Viola speronata (🟡 217 (UE 971, mondo 973)), Aconito napello (🟡 299 (UE 3325)), Salvione giallo (🟡 249 (UE 1235)), Anemone dei fiorai (🟡 254 (UE 1478)), Tamerice (🟡 54 (UE 1752)), Agnocasto (🟡 220 (UE 2773)), Nannufaro (🟡 293 (UE 15393)), Trifoglio fibrino (🟡 202 (UE 9692)), Giunco fiorito (🟡 189 (UE 8692)), Campanellino estivo (🟡 145 (UE 2715)), Olmaria (🟡 280 (UE 45535)), Ranuncolo acquatico (🟡 104 (UE 1424)), Poligono anfibio (🟡 105 (UE 8523)), Erba impaziente (🟡 226 (UE 7842)), Olivello spinoso (🟡 130 (UE 13349)), Astro americano (🟡 92 (UE 2427)), Scarpetta di Venere (🟡 238 (UE 5284)).
 
@@ -55,7 +54,7 @@ _Fioriture di prati e pascoli di pianura e collina, da marzo a giugno._
 | 20 | **Narciso nostrale**<br>*Narcissus tazetta* | specie | non comune | bianco, giallo | dic–apr | ✅ 444 | 5 · 40 · 54 | Sosia: narcisi coltivati (→ altro). |
 | 21 | **Cresta di gallo**<br>*Rhinanthus sp.* | genere | non comune | giallo | mag–ago | ✅ 871 | 72 · 24 · 4 | Genere. |
 | 22 | **Vulneraria**<br>*Anthyllis vulneraria* | specie | non comune | giallo | apr–ago | ✅ 2196 | 52 · 17 · 31 |   |
-| 23 | **Fritillaria**<br>*Fritillaria sp. (spontanee)* | gruppo | **rara** | viola | apr–mag | 🟡 113 (UE 5103) | 19 · 74 · 7 | Gruppo delle fritillarie spontanee; la corona imperiale dei giardini va in 'altro'. |
+| 23 | **Fritillaria**<br>*Fritillaria sp. (spontanee)* | gruppo | **leggendaria** | viola | apr–mag | 🟡 113 (UE 5103) | 19 · 74 · 7 | Gruppo delle fritillarie spontanee; la corona imperiale dei giardini va in 'altro'. |
 | 24 | **Trifoglio bianco**<br>*Trifolium repens* | specie | comune | bianco | apr–ago | ✅ 2438 | 41 · 35 · 24 |   |
 
 **Riserve**
@@ -72,7 +71,7 @@ _Fiori di campi coltivati, incolti, bordi delle strade e vecchi muri._
 | # | Specie | Livello | Rarità | Colori | Periodo | Foto | N · C · S | Note |
 |---|---|---|---|---|---|---|---|---|
 | 01 | **Papavero comune**<br>*Papaver rhoeas* | specie | comune | rosso | apr–giu | ✅ 2836 | 23 · 42 · 35 | Sosia: Papaver dubium (→ altro). |
-| 02 | **Fiordaliso**<br>*Centaurea cyanus* | specie | non comune | blu | apr–lug | ✅ 409 | 50 · 43 · 7 | Frequente anche nei miscugli di fiori seminati. Sosia: Fiordaliso montano (in catalogo, Montagna). |
+| 02 | **Fiordaliso**<br>*Centaurea cyanus* | specie | **leggendaria** | blu | apr–lug | ✅ 409 | 50 · 43 · 7 | Frequente anche nei miscugli di fiori seminati. Sosia: Fiordaliso montano (in catalogo, Montagna). |
 | 03 | **Cicoria selvatica**<br>*Cichorium intybus* | specie | comune | azzurro | mag–nov | ✅ 2266 | 22 · 55 · 24 | Sosia: Lactuca perennis (→ altro). |
 | 04 | **Viperina azzurra**<br>*Echium vulgare* | specie | comune | blu, viola | apr–set | ✅ 2526 | 42 · 43 · 15 | Sosia: Echium plantagineum (→ altro). |
 | 05 | **Vilucchio comune**<br>*Convolvulus arvensis* | specie | comune | bianco, rosa | mag–ago | ✅ 2888 | 27 · 47 · 26 | Sosia: Vilucchio bianco (in catalogo, Zone umide), Soldanella marittima (in catalogo, Coste). |
@@ -98,7 +97,7 @@ _Fiori di campi coltivati, incolti, bordi delle strade e vecchi muri._
 | 25 | **Crisantemo coronario**<br>*Glebionis coronaria* | specie | comune | giallo | feb–mag | 🟡 237 (UE 4489) | 0 · 5 · 94 | Sosia: altre composite gialle (→ altro). |
 | 26 | **Saponaria comune**<br>*Saponaria officinalis* | specie | comune | rosa | giu–ott | ✅ 1418 | 58 · 27 · 15 |   |
 | 27 | **Buglossa azzurra**<br>*Anchusa azurea* | specie | non comune | blu | apr–giu | 🟡 234 (UE 2678) | 4 · 48 · 48 | Sosia: Borragine (in catalogo, Orto). |
-| 28 | **Tulipano selvatico**<br>*Tulipa sylvestris* | specie | **rara** | giallo | mar–giu | ✅ 391 | 69 · 16 · 15 | Sosia: Tulipano da giardino (in catalogo, Giardini). |
+| 28 | **Tulipano selvatico**<br>*Tulipa sylvestris* | specie | non comune | giallo | mar–giu | ✅ 391 | 69 · 16 · 15 | Sosia: Tulipano da giardino (in catalogo, Giardini). |
 | 29 | **Finocchio selvatico**<br>*Foeniculum vulgare* | specie | comune | giallo | giu–ott | ✅ 904 | 3 · 44 · 53 |   |
 | 30 | **Borragine**<br>*Borago officinalis* | specie | comune | blu | feb–mag | ✅ 2083 | 7 · 49 · 44 | Anche spontanea nei campi. Sosia: Buglossa azzurra (in catalogo, Campi). |
 
@@ -116,7 +115,7 @@ _Pascoli, rocce e pendii di montagna, in gran parte sopra i 1000 m._
 
 | # | Specie | Livello | Rarità | Colori | Periodo | Foto | N · C · S | Note |
 |---|---|---|---|---|---|---|---|---|
-| 01 | **Stella alpina**<br>*Leontopodium nivale* | specie | **rara** | bianco | giu–ago | ✅ 2177 | 88 · 12 · 0 |   |
+| 01 | **Stella alpina**<br>*Leontopodium nivale* | specie | **leggendaria** | bianco | giu–ago | ✅ 2177 | 88 · 12 · 0 |   |
 | 02 | **Genziana a trombetta**<br>*Gentiana gr. acaulis* | gruppo | non comune | blu | apr–lug | ✅ 2120 | 99 · 1 · 0 | Gruppo: G. acaulis e G. clusii si distinguono solo dal calice. |
 | 03 | **Genziana maggiore**<br>*Gentiana lutea* | specie | non comune | giallo | giu–ago | ✅ 601 | 47 · 41 · 12 |   |
 | 04 | **Botton d'oro**<br>*Trollius europaeus* | specie | comune | giallo | mag–lug | ✅ 1404 | 98 · 2 · 0 |   |
@@ -171,7 +170,7 @@ _Macchia, garighe, dune e scogliere._
 | 09 | **Papavero cornuto**<br>*Glaucium flavum* | specie | non comune | giallo | apr–ago | ✅ 768 | 1 · 16 · 83 |   |
 | 10 | **Soldanella marittima**<br>*Calystegia soldanella* | specie | non comune | rosa | apr–giu | ✅ 367 | 9 · 37 · 53 | Sosia: Vilucchio comune (in catalogo, Campi). |
 | 11 | **Calcatreppola marittima**<br>*Eryngium maritimum* | specie | non comune | azzurro | mag–ago | ✅ 928 | 4 · 26 · 70 |   |
-| 12 | **Giglio di mare**<br>*Pancratium maritimum* | specie | **rara** | bianco | lug–ott | ✅ 1461 | 0 · 25 · 75 |   |
+| 12 | **Giglio di mare**<br>*Pancratium maritimum* | specie | non comune | bianco | lug–ott | ✅ 1461 | 0 · 25 · 75 |   |
 | 13 | **Cisto femmina**<br>*Cistus salviifolius* | specie | comune | bianco | apr–mag | ✅ 1643 | 7 · 37 · 56 | Sosia: Cistus monspeliensis (→ altro). |
 | 14 | **Fico d'India**<br>*Opuntia ficus-indica* | specie | comune | giallo, arancio | mag–giu | ✅ 1227 | 2 · 11 · 87 |   |
 | 15 | **Salvione giallo**<br>*Phlomis fruticosa* | specie | non comune | giallo | mar–mag\* | 🟡 249 (UE 1235) | 1 · 4 · 94 |   |
@@ -209,7 +208,7 @@ _Boschi e radure; molte fioriture tra fine inverno e primavera, prima che gli al
 | 09 | **Ciclamino selvatico**<br>*Cyclamen sp. (spontanei)* | gruppo | comune | rosa | apr–mag, lug–nov | ✅ 4667 | 15 · 49 · 36 | Gruppo dei ciclamini spontanei. Sosia: Ciclamino da vaso (in catalogo, Giardini). |
 | 10 | **Rosa di Natale**<br>*Helleborus niger* | specie | non comune | bianco | dic–apr | ✅ 1201 | 100 · 0 · 0 | Comune anche nei giardini. |
 | 11 | **Aquilegia**<br>*Aquilegia sp.* | genere | non comune | blu, viola | apr–ago | ✅ 1784 | 92 · 6 · 2 | Genere. |
-| 12 | **Peonia selvatica**<br>*Paeonia officinalis* | specie | **rara** | rosa, rosso | apr–giu | ✅ 512 | 55 · 45 · 0 | Sosia: peonie coltivate (→ altro). |
+| 12 | **Peonia selvatica**<br>*Paeonia officinalis* | specie | **leggendaria** | rosa, rosso | apr–giu | ✅ 512 | 55 · 45 · 0 | Sosia: peonie coltivate (→ altro). |
 | 13 | **Fior di stecco**<br>*Daphne mezereum* | specie | non comune | rosa | feb–giu | ✅ 1411 | 87 · 9 · 4 | Velenosa. |
 | 14 | **Mughetto**<br>*Convallaria majalis* | specie | non comune | bianco | apr–mag | ✅ 690 | 97 · 2 · 1 | Velenoso. |
 | 15 | **Cicerchia primaticcia**<br>*Lathyrus vernus* | specie | comune | viola, blu | mar–mag | ✅ 890 | 82 · 15 · 3 |   |
@@ -249,7 +248,7 @@ _Rive, fossi, stagni e prati umidi._
 | 09 | **Balsamina ghiandolosa**<br>*Impatiens glandulifera* | specie | comune | rosa | giu–ott | ✅ 794 | 100 · 0 · 0 | Specie aliena invasiva lungo i fiumi. |
 | 10 | **Trifoglio fibrino**<br>*Menyanthes trifoliata* | specie | non comune | bianco | apr–giu | 🟡 202 (UE 9692) | 98 · 2 · 0 |   |
 | 11 | **Giunco fiorito**<br>*Butomus umbellatus* | specie | non comune | rosa | mag–ago | 🟡 189 (UE 8692) | 93 · 7 · 0 |   |
-| 12 | **Campanellino estivo**<br>*Leucojum aestivum* | specie | **rara** | bianco | mar–mag\* | 🟡 145 (UE 2715) | 65 · 15 · 20 | Sosia: Leucojum vernum (→ altro), Bucaneve (in catalogo, Boschi). |
+| 12 | **Campanellino estivo**<br>*Leucojum aestivum* | specie | non comune | bianco | mar–mag\* | 🟡 145 (UE 2715) | 65 · 15 · 20 | Sosia: Leucojum vernum (→ altro), Bucaneve (in catalogo, Boschi). |
 | 13 | **Vilucchio bianco**<br>*Calystegia sepium* | specie | comune | bianco | mag–set | ✅ 530 | 50 · 36 · 14 | Sosia: Vilucchio comune (in catalogo, Campi). |
 | 14 | **Fior di cuculo**<br>*Silene flos-cuculi* | specie | comune | rosa | mar–lug | ✅ 1335 | 44 · 50 · 6 |   |
 | 15 | **Canapa acquatica**<br>*Eupatorium cannabinum* | specie | comune | rosa | lug–set | ✅ 1504 | 42 · 42 · 16 |   |
@@ -285,7 +284,7 @@ _Frutti e semi da collezionare, più qualche fioritura d'autunno._
 | 09 | **Gigaro**<br>*Arum italicum* | specie | comune | arancio, rosso | giu–lug | ✅ 2429 | 18 · 54 · 28 | Velenoso. Sosia: Arum maculatum (→ altro). |
 | 10 | **Sorbo degli uccellatori**<br>*Sorbus aucuparia* | specie | comune | arancio, rosso | ago–set | ✅ 1047 | 81 · 11 · 8 |   |
 | 11 | **Agrifoglio**<br>*Ilex aquifolium* | specie | non comune | rosso | giu, ago–feb | ✅ 1345 | 37 · 33 · 30 | Velenoso. |
-| 12 | **Giaggiolo puzzolente**<br>*Iris foetidissima* | specie | **rara** | arancio, rosso | ott–feb | ✅ 312 | 31 · 46 · 23 | Si collezionano i semi rosso-arancio nelle capsule aperte. |
+| 12 | **Giaggiolo puzzolente**<br>*Iris foetidissima* | specie | **leggendaria** | arancio, rosso | ott–feb | ✅ 312 | 31 · 46 · 23 | Si collezionano i semi rosso-arancio nelle capsule aperte. |
 | 13 | **Corniolo**<br>*Cornus mas* | specie | comune | rosso | ago | ✅ 1150 | 45 · 46 · 9 |   |
 | 14 | **Salsapariglia**<br>*Smilax aspera* | specie | comune | rosso | apr, ago–nov, gen | ✅ 1720 | 5 · 40 · 55 |   |
 | 15 | **Dulcamara**<br>*Solanum dulcamara* | specie | comune | rosso, viola | lug–ott | ✅ 792 | 55 · 29 · 15 | Velenosa. |
@@ -327,7 +326,7 @@ _Tutte tutelate: si fotografano e non si raccolgono._
 | 08 | **Orchide tridentata**<br>*Neotinea tridentata* | specie | non comune | rosa | apr–giu | ✅ 1743 | 27 · 41 · 31 |   |
 | 09 | **Barlia**<br>*Himantoglossum robertianum* | specie | non comune | rosa, viola | dic–apr | ✅ 1273 | 17 · 18 · 65 | Fiorisce già a fine inverno. |
 | 10 | **Ofride fior d'api**<br>*Ophrys apifera* | specie | non comune | rosa | mag–giu | ✅ 1375 | 16 · 53 · 31 | Sosia: altre Ophrys (→ altro). |
-| 11 | **Ofride di Bertoloni**<br>*Ophrys bertolonii* | specie | **rara** | rosa, viola | apr–mag | ✅ 1607 | 8 · 38 · 53 |   |
+| 11 | **Ofride di Bertoloni**<br>*Ophrys bertolonii* | specie | non comune | rosa, viola | apr–mag | ✅ 1607 | 8 · 38 · 53 |   |
 | 12 | **Ofride gialla**<br>*Ophrys gr. lutea* | gruppo | non comune | giallo | mar–mag | ✅ 941 | 0 · 7 · 93 | Gruppo. |
 | 13 | **Ofride dei fuchi**<br>*Ophrys gr. fuciflora* | gruppo | non comune | rosa | apr–giu | ✅ 1663 | 22 · 37 · 41 | Gruppo. |
 | 14 | **Ofride tentredinifera**<br>*Ophrys tenthredinifera* | specie | non comune | rosa | mar–mag | ✅ 969 | 0 · 5 · 95 |   |
@@ -341,6 +340,7 @@ _Tutte tutelate: si fotografano e non si raccolgono._
 | 22 | **Fior di legna**<br>*Limodorum abortivum* | specie | non comune | viola | mag–giu | ✅ 1007 | 32 · 37 · 31 | Orchidea senza foglie. |
 | 23 | **Platantera**<br>*Platanthera bifolia / chlorantha* | gruppo | non comune | bianco | mag–lug | ✅ 1276 | 68 · 24 · 8 | Gruppo. |
 | 24 | **Orchide globosa**<br>*Traunsteinera globosa* | specie | non comune | rosa | giu–lug | ✅ 530 | 99 · 1 · 0 | Sosia: Nigritella (in catalogo). |
+| 25 | **Scarpetta di Venere**<br>*Cypripedium calceolus* | specie | **leggendaria** | giallo, viola | mag–giu | 🟡 238 (UE 5284) | 81 · 1 · 18 | Orchidea tutelata dalla Direttiva Habitat UE. |
 
 **Riserve**
 
@@ -350,14 +350,6 @@ _Tutte tutelate: si fotografano e non si raccolgono._
 | 02 | **Orchide cimicina**<br>*Anacamptis coriophora* | specie | non comune | rosso | mag–giu | 🟡 223 (UE 2542) | 45 · 48 · 6 |   |
 | 03 | **Ofride fior di ragno**<br>*Ophrys gr. sphegodes* | gruppo | comune | viola | mar–mag | ✅ 2911 | 8 · 34 · 59 | Colori spenti: labello bruno e sepali verdi. |
 | 04 | **Barbone**<br>*Himantoglossum hircinum / adriaticum* | gruppo | non comune | viola | mag–giu | ✅ 832 | 21 · 62 · 18 | Colori spenti (verde-bruno). |
-
-## Carta leggendaria (segreta)
-
-_Un solo fiore segreto, fuori dagli album._
-
-| # | Specie | Livello | Rarità | Colori | Periodo | Foto | N · C · S | Note |
-|---|---|---|---|---|---|---|---|---|
-| 01 | **Scarpetta di Venere**<br>*Cypripedium calceolus* | specie | **leggendaria** | giallo, viola | mag–giu | 🟡 238 (UE 5284) | 81 · 1 · 18 | Orchidea tutelata dalla Direttiva Habitat UE. |
 
 ## Note tecniche
 

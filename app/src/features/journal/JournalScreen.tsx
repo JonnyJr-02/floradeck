@@ -10,7 +10,7 @@ const day = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'long' })
 
 function Entry({ card, firstOfSpecies, photo }: { card: CardRecord; firstOfSpecies: boolean; photo: Parameters<typeof PhotoThumb>[0]['photo'] }) {
   const entry = speciesById(card.speciesId)
-  const album = albumById(entry?.albumId ?? null)
+  const album = albumById(entry?.albumId)
   return (
     <li>
       <Link href={`/carta/${card.id}`} state={IN_APP} className="journal-row press">

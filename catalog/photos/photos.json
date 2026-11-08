@@ -1,0 +1,2102 @@
+{
+ "achillea-maritima": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 2836433,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/2537779",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2836433/medium.jpg",
+  "review": "da-verificare"
+ },
+ "aconitum-napellus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 89576793,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/56220156",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/89576793/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ajuga-reptans": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 38265914,
+  "licence": "CC BY",
+  "attribution": "(c) Marianna Boi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/24744790",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/38265914/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "anacamptis-morio": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 29155485,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Thibaud Aronson, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/19011829",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29155485/medium.jpg",
+  "review": "da-verificare"
+ },
+ "anacamptis-papilionacea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 28449725,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Thibaud Aronson, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/18591474",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/28449725/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "anacamptis-pyramidalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 202686409,
+  "licence": "CC BY",
+  "attribution": "(c) Tommy Sandri, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/119871206",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/202686409/medium.jpg",
+  "review": "da-verificare"
+ },
+ "anchusa-azurea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 2840423,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/2546134",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2840423/medium.jpg",
+  "review": "da-verificare"
+ },
+ "anemone-coronaria": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 312158940,
+  "licence": "CC BY",
+  "attribution": "(c) F. Bemmerlein-Lux, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/179316841",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/312158940/medium.jpg",
+  "review": "da-verificare"
+ },
+ "anemone-hortensis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 34231447,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Andrea Meucci, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/22113444",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/34231447/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "anemone-nemorosa": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 38331345,
+  "licence": "CC BY",
+  "attribution": "(c) Marianna Boi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/24166741",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/38331345/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "anemone-ranunculoides": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 361595670,
+  "licence": "CC BY",
+  "attribution": "(c) Lorenzo Giordani, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/204562934",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/361595670/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "anthyllis-vulneraria": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 621561543,
+  "licence": "CC BY",
+  "attribution": "(c) zebedeugalinha, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/341433209",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/621561543/medium.jpg",
+  "review": "da-verificare"
+ },
+ "antirrhinum-majus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 46358053,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/29695383",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/46358053/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "aquilegia": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 535296815,
+  "licence": "CC BY",
+  "attribution": "(c) Gabriele Pradelli, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/297237461",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/535296815/medium.jpg",
+  "review": "da-verificare"
+ },
+ "arbutus-unedo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 753417895,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/409728752",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/753417895/medium.jpg",
+  "review": "da-verificare"
+ },
+ "arnica-montana": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 37582167,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Gilles San Martin, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/24306806",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/37582167/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "arum-italicum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 694608397,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/379716987",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/694608397/medium.jpg",
+  "review": "da-verificare"
+ },
+ "asphodelus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 451307629,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/165579261",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/451307629/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "aster-alpinus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 677148019,
+  "licence": "CC BY",
+  "attribution": "(c) Lukas Feichtmeier, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/370655146",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/677148019/medium.jpg",
+  "review": "da-verificare"
+ },
+ "astrantia-major": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 552632623,
+  "licence": "CC BY",
+  "attribution": "(c) Andrea Gobetti, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/306441904",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/552632623/medium.jpg",
+  "review": "da-verificare"
+ },
+ "bellis-perennis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 253681618,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/147426559",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/253681618/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "berberis-vulgaris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 557005324,
+  "licence": "CC BY",
+  "attribution": "(c) Marco Mussita, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/308723202",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/557005324/medium.jpg",
+  "review": "da-verificare"
+ },
+ "bistorta-officinalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 93753783,
+  "licence": "CC BY",
+  "attribution": "(c) pavlaki1968, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/58710491",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/93753783/medium.jpg",
+  "review": "da-verificare"
+ },
+ "borago-officinalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 447924866,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/250450757",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/447924866/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "butomus-umbellatus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 398608873,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/224869763",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/398608873/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "cakile-maritima": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 413844272,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/232867177",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/413844272/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "calendula-arvensis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 615264107,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/338337964",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/615264107/medium.jpg",
+  "review": "da-verificare"
+ },
+ "calluna-vulgaris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 686593243,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Matteo Negro, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/375564773",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/686593243/medium.jpg",
+  "review": "da-verificare"
+ },
+ "caltha-palustris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 112458555,
+  "licence": "CC BY",
+  "attribution": "(c) Luca Fornasari, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/69315390",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/112458555/medium.jpg",
+  "review": "da-verificare"
+ },
+ "calystegia-sepium": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 20192053,
+  "licence": "CC BY",
+  "attribution": "(c) Valentina Caviglia, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/13706947",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/20192053/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "calystegia-soldanella": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 197577115,
+  "licence": "CC BY",
+  "attribution": "(c) Riccardo Rocca, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/117018545",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/197577115/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "campanula-barbata": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 697889316,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Matteo Negro, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/381411573",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/697889316/medium.jpg",
+  "review": "da-verificare"
+ },
+ "capparis-spinosa": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 21845462,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/14646426",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/21845462/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "carpobrotus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 2560823,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/2301968",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2560823/medium.jpg",
+  "review": "da-verificare"
+ },
+ "centaurea-cyanus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 41130265,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/26485890",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41130265/medium.jpg",
+  "review": "da-verificare"
+ },
+ "centaurea-montana-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 355843354,
+  "licence": "CC BY",
+  "attribution": "(c) Manuela Fiorini, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/201568963",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/355843354/medium.jpg",
+  "review": "da-verificare"
+ },
+ "centranthus-ruber": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 603944189,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/332748556",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603944189/medium.jpg",
+  "review": "da-verificare"
+ },
+ "cephalanthera-bianche": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 39392341,
+  "licence": "CC BY",
+  "attribution": "(c) Parco Monte Barro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/25318453",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/39392341/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "cephalanthera-rubra": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 4820140,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/4067026",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/4820140/medium.jpg",
+  "review": "da-verificare"
+ },
+ "chamaenerion-angustifolium": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 596238396,
+  "licence": "CC BY",
+  "attribution": "(c) avduma, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/328976461",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/596238396/medium.jpg",
+  "review": "da-verificare"
+ },
+ "cichorium-intybus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 131872714,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/80456537",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/131872714/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "cistus-creticus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 364855501,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Matteo Negro, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/206294056",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/364855501/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "cistus-salviifolius": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 493928231,
+  "licence": "CC BY",
+  "attribution": "(c) Alessandro Popoli, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/274796148",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/493928231/medium.jpg",
+  "review": "da-verificare"
+ },
+ "clematis-vitalba": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 510827665,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/284249957",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/510827665/medium.jpg",
+  "review": "da-verificare"
+ },
+ "colchicum-autumnale": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 321954890,
+  "licence": "CC BY",
+  "attribution": "(c) Gabriele Pradelli, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/184435191",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/321954890/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "convallaria-majalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 273233837,
+  "licence": "CC BY",
+  "attribution": "(c) Franco Folini, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/158078537",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/273233837/medium.jpg",
+  "review": "da-verificare"
+ },
+ "convolvulus-arvensis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 414141694,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/233058366",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/414141694/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "cornus-mas": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 48557349,
+  "licence": "CC BY",
+  "attribution": "(c) Federico Morando, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/31050539",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/48557349/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "corydalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 352750549,
+  "licence": "CC BY",
+  "attribution": "(c) Luca Roner, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/199985721",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/352750549/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "cotoneaster": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 229242050,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/134486747",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/229242050/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "crataegus-monogyna": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 447927157,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/250451972",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/447927157/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "crocus-vernus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 184820613,
+  "licence": "CC BY",
+  "attribution": "(c) olrett, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/109637967",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/184820613/medium.jpg",
+  "review": "da-verificare"
+ },
+ "cyclamen": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 153298500,
+  "licence": "CC BY",
+  "attribution": "(c) Daniele_00, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/92572689",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/153298500/medium.jpg",
+  "review": "da-verificare"
+ },
+ "cymbalaria-muralis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 184690571,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/109568271",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/184690571/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "cypripedium-calceolus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 588365207,
+  "licence": "CC BY",
+  "attribution": "(c) gwynmwilliams, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/325005084",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/588365207/medium.jpg",
+  "review": "da-verificare"
+ },
+ "dactylorhiza-maculata-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 135331891,
+  "licence": "CC BY",
+  "attribution": "(c) Andrea Chemello, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/82452685",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/135331891/medium.jpg",
+  "review": "da-verificare"
+ },
+ "dactylorhiza-sambucina": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 297363680,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Stefano Menchetti, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/171368929",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/297363680/medium.jpg",
+  "review": "da-verificare"
+ },
+ "daphne-mezereum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 623844844,
+  "licence": "CC BY",
+  "attribution": "(c) Marco Mussita, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/342559831",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/623844844/medium.jpg",
+  "review": "da-verificare"
+ },
+ "daucus-carota": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 687095354,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/375821566",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/687095354/medium.jpg",
+  "review": "da-verificare"
+ },
+ "dianthus-carthusianorum-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 208493057,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/123094168",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/208493057/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "digitalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 243947220,
+  "licence": "CC BY",
+  "attribution": "(c) Mario Bassini, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/142304526",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/243947220/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "dipsacus-fullonum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 44946272,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/28817919",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/44946272/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "dryas-octopetala": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 482151707,
+  "licence": "CC BY",
+  "attribution": "(c) zebedeugalinha, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/268247779",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/482151707/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "echium-vulgare": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 739342382,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/402726672",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/739342382/medium.jpg",
+  "review": "da-verificare"
+ },
+ "epilobium-hirsutum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 752977037,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/409515891",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/752977037/medium.jpg",
+  "review": "da-verificare"
+ },
+ "erica-arborea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 632262912,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Andrea Meucci, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/346821842",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/632262912/medium.jpg",
+  "review": "da-verificare"
+ },
+ "erica-carnea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 652814664,
+  "licence": "CC BY",
+  "attribution": "(c) Matteo Martini, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/357902688",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/652814664/medium.jpg",
+  "review": "da-verificare"
+ },
+ "eryngium-maritimum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 408159275,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/229908966",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/408159275/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "erythronium-dens-canis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 64092517,
+  "licence": "CC BY",
+  "attribution": "(c) dariapi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/40351716",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/64092517/medium.jpg",
+  "review": "da-verificare"
+ },
+ "euonymus-europaeus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 580170626,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/320849128",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580170626/medium.jpg",
+  "review": "da-verificare"
+ },
+ "eupatorium-cannabinum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 425130650,
+  "licence": "CC BY",
+  "attribution": "(c) Samuele Papeschi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/238764219",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/425130650/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ficaria-verna": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 465908087,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/259534439",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/465908087/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "filipendula-ulmaria": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 83273645,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/52387120",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/83273645/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "foeniculum-vulgare": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 410136319,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/230953404",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/410136319/medium.jpg",
+  "review": "da-verificare"
+ },
+ "fragaria-vesca": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 4384361,
+  "licence": "CC BY",
+  "attribution": "(c) Leonardo Ancillotto, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/3763379",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/4384361/medium.jpg",
+  "review": "da-verificare"
+ },
+ "fritillaria": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 467891727,
+  "licence": "CC BY",
+  "attribution": "(c) Gianmaria Bonari, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/260531594",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/467891727/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "galanthus-nivalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 486370153,
+  "licence": "CC BY",
+  "attribution": "(c) Dié 90, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/270442596",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/486370153/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "gentiana-acaulis-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 114067425,
+  "licence": "CC BY",
+  "attribution": "(c) Felicia Seichter, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/70198326",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/114067425/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "gentiana-lutea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 4858113,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/4092366",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/4858113/medium.jpg",
+  "review": "da-verificare"
+ },
+ "gentiana-verna": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 582085020,
+  "licence": "CC BY",
+  "attribution": "(c) Marcello Manara, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/321829673",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582085020/medium.jpg",
+  "review": "da-verificare"
+ },
+ "geranium-robertianum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 41130410,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/26485904",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41130410/medium.jpg",
+  "review": "da-verificare"
+ },
+ "geranium-sanguineum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 130665792,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/79760143",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/130665792/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "gladiolus-italicus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 653492203,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/358239142",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/653492203/medium.jpg",
+  "review": "da-verificare"
+ },
+ "glaucium-flavum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 404995161,
+  "licence": "CC BY",
+  "attribution": "(c) Gabriele Pradelli, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/228238259",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/404995161/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "glebionis-coronaria": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 618193565,
+  "licence": "CC BY",
+  "attribution": "(c) Daniel Cahen, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/339791108",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/618193565/medium.jpg",
+  "review": "da-verificare"
+ },
+ "gymnadenia-conopsea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 85543285,
+  "licence": "CC BY",
+  "attribution": "(c) Mattia Menchetti, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/53776660",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/85543285/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "helichrysum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 42162905,
+  "licence": "CC BY",
+  "attribution": "(c) silk128, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/27121012",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42162905/medium.jpg",
+  "review": "da-verificare"
+ },
+ "helleborus-niger": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 31970091,
+  "licence": "CC BY",
+  "attribution": "(c) Riccardo Riva, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/20735557",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/31970091/medium.jpg",
+  "review": "da-verificare"
+ },
+ "hepatica-nobilis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 257864244,
+  "licence": "CC BY",
+  "attribution": "(c) Serena De Santis, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/149628236",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/257864244/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "himantoglossum-robertianum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 61127262,
+  "licence": "CC BY",
+  "attribution": "(c) Drepanostoma, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/38460221",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/61127262/medium.jpg",
+  "review": "da-verificare"
+ },
+ "hippophae-rhamnoides": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 226706237,
+  "licence": "CC BY",
+  "attribution": "(c) Markus Krieger, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/133123687",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/226706237/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "hypericum-perforatum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 669511912,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/366651013",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/669511912/medium.jpg",
+  "review": "da-verificare"
+ },
+ "ilex-aquifolium": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 128431581,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/78467594",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/128431581/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "impatiens-glandulifera": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 46832072,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/29990891",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/46832072/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "impatiens-noli-tangere": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 9242332,
+  "licence": "CC BY",
+  "attribution": "(c) Franco Folini, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/7172057",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/9242332/medium.jpg",
+  "review": "da-verificare"
+ },
+ "iris-foetidissima": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 62424107,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/39354227",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/62424107/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "iris-pseudacorus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 492857219,
+  "licence": "CC BY",
+  "attribution": "(c) Samuele Papeschi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/274135274",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/492857219/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "knautia": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 387886978,
+  "licence": "CC BY",
+  "attribution": "(c) Debora Barbato, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/219161190",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/387886978/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lamium-purpureum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 185061363,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/109766588",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/185061363/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "lathyrus-latifolius": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 202153638,
+  "licence": "CC BY",
+  "attribution": "(c) Ljaž, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/119573813",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/202153638/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "lathyrus-vernus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 653752694,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/358373731",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/653752694/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lavandula-stoechas": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 361519423,
+  "licence": "CC BY",
+  "attribution": "(c) Samuele Papeschi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/204523347",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/361519423/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "legousia-speculum-veneris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 301303802,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/173496979",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/301303802/medium.jpg",
+  "review": "da-verificare"
+ },
+ "leontopodium-nivale": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 541183432,
+  "licence": "CC BY",
+  "attribution": "(c) Elias, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/300358769",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/541183432/medium.jpg",
+  "review": "da-verificare"
+ },
+ "leopoldia-comosa": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 610082681,
+  "licence": "CC BY",
+  "attribution": "(c) Patrice Dupont, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/335790520",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/610082681/medium.jpg",
+  "review": "da-verificare"
+ },
+ "leucanthemum-vulgare": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 126389686,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/77287435",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/126389686/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "leucojum-aestivum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 270700967,
+  "licence": "CC BY",
+  "attribution": "(c) Paolo Zucca, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/156540018",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/270700967/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lilium-bulbiferum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 65593443,
+  "licence": "CC BY",
+  "attribution": "(c) Ruben Ciantia, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/41351747",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/65593443/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lilium-martagon": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 528501501,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Matteo Negro, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/293652113",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/528501501/medium.jpg",
+  "review": "da-verificare"
+ },
+ "limodorum-abortivum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 1827872,
+  "licence": "CC BY",
+  "attribution": "(c) Mattia Menchetti, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/1474395",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1827872/medium.jpg",
+  "review": "da-verificare"
+ },
+ "limonium": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 157901925,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/95013993",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157901925/medium.jpg",
+  "review": "da-verificare"
+ },
+ "linaria-alpina": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 139093966,
+  "licence": "CC BY",
+  "attribution": "(c) pavlaki1968, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/84618567",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/139093966/medium.jpg",
+  "review": "da-verificare"
+ },
+ "linaria-vulgaris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 590058704,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/325855649",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590058704/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lonicera-caprifogli": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 77398938,
+  "licence": "CC BY",
+  "attribution": "(c) Stephanie G. Williams, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/48767868",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/77398938/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lotus-corniculatus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 321431722,
+  "licence": "CC BY",
+  "attribution": "(c) Daniel Cahen, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/184172883",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/321431722/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "lychnis-flos-cuculi": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 667318072,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/365498401",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/667318072/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lysimachia-vulgaris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 546470219,
+  "licence": "CC BY",
+  "attribution": "(c) Andrea Gobetti, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/303202854",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/546470219/medium.jpg",
+  "review": "da-verificare"
+ },
+ "lythrum-salicaria": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 48346522,
+  "licence": "CC BY",
+  "attribution": "(c) olrett, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/30923459",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/48346522/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "malva-sylvestris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 727341743,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/396616204",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/727341743/medium.jpg",
+  "review": "da-verificare"
+ },
+ "matthiola": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 13689443,
+  "licence": "CC BY",
+  "attribution": "(c) Andre Hosper, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/9966782",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13689443/medium.jpg",
+  "review": "da-verificare"
+ },
+ "melittis-melissophyllum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 129807862,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/79259845",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/129807862/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "mentha-aquatica": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 584901483,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/323267393",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/584901483/medium.jpg",
+  "review": "da-verificare"
+ },
+ "menyanthes-trifoliata": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 682710500,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/373562509",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/682710500/medium.jpg",
+  "review": "da-verificare"
+ },
+ "muscari": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 632584349,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/346982037",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/632584349/medium.jpg",
+  "review": "da-verificare"
+ },
+ "myosotis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 603949890,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/332751381",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603949890/medium.jpg",
+  "review": "da-verificare"
+ },
+ "myrtus-communis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 292640911,
+  "licence": "CC BY",
+  "attribution": "(c) Peter Brastow, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/168830267",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/292640911/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "narcissus-poeticus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 70202220,
+  "licence": "CC BY",
+  "attribution": "(c) Esteban Stefano Pavan, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/44290851",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/70202220/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "narcissus-tazetta": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 177900624,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/105956697",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/177900624/medium.jpg",
+  "review": "da-verificare"
+ },
+ "neotinea-tridentata": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 128582689,
+  "licence": "CC BY",
+  "attribution": "(c) Vincenzo Lattanzi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/78558308",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/128582689/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "nigella-damascena": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 370393711,
+  "licence": "CC BY",
+  "attribution": "(c) Edoardo Nardelli, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/209302085",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/370393711/medium.jpg",
+  "review": "da-verificare"
+ },
+ "nigritella": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 149632733,
+  "licence": "CC BY",
+  "attribution": "(c) Isabella Paleari, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/90528725",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/149632733/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "nuphar-lutea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 348700327,
+  "licence": "CC BY",
+  "attribution": "(c) Mario Bassini, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/197913007",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/348700327/medium.jpg",
+  "review": "da-verificare"
+ },
+ "nymphaea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 439502610,
+  "licence": "CC BY",
+  "attribution": "(c) Marcello Manara, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/246215780",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/439502610/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "oenothera": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 408078117,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/229864802",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/408078117/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ophrys-apifera": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 62297872,
+  "licence": "CC BY",
+  "attribution": "(c) Karsten Rohweder, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/39278847",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/62297872/medium.jpg",
+  "review": "da-verificare"
+ },
+ "ophrys-bertolonii": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 119173489,
+  "licence": "CC BY",
+  "attribution": "(c) Terry Instone, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/73028624",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/119173489/medium.jpg",
+  "review": "da-verificare"
+ },
+ "ophrys-fuciflora-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 28684350,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Thibaud Aronson, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/18733409",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/28684350/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ophrys-lutea-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 28449665,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Thibaud Aronson, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/18591459",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/28449665/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ophrys-tenthredinifera": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 15257540,
+  "licence": "CC BY",
+  "attribution": "(c) Davide Puddu, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/10869795",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/15257540/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "opuntia-ficus-indica": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 546804579,
+  "licence": "CC BY",
+  "attribution": "(c) ivica_cvrtila, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/303376683",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/546804579/medium.jpg",
+  "review": "da-verificare"
+ },
+ "orchis-italica": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 128582542,
+  "licence": "CC BY",
+  "attribution": "(c) Vincenzo Lattanzi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/78556115",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/128582542/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "orchis-mascula": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 508382907,
+  "licence": "CC BY",
+  "attribution": "(c) Serena De Santis, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/282948224",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/508382907/medium.jpg",
+  "review": "da-verificare"
+ },
+ "orchis-purpurea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 196510817,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/116415131",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/196510817/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "orchis-simia": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 126388132,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/77286057",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/126388132/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ornithogalum-umbellatum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 646289526,
+  "licence": "CC BY",
+  "attribution": "(c) Paolo Zucca, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/354258355",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/646289526/medium.jpg",
+  "review": "da-verificare"
+ },
+ "oxalis-acetosella": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 480842292,
+  "licence": "CC BY",
+  "attribution": "(c) Marcello Manara, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/267560701",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/480842292/medium.jpg",
+  "review": "da-verificare"
+ },
+ "paeonia-officinalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 297760952,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Stefano Menchetti, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/171585494",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/297760952/medium.jpg",
+  "review": "da-verificare"
+ },
+ "pancratium-maritimum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 531952789,
+  "licence": "CC BY",
+  "attribution": "(c) Luca Borghesio, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/295488233",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/531952789/medium.jpg",
+  "review": "da-verificare"
+ },
+ "papaver-rhoeas": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 379351799,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/214611040",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/379351799/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "paradisea-liliastrum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 621540513,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Alessandro, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/341423092",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/621540513/medium.jpg",
+  "review": "da-verificare"
+ },
+ "parnassia-palustris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 91503755,
+  "licence": "CC BY",
+  "attribution": "(c) Luca Fornasari, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/57371422",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/91503755/medium.jpg",
+  "review": "da-verificare"
+ },
+ "persicaria-amphibia": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 133322381,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/81290315",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/133322381/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "phlomis-fruticosa": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 502123414,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/279611771",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/502123414/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "physalis-alkekengi": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 150232668,
+  "licence": "CC BY",
+  "attribution": "(c) olrett, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/90873247",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/150232668/medium.jpg",
+  "review": "da-verificare"
+ },
+ "phyteuma": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 80230306,
+  "licence": "CC BY",
+  "attribution": "(c) Luca Fornasari, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/50528790",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/80230306/medium.jpg",
+  "review": "da-verificare"
+ },
+ "phytolacca-americana": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 330981518,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/189008762",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/330981518/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "pinguicula": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 112511170,
+  "licence": "CC BY",
+  "attribution": "(c) Luca Fornasari, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/69356673",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/112511170/medium.jpg",
+  "review": "da-verificare"
+ },
+ "platanthera": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 228545504,
+  "licence": "CC BY",
+  "attribution": "(c) Gail A Baker, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/134113220",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/228545504/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "primula-auricula": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 133429714,
+  "licence": "CC BY",
+  "attribution": "(c) Kenta Nakahashi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/81354143",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/133429714/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "primula-veris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 377736924,
+  "licence": "CC BY",
+  "attribution": "(c) Samuele Papeschi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/213736999",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/377736924/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "primula-vulgaris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 32275176,
+  "licence": "CC BY",
+  "attribution": "(c) silk128, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/20912849",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/32275176/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "prunus-spinosa": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 693858217,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/379325704",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/693858217/medium.jpg",
+  "review": "da-verificare"
+ },
+ "pulmonaria": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 472976516,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Filippo Ceragioli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/263293583",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/472976516/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "pulsatilla-alpina": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 292412064,
+  "licence": "CC BY",
+  "attribution": "(c) Kenta Nakahashi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/168706905",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/292412064/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "pyracantha": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 325364896,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/186210436",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/325364896/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ranunculus-acquatici": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 91985736,
+  "licence": "CC BY",
+  "attribution": "(c) Isabella Paleari, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/57654549",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/91985736/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ranunculus-acris-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 213549995,
+  "licence": "CC BY",
+  "attribution": "(c) Noland Martin, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/125893659",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/213549995/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ranunculus-glacialis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 61454142,
+  "licence": "CC BY",
+  "attribution": "(c) Karsten Rohweder, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/38647632",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/61454142/medium.jpg",
+  "review": "da-verificare"
+ },
+ "rhinanthus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 213313196,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/125767834",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/213313196/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "rhododendron-alpino": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 46893666,
+  "licence": "CC BY",
+  "attribution": "(c) Wolfgang Jauch, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/30028385",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/46893666/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "rosa-canina": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 35095699,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/22649981",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/35095699/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "rubus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 45542793,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/29189257",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/45542793/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "ruscus-aculeatus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 129807874,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/79259848",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/129807874/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "salvia-pratensis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 752868492,
+  "licence": "CC BY",
+  "attribution": "(c) Leonardo Rapisarda, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/409460808",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/752868492/medium.jpg",
+  "review": "da-verificare"
+ },
+ "sambucus-nigra": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 644290062,
+  "licence": "CC BY",
+  "attribution": "(c) Corey Leamy, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/353081316",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/644290062/medium.jpg",
+  "review": "da-verificare"
+ },
+ "saponaria-officinalis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 399477996,
+  "licence": "CC BY",
+  "attribution": "(c) Marcello Manara, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/225325251",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/399477996/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "saxifraga-oppositifolia": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 352252227,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/199722403",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/352252227/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "scilla-bifolia": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 616946880,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Alessandro, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/339174430",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/616946880/medium.jpg",
+  "review": "da-verificare"
+ },
+ "sempervivum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 107609429,
+  "licence": "CC BY",
+  "attribution": "(c) Kenta Nakahashi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/66713181",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/107609429/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "serapias": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 502803675,
+  "licence": "CC BY",
+  "attribution": "(c) Lorenzo Emanuele Labate, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/279975376",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/502803675/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "silene-acaulis": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 140981880,
+  "licence": "CC BY",
+  "attribution": "(c) Karsten Rohweder, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/85663904",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/140981880/medium.jpg",
+  "review": "da-verificare"
+ },
+ "silene-vulgaris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 603943852,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/332748417",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603943852/medium.jpg",
+  "review": "da-verificare"
+ },
+ "silybum-marianum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 2872072,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/2573904",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2872072/medium.jpg",
+  "review": "da-verificare"
+ },
+ "smilax-aspera": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 452735407,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/252880940",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/452735407/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "solanum-dulcamara": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 603943778,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/332748390",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603943778/medium.jpg",
+  "review": "da-verificare"
+ },
+ "soldanella": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 42527271,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/27343440",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42527271/medium.jpg",
+  "review": "da-verificare"
+ },
+ "solidago": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 48346505,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/30923470",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/48346505/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "sorbus-aucuparia": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 235337204,
+  "licence": "CC BY",
+  "attribution": "(c) Marco Mussita, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/137759827",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/235337204/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "spartium-junceum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 284091822,
+  "licence": "CC BY",
+  "attribution": "(c) Francesco Santoro, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/164207921",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/284091822/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "sternbergia-lutea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 433357165,
+  "licence": "CC BY",
+  "attribution": "(c) Lorenzo Emanuele Labate, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/243052374",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/433357165/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "symphyotrichum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 164469774,
+  "licence": "CC BY",
+  "attribution": "(c) Patrick Hacker, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/98744511",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/164469774/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "symphytum-officinale": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 295637584,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/169591924",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/295637584/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "tamarix": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 159263742,
+  "licence": "CC BY",
+  "attribution": "(c) Patrick Hacker, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/95902581",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/159263742/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "taraxacum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 190914555,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+  "pageUrl": "https://www.inaturalist.org/observations/112999700",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/190914555/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "taxus-baccata": {
+  "status": "found",
+  "via": "taxon",
+  "photoId": 1203032,
+  "licence": "CC BY-SA",
+  "attribution": "(c) Colin Meurk, some rights reserved (CC BY-SA), uploaded by Colin Meurk",
+  "pageUrl": "https://www.inaturalist.org/photos/1203032",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1203032/medium.",
+  "review": "da-verificare"
+ },
+ "teucrium-fruticans": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 179259067,
+  "licence": "CC BY",
+  "attribution": "(c) Ruben Ciantia, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/106679018",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/179259067/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "tragopogon-porrifolius": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 34133623,
+  "licence": "CC BY",
+  "attribution": "(c) Valentina Caviglia, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/22030141",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/34133623/medium.jpg",
+  "review": "da-verificare"
+ },
+ "traunsteinera-globosa": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 61909719,
+  "licence": "CC BY",
+  "attribution": "(c) Karsten Rohweder, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/39002371",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/61909719/medium.jpg",
+  "review": "da-verificare"
+ },
+ "trifolium-pratense": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 320409700,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/183636030",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/320409700/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "trifolium-repens": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 38266123,
+  "licence": "CC BY",
+  "attribution": "(c) Marianna Boi, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/24744798",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/38266123/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "trollius-europaeus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 42777395,
+  "licence": "CC BY",
+  "attribution": "(c) Cristina Catellani, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/27488946",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42777395/medium.jpg",
+  "review": "da-verificare"
+ },
+ "tulipa-sylvestris": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 66050224,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/41635862",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66050224/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "vaccinium-myrtillus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 149605840,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/90512430",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/149605840/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "vaccinium-vitis-idaea": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 317918179,
+  "licence": "CC BY",
+  "attribution": "(c) Oisín, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/182348232",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/317918179/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "verbascum": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 8859470,
+  "licence": "CC BY",
+  "attribution": "(c) Franco Folini, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/6934278",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/8859470/medium.jpg",
+  "review": "da-verificare"
+ },
+ "viburnum-opulus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 329684191,
+  "licence": "CC BY",
+  "attribution": "(c) Marco Mussita, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/188374786",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/329684191/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "vinca-minor": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 628021641,
+  "licence": "CC BY",
+  "attribution": "(c) Arianna, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/344661360",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/628021641/medium.jpg",
+  "review": "da-verificare"
+ },
+ "viola-calcarata": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 300825794,
+  "licence": "CC BY",
+  "attribution": "(c) pavlaki1968, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/173238630",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/300825794/medium.jpg",
+  "review": "da-verificare"
+ },
+ "viola-odorata-gruppo": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 471160377,
+  "licence": "CC BY",
+  "attribution": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+  "pageUrl": "https://www.inaturalist.org/observations/262259045",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/471160377/medium.jpeg",
+  "review": "da-verificare"
+ },
+ "vitex-agnus-castus": {
+  "status": "found",
+  "via": "observation-annotated",
+  "photoId": 9680808,
+  "licence": "CC0",
+  "attribution": "no rights reserved",
+  "pageUrl": "https://www.inaturalist.org/observations/7436162",
+  "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/9680808/medium.jpeg",
+  "review": "da-verificare"
+ }
+}

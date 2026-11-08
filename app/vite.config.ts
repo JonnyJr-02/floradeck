@@ -65,7 +65,15 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,txt,webp}'],
-        globIgnores: ['404.html'],
+        // Reference photos (~6 MB in all) are cached when first seen, not installed up front.
+        globIgnores: ['404.html', 'photos/**'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.includes('/photos/') && url.pathname.endsWith('.webp'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'floradeck-photos', expiration: { maxEntries: 400 } },
+          },
+        ],
         cleanupOutdatedCaches: true,
       },
     }),

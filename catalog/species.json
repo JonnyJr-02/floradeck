@@ -2,7 +2,18 @@
   {
     "id": "bellis-perennis",
     "number": 1,
-    "albumId": "prati-primavera",
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 1
+      },
+      {
+        "albumId": "rosa",
+        "number": 1
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Bellis perennis",
     "taxonLevel": "species",
     "commonNameIt": "Pratolina",
@@ -49,8 +60,15 @@
   },
   {
     "id": "taraxacum",
-    "number": 2,
-    "albumId": "prati-primavera",
+    "number": 1,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 1
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Taraxacum sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Tarassaco (dente di leone)",
@@ -94,8 +112,15 @@
   },
   {
     "id": "primula-veris",
-    "number": 3,
-    "albumId": "prati-primavera",
+    "number": 2,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 2
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Primula veris",
     "taxonLevel": "species",
     "commonNameIt": "Primula odorosa",
@@ -138,8 +163,19 @@
   },
   {
     "id": "viola-odorata-gruppo",
-    "number": 4,
-    "albumId": "prati-primavera",
+    "number": 1,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 1
+      },
+      {
+        "albumId": "bianchi",
+        "number": 2
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Viola gr. odorata",
     "taxonLevel": "group",
     "commonNameIt": "Viola mammola",
@@ -186,8 +222,19 @@
   },
   {
     "id": "muscari",
-    "number": 5,
-    "albumId": "prati-primavera",
+    "number": 1,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 1
+      },
+      {
+        "albumId": "viola",
+        "number": 2
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Muscari sp.",
     "taxonLevel": "group",
     "commonNameIt": "Muscari",
@@ -232,8 +279,15 @@
   },
   {
     "id": "myosotis",
-    "number": 6,
-    "albumId": "prati-primavera",
+    "number": 2,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 2
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Myosotis sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Non ti scordar di me",
@@ -274,8 +328,19 @@
   },
   {
     "id": "salvia-pratensis",
-    "number": 7,
-    "albumId": "prati-primavera",
+    "number": 3,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 3
+      },
+      {
+        "albumId": "blu-azzurri",
+        "number": 3
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Salvia pratensis",
     "taxonLevel": "species",
     "commonNameIt": "Salvia dei prati",
@@ -318,8 +383,19 @@
   },
   {
     "id": "ajuga-reptans",
-    "number": 8,
-    "albumId": "prati-primavera",
+    "number": 4,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 4
+      },
+      {
+        "albumId": "viola",
+        "number": 4
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Ajuga reptans",
     "taxonLevel": "species",
     "commonNameIt": "Iva comune",
@@ -362,8 +438,15 @@
   },
   {
     "id": "trifolium-pratense",
-    "number": 9,
-    "albumId": "prati-primavera",
+    "number": 2,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 2
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Trifolium pratense",
     "taxonLevel": "species",
     "commonNameIt": "Trifoglio pratense",
@@ -409,8 +492,15 @@
   },
   {
     "id": "leucanthemum-vulgare",
-    "number": 10,
-    "albumId": "prati-primavera",
+    "number": 3,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 3
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Leucanthemum vulgare agg.",
     "taxonLevel": "group",
     "commonNameIt": "Margherita comune",
@@ -459,8 +549,15 @@
   },
   {
     "id": "narcissus-poeticus",
-    "number": 11,
-    "albumId": "prati-primavera",
+    "number": 4,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 4
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Narcissus poeticus",
     "taxonLevel": "species",
     "commonNameIt": "Narciso dei poeti",
@@ -500,8 +597,15 @@
   },
   {
     "id": "ornithogalum-umbellatum",
-    "number": 12,
-    "albumId": "prati-primavera",
+    "number": 5,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 5
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Ornithogalum umbellatum",
     "taxonLevel": "species",
     "commonNameIt": "Latte di gallina",
@@ -541,8 +645,15 @@
   },
   {
     "id": "ranunculus-acris-gruppo",
-    "number": 13,
-    "albumId": "prati-primavera",
+    "number": 3,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 3
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Ranunculus gr. acris",
     "taxonLevel": "group",
     "commonNameIt": "Ranuncolo dei prati",
@@ -589,8 +700,15 @@
   },
   {
     "id": "ficaria-verna",
-    "number": 14,
-    "albumId": "prati-primavera",
+    "number": 4,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 4
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Ficaria verna",
     "taxonLevel": "species",
     "commonNameIt": "Favagello",
@@ -632,8 +750,15 @@
   },
   {
     "id": "knautia",
-    "number": 15,
-    "albumId": "prati-primavera",
+    "number": 5,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 5
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Knautia sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Ambretta",
@@ -676,8 +801,15 @@
   },
   {
     "id": "lotus-corniculatus",
-    "number": 16,
-    "albumId": "prati-primavera",
+    "number": 5,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 5
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Lotus corniculatus",
     "taxonLevel": "species",
     "commonNameIt": "Ginestrino",
@@ -721,8 +853,15 @@
   },
   {
     "id": "geranium-sanguineum",
-    "number": 17,
-    "albumId": "prati-primavera",
+    "number": 3,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 3
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Geranium sanguineum",
     "taxonLevel": "species",
     "commonNameIt": "Geranio sanguigno",
@@ -760,8 +899,15 @@
   },
   {
     "id": "dianthus-carthusianorum-gruppo",
-    "number": 18,
-    "albumId": "prati-primavera",
+    "number": 4,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 4
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Dianthus gr. carthusianorum",
     "taxonLevel": "group",
     "commonNameIt": "Garofano dei certosini",
@@ -804,8 +950,19 @@
   },
   {
     "id": "anemone-hortensis",
-    "number": 19,
-    "albumId": "prati-primavera",
+    "number": 5,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 5
+      },
+      {
+        "albumId": "viola",
+        "number": 6
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Anemone hortensis",
     "taxonLevel": "species",
     "commonNameIt": "Anemone stellata",
@@ -846,8 +1003,19 @@
   },
   {
     "id": "narcissus-tazetta",
-    "number": 20,
-    "albumId": "prati-primavera",
+    "number": 6,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 6
+      },
+      {
+        "albumId": "gialli",
+        "number": 6
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Narcissus tazetta",
     "taxonLevel": "species",
     "commonNameIt": "Narciso nostrale",
@@ -890,8 +1058,15 @@
   },
   {
     "id": "rhinanthus",
-    "number": 21,
-    "albumId": "prati-primavera",
+    "number": 7,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 7
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Rhinanthus sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Cresta di gallo",
@@ -930,8 +1105,15 @@
   },
   {
     "id": "anthyllis-vulneraria",
-    "number": 22,
-    "albumId": "prati-primavera",
+    "number": 8,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 8
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Anthyllis vulneraria",
     "taxonLevel": "species",
     "commonNameIt": "Vulneraria",
@@ -971,13 +1153,20 @@
   },
   {
     "id": "fritillaria",
-    "number": 23,
-    "albumId": "prati-primavera",
+    "number": 52,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 52
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Fritillaria sp. (spontanee)",
     "taxonLevel": "group",
     "commonNameIt": "Fritillaria",
     "family": "Liliaceae",
-    "rarity": "rare",
+    "rarity": "legendary",
     "dominantColors": [
       "viola"
     ],
@@ -1017,8 +1206,15 @@
   },
   {
     "id": "trifolium-repens",
-    "number": 24,
-    "albumId": "prati-primavera",
+    "number": 7,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 7
+      }
+    ],
+    "habitatGroup": "prati-primavera",
     "scientificName": "Trifolium repens",
     "taxonLevel": "species",
     "commonNameIt": "Trifoglio bianco",
@@ -1061,7 +1257,14 @@
   {
     "id": "papaver-rhoeas",
     "number": 1,
-    "albumId": "campi-bordi-strada",
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 1
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Papaver rhoeas",
     "taxonLevel": "species",
     "commonNameIt": "Papavero comune",
@@ -1101,13 +1304,20 @@
   },
   {
     "id": "centaurea-cyanus",
-    "number": 2,
-    "albumId": "campi-bordi-strada",
+    "number": 29,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 29
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Centaurea cyanus",
     "taxonLevel": "species",
     "commonNameIt": "Fiordaliso",
     "family": "Asteraceae",
-    "rarity": "uncommon",
+    "rarity": "legendary",
     "dominantColors": [
       "blu"
     ],
@@ -1143,8 +1353,15 @@
   },
   {
     "id": "cichorium-intybus",
-    "number": 3,
-    "albumId": "campi-bordi-strada",
+    "number": 5,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 5
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Cichorium intybus",
     "taxonLevel": "species",
     "commonNameIt": "Cicoria selvatica",
@@ -1188,8 +1405,19 @@
   },
   {
     "id": "echium-vulgare",
-    "number": 4,
-    "albumId": "campi-bordi-strada",
+    "number": 6,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 6
+      },
+      {
+        "albumId": "viola",
+        "number": 7
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Echium vulgare",
     "taxonLevel": "species",
     "commonNameIt": "Viperina azzurra",
@@ -1233,8 +1461,19 @@
   },
   {
     "id": "convolvulus-arvensis",
-    "number": 5,
-    "albumId": "campi-bordi-strada",
+    "number": 8,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 8
+      },
+      {
+        "albumId": "rosa",
+        "number": 6
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Convolvulus arvensis",
     "taxonLevel": "species",
     "commonNameIt": "Vilucchio comune",
@@ -1277,8 +1516,19 @@
   },
   {
     "id": "malva-sylvestris",
-    "number": 6,
-    "albumId": "campi-bordi-strada",
+    "number": 7,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 7
+      },
+      {
+        "albumId": "viola",
+        "number": 8
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Malva sylvestris",
     "taxonLevel": "species",
     "commonNameIt": "Malva selvatica",
@@ -1326,8 +1576,19 @@
   },
   {
     "id": "linaria-vulgaris",
-    "number": 7,
-    "albumId": "campi-bordi-strada",
+    "number": 9,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 9
+      },
+      {
+        "albumId": "rossi-arancio",
+        "number": 2
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Linaria vulgaris",
     "taxonLevel": "species",
     "commonNameIt": "Linajola comune",
@@ -1368,8 +1629,15 @@
   },
   {
     "id": "verbascum",
-    "number": 8,
-    "albumId": "campi-bordi-strada",
+    "number": 10,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 10
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Verbascum sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Verbasco",
@@ -1411,7 +1679,14 @@
   {
     "id": "silene-vulgaris",
     "number": 9,
-    "albumId": "campi-bordi-strada",
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 9
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Silene vulgaris",
     "taxonLevel": "species",
     "commonNameIt": "Silene rigonfia",
@@ -1453,8 +1728,15 @@
   },
   {
     "id": "calendula-arvensis",
-    "number": 10,
-    "albumId": "campi-bordi-strada",
+    "number": 3,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 3
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Calendula arvensis",
     "taxonLevel": "species",
     "commonNameIt": "Fiorrancio selvatico",
@@ -1494,8 +1776,19 @@
   },
   {
     "id": "gladiolus-italicus",
-    "number": 11,
-    "albumId": "campi-bordi-strada",
+    "number": 8,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 8
+      },
+      {
+        "albumId": "viola",
+        "number": 9
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Gladiolus italicus",
     "taxonLevel": "species",
     "commonNameIt": "Gladiolo dei campi",
@@ -1533,8 +1826,15 @@
   },
   {
     "id": "hypericum-perforatum",
-    "number": 12,
-    "albumId": "campi-bordi-strada",
+    "number": 11,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 11
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Hypericum perforatum",
     "taxonLevel": "species",
     "commonNameIt": "Erba di San Giovanni",
@@ -1575,8 +1875,15 @@
   },
   {
     "id": "silybum-marianum",
-    "number": 13,
-    "albumId": "campi-bordi-strada",
+    "number": 10,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 10
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Silybum marianum",
     "taxonLevel": "species",
     "commonNameIt": "Cardo mariano",
@@ -1614,8 +1921,15 @@
   },
   {
     "id": "nigella-damascena",
-    "number": 14,
-    "albumId": "campi-bordi-strada",
+    "number": 7,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 7
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Nigella damascena",
     "taxonLevel": "species",
     "commonNameIt": "Damigella scapigliata",
@@ -1653,8 +1967,15 @@
   },
   {
     "id": "leopoldia-comosa",
-    "number": 15,
-    "albumId": "campi-bordi-strada",
+    "number": 11,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 11
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Leopoldia comosa",
     "taxonLevel": "species",
     "commonNameIt": "Cipollaccio",
@@ -1693,8 +2014,19 @@
   },
   {
     "id": "lamium-purpureum",
-    "number": 16,
-    "albumId": "campi-bordi-strada",
+    "number": 12,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 12
+      },
+      {
+        "albumId": "rosa",
+        "number": 9
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Lamium purpureum",
     "taxonLevel": "species",
     "commonNameIt": "Falsa ortica purpurea",
@@ -1735,8 +2067,15 @@
   },
   {
     "id": "dipsacus-fullonum",
-    "number": 17,
-    "albumId": "campi-bordi-strada",
+    "number": 13,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 13
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Dipsacus fullonum",
     "taxonLevel": "species",
     "commonNameIt": "Cardo dei lanaioli",
@@ -1774,8 +2113,15 @@
   },
   {
     "id": "daucus-carota",
-    "number": 18,
-    "albumId": "campi-bordi-strada",
+    "number": 10,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 10
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Daucus carota",
     "taxonLevel": "species",
     "commonNameIt": "Carota selvatica",
@@ -1820,8 +2166,15 @@
   },
   {
     "id": "oenothera",
-    "number": 19,
-    "albumId": "campi-bordi-strada",
+    "number": 12,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 12
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Oenothera sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Enotera",
@@ -1863,8 +2216,15 @@
   },
   {
     "id": "cymbalaria-muralis",
-    "number": 20,
-    "albumId": "campi-bordi-strada",
+    "number": 14,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 14
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Cymbalaria muralis",
     "taxonLevel": "species",
     "commonNameIt": "Ciombolino comune",
@@ -1906,8 +2266,15 @@
   },
   {
     "id": "antirrhinum-majus",
-    "number": 21,
-    "albumId": "campi-bordi-strada",
+    "number": 10,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 10
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Antirrhinum majus",
     "taxonLevel": "species",
     "commonNameIt": "Bocca di leone",
@@ -1949,8 +2316,15 @@
   },
   {
     "id": "lathyrus-latifolius",
-    "number": 22,
-    "albumId": "campi-bordi-strada",
+    "number": 11,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 11
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Lathyrus latifolius",
     "taxonLevel": "species",
     "commonNameIt": "Cicerchia a foglie larghe",
@@ -1992,8 +2366,15 @@
   },
   {
     "id": "tragopogon-porrifolius",
-    "number": 23,
-    "albumId": "campi-bordi-strada",
+    "number": 15,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 15
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Tragopogon porrifolius",
     "taxonLevel": "species",
     "commonNameIt": "Barba di becco violetta",
@@ -2030,8 +2411,15 @@
   },
   {
     "id": "legousia-speculum-veneris",
-    "number": 24,
-    "albumId": "campi-bordi-strada",
+    "number": 16,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 16
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Legousia speculum-veneris",
     "taxonLevel": "species",
     "commonNameIt": "Specchio di Venere",
@@ -2068,8 +2456,15 @@
   },
   {
     "id": "glebionis-coronaria",
-    "number": 25,
-    "albumId": "campi-bordi-strada",
+    "number": 13,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 13
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Glebionis coronaria",
     "taxonLevel": "species",
     "commonNameIt": "Crisantemo coronario",
@@ -2108,8 +2503,15 @@
   },
   {
     "id": "saponaria-officinalis",
-    "number": 26,
-    "albumId": "campi-bordi-strada",
+    "number": 12,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 12
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Saponaria officinalis",
     "taxonLevel": "species",
     "commonNameIt": "Saponaria comune",
@@ -2149,8 +2551,15 @@
   },
   {
     "id": "anchusa-azurea",
-    "number": 27,
-    "albumId": "campi-bordi-strada",
+    "number": 8,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 8
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Anchusa azurea",
     "taxonLevel": "species",
     "commonNameIt": "Buglossa azzurra",
@@ -2190,13 +2599,20 @@
   },
   {
     "id": "tulipa-sylvestris",
-    "number": 28,
-    "albumId": "campi-bordi-strada",
+    "number": 14,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 14
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Tulipa sylvestris",
     "taxonLevel": "species",
     "commonNameIt": "Tulipano selvatico",
     "family": "Liliaceae",
-    "rarity": "rare",
+    "rarity": "uncommon",
     "dominantColors": [
       "giallo"
     ],
@@ -2230,8 +2646,15 @@
   },
   {
     "id": "foeniculum-vulgare",
-    "number": 29,
-    "albumId": "campi-bordi-strada",
+    "number": 15,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 15
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Foeniculum vulgare",
     "taxonLevel": "species",
     "commonNameIt": "Finocchio selvatico",
@@ -2273,8 +2696,15 @@
   },
   {
     "id": "borago-officinalis",
-    "number": 30,
-    "albumId": "campi-bordi-strada",
+    "number": 9,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 9
+      }
+    ],
+    "habitatGroup": "campi-bordi-strada",
     "scientificName": "Borago officinalis",
     "taxonLevel": "species",
     "commonNameIt": "Borragine",
@@ -2315,13 +2745,20 @@
   },
   {
     "id": "leontopodium-nivale",
-    "number": 1,
-    "albumId": "montagna-pascoli",
+    "number": 45,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 45
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Leontopodium nivale",
     "taxonLevel": "species",
     "commonNameIt": "Stella alpina",
     "family": "Asteraceae",
-    "rarity": "rare",
+    "rarity": "legendary",
     "dominantColors": [
       "bianco"
     ],
@@ -2356,8 +2793,15 @@
   },
   {
     "id": "gentiana-acaulis-gruppo",
-    "number": 2,
-    "albumId": "montagna-pascoli",
+    "number": 10,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 10
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Gentiana gr. acaulis",
     "taxonLevel": "group",
     "commonNameIt": "Genziana a trombetta",
@@ -2398,8 +2842,15 @@
   },
   {
     "id": "gentiana-lutea",
-    "number": 3,
-    "albumId": "montagna-pascoli",
+    "number": 16,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 16
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Gentiana lutea",
     "taxonLevel": "species",
     "commonNameIt": "Genziana maggiore",
@@ -2439,8 +2890,15 @@
   },
   {
     "id": "trollius-europaeus",
-    "number": 4,
-    "albumId": "montagna-pascoli",
+    "number": 17,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 17
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Trollius europaeus",
     "taxonLevel": "species",
     "commonNameIt": "Botton d'oro",
@@ -2478,8 +2936,19 @@
   },
   {
     "id": "arnica-montana",
-    "number": 5,
-    "albumId": "montagna-pascoli",
+    "number": 4,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 4
+      },
+      {
+        "albumId": "gialli",
+        "number": 18
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Arnica montana",
     "taxonLevel": "species",
     "commonNameIt": "Arnica",
@@ -2521,8 +2990,19 @@
   },
   {
     "id": "crocus-vernus",
-    "number": 6,
-    "albumId": "montagna-pascoli",
+    "number": 17,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 17
+      },
+      {
+        "albumId": "bianchi",
+        "number": 11
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Crocus vernus",
     "taxonLevel": "species",
     "commonNameIt": "Croco primaverile",
@@ -2566,8 +3046,15 @@
   },
   {
     "id": "soldanella",
-    "number": 7,
-    "albumId": "montagna-pascoli",
+    "number": 18,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 18
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Soldanella sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Soldanella",
@@ -2606,8 +3093,19 @@
   },
   {
     "id": "rhododendron-alpino",
-    "number": 8,
-    "albumId": "montagna-pascoli",
+    "number": 13,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 13
+      },
+      {
+        "albumId": "rossi-arancio",
+        "number": 5
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Rhododendron ferrugineum / hirsutum",
     "taxonLevel": "group",
     "commonNameIt": "Rododendro alpino",
@@ -2648,8 +3146,19 @@
   },
   {
     "id": "pulsatilla-alpina",
-    "number": 9,
-    "albumId": "montagna-pascoli",
+    "number": 12,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 12
+      },
+      {
+        "albumId": "gialli",
+        "number": 19
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Pulsatilla alpina",
     "taxonLevel": "species",
     "commonNameIt": "Pulsatilla alpina",
@@ -2689,8 +3198,15 @@
   },
   {
     "id": "lilium-martagon",
-    "number": 10,
-    "albumId": "montagna-pascoli",
+    "number": 14,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 14
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Lilium martagon",
     "taxonLevel": "species",
     "commonNameIt": "Giglio martagone",
@@ -2727,8 +3243,15 @@
   },
   {
     "id": "aster-alpinus",
-    "number": 11,
-    "albumId": "montagna-pascoli",
+    "number": 19,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 19
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Aster alpinus",
     "taxonLevel": "species",
     "commonNameIt": "Astro alpino",
@@ -2768,8 +3291,15 @@
   },
   {
     "id": "paradisea-liliastrum",
-    "number": 12,
-    "albumId": "montagna-pascoli",
+    "number": 13,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 13
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Paradisea liliastrum",
     "taxonLevel": "species",
     "commonNameIt": "Giglio di monte",
@@ -2808,8 +3338,15 @@
   },
   {
     "id": "campanula-barbata",
-    "number": 13,
-    "albumId": "montagna-pascoli",
+    "number": 11,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 11
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Campanula barbata",
     "taxonLevel": "species",
     "commonNameIt": "Campanula barbata",
@@ -2847,8 +3384,15 @@
   },
   {
     "id": "gentiana-verna",
-    "number": 14,
-    "albumId": "montagna-pascoli",
+    "number": 12,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 12
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Gentiana verna",
     "taxonLevel": "species",
     "commonNameIt": "Genziana primaticcia",
@@ -2891,8 +3435,15 @@
   },
   {
     "id": "viola-calcarata",
-    "number": 15,
-    "albumId": "montagna-pascoli",
+    "number": 20,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 20
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Viola calcarata",
     "taxonLevel": "species",
     "commonNameIt": "Viola speronata",
@@ -2931,8 +3482,15 @@
   },
   {
     "id": "silene-acaulis",
-    "number": 16,
-    "albumId": "montagna-pascoli",
+    "number": 15,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 15
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Silene acaulis",
     "taxonLevel": "species",
     "commonNameIt": "Silene a cuscinetto",
@@ -2970,8 +3528,15 @@
   },
   {
     "id": "dryas-octopetala",
-    "number": 17,
-    "albumId": "montagna-pascoli",
+    "number": 14,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 14
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Dryas octopetala",
     "taxonLevel": "species",
     "commonNameIt": "Camedrio alpino",
@@ -3010,8 +3575,19 @@
   },
   {
     "id": "ranunculus-glacialis",
-    "number": 18,
-    "albumId": "montagna-pascoli",
+    "number": 15,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 15
+      },
+      {
+        "albumId": "rosa",
+        "number": 16
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Ranunculus glacialis",
     "taxonLevel": "species",
     "commonNameIt": "Ranuncolo dei ghiacciai",
@@ -3050,8 +3626,15 @@
   },
   {
     "id": "saxifraga-oppositifolia",
-    "number": 19,
-    "albumId": "montagna-pascoli",
+    "number": 21,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 21
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Saxifraga oppositifolia",
     "taxonLevel": "species",
     "commonNameIt": "Sassifraga a foglie opposte",
@@ -3092,7 +3675,14 @@
   {
     "id": "primula-auricula",
     "number": 20,
-    "albumId": "montagna-pascoli",
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 20
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Primula auricula",
     "taxonLevel": "species",
     "commonNameIt": "Primula orecchia d'orso",
@@ -3130,8 +3720,19 @@
   },
   {
     "id": "linaria-alpina",
-    "number": 21,
-    "albumId": "montagna-pascoli",
+    "number": 22,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 22
+      },
+      {
+        "albumId": "rossi-arancio",
+        "number": 6
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Linaria alpina",
     "taxonLevel": "species",
     "commonNameIt": "Linajola alpina",
@@ -3171,8 +3772,19 @@
   },
   {
     "id": "aconitum-napellus",
-    "number": 22,
-    "albumId": "montagna-pascoli",
+    "number": 23,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 23
+      },
+      {
+        "albumId": "blu-azzurri",
+        "number": 13
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Aconitum napellus",
     "taxonLevel": "species",
     "commonNameIt": "Aconito napello",
@@ -3211,8 +3823,19 @@
   },
   {
     "id": "astrantia-major",
-    "number": 23,
-    "albumId": "montagna-pascoli",
+    "number": 16,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 16
+      },
+      {
+        "albumId": "rosa",
+        "number": 17
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Astrantia major",
     "taxonLevel": "species",
     "commonNameIt": "Astranzia maggiore",
@@ -3251,8 +3874,19 @@
   },
   {
     "id": "phyteuma",
-    "number": 24,
-    "albumId": "montagna-pascoli",
+    "number": 14,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 14
+      },
+      {
+        "albumId": "viola",
+        "number": 24
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Phyteuma sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Raponzolo",
@@ -3292,8 +3926,15 @@
   },
   {
     "id": "lilium-bulbiferum",
-    "number": 25,
-    "albumId": "montagna-pascoli",
+    "number": 7,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 7
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Lilium bulbiferum",
     "taxonLevel": "species",
     "commonNameIt": "Giglio di San Giovanni",
@@ -3330,8 +3971,15 @@
   },
   {
     "id": "bistorta-officinalis",
-    "number": 26,
-    "albumId": "montagna-pascoli",
+    "number": 18,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 18
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Bistorta officinalis",
     "taxonLevel": "species",
     "commonNameIt": "Bistorta",
@@ -3371,8 +4019,15 @@
   },
   {
     "id": "chamaenerion-angustifolium",
-    "number": 27,
-    "albumId": "montagna-pascoli",
+    "number": 19,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 19
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Chamaenerion angustifolium",
     "taxonLevel": "species",
     "commonNameIt": "Garofanino maggiore",
@@ -3412,8 +4067,15 @@
   },
   {
     "id": "pinguicula",
-    "number": 28,
-    "albumId": "montagna-pascoli",
+    "number": 25,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 25
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Pinguicula sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Pinguicola",
@@ -3452,8 +4114,19 @@
   },
   {
     "id": "centaurea-montana-gruppo",
-    "number": 29,
-    "albumId": "montagna-pascoli",
+    "number": 15,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 15
+      },
+      {
+        "albumId": "viola",
+        "number": 26
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Centaurea gr. montana",
     "taxonLevel": "group",
     "commonNameIt": "Fiordaliso montano",
@@ -3497,8 +4170,15 @@
   },
   {
     "id": "sempervivum",
-    "number": 30,
-    "albumId": "montagna-pascoli",
+    "number": 20,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 20
+      }
+    ],
+    "habitatGroup": "montagna-pascoli",
     "scientificName": "Sempervivum sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Semprevivo",
@@ -3536,8 +4216,15 @@
   },
   {
     "id": "cistus-creticus",
-    "number": 1,
-    "albumId": "macchia-coste",
+    "number": 21,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 21
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Cistus creticus",
     "taxonLevel": "species",
     "commonNameIt": "Cisto rosso",
@@ -3577,8 +4264,15 @@
   },
   {
     "id": "myrtus-communis",
-    "number": 2,
-    "albumId": "macchia-coste",
+    "number": 17,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 17
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Myrtus communis",
     "taxonLevel": "species",
     "commonNameIt": "Mirto",
@@ -3617,8 +4311,15 @@
   },
   {
     "id": "lavandula-stoechas",
-    "number": 3,
-    "albumId": "macchia-coste",
+    "number": 27,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 27
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Lavandula stoechas",
     "taxonLevel": "species",
     "commonNameIt": "Lavanda selvatica",
@@ -3656,8 +4357,15 @@
   },
   {
     "id": "spartium-junceum",
-    "number": 4,
-    "albumId": "macchia-coste",
+    "number": 21,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 21
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Spartium junceum",
     "taxonLevel": "species",
     "commonNameIt": "Ginestra comune",
@@ -3700,8 +4408,15 @@
   },
   {
     "id": "asphodelus",
-    "number": 5,
-    "albumId": "macchia-coste",
+    "number": 18,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 18
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Asphodelus sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Asfodelo",
@@ -3741,8 +4456,19 @@
   },
   {
     "id": "centranthus-ruber",
-    "number": 6,
-    "albumId": "macchia-coste",
+    "number": 8,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 8
+      },
+      {
+        "albumId": "rosa",
+        "number": 22
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Centranthus ruber",
     "taxonLevel": "species",
     "commonNameIt": "Valeriana rossa",
@@ -3785,8 +4511,19 @@
   },
   {
     "id": "capparis-spinosa",
-    "number": 7,
-    "albumId": "macchia-coste",
+    "number": 19,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 19
+      },
+      {
+        "albumId": "rosa",
+        "number": 23
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Capparis spinosa",
     "taxonLevel": "species",
     "commonNameIt": "Cappero",
@@ -3829,8 +4566,19 @@
   },
   {
     "id": "carpobrotus",
-    "number": 8,
-    "albumId": "macchia-coste",
+    "number": 24,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 24
+      },
+      {
+        "albumId": "gialli",
+        "number": 22
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Carpobrotus sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Fico degli Ottentotti",
@@ -3868,8 +4616,15 @@
   },
   {
     "id": "glaucium-flavum",
-    "number": 9,
-    "albumId": "macchia-coste",
+    "number": 23,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 23
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Glaucium flavum",
     "taxonLevel": "species",
     "commonNameIt": "Papavero cornuto",
@@ -3909,8 +4664,15 @@
   },
   {
     "id": "calystegia-soldanella",
-    "number": 10,
-    "albumId": "macchia-coste",
+    "number": 25,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 25
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Calystegia soldanella",
     "taxonLevel": "species",
     "commonNameIt": "Soldanella marittima",
@@ -3950,8 +4712,15 @@
   },
   {
     "id": "eryngium-maritimum",
-    "number": 11,
-    "albumId": "macchia-coste",
+    "number": 16,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 16
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Eryngium maritimum",
     "taxonLevel": "species",
     "commonNameIt": "Calcatreppola marittima",
@@ -3990,13 +4759,20 @@
   },
   {
     "id": "pancratium-maritimum",
-    "number": 12,
-    "albumId": "macchia-coste",
+    "number": 20,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 20
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Pancratium maritimum",
     "taxonLevel": "species",
     "commonNameIt": "Giglio di mare",
     "family": "Amaryllidaceae",
-    "rarity": "rare",
+    "rarity": "uncommon",
     "dominantColors": [
       "bianco"
     ],
@@ -4030,8 +4806,15 @@
   },
   {
     "id": "cistus-salviifolius",
-    "number": 13,
-    "albumId": "macchia-coste",
+    "number": 21,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 21
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Cistus salviifolius",
     "taxonLevel": "species",
     "commonNameIt": "Cisto femmina",
@@ -4070,8 +4853,19 @@
   },
   {
     "id": "opuntia-ficus-indica",
-    "number": 14,
-    "albumId": "macchia-coste",
+    "number": 24,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 24
+      },
+      {
+        "albumId": "rossi-arancio",
+        "number": 9
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Opuntia ficus-indica",
     "taxonLevel": "species",
     "commonNameIt": "Fico d'India",
@@ -4109,8 +4903,15 @@
   },
   {
     "id": "phlomis-fruticosa",
-    "number": 15,
-    "albumId": "macchia-coste",
+    "number": 25,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 25
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Phlomis fruticosa",
     "taxonLevel": "species",
     "commonNameIt": "Salvione giallo",
@@ -4148,8 +4949,23 @@
   },
   {
     "id": "anemone-coronaria",
-    "number": 16,
-    "albumId": "macchia-coste",
+    "number": 10,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 10
+      },
+      {
+        "albumId": "blu-azzurri",
+        "number": 17
+      },
+      {
+        "albumId": "bianchi",
+        "number": 22
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Anemone coronaria",
     "taxonLevel": "species",
     "commonNameIt": "Anemone dei fiorai",
@@ -4191,8 +5007,15 @@
   },
   {
     "id": "erica-arborea",
-    "number": 17,
-    "albumId": "macchia-coste",
+    "number": 23,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 23
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Erica arborea",
     "taxonLevel": "species",
     "commonNameIt": "Erica arborea",
@@ -4230,8 +5053,15 @@
   },
   {
     "id": "achillea-maritima",
-    "number": 18,
-    "albumId": "macchia-coste",
+    "number": 26,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 26
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Achillea maritima",
     "taxonLevel": "species",
     "commonNameIt": "Santolina delle spiagge",
@@ -4276,8 +5106,15 @@
   },
   {
     "id": "cakile-maritima",
-    "number": 19,
-    "albumId": "macchia-coste",
+    "number": 26,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 26
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Cakile maritima",
     "taxonLevel": "species",
     "commonNameIt": "Ravastrello marino",
@@ -4323,8 +5160,15 @@
   },
   {
     "id": "limonium",
-    "number": 20,
-    "albumId": "macchia-coste",
+    "number": 28,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 28
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Limonium sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Limonio",
@@ -4364,8 +5208,19 @@
   },
   {
     "id": "matthiola",
-    "number": 21,
-    "albumId": "macchia-coste",
+    "number": 29,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 29
+      },
+      {
+        "albumId": "rosa",
+        "number": 27
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Matthiola sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Violacciocca",
@@ -4405,8 +5260,15 @@
   },
   {
     "id": "helichrysum",
-    "number": 22,
-    "albumId": "macchia-coste",
+    "number": 27,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 27
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Helichrysum sp.",
     "taxonLevel": "group",
     "commonNameIt": "Elicriso",
@@ -4451,8 +5313,15 @@
   },
   {
     "id": "teucrium-fruticans",
-    "number": 23,
-    "albumId": "macchia-coste",
+    "number": 18,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 18
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Teucrium fruticans",
     "taxonLevel": "species",
     "commonNameIt": "Camedrio femmina",
@@ -4494,8 +5363,15 @@
   },
   {
     "id": "tamarix",
-    "number": 24,
-    "albumId": "macchia-coste",
+    "number": 28,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 28
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Tamarix sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Tamerice",
@@ -4532,8 +5408,15 @@
   },
   {
     "id": "vitex-agnus-castus",
-    "number": 25,
-    "albumId": "macchia-coste",
+    "number": 30,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 30
+      }
+    ],
+    "habitatGroup": "macchia-coste",
     "scientificName": "Vitex agnus-castus",
     "taxonLevel": "species",
     "commonNameIt": "Agnocasto",
@@ -4572,8 +5455,15 @@
   },
   {
     "id": "anemone-nemorosa",
-    "number": 1,
-    "albumId": "boschi-sottobosco",
+    "number": 24,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 24
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Anemone nemorosa",
     "taxonLevel": "species",
     "commonNameIt": "Anemone dei boschi",
@@ -4612,8 +5502,19 @@
   },
   {
     "id": "hepatica-nobilis",
-    "number": 2,
-    "albumId": "boschi-sottobosco",
+    "number": 19,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 19
+      },
+      {
+        "albumId": "viola",
+        "number": 31
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Hepatica nobilis",
     "taxonLevel": "species",
     "commonNameIt": "Erba trinità",
@@ -4653,8 +5554,15 @@
   },
   {
     "id": "primula-vulgaris",
-    "number": 3,
-    "albumId": "boschi-sottobosco",
+    "number": 28,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 28
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Primula vulgaris",
     "taxonLevel": "species",
     "commonNameIt": "Primula comune",
@@ -4697,8 +5605,15 @@
   },
   {
     "id": "galanthus-nivalis",
-    "number": 4,
-    "albumId": "boschi-sottobosco",
+    "number": 25,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 25
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Galanthus nivalis",
     "taxonLevel": "species",
     "commonNameIt": "Bucaneve",
@@ -4741,8 +5656,15 @@
   },
   {
     "id": "erythronium-dens-canis",
-    "number": 5,
-    "albumId": "boschi-sottobosco",
+    "number": 29,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 29
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Erythronium dens-canis",
     "taxonLevel": "species",
     "commonNameIt": "Dente di cane",
@@ -4779,8 +5701,19 @@
   },
   {
     "id": "pulmonaria",
-    "number": 6,
-    "albumId": "boschi-sottobosco",
+    "number": 30,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 30
+      },
+      {
+        "albumId": "blu-azzurri",
+        "number": 20
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Pulmonaria sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Polmonaria",
@@ -4820,8 +5753,15 @@
   },
   {
     "id": "scilla-bifolia",
-    "number": 7,
-    "albumId": "boschi-sottobosco",
+    "number": 21,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 21
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Scilla bifolia",
     "taxonLevel": "species",
     "commonNameIt": "Scilla silvestre",
@@ -4863,8 +5803,19 @@
   },
   {
     "id": "vinca-minor",
-    "number": 8,
-    "albumId": "boschi-sottobosco",
+    "number": 22,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 22
+      },
+      {
+        "albumId": "viola",
+        "number": 32
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Vinca minor",
     "taxonLevel": "species",
     "commonNameIt": "Pervinca minore",
@@ -4906,8 +5857,15 @@
   },
   {
     "id": "cyclamen",
-    "number": 9,
-    "albumId": "boschi-sottobosco",
+    "number": 31,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 31
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Cyclamen sp. (spontanei)",
     "taxonLevel": "group",
     "commonNameIt": "Ciclamino selvatico",
@@ -4953,8 +5911,15 @@
   },
   {
     "id": "helleborus-niger",
-    "number": 10,
-    "albumId": "boschi-sottobosco",
+    "number": 26,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 26
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Helleborus niger",
     "taxonLevel": "species",
     "commonNameIt": "Rosa di Natale",
@@ -4994,8 +5959,19 @@
   },
   {
     "id": "aquilegia",
-    "number": 11,
-    "albumId": "boschi-sottobosco",
+    "number": 23,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 23
+      },
+      {
+        "albumId": "viola",
+        "number": 33
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Aquilegia sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Aquilegia",
@@ -5036,13 +6012,20 @@
   },
   {
     "id": "paeonia-officinalis",
-    "number": 12,
-    "albumId": "boschi-sottobosco",
+    "number": 65,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 65
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Paeonia officinalis",
     "taxonLevel": "species",
     "commonNameIt": "Peonia selvatica",
     "family": "Paeoniaceae",
-    "rarity": "rare",
+    "rarity": "legendary",
     "dominantColors": [
       "rosa",
       "rosso"
@@ -5078,8 +6061,15 @@
   },
   {
     "id": "daphne-mezereum",
-    "number": 13,
-    "albumId": "boschi-sottobosco",
+    "number": 32,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 32
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Daphne mezereum",
     "taxonLevel": "species",
     "commonNameIt": "Fior di stecco",
@@ -5119,8 +6109,15 @@
   },
   {
     "id": "convallaria-majalis",
-    "number": 14,
-    "albumId": "boschi-sottobosco",
+    "number": 27,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 27
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Convallaria majalis",
     "taxonLevel": "species",
     "commonNameIt": "Mughetto",
@@ -5157,8 +6154,19 @@
   },
   {
     "id": "lathyrus-vernus",
-    "number": 15,
-    "albumId": "boschi-sottobosco",
+    "number": 34,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 34
+      },
+      {
+        "albumId": "blu-azzurri",
+        "number": 24
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Lathyrus vernus",
     "taxonLevel": "species",
     "commonNameIt": "Cicerchia primaticcia",
@@ -5197,8 +6205,15 @@
   },
   {
     "id": "anemone-ranunculoides",
-    "number": 16,
-    "albumId": "boschi-sottobosco",
+    "number": 29,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 29
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Anemone ranunculoides",
     "taxonLevel": "species",
     "commonNameIt": "Anemone gialla",
@@ -5238,8 +6253,19 @@
   },
   {
     "id": "corydalis",
-    "number": 17,
-    "albumId": "boschi-sottobosco",
+    "number": 35,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 35
+      },
+      {
+        "albumId": "bianchi",
+        "number": 28
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Corydalis sp.",
     "taxonLevel": "group",
     "commonNameIt": "Colombina",
@@ -5280,8 +6306,15 @@
   },
   {
     "id": "oxalis-acetosella",
-    "number": 18,
-    "albumId": "boschi-sottobosco",
+    "number": 29,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 29
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Oxalis acetosella",
     "taxonLevel": "species",
     "commonNameIt": "Acetosella dei boschi",
@@ -5320,8 +6353,15 @@
   },
   {
     "id": "geranium-robertianum",
-    "number": 19,
-    "albumId": "boschi-sottobosco",
+    "number": 33,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 33
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Geranium robertianum",
     "taxonLevel": "species",
     "commonNameIt": "Erba roberta",
@@ -5364,8 +6404,19 @@
   },
   {
     "id": "melittis-melissophyllum",
-    "number": 20,
-    "albumId": "boschi-sottobosco",
+    "number": 30,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 30
+      },
+      {
+        "albumId": "rosa",
+        "number": 34
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Melittis melissophyllum",
     "taxonLevel": "species",
     "commonNameIt": "Erba limona",
@@ -5404,8 +6455,19 @@
   },
   {
     "id": "digitalis",
-    "number": 21,
-    "albumId": "boschi-sottobosco",
+    "number": 36,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 36
+      },
+      {
+        "albumId": "gialli",
+        "number": 30
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Digitalis sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Digitale",
@@ -5444,8 +6506,23 @@
   },
   {
     "id": "lonicera-caprifogli",
-    "number": 22,
-    "albumId": "boschi-sottobosco",
+    "number": 31,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 31
+      },
+      {
+        "albumId": "gialli",
+        "number": 31
+      },
+      {
+        "albumId": "rosa",
+        "number": 35
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Lonicera gr. caprifolium",
     "taxonLevel": "group",
     "commonNameIt": "Caprifoglio",
@@ -5493,8 +6570,15 @@
   },
   {
     "id": "clematis-vitalba",
-    "number": 23,
-    "albumId": "boschi-sottobosco",
+    "number": 32,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 32
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Clematis vitalba",
     "taxonLevel": "species",
     "commonNameIt": "Vitalba",
@@ -5536,8 +6620,15 @@
   },
   {
     "id": "sambucus-nigra",
-    "number": 24,
-    "albumId": "boschi-sottobosco",
+    "number": 33,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 33
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Sambucus nigra",
     "taxonLevel": "species",
     "commonNameIt": "Sambuco",
@@ -5577,8 +6668,19 @@
   },
   {
     "id": "calluna-vulgaris",
-    "number": 25,
-    "albumId": "boschi-sottobosco",
+    "number": 36,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 36
+      },
+      {
+        "albumId": "viola",
+        "number": 37
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Calluna vulgaris",
     "taxonLevel": "species",
     "commonNameIt": "Brugo",
@@ -5618,8 +6720,15 @@
   },
   {
     "id": "erica-carnea",
-    "number": 26,
-    "albumId": "boschi-sottobosco",
+    "number": 37,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 37
+      }
+    ],
+    "habitatGroup": "boschi-sottobosco",
     "scientificName": "Erica carnea",
     "taxonLevel": "species",
     "commonNameIt": "Erica carnicina",
@@ -5660,8 +6769,15 @@
   },
   {
     "id": "iris-pseudacorus",
-    "number": 1,
-    "albumId": "zone-umide",
+    "number": 32,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 32
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Iris pseudacorus",
     "taxonLevel": "species",
     "commonNameIt": "Giaggiolo acquatico",
@@ -5698,8 +6814,19 @@
   },
   {
     "id": "lythrum-salicaria",
-    "number": 2,
-    "albumId": "zone-umide",
+    "number": 38,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 38
+      },
+      {
+        "albumId": "viola",
+        "number": 38
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Lythrum salicaria",
     "taxonLevel": "species",
     "commonNameIt": "Salcerella",
@@ -5739,8 +6866,15 @@
   },
   {
     "id": "caltha-palustris",
-    "number": 3,
-    "albumId": "zone-umide",
+    "number": 33,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 33
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Caltha palustris",
     "taxonLevel": "species",
     "commonNameIt": "Calta palustre",
@@ -5781,8 +6915,15 @@
   },
   {
     "id": "nuphar-lutea",
-    "number": 4,
-    "albumId": "zone-umide",
+    "number": 34,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 34
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Nuphar lutea",
     "taxonLevel": "species",
     "commonNameIt": "Nannufaro",
@@ -5823,8 +6964,19 @@
   },
   {
     "id": "nymphaea",
-    "number": 5,
-    "albumId": "zone-umide",
+    "number": 34,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 34
+      },
+      {
+        "albumId": "rosa",
+        "number": 39
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Nymphaea sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Ninfea",
@@ -5867,8 +7019,15 @@
   },
   {
     "id": "epilobium-hirsutum",
-    "number": 6,
-    "albumId": "zone-umide",
+    "number": 40,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 40
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Epilobium hirsutum",
     "taxonLevel": "species",
     "commonNameIt": "Garofanino d'acqua",
@@ -5910,8 +7069,15 @@
   },
   {
     "id": "lysimachia-vulgaris",
-    "number": 7,
-    "albumId": "zone-umide",
+    "number": 35,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 35
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Lysimachia vulgaris",
     "taxonLevel": "species",
     "commonNameIt": "Mazza d'oro",
@@ -5951,8 +7117,19 @@
   },
   {
     "id": "symphytum-officinale",
-    "number": 8,
-    "albumId": "zone-umide",
+    "number": 39,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 39
+      },
+      {
+        "albumId": "bianchi",
+        "number": 35
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Symphytum officinale",
     "taxonLevel": "species",
     "commonNameIt": "Consolida maggiore",
@@ -5994,8 +7171,15 @@
   },
   {
     "id": "impatiens-glandulifera",
-    "number": 9,
-    "albumId": "zone-umide",
+    "number": 41,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 41
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Impatiens glandulifera",
     "taxonLevel": "species",
     "commonNameIt": "Balsamina ghiandolosa",
@@ -6035,8 +7219,15 @@
   },
   {
     "id": "menyanthes-trifoliata",
-    "number": 10,
-    "albumId": "zone-umide",
+    "number": 36,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 36
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Menyanthes trifoliata",
     "taxonLevel": "species",
     "commonNameIt": "Trifoglio fibrino",
@@ -6074,8 +7265,15 @@
   },
   {
     "id": "butomus-umbellatus",
-    "number": 11,
-    "albumId": "zone-umide",
+    "number": 42,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 42
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Butomus umbellatus",
     "taxonLevel": "species",
     "commonNameIt": "Giunco fiorito",
@@ -6114,13 +7312,20 @@
   },
   {
     "id": "leucojum-aestivum",
-    "number": 12,
-    "albumId": "zone-umide",
+    "number": 37,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 37
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Leucojum aestivum",
     "taxonLevel": "species",
     "commonNameIt": "Campanellino estivo",
     "family": "Amaryllidaceae",
-    "rarity": "rare",
+    "rarity": "uncommon",
     "dominantColors": [
       "bianco"
     ],
@@ -6157,8 +7362,15 @@
   },
   {
     "id": "calystegia-sepium",
-    "number": 13,
-    "albumId": "zone-umide",
+    "number": 38,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 38
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Calystegia sepium",
     "taxonLevel": "species",
     "commonNameIt": "Vilucchio bianco",
@@ -6200,8 +7412,15 @@
   },
   {
     "id": "lychnis-flos-cuculi",
-    "number": 14,
-    "albumId": "zone-umide",
+    "number": 43,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 43
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Silene flos-cuculi",
     "taxonLevel": "species",
     "commonNameIt": "Fior di cuculo",
@@ -6241,8 +7460,15 @@
   },
   {
     "id": "eupatorium-cannabinum",
-    "number": 15,
-    "albumId": "zone-umide",
+    "number": 44,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 44
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Eupatorium cannabinum",
     "taxonLevel": "species",
     "commonNameIt": "Canapa acquatica",
@@ -6280,8 +7506,15 @@
   },
   {
     "id": "filipendula-ulmaria",
-    "number": 16,
-    "albumId": "zone-umide",
+    "number": 39,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 39
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Filipendula ulmaria",
     "taxonLevel": "species",
     "commonNameIt": "Olmaria",
@@ -6321,8 +7554,15 @@
   },
   {
     "id": "ranunculus-acquatici",
-    "number": 17,
-    "albumId": "zone-umide",
+    "number": 40,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 40
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Ranunculus sect. Batrachium",
     "taxonLevel": "group",
     "commonNameIt": "Ranuncolo acquatico",
@@ -6371,8 +7611,15 @@
   },
   {
     "id": "persicaria-amphibia",
-    "number": 18,
-    "albumId": "zone-umide",
+    "number": 45,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 45
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Persicaria amphibia",
     "taxonLevel": "species",
     "commonNameIt": "Poligono anfibio",
@@ -6413,8 +7660,15 @@
   },
   {
     "id": "parnassia-palustris",
-    "number": 19,
-    "albumId": "zone-umide",
+    "number": 41,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 41
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Parnassia palustris",
     "taxonLevel": "species",
     "commonNameIt": "Parnassia",
@@ -6452,8 +7706,15 @@
   },
   {
     "id": "impatiens-noli-tangere",
-    "number": 20,
-    "albumId": "zone-umide",
+    "number": 36,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 36
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Impatiens noli-tangere",
     "taxonLevel": "species",
     "commonNameIt": "Erba impaziente",
@@ -6490,8 +7751,19 @@
   },
   {
     "id": "mentha-aquatica",
-    "number": 21,
-    "albumId": "zone-umide",
+    "number": 40,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 40
+      },
+      {
+        "albumId": "rosa",
+        "number": 46
+      }
+    ],
+    "habitatGroup": "zone-umide",
     "scientificName": "Mentha aquatica",
     "taxonLevel": "species",
     "commonNameIt": "Menta acquatica",
@@ -6532,8 +7804,15 @@
   },
   {
     "id": "rosa-canina",
-    "number": 1,
-    "albumId": "bacche-autunno",
+    "number": 11,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 11
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Rosa canina agg.",
     "taxonLevel": "group",
     "commonNameIt": "Rosa canina",
@@ -6573,8 +7852,15 @@
   },
   {
     "id": "crataegus-monogyna",
-    "number": 2,
-    "albumId": "bacche-autunno",
+    "number": 12,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 12
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Crataegus monogyna",
     "taxonLevel": "species",
     "commonNameIt": "Biancospino",
@@ -6617,8 +7903,15 @@
   },
   {
     "id": "pyracantha",
-    "number": 3,
-    "albumId": "bacche-autunno",
+    "number": 13,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 13
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Pyracantha sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Agazzino (piracanta)",
@@ -6661,8 +7954,19 @@
   },
   {
     "id": "euonymus-europaeus",
-    "number": 4,
-    "albumId": "bacche-autunno",
+    "number": 47,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 47
+      },
+      {
+        "albumId": "rossi-arancio",
+        "number": 14
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Euonymus europaeus",
     "taxonLevel": "species",
     "commonNameIt": "Berretta del prete",
@@ -6702,8 +8006,15 @@
   },
   {
     "id": "ruscus-aculeatus",
-    "number": 5,
-    "albumId": "bacche-autunno",
+    "number": 15,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 15
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Ruscus aculeatus",
     "taxonLevel": "species",
     "commonNameIt": "Pungitopo",
@@ -6746,8 +8057,15 @@
   },
   {
     "id": "arbutus-unedo",
-    "number": 6,
-    "albumId": "bacche-autunno",
+    "number": 16,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 16
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Arbutus unedo",
     "taxonLevel": "species",
     "commonNameIt": "Corbezzolo",
@@ -6787,8 +8105,15 @@
   },
   {
     "id": "physalis-alkekengi",
-    "number": 7,
-    "albumId": "bacche-autunno",
+    "number": 17,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 17
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Physalis alkekengi",
     "taxonLevel": "species",
     "commonNameIt": "Alchechengi",
@@ -6827,8 +8152,15 @@
   },
   {
     "id": "viburnum-opulus",
-    "number": 8,
-    "albumId": "bacche-autunno",
+    "number": 18,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 18
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Viburnum opulus",
     "taxonLevel": "species",
     "commonNameIt": "Pallon di maggio",
@@ -6869,8 +8201,15 @@
   },
   {
     "id": "arum-italicum",
-    "number": 9,
-    "albumId": "bacche-autunno",
+    "number": 19,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 19
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Arum italicum",
     "taxonLevel": "species",
     "commonNameIt": "Gigaro",
@@ -6910,8 +8249,15 @@
   },
   {
     "id": "sorbus-aucuparia",
-    "number": 10,
-    "albumId": "bacche-autunno",
+    "number": 20,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 20
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Sorbus aucuparia",
     "taxonLevel": "species",
     "commonNameIt": "Sorbo degli uccellatori",
@@ -6949,8 +8295,15 @@
   },
   {
     "id": "ilex-aquifolium",
-    "number": 11,
-    "albumId": "bacche-autunno",
+    "number": 21,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 21
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Ilex aquifolium",
     "taxonLevel": "species",
     "commonNameIt": "Agrifoglio",
@@ -6993,13 +8346,20 @@
   },
   {
     "id": "iris-foetidissima",
-    "number": 12,
-    "albumId": "bacche-autunno",
+    "number": 34,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 34
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Iris foetidissima",
     "taxonLevel": "species",
     "commonNameIt": "Giaggiolo puzzolente",
     "family": "Iridaceae",
-    "rarity": "rare",
+    "rarity": "legendary",
     "dominantColors": [
       "arancio",
       "rosso"
@@ -7035,8 +8395,15 @@
   },
   {
     "id": "cornus-mas",
-    "number": 13,
-    "albumId": "bacche-autunno",
+    "number": 22,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 22
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Cornus mas",
     "taxonLevel": "species",
     "commonNameIt": "Corniolo",
@@ -7072,8 +8439,15 @@
   },
   {
     "id": "smilax-aspera",
-    "number": 14,
-    "albumId": "bacche-autunno",
+    "number": 23,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 23
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Smilax aspera",
     "taxonLevel": "species",
     "commonNameIt": "Salsapariglia",
@@ -7114,8 +8488,19 @@
   },
   {
     "id": "solanum-dulcamara",
-    "number": 15,
-    "albumId": "bacche-autunno",
+    "number": 24,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 24
+      },
+      {
+        "albumId": "viola",
+        "number": 41
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Solanum dulcamara",
     "taxonLevel": "species",
     "commonNameIt": "Dulcamara",
@@ -7155,8 +8540,15 @@
   },
   {
     "id": "prunus-spinosa",
-    "number": 16,
-    "albumId": "bacche-autunno",
+    "number": 25,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 25
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Prunus spinosa",
     "taxonLevel": "species",
     "commonNameIt": "Prugnolo",
@@ -7195,8 +8587,19 @@
   },
   {
     "id": "phytolacca-americana",
-    "number": 17,
-    "albumId": "bacche-autunno",
+    "number": 42,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 42
+      },
+      {
+        "albumId": "blu-azzurri",
+        "number": 26
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Phytolacca americana",
     "taxonLevel": "species",
     "commonNameIt": "Uva turca",
@@ -7236,8 +8639,15 @@
   },
   {
     "id": "berberis-vulgaris",
-    "number": 18,
-    "albumId": "bacche-autunno",
+    "number": 25,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 25
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Berberis vulgaris",
     "taxonLevel": "species",
     "commonNameIt": "Crespino",
@@ -7274,8 +8684,15 @@
   },
   {
     "id": "hippophae-rhamnoides",
-    "number": 19,
-    "albumId": "bacche-autunno",
+    "number": 26,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 26
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Hippophae rhamnoides",
     "taxonLevel": "species",
     "commonNameIt": "Olivello spinoso",
@@ -7317,8 +8734,15 @@
   },
   {
     "id": "vaccinium-myrtillus",
-    "number": 20,
-    "albumId": "bacche-autunno",
+    "number": 27,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 27
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Vaccinium myrtillus",
     "taxonLevel": "species",
     "commonNameIt": "Mirtillo nero",
@@ -7355,8 +8779,15 @@
   },
   {
     "id": "vaccinium-vitis-idaea",
-    "number": 21,
-    "albumId": "bacche-autunno",
+    "number": 27,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 27
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Vaccinium vitis-idaea",
     "taxonLevel": "species",
     "commonNameIt": "Mirtillo rosso",
@@ -7394,8 +8825,15 @@
   },
   {
     "id": "fragaria-vesca",
-    "number": 22,
-    "albumId": "bacche-autunno",
+    "number": 28,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 28
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Fragaria vesca",
     "taxonLevel": "species",
     "commonNameIt": "Fragola di bosco",
@@ -7435,8 +8873,19 @@
   },
   {
     "id": "rubus",
-    "number": 23,
-    "albumId": "bacche-autunno",
+    "number": 28,
+    "albumId": "blu-azzurri",
+    "albums": [
+      {
+        "albumId": "blu-azzurri",
+        "number": 28
+      },
+      {
+        "albumId": "viola",
+        "number": 43
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Rubus gr. fruticosus",
     "taxonLevel": "group",
     "commonNameIt": "Rovo (more)",
@@ -7478,8 +8927,15 @@
   },
   {
     "id": "taxus-baccata",
-    "number": 24,
-    "albumId": "bacche-autunno",
+    "number": 29,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 29
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Taxus baccata",
     "taxonLevel": "species",
     "commonNameIt": "Tasso",
@@ -7525,8 +8981,15 @@
   },
   {
     "id": "cotoneaster",
-    "number": 25,
-    "albumId": "bacche-autunno",
+    "number": 30,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 30
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Cotoneaster sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Cotognastro",
@@ -7572,8 +9035,19 @@
   },
   {
     "id": "colchicum-autumnale",
-    "number": 26,
-    "albumId": "bacche-autunno",
+    "number": 48,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 48
+      },
+      {
+        "albumId": "viola",
+        "number": 44
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Colchicum autumnale",
     "taxonLevel": "species",
     "commonNameIt": "Colchico d'autunno",
@@ -7614,8 +9088,15 @@
   },
   {
     "id": "sternbergia-lutea",
-    "number": 27,
-    "albumId": "bacche-autunno",
+    "number": 37,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 37
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Sternbergia lutea",
     "taxonLevel": "species",
     "commonNameIt": "Zafferanastro giallo",
@@ -7652,8 +9133,15 @@
   },
   {
     "id": "symphyotrichum",
-    "number": 28,
-    "albumId": "bacche-autunno",
+    "number": 45,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 45
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Symphyotrichum sp.",
     "taxonLevel": "group",
     "commonNameIt": "Astro americano",
@@ -7694,8 +9182,15 @@
   },
   {
     "id": "solidago",
-    "number": 29,
-    "albumId": "bacche-autunno",
+    "number": 38,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 38
+      }
+    ],
+    "habitatGroup": "bacche-autunno",
     "scientificName": "Solidago sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Verga d'oro",
@@ -7734,8 +9229,15 @@
   },
   {
     "id": "anacamptis-morio",
-    "number": 1,
-    "albumId": "orchidee",
+    "number": 46,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 46
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Anacamptis morio",
     "taxonLevel": "species",
     "commonNameIt": "Orchide minore",
@@ -7776,8 +9278,15 @@
   },
   {
     "id": "anacamptis-pyramidalis",
-    "number": 2,
-    "albumId": "orchidee",
+    "number": 49,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 49
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Anacamptis pyramidalis",
     "taxonLevel": "species",
     "commonNameIt": "Orchide piramidale",
@@ -7816,8 +9325,15 @@
   },
   {
     "id": "anacamptis-papilionacea",
-    "number": 3,
-    "albumId": "orchidee",
+    "number": 50,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 50
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Anacamptis papilionacea",
     "taxonLevel": "species",
     "commonNameIt": "Orchide farfalla",
@@ -7855,8 +9371,19 @@
   },
   {
     "id": "orchis-purpurea",
-    "number": 4,
-    "albumId": "orchidee",
+    "number": 47,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 47
+      },
+      {
+        "albumId": "rosa",
+        "number": 51
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Orchis purpurea",
     "taxonLevel": "species",
     "commonNameIt": "Orchide maggiore",
@@ -7896,8 +9423,19 @@
   },
   {
     "id": "orchis-simia",
-    "number": 5,
-    "albumId": "orchidee",
+    "number": 52,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 52
+      },
+      {
+        "albumId": "bianchi",
+        "number": 42
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Orchis simia",
     "taxonLevel": "species",
     "commonNameIt": "Orchide scimmia",
@@ -7937,8 +9475,15 @@
   },
   {
     "id": "orchis-italica",
-    "number": 6,
-    "albumId": "orchidee",
+    "number": 53,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 53
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Orchis italica",
     "taxonLevel": "species",
     "commonNameIt": "Orchide italiana",
@@ -7975,8 +9520,15 @@
   },
   {
     "id": "orchis-mascula",
-    "number": 7,
-    "albumId": "orchidee",
+    "number": 48,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 48
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Orchis mascula",
     "taxonLevel": "species",
     "commonNameIt": "Orchide maschia",
@@ -8016,8 +9568,15 @@
   },
   {
     "id": "neotinea-tridentata",
-    "number": 8,
-    "albumId": "orchidee",
+    "number": 54,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 54
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Neotinea tridentata",
     "taxonLevel": "species",
     "commonNameIt": "Orchide tridentata",
@@ -8055,8 +9614,19 @@
   },
   {
     "id": "himantoglossum-robertianum",
-    "number": 9,
-    "albumId": "orchidee",
+    "number": 55,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 55
+      },
+      {
+        "albumId": "viola",
+        "number": 49
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Himantoglossum robertianum",
     "taxonLevel": "species",
     "commonNameIt": "Barlia",
@@ -8097,8 +9667,15 @@
   },
   {
     "id": "ophrys-apifera",
-    "number": 10,
-    "albumId": "orchidee",
+    "number": 56,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 56
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Ophrys apifera",
     "taxonLevel": "species",
     "commonNameIt": "Ofride fior d'api",
@@ -8137,13 +9714,24 @@
   },
   {
     "id": "ophrys-bertolonii",
-    "number": 11,
-    "albumId": "orchidee",
+    "number": 57,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 57
+      },
+      {
+        "albumId": "viola",
+        "number": 50
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Ophrys bertolonii",
     "taxonLevel": "species",
     "commonNameIt": "Ofride di Bertoloni",
     "family": "Orchidaceae",
-    "rarity": "rare",
+    "rarity": "uncommon",
     "dominantColors": [
       "rosa",
       "viola"
@@ -8176,8 +9764,15 @@
   },
   {
     "id": "ophrys-lutea-gruppo",
-    "number": 12,
-    "albumId": "orchidee",
+    "number": 39,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 39
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Ophrys gr. lutea",
     "taxonLevel": "group",
     "commonNameIt": "Ofride gialla",
@@ -8219,8 +9814,15 @@
   },
   {
     "id": "ophrys-fuciflora-gruppo",
-    "number": 13,
-    "albumId": "orchidee",
+    "number": 58,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 58
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Ophrys gr. fuciflora",
     "taxonLevel": "group",
     "commonNameIt": "Ofride dei fuchi",
@@ -8260,8 +9862,15 @@
   },
   {
     "id": "ophrys-tenthredinifera",
-    "number": 14,
-    "albumId": "orchidee",
+    "number": 59,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 59
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Ophrys tenthredinifera",
     "taxonLevel": "species",
     "commonNameIt": "Ofride tentredinifera",
@@ -8299,8 +9908,15 @@
   },
   {
     "id": "serapias",
-    "number": 15,
-    "albumId": "orchidee",
+    "number": 31,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 31
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Serapias sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Serapide",
@@ -8337,8 +9953,15 @@
   },
   {
     "id": "cephalanthera-bianche",
-    "number": 16,
-    "albumId": "orchidee",
+    "number": 43,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 43
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Cephalanthera longifolia / damasonium",
     "taxonLevel": "group",
     "commonNameIt": "Cefalantera bianca",
@@ -8378,8 +10001,15 @@
   },
   {
     "id": "cephalanthera-rubra",
-    "number": 17,
-    "albumId": "orchidee",
+    "number": 60,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 60
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Cephalanthera rubra",
     "taxonLevel": "species",
     "commonNameIt": "Cefalantera rossa",
@@ -8416,8 +10046,19 @@
   },
   {
     "id": "dactylorhiza-sambucina",
-    "number": 18,
-    "albumId": "orchidee",
+    "number": 40,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 40
+      },
+      {
+        "albumId": "rossi-arancio",
+        "number": 32
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Dactylorhiza sambucina",
     "taxonLevel": "species",
     "commonNameIt": "Orchide sambucina",
@@ -8456,8 +10097,15 @@
   },
   {
     "id": "dactylorhiza-maculata-gruppo",
-    "number": 19,
-    "albumId": "orchidee",
+    "number": 61,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 61
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Dactylorhiza gr. maculata",
     "taxonLevel": "group",
     "commonNameIt": "Orchide macchiata",
@@ -8497,8 +10145,15 @@
   },
   {
     "id": "gymnadenia-conopsea",
-    "number": 20,
-    "albumId": "orchidee",
+    "number": 62,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 62
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Gymnadenia conopsea",
     "taxonLevel": "species",
     "commonNameIt": "Manina rosea",
@@ -8538,8 +10193,19 @@
   },
   {
     "id": "nigritella",
-    "number": 21,
-    "albumId": "orchidee",
+    "number": 33,
+    "albumId": "rossi-arancio",
+    "albums": [
+      {
+        "albumId": "rossi-arancio",
+        "number": 33
+      },
+      {
+        "albumId": "rosa",
+        "number": 63
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Nigritella sp.",
     "taxonLevel": "genus",
     "commonNameIt": "Nigritella",
@@ -8580,8 +10246,15 @@
   },
   {
     "id": "limodorum-abortivum",
-    "number": 22,
-    "albumId": "orchidee",
+    "number": 51,
+    "albumId": "viola",
+    "albums": [
+      {
+        "albumId": "viola",
+        "number": 51
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Limodorum abortivum",
     "taxonLevel": "species",
     "commonNameIt": "Fior di legna",
@@ -8618,8 +10291,15 @@
   },
   {
     "id": "platanthera",
-    "number": 23,
-    "albumId": "orchidee",
+    "number": 44,
+    "albumId": "bianchi",
+    "albums": [
+      {
+        "albumId": "bianchi",
+        "number": 44
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Platanthera bifolia / chlorantha",
     "taxonLevel": "group",
     "commonNameIt": "Platantera",
@@ -8659,8 +10339,15 @@
   },
   {
     "id": "traunsteinera-globosa",
-    "number": 24,
-    "albumId": "orchidee",
+    "number": 64,
+    "albumId": "rosa",
+    "albums": [
+      {
+        "albumId": "rosa",
+        "number": 64
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Traunsteinera globosa",
     "taxonLevel": "species",
     "commonNameIt": "Orchide globosa",
@@ -8699,8 +10386,15 @@
   },
   {
     "id": "cypripedium-calceolus",
-    "number": null,
-    "albumId": null,
+    "number": 41,
+    "albumId": "gialli",
+    "albums": [
+      {
+        "albumId": "gialli",
+        "number": 41
+      }
+    ],
+    "habitatGroup": "orchidee",
     "scientificName": "Cypripedium calceolus",
     "taxonLevel": "species",
     "commonNameIt": "Scarpetta di Venere",

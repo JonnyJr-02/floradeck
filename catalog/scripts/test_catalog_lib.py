@@ -72,13 +72,14 @@ class AltitudeTest(unittest.TestCase):
 
 
 def make_catalog():
-    """A minimal valid catalogue: one album of 20 species plus the legendary."""
-    albums = [{"id": "prati", "name": "Prati", "description": "", "order": 1, "speciesCount": 20, "rareSpeciesId": "s20"}]
+    """A minimal valid catalogue: one colour album of 20 species, the last one legendary."""
+    albums = [{"id": "rossi", "name": "Rossi", "description": "", "order": 1, "colors": ["rosso"], "speciesCount": 20, "legendarySpeciesId": "s20"}]
     species = []
     for n in range(1, 21):
         species.append({
-            "id": f"s{n}", "number": n, "albumId": "prati", "scientificName": "X y", "taxonLevel": "species",
-            "commonNameIt": "Nome", "family": "Fam", "rarity": "rare" if n == 20 else "common",
+            "id": f"s{n}", "number": n, "albumId": "rossi", "albums": [{"albumId": "rossi", "number": n}],
+            "habitatGroup": "prati", "scientificName": "X y", "taxonLevel": "species",
+            "commonNameIt": "Nome", "family": "Fam", "rarity": "legendary" if n == 20 else "common",
             "dominantColors": ["rosso"], "phenology": "flowering", "bloomMonths": [4, 5], "habitat": "Prati",
             "altitude": "0–500 m", "regions": "Tutta Italia", "sizeNote": "1 cm",
             "description": "Una frase. Due frasi.", "funFact": "Curiosità.", "cultivated": False,
@@ -86,9 +87,6 @@ def make_catalog():
             "lookalikes": [], "lookalikesOutside": [], "modelLabels": ["X y"], "inatTaxonIds": [n],
             "textStatus": "da-verificare",
         })
-    legendary = copy.deepcopy(species[0])
-    legendary.update(id="leggenda", number=None, albumId=None, rarity="legendary")
-    species.append(legendary)
     return species, albums
 
 
@@ -97,11 +95,27 @@ class ValidatorTest(unittest.TestCase):
         errors, _ = validate(*make_catalog())
         self.assertEqual(errors, [])
 
-    def test_album_needs_exactly_one_rare(self):
+    def test_album_needs_exactly_one_legendary(self):
+        species, albums = make_catalog()
+        species[0]["rarity"] = "legendary"
+        errors, _ = validate(species, albums)
+        self.assertTrue(any("2 legendary species" in e for e in errors))
+
+    def test_rare_tier_is_gone(self):
         species, albums = make_catalog()
         species[0]["rarity"] = "rare"
         errors, _ = validate(species, albums)
-        self.assertTrue(any("2 rare species" in e for e in errors))
+        self.assertTrue(any("rare tier is gone" in e for e in errors))
+
+    def test_a_species_in_two_albums_is_numbered_in_both(self):
+        species, albums = make_catalog()
+        albums.append({"id": "rosa", "name": "Rosa", "description": "", "order": 2, "colors": ["rosa"], "speciesCount": 10, "legendarySpeciesId": "s20"})
+        for n, entry in enumerate(species[:10], start=1):
+            entry["albums"].append({"albumId": "rosa", "number": n})
+        errors, _ = validate(species, albums)
+        # "rosa" has no legendary species of its own; the numbering of both albums is fine.
+        self.assertTrue(any("album rosa: 0 legendary" in e for e in errors))
+        self.assertFalse(any("card numbers" in e for e in errors))
 
     def test_lookalikes_must_exist_and_unknown_colours_fail(self):
         species, albums = make_catalog()
@@ -113,9 +127,9 @@ class ValidatorTest(unittest.TestCase):
 
     def test_album_size_is_enforced(self):
         species, albums = make_catalog()
-        species = [s for s in species if s["id"] != "s1"]
+        species = [s for s in species if s["id"] not in {f"s{n}" for n in range(1, 12)}]
         errors, _ = validate(species, albums)
-        self.assertTrue(any("19 species" in e for e in errors))
+        self.assertTrue(any("9 species" in e for e in errors))
 
 
 if __name__ == "__main__":

@@ -16,8 +16,7 @@ export function SpeciesScreen() {
   const cards = useSpeciesCards(id)
   const covers = useCovers()
 
-  // The secret legendary species has no page until it is found.
-  if (!entry || entry.albumId === null) return <Redirect to="/album" replace />
+  if (!entry) return <Redirect to="/album" replace />
   if (cards === undefined) return <main className="min-h-dvh bg-paper" aria-busy="true" />
   const cover = cards.find((card) => card.id === covers.get(id)) ?? cards[0]
   if (cover) return <Redirect to={`/carta/${cover.id}`} replace state={IN_APP} />
