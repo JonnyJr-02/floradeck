@@ -30,6 +30,16 @@ describe('mock recogniser', () => {
     }
   })
 
+  it('hands out the legendary card only when forced', () => {
+    const forced = mockRecognition('legendary')
+    expect(forced.kind === 'card' && forced.best.speciesId).toBe('cypripedium-calceolus')
+    const random = seeded(9)
+    for (let i = 0; i < 300; i++) {
+      const result = mockRecognition('random', random)
+      expect(result.top3.some((c) => c.speciesId === 'cypripedium-calceolus')).toBe(false)
+    }
+  })
+
   it('builds probability vectors that sum to one', () => {
     const random = seeded(11)
     for (const scenario of ['sure', 'unsure', 'out'] as const) {

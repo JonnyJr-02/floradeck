@@ -1,0 +1,2728 @@
+{
+ "achillea-maritima": {
+  "status": "missing",
+  "tried": [
+   "Achillea maritima (illustrations)",
+   "Otanthus maritimus (illustrations)",
+   "Achillea maritima maritima (illustrations)",
+   "Achillea maritima (category)",
+   "Otanthus maritimus (category)",
+   "Achillea maritima maritima (category)",
+   "Achillea maritima (search)",
+   "Otanthus maritimus (search)",
+   "Achillea maritima maritima (search)"
+  ]
+ },
+ "aconitum-napellus": {
+  "status": "found",
+  "taxon": "Aconitum napellus",
+  "file": "Aconitum napellus (Köhler).jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Hermann Adolf Köhler (1834 - 1879)",
+  "date": "1887",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Aconitum_napellus_(K%C3%B6hler).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Aconitum_napellus_%28K%C3%B6hler%29.jpg/960px-Aconitum_napellus_%28K%C3%B6hler%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "aconitum-napellus.jpg"
+ },
+ "ajuga-reptans": {
+  "status": "found",
+  "taxon": "Ajuga reptans",
+  "file": "Illustration Ajuga reptans0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Ajuga_reptans0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Illustration_Ajuga_reptans0.jpg/960px-Illustration_Ajuga_reptans0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "ajuga-reptans.jpg"
+ },
+ "anacamptis-morio": {
+  "status": "missing",
+  "tried": [
+   "Anacamptis morio (illustrations)",
+   "Anacamptis morio (category)",
+   "Anacamptis morio (search)"
+  ]
+ },
+ "anacamptis-papilionacea": {
+  "status": "missing",
+  "tried": [
+   "Anacamptis papilionacea (illustrations)",
+   "Anacamptis papilionacea (category)",
+   "Anacamptis papilionacea (search)"
+  ]
+ },
+ "anacamptis-pyramidalis": {
+  "status": "found",
+  "taxon": "Anacamptis pyramidalis",
+  "file": "Illustration Anacamptis pyramidalis clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Illustration_Anacamptis_pyramidalis0.jpg: Prof. Dr. Otto Wilhelm Thomé derivative work: Aroche (talk)",
+  "date": "2009-05-23 20:20",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Anacamptis_pyramidalis_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Illustration_Anacamptis_pyramidalis_clean.jpg/960px-Illustration_Anacamptis_pyramidalis_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "anacamptis-pyramidalis.jpg"
+ },
+ "anchusa-azurea": {
+  "status": "missing",
+  "tried": [
+   "Anchusa azurea (illustrations)",
+   "Anchusa azurea (category)",
+   "Anchusa azurea (search)"
+  ]
+ },
+ "anemone-coronaria": {
+  "status": "missing",
+  "tried": [
+   "Anemone coronaria (illustrations)",
+   "Anemone coronaria (category)",
+   "Anemone coronaria (search)"
+  ]
+ },
+ "anemone-hortensis": {
+  "status": "missing",
+  "tried": [
+   "Anemone hortensis (illustrations)",
+   "Anemone hortensis (category)",
+   "Anemone hortensis (search)"
+  ]
+ },
+ "anemone-nemorosa": {
+  "status": "found",
+  "taxon": "Anemone nemorosa",
+  "file": "Illustration Anemone nemorosa0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Walther Otto Müller",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Anemone_nemorosa0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Illustration_Anemone_nemorosa0.jpg/960px-Illustration_Anemone_nemorosa0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "anemone-nemorosa.jpg"
+ },
+ "anemone-ranunculoides": {
+  "status": "found",
+  "taxon": "Anemone ranunculoides",
+  "file": "Anemone ranunculoides — Flora Batava — Volume v6.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Jan Kops",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Anemone_ranunculoides_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v6.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Anemone_ranunculoides_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v6.jpg/960px-Anemone_ranunculoides_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "anemone-ranunculoides.jpg"
+ },
+ "anthyllis-vulneraria": {
+  "status": "found",
+  "taxon": "Anthyllis vulneraria",
+  "file": "Illustration Anthyllis vulneraria clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Illustration_Anthyllis_vulneraria0.jpg: Prof. Dr. Otto Wilhelm Thomé derivative work: Aroche (talk)",
+  "date": "2009-05-23 21:47",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Anthyllis_vulneraria_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Illustration_Anthyllis_vulneraria_clean.jpg/960px-Illustration_Anthyllis_vulneraria_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "anthyllis-vulneraria.jpg"
+ },
+ "antirrhinum-majus": {
+  "status": "found",
+  "taxon": "Antirrhinum majus",
+  "file": "Illustration Antirrhinum majus clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Illustration_Antirrhinum_majus0.jpg: Prof. Dr. Otto Wilhelm Thomé derivative work: Aroche (talk)",
+  "date": "2009-05-23 22:13",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Antirrhinum_majus_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Illustration_Antirrhinum_majus_clean.jpg/960px-Illustration_Antirrhinum_majus_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "antirrhinum-majus.jpg"
+ },
+ "aquilegia": {
+  "status": "missing",
+  "tried": [
+   "Aquilegia sp. (illustrations)",
+   "Aquilegia sp. (category)",
+   "Aquilegia sp. (search)"
+  ]
+ },
+ "arbutus-unedo": {
+  "status": "missing",
+  "tried": [
+   "Arbutus unedo (illustrations)",
+   "Arbutus unedo (category)",
+   "Arbutus unedo (search)"
+  ]
+ },
+ "arnica-montana": {
+  "status": "found",
+  "taxon": "Arnica montana",
+  "file": "Arnica montana - Köhler–s Medizinal-Pflanzen-015.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhlers Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Arnica_montana_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-015.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Arnica_montana_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-015.jpg/960px-Arnica_montana_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 13,
+  "review": "da-verificare",
+  "thumbFile": "arnica-montana.jpg"
+ },
+ "arum-italicum": {
+  "status": "found",
+  "taxon": "Arum italicum",
+  "file": "Arum italicum CBM.png",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Samuel Curtis (d. 1860)",
+  "date": "1823",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Arum_italicum_CBM.png",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Arum_italicum_CBM.png/960px-Arum_italicum_CBM.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "arum-italicum.png"
+ },
+ "asphodelus": {
+  "status": "missing",
+  "tried": [
+   "Asphodelus sp. (illustrations)",
+   "Asphodelus sp. (category)",
+   "Asphodelus sp. (search)"
+  ]
+ },
+ "aster-alpinus": {
+  "status": "found",
+  "taxon": "Aster alpinus",
+  "file": "Aster alpinus.jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Aster_alpinus.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Aster_alpinus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "aster-alpinus.jpg"
+ },
+ "astrantia-major": {
+  "status": "found",
+  "taxon": "Astrantia major",
+  "file": "Illustration Astrantia major clean1.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "File:Illustration Astrantia major0.jpg: PLEASE COMPLETE AUTHOR INFORMATION derivative work: Kenraiz",
+  "date": "2024-06-27 08:22",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Astrantia_major_clean1.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Illustration_Astrantia_major_clean1.jpg/960px-Illustration_Astrantia_major_clean1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "astrantia-major.jpg"
+ },
+ "bellis-perennis": {
+  "status": "found",
+  "taxon": "Bellis perennis",
+  "file": "35 Bellis perennis.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:35_Bellis_perennis.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/35_Bellis_perennis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "bellis-perennis.jpg"
+ },
+ "berberis-vulgaris": {
+  "status": "found",
+  "taxon": "Berberis vulgaris",
+  "file": "Illustration Berberis vulgaris0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Berberis_vulgaris0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Illustration_Berberis_vulgaris0.jpg/960px-Illustration_Berberis_vulgaris0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "berberis-vulgaris.jpg"
+ },
+ "bistorta-officinalis": {
+  "status": "found",
+  "taxon": "Bistorta officinalis",
+  "file": "Bistorta officinalis Sturm61.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Bistorta_officinalis_Sturm61.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Bistorta_officinalis_Sturm61.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "bistorta-officinalis.jpg"
+ },
+ "borago-officinalis": {
+  "status": "found",
+  "taxon": "Borago officinalis",
+  "file": "Illustration Borago officinalis0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Borago_officinalis0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Illustration_Borago_officinalis0.jpg/960px-Illustration_Borago_officinalis0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "borago-officinalis.jpg"
+ },
+ "butomus-umbellatus": {
+  "status": "found",
+  "taxon": "Butomus umbellatus",
+  "file": "Illustration Butomus umbellatus0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Butomus_umbellatus0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Illustration_Butomus_umbellatus0.jpg/960px-Illustration_Butomus_umbellatus0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 9,
+  "review": "da-verificare",
+  "thumbFile": "butomus-umbellatus.jpg"
+ },
+ "cakile-maritima": {
+  "status": "found",
+  "taxon": "Cakile maritima",
+  "file": "200 Cakile maritima.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:200_Cakile_maritima.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/200_Cakile_maritima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "cakile-maritima.jpg"
+ },
+ "calendula-arvensis": {
+  "status": "found",
+  "taxon": "Calendula arvensis",
+  "file": "171 Calendula arvensis L.jpg",
+  "source": "masclef",
+  "sourceLabel": "Amédée Masclef, Atlas des plantes de France (1891)",
+  "artist": "Amédée Masclef",
+  "date": "2001-01-31",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:171_Calendula_arvensis_L.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/171_Calendula_arvensis_L.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "calendula-arvensis.jpg"
+ },
+ "calluna-vulgaris": {
+  "status": "found",
+  "taxon": "Calluna vulgaris",
+  "file": "Illustration Calluna vulgaris0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Calluna_vulgaris0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Illustration_Calluna_vulgaris0.jpg/960px-Illustration_Calluna_vulgaris0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "calluna-vulgaris.jpg"
+ },
+ "caltha-palustris": {
+  "status": "found",
+  "taxon": "Caltha palustris",
+  "file": "Illustration Caltha palustris0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Caltha_palustris0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Illustration_Caltha_palustris0.jpg/960px-Illustration_Caltha_palustris0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "caltha-palustris.jpg"
+ },
+ "calystegia-sepium": {
+  "status": "found",
+  "taxon": "Calystegia sepium",
+  "file": "Calystegia sepium Sturm1.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Calystegia_sepium_Sturm1.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Calystegia_sepium_Sturm1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "calystegia-sepium.jpg"
+ },
+ "calystegia-soldanella": {
+  "status": "missing",
+  "tried": [
+   "Calystegia soldanella (illustrations)",
+   "Calystegia soldanella (category)",
+   "Calystegia soldanella (search)"
+  ]
+ },
+ "campanula-barbata": {
+  "status": "missing",
+  "tried": [
+   "Campanula barbata (illustrations)",
+   "Campanula barbata (category)",
+   "Campanula barbata (search)"
+  ]
+ },
+ "capparis-spinosa": {
+  "status": "found",
+  "taxon": "Capparis spinosa",
+  "file": "Illustration Capparis spinosa0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé (1840-1925)",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Capparis_spinosa0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Illustration_Capparis_spinosa0.jpg/960px-Illustration_Capparis_spinosa0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "capparis-spinosa.jpg"
+ },
+ "carpobrotus": {
+  "status": "missing",
+  "tried": [
+   "Carpobrotus sp. (illustrations)",
+   "Carpobrotus sp. (category)",
+   "Carpobrotus sp. (search)"
+  ]
+ },
+ "centaurea-cyanus": {
+  "status": "found",
+  "taxon": "Centaurea cyanus",
+  "file": "Illustration Centaurea cyanus0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Centaurea_cyanus0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Illustration_Centaurea_cyanus0.jpg/960px-Illustration_Centaurea_cyanus0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "centaurea-cyanus.jpg"
+ },
+ "centaurea-montana-gruppo": {
+  "status": "found",
+  "taxon": "Centaurea montana",
+  "file": "Centaurea montana Sturm25.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Centaurea_montana_Sturm25.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Centaurea_montana_Sturm25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "centaurea-montana-gruppo.jpg"
+ },
+ "centranthus-ruber": {
+  "status": "missing",
+  "tried": [
+   "Centranthus ruber (illustrations)",
+   "Centranthus ruber (category)",
+   "Centranthus ruber (search)"
+  ]
+ },
+ "cephalanthera-bianche": {
+  "status": "found",
+  "taxon": "Cephalanthera damasonium",
+  "file": "Cephalanthera damasonium Nordens Flora 414.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Cephalanthera_damasonium_Nordens_Flora_414.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Cephalanthera_damasonium_Nordens_Flora_414.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "cephalanthera-bianche.jpg"
+ },
+ "cephalanthera-rubra": {
+  "status": "found",
+  "taxon": "Cephalanthera rubra",
+  "file": "Illustration Cephalanthera rubra0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Cephalanthera_rubra0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Illustration_Cephalanthera_rubra0.jpg/960px-Illustration_Cephalanthera_rubra0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "cephalanthera-rubra.jpg"
+ },
+ "chamaenerion-angustifolium": {
+  "status": "found",
+  "taxon": "Chamaenerion angustifolium",
+  "via": "search",
+  "file": "Epilobium angustifolium (modern=Chamaenerion angustifolium) - Pl0007 - FloraBatava-KB-v01.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Epilobium_angustifolium_(modern%3DChamaenerion_angustifolium)_-_Pl0007_-_FloraBatava-KB-v01.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Epilobium_angustifolium_%28modern%3DChamaenerion_angustifolium%29_-_Pl0007_-_FloraBatava-KB-v01.jpg/960px-Epilobium_angustifolium_%28modern%3DChamaenerion_angustifolium%29_-_Pl0007_-_FloraBatava-KB-v01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "chamaenerion-angustifolium.jpg"
+ },
+ "cichorium-intybus": {
+  "status": "found",
+  "taxon": "Cichorium intybus",
+  "file": "Illustration Cichorium intybus.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Illustration_Cichorium_intybus0.jpg derivative work: Wilfredor (talk)",
+  "date": "2009-12-27 23:31",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Cichorium_intybus.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Illustration_Cichorium_intybus.jpg/960px-Illustration_Cichorium_intybus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 6,
+  "review": "da-verificare",
+  "thumbFile": "cichorium-intybus.jpg"
+ },
+ "cistus-creticus": {
+  "status": "missing",
+  "tried": [
+   "Cistus creticus (illustrations)",
+   "Cistus creticus (category)",
+   "Cistus creticus (search)"
+  ]
+ },
+ "cistus-salviifolius": {
+  "status": "missing",
+  "tried": [
+   "Cistus salviifolius (illustrations)",
+   "Cistus salviifolius (category)",
+   "Cistus salviifolius (search)"
+  ]
+ },
+ "clematis-vitalba": {
+  "status": "found",
+  "taxon": "Clematis vitalba",
+  "file": "Illustration Clematis vitalba0 clean.JPG",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "File:Illustration Clematis vitalba0.jpg: PLEASE COMPLETE AUTHOR INFORMATION derivative work: Kenraiz",
+  "date": "2024-03-30 19:59",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Clematis_vitalba0_clean.JPG",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Illustration_Clematis_vitalba0_clean.JPG/960px-Illustration_Clematis_vitalba0_clean.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "clematis-vitalba.jpg"
+ },
+ "colchicum-autumnale": {
+  "status": "found",
+  "taxon": "Colchicum autumnale",
+  "file": "Colchicum autumnale - Köhler–s Medizinal-Pflanzen-044.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Colchicum_autumnale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-044.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Colchicum_autumnale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-044.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "colchicum-autumnale.jpg"
+ },
+ "convallaria-majalis": {
+  "status": "found",
+  "taxon": "Convallaria majalis",
+  "via": "search",
+  "file": "Convallaria majalis - Köhler–s Medizinal-Pflanzen-045.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Convallaria_majalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-045.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Convallaria_majalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-045.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 7,
+  "review": "da-verificare",
+  "thumbFile": "convallaria-majalis.jpg"
+ },
+ "convolvulus-arvensis": {
+  "status": "found",
+  "taxon": "Convolvulus arvensis",
+  "file": "Illustration Convolvulus arvensis0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Convolvulus_arvensis0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Illustration_Convolvulus_arvensis0.jpg/960px-Illustration_Convolvulus_arvensis0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "convolvulus-arvensis.jpg"
+ },
+ "cornus-mas": {
+  "status": "found",
+  "taxon": "Cornus mas",
+  "file": "Cornus mas - Prof. Dr. Thome-s Flora von Deutschland ... (Pl. 391) clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Migula, Walter; Thomé, Otto W.",
+  "date": "1888",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Cornus_mas_-_Prof._Dr._Thome-s_Flora_von_Deutschland_..._(Pl._391)_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Cornus_mas_-_Prof._Dr._Thome-s_Flora_von_Deutschland_..._%28Pl._391%29_clean.jpg/960px-Cornus_mas_-_Prof._Dr._Thome-s_Flora_von_Deutschland_..._%28Pl._391%29_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "cornus-mas.jpg"
+ },
+ "corydalis": {
+  "status": "found",
+  "taxon": "Corydalis cava",
+  "file": "Corydalis cava Sturm42.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Corydalis_cava_Sturm42.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Corydalis_cava_Sturm42.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "corydalis.jpg"
+ },
+ "cotoneaster": {
+  "status": "missing",
+  "tried": [
+   "Cotoneaster sp. (illustrations)",
+   "Cotoneaster sp. (category)",
+   "Cotoneaster sp. (search)"
+  ]
+ },
+ "crataegus-monogyna": {
+  "status": "found",
+  "taxon": "Crataegus monogyna",
+  "file": "Crataegus monogyna Sturm 08004.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Crataegus_monogyna_Sturm_08004.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Crataegus_monogyna_Sturm_08004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "crataegus-monogyna.jpg"
+ },
+ "crocus-vernus": {
+  "status": "found",
+  "taxon": "Crocus vernus",
+  "file": "Illustration Crocus vernus0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Crocus_vernus0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Illustration_Crocus_vernus0.jpg/960px-Illustration_Crocus_vernus0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "crocus-vernus.jpg"
+ },
+ "cyclamen": {
+  "status": "found",
+  "taxon": "Cyclamen purpurascens",
+  "file": "Illustration Cyclamen purpurascens0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Cyclamen_purpurascens0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Illustration_Cyclamen_purpurascens0.jpg/960px-Illustration_Cyclamen_purpurascens0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "cyclamen.jpg"
+ },
+ "cymbalaria-muralis": {
+  "status": "found",
+  "taxon": "Cymbalaria muralis",
+  "via": "search",
+  "file": "Cymbalaria muralis Sturm21.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Cymbalaria_muralis_Sturm21.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Cymbalaria_muralis_Sturm21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "cymbalaria-muralis.jpg"
+ },
+ "cypripedium-calceolus": {
+  "status": "found",
+  "taxon": "Cypripedium calceolus",
+  "file": "Illustration Cypripedium calceolus0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "User:Kilom691",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Cypripedium_calceolus0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Illustration_Cypripedium_calceolus0_clean.jpg/960px-Illustration_Cypripedium_calceolus0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "cypripedium-calceolus.jpg"
+ },
+ "dactylorhiza-maculata-gruppo": {
+  "status": "found",
+  "taxon": "Dactylorhiza maculata",
+  "file": "Dactylorhiza maculata Nordens Flora 399.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Dactylorhiza_maculata_Nordens_Flora_399.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Dactylorhiza_maculata_Nordens_Flora_399.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "dactylorhiza-maculata-gruppo.jpg"
+ },
+ "dactylorhiza-sambucina": {
+  "status": "missing",
+  "tried": [
+   "Dactylorhiza sambucina (illustrations)",
+   "Dactylorhiza sambucina (category)",
+   "Dactylorhiza sambucina (search)"
+  ]
+ },
+ "daphne-mezereum": {
+  "status": "found",
+  "taxon": "Daphne mezereum",
+  "file": "Daphne mezereum - Köhler–s Medizinal-Pflanzen-050.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Daphne_mezereum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-050.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Daphne_mezereum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-050.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 7,
+  "review": "da-verificare",
+  "thumbFile": "daphne-mezereum.jpg"
+ },
+ "daucus-carota": {
+  "status": "found",
+  "taxon": "Daucus carota",
+  "file": "Daucus carota - Prof. Dr. Thomé-s Flora von Deutschland (Pl. 386) clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Migula, Walter; Thomé, Otto W.",
+  "date": "1888",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Daucus_carota_-_Prof._Dr._Thom%C3%A9-s_Flora_von_Deutschland_(Pl._386)_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Daucus_carota_-_Prof._Dr._Thom%C3%A9-s_Flora_von_Deutschland_%28Pl._386%29_clean.jpg/960px-Daucus_carota_-_Prof._Dr._Thom%C3%A9-s_Flora_von_Deutschland_%28Pl._386%29_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "daucus-carota.jpg"
+ },
+ "dianthus-carthusianorum-gruppo": {
+  "status": "found",
+  "taxon": "Dianthus carthusianorum",
+  "file": "Dianthus carthusianorum Sturm24.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Dianthus_carthusianorum_Sturm24.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Dianthus_carthusianorum_Sturm24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "dianthus-carthusianorum-gruppo.jpg"
+ },
+ "digitalis": {
+  "status": "missing",
+  "tried": [
+   "Digitalis sp. (illustrations)",
+   "Digitalis sp. (category)",
+   "Digitalis sp. (search)"
+  ]
+ },
+ "dipsacus-fullonum": {
+  "status": "found",
+  "taxon": "Dipsacus fullonum",
+  "via": "search",
+  "file": "Dipsacus sylvestris (modern=Dipsacus fullonum) - Pl0187 - FloraBatava-KB-v03.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Georgius Jacobus Johannes van Os",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Dipsacus_sylvestris_(modern%3DDipsacus_fullonum)_-_Pl0187_-_FloraBatava-KB-v03.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Dipsacus_sylvestris_%28modern%3DDipsacus_fullonum%29_-_Pl0187_-_FloraBatava-KB-v03.jpg/960px-Dipsacus_sylvestris_%28modern%3DDipsacus_fullonum%29_-_Pl0187_-_FloraBatava-KB-v03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "dipsacus-fullonum.jpg"
+ },
+ "dryas-octopetala": {
+  "status": "found",
+  "taxon": "Dryas octopetala",
+  "file": "305 Dryas octopetala.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:305_Dryas_octopetala.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/305_Dryas_octopetala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "dryas-octopetala.jpg"
+ },
+ "echium-vulgare": {
+  "status": "found",
+  "taxon": "Echium vulgare",
+  "file": "Illustration Echium vulgare0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Echium_vulgare0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Illustration_Echium_vulgare0.jpg/960px-Illustration_Echium_vulgare0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "echium-vulgare.jpg"
+ },
+ "epilobium-hirsutum": {
+  "status": "found",
+  "taxon": "Epilobium hirsutum",
+  "file": "Epilobium hirsutum — Flora Batava — Volume v10.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Jan Kops",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Epilobium_hirsutum_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v10.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Epilobium_hirsutum_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v10.jpg/960px-Epilobium_hirsutum_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "epilobium-hirsutum.jpg"
+ },
+ "erica-arborea": {
+  "status": "found",
+  "taxon": "Erica arborea",
+  "via": "search",
+  "file": "Erica arborea — Flora Batava — Volume v12.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Jan Kops",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Erica_arborea_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v12.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Erica_arborea_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v12.jpg/960px-Erica_arborea_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "erica-arborea.jpg"
+ },
+ "erica-carnea": {
+  "status": "missing",
+  "tried": [
+   "Erica carnea (illustrations)",
+   "Erica carnea (category)",
+   "Erica carnea (search)"
+  ]
+ },
+ "eryngium-maritimum": {
+  "status": "found",
+  "taxon": "Eryngium maritimum",
+  "file": "Illustration Eryngium maritimum0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Eryngium_maritimum0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Illustration_Eryngium_maritimum0.jpg/960px-Illustration_Eryngium_maritimum0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "eryngium-maritimum.jpg"
+ },
+ "erythronium-dens-canis": {
+  "status": "found",
+  "taxon": "Erythronium dens-canis",
+  "file": "Erythronium dens-canis 1797.jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Sydenham Edwards / William Curtis",
+  "date": "1787",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Erythronium_dens-canis_1797.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Erythronium_dens-canis_1797.jpg/960px-Erythronium_dens-canis_1797.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "erythronium-dens-canis.jpg"
+ },
+ "euonymus-europaeus": {
+  "status": "found",
+  "taxon": "Euonymus europaeus",
+  "file": "Euonymus europaeus Sturm20 clean.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "File:Euonymus europaeus Sturm20.jpg: Johann Georg Sturm (Painter: Jacob Sturm) derivative work: Kenraiz",
+  "date": "2024-01-18 23:16",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Euonymus_europaeus_Sturm20_clean.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Euonymus_europaeus_Sturm20_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "euonymus-europaeus.jpg"
+ },
+ "eupatorium-cannabinum": {
+  "status": "found",
+  "taxon": "Eupatorium cannabinum",
+  "file": "Illustration Eupatorium cannabinum0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Eupatorium_cannabinum0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Illustration_Eupatorium_cannabinum0.jpg/960px-Illustration_Eupatorium_cannabinum0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 6,
+  "review": "da-verificare",
+  "thumbFile": "eupatorium-cannabinum.jpg"
+ },
+ "ficaria-verna": {
+  "status": "found",
+  "taxon": "Ficaria verna",
+  "via": "search",
+  "file": "Ranunculus Ficaria (modern=Ficaria verna subsp. verna) - Pl0076 - FloraBatava-KB-v01.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Georgius Jacobus Johannes van Os",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Ranunculus_Ficaria_(modern%3DFicaria_verna_subsp._verna)_-_Pl0076_-_FloraBatava-KB-v01.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Ranunculus_Ficaria_%28modern%3DFicaria_verna_subsp._verna%29_-_Pl0076_-_FloraBatava-KB-v01.jpg/960px-Ranunculus_Ficaria_%28modern%3DFicaria_verna_subsp._verna%29_-_Pl0076_-_FloraBatava-KB-v01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "ficaria-verna.jpg"
+ },
+ "filipendula-ulmaria": {
+  "status": "found",
+  "taxon": "Filipendula ulmaria",
+  "file": "Illustration Filipendula ulmaria0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "User:Kilom691",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Filipendula_ulmaria0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Illustration_Filipendula_ulmaria0_clean.jpg/960px-Illustration_Filipendula_ulmaria0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "filipendula-ulmaria.jpg"
+ },
+ "foeniculum-vulgare": {
+  "status": "found",
+  "taxon": "Foeniculum vulgare",
+  "file": "Foeniculum vulgare - Köhler–s Medizinal-Pflanzen-148.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Foeniculum_vulgare_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-148.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Foeniculum_vulgare_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-148.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "foeniculum-vulgare.jpg"
+ },
+ "fragaria-vesca": {
+  "status": "found",
+  "taxon": "Fragaria vesca",
+  "file": "Illustration Fragaria vesca0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Fragaria_vesca0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Illustration_Fragaria_vesca0.jpg/960px-Illustration_Fragaria_vesca0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "fragaria-vesca.jpg"
+ },
+ "fritillaria": {
+  "status": "found",
+  "taxon": "Fritillaria meleagris",
+  "file": "384 Fritillaria meleagris.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:384_Fritillaria_meleagris.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/384_Fritillaria_meleagris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "fritillaria.jpg"
+ },
+ "galanthus-nivalis": {
+  "status": "found",
+  "taxon": "Galanthus nivalis",
+  "file": "Illustration Galanthus nivalis0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Galanthus_nivalis0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Illustration_Galanthus_nivalis0.jpg/960px-Illustration_Galanthus_nivalis0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "galanthus-nivalis.jpg"
+ },
+ "gentiana-acaulis-gruppo": {
+  "status": "missing",
+  "tried": [
+   "Gentiana acaulis (illustrations)",
+   "Gentiana clusii (illustrations)",
+   "Gentiana acaulis (category)",
+   "Gentiana clusii (category)",
+   "Gentiana acaulis (search)",
+   "Gentiana clusii (search)"
+  ]
+ },
+ "gentiana-lutea": {
+  "status": "found",
+  "taxon": "Gentiana lutea",
+  "file": "Gentiana lutea - Köhler–s Medizinal-Pflanzen-066.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Gentiana_lutea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-066.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Gentiana_lutea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-066.jpg/960px-Gentiana_lutea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "gentiana-lutea.jpg"
+ },
+ "gentiana-verna": {
+  "status": "found",
+  "taxon": "Gentiana verna",
+  "file": "Gentiana verna-British Entomology.jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "John Curtis",
+  "date": "(1824-1835)",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Gentiana_verna-British_Entomology.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Gentiana_verna-British_Entomology.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "gentiana-verna.jpg"
+ },
+ "geranium-robertianum": {
+  "status": "found",
+  "taxon": "Geranium robertianum",
+  "file": "217 Geranium robertianum, G. lucidum.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:217_Geranium_robertianum,_G._lucidum.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/217_Geranium_robertianum%2C_G._lucidum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "geranium-robertianum.jpg"
+ },
+ "geranium-sanguineum": {
+  "status": "missing",
+  "tried": [
+   "Geranium sanguineum (illustrations)",
+   "Geranium sanguineum (category)",
+   "Geranium sanguineum (search)"
+  ]
+ },
+ "gladiolus-italicus": {
+  "status": "missing",
+  "tried": [
+   "Gladiolus italicus (illustrations)",
+   "Gladiolus italicus (category)",
+   "Gladiolus italicus (search)"
+  ]
+ },
+ "glaucium-flavum": {
+  "status": "found",
+  "taxon": "Glaucium flavum",
+  "file": "185 Glaucium flavum.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:185_Glaucium_flavum.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/185_Glaucium_flavum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "glaucium-flavum.jpg"
+ },
+ "glebionis-coronaria": {
+  "status": "missing",
+  "tried": [
+   "Glebionis coronaria (illustrations)",
+   "Glebionis coronaria (category)",
+   "Glebionis coronaria (search)"
+  ]
+ },
+ "gymnadenia-conopsea": {
+  "status": "found",
+  "taxon": "Gymnadenia conopsea",
+  "file": "Gymnadenia conopsea Nordens Flora 404.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Gymnadenia_conopsea_Nordens_Flora_404.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Gymnadenia_conopsea_Nordens_Flora_404.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "gymnadenia-conopsea.jpg"
+ },
+ "helichrysum": {
+  "status": "missing",
+  "tried": [
+   "Helichrysum italicum (illustrations)",
+   "Helichrysum stoechas (illustrations)",
+   "Helichrysum litoreum (illustrations)",
+   "Helichrysum sp. (illustrations)",
+   "Helichrysum italicum (category)",
+   "Helichrysum stoechas (category)",
+   "Helichrysum litoreum (category)",
+   "Helichrysum sp. (category)",
+   "Helichrysum italicum (search)",
+   "Helichrysum stoechas (search)",
+   "Helichrysum litoreum (search)",
+   "Helichrysum sp. (search)"
+  ]
+ },
+ "helleborus-niger": {
+  "status": "found",
+  "taxon": "Helleborus niger",
+  "via": "illustrations",
+  "file": "Illustration Helleborus niger0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Helleborus_niger0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Illustration_Helleborus_niger0.jpg/960px-Illustration_Helleborus_niger0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "helleborus-niger.jpg"
+ },
+ "hepatica-nobilis": {
+  "status": "found",
+  "taxon": "Hepatica nobilis",
+  "file": "Illustration Hepatica nobilis0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "User:Kilom691",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Hepatica_nobilis0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Illustration_Hepatica_nobilis0_clean.jpg/960px-Illustration_Hepatica_nobilis0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "hepatica-nobilis.jpg"
+ },
+ "himantoglossum-robertianum": {
+  "status": "missing",
+  "tried": [
+   "Himantoglossum robertianum (illustrations)",
+   "Barlia robertiana (illustrations)",
+   "Himantoglossum robertianum (category)",
+   "Barlia robertiana (category)",
+   "Himantoglossum robertianum (search)",
+   "Barlia robertiana (search)"
+  ]
+ },
+ "hippophae-rhamnoides": {
+  "status": "found",
+  "taxon": "Hippophae rhamnoides",
+  "file": "Illustration Hippophae rhamnoides0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Hippophae_rhamnoides0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Illustration_Hippophae_rhamnoides0.jpg/960px-Illustration_Hippophae_rhamnoides0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "hippophae-rhamnoides.jpg"
+ },
+ "hypericum-perforatum": {
+  "status": "found",
+  "taxon": "Hypericum perforatum",
+  "file": "230 Hypericum perforatum.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:230_Hypericum_perforatum.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/230_Hypericum_perforatum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 7,
+  "review": "da-verificare",
+  "thumbFile": "hypericum-perforatum.jpg"
+ },
+ "ilex-aquifolium": {
+  "status": "found",
+  "taxon": "Ilex aquifolium",
+  "file": "Illustration Ilex aquifolium0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Ilex_aquifolium0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Illustration_Ilex_aquifolium0.jpg/960px-Illustration_Ilex_aquifolium0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "ilex-aquifolium.jpg"
+ },
+ "impatiens-glandulifera": {
+  "status": "missing",
+  "tried": [
+   "Impatiens glandulifera (illustrations)",
+   "Impatiens glandulifera (category)",
+   "Impatiens glandulifera (search)"
+  ]
+ },
+ "impatiens-noli-tangere": {
+  "status": "found",
+  "taxon": "Impatiens noli-tangere",
+  "file": "Illustration Impatiens noli-tangere0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "User:Kilom691",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Impatiens_noli-tangere0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Illustration_Impatiens_noli-tangere0_clean.jpg/960px-Illustration_Impatiens_noli-tangere0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "impatiens-noli-tangere.jpg"
+ },
+ "iris-foetidissima": {
+  "status": "missing",
+  "tried": [
+   "Iris foetidissima (illustrations)",
+   "Iris foetidissima (category)",
+   "Iris foetidissima (search)"
+  ]
+ },
+ "iris-pseudacorus": {
+  "status": "found",
+  "taxon": "Iris pseudacorus",
+  "file": "Illustration Iris pseudacorus0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Iris_pseudacorus0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Illustration_Iris_pseudacorus0.jpg/960px-Illustration_Iris_pseudacorus0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "iris-pseudacorus.jpg"
+ },
+ "knautia": {
+  "status": "missing",
+  "tried": [
+   "Knautia sp. (illustrations)",
+   "Knautia sp. (category)",
+   "Knautia sp. (search)"
+  ]
+ },
+ "lamium-purpureum": {
+  "status": "found",
+  "taxon": "Lamium purpureum",
+  "file": "Illustration Lamium purpureum0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Walther Otto Müller",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Lamium_purpureum0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Illustration_Lamium_purpureum0.jpg/960px-Illustration_Lamium_purpureum0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "lamium-purpureum.jpg"
+ },
+ "lathyrus-latifolius": {
+  "status": "missing",
+  "tried": [
+   "Lathyrus latifolius (illustrations)",
+   "Lathyrus latifolius (category)",
+   "Lathyrus latifolius (search)"
+  ]
+ },
+ "lathyrus-vernus": {
+  "status": "found",
+  "taxon": "Lathyrus vernus",
+  "file": "Illustration Lathyrus vernus0 - clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Lathyrus_vernus0_-_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Illustration_Lathyrus_vernus0_-_clean.jpg/960px-Illustration_Lathyrus_vernus0_-_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "lathyrus-vernus.jpg"
+ },
+ "lavandula-stoechas": {
+  "status": "missing",
+  "tried": [
+   "Lavandula stoechas (illustrations)",
+   "Lavandula stoechas (category)",
+   "Lavandula stoechas (search)"
+  ]
+ },
+ "legousia-speculum-veneris": {
+  "status": "found",
+  "taxon": "Legousia speculum-veneris",
+  "file": "Illustration Legousia speculum-veneris0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Legousia_speculum-veneris0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Illustration_Legousia_speculum-veneris0.jpg/960px-Illustration_Legousia_speculum-veneris0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "legousia-speculum-veneris.jpg"
+ },
+ "leontopodium-nivale": {
+  "status": "missing",
+  "tried": [
+   "Leontopodium nivale (illustrations)",
+   "Leontopodium alpinum (illustrations)",
+   "Leontopodium nivale alpinum (illustrations)",
+   "Leontopodium nivale (category)",
+   "Leontopodium alpinum (category)",
+   "Leontopodium nivale alpinum (category)",
+   "Leontopodium nivale (search)",
+   "Leontopodium alpinum (search)",
+   "Leontopodium nivale alpinum (search)"
+  ]
+ },
+ "leopoldia-comosa": {
+  "status": "found",
+  "taxon": "Muscari comosum",
+  "via": "search",
+  "file": "Muscari comosum Sturm40.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Muscari_comosum_Sturm40.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Muscari_comosum_Sturm40.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "leopoldia-comosa.jpg"
+ },
+ "leucanthemum-vulgare": {
+  "status": "found",
+  "taxon": "Leucanthemum vulgare",
+  "file": "Leucanthemum vulgare Sturm13050.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Leucanthemum_vulgare_Sturm13050.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Leucanthemum_vulgare_Sturm13050.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "leucanthemum-vulgare.jpg"
+ },
+ "leucojum-aestivum": {
+  "status": "found",
+  "taxon": "Leucojum aestivum",
+  "file": "Leucojum aestivum Sturm48.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Leucojum_aestivum_Sturm48.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Leucojum_aestivum_Sturm48.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "leucojum-aestivum.jpg"
+ },
+ "lilium-bulbiferum": {
+  "status": "found",
+  "taxon": "Lilium bulbiferum",
+  "file": "Lilium bulbiferum (painting).jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Edward D. F. Sanform",
+  "date": "1807",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Lilium_bulbiferum_(painting).jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Lilium_bulbiferum_%28painting%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "lilium-bulbiferum.jpg"
+ },
+ "lilium-martagon": {
+  "status": "found",
+  "taxon": "Lilium martagon",
+  "file": "Illustration Lilium martagon0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "User:Kilom691",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Lilium_martagon0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Illustration_Lilium_martagon0_clean.jpg/960px-Illustration_Lilium_martagon0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "lilium-martagon.jpg"
+ },
+ "limodorum-abortivum": {
+  "status": "found",
+  "taxon": "Limodorum abortivum",
+  "file": "Illustration Limodorum abortivum0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Limodorum_abortivum0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Illustration_Limodorum_abortivum0.jpg/960px-Illustration_Limodorum_abortivum0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "limodorum-abortivum.jpg"
+ },
+ "limonium": {
+  "status": "missing",
+  "tried": [
+   "Limonium sp. (illustrations)",
+   "Limonium sp. (category)",
+   "Limonium sp. (search)"
+  ]
+ },
+ "linaria-alpina": {
+  "status": "found",
+  "taxon": "Linaria alpina",
+  "file": "Linaria alpina Sturm24.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Linaria_alpina_Sturm24.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Linaria_alpina_Sturm24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "linaria-alpina.jpg"
+ },
+ "linaria-vulgaris": {
+  "status": "found",
+  "taxon": "Linaria vulgaris",
+  "file": "Illustration Linaria vulgaris0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "User:Kilom691",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Linaria_vulgaris0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Illustration_Linaria_vulgaris0_clean.jpg/960px-Illustration_Linaria_vulgaris0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 9,
+  "review": "da-verificare",
+  "thumbFile": "linaria-vulgaris.jpg"
+ },
+ "lonicera-caprifogli": {
+  "status": "found",
+  "taxon": "Lonicera caprifolium",
+  "file": "Illustration Lonicera caprifolium0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Lonicera_caprifolium0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Illustration_Lonicera_caprifolium0.jpg/960px-Illustration_Lonicera_caprifolium0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "lonicera-caprifogli.jpg"
+ },
+ "lotus-corniculatus": {
+  "status": "found",
+  "taxon": "Lotus corniculatus",
+  "file": "Illustration Lotus corniculatus0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Lotus_corniculatus0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Illustration_Lotus_corniculatus0.jpg/960px-Illustration_Lotus_corniculatus0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 10,
+  "review": "da-verificare",
+  "thumbFile": "lotus-corniculatus.jpg"
+ },
+ "lychnis-flos-cuculi": {
+  "status": "found",
+  "taxon": "Silene flos-cuculi",
+  "file": "Lychnis flos cuculi (modern=Silene flos-cuculi) - Pl0004 - FloraBatava-KB-v01.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Lychnis_flos_cuculi_(modern%3DSilene_flos-cuculi)_-_Pl0004_-_FloraBatava-KB-v01.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lychnis_flos_cuculi_%28modern%3DSilene_flos-cuculi%29_-_Pl0004_-_FloraBatava-KB-v01.jpg/960px-Lychnis_flos_cuculi_%28modern%3DSilene_flos-cuculi%29_-_Pl0004_-_FloraBatava-KB-v01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "lychnis-flos-cuculi.jpg"
+ },
+ "lysimachia-vulgaris": {
+  "status": "found",
+  "taxon": "Lysimachia vulgaris",
+  "file": "Illustration Lysimachia vulgaris0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Lysimachia_vulgaris0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Illustration_Lysimachia_vulgaris0.jpg/960px-Illustration_Lysimachia_vulgaris0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "lysimachia-vulgaris.jpg"
+ },
+ "lythrum-salicaria": {
+  "status": "found",
+  "taxon": "Lythrum salicaria",
+  "file": "Illustration Lythrum salicaria0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Lythrum_salicaria0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Illustration_Lythrum_salicaria0.jpg/960px-Illustration_Lythrum_salicaria0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "lythrum-salicaria.jpg"
+ },
+ "malva-sylvestris": {
+  "status": "found",
+  "taxon": "Malva sylvestris",
+  "file": "Malva sylvestris - Köhler–s Medizinal-Pflanzen-222.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Köhler, F. E. (Franz Eugen)",
+  "date": "1887",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Malva_sylvestris_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-222.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Malva_sylvestris_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-222.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "malva-sylvestris.jpg"
+ },
+ "matthiola": {
+  "status": "missing",
+  "tried": [
+   "Matthiola sp. (illustrations)",
+   "Matthiola sp. (category)",
+   "Matthiola sp. (search)"
+  ]
+ },
+ "melittis-melissophyllum": {
+  "status": "found",
+  "taxon": "Melittis melissophyllum",
+  "file": "Melittis melissophyllum Sturm31-original.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Melittis_melissophyllum_Sturm31-original.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Melittis_melissophyllum_Sturm31-original.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "melittis-melissophyllum.jpg"
+ },
+ "mentha-aquatica": {
+  "status": "found",
+  "taxon": "Mentha aquatica",
+  "file": "Mentha aquatica - Pl0165 - FloraBatava-KB-v03.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Georgius Jacobus Johannes van Os",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Mentha_aquatica_-_Pl0165_-_FloraBatava-KB-v03.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Mentha_aquatica_-_Pl0165_-_FloraBatava-KB-v03.jpg/960px-Mentha_aquatica_-_Pl0165_-_FloraBatava-KB-v03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "mentha-aquatica.jpg"
+ },
+ "menyanthes-trifoliata": {
+  "status": "found",
+  "taxon": "Menyanthes trifoliata",
+  "file": "Menyanthes trifoliata - Köhler–s Medizinal-Pflanzen-225.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Menyanthes_trifoliata_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-225.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Menyanthes_trifoliata_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-225.jpg/960px-Menyanthes_trifoliata_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-225.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 6,
+  "review": "da-verificare",
+  "thumbFile": "menyanthes-trifoliata.jpg"
+ },
+ "muscari": {
+  "status": "found",
+  "taxon": "Muscari neglectum",
+  "file": "Illustration Muscari neglectum0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Muscari_neglectum0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Illustration_Muscari_neglectum0.jpg/960px-Illustration_Muscari_neglectum0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "muscari.jpg"
+ },
+ "myosotis": {
+  "status": "found",
+  "taxon": "Myosotis sp.",
+  "via": "search",
+  "file": "Myosotis sp Sturm18.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Myosotis_sp_Sturm18.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Myosotis_sp_Sturm18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "myosotis.jpg"
+ },
+ "myrtus-communis": {
+  "status": "found",
+  "taxon": "Myrtus communis",
+  "file": "Illustration Myrtus communis0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Myrtus_communis0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Illustration_Myrtus_communis0.jpg/960px-Illustration_Myrtus_communis0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "myrtus-communis.jpg"
+ },
+ "narcissus-poeticus": {
+  "status": "found",
+  "taxon": "Narcissus poeticus",
+  "file": "Illustration Narcissus poeticus0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Narcissus_poeticus0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Illustration_Narcissus_poeticus0.jpg/960px-Illustration_Narcissus_poeticus0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "narcissus-poeticus.jpg"
+ },
+ "narcissus-tazetta": {
+  "status": "found",
+  "taxon": "Narcissus tazetta",
+  "file": "Narcissus tazetta subsp. aureus (bifrons).jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Curtis's",
+  "date": "2012-10-16 22:58:05",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Narcissus_tazetta_subsp._aureus_(bifrons).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Narcissus_tazetta_subsp._aureus_%28bifrons%29.jpg/960px-Narcissus_tazetta_subsp._aureus_%28bifrons%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "narcissus-tazetta.jpg"
+ },
+ "neotinea-tridentata": {
+  "status": "missing",
+  "tried": [
+   "Neotinea tridentata (illustrations)",
+   "Neotinea tridentata (category)",
+   "Neotinea tridentata (search)"
+  ]
+ },
+ "nigella-damascena": {
+  "status": "found",
+  "taxon": "Nigella damascena",
+  "file": "Nigella damascena 1787.jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Sydenham Edwards / William Curtis",
+  "date": "1787",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Nigella_damascena_1787.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Nigella_damascena_1787.jpg/960px-Nigella_damascena_1787.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "nigella-damascena.jpg"
+ },
+ "nigritella": {
+  "status": "missing",
+  "tried": [
+   "Nigritella sp. (illustrations)",
+   "Nigritella sp. (category)",
+   "Nigritella sp. (search)"
+  ]
+ },
+ "nuphar-lutea": {
+  "status": "found",
+  "taxon": "Nuphar lutea",
+  "file": "Illustration Nuphar lutea0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Nuphar_lutea0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Illustration_Nuphar_lutea0.jpg/960px-Illustration_Nuphar_lutea0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "nuphar-lutea.jpg"
+ },
+ "nymphaea": {
+  "status": "missing",
+  "tried": [
+   "Nymphaea sp. (illustrations)",
+   "Nymphaea sp. (category)",
+   "Nymphaea sp. (search)"
+  ]
+ },
+ "oenothera": {
+  "status": "missing",
+  "tried": [
+   "Oenothera sp. (illustrations)",
+   "Oenothera sp. (category)",
+   "Oenothera sp. (search)"
+  ]
+ },
+ "ophrys-apifera": {
+  "status": "found",
+  "taxon": "Ophrys apifera",
+  "file": "Ophrys apifera (as Ophrys arachnites) - Curtis' 51 pl. 2516 (1824).jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "J. Curtis del., Weddell sc.",
+  "date": "1824",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Ophrys_apifera_(as_Ophrys_arachnites)_-_Curtis%27_51_pl._2516_(1824).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Ophrys_apifera_%28as_Ophrys_arachnites%29_-_Curtis%27_51_pl._2516_%281824%29.jpg/960px-Ophrys_apifera_%28as_Ophrys_arachnites%29_-_Curtis%27_51_pl._2516_%281824%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "ophrys-apifera.jpg"
+ },
+ "ophrys-bertolonii": {
+  "status": "missing",
+  "tried": [
+   "Ophrys bertolonii (illustrations)",
+   "Ophrys bertolonii (category)",
+   "Ophrys bertolonii (search)"
+  ]
+ },
+ "ophrys-fuciflora-gruppo": {
+  "status": "missing",
+  "tried": [
+   "Ophrys fuciflora (illustrations)",
+   "Ophrys apulica (illustrations)",
+   "Ophrys fuciflora apulica (illustrations)",
+   "Ophrys fuciflora (category)",
+   "Ophrys apulica (category)",
+   "Ophrys fuciflora apulica (category)",
+   "Ophrys fuciflora (search)",
+   "Ophrys apulica (search)",
+   "Ophrys fuciflora apulica (search)"
+  ]
+ },
+ "ophrys-lutea-gruppo": {
+  "status": "found",
+  "taxon": "Ophrys lutea",
+  "file": "Ophrys lutea - Curtis' 97 (Ser. 3 no. 27) pl. 5941 (1870).jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Walter Hood Fitch (1817-1892) del. et lith. Description by Joseph Dalton Hooker (1817—1911)",
+  "date": "1871",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Ophrys_lutea_-_Curtis%27_97_(Ser._3_no._27)_pl._5941_(1870).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Ophrys_lutea_-_Curtis%27_97_%28Ser._3_no._27%29_pl._5941_%281870%29.jpg/960px-Ophrys_lutea_-_Curtis%27_97_%28Ser._3_no._27%29_pl._5941_%281870%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "ophrys-lutea-gruppo.jpg"
+ },
+ "ophrys-tenthredinifera": {
+  "status": "found",
+  "taxon": "Ophrys tenthredinifera",
+  "file": "Ophrys tenthredinifera - Curtis' 44 pl. 1930 (1817).jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Widdell sc.",
+  "date": "1817",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Ophrys_tenthredinifera_-_Curtis%27_44_pl._1930_(1817).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Ophrys_tenthredinifera_-_Curtis%27_44_pl._1930_%281817%29.jpg/960px-Ophrys_tenthredinifera_-_Curtis%27_44_pl._1930_%281817%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "ophrys-tenthredinifera.jpg"
+ },
+ "opuntia-ficus-indica": {
+  "status": "found",
+  "taxon": "Opuntia ficus-indica",
+  "file": "Opuntia ficus-indica - Flora von Deutschland (Pl. 355).jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Migula, Walter; Thomé, Otto W.",
+  "date": "1888",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Opuntia_ficus-indica_-_Flora_von_Deutschland_(Pl._355).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Opuntia_ficus-indica_-_Flora_von_Deutschland_%28Pl._355%29.jpg/960px-Opuntia_ficus-indica_-_Flora_von_Deutschland_%28Pl._355%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "opuntia-ficus-indica.jpg"
+ },
+ "orchis-italica": {
+  "status": "found",
+  "taxon": "Orchis italica",
+  "file": "Orchis italica (as Orchis longicornis) - Curtis' 45 pl. 1944 (1817).jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Widdell sc.",
+  "date": "1818",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Orchis_italica_(as_Orchis_longicornis)_-_Curtis%27_45_pl._1944_(1817).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Orchis_italica_%28as_Orchis_longicornis%29_-_Curtis%27_45_pl._1944_%281817%29.jpg/960px-Orchis_italica_%28as_Orchis_longicornis%29_-_Curtis%27_45_pl._1944_%281817%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "orchis-italica.jpg"
+ },
+ "orchis-mascula": {
+  "status": "found",
+  "taxon": "Orchis mascula",
+  "file": "Orchis mascula Nordens Flora 401.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Orchis_mascula_Nordens_Flora_401.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Orchis_mascula_Nordens_Flora_401.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 11,
+  "review": "da-verificare",
+  "thumbFile": "orchis-mascula.jpg"
+ },
+ "orchis-purpurea": {
+  "status": "found",
+  "taxon": "Orchis purpurea",
+  "file": "Illustration Orchis purpurea0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Orchis_purpurea0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Illustration_Orchis_purpurea0.jpg/960px-Illustration_Orchis_purpurea0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "orchis-purpurea.jpg"
+ },
+ "orchis-simia": {
+  "status": "found",
+  "taxon": "Orchis simia",
+  "file": "Orchis simia (as Orchis tephrosanthos, var. densifolius) - Curtis' 62 (N.S. 9) pl. 3426 (1835).jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "Drawing probably by William Jackson Hooker (1785—1865), editor of the New Series) , Swan sc.",
+  "date": "1835",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Orchis_simia_(as_Orchis_tephrosanthos,_var._densifolius)_-_Curtis%27_62_(N.S._9)_pl._3426_(1835).jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Orchis_simia_%28as_Orchis_tephrosanthos%2C_var._densifolius%29_-_Curtis%27_62_%28N.S._9%29_pl._3426_%281835%29.jpg/960px-Orchis_simia_%28as_Orchis_tephrosanthos%2C_var._densifolius%29_-_Curtis%27_62_%28N.S._9%29_pl._3426_%281835%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "orchis-simia.jpg"
+ },
+ "ornithogalum-umbellatum": {
+  "status": "found",
+  "taxon": "Ornithogalum umbellatum",
+  "file": "Ornithogalum umbellatum Sturm34.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Ornithogalum_umbellatum_Sturm34.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Ornithogalum_umbellatum_Sturm34.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "ornithogalum-umbellatum.jpg"
+ },
+ "oxalis-acetosella": {
+  "status": "found",
+  "taxon": "Oxalis acetosella",
+  "file": "Illustration Oxalis acetosella0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Oxalis_acetosella0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Illustration_Oxalis_acetosella0.jpg/960px-Illustration_Oxalis_acetosella0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "oxalis-acetosella.jpg"
+ },
+ "paeonia-officinalis": {
+  "status": "found",
+  "taxon": "Paeonia officinalis",
+  "file": "Paeonia officinalis Anemoniflora Bot. Mag. 59. 3175. 1832.jpg",
+  "source": "curtis",
+  "sourceLabel": "Curtis's Botanical Magazine",
+  "artist": "W.J. Hooker",
+  "date": "1832",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Paeonia_officinalis_Anemoniflora_Bot._Mag._59._3175._1832.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Paeonia_officinalis_Anemoniflora_Bot._Mag._59._3175._1832.jpg/960px-Paeonia_officinalis_Anemoniflora_Bot._Mag._59._3175._1832.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "paeonia-officinalis.jpg"
+ },
+ "pancratium-maritimum": {
+  "status": "missing",
+  "tried": [
+   "Pancratium maritimum (illustrations)",
+   "Pancratium maritimum (category)",
+   "Pancratium maritimum (search)"
+  ]
+ },
+ "papaver-rhoeas": {
+  "status": "found",
+  "taxon": "Papaver rhoeas",
+  "file": "Papaver rhoeas - Köhler–s Medizinal-Pflanzen-101.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Papaver_rhoeas_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-101.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Papaver_rhoeas_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-101.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "papaver-rhoeas.jpg"
+ },
+ "paradisea-liliastrum": {
+  "status": "missing",
+  "tried": [
+   "Paradisea liliastrum (illustrations)",
+   "Paradisea liliastrum (category)",
+   "Paradisea liliastrum (search)"
+  ]
+ },
+ "parnassia-palustris": {
+  "status": "found",
+  "taxon": "Parnassia palustris",
+  "file": "Illustration Parnassia palustris0 cleaned.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "File:Illustration Parnassia palustris0.jpg: PLEASE COMPLETE AUTHOR INFORMATION derivative work: Kenraiz",
+  "date": "2024-01-18 23:09",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Parnassia_palustris0_cleaned.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Illustration_Parnassia_palustris0_cleaned.jpg/960px-Illustration_Parnassia_palustris0_cleaned.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 6,
+  "review": "da-verificare",
+  "thumbFile": "parnassia-palustris.jpg"
+ },
+ "persicaria-amphibia": {
+  "status": "found",
+  "taxon": "Persicaria amphibia",
+  "file": "Persicaria amphibia Sturm62.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Persicaria_amphibia_Sturm62.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Persicaria_amphibia_Sturm62.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "persicaria-amphibia.jpg"
+ },
+ "phlomis-fruticosa": {
+  "status": "missing",
+  "tried": [
+   "Phlomis fruticosa (illustrations)",
+   "Phlomis fruticosa (category)",
+   "Phlomis fruticosa (search)"
+  ]
+ },
+ "physalis-alkekengi": {
+  "status": "found",
+  "taxon": "Physalis alkekengi",
+  "file": "Illustration Physalis alkekengi0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Original book source: Prof. Dr. Otto Wilhelm Thomé Flora von Deutschland, Österreich und der Schweiz 1885, Gera, Germany",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Physalis_alkekengi0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Illustration_Physalis_alkekengi0_clean.jpg/960px-Illustration_Physalis_alkekengi0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "physalis-alkekengi.jpg"
+ },
+ "phyteuma": {
+  "status": "missing",
+  "tried": [
+   "Phyteuma sp. (illustrations)",
+   "Phyteuma sp. (category)",
+   "Phyteuma sp. (search)"
+  ]
+ },
+ "phytolacca-americana": {
+  "status": "missing",
+  "tried": [
+   "Phytolacca americana (illustrations)",
+   "Phytolacca americana (category)",
+   "Phytolacca americana (search)"
+  ]
+ },
+ "pinguicula": {
+  "status": "missing",
+  "tried": [
+   "Pinguicula sp. (illustrations)",
+   "Pinguicula sp. (category)",
+   "Pinguicula sp. (search)"
+  ]
+ },
+ "platanthera": {
+  "status": "found",
+  "taxon": "Platanthera bifolia",
+  "file": "Platanthera bifolia - Köhler–s Medizinal-Pflanzen-245.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Platanthera_bifolia_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-245.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Platanthera_bifolia_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-245.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "platanthera.jpg"
+ },
+ "primula-auricula": {
+  "status": "missing",
+  "tried": [
+   "Primula auricula (illustrations)",
+   "Primula auricula (category)",
+   "Primula auricula (search)"
+  ]
+ },
+ "primula-veris": {
+  "status": "found",
+  "taxon": "Primula veris",
+  "file": "Illustration Primula veris0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Prof. Dr. Otto Wilhelm Thomé",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Primula_veris0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Illustration_Primula_veris0_clean.jpg/960px-Illustration_Primula_veris0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "primula-veris.jpg"
+ },
+ "primula-vulgaris": {
+  "status": "missing",
+  "tried": [
+   "Primula vulgaris (illustrations)",
+   "Primula vulgaris (category)",
+   "Primula vulgaris (search)"
+  ]
+ },
+ "prunus-spinosa": {
+  "status": "found",
+  "taxon": "Prunus spinosa",
+  "file": "Illustration Prunus spinosa0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Prunus_spinosa0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Illustration_Prunus_spinosa0.jpg/960px-Illustration_Prunus_spinosa0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "prunus-spinosa.jpg"
+ },
+ "pulmonaria": {
+  "status": "missing",
+  "tried": [
+   "Pulmonaria sp. (illustrations)",
+   "Pulmonaria sp. (category)",
+   "Pulmonaria sp. (search)"
+  ]
+ },
+ "pulsatilla-alpina": {
+  "status": "missing",
+  "tried": [
+   "Pulsatilla alpina (illustrations)",
+   "Pulsatilla alpina (category)",
+   "Pulsatilla alpina (search)"
+  ]
+ },
+ "pyracantha": {
+  "status": "missing",
+  "tried": [
+   "Pyracantha sp. (illustrations)",
+   "Pyracantha sp. (category)",
+   "Pyracantha sp. (search)"
+  ]
+ },
+ "ranunculus-acquatici": {
+  "status": "found",
+  "taxon": "Ranunculus aquatilis",
+  "file": "Illustration Ranunculus aquatilis0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Ranunculus_aquatilis0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Illustration_Ranunculus_aquatilis0.jpg/960px-Illustration_Ranunculus_aquatilis0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "ranunculus-acquatici.jpg"
+ },
+ "ranunculus-acris-gruppo": {
+  "status": "found",
+  "taxon": "Ranunculus acris",
+  "file": "Illustration Ranunculus acris0 clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Original book source: Prof. Dr. Otto Wilhelm Thomé Flora von Deutschland, Österreich und der Schweiz 1885, Gera, Germany",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Ranunculus_acris0_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Illustration_Ranunculus_acris0_clean.jpg/960px-Illustration_Ranunculus_acris0_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "ranunculus-acris-gruppo.jpg"
+ },
+ "ranunculus-glacialis": {
+  "status": "found",
+  "taxon": "Ranunculus glacialis",
+  "file": "166 Ranunculus glacialis.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:166_Ranunculus_glacialis.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/166_Ranunculus_glacialis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "ranunculus-glacialis.jpg"
+ },
+ "rhinanthus": {
+  "status": "missing",
+  "tried": [
+   "Rhinanthus sp. (illustrations)",
+   "Rhinanthus sp. (category)",
+   "Rhinanthus sp. (search)"
+  ]
+ },
+ "rhododendron-alpino": {
+  "status": "found",
+  "taxon": "Rhododendron hirsutum",
+  "file": "Illustration Rhododendron hirsutum0 clean-2010-18-10.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Illustration_Rhododendron_hirsutum0_clean.jpg: Original book source: Prof. Dr. Otto Wilhelm Thomé Flora von Deutschland, Österreich und der Schweiz 1885, Gera, Germany derivative work: Pixeltoo (talk)",
+  "date": "2010-10-18 13:48",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Rhododendron_hirsutum0_clean-2010-18-10.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Illustration_Rhododendron_hirsutum0_clean-2010-18-10.jpg/960px-Illustration_Rhododendron_hirsutum0_clean-2010-18-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "rhododendron-alpino.jpg"
+ },
+ "rosa-canina": {
+  "status": "found",
+  "taxon": "Rosa canina",
+  "file": "Illustration Rosa canina0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Rosa_canina0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Illustration_Rosa_canina0.jpg/960px-Illustration_Rosa_canina0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 6,
+  "review": "da-verificare",
+  "thumbFile": "rosa-canina.jpg"
+ },
+ "rubus": {
+  "status": "found",
+  "taxon": "Rubus fruticosus",
+  "file": "Rubus fruticosus — Flora Batava — Volume v15.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Jan Kops",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Rubus_fruticosus_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v15.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Rubus_fruticosus_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v15.jpg/960px-Rubus_fruticosus_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "rubus.jpg"
+ },
+ "ruscus-aculeatus": {
+  "status": "found",
+  "taxon": "Ruscus aculeatus",
+  "file": "Illustration Ruscus aculeatus clean.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "File:Illustration Ruscus aculeatus0.jpg: PLEASE COMPLETE AUTHOR INFORMATION derivative work: Kenraiz",
+  "date": "2024-04-13 21:15",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Ruscus_aculeatus_clean.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Illustration_Ruscus_aculeatus_clean.jpg/960px-Illustration_Ruscus_aculeatus_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "ruscus-aculeatus.jpg"
+ },
+ "salvia-pratensis": {
+  "status": "found",
+  "taxon": "Salvia pratensis",
+  "file": "Illustration Salvia pratensis0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Salvia_pratensis0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Illustration_Salvia_pratensis0.jpg/960px-Illustration_Salvia_pratensis0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "salvia-pratensis.jpg"
+ },
+ "sambucus-nigra": {
+  "status": "found",
+  "taxon": "Sambucus nigra",
+  "file": "Sambucus nigra - Köhler–s Medizinal-Pflanzen-127.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Sambucus_nigra_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-127.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Sambucus_nigra_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-127.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "sambucus-nigra.jpg"
+ },
+ "saponaria-officinalis": {
+  "status": "found",
+  "taxon": "Saponaria officinalis",
+  "file": "Saponaria officinalis — Flora Batava — Volume v10.jpg",
+  "source": "batava",
+  "sourceLabel": "Flora Batava",
+  "artist": "Jan Kops",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Saponaria_officinalis_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v10.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Saponaria_officinalis_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v10.jpg/960px-Saponaria_officinalis_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "saponaria-officinalis.jpg"
+ },
+ "saxifraga-oppositifolia": {
+  "status": "found",
+  "taxon": "Saxifraga oppositifolia",
+  "file": "Saxifraga oppositifolia Sturm54.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Saxifraga_oppositifolia_Sturm54.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Saxifraga_oppositifolia_Sturm54.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 0,
+  "review": "da-verificare",
+  "thumbFile": "saxifraga-oppositifolia.jpg"
+ },
+ "scilla-bifolia": {
+  "status": "found",
+  "taxon": "Scilla bifolia",
+  "file": "Illustration Scilla bifolia0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Scilla_bifolia0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Illustration_Scilla_bifolia0.jpg/960px-Illustration_Scilla_bifolia0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "scilla-bifolia.jpg"
+ },
+ "sempervivum": {
+  "status": "missing",
+  "tried": [
+   "Sempervivum sp. (illustrations)",
+   "Sempervivum sp. (category)",
+   "Sempervivum sp. (search)"
+  ]
+ },
+ "serapias": {
+  "status": "missing",
+  "tried": [
+   "Serapias sp. (illustrations)",
+   "Serapias sp. (category)",
+   "Serapias sp. (search)"
+  ]
+ },
+ "silene-acaulis": {
+  "status": "missing",
+  "tried": [
+   "Silene acaulis (illustrations)",
+   "Silene acaulis (category)",
+   "Silene acaulis (search)"
+  ]
+ },
+ "silene-vulgaris": {
+  "status": "missing",
+  "tried": [
+   "Silene vulgaris (illustrations)",
+   "Silene vulgaris (category)",
+   "Silene vulgaris (search)"
+  ]
+ },
+ "silybum-marianum": {
+  "status": "found",
+  "taxon": "Silybum marianum",
+  "file": "Illustration Silybum marianum0 cleaned.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "File:Illustration Silybum marianum0.jpg: PLEASE COMPLETE AUTHOR INFORMATION derivative work: Kenraiz",
+  "date": "2023-12-09 09:37",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Silybum_marianum0_cleaned.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Illustration_Silybum_marianum0_cleaned.jpg/960px-Illustration_Silybum_marianum0_cleaned.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "silybum-marianum.jpg"
+ },
+ "smilax-aspera": {
+  "status": "missing",
+  "tried": [
+   "Smilax aspera (illustrations)",
+   "Smilax aspera (category)",
+   "Smilax aspera (search)"
+  ]
+ },
+ "solanum-dulcamara": {
+  "status": "found",
+  "taxon": "Solanum dulcamara",
+  "file": "Illustration Solanum dulcamara0 clean.png",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Solanum_dulcamara0_clean.png",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Illustration_Solanum_dulcamara0_clean.png/960px-Illustration_Solanum_dulcamara0_clean.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "solanum-dulcamara.png"
+ },
+ "soldanella": {
+  "status": "missing",
+  "tried": [
+   "Soldanella sp. (illustrations)",
+   "Soldanella sp. (category)",
+   "Soldanella sp. (search)"
+  ]
+ },
+ "solidago": {
+  "status": "missing",
+  "tried": [
+   "Solidago sp. (illustrations)",
+   "Solidago sp. (category)",
+   "Solidago sp. (search)"
+  ]
+ },
+ "sorbus-aucuparia": {
+  "status": "found",
+  "taxon": "Sorbus aucuparia",
+  "file": "Illustration Sorbus aucuparia0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Walter Müller",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Sorbus_aucuparia0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Illustration_Sorbus_aucuparia0.jpg/960px-Illustration_Sorbus_aucuparia0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "sorbus-aucuparia.jpg"
+ },
+ "spartium-junceum": {
+  "status": "missing",
+  "tried": [
+   "Spartium junceum (illustrations)",
+   "Spartium junceum (category)",
+   "Spartium junceum (search)"
+  ]
+ },
+ "sternbergia-lutea": {
+  "status": "missing",
+  "tried": [
+   "Sternbergia lutea (illustrations)",
+   "Sternbergia lutea (category)",
+   "Sternbergia lutea (search)"
+  ]
+ },
+ "symphyotrichum": {
+  "status": "missing",
+  "tried": [
+   "Symphyotrichum novi-belgii (illustrations)",
+   "Symphyotrichum lanceolatum (illustrations)",
+   "Symphyotrichum novae-angliae (illustrations)",
+   "Symphyotrichum sp. (illustrations)",
+   "Symphyotrichum novi-belgii (category)",
+   "Symphyotrichum lanceolatum (category)",
+   "Symphyotrichum novae-angliae (category)",
+   "Symphyotrichum sp. (category)",
+   "Symphyotrichum novi-belgii (search)",
+   "Symphyotrichum lanceolatum (search)",
+   "Symphyotrichum novae-angliae (search)",
+   "Symphyotrichum sp. (search)"
+  ]
+ },
+ "symphytum-officinale": {
+  "status": "found",
+  "taxon": "Symphytum officinale",
+  "file": "Symphytum officinale - Köhler–s Medizinal-Pflanzen-268.jpg",
+  "source": "koehler",
+  "sourceLabel": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen (1887)",
+  "artist": "Walther Otto Müller",
+  "date": "1897",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Symphytum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-268.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Symphytum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-268.jpg/960px-Symphytum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-268.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "symphytum-officinale.jpg"
+ },
+ "tamarix": {
+  "status": "missing",
+  "tried": [
+   "Tamarix sp. (illustrations)",
+   "Tamarix sp. (category)",
+   "Tamarix sp. (search)"
+  ]
+ },
+ "taraxacum": {
+  "status": "missing",
+  "tried": [
+   "Taraxacum sp. (illustrations)",
+   "Taraxacum sp. (category)",
+   "Taraxacum sp. (search)"
+  ]
+ },
+ "taxus-baccata": {
+  "status": "found",
+  "taxon": "Taxus baccata",
+  "via": "search",
+  "file": "498 Taxus baccata.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:498_Taxus_baccata.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/498_Taxus_baccata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "taxus-baccata.jpg"
+ },
+ "teucrium-fruticans": {
+  "status": "missing",
+  "tried": [
+   "Teucrium fruticans (illustrations)",
+   "Teucrium fruticans (category)",
+   "Teucrium fruticans (search)"
+  ]
+ },
+ "tragopogon-porrifolius": {
+  "status": "found",
+  "taxon": "Tragopogon porrifolius",
+  "file": "549 Tragopogon porrifolius.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:549_Tragopogon_porrifolius.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/549_Tragopogon_porrifolius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "tragopogon-porrifolius.jpg"
+ },
+ "traunsteinera-globosa": {
+  "status": "missing",
+  "tried": [
+   "Traunsteinera globosa (illustrations)",
+   "Traunsteinera globosa (category)",
+   "Traunsteinera globosa (search)"
+  ]
+ },
+ "trifolium-pratense": {
+  "status": "found",
+  "taxon": "Trifolium pratense",
+  "file": "Illustration Trifolium pratense0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Trifolium_pratense0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Illustration_Trifolium_pratense0.jpg/960px-Illustration_Trifolium_pratense0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 8,
+  "review": "da-verificare",
+  "thumbFile": "trifolium-pratense.jpg"
+ },
+ "trifolium-repens": {
+  "status": "found",
+  "taxon": "Trifolium repens",
+  "file": "Illustration Trifolium repens cleaned.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "File:Illustration Trifolium repens0.jpg: PLEASE COMPLETE AUTHOR INFORMATION derivative work: Kenraiz",
+  "date": "2024-01-31 14:25",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Trifolium_repens_cleaned.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Illustration_Trifolium_repens_cleaned.jpg/960px-Illustration_Trifolium_repens_cleaned.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "trifolium-repens.jpg"
+ },
+ "trollius-europaeus": {
+  "status": "found",
+  "taxon": "Trollius europaeus",
+  "file": "Illustration Trollius europaeus0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Trollius_europaeus0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Illustration_Trollius_europaeus0.jpg/960px-Illustration_Trollius_europaeus0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 10,
+  "review": "da-verificare",
+  "thumbFile": "trollius-europaeus.jpg"
+ },
+ "tulipa-sylvestris": {
+  "status": "found",
+  "taxon": "Tulipa sylvestris",
+  "file": "Illustration Tulipa sylvestris0.jpg",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "",
+  "date": "",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Tulipa_sylvestris0.jpg",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Illustration_Tulipa_sylvestris0.jpg/960px-Illustration_Tulipa_sylvestris0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 3,
+  "review": "da-verificare",
+  "thumbFile": "tulipa-sylvestris.jpg"
+ },
+ "vaccinium-myrtillus": {
+  "status": "found",
+  "taxon": "Vaccinium myrtillus",
+  "file": "Vaccinium myrtillus Sturm09055.jpg",
+  "source": "sturm",
+  "sourceLabel": "Jacob Sturm, Deutschlands Flora in Abbildungen (1796–1862)",
+  "artist": "Johann Georg Sturm (Painter: Jacob Sturm)",
+  "date": "1796",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Vaccinium_myrtillus_Sturm09055.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vaccinium_myrtillus_Sturm09055.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 1,
+  "review": "da-verificare",
+  "thumbFile": "vaccinium-myrtillus.jpg"
+ },
+ "vaccinium-vitis-idaea": {
+  "status": "found",
+  "taxon": "Vaccinium vitis-idaea",
+  "file": "143 Vaccinium vitis idaea.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:143_Vaccinium_vitis_idaea.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/143_Vaccinium_vitis_idaea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "vaccinium-vitis-idaea.jpg"
+ },
+ "verbascum": {
+  "status": "missing",
+  "tried": [
+   "Verbascum sp. (illustrations)",
+   "Verbascum sp. (category)",
+   "Verbascum sp. (search)"
+  ]
+ },
+ "viburnum-opulus": {
+  "status": "found",
+  "taxon": "Viburnum opulus",
+  "file": "Illustration Viburnum opulus clean.JPG",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "File:Illustration Viburnum opulus0.jpg: PLEASE COMPLETE AUTHOR INFORMATION derivative work: Kenraiz",
+  "date": "2024-06-14 21:12",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Viburnum_opulus_clean.JPG",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Illustration_Viburnum_opulus_clean.JPG/960px-Illustration_Viburnum_opulus_clean.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 5,
+  "review": "da-verificare",
+  "thumbFile": "viburnum-opulus.jpg"
+ },
+ "vinca-minor": {
+  "status": "found",
+  "taxon": "Vinca minor",
+  "file": "Illustration Vinca minor0 clean.png",
+  "source": "thome",
+  "sourceLabel": "Otto Wilhelm Thomé, Flora von Deutschland, Österreich und der Schweiz (1885)",
+  "artist": "Otto Wilhelm Thomé",
+  "date": "1885",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:Illustration_Vinca_minor0_clean.png",
+  "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Illustration_Vinca_minor0_clean.png/960px-Illustration_Vinca_minor0_clean.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "alternatives": 2,
+  "review": "da-verificare",
+  "thumbFile": "vinca-minor.png"
+ },
+ "viola-calcarata": {
+  "status": "missing",
+  "tried": [
+   "Viola calcarata (illustrations)",
+   "Viola calcarata (category)",
+   "Viola calcarata (search)"
+  ]
+ },
+ "viola-odorata-gruppo": {
+  "status": "found",
+  "taxon": "Viola odorata",
+  "file": "224 Viola odorata.jpg",
+  "source": "lindman",
+  "sourceLabel": "Carl Axel Magnus Lindman, Bilder ur Nordens Flora (1901–1905)",
+  "artist": "Carl Axel Magnus Lindman",
+  "date": "between 1917 and 1926date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1917-00-00T00:00:00Z/9,P1326,+1926-00-00T00:00:00Z/9",
+  "licence": "Public domain",
+  "pageUrl": "https://commons.wikimedia.org/wiki/File:224_Viola_odorata.jpg",
+  "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/224_Viola_odorata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "alternatives": 4,
+  "review": "da-verificare",
+  "thumbFile": "viola-odorata-gruppo.jpg"
+ },
+ "vitex-agnus-castus": {
+  "status": "missing",
+  "tried": [
+   "Vitex agnus-castus (illustrations)",
+   "Vitex agnus-castus (category)",
+   "Vitex agnus-castus (search)"
+  ]
+ }
+}

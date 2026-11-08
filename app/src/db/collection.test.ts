@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { addCard, getCard, photoBlob, type NewCard } from './collection'
+import { addCard, deleteCardsBy, getCard, getCovers, photoBlob, setCover, type NewCard } from './collection'
 import { FloraDeckDB } from './db'
 
 let db: FloraDeckDB
@@ -67,5 +67,28 @@ describe('adding cards', () => {
 
   it('returns null for a card that does not exist', async () => {
     expect(await getCard('missing', db)).toBeNull()
+  })
+})
+
+describe('covers and test cards', () => {
+  it('remembers the cover chosen for a species', async () => {
+    const first = await addCard(shot('papaver-rhoeas'), db)
+    const second = await addCard(shot('papaver-rhoeas'), db)
+    expect((await getCovers(db)).size).toBe(0)
+    await setCover('papaver-rhoeas', second.card.id, db)
+    expect((await getCovers(db)).get('papaver-rhoeas')).toBe(second.card.id)
+    await setCover('papaver-rhoeas', first.card.id, db)
+    expect((await getCovers(db)).get('papaver-rhoeas')).toBe(first.card.id)
+  })
+
+  it('deletes the stand-in recogniser\'s cards with their photos and covers, and nothing else', async () => {
+    const mock = await addCard(shot('papaver-rhoeas'), db)
+    const real = await addCard(shot('bellis-perennis', { recognizer: '20261108-effnet_b0' }), db)
+    await setCover('papaver-rhoeas', mock.card.id, db)
+    await setCover('bellis-perennis', real.card.id, db)
+    expect(await deleteCardsBy('mock', db)).toBe(1)
+    expect(await db.cards.toCollection().primaryKeys()).toEqual([real.card.id])
+    expect(await db.photos.count()).toBe(1)
+    expect([...(await getCovers(db)).keys()]).toEqual(['bellis-perennis'])
   })
 })

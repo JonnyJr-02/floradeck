@@ -8,9 +8,10 @@ import type { DecisionMetadata, Recognition, Recognizer } from './types'
  * screens see exactly what the model will give them.
  */
 
-export type MockScenario = 'random' | 'sure' | 'unsure' | 'out'
+/** 'legendary' is only ever forced: it lets the secret card (and its tilt sheen) be tried by hand. */
+export type MockScenario = 'random' | 'sure' | 'unsure' | 'out' | 'legendary'
 
-export const MOCK_SCENARIOS: readonly MockScenario[] = ['random', 'sure', 'unsure', 'out']
+export const MOCK_SCENARIOS: readonly MockScenario[] = ['random', 'sure', 'unsure', 'out', 'legendary']
 
 /** The secret legendary card is never handed out by the mock. */
 const collectable = species.filter((entry) => entry.albumId !== null)
@@ -49,14 +50,20 @@ function runnersUp(random: Random, best: Species): Species[] {
   return chosen.slice(0, 2)
 }
 
-export function resolveScenario(scenario: MockScenario, random: Random): Exclude<MockScenario, 'random'> {
+export function resolveScenario(
+  scenario: Exclude<MockScenario, 'legendary'>,
+  random: Random,
+): Exclude<MockScenario, 'random' | 'legendary'> {
   if (scenario !== 'random') return scenario
   const roll = random()
   return roll < 0.6 ? 'sure' : roll < 0.85 ? 'unsure' : 'out'
 }
 
 /** A probability vector over MOCK_METADATA.classes that lands in the scenario's decision zone. */
-export function mockProbabilities(scenario: MockScenario, random: Random = Math.random): Float64Array {
+export function mockProbabilities(
+  scenario: Exclude<MockScenario, 'legendary'>,
+  random: Random = Math.random,
+): Float64Array {
   const { classes, altroIndex, decision } = MOCK_METADATA
   const probabilities = new Float64Array(classes.length)
   const best = pick(random, collectable)
@@ -96,8 +103,14 @@ export function mockProbabilities(scenario: MockScenario, random: Random = Math.
   return probabilities
 }
 
+const legendary = species.find((entry) => entry.rarity === 'legendary')
+
 export function mockRecognition(scenario: MockScenario, random: Random = Math.random): Recognition {
-  return decide(mockProbabilities(scenario, random), MOCK_METADATA)
+  if (scenario === 'legendary' && legendary) {
+    const best = { speciesId: legendary.id, confidence: 0.97 }
+    return { kind: 'card', best, top3: [best] }
+  }
+  return decide(mockProbabilities(scenario === 'legendary' ? 'sure' : scenario, random), MOCK_METADATA)
 }
 
 function wait(ms: number, signal?: AbortSignal): Promise<void> {

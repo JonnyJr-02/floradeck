@@ -55,6 +55,9 @@ test('a sure recognition from the gallery becomes a card in the album', async ({
   await expect(page.getByText(/^Trovata il /)).toBeVisible()
 
   await page.getByRole('link', { name: "Metti nell'album" }).click()
+  await expect(page).toHaveURL(/\/album\/[a-z-]+$/)
+  await expect(page.getByText(/^1 di \d+$/)).toBeVisible()
+  await page.getByRole('navigation', { name: 'Sezioni' }).getByRole('link', { name: 'Album' }).click()
   await expect(page.getByText('1 specie trovata su 209, in 8 album')).toBeVisible()
 })
 

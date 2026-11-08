@@ -1,20 +1,13 @@
-import { useEffect, useMemo, useState, type CSSProperties } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'wouter'
-import { photoBlob, useCard } from '../../db/collection'
-import { albumById, speciesById, type Species } from '../../domain/catalog'
-import { cardNumberLabel, formatFoundDate, rarityLabel } from '../../domain/collection'
-import { formatMonths } from '../../domain/seasonality'
+import { setCover, useCard, useCovers, usePhotos, useSpeciesCards } from '../../db/collection'
+import { speciesById } from '../../domain/catalog'
+import { formatFoundDate } from '../../domain/collection'
 import { IconClose } from '../../ui/icons'
 import { IN_APP } from '../../ui/Page'
-
-/** Position in the unpacking stagger (styles.css, .reveal-item); later items share the last slot. */
-const at = (i: number) => ({ '--i': i }) as CSSProperties
-
-function useObjectUrl(blob: Blob | undefined): string | undefined {
-  const url = useMemo(() => (blob ? URL.createObjectURL(blob) : undefined), [blob])
-  useEffect(() => () => (url ? URL.revokeObjectURL(url) : undefined), [url])
-  return url
-}
+import { PhotoThumb, usePhotoUrl } from '../../ui/PhotoThumb'
+import { RarityFrame } from './RarityFrame'
+import { at, SpeciesSheet, SpeciesTitle } from './SpeciesSheet'
 
 /** Play the unpacking only on arrival from a discovery, never again on Back/forward or reload. */
 function useRevealOnce(): boolean {
@@ -30,49 +23,50 @@ function useRevealOnce(): boolean {
   return reveal
 }
 
-/** Safety lines: picking warnings for wild plants, and toxicity. Never claims a plant is edible. */
-function SafetyNotes({ entry }: { entry: Species }) {
-  const notes: string[] = []
-  if (!entry.cultivated) {
-    if (entry.protected === true) notes.push('Specie protetta: fotografala, non raccoglierla.')
-    else if (entry.protected === null)
-      notes.push('In alcune regioni potrebbe essere protetta: fotografala, non raccoglierla.')
-    else notes.push('Fotografala, non raccoglierla.')
-  }
-  if (entry.protectionNote) notes.push(entry.protectionNote)
-  if (entry.toxic) notes.push(entry.toxicNote || 'Pianta tossica: non assaggiarla.')
-  if (notes.length === 0) return null
-  return (
-    <div className="notice reveal-item mt-6 grid gap-1">
-      {notes.map((note) => (
-        <p key={note} className="text-[0.9375rem] leading-snug">
-          {note}
-        </p>
-      ))}
-    </div>
-  )
+export function closeDetail(navigate: (to: string, options?: { replace?: boolean }) => void) {
+  const state = window.history.state as { inApp?: boolean } | null
+  if (state?.inApp) window.history.back()
+  else navigate('/album', { replace: true })
 }
 
-function Facts({ entry }: { entry: Species }) {
-  const months = formatMonths(entry.bloomMonths)
-  const rows: Array<[string, string]> = [
-    [entry.phenology === 'fruiting' ? 'Frutti' : 'Fioritura', months],
-    ['Dove cresce', entry.habitat],
-    ['Altitudine', entry.altitude],
-    ['In Italia', entry.regions],
-    ['Dimensioni', entry.sizeNote],
-  ]
+/** Your other photos of the same species, with the cover marked; any of them can become the cover. */
+function Copies({ speciesId, currentId }: { speciesId: string; currentId: string }) {
+  const cards = useSpeciesCards(speciesId)
+  const covers = useCovers()
+  const photos = usePhotos((cards ?? []).flatMap((card) => (card.photoId ? [card.photoId] : [])))
+  if (!cards || cards.length < 2) return null
+  const coverId = covers.get(speciesId) ?? cards[0]?.id
   return (
-    <dl className="facts reveal-item mt-6">
-      {rows
-        .filter(([, value]) => value)
-        .map(([label, value]) => (
-          <div key={label}>
-            <dt>{label}</dt>
-            <dd>{label === 'Fioritura' || label === 'Frutti' ? value.charAt(0).toUpperCase() + value.slice(1) : value}</dd>
-          </div>
+    <section className="reveal-item mt-8" aria-labelledby="copies-title">
+      <h2 id="copies-title" className="text-[1.375rem] leading-tight">
+        Le tue foto ({cards.length})
+      </h2>
+      <p className="mt-1 text-[0.875rem] text-muted">
+        La copertina rappresenta la specie nell&apos;album; le altre sono doppioni da regalare.
+      </p>
+      <ul role="list" className="copies mt-3">
+        {cards.map((card) => (
+          <li key={card.id}>
+            <Link
+              href={`/carta/${card.id}`}
+              state={IN_APP}
+              replace
+              className="copies__item press"
+              aria-current={card.id === currentId ? 'true' : undefined}
+              aria-label={`Foto del ${formatFoundDate(card.foundAt)}${card.id === coverId ? ', copertina' : ''}`}
+            >
+              <PhotoThumb photo={card.photoId ? photos.get(card.photoId) : undefined} alt="" />
+              {card.id === coverId ? <span className="copies__badge">Copertina</span> : null}
+            </Link>
+          </li>
         ))}
-    </dl>
+      </ul>
+      {currentId !== coverId ? (
+        <button type="button" className="btn btn--ghost press mt-4" onClick={() => void setCover(speciesId, currentId)}>
+          Usa questa foto come copertina
+        </button>
+      ) : null}
+    </section>
   )
 }
 
@@ -81,9 +75,7 @@ export function CardScreen() {
   const [, navigate] = useLocation()
   const data = useCard(id)
   const reveal = useRevealOnce()
-  const photo = data?.photo
-  const blob = useMemo(() => (photo ? photoBlob(photo) : undefined), [photo])
-  const photoUrl = useObjectUrl(blob)
+  const photoUrl = usePhotoUrl(data?.photo)
 
   if (data === null) return <main className="min-h-dvh bg-paper" aria-busy="true" />
   const entry = data ? speciesById(data.card.speciesId) : undefined
@@ -91,7 +83,9 @@ export function CardScreen() {
     return (
       <main className="page page--plain">
         <h1 className="text-[1.75rem] leading-tight">Carta non trovata</h1>
-        <p className="mt-3 text-muted">Questa carta non è più nella collezione.</p>
+        <p className="mt-3 text-muted">
+          {data ? 'Questa specie non fa più parte del catalogo.' : 'Questa carta non è più nella collezione.'}
+        </p>
         <Link href="/album" className="btn press mt-6">
           Vai agli album
         </Link>
@@ -99,71 +93,64 @@ export function CardScreen() {
     )
   }
 
-  const album = albumById(entry.albumId)
-  const number = cardNumberLabel(entry, album)
   const duplicate = data.copies > 1
-  const close = () => {
-    const state = window.history.state as { inApp?: boolean } | null
-    if (state?.inApp) window.history.back()
-    else navigate('/', { replace: true })
-  }
+  const albumHref = entry.albumId ? `/album/${entry.albumId}` : '/album'
 
   return (
-    <main className={reveal ? 'card-view card-view--reveal' : 'card-view'}>
-      <div className="card-view__hero">
+    <main className={reveal ? 'card-view card-view--reveal' : 'card-view'} data-rarity={entry.rarity}>
+      <RarityFrame rarity={entry.rarity} reveal={reveal}>
         {photoUrl ? (
           <img src={photoUrl} alt={`La tua foto: ${entry.commonNameIt}`} />
         ) : (
           <div className="grid h-full place-items-center text-muted">Foto non disponibile</div>
         )}
-        <button type="button" className="round-btn press card-view__close" onClick={close} aria-label="Chiudi">
+        <button
+          type="button"
+          className="round-btn press card-view__close"
+          onClick={() => closeDetail(navigate)}
+          aria-label="Chiudi"
+        >
           <IconClose />
         </button>
-      </div>
+      </RarityFrame>
 
       <section className="card-view__body">
         {reveal ? (
           <p className="reveal-item text-[0.875rem] font-semibold text-accent" style={at(0)}>
-            {duplicate ? 'Ancora una!' : 'Nuova carta!'}
+            {duplicate ? 'Ancora una!' : entry.rarity === 'legendary' ? 'Carta leggendaria!' : 'Nuova carta!'}
           </p>
         ) : null}
-        <h1 className="reveal-item text-[2.375rem] leading-[1.02]" style={at(1)}>{entry.commonNameIt}</h1>
-        <p className="reveal-item mt-1 text-[0.9375rem] italic text-muted" style={at(2)}>
-          {entry.scientificName} · {entry.family}
-        </p>
-        <ul role="list" className="chips reveal-item mt-3.5" style={at(3)}>
-          <li className="chip chip--rarity" data-rarity={entry.rarity}>
-            {rarityLabel(entry.rarity)}
-          </li>
-          {number ? <li className="chip">{number}</li> : null}
-          {album ? <li className="chip">{album.name}</li> : null}
-          {duplicate ? <li className="chip">Doppione</li> : null}
-        </ul>
+        <SpeciesTitle entry={entry} extraChips={duplicate ? <li className="chip">Doppione</li> : null} />
         <p className="reveal-item mt-3 text-[0.875rem] text-muted" style={at(4)}>
-          Trovata il {formatFoundDate(data.card.foundAt)}</p>
-        {duplicate ? (
+          Trovata il {formatFoundDate(data.card.foundAt)}
+          {data.card.identifiedBy === 'user' ? ' · specie scelta da te' : ''}
+        </p>
+        {reveal && duplicate ? (
           <p className="reveal-item mt-2 text-[0.875rem] text-muted" style={at(4)}>
             Ne avevi già {data.copies - 1 === 1 ? 'una' : data.copies - 1}: questa va tra i doppioni, da regalare.
           </p>
         ) : null}
-        <p className="reveal-item mt-3 text-[0.96875rem] leading-normal" style={at(5)}>{entry.description}</p>
+        <p className="reveal-item mt-3 text-[0.96875rem] leading-normal" style={at(5)}>
+          {entry.description}
+        </p>
 
         <div className="reveal-item mt-6 grid gap-2.5" style={at(6)}>
-          <Link href="/album" state={IN_APP} className="btn press">
-            Metti nell&apos;album
-          </Link>
+          {reveal && entry.albumId ? (
+            <Link href={albumHref} state={{ inApp: true, fill: entry.id }} replace className="btn press">
+              Metti nell&apos;album
+            </Link>
+          ) : entry.albumId ? (
+            <Link href={albumHref} state={IN_APP} className="btn press">
+              Vai all&apos;album
+            </Link>
+          ) : null}
           <Link href="/" className="btn btn--ghost press">
             Scatta un&apos;altra foto
           </Link>
         </div>
 
-        <h2 className="reveal-item mt-9 text-[1.375rem] leading-tight">Scheda</h2>
-        <Facts entry={entry} />
-        {entry.funFact ? <p className="reveal-item mt-5 leading-normal">{entry.funFact}</p> : null}
-        <SafetyNotes entry={entry} />
-        {entry.textStatus !== 'verificato' ? (
-          <p className="reveal-item mt-5 text-[0.8125rem] text-muted">Testi della scheda ancora da verificare.</p>
-        ) : null}
+        <Copies speciesId={entry.id} currentId={data.card.id} />
+        <SpeciesSheet entry={entry} />
       </section>
     </main>
   )

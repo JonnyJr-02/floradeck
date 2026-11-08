@@ -86,3 +86,55 @@ export function useCard(id: string): CardWithPhoto | null | undefined {
 export function useCards(): CardRecord[] | undefined {
   return useLiveQuery(() => defaultDb.cards.orderBy('foundAt').toArray(), [])
 }
+
+const COVER_PREFIX = 'cover:'
+
+/** Choose which card stands for its species in the album (stored in the settings table). */
+export async function setCover(speciesId: string, cardId: string, database: FloraDeckDB = defaultDb): Promise<void> {
+  await database.settings.put({ key: `${COVER_PREFIX}${speciesId}`, value: cardId })
+}
+
+export async function getCovers(database: FloraDeckDB = defaultDb): Promise<Map<string, string>> {
+  const rows = await database.settings.where('key').startsWith(COVER_PREFIX).toArray()
+  return new Map(rows.map((row) => [row.key.slice(COVER_PREFIX.length), String(row.value)]))
+}
+
+/** species id → chosen cover card id; empty while loading. */
+export function useCovers(): Map<string, string> {
+  return useLiveQuery(() => getCovers(), [], new Map<string, string>())
+}
+
+/** Thumbnails by photo id, for album tiles and the diary. */
+export function usePhotos(photoIds: readonly string[]): Map<string, PhotoRecord> {
+  const key = [...photoIds].sort().join(',')
+  return useLiveQuery(
+    async () => {
+      const rows = await defaultDb.photos.bulkGet([...photoIds])
+      return new Map(rows.filter((row): row is PhotoRecord => row !== undefined).map((row) => [row.id, row]))
+    },
+    [key],
+    new Map<string, PhotoRecord>(),
+  )
+}
+
+/** Cards made by a given recogniser ("mock" for the stand-in), with their photos and covers. */
+export async function deleteCardsBy(recognizer: string, database: FloraDeckDB = defaultDb): Promise<number> {
+  return database.transaction('rw', database.cards, database.photos, database.settings, async () => {
+    const cards = await database.cards.filter((card) => card.recognizer === recognizer).toArray()
+    const ids = new Set(cards.map((card) => card.id))
+    await database.photos.bulkDelete(cards.flatMap((card) => (card.photoId ? [card.photoId] : [])))
+    await database.cards.bulkDelete([...ids])
+    const covers = await database.settings.where('key').startsWith(COVER_PREFIX).toArray()
+    await database.settings.bulkDelete(covers.filter((row) => ids.has(String(row.value))).map((row) => row.key))
+    return cards.length
+  })
+}
+
+export function useCardCountBy(recognizer: string): number {
+  return useLiveQuery(() => defaultDb.cards.filter((card) => card.recognizer === recognizer).count(), [recognizer], 0)
+}
+
+/** Every card of a species, oldest first; undefined while loading. */
+export function useSpeciesCards(speciesId: string): CardRecord[] | undefined {
+  return useLiveQuery(() => defaultDb.cards.where('speciesId').equals(speciesId).sortBy('foundAt'), [speciesId])
+}

@@ -8,6 +8,7 @@ import type { MockScenario } from '../../recognition/mock'
 import { recognizer, setMockScenario, useMockScenario } from '../../recognition/recognizer'
 import { BackHeader, IN_APP, Page } from '../../ui/Page'
 import { Segmented } from '../../ui/Segmented'
+import { BackupSection, TestCardsSection } from './BackupSection'
 import { setThemePreference, useThemePreference } from '../../ui/theme'
 
 const THEME_OPTIONS = [
@@ -21,6 +22,7 @@ const MOCK_OPTIONS = [
   { value: 'sure', label: 'Sicuro' },
   { value: 'unsure', label: 'Incerto' },
   { value: 'out', label: 'Fuori' },
+  { value: 'legendary', label: 'Leggendaria' },
 ] as const satisfies readonly { value: MockScenario; label: string }[]
 
 /** Until the real model ships (phase 7), the recogniser pretends: here you choose what it answers. */
@@ -40,10 +42,11 @@ function MockRecognitionSection() {
           value={scenario}
           options={MOCK_OPTIONS}
           onChange={setMockScenario}
+          wrap
         />
       </div>
       <p className="mt-2 text-[0.875rem] text-muted">
-        Sicuro dà subito una carta, Incerto propone tre specie, Fuori risponde che non è nel catalogo.
+        Sicuro dà subito una carta, Incerto propone tre specie, Fuori risponde che non è nel catalogo, Leggendaria dà la carta segreta.
       </p>
     </Section>
   )
@@ -136,11 +139,16 @@ export function SettingsScreen() {
         )}
       </Section>
 
+      <Section id="settings-backup" title="Backup">
+        <BackupSection />
+      </Section>
+
       <Section id="settings-storage" title="Spazio sul telefono">
         <StorageSummary status={status} onProtect={protect} />
       </Section>
 
       <MockRecognitionSection />
+      <TestCardsSection />
 
       <Section id="settings-about" title="Informazioni">
         <p className="mt-2 text-muted">FloraDeck {__APP_VERSION__}</p>

@@ -51,6 +51,10 @@
   --p-accent-ink: #f2ede3;
   --p-line: rgb(29 26 21 / 0.12);
   --p-lift: 0 1px 2px rgb(29 26 21 / 0.08), 0 8px 22px rgb(29 26 21 / 0.1);
+  --gold-1: #f3dc8f;
+  --gold-2: #c9a24a;
+  --gold-3: #a77c2a;
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.22 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: light;
 }
 [data-theme="dark"] {
@@ -62,6 +66,7 @@
   --p-accent-ink: #0f1320;
   --p-line: rgb(238 233 223 / 0.12);
   --p-lift: 0 1px 2px rgb(0 0 0 / 0.4), 0 10px 26px rgb(0 0 0 / 0.45);
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.88 0 0 0 0 0.84 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: dark;
 }
 
@@ -286,6 +291,11 @@
     padding: 0.25rem;
     border-radius: 999px;
     background: var(--p-surface);
+  }
+  .segmented--wrap {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-radius: 1.5rem;
   }
   .segmented label {
     position: relative;
@@ -718,6 +728,426 @@
     animation-delay: calc(600ms + var(--i, 7) * 60ms);
   }
 
+  /* ---- Albums (phase 5, mockup C album.html) ---- */
+  .pill {
+    display: inline-block;
+    padding: 0.3125rem 0.5625rem;
+    border-radius: 999px;
+    background: var(--p-accent);
+    color: var(--p-accent-ink);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+  .album-row {
+    color: inherit;
+    text-decoration: none;
+  }
+  .album-progress {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--p-muted);
+    font-size: 0.84375rem;
+    font-weight: 500;
+  }
+  .album-progress b {
+    color: var(--p-ink);
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+  .album-progress .track {
+    background: var(--p-surface);
+  }
+  .album-done {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-tile);
+    background: var(--p-surface);
+    font-weight: 500;
+  }
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-inline: -1.25rem;
+    padding-inline: 1.25rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .chip--toggle {
+    min-height: 2.25rem;
+    padding-inline: 0.875rem;
+    color: var(--p-ink);
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+  .chip--toggle[aria-pressed="true"] {
+    background: var(--p-ink);
+    color: var(--p-bg);
+  }
+
+  .rare-slot {
+    display: grid;
+    grid-template-columns: 3.75rem 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.625rem 0.875rem 0.625rem 0.625rem;
+    border-radius: var(--radius-card);
+    background: var(--p-surface);
+    box-shadow: inset 0 0 0 1.5px var(--p-accent);
+    color: inherit;
+    text-decoration: none;
+  }
+  /* Found, the rare slot earns the gold leaf of its card. */
+  .rare-slot[data-found] {
+    box-shadow: inset 0 0 0 2px var(--gold-2);
+  }
+  .rare-slot[data-found] .pill {
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+    color: #2a1f0a;
+  }
+  .rare-slot[data-filling] .rare-slot__img img {
+    animation: slot-settle 600ms var(--ease-out) both;
+  }
+  .rare-slot__img {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: var(--p-bg);
+  }
+  .rare-slot__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .rare-slot__img .tile__plate {
+    object-fit: contain;
+  }
+
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.875rem 0.625rem;
+  }
+  .tile {
+    display: grid;
+    align-content: start;
+    gap: 0.375rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .tile__img {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius-tile);
+    background: var(--p-surface);
+  }
+  .tile__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* A plate stands for a species still to find: whole, on paper, a little faded next to real photos. */
+  .tile__img .tile__plate {
+    padding: 0.25rem;
+    object-fit: contain;
+    opacity: 0.82;
+    filter: saturate(0.7);
+  }
+  /* No plate yet: the slot keeps its number, large, like an empty place in a sticker album. */
+  .tile__blank {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    color: var(--p-muted);
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  .tile__num,
+  .tile__dup {
+    position: absolute;
+    top: 0.375rem;
+    padding: 0.25rem 0.4375rem;
+    border-radius: 999px;
+    background: var(--p-bg);
+    color: var(--p-ink);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .tile__num {
+    left: 0.375rem;
+  }
+  .tile__dup {
+    right: 0.375rem;
+    background: var(--p-accent);
+    color: var(--p-accent-ink);
+  }
+  .tile:not([data-found]) .tile__num {
+    background: transparent;
+    box-shadow: inset 0 0 0 1px var(--p-line);
+    color: var(--p-muted);
+  }
+  .tile__name {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .tile__hint {
+    display: grid;
+    gap: 0.125rem;
+    color: var(--p-muted);
+    font-size: 0.71875rem;
+    line-height: 1.3;
+  }
+  .dot {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.1875rem;
+    border-radius: 999px;
+    box-shadow: 0 0 0 1px var(--p-line);
+  }
+
+  .season-strip {
+    display: grid;
+    grid-auto-columns: 6.5rem;
+    grid-auto-flow: column;
+    gap: 0.625rem;
+    margin-inline: -1.25rem;
+    padding: 0 1.25rem 0.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 1.25rem;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .season-strip > li {
+    scroll-snap-align: start;
+  }
+  .season-strip__item {
+    display: grid;
+    gap: 0.25rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .season-strip__img {
+    display: block;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: var(--radius-tile);
+    background: var(--p-surface);
+  }
+  .season-strip__img img {
+    width: 100%;
+    height: 100%;
+    padding: 0.25rem;
+    object-fit: contain;
+  }
+  .season-strip__name {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .season-strip__meta {
+    color: var(--p-muted);
+    font-size: 0.71875rem;
+  }
+  .legendary-teaser {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1.5px var(--gold-2);
+  }
+  .legendary-teaser .pill {
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+    color: #2a1f0a;
+  }
+
+  .journal-row {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+    border-radius: var(--radius-tile);
+    background: var(--p-surface);
+    color: inherit;
+    text-decoration: none;
+  }
+  .journal-row__img {
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: var(--p-bg);
+  }
+  .journal-row__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .copies {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  .copies__item {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: var(--p-surface);
+  }
+  .copies__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .copies__item[aria-current="true"] {
+    box-shadow:
+      0 0 0 2px var(--p-bg),
+      0 0 0 4px var(--p-accent);
+  }
+  .copies__badge {
+    position: absolute;
+    inset: auto 0.25rem 0.25rem;
+    padding: 0.1875rem 0.25rem;
+    border-radius: 999px;
+    background: var(--p-bg);
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .plate {
+    border-radius: var(--radius-card);
+    background: #f6f1e4;
+    padding: 0.75rem;
+  }
+  .plate img {
+    width: 100%;
+    max-height: 26rem;
+    object-fit: contain;
+  }
+  .plate figcaption {
+    margin-top: 0.5rem;
+    color: #5e574b;
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+  .card-view__hero--plate {
+    background: #f6f1e4;
+  }
+  .card-view__hero--plate img {
+    padding: 1rem 1rem 1.5rem;
+    object-fit: contain;
+  }
+
+  /*
+   * Rarity (spec: gold leaf for the rare card, a light holographic sheen for the legendary one,
+   * a light paper texture on every card).
+   */
+  .card-view {
+    background-color: var(--p-bg);
+    background-image: var(--paper-grain);
+    background-size: 180px 180px;
+  }
+  .card-view__hero[data-rarity="rare"]::after,
+  .card-view__hero[data-rarity="legendary"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 0.3125rem solid transparent;
+    border-top: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-2) 30%, var(--gold-1) 55%, var(--gold-3) 80%, var(--gold-2))
+      border-box;
+    mask:
+      linear-gradient(#000 0 0) padding-box exclude,
+      linear-gradient(#000 0 0);
+    pointer-events: none;
+  }
+  .chip--rarity[data-rarity="rare"],
+  .chip--rarity[data-rarity="legendary"] {
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+    box-shadow: none;
+    color: #2a1f0a;
+  }
+  .holo {
+    position: absolute;
+    inset: -40%;
+    background: linear-gradient(
+      115deg,
+      transparent 30%,
+      rgb(255 214 140 / 0.42) 40%,
+      rgb(150 205 255 / 0.4) 50%,
+      rgb(255 160 210 / 0.38) 60%,
+      transparent 70%
+    );
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    will-change: transform;
+  }
+  .holo__ask {
+    position: absolute;
+    inset: auto 1rem 1rem;
+    min-height: 2.75rem;
+    border-radius: 999px;
+    background: rgb(11 15 25 / 0.6);
+    color: var(--color-camera-ink);
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+
+  /*
+   * Slot filling (animate skill; once, right after «Metti nell'album»): the photo settles into its
+   * slot from slightly larger while a ring flashes, so the eye lands on the new card.
+   */
+  .tile[data-filling] .tile__img::after,
+  .rare-slot[data-filling] .rare-slot__img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 3px var(--p-accent);
+    opacity: 0;
+    animation: slot-ring 900ms var(--ease-out) 150ms both;
+    pointer-events: none;
+  }
+  .tile[data-filling] .tile__img img {
+    animation: slot-settle 600ms var(--ease-out) both;
+  }
+
+  .petals {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .petals > i {
+    position: absolute;
+    top: -2rem;
+    width: 0.875rem;
+    height: 1.25rem;
+    border-radius: 80% 10% 80% 10%;
+    opacity: 0;
+    animation-name: petal-fall;
+    /* Constant motion (animate skill): petals drift down at an even pace. */
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
   /* Reduced motion: fewer and gentler, not zero. Keep the fades, drop the movement. */
   @media (prefers-reduced-motion: reduce) {
     .press {
@@ -777,6 +1207,19 @@
     .card-view--reveal .reveal-item {
       animation: fade 200ms ease 150ms both;
     }
+    .tile[data-filling] .tile__img::after,
+    .rare-slot[data-filling] .rare-slot__img::after {
+      animation: slot-ring 600ms ease both;
+    }
+    .rare-slot[data-filling] .rare-slot__img img {
+      animation: fade 300ms ease both;
+    }
+    .tile[data-filling] .tile__img img {
+      animation: fade 300ms ease both;
+    }
+    .petals {
+      display: none;
+    }
   }
 }
 
@@ -807,4 +1250,33 @@
     opacity: 0;
   }
 }
-
+@keyframes slot-settle {
+  from {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+@keyframes slot-ring {
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes petal-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift), 105vh, 0) rotate(var(--spin));
+  }
+}

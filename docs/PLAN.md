@@ -86,7 +86,7 @@ Download, pulizia ed export girano in locale su CPU: la GPU del PC (MX130, 2 GB)
 | 2 | Design: `impeccable teach`, 3 mockup statici (2 Impeccable, 1 Taste) → scelta | ✅ 2026-11-07: scelta la proposta C «Foto in primo piano» (Taste skill), in `docs/mockups/taste/` |
 | 3 | Scheletro PWA: navigazione, temi, font offline, Dexie, offline, guida all'installazione, avviso iOS, deploy | anche skill `mobile-native`; ✅ 2026-11-08: pubblicata su https://jonnyjr-02.github.io/floradeck/ |
 | 4 | Fotocamera + mock + scatto → carta → collezione, animazione di spacchettamento | ✅ 2026-11-08; da provare sui telefoni |
-| 5 | Album, rarità, doppioni, copertina, diario, "In fiore questo mese", celebrazioni, carta leggendaria, **backup** | backup anticipato: su iPhone serve appena si inizia a collezionare |
+| 5 | Album, rarità, doppioni, copertina, diario, "In fiore questo mese", celebrazioni, carta leggendaria, **backup** | backup anticipato: su iPhone serve appena si inizia a collezionare; ✅ 2026-11-08, da provare sui telefoni |
 | 6 | Pipeline ML, notebook Kaggle, valutazione, export | gli script partono subito dopo la fase 1, in parallelo alla UI |
 | 7 | Modello vero nell'app, calibrazione, test su foto reali | |
 | 8 | Profili, regali, funzioni di coppia; backend facoltativo | |

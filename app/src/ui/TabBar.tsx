@@ -11,11 +11,13 @@ const TABS = [
 /** Bottom navigation of the four sections; hidden on secondary screens, which have Back. */
 export function TabBar() {
   const [location] = useLocation()
-  if (!TABS.some((tab) => tab.href === location)) return null
+  // An album's own page stays under the Album tab.
+  const current = TABS.find((tab) => tab.href === location || (tab.href !== '/' && location.startsWith(`${tab.href}/`)))
+  if (!current) return null
   return (
     <nav aria-label="Sezioni" className={location === '/' ? 'tabbar tabbar--camera' : 'tabbar'}>
       {TABS.map(({ href, label, Icon }) => (
-        <Link key={href} href={href} className="tab press" aria-current={location === href ? 'page' : undefined}>
+        <Link key={href} href={href} className="tab press" aria-current={current.href === href ? 'page' : undefined}>
           <span className="tab__icon">
             <Icon />
           </span>

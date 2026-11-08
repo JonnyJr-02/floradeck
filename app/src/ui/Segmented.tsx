@@ -10,15 +10,18 @@ export function Segmented<T extends string>({
   value,
   options,
   onChange,
+  wrap = false,
 }: {
   name: string
   label: string
   value: T
   options: readonly Option<T>[]
   onChange: (value: T) => void
+  /** Many options: flow onto two rows instead of squeezing one. */
+  wrap?: boolean
 }) {
   return (
-    <div role="radiogroup" aria-label={label} className="segmented">
+    <div role="radiogroup" aria-label={label} className={wrap ? 'segmented segmented--wrap' : 'segmented'}>
       {options.map((option) => (
         <label key={option.value} className="control">
           <input

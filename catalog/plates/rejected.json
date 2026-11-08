@@ -1,0 +1,10 @@
+{
+ "note": "Files checked by eye on the contact sheets (app: node scripts/plates-sheet.mjs) and found wrong. fetch_plates.py never picks them.",
+ "rejected": [
+  {
+   "species": "helleborus-niger",
+   "file": "Helleborus niger - Thome.jpg",
+   "reason": "collage with text panels, not a plain plate (2026-11-08)"
+  }
+ ]
+}

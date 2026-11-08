@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import { Redirect, Route, Router, Switch, useLocation } from 'wouter'
 import { AlbumsScreen } from './features/albums/AlbumsScreen'
+import { AlbumScreen } from './features/albums/AlbumScreen'
 import { CardScreen } from './features/card/CardScreen'
+import { SpeciesScreen } from './features/card/SpeciesScreen'
 import { CoupleScreen } from './features/couple/CoupleScreen'
 import { ExploreScreen } from './features/explore/ExploreScreen'
 import { JournalScreen } from './features/journal/JournalScreen'
@@ -30,7 +32,9 @@ export function App() {
         <Route path="/album" component={AlbumsScreen} />
         <Route path="/diario" component={JournalScreen} />
         <Route path="/coppia" component={CoupleScreen} />
+        <Route path="/album/:id" component={AlbumScreen} />
         <Route path="/carta/:id" component={CardScreen} />
+        <Route path="/specie/:id" component={SpeciesScreen} />
         <Route path="/impostazioni" component={SettingsScreen} />
         <Route path="/installa" component={InstallScreen} />
         <Route>
