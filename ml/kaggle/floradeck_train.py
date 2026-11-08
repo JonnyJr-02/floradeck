@@ -36,7 +36,8 @@ RESIZE_SHORT = 292  # eval: short side resized to this, then centre crop IMG_SIZ
 ZOOM_SHORT = 320  # third test-time view: a tighter centre crop (the packed images have a 320 px short side)
 WEIGHT_DECAY = 0.05
 LABEL_SMOOTHING = 0.1
-TARGET_PRECISION = 0.95  # accepted cards must be right at least this often (validation)
+CARD_PRECISION = 0.98  # cards given straight away must be right at least this often (validation)
+GREY_TOP3_PRECISION = 0.5  # in "Non sono sicuro", the right species must be among the 3 proposals this often
 GREY_ALTRO_SHARE = 0.10  # at most this share of non-catalogue photos may reach "Non sono sicuro"
 PREFER_SMALLER_WITHIN = 0.01  # val top-1 tolerance for preferring the earlier (cheaper) backbone
 INT8_MAX_DROP = 0.01  # keep int8 if its top-1 is at most this much below fp32
@@ -545,6 +546,21 @@ if CHOSEN.stat().st_size / 1e6 > MAX_MODEL_MB:
     print(f"WARNING: the model is larger than {MAX_MODEL_MB} MB")
 
 # %%
+# >>> floradeck_ml/calibration.py (make_notebook.py pastes the module here)
+from floradeck_ml.calibration import (  # noqa: E402
+    Targets,
+    catalogue_scores,
+    choose,
+    decide,
+    fit_temperature,
+    risk_coverage,
+    similarity,
+    softmax,
+    summarise,
+)
+# <<<
+
+# %%
 # ---- Calibration and thresholds (on validation, with the exported model and the app's test-time views) ----
 session = ort_session(CHOSEN)
 proto_rows = [r for c in range(NUM_CLASSES) if c != ALTRO_INDEX
@@ -555,20 +571,6 @@ PROTOTYPES = torch.stack([F.normalize(proto_emb[proto_labels == c].mean(0), dim=
 
 val_logits, val_emb, val_labels = ort_outputs(session, SPLITS["val"])
 test_logits, test_emb, test_labels = ort_outputs(session, SPLITS["test"])
-
-
-def fit_temperature(logits, labels) -> float:
-    log_t = torch.zeros(1, requires_grad=True)
-    optimizer = torch.optim.LBFGS([log_t], lr=0.1, max_iter=200)
-
-    def closure():
-        optimizer.zero_grad()
-        loss = F.cross_entropy(logits / log_t.exp(), labels)
-        loss.backward()
-        return loss
-
-    optimizer.step(closure)
-    return float(log_t.detach().exp().item())
 
 
 def expected_calibration_error(probs, labels, bins=15) -> float:
@@ -583,82 +585,30 @@ def expected_calibration_error(probs, labels, bins=15) -> float:
     return ece
 
 
-def decide(logits, emb, temperature, accept, unsure, gate):
-    """The app's rule: score = highest catalogue probability; the embedding gate can veto a card."""
-    probs = F.softmax(logits / temperature, dim=1)
-    catalog_probs = probs.clone()
-    catalog_probs[:, ALTRO_INDEX] = -1
-    score, prediction = catalog_probs.max(1)
-    similarity = (emb @ PROTOTYPES.T).max(1).values
-    gated = similarity < gate
-    card = (score >= accept) & ~gated
-    grey = ~card & (score >= unsure) & ~gated
-    top3 = catalog_probs.topk(3, dim=1).indices
-    return {"probs": probs, "score": score, "prediction": prediction, "similarity": similarity, "card": card,
-            "grey": grey, "top3": top3}
+TEMPERATURE = fit_temperature(val_logits.numpy(), val_labels.numpy())
+TARGETS = Targets(card_precision=CARD_PRECISION, grey_top3_precision=GREY_TOP3_PRECISION, grey_altro_share=GREY_ALTRO_SHARE)
 
 
-def accept_threshold(score, prediction, labels, target):
-    """Lowest score whose accepted set still reaches the target precision (out-of-catalogue photos count as wrong)."""
-    order = torch.argsort(score, descending=True)
-    correct = ((prediction == labels) & (labels != ALTRO_INDEX))[order].float()
-    precision = correct.cumsum(0) / torch.arange(1, len(correct) + 1)
-    ok = torch.nonzero(precision >= target).flatten()
-    if len(ok) == 0:
-        return 1.0
-    return float(score[order][ok[-1]])
+def scored(logits, emb):
+    probs = softmax(logits.numpy(), TEMPERATURE)
+    score, _, top3 = catalogue_scores(probs, ALTRO_INDEX)
+    return probs, score, top3, similarity(emb.numpy(), PROTOTYPES.numpy())
 
 
-def calibrate(logits, emb, labels, temperature, gate):
-    d = decide(logits, emb, temperature, 0.0, 0.0, gate)
-    score = torch.where(d["similarity"] < gate, torch.zeros_like(d["score"]), d["score"])
-    accept = accept_threshold(score, d["prediction"], labels, TARGET_PRECISION)
-    altro_scores = score[labels == ALTRO_INDEX]
-    unsure = float(torch.quantile(altro_scores, 1 - GREY_ALTRO_SHARE)) if len(altro_scores) else accept / 2
-    return accept, min(unsure, accept)
-
-
-def summarise(d, labels):
-    catalog = labels != ALTRO_INDEX
-    altro = ~catalog
-    right = d["prediction"] == labels
-    in_top3 = (d["top3"] == labels[:, None]).any(1)
-    n_cat, n_alt = max(1, int(catalog.sum())), max(1, int(altro.sum()))
-    accepted = d["card"]
-    return {
-        "card_precision": float((accepted & right & catalog).sum() / max(1, int(accepted.sum()))),
-        "catalog_card_correct": float((accepted & right & catalog).sum() / n_cat),
-        "catalog_card_wrong": float((accepted & ~right & catalog).sum() / n_cat),
-        "catalog_unsure_with_answer_in_top3": float((d["grey"] & in_top3 & catalog).sum() / n_cat),
-        "catalog_unsure_without_answer": float((d["grey"] & ~in_top3 & catalog).sum() / n_cat),
-        "catalog_rejected": float((~accepted & ~d["grey"] & catalog).sum() / n_cat),
-        "altro_rejected": float((~accepted & ~d["grey"] & altro).sum() / n_alt),
-        "altro_unsure": float((d["grey"] & altro).sum() / n_alt),
-        "altro_card": float((accepted & altro).sum() / n_alt),
-    }
-
-
-TEMPERATURE = fit_temperature(val_logits, val_labels)
-val_correct_sim = (val_emb @ PROTOTYPES.T).max(1).values[(val_labels != ALTRO_INDEX)]
-best_gate, best_coverage = -1.0, -1.0
-for percentile in (0, 1, 2, 5, 10):  # 0 = no gate
-    gate = -1.0 if percentile == 0 else float(torch.quantile(val_correct_sim, percentile / 100))
-    accept, unsure = calibrate(val_logits, val_emb, val_labels, TEMPERATURE, gate)
-    coverage = summarise(decide(val_logits, val_emb, TEMPERATURE, accept, unsure, gate), val_labels)["catalog_card_correct"]
-    print(f"gate p{percentile:>2} ({gate:+.3f}): accept {accept:.3f}, unsure {unsure:.3f}, val coverage {coverage:.3f}")
-    if coverage > best_coverage + (0.01 if percentile else 0):  # a gate must earn its keep (1 point)
-        best_gate, best_coverage = gate, coverage
-ACCEPT, UNSURE = calibrate(val_logits, val_emb, val_labels, TEMPERATURE, best_gate)
-GATE = best_gate
-print(f"temperature {TEMPERATURE:.3f}; thresholds accept {ACCEPT:.3f}, unsure {UNSURE:.3f}; gate {GATE:+.3f}")
+_, val_score, val_top3, val_sim = scored(val_logits, val_emb)
+CHOICE = choose(val_score, val_top3, val_sim, val_labels.numpy(), ALTRO_INDEX, TARGETS)
+ACCEPT, UNSURE, GATE = CHOICE["accept"], CHOICE["unsure"], CHOICE["gate"]
+print(f"temperature {TEMPERATURE:.3f}; thresholds accept {ACCEPT:.3f}, unsure {UNSURE:.3f}; "
+      f"gate {GATE:+.3f} (p{CHOICE['gate_percentile']}); validation {CHOICE['val']}")
 
 # %%
 # ---- Test-set evaluation and reports ----
 REPORT = OUT / "report"
 REPORT.mkdir(parents=True, exist_ok=True)
 test_rows = SPLITS["test"]
-decision = decide(test_logits, test_emb, TEMPERATURE, ACCEPT, UNSURE, GATE)
-raw_probs = F.softmax(test_logits, dim=1)
+test_y = test_labels.numpy()
+test_probs, test_score, test_top3, test_sim = scored(test_logits, test_emb)
+decision = decide(test_score, test_top3, test_sim, ACCEPT, UNSURE, GATE)
 catalog_mask = test_labels != ALTRO_INDEX
 metrics = {
     "smoke": SMOKE,
@@ -670,11 +620,14 @@ metrics = {
     "top1_all": topk_accuracy(test_logits, test_labels, 1),
     "top1_catalog": topk_accuracy(test_logits[catalog_mask], test_labels[catalog_mask], 1),
     "top3_catalog": topk_accuracy(test_logits[catalog_mask], test_labels[catalog_mask], 3),
-    "ece_before": expected_calibration_error(raw_probs, test_labels),
-    "ece_after": expected_calibration_error(decision["probs"], test_labels),
+    "ece_before": expected_calibration_error(F.softmax(test_logits, dim=1), test_labels),
+    "ece_after": expected_calibration_error(torch.from_numpy(test_probs), test_labels),
     "temperature": TEMPERATURE,
-    "thresholds": {"accept": ACCEPT, "unsure": UNSURE, "gate": GATE},
-    "decisions": summarise(decision, test_labels),
+    "targets": {"card_precision": CARD_PRECISION, "grey_top3_precision": GREY_TOP3_PRECISION,
+                "grey_altro_share": GREY_ALTRO_SHARE},
+    "thresholds": {"accept": ACCEPT, "unsure": UNSURE, "gate": GATE, "gate_percentile": CHOICE["gate_percentile"]},
+    "validation_decisions": CHOICE["val"],
+    "decisions": summarise(decision, test_y, ALTRO_INDEX),
     "bakeoff": results,
     "int8_check": {"fp32_top1": fp32_top1, "int8_top1": int8_top1, "sizes_mb": sizes_mb, "images": len(compare_rows)},
     "elapsed_h": elapsed_h(),
@@ -703,7 +656,7 @@ with (REPORT / "per_class.csv").open("w", encoding="utf-8", newline="") as handl
         writer.writerow([label, CATALOG.get(label, {}).get("commonNameIt", ""), n,
                          round(float((prediction[mask] == c).float().mean()), 4),
                          round(float((top3[mask] == c).any(1).float().mean()), 4), int(cards.sum()),
-                         round(float((test_labels[cards] == c).float().mean()), 4) if cards.any() else "",
+                         round(float((test_y[cards] == c).mean()), 4) if cards.any() else "",
                          "; ".join(f"{k} ({v})" for k, v in wrong.most_common(3))])
 
 pairs = Counter((CLASSES[int(t)], CLASSES[int(p)]) for t, p in zip(test_labels, prediction, strict=True) if t != p)
@@ -714,14 +667,12 @@ with (REPORT / "confusions.csv").open("w", encoding="utf-8", newline="") as hand
     for (t, p), n in pairs.most_common(100):
         writer.writerow([t, p, n, totals[t]])
 
-# Risk-coverage curve (score threshold sweep on the test set)
+# Risk-coverage curve (one threshold for card and grey zone, swept on the test set)
 with (REPORT / "risk_coverage.csv").open("w", encoding="utf-8", newline="") as handle:
-    writer = csv.writer(handle)
-    writer.writerow(["threshold", "card_precision", "catalog_coverage", "altro_card_rate"])
-    for threshold in np.linspace(0.05, 0.99, 48):
-        s = summarise(decide(test_logits, test_emb, TEMPERATURE, float(threshold), float(threshold), GATE), test_labels)
-        writer.writerow([round(float(threshold), 3), round(s["card_precision"], 4), round(s["catalog_card_correct"], 4),
-                         round(s["altro_card"], 4)])
+    curve = risk_coverage(test_score, test_top3, test_sim, test_y, ALTRO_INDEX, GATE)
+    writer = csv.DictWriter(handle, fieldnames=list(curve[0]))
+    writer.writeheader()
+    writer.writerows(curve)
 for r in results:
     history_file = RUNS / short_name(r["backbone"]) / "history.json"
     if history_file.exists():
@@ -754,7 +705,8 @@ labels_json = {
     "temperature": TEMPERATURE,
     "decision": {
         "score": "highest softmax(logits / temperature) among catalogue classes (altro excluded)",
-        "accept": ACCEPT, "unsure": UNSURE, "targetPrecision": TARGET_PRECISION,
+        "accept": ACCEPT, "unsure": UNSURE, "targetPrecision": CARD_PRECISION,
+        "unsureTop3Precision": GREY_TOP3_PRECISION,
         "rule": "card if score >= accept; 'Non sono sicuro' with the top 3 if score >= unsure; else not in the catalogue. "
                 "If embeddingGate is enabled and max cosine similarity to the prototypes < minSimilarity: not in the catalogue.",
     },
@@ -801,7 +753,7 @@ summary = f"""# FloraDeck · risultato dell'addestramento
   - {d['catalog_unsure_with_answer_in_top3']:.0%} "Non sono sicuro" con la risposta tra le tre proposte, {d['catalog_unsure_without_answer']:.0%} senza;
   - {d['catalog_rejected']:.0%} "non è nel catalogo".
 - Su 100 foto fuori catalogo: {d['altro_rejected']:.0%} riconosciute come fuori catalogo, {d['altro_unsure']:.0%} "Non sono sicuro", {d['altro_card']:.0%} carta sbagliata.
-- Precisione delle carte date: {d['card_precision']:.1%} (obiettivo {TARGET_PRECISION:.0%}).
+- Precisione delle carte date: {d['card_precision']:.1%} (obiettivo {CARD_PRECISION:.0%}).
 
 Dettagli: `report/metrics.json`, `report/per_class.csv`, `report/confusions.csv`.
 """

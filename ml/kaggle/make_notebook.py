@@ -14,6 +14,21 @@ SOURCE = HERE / "floradeck_train.py"
 TARGET = HERE / "floradeck-train.ipynb"
 
 
+INLINE = re.compile(r"^# >>> (?P<path>\S+).*?\n.*?^# <<<\n", flags=re.MULTILINE | re.DOTALL)
+
+
+def inline_modules(text: str) -> str:
+    """Replace each ``# >>> <path under ml/>`` ... ``# <<<`` block (a local import) with that module's source:
+    Kaggle has no floradeck_ml package."""
+
+    def paste(match: re.Match) -> str:
+        source = (HERE.parent / match["path"]).read_text(encoding="utf-8")
+        source = source.replace("from __future__ import annotations\n", "")
+        return f"# ---- {match['path']} (pasted by make_notebook.py) ----\n{source.strip()}\n"
+
+    return INLINE.sub(paste, text)
+
+
 def cells(text: str) -> list[dict]:
     result = []
     for chunk in re.split(r"^# %%", text, flags=re.MULTILINE)[1:]:
@@ -42,7 +57,7 @@ def main() -> None:
             "kaggle": {"accelerator": "nvidiaTeslaT4", "isGpuEnabled": True, "isInternetEnabled": True,
                        "language": "python", "sourceType": "notebook"},
         },
-        "cells": cells(SOURCE.read_text(encoding="utf-8")),
+        "cells": cells(inline_modules(SOURCE.read_text(encoding="utf-8"))),
     }
     for i, cell in enumerate(notebook["cells"]):
         cell["id"] = f"cell-{i:02d}"

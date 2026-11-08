@@ -57,6 +57,25 @@ temperature, softmax; score = highest catalogue probability (`altro` excluded). 
 ≥ `unsure` → "Non sono sicuro" with the top 3; otherwise "not in the catalogue". When the embedding gate
 is enabled, a photo whose embedding is far from every prototype is "not in the catalogue".
 
+How the thresholds are chosen on validation (`ml/floradeck_ml/calibration.py`, pasted into the notebook by
+`make_notebook.py`): `accept` is the lowest score at which the cards are still right ≥ 98 % of the time
+(out-of-catalogue photos that get a card count as wrong); `unsure` is the lowest score at which the photos
+between the two thresholds still have the right species among the 3 proposals ≥ 50 % of the time and at
+most 10 % of the out-of-catalogue photos land there. (The first run, 2026-11-08, used a 95 % target and an
+altro-quantile rule that left no grey zone; it was recalibrated locally, see below.)
+
+## New thresholds without training again
+
+```powershell
+ml\.venv\Scripts\python ml\kaggle\model_outputs.py <model folder> ml\data\kaggle <tmp>\outputs.npz
+ml\.venv\Scripts\python ml\kaggle\recalibrate.py <model folder> <tmp>\outputs.npz <tmp>\floradeck-model
+```
+
+`<model folder>` is the extracted `floradeck-model.zip`. The first script runs the model on the val and
+test photos of the pack on the CPU (about 1 hour for 23,800 photos); the second refits temperature and
+thresholds, evaluates test again and writes a new folder and zip with the updated `labels.json`, `report/`
+and `LEGGIMI.md` (same `model.onnx`).
+
 ## Local check
 
 The notebook also runs on a PC (CPU) for a smoke test, with torch, torchvision, timm, onnx, onnxruntime
