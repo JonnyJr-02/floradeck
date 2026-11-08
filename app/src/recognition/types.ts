@@ -28,6 +28,8 @@ export interface DecisionMetadata {
   /** Class order of the model output: catalogue ids, plus "altro" at altroIndex. */
   classes: string[]
   altroIndex: number
+  /** Model classes that are not (or no longer) catalogue species: they count like "altro". */
+  excludedIndices?: readonly number[]
   temperature: number
   decision: { accept: number; unsure: number }
   embeddingGate: { enabled: boolean; minSimilarity: number }

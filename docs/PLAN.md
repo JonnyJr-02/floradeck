@@ -88,7 +88,7 @@ Download, pulizia ed export girano in locale su CPU: la GPU del PC (MX130, 2 GB)
 | 4 | Fotocamera + mock + scatto → carta → collezione, animazione di spacchettamento | ✅ 2026-11-08; da provare sui telefoni |
 | 5 | Album, rarità, doppioni, copertina, diario, "In fiore questo mese", celebrazioni, carta leggendaria, **backup** | backup anticipato: su iPhone serve appena si inizia a collezionare; ✅ 2026-11-08, da provare sui telefoni |
 | 6 | Pipeline ML, notebook Kaggle, valutazione, export | gli script partono subito dopo la fase 1, in parallelo alla UI |
-| 7 | Modello vero nell'app, calibrazione, test su foto reali | |
+| 7 | Modello vero nell'app, calibrazione, test su foto reali | ✅ 2026-11-08 nell'app, con i nomi di tutte le piante su richiesta; prove con foto vere sui telefoni da fare |
 | 8 | Profili, regali, funzioni di coppia; backend facoltativo | |
 | 9 | Rifinitura (controlli finali di design e accessibilità, review animazioni), test sui telefoni, sfide settimanali, APK Capacitor facoltativo | |
 

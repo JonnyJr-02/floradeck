@@ -21,13 +21,14 @@ export function softmax(logits: ArrayLike<number>, temperature = 1): number[] {
 /** The three most likely catalogue species ("altro" excluded), most likely first. */
 export function topCatalogCandidates(
   probabilities: ArrayLike<number>,
-  meta: Pick<DecisionMetadata, 'classes' | 'altroIndex'>,
+  meta: Pick<DecisionMetadata, 'classes' | 'altroIndex' | 'excludedIndices'>,
   count = 3,
 ): Candidate[] {
+  const excluded = new Set(meta.excludedIndices ?? [])
   const candidates: Candidate[] = []
   Array.from(probabilities).forEach((confidence, i) => {
     const speciesId = meta.classes[i]
-    if (i !== meta.altroIndex && speciesId !== undefined) candidates.push({ speciesId, confidence })
+    if (i !== meta.altroIndex && !excluded.has(i) && speciesId !== undefined) candidates.push({ speciesId, confidence })
   })
   // Stable sort: ties keep catalogue order, like the stable argsort in ml/floradeck_ml/calibration.py.
   candidates.sort((a, b) => b.confidence - a.confidence)

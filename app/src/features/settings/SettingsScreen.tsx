@@ -8,6 +8,7 @@ import type { MockScenario } from '../../recognition/mock'
 import { recognizer, setMockScenario, useMockScenario } from '../../recognition/recognizer'
 import { BackHeader, IN_APP, Page } from '../../ui/Page'
 import { Segmented } from '../../ui/Segmented'
+import { AllPlantsSection } from './AllPlantsSection'
 import { BackupSection, TestCardsSection } from './BackupSection'
 import { setThemePreference, useThemePreference } from '../../ui/theme'
 
@@ -147,6 +148,7 @@ export function SettingsScreen() {
         <StorageSummary status={status} onProtect={protect} />
       </Section>
 
+      <AllPlantsSection />
       <MockRecognitionSection />
       <TestCardsSection />
 

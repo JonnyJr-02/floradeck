@@ -130,7 +130,10 @@ test('each legendary species sits in its own album and has a page', async ({ pag
 
 test('"Metti nell\'album" lands on the album and fills the new slot', async ({ page }) => {
   await page.goto('./')
-  await page.evaluate(() => localStorage.setItem('floradeck:mock-scenario', 'sure'))
+  await page.evaluate(() => {
+    localStorage.setItem('floradeck:recognizer', 'mock')
+    localStorage.setItem('floradeck:mock-scenario', 'sure')
+  })
   await page.reload()
   const buffer = await page.evaluate(async () => {
     const c = document.createElement('canvas')

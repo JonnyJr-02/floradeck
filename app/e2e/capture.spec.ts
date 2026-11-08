@@ -27,7 +27,10 @@ async function flowerPhoto(page: Page): Promise<Buffer> {
 
 async function forceScenario(page: Page, scenario: 'sure' | 'unsure' | 'out') {
   await page.goto('./')
-  await page.evaluate((value) => localStorage.setItem('floradeck:mock-scenario', value), scenario)
+  await page.evaluate((value) => {
+    localStorage.setItem('floradeck:recognizer', 'mock')
+    localStorage.setItem('floradeck:mock-scenario', value)
+  }, scenario)
   await page.reload()
 }
 

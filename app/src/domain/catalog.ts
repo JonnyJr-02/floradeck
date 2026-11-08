@@ -54,6 +54,8 @@ export interface Species {
   toxicNote: string
   /** Catalogue ids of species that look alike. */
   lookalikes: string[]
+  /** Scientific names the recognisers know this card by. */
+  modelLabels: string[]
   textStatus: string
 }
 

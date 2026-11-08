@@ -32,6 +32,9 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
   },
+  // ONNX Runtime loads its WASM itself: keep it out of dependency pre-bundling, and build workers as modules.
+  optimizeDeps: { exclude: ['onnxruntime-web'] },
+  worker: { format: 'es' },
   server: {
     // The catalogue in ../catalog is the single source of truth, imported at build time.
     fs: { allow: [searchForWorkspaceRoot(process.cwd()), fileURLToPath(new URL('../catalog', import.meta.url))] },
@@ -64,9 +67,13 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,txt,webp}'],
-        // Reference photos (~6 MB in all) are cached when first seen, not installed up front.
-        globIgnores: ['404.html', 'photos/**'],
+        // The catalogue model (17 MB) and ONNX Runtime's WASM (15 MB) are installed with the app, so
+        // recognition works offline from the first launch.
+        globPatterns: ['**/*.{js,mjs,css,html,svg,png,ico,woff2,txt,webp,wasm,onnx,json,bin}'],
+        maximumFileSizeToCacheInBytes: 40 * 1024 * 1024,
+        // Reference photos (~6 MB) are cached when first seen; the all-plants model (95 MB) is a
+        // download the user asks for in Impostazioni (src/recognition/allPlants.ts).
+        globIgnores: ['404.html', 'photos/**', 'models/allplants/**'],
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.pathname.includes('/photos/') && url.pathname.endsWith('.webp'),

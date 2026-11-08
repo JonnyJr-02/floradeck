@@ -64,6 +64,8 @@ export function ExploreScreen() {
   const { videoRef, status, start } = useCamera()
   const [flow, setFlow] = useState<Flow>({ step: 'aim' })
   const [problem, setProblem] = useState<string | null>(null)
+  // «Nessuna di queste» in «Non sono sicuro»: treat the shot as outside the catalogue.
+  const [noneOfThese, setNoneOfThese] = useState(false)
   const fileRef = useRef<HTMLInputElement>(null)
   const abortRef = useRef<AbortController | null>(null)
 
@@ -154,11 +156,13 @@ export function ExploreScreen() {
 
   function again() {
     abortRef.current?.abort()
+    setNoneOfThese(false)
     setFlow({ step: 'aim' })
   }
 
   const busy = flow.step === 'thinking' || flow.step === 'saving'
   const result = flow.step === 'result' ? flow.recognition : null
+  const outOfCatalog = result?.kind === 'not-in-catalog' || (result?.kind === 'unsure' && noneOfThese)
   const tip = busy ? 'Sto guardando la foto…' : 'Avvicinati: un fiore solo, al centro'
 
   return (
@@ -233,12 +237,18 @@ export function ExploreScreen() {
       </div>
 
       <UnsureSheet
-        open={result?.kind === 'unsure'}
+        open={result?.kind === 'unsure' && !noneOfThese}
         candidates={result?.kind === 'unsure' ? result.top3 : []}
         onPick={pickCandidate}
+        onNone={() => setNoneOfThese(true)}
         onAgain={again}
       />
-      <OutOfCatalogSheet open={result?.kind === 'not-in-catalog'} onAgain={again} />
+      <OutOfCatalogSheet
+        open={outOfCatalog}
+        afterNone={noneOfThese}
+        photo={flow.step === 'result' ? flow.photo.image : undefined}
+        onAgain={again}
+      />
     </main>
   )
 }

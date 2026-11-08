@@ -1,0 +1,17 @@
+{
+ "model": "plantclef-336-int8.onnx",
+ "bytes": 94468939,
+ "sha256": "fb59f28782a02a9c1735747b34d3a47556d5baa75609506b9340c183c4650aba",
+ "parts": [
+  {
+   "file": "plantclef-336-int8.part00",
+   "bytes": 50000000,
+   "sha256": "1e1b2c68a00841abb1ff56ff388348b6beb2eecf474b9a7869ade8b3b948f7d5"
+  },
+  {
+   "file": "plantclef-336-int8.part01",
+   "bytes": 44468939,
+   "sha256": "b502e7a4dbcfe36ae3c9fb1d25b4625e9ed6ffe2a38c8788666858afa93673bd"
+  }
+ ]
+}

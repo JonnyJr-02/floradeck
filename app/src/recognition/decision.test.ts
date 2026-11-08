@@ -67,6 +67,12 @@ describe('decision rule (same as ml/floradeck_ml/calibration.py)', () => {
     expect(decide([0.95, 0.05, 0, 0, 0], gated).kind).toBe('card')
   })
 
+  it('treats a class that left the catalogue like "altro"', () => {
+    const withRemoved = { ...meta, excludedIndices: [0] }
+    expect(decide([0.9, 0.05, 0.03, 0.02, 0], withRemoved).kind).toBe('not-in-catalog')
+    expect(topCatalogCandidates([0.9, 0.05, 0.03, 0.02, 0], withRemoved).map((c) => c.speciesId)).toEqual(['b', 'c', 'd'])
+  })
+
   it('refuses a vector of the wrong length', () => {
     expect(() => decide([1, 0], meta)).toThrow()
   })
