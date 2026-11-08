@@ -1,8 +1,8 @@
 import Dexie, { type EntityTable } from 'dexie'
 
 /**
- * Schema v1 (phase 3). Nothing real is stored before phase 4, so it can still change freely;
- * from then on every change is a new Dexie version with a migration.
+ * Schema v1. Phase 4 stores the first real cards: from now on a new index or table is a new Dexie
+ * version with a migration. Fields that are not indexed can be added without one.
  */
 
 /** A card in the collection. A duplicate is simply another card of the same species. */
@@ -12,6 +12,13 @@ export interface CardRecord {
   /** ISO 8601 date and time of the shot. */
   foundAt: string
   photoId?: string
+  /** Who settled the species: the recogniser on its own, or the user picking one of its proposals. */
+  identifiedBy?: 'model' | 'user'
+  /** Calibrated probability of the chosen species when it was recognised. */
+  confidence?: number
+  /** "mock" until the real model ships, then the model version from labels.json. */
+  recognizer?: string
+  source?: 'camera' | 'gallery'
 }
 
 /** The user's own photo, resized on the phone (long side 1080 px) with a separate thumbnail. */
