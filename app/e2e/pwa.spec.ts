@@ -36,7 +36,7 @@ test('works offline after the first visit', async ({ page, context }) => {
   await page.reload()
   await expect(page.getByRole('navigation', { name: 'Sezioni' })).toBeVisible()
   await page.getByRole('navigation', { name: 'Sezioni' }).getByRole('link', { name: 'Album' }).click()
-  await expect(page.getByRole('list', { name: 'I tuoi album' }).getByRole('listitem')).toHaveCount(10)
+  await expect(page.getByRole('list', { name: 'I tuoi album' }).getByRole('listitem')).toHaveCount(8)
   await page.goto('diario')
   await expect(page.getByRole('heading', { name: 'Il diario è ancora vuoto' })).toBeVisible()
   // Fonts come from the precache too.

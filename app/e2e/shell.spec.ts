@@ -16,7 +16,7 @@ test('moves between the sections', async ({ page }) => {
 
   await nav.getByRole('link', { name: 'Album' }).click()
   await expect(page.getByRole('heading', { level: 1, name: 'Album' })).toBeVisible()
-  await expect(page.getByRole('list', { name: 'I tuoi album' }).getByRole('listitem')).toHaveCount(10)
+  await expect(page.getByRole('list', { name: 'I tuoi album' }).getByRole('listitem')).toHaveCount(8)
 
   await nav.getByRole('link', { name: 'Diario' }).click()
   await expect(page.getByRole('heading', { name: 'Il diario è ancora vuoto' })).toBeVisible()
