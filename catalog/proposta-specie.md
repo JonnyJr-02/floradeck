@@ -4,7 +4,7 @@
 
 ## Come leggerla
 
-- **8 album, 210 specie + 1 leggendaria**, una specie rara per album. Dopo ogni album ci sono alcune riserve (19 in tutto) per gli scambi.
+- **8 album, 209 specie + 1 leggendaria**, una specie rara per album. Dopo ogni album ci sono alcune riserve (19 in tutto) per gli scambi.
 - **Periodo**: i mesi in cui la pianta viene fotografata in fiore in Italia (con i frutti, per l'album delle bacche), secondo le annotazioni di iNaturalist. Conta un mese se ha almeno il 15% delle osservazioni del mese di picco (35% per i frutti, perché l'annotazione comprende anche quelli acerbi). L'asterisco indica che le annotazioni erano poche e ho usato tutte le osservazioni.
 - **Foto**: osservazioni iNaturalist verificate dalla comunità ("research grade") in Italia, con foto a licenza CC0, CC-BY o CC-BY-NC: è il materiale per addestrare il modello. ✅ almeno 300 · 🟡 meno di 300 in Italia ma almeno 300 in Europa (o nel mondo, per le coltivate) · 🔴 pochi dati. † = conta anche le piante coltivate, che iNaturalist non marca mai come verificate.
 - **N · C · S**: dove la si trova in Italia. Nord sopra i 44° N (circa la linea Genova–Ravenna), Centro fino ai 41,8° N (circa Roma), poi Sud e isole. Le percentuali sono corrette per il numero di osservazioni di piante in ciascuna area, perché al Nord gli utenti di iNaturalist sono molti di più: 33 · 33 · 33 vuol dire "ugualmente frequente ovunque". Utile per capire cosa trovate vicino a voi.
@@ -18,7 +18,7 @@
 | Prati di primavera | 24 | 16 / 7 / 1 | 23 / 1 / 0 |
 | Campi e bordi di strada | 30 | 23 / 6 / 1 | 25 / 5 / 0 |
 | Montagna e pascoli alpini | 30 | 16 / 13 / 1 | 28 / 2 / 0 |
-| Macchia mediterranea e coste | 26 | 15 / 10 / 1 | 22 / 4 / 0 |
+| Macchia mediterranea e coste | 25 | 14 / 10 / 1 | 21 / 4 / 0 |
 | Boschi e sottobosco | 26 | 17 / 8 / 1 | 26 / 0 / 0 |
 | Zone umide, fossi e laghi | 21 | 13 / 7 / 1 | 13 / 8 / 0 |
 | Bacche e colori d'autunno | 29 | 20 / 8 / 1 | 27 / 2 / 0 |
@@ -185,7 +185,6 @@ _Macchia, garighe, dune e scogliere._
 | 23 | **Camedrio femmina**<br>*Teucrium fruticans* | specie | non comune | azzurro | dic–giu | ✅ 308 | 0 · 29 · 70 |   |
 | 24 | **Tamerice**<br>*Tamarix sp.* | genere | comune | rosa | apr–mag\* | 🟡 54 (UE 1752) | 6 · 15 · 79 | Genere. |
 | 25 | **Agnocasto**<br>*Vitex agnus-castus* | specie | non comune | viola | giu–set | 🟡 220 (UE 2773) | 3 · 17 · 81 |   |
-| 26 | **Rosmarino**<br>*Salvia rosmarinus* | specie | comune | azzurro | lug, ott, gen–mag | ✅ 592 | 2 · 30 · 68 |   |
 
 **Riserve**
 

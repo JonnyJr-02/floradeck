@@ -16,7 +16,7 @@ function seeded(seed: number) {
 
 describe('mock recogniser', () => {
   it('has one class per collectable species plus "altro", without the legendary one', () => {
-    expect(MOCK_METADATA.classes).toHaveLength(211)
+    expect(MOCK_METADATA.classes).toHaveLength(210)
     expect(MOCK_METADATA.classes.at(-1)).toBe('altro')
     expect(MOCK_METADATA.classes).not.toContain('cypripedium-calceolus')
   })

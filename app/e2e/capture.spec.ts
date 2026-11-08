@@ -55,7 +55,7 @@ test('a sure recognition from the gallery becomes a card in the album', async ({
   await expect(page.getByText(/^Trovata il /)).toBeVisible()
 
   await page.getByRole('link', { name: "Metti nell'album" }).click()
-  await expect(page.getByText('1 specie trovata su 210, in 8 album')).toBeVisible()
+  await expect(page.getByText('1 specie trovata su 209, in 8 album')).toBeVisible()
 })
 
 test('the unpacking plays once, not again after a reload', async ({ page }) => {
@@ -87,7 +87,7 @@ test('shooting again from "Non sono sicuro" saves nothing', async ({ page }) => 
   await page.getByRole('dialog').getByRole('button', { name: 'Scatta di nuovo' }).click()
   await expect(page.getByRole('dialog')).toBeHidden()
   await page.getByRole('navigation', { name: 'Sezioni' }).getByRole('link', { name: 'Album' }).click()
-  await expect(page.getByText('0 specie trovate su 210, in 8 album')).toBeVisible()
+  await expect(page.getByText('0 specie trovate su 209, in 8 album')).toBeVisible()
 })
 
 test('a photo outside the catalogue gets shooting tips and no card', async ({ page }) => {

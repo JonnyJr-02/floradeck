@@ -4571,49 +4571,6 @@
     "textStatus": "da-verificare"
   },
   {
-    "id": "salvia-rosmarinus",
-    "number": 26,
-    "albumId": "macchia-coste",
-    "scientificName": "Salvia rosmarinus",
-    "taxonLevel": "species",
-    "commonNameIt": "Rosmarino",
-    "family": "Lamiaceae",
-    "rarity": "common",
-    "dominantColors": [
-      "azzurro"
-    ],
-    "phenology": "flowering",
-    "bloomMonths": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      7,
-      10
-    ],
-    "habitat": "Macchia, garighe e rupi costiere; coltivato in orti e giardini",
-    "altitude": "0–600 m",
-    "regions": "Soprattutto al Sud e nelle isole",
-    "sizeNote": "Fiore 1–1,5 cm",
-    "description": "Piccoli fiori azzurro pallido lungo i rami di un arbusto sempreverde dalle foglie aghiformi e profumatissime. Fiorisce quasi tutto l'anno.",
-    "funFact": "Rosmarino viene da ros marinus, «rugiada del mare»: dal 2017 i botanici lo considerano una salvia.",
-    "cultivated": false,
-    "protected": false,
-    "protectionNote": "",
-    "toxic": false,
-    "toxicNote": "",
-    "lookalikes": [],
-    "lookalikesOutside": [],
-    "modelLabels": [
-      "Salvia rosmarinus"
-    ],
-    "inatTaxonIds": [
-      636795
-    ],
-    "textStatus": "da-verificare"
-  },
-  {
     "id": "anemone-nemorosa",
     "number": 1,
     "albumId": "boschi-sottobosco",

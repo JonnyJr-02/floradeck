@@ -7,8 +7,8 @@ describe('catalogue in the app', () => {
     expect(albums.map((album) => album.order)).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
   })
 
-  it('counts 210 species to collect, without the secret legendary card', () => {
-    expect(totalSpecies).toBe(210)
+  it('counts 209 species to collect, without the secret legendary card', () => {
+    expect(totalSpecies).toBe(209)
     expect(albums.some((album) => album.id === 'leggendaria')).toBe(false)
   })
 

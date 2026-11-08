@@ -131,7 +131,6 @@
     { "key": "tamarix", "album": "macchia-coste", "status": "main", "commonNameIt": "Tamerice", "label": "Tamarix sp.", "level": "genus", "taxa": ["Tamarix"], "rarity": "common", "colors": ["rosa"], "notes": "Genere." },
     { "key": "vitex-agnus-castus", "album": "macchia-coste", "status": "main", "commonNameIt": "Agnocasto", "level": "species", "taxa": ["Vitex agnus-castus"], "rarity": "uncommon", "colors": ["viola"], "notes": "" },
     { "key": "erica-multiflora", "album": "macchia-coste", "status": "reserve", "commonNameIt": "Erica multiflora", "level": "species", "taxa": ["Erica multiflora"], "rarity": "uncommon", "colors": ["rosa"], "notes": "Fiorisce in autunno." },
-    { "key": "salvia-rosmarinus", "album": "macchia-coste", "status": "main", "commonNameIt": "Rosmarino", "level": "species", "taxa": ["Salvia rosmarinus"], "rarity": "common", "colors": ["azzurro"], "notes": "" },
 
     { "key": "anemone-nemorosa", "album": "boschi-sottobosco", "status": "main", "commonNameIt": "Anemone dei boschi", "level": "species", "taxa": ["Anemone nemorosa"], "rarity": "common", "colors": ["bianco"], "notes": "Sosia: Anemone trifolia (→ altro)." },
     { "key": "hepatica-nobilis", "album": "boschi-sottobosco", "status": "main", "commonNameIt": "Erba trinità", "level": "species", "taxa": ["Hepatica nobilis", "Anemone hepatica"], "rarity": "common", "colors": ["blu", "viola"], "notes": "" },
