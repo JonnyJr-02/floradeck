@@ -67,9 +67,16 @@ def gbif_key(name: str) -> str:
     return str(match.get("speciesKey") or match.get("usageKey") or "")
 
 
-def gbif_italian(key: str) -> str:
+def is_real_name(name: str, scientific: str) -> bool:
+    """False for a 'vernacular' name that is just the Latin name again (some GBIF sources do that)."""
+    plain = " ".join(name.lower().replace("×", "x").split())
+    return bool(plain) and plain != scientific.lower() and plain != scientific.lower().split()[0]
+
+
+def gbif_italian(key: str, scientific: str = "") -> str:
     results = gbif_get(f"https://api.gbif.org/v1/species/{key}/vernacularNames?limit=300").get("results", [])
     names = [r["vernacularName"].strip() for r in results if r.get("language") == "ita" and r.get("vernacularName")]
+    names = [n for n in names if is_real_name(n, scientific)] if scientific else names
     return names[0] if names else ""
 
 
@@ -120,7 +127,7 @@ def main() -> None:
                     r["gbif_id"] = gbif_key(r["scientific"])
                     time.sleep(0.3)
                 if r["gbif_id"]:
-                    r["it"] = gbif_italian(r["gbif_id"])
+                    r["it"] = gbif_italian(r["gbif_id"], r["scientific"])
             except Exception as err:  # network hiccup: leave it empty
                 print("GBIF error", r["gbif_id"], err)
             if r["it"]:
