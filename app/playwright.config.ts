@@ -16,7 +16,16 @@ export default defineConfig({
   },
   projects: [
     // Android: the Google Chrome installed on this PC, with a Pixel 7 screen and touch.
-    { name: 'android', use: { ...devices['Pixel 7'], channel: 'chrome' } },
+    // Chrome's fake camera (a moving test pattern) stands in for the real one.
+    {
+      name: 'android',
+      use: {
+        ...devices['Pixel 7'],
+        channel: 'chrome',
+        permissions: ['camera'],
+        launchOptions: { args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] },
+      },
+    },
     // iPhone: Playwright's WebKit, the engine behind Safari. Not a real iPhone.
     { name: 'iphone', use: { ...devices['iPhone 15'] } },
   ],

@@ -115,3 +115,30 @@ export function IconMenuDots(props: IconProps) {
     </Icon>
   )
 }
+
+export function IconGallery(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <rect x="3.5" y="4.5" width="17" height="15" rx="3" />
+      <circle cx="9" cy="10" r="1.6" />
+      <path d="M20.5 15.5l-4.2-4.2a1.5 1.5 0 0 0-2.1 0L6.5 19.5" />
+    </Icon>
+  )
+}
+
+export function IconChevron(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M9 6l6 6-6 6" />
+    </Icon>
+  )
+}
+
+export function IconCamera(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z" />
+      <circle cx="12" cy="12.5" r="3.5" />
+    </Icon>
+  )
+}

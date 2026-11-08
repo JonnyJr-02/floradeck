@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { addCard, getCard, type NewCard } from './collection'
+import { addCard, getCard, photoBlob, type NewCard } from './collection'
 import { FloraDeckDB } from './db'
 
 let db: FloraDeckDB
@@ -37,7 +37,9 @@ describe('adding cards', () => {
     expect(card.foundAt).toBe('2026-05-14T10:00:00.000Z')
     const stored = await getCard(card.id, db)
     expect(stored?.card).toEqual(card)
-    expect(stored?.photo).toMatchObject({ id: card.photoId, width: 1080, height: 810 })
+    expect(stored?.photo).toMatchObject({ id: card.photoId, width: 1080, height: 810, imageType: 'image/jpeg' })
+    expect(await photoBlob(stored!.photo!).text()).toBe('photo')
+    expect(await photoBlob(stored!.photo!, 'thumbnail').text()).toBe('thumb')
     expect(stored?.copies).toBe(1)
   })
 
@@ -51,7 +53,8 @@ describe('adding cards', () => {
   })
 
   it('saves nothing when the photo cannot be stored', async () => {
-    await db.photos.add({ id: 'taken', ...shot('x').photo })
+    const empty = new ArrayBuffer(0)
+    await db.photos.add({ id: 'taken', image: empty, imageType: '', thumbnail: empty, thumbnailType: '', width: 1, height: 1 })
     const original = crypto.randomUUID
     crypto.randomUUID = () => 'taken' as `${string}-${string}-${string}-${string}-${string}`
     try {

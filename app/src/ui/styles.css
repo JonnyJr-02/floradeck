@@ -369,19 +369,59 @@
     background: #232a3d;
   }
 
-  /* Explore: a full-screen viewfinder (the real camera arrives in phase 4). */
+  /* Explore: the live viewfinder fills the screen; controls float over it. */
   .camera {
+    position: relative;
+    isolation: isolate;
     display: flex;
     min-height: 100dvh;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     padding: calc(0.875rem + env(safe-area-inset-top, 0px)) 1.25rem calc(6.25rem + env(safe-area-inset-bottom, 0px));
     background: var(--color-camera);
     color: var(--color-camera-ink);
   }
+  .camera__feed,
+  .camera__still {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* The feed fades in when the camera starts instead of popping in (preventing a jarring change). */
+  .camera__feed {
+    opacity: 0;
+    transition: opacity 250ms var(--ease-out);
+  }
+  .camera__feed[data-live] {
+    opacity: 1;
+  }
+  /* Keep the tip and the controls legible over a bright scene. */
+  .camera::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.35), transparent 22%, transparent 62%, rgb(0 0 0 / 0.45));
+    pointer-events: none;
+  }
   .camera .round-btn {
-    background: rgb(238 233 223 / 0.12);
+    background: rgb(11 15 25 / 0.55);
     color: var(--color-camera-ink);
+  }
+  .camera__top {
+    display: flex;
+    width: 100%;
+    max-width: 30rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .camera__top > :first-child {
+    align-self: stretch;
   }
   .camera__tip {
     padding: 0.625rem 1rem;
@@ -390,13 +430,45 @@
     color: var(--p-ink);
     font-size: 0.875rem;
     font-weight: 500;
+    text-align: center;
     box-shadow: var(--p-lift);
+  }
+  .camera__problem {
+    max-width: 22rem;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-tile);
+    background: var(--p-accent);
+    color: var(--p-accent-ink);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .camera__middle {
+    display: grid;
+    width: 100%;
+    max-width: 30rem;
+    flex: 1;
+    place-items: center;
+    padding-block: 1.5rem;
   }
   .camera__frame {
     width: min(68vw, 15rem);
     aspect-ratio: 1;
     border-radius: 1.75rem;
     box-shadow: 0 0 0 2px rgb(255 255 255 / 0.85);
+  }
+  .camera__prompt {
+    display: grid;
+    max-width: 19rem;
+    justify-items: center;
+    gap: 0.625rem;
+    text-align: center;
+  }
+  .camera__controls {
+    display: grid;
+    grid-template-columns: 2.75rem auto 2.75rem;
+    align-items: center;
+    gap: 2.5rem;
   }
   .shutter {
     width: 4.5rem;
@@ -405,8 +477,9 @@
     border-radius: 999px;
     background: rgb(238 233 223 / 0.16);
   }
-  .shutter:disabled {
-    opacity: 0.55;
+  .shutter:disabled,
+  .camera .round-btn:disabled {
+    opacity: 0.45;
   }
   .nudge {
     display: flex;
@@ -476,6 +549,175 @@
     height: 2.5rem;
   }
 
+  /*
+   * Bottom sheet on a modal <dialog> (animate skill, "Drawer / sheet"): it slides up from its own
+   * height on the iOS-like drawer curve and leaves the same way. Without @starting-style or
+   * allow-discrete (older Safari) it simply appears and disappears.
+   */
+  .sheet {
+    position: fixed;
+    inset: auto 0 0;
+    width: 100%;
+    max-width: 30rem;
+    max-height: min(88dvh, 42rem);
+    margin: 0 auto;
+    padding: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 0;
+    border-radius: 1.75rem 1.75rem 0 0;
+    background: var(--p-bg);
+    color: var(--p-ink);
+    box-shadow: 0 -10px 30px rgb(0 0 0 / 0.22);
+    transform: translateY(0);
+    transition:
+      transform 500ms var(--ease-drawer),
+      overlay 500ms var(--ease-drawer) allow-discrete,
+      display 500ms var(--ease-drawer) allow-discrete;
+  }
+  .sheet:not([open]) {
+    transform: translateY(100%);
+  }
+  .sheet:focus {
+    outline: none;
+  }
+  @starting-style {
+    .sheet[open] {
+      transform: translateY(100%);
+    }
+  }
+  .sheet::backdrop {
+    background: rgb(0 0 0 / 0.4);
+    opacity: 1;
+    transition:
+      opacity 500ms var(--ease-drawer),
+      overlay 500ms var(--ease-drawer) allow-discrete,
+      display 500ms var(--ease-drawer) allow-discrete;
+  }
+  .sheet:not([open])::backdrop {
+    opacity: 0;
+  }
+  @starting-style {
+    .sheet[open]::backdrop {
+      opacity: 0;
+    }
+  }
+  .sheet__body {
+    padding: 1.5rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* One of the three proposals in "Non sono sicuro". */
+  .choice {
+    display: grid;
+    grid-template-columns: 1fr auto 1.125rem;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 0.625rem 0.75rem 0.625rem 1rem;
+    border-radius: var(--radius-tile);
+    background: var(--p-surface);
+    color: inherit;
+    text-align: left;
+  }
+  .tips {
+    display: grid;
+    gap: 0.625rem;
+  }
+  .tips > li {
+    display: grid;
+    grid-template-columns: 0.5rem 1fr;
+    gap: 0.75rem;
+    align-items: baseline;
+  }
+  .tips > li::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--p-accent);
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4375rem 0.75rem;
+    border-radius: 999px;
+    background: var(--p-surface);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  .chip--rarity {
+    background: transparent;
+    box-shadow: inset 0 0 0 1.5px var(--p-accent);
+    color: var(--p-accent);
+  }
+
+  /* A card: the user's photo in front, from mockup C (carta.html). */
+  .card-view {
+    min-height: 100dvh;
+    padding-bottom: calc(2.5rem + env(safe-area-inset-bottom, 0px));
+  }
+  .card-view__hero {
+    position: relative;
+    max-width: 30rem;
+    height: 47svh;
+    min-height: 20rem;
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: 0 0 1.75rem 1.75rem;
+    background: var(--p-surface);
+  }
+  .card-view__hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-view__close {
+    position: absolute;
+    top: calc(0.875rem + env(safe-area-inset-top, 0px));
+    right: 1rem;
+    background: var(--p-bg);
+    box-shadow: var(--p-lift);
+  }
+  .card-view__body {
+    max-width: 30rem;
+    margin-inline: auto;
+    padding: 1.375rem 1.375rem 0;
+  }
+  .facts {
+    display: grid;
+    gap: 0.875rem;
+  }
+  .facts dt {
+    color: var(--p-muted);
+    font-size: 0.8125rem;
+  }
+
+  /*
+   * Unpacking (animate skill; rare, once per discovery, so it may take its time): the card arrives,
+   * the photo opens out of the poppy-red wrapper, then the words follow one after another.
+   * Keyframes, not transitions: it is predetermined and must stay smooth while the photo decodes.
+   * Nothing waits for it: the buttons work from the first frame.
+   */
+  .card-view--reveal .card-view__hero {
+    background: var(--p-accent);
+    animation: card-arrive 500ms var(--ease-out) both;
+  }
+  .card-view--reveal .card-view__hero img {
+    animation: photo-open 700ms var(--ease-in-out) 150ms both;
+  }
+  .card-view--reveal .reveal-item {
+    animation: rise 300ms var(--ease-out) both;
+    animation-delay: calc(600ms + var(--i, 7) * 60ms);
+  }
+
   /* Reduced motion: fewer and gentler, not zero. Keep the fades, drop the movement. */
   @media (prefers-reduced-motion: reduce) {
     .press {
@@ -497,5 +739,72 @@
     .toast[data-closing] {
       transform: none;
     }
+    .camera__feed {
+      transition-duration: 200ms;
+    }
+    .sheet,
+    .sheet:not([open]) {
+      transform: none;
+    }
+    .sheet {
+      opacity: 1;
+      transition:
+        opacity 200ms ease,
+        overlay 200ms ease allow-discrete,
+        display 200ms ease allow-discrete;
+    }
+    .sheet:not([open]) {
+      opacity: 0;
+    }
+    @starting-style {
+      .sheet[open] {
+        transform: none;
+        opacity: 0;
+      }
+    }
+    .sheet::backdrop {
+      transition:
+        opacity 200ms ease,
+        overlay 200ms ease allow-discrete,
+        display 200ms ease allow-discrete;
+    }
+    .card-view--reveal .card-view__hero {
+      animation: fade 300ms ease both;
+    }
+    .card-view--reveal .card-view__hero img {
+      animation: none;
+    }
+    .card-view--reveal .reveal-item {
+      animation: fade 200ms ease 150ms both;
+    }
   }
 }
+
+@keyframes card-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem) scale(0.94);
+  }
+}
+@keyframes photo-open {
+  from {
+    clip-path: inset(42% 12% 42% 12% round 1.5rem);
+    transform: scale(1.12);
+  }
+  to {
+    clip-path: inset(0 round 0);
+    transform: scale(1);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+

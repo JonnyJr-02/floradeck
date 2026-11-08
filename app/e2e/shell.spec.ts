@@ -7,7 +7,8 @@ test('opens on Explore with the four sections at the bottom', async ({ page }) =
   const nav = page.getByRole('navigation', { name: 'Sezioni' })
   for (const name of sections) await expect(nav.getByRole('link', { name })).toBeVisible()
   await expect(nav.getByRole('link', { name: 'Esplora' })).toHaveAttribute('aria-current', 'page')
-  await expect(page.getByText('Avvicinati: un fiore solo, al centro')).toBeVisible()
+  // WebKit on this PC has no camera API: it shows the gallery fallback instead.
+  await expect(page.getByRole('heading', { name: /Inquadra un fiore|Fotocamera non disponibile/ })).toBeVisible()
 })
 
 test('moves between the sections', async ({ page }) => {
@@ -76,6 +77,7 @@ test('the install card can be hidden for good', async ({ page }) => {
   await card.getByRole('button', { name: 'Nascondi il suggerimento' }).click()
   await expect(card).toHaveCount(0)
   await page.reload()
-  await expect(page.getByText('Avvicinati: un fiore solo, al centro')).toBeVisible()
+  // WebKit on this PC has no camera API: it shows the gallery fallback instead.
+  await expect(page.getByRole('heading', { name: /Inquadra un fiore|Fotocamera non disponibile/ })).toBeVisible()
   await expect(card).toHaveCount(0)
 })

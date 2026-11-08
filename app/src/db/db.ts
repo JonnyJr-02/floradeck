@@ -21,11 +21,17 @@ export interface CardRecord {
   source?: 'camera' | 'gallery'
 }
 
-/** The user's own photo, resized on the phone (long side 1080 px) with a separate thumbnail. */
+/**
+ * The user's own photo, resized on the phone (long side 1080 px) with a separate thumbnail.
+ * Bytes, not Blobs: WebKit refuses Blobs in IndexedDB in some contexts (private browsing,
+ * ephemeral sessions), while an ArrayBuffer stores everywhere.
+ */
 export interface PhotoRecord {
   id: string
-  image: Blob
-  thumbnail: Blob
+  image: ArrayBuffer
+  imageType: string
+  thumbnail: ArrayBuffer
+  thumbnailType: string
   width: number
   height: number
 }

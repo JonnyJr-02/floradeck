@@ -18,9 +18,30 @@ export interface AddedCard {
   duplicate: boolean
 }
 
+async function toRecord(photo: PreparedPhoto): Promise<PhotoRecord> {
+  const [image, thumbnail] = await Promise.all([photo.image.arrayBuffer(), photo.thumbnail.arrayBuffer()])
+  return {
+    id: crypto.randomUUID(),
+    image,
+    imageType: photo.image.type,
+    thumbnail,
+    thumbnailType: photo.thumbnail.type,
+    width: photo.width,
+    height: photo.height,
+  }
+}
+
+/** The stored photo (or its thumbnail) as a Blob, ready for URL.createObjectURL. */
+export function photoBlob(record: PhotoRecord, size: 'image' | 'thumbnail' = 'image'): Blob {
+  return size === 'image'
+    ? new Blob([record.image], { type: record.imageType })
+    : new Blob([record.thumbnail], { type: record.thumbnailType })
+}
+
 /** Store the photo and the card together: either both are saved or neither is. */
 export async function addCard(input: NewCard, database: FloraDeckDB = defaultDb): Promise<AddedCard> {
-  const photo: PhotoRecord = { id: crypto.randomUUID(), ...input.photo }
+  // Read the bytes before the transaction: an await on anything but the database would end it.
+  const photo = await toRecord(input.photo)
   const card: CardRecord = {
     id: crypto.randomUUID(),
     speciesId: input.speciesId,
