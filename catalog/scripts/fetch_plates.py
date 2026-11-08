@@ -278,6 +278,10 @@ def main() -> int:
         result = choose(entry, candidates, args.refresh)
         if result["status"] == "found":
             suffix = Path(urllib.parse.urlparse(result["thumbUrl"]).path).suffix.lower() or ".jpg"
+            # A different plate than last time: drop the old thumbnail, which has the same name.
+            if known and known.get("file") != result["file"]:
+                for old in THUMB_DIR.glob(f"{entry['id']}.*"):
+                    old.unlink()
             download(result["thumbUrl"], THUMB_DIR / f"{entry['id']}{suffix}")
             result["thumbFile"] = f"{entry['id']}{suffix}"
             print(f"{entry['id']}: {result['sourceLabel'].split(',')[0]} — {result['file']}")
