@@ -76,8 +76,7 @@
     "protected": null,
     "protectionNote": "Tutelato in alcune regioni: da verificare.",
     "toxic": true,
-    "toxicNote": "Tubero velenoso.",
-    "lookalikes": ["cyclamen-persicum"]
+    "toxicNote": "Tubero velenoso."
   },
   "helleborus-niger": {
     "habitat": "Boschi di faggio e di conifere su calcare, al Nord; comune nei giardini",

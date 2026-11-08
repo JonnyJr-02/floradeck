@@ -1,10 +1,10 @@
 # FloraDeck — Proposta di catalogo
 
-> Bozza da validare (fase 1). Generata da `catalog/scripts/render_proposal.py` con i dati iNaturalist del 2026-11-06. Per cambiarla si modifica `catalog/proposal/candidates.json` e si rigenera.
+> Bozza da validare (fase 1). Generata da `catalog/scripts/render_proposal.py` con i dati iNaturalist del 2026-11-07. Per cambiarla si modifica `catalog/proposal/candidates.json` e si rigenera.
 
 ## Come leggerla
 
-- **10 album, 260 specie + 1 leggendaria**, una specie rara per album. Dopo ogni album ci sono alcune riserve (25 in tutto) per gli scambi.
+- **8 album, 210 specie + 1 leggendaria**, una specie rara per album. Dopo ogni album ci sono alcune riserve (19 in tutto) per gli scambi.
 - **Periodo**: i mesi in cui la pianta viene fotografata in fiore in Italia (con i frutti, per l'album delle bacche), secondo le annotazioni di iNaturalist. Conta un mese se ha almeno il 15% delle osservazioni del mese di picco (35% per i frutti, perché l'annotazione comprende anche quelli acerbi). L'asterisco indica che le annotazioni erano poche e ho usato tutte le osservazioni.
 - **Foto**: osservazioni iNaturalist verificate dalla comunità ("research grade") in Italia, con foto a licenza CC0, CC-BY o CC-BY-NC: è il materiale per addestrare il modello. ✅ almeno 300 · 🟡 meno di 300 in Italia ma almeno 300 in Europa (o nel mondo, per le coltivate) · 🔴 pochi dati. † = conta anche le piante coltivate, che iNaturalist non marca mai come verificate.
 - **N · C · S**: dove la si trova in Italia. Nord sopra i 44° N (circa la linea Genova–Ravenna), Centro fino ai 41,8° N (circa Roma), poi Sud e isole. Le percentuali sono corrette per il numero di osservazioni di piante in ciascuna area, perché al Nord gli utenti di iNaturalist sono molti di più: 33 · 33 · 33 vuol dire "ugualmente frequente ovunque". Utile per capire cosa trovate vicino a voi.
@@ -16,18 +16,16 @@
 | Album | Specie | Comuni / non comuni / rare | Foto ✅ / 🟡 / 🔴 |
 |---|---|---|---|
 | Prati di primavera | 24 | 16 / 7 / 1 | 23 / 1 / 0 |
-| Campi e bordi di strada | 29 | 22 / 6 / 1 | 24 / 5 / 0 |
+| Campi e bordi di strada | 30 | 23 / 6 / 1 | 25 / 5 / 0 |
 | Montagna e pascoli alpini | 30 | 16 / 13 / 1 | 28 / 2 / 0 |
-| Macchia mediterranea e coste | 25 | 14 / 10 / 1 | 21 / 4 / 0 |
+| Macchia mediterranea e coste | 26 | 15 / 10 / 1 | 22 / 4 / 0 |
 | Boschi e sottobosco | 26 | 17 / 8 / 1 | 26 / 0 / 0 |
 | Zone umide, fossi e laghi | 21 | 13 / 7 / 1 | 13 / 8 / 0 |
-| Giardini, parchi e balconi | 30 | 27 / 2 / 1 | 19 / 11 / 0 |
 | Bacche e colori d'autunno | 29 | 20 / 8 / 1 | 27 / 2 / 0 |
 | Orchidee spontanee | 24 | 8 / 15 / 1 | 24 / 0 / 0 |
-| Orto, frutteto ed erbe aromatiche | 22 | 18 / 3 / 1 | 12 / 9 / 1 |
 | Carta leggendaria (segreta) | 1 | leggendaria | 0 / 1 / 0 |
 
-Specie con poche foto in Italia: Fritillaria (🟡 113 (UE 5103)), Enotera (🟡 292 (UE 15559)), Barba di becco violetta (🟡 191 (UE 2755)), Specchio di Venere (🟡 279 (UE 1060)), Crisantemo coronario (🟡 237 (UE 4489)), Buglossa azzurra (🟡 234 (UE 2678)), Viola speronata (🟡 217 (UE 971, mondo 973)), Aconito napello (🟡 299 (UE 3325)), Salvione giallo (🟡 249 (UE 1235)), Anemone dei fiorai (🟡 254 (UE 1478)), Tamerice (🟡 54 (UE 1752)), Agnocasto (🟡 220 (UE 2773)), Nannufaro (🟡 293 (UE 15393)), Trifoglio fibrino (🟡 202 (UE 9692)), Giunco fiorito (🟡 189 (UE 8692)), Campanellino estivo (🟡 145 (UE 2715)), Olmaria (🟡 280 (UE 45535)), Ranuncolo acquatico (🟡 104 (UE 1424)), Poligono anfibio (🟡 105 (UE 8523)), Erba impaziente (🟡 226 (UE 7842)), Agapanto (🟡 215† (UE 2984)), Gelsomino invernale (🟡 153† (UE 1392)), Fior di loto (🟡 128† (UE 723, mondo 9123)), Tulipano da giardino (🟡 199† (UE 8476)), Giacinto (🟡 208† (UE 4514)), Forsizia (🟡 257† (UE 8439)), Sterlizia (🟡 179† (UE 1395)), Aloe arborea (🟡 188† (UE 1120)), Viola del pensiero (🟡 121† (UE 3223)), Ciclamino da vaso (🟡 151† (UE 808, mondo 4774)), Stella di Natale (🟡 91† (UE 770, mondo 12621)), Olivello spinoso (🟡 130 (UE 13349)), Astro americano (🟡 92 (UE 2427)), Nasturzio (🟡 233† (UE 5022)), Zucca (fiori) (🟡 201† (UE 3032)), Fagiolo di Spagna (🟡 14† (UE 300, mondo 2462)), Calendula (🟡 240† (UE 8278)), Cotogno (🟡 198† (UE 3281)), Peperone e peperoncino (🟡 177† (UE 1222)), Melanzana (🟡 54† (UE 428, mondo 5213)), Girasole (🟡 228† (UE 6727)), Facelia (🟡 189† (UE 11044)), Zafferano (🔴 13† (UE 157, mondo 292)), Scarpetta di Venere (🟡 238 (UE 5284)).
+Specie con poche foto in Italia: Fritillaria (🟡 113 (UE 5103)), Enotera (🟡 292 (UE 15559)), Barba di becco violetta (🟡 191 (UE 2755)), Specchio di Venere (🟡 279 (UE 1060)), Crisantemo coronario (🟡 237 (UE 4489)), Buglossa azzurra (🟡 234 (UE 2678)), Viola speronata (🟡 217 (UE 971, mondo 973)), Aconito napello (🟡 299 (UE 3325)), Salvione giallo (🟡 249 (UE 1235)), Anemone dei fiorai (🟡 254 (UE 1478)), Tamerice (🟡 54 (UE 1752)), Agnocasto (🟡 220 (UE 2773)), Nannufaro (🟡 293 (UE 15393)), Trifoglio fibrino (🟡 202 (UE 9692)), Giunco fiorito (🟡 189 (UE 8692)), Campanellino estivo (🟡 145 (UE 2715)), Olmaria (🟡 280 (UE 45535)), Ranuncolo acquatico (🟡 104 (UE 1424)), Poligono anfibio (🟡 105 (UE 8523)), Erba impaziente (🟡 226 (UE 7842)), Olivello spinoso (🟡 130 (UE 13349)), Astro americano (🟡 92 (UE 2427)), Scarpetta di Venere (🟡 238 (UE 5284)).
 
 ## Prati di primavera
 
@@ -37,7 +35,7 @@ _Fioriture di prati e pascoli di pianura e collina, da marzo a giugno._
 |---|---|---|---|---|---|---|---|---|
 | 01 | **Pratolina**<br>*Bellis perennis* | specie | comune | bianco, rosa | dic–giu | ✅ 4322 | 34 · 49 · 16 | Sosia: Margherita comune (in catalogo), Erigeron (→ altro). |
 | 02 | **Tarassaco (dente di leone)**<br>*Taraxacum sp.* | genere | comune | giallo | mar–giu, ott | ✅ 865 | 66 · 22 · 11 | Genere: centinaia di microspecie. Sosia: altre composite gialle (Hypochaeris, Crepis, Leontodon → altro). |
-| 03 | **Primula odorosa**<br>*Primula veris* | specie | comune | giallo | mar–giu | ✅ 1138 | 76 · 24 · 0 | Sosia: Primula elatior (→ altro), Primula comune (in catalogo, Boschi). |
+| 03 | **Primula odorosa**<br>*Primula veris* | specie | comune | giallo | mar–giu | ✅ 1138 | 75 · 25 · 0 | Sosia: Primula elatior (→ altro), Primula comune (in catalogo, Boschi). |
 | 04 | **Viola mammola**<br>*Viola gr. odorata* | gruppo | comune | viola, bianco | feb–apr | ✅ 2404 | 67 · 21 · 11 | Gruppo: mammole e viole dei boschi si distinguono solo da vicino. Sosia: Viola del pensiero (in catalogo, Giardini). |
 | 05 | **Muscari**<br>*Muscari sp.* | gruppo | comune | blu, viola | mar–mag | ✅ 1214 | 31 · 53 · 16 | Gruppo a livello di genere, escluso il cipollaccio (in catalogo, Campi). |
 | 06 | **Non ti scordar di me**<br>*Myosotis sp.* | genere | comune | azzurro | mar–ago | ✅ 1223 | 67 · 20 · 12 | Genere: le specie si distinguono solo da vicino. |
@@ -45,7 +43,7 @@ _Fioriture di prati e pascoli di pianura e collina, da marzo a giugno._
 | 08 | **Iva comune**<br>*Ajuga reptans* | specie | comune | blu, viola | mar–mag | ✅ 2884 | 45 · 39 · 16 | Sosia: Ajuga genevensis, Prunella vulgaris, Glechoma hederacea (→ altro). |
 | 09 | **Trifoglio pratense**<br>*Trifolium pratense* | specie | comune | rosa | apr–set | ✅ 4143 | 49 · 37 · 14 | Sosia: Trifolium medium, Trifolium incarnatum (→ altro). |
 | 10 | **Margherita comune**<br>*Leucanthemum vulgare agg.* | gruppo | comune | bianco | apr–set, nov | ✅ 674 | 83 · 14 · 3 | Sosia: Anthemis, Tripleurospermum (→ altro), Pratolina (in catalogo). |
-| 11 | **Narciso dei poeti**<br>*Narcissus poeticus* | specie | non comune | bianco | apr–giu | ✅ 1028 | 45 · 38 · 18 | Sosia: Narciso nostrale (in catalogo), narcisi coltivati (→ altro). |
+| 11 | **Narciso dei poeti**<br>*Narcissus poeticus* | specie | non comune | bianco | apr–giu | ✅ 1028 | 45 · 38 · 17 | Sosia: Narciso nostrale (in catalogo), narcisi coltivati (→ altro). |
 | 12 | **Latte di gallina**<br>*Ornithogalum umbellatum* | specie | comune | bianco | mar–mag | ✅ 564 | 56 · 32 · 12 | Sosia: altri Ornithogalum (→ altro). |
 | 13 | **Ranuncolo dei prati**<br>*Ranunculus gr. acris* | gruppo | comune | giallo | feb–mag | ✅ 1361 | 83 · 15 · 3 | Gruppo: indistinguibili dalle foto del fiore. Sosia: Favagello (in catalogo), Potentilla (→ altro). |
 | 14 | **Favagello**<br>*Ficaria verna* | specie | comune | giallo | feb–apr | ✅ 2810 | 39 · 35 · 26 | Sosia: ranuncoli (in catalogo), Calta palustre (in catalogo, Zone umide). |
@@ -81,7 +79,7 @@ _Fiori di campi coltivati, incolti, bordi delle strade e vecchi muri._
 | 06 | **Malva selvatica**<br>*Malva sylvestris* | specie | comune | rosa, viola | mar–nov | ✅ 2956 | 19 · 61 · 20 | Sosia: Malva neglecta, Malva olbia (→ altro). |
 | 07 | **Linajola comune**<br>*Linaria vulgaris* | specie | comune | giallo, arancio | lug–nov | ✅ 1834 | 34 · 58 · 8 |   |
 | 08 | **Verbasco**<br>*Verbascum sp.* | genere | comune | giallo | mag–ott | ✅ 3167 | 27 · 42 · 32 | Genere: le specie si distinguono a fatica dalle foto. |
-| 09 | **Silene rigonfia**<br>*Silene vulgaris* | specie | comune | bianco | apr–ott | ✅ 2933 | 46 · 22 · 32 |   |
+| 09 | **Silene rigonfia**<br>*Silene vulgaris* | specie | comune | bianco | apr–ott | ✅ 2933 | 46 · 22 · 31 |   |
 | 10 | **Fiorrancio selvatico**<br>*Calendula arvensis* | specie | comune | arancio | dic–apr | ✅ 926 | 3 · 58 · 39 | Sosia: Calendula (in catalogo, Orto). |
 | 11 | **Gladiolo dei campi**<br>*Gladiolus italicus* | specie | non comune | rosa, viola | apr–mag | ✅ 766 | 12 · 48 · 40 |   |
 | 12 | **Erba di San Giovanni**<br>*Hypericum perforatum* | specie | comune | giallo | mag–ago | ✅ 1829 | 31 · 48 · 21 | Sosia: altri Hypericum (→ altro). |
@@ -102,6 +100,7 @@ _Fiori di campi coltivati, incolti, bordi delle strade e vecchi muri._
 | 27 | **Buglossa azzurra**<br>*Anchusa azurea* | specie | non comune | blu | apr–giu | 🟡 234 (UE 2678) | 4 · 48 · 48 | Sosia: Borragine (in catalogo, Orto). |
 | 28 | **Tulipano selvatico**<br>*Tulipa sylvestris* | specie | **rara** | giallo | mar–giu | ✅ 391 | 69 · 16 · 15 | Sosia: Tulipano da giardino (in catalogo, Giardini). |
 | 29 | **Finocchio selvatico**<br>*Foeniculum vulgare* | specie | comune | giallo | giu–ott | ✅ 904 | 3 · 44 · 53 |   |
+| 30 | **Borragine**<br>*Borago officinalis* | specie | comune | blu | feb–mag | ✅ 2083 | 7 · 49 · 44 | Anche spontanea nei campi. Sosia: Buglossa azzurra (in catalogo, Campi). |
 
 **Riserve**
 
@@ -130,7 +129,7 @@ _Pascoli, rocce e pendii di montagna, in gran parte sopra i 1000 m._
 | 11 | **Astro alpino**<br>*Aster alpinus* | specie | non comune | viola | giu–ago | ✅ 970 | 81 · 19 · 0 | Sosia: Erigeron alpinus (→ altro). |
 | 12 | **Giglio di monte**<br>*Paradisea liliastrum* | specie | non comune | bianco | mag–giu | ✅ 570 | 100 · 0 · 0 | Sosia: Anthericum liliago (→ altro). |
 | 13 | **Campanula barbata**<br>*Campanula barbata* | specie | comune | azzurro | giu–ago | ✅ 1175 | 100 · 0 · 0 |   |
-| 14 | **Genziana primaticcia**<br>*Gentiana verna* | specie | comune | blu | apr–lug | ✅ 1564 | 64 · 32 · 4 | Sosia: Gentiana brachyphylla, G. bavarica, G. nivalis (→ altro). |
+| 14 | **Genziana primaticcia**<br>*Gentiana verna* | specie | comune | blu | apr–lug | ✅ 1564 | 63 · 32 · 4 | Sosia: Gentiana brachyphylla, G. bavarica, G. nivalis (→ altro). |
 | 15 | **Viola speronata**<br>*Viola calcarata* | specie | comune | viola | apr–lug | 🟡 217 (UE 971, mondo 973) | 99 · 1 · 0 |   |
 | 16 | **Silene a cuscinetto**<br>*Silene acaulis* | specie | comune | rosa | giu–ago | ✅ 1350 | 88 · 11 · 1 |   |
 | 17 | **Camedrio alpino**<br>*Dryas octopetala* | specie | comune | bianco | mag–ago | ✅ 1294 | 87 · 12 · 1 |   |
@@ -186,6 +185,7 @@ _Macchia, garighe, dune e scogliere._
 | 23 | **Camedrio femmina**<br>*Teucrium fruticans* | specie | non comune | azzurro | dic–giu | ✅ 308 | 0 · 29 · 70 |   |
 | 24 | **Tamerice**<br>*Tamarix sp.* | genere | comune | rosa | apr–mag\* | 🟡 54 (UE 1752) | 6 · 15 · 79 | Genere. |
 | 25 | **Agnocasto**<br>*Vitex agnus-castus* | specie | non comune | viola | giu–set | 🟡 220 (UE 2773) | 3 · 17 · 81 |   |
+| 26 | **Rosmarino**<br>*Salvia rosmarinus* | specie | comune | azzurro | lug, ott, gen–mag | ✅ 592 | 2 · 30 · 68 |   |
 
 **Riserve**
 
@@ -205,8 +205,8 @@ _Boschi e radure; molte fioriture tra fine inverno e primavera, prima che gli al
 | 04 | **Bucaneve**<br>*Galanthus nivalis* | specie | comune | bianco | gen–apr | ✅ 1163 | 49 · 38 · 13 | Sosia: Campanellino estivo (in catalogo, Zone umide), Leucojum vernum (→ altro). |
 | 05 | **Dente di cane**<br>*Erythronium dens-canis* | specie | non comune | rosa | feb–mar | ✅ 1665 | 92 · 8 · 0 |   |
 | 06 | **Polmonaria**<br>*Pulmonaria sp.* | genere | comune | rosa, blu | feb–mag | ✅ 1353 | 83 · 12 · 5 | Genere. |
-| 07 | **Scilla silvestre**<br>*Scilla bifolia* | specie | comune | blu | feb–mag | ✅ 1492 | 44 · 38 · 18 | Sosia: altre Scilla e Chionodoxa coltivate (→ altro). |
-| 08 | **Pervinca minore**<br>*Vinca minor* | specie | comune | blu, viola | feb–mag | ✅ 1968 | 74 · 18 · 9 | Sosia: Vinca major (→ altro). |
+| 07 | **Scilla silvestre**<br>*Scilla bifolia* | specie | comune | blu | feb–mag | ✅ 1492 | 44 · 39 · 18 | Sosia: altre Scilla e Chionodoxa coltivate (→ altro). |
+| 08 | **Pervinca minore**<br>*Vinca minor* | specie | comune | blu, viola | feb–mag | ✅ 1968 | 73 · 18 · 9 | Sosia: Vinca major (→ altro). |
 | 09 | **Ciclamino selvatico**<br>*Cyclamen sp. (spontanei)* | gruppo | comune | rosa | apr–mag, lug–nov | ✅ 4667 | 15 · 49 · 36 | Gruppo dei ciclamini spontanei. Sosia: Ciclamino da vaso (in catalogo, Giardini). |
 | 10 | **Rosa di Natale**<br>*Helleborus niger* | specie | non comune | bianco | dic–apr | ✅ 1201 | 100 · 0 · 0 | Comune anche nei giardini. |
 | 11 | **Aquilegia**<br>*Aquilegia sp.* | genere | non comune | blu, viola | apr–ago | ✅ 1784 | 92 · 6 · 2 | Genere. |
@@ -269,52 +269,6 @@ _Rive, fossi, stagni e prati umidi._
 | 02 | **Giaggiolo siberiano**<br>*Iris sibirica* | specie | **rara** | blu, viola | mag\* | 🟡 60 (UE 4290) | 100 · 0 · 0 |   |
 | 03 | **Limnantemio**<br>*Nymphoides peltata* | specie | **rara** | giallo | giu–ott | 🟡 60 (UE 1657) | 71 · 25 · 4 |   |
 
-## Giardini, parchi e balconi
-
-_Piante coltivate comunissime in giardini, parchi, vasi e balconi; la rara è naturalizzata._
-
-| # | Specie | Livello | Rarità | Colori | Periodo | Foto | N · C · S | Note |
-|---|---|---|---|---|---|---|---|---|
-| 01 | **Ortensia**<br>*Hydrangea macrophylla* | specie | comune | blu, rosa, bianco | mag–ago | ✅ 465† | 34 · 33 · 33 |   |
-| 02 | **Glicine**<br>*Wisteria sp.* | genere | comune | viola | apr–mag | ✅ 996† | 22 · 48 · 30 | Genere: Wisteria sinensis e W. floribunda. |
-| 03 | **Oleandro**<br>*Nerium oleander* | specie | comune | rosa, bianco, rosso | apr–set | ✅ 2451† | 11 · 34 · 55 | Velenoso. |
-| 04 | **Buganvillea**<br>*Bougainvillea sp.* | genere | comune | rosa, viola | mag–ott | ✅ 1053† | 6 · 29 · 65 | Genere. |
-| 05 | **Geranio da balcone**<br>*Pelargonium sp.* | genere | comune | rosso, rosa | mar–set | ✅ 737† | 13 · 25 · 62 | Genere: tutti i 'gerani' da balcone. |
-| 06 | **Camelia**<br>*Camellia sp.* | genere | comune | rosso, rosa, bianco | mar–mag | ✅ 377† | 30 · 37 · 33 | Genere: Camellia japonica e C. sasanqua. |
-| 07 | **Lillà**<br>*Syringa vulgaris* | specie | comune | viola | apr–mag | ✅ 300† | 42 · 41 · 17 |   |
-| 08 | **Albero di Giuda**<br>*Cercis siliquastrum* | specie | comune | rosa | apr | ✅ 1177† | 13 · 56 · 31 |   |
-| 09 | **Passiflora**<br>*Passiflora caerulea* | specie | comune | bianco, viola | mag–ott | ✅ 915† | 25 · 48 · 27 |   |
-| 10 | **Agapanto**<br>*Agapanthus sp.* | genere | comune | blu | giu–lug | 🟡 215† (UE 2984) | 17 · 47 · 37 | Genere. |
-| 11 | **Gelsomino invernale**<br>*Jasminum nudiflorum* | specie | comune | giallo | dic–mar | 🟡 153† (UE 1392) | 58 · 36 · 6 | Fiorisce in inverno. Sosia: Forsizia (in catalogo). |
-| 12 | **Fior di loto**<br>*Nelumbo nucifera* | specie | **rara** | rosa | mag–ott\* | 🟡 128† (UE 723, mondo 9123) | 38 · 48 · 13 | Naturalizzato nei laghi di Mantova; anche in orti botanici e laghetti. |
-| 13 | **Lagerstroemia**<br>*Lagerstroemia indica* | specie | comune | rosa, viola | lug–set | ✅ 328† | 42 · 41 · 17 |   |
-| 14 | **Ibisco**<br>*Hibiscus sp.* | gruppo | comune | rosa, viola, rosso | giu–ott | ✅ 871† | 21 · 35 · 45 | Gruppo: ibisco di Siria e ibisco cinese. |
-| 15 | **Tulipano da giardino**<br>*Tulipa gesneriana* | specie | comune | rosso, giallo, rosa | mar–apr | 🟡 199† (UE 8476) | 55 · 34 · 12 | Sosia: Tulipano selvatico (in catalogo, Campi). |
-| 16 | **Giacinto**<br>*Hyacinthus orientalis* | specie | comune | blu, rosa, bianco | mar–apr | 🟡 208† (UE 4514) | 55 · 31 · 13 |   |
-| 17 | **Magnolia**<br>*Magnolia sp.* | genere | comune | rosa, bianco | mar–apr, giu | ✅ 1495† | 36 · 40 · 25 | Genere. |
-| 18 | **Lantana**<br>*Lantana camara* | specie | comune | arancio, giallo, rosa | apr–ott | ✅ 623† | 2 · 19 · 79 |   |
-| 19 | **Petunia**<br>*Petunia sp.* | genere | comune | viola, rosa, bianco | apr–set | ✅ 363† | 25 · 31 · 44 | Sosia: Calibrachoa (→ altro). |
-| 20 | **Falso gelsomino**<br>*Trachelospermum jasminoides* | specie | comune | bianco | mag–lug | ✅ 656† | 25 · 48 · 27 |   |
-| 21 | **Forsizia**<br>*Forsythia sp.* | genere | comune | giallo | mar–apr | 🟡 257† (UE 8439) | 64 · 28 · 7 | Sosia: Gelsomino invernale (in catalogo). |
-| 22 | **Sterlizia**<br>*Strelitzia reginae* | specie | non comune | arancio, blu | mar–mag, ott\* | 🟡 179† (UE 1395) | 5 · 22 · 73 |   |
-| 23 | **Aloe arborea**<br>*Aloe arborescens* | specie | non comune | rosso, arancio | gen–ott\* | 🟡 188† (UE 1120) | 7 · 23 · 70 | Fiorisce in inverno, soprattutto sulle coste. |
-| 24 | **Emerocallide**<br>*Hemerocallis fulva* | specie | comune | arancio | giu–lug | ✅ 396† | 79 · 17 · 3 | Anche naturalizzata lungo fossi e strade. Sosia: Giglio di San Giovanni (in catalogo, Montagna). |
-| 25 | **Giaggiolo paonazzo**<br>*Iris germanica / pallida* | gruppo | comune | viola, blu | apr–mag | ✅ 415† | 32 · 48 · 20 | Anche naturalizzato su muri e pendii. |
-| 26 | **Viola del pensiero**<br>*Viola × wittrockiana* | specie | comune | viola, giallo | feb–giu | 🟡 121† (UE 3223) | 50 · 26 · 23 | Nei vasi d'inverno. Sosia: Viola mammola (in catalogo, Prati). |
-| 27 | **Ciclamino da vaso**<br>*Cyclamen persicum* | specie | comune | rosa, rosso, bianco | set–giu\* | 🟡 151† (UE 808, mondo 4774) | 13 · 34 · 53 | Sosia: ciclamini spontanei (in catalogo, Boschi). |
-| 28 | **Stella di Natale**<br>*Euphorbia pulcherrima* | specie | comune | rosso | ott–giu\* | 🟡 91† (UE 770, mondo 12621) | 13 · 19 · 68 | Si collezionano le brattee rosse. |
-| 29 | **Callistemone**<br>*Callistemon sp.* | gruppo | comune | rosso | apr–giu, ago, ott–nov | ✅ 382† | 8 · 35 · 57 | Gruppo. |
-| 30 | **Albero delle farfalle**<br>*Buddleja davidii* | specie | comune | viola | giu–ott | ✅ 1815† | 82 · 13 · 6 | Anche naturalizzata su ferrovie e macerie. |
-
-**Riserve**
-
-| # | Specie | Livello | Rarità | Colori | Periodo | Foto | N · C · S | Note |
-|---|---|---|---|---|---|---|---|---|
-| 01 | **Dalia**<br>*Dahlia sp.* | genere | comune | rosso, rosa, arancio | giu–ott | 🟡 130† (UE 5633) | 41 · 37 · 22 |   |
-| 02 | **Bella di notte**<br>*Mirabilis jalapa* | specie | comune | rosa, giallo | giu–ott | ✅ 830† | 9 · 37 · 53 |   |
-| 03 | **Plumbago**<br>*Plumbago auriculata* | specie | comune | azzurro | mag–ott | ✅ 599† | 6 · 41 · 53 |   |
-| 04 | **Narciso trombone**<br>*Narcissus pseudonarcissus* | specie | comune | giallo | feb–apr | ✅ 301† | 57 · 36 · 6 | Sosia: Narciso dei poeti e Narciso nostrale (in catalogo, Prati). |
-
 ## Bacche e colori d'autunno
 
 _Frutti e semi da collezionare, più qualche fioritura d'autunno._
@@ -329,7 +283,7 @@ _Frutti e semi da collezionare, più qualche fioritura d'autunno._
 | 06 | **Corbezzolo**<br>*Arbutus unedo* | specie | comune | rosso, arancio | apr, set–nov | ✅ 1472 | 6 · 46 · 48 |   |
 | 07 | **Alchechengi**<br>*Physalis alkekengi* | specie | non comune | arancio | ago–nov | ✅ 350 | 84 · 15 · 1 |   |
 | 08 | **Pallon di maggio**<br>*Viburnum opulus* | specie | non comune | rosso | lug–ott | ✅ 613 | 97 · 3 · 1 | Sosia: Viburnum lantana (→ altro). |
-| 09 | **Gigaro**<br>*Arum italicum* | specie | comune | arancio, rosso | giu–lug | ✅ 2429 | 18 · 54 · 29 | Velenoso. Sosia: Arum maculatum (→ altro). |
+| 09 | **Gigaro**<br>*Arum italicum* | specie | comune | arancio, rosso | giu–lug | ✅ 2429 | 18 · 54 · 28 | Velenoso. Sosia: Arum maculatum (→ altro). |
 | 10 | **Sorbo degli uccellatori**<br>*Sorbus aucuparia* | specie | comune | arancio, rosso | ago–set | ✅ 1047 | 81 · 11 · 8 |   |
 | 11 | **Agrifoglio**<br>*Ilex aquifolium* | specie | non comune | rosso | giu, ago–feb | ✅ 1345 | 37 · 33 · 30 | Velenoso. |
 | 12 | **Giaggiolo puzzolente**<br>*Iris foetidissima* | specie | **rara** | arancio, rosso | ott–feb | ✅ 312 | 31 · 46 · 23 | Si collezionano i semi rosso-arancio nelle capsule aperte. |
@@ -398,42 +352,6 @@ _Tutte tutelate: si fotografano e non si raccolgono._
 | 03 | **Ofride fior di ragno**<br>*Ophrys gr. sphegodes* | gruppo | comune | viola | mar–mag | ✅ 2911 | 8 · 34 · 59 | Colori spenti: labello bruno e sepali verdi. |
 | 04 | **Barbone**<br>*Himantoglossum hircinum / adriaticum* | gruppo | non comune | viola | mag–giu | ✅ 832 | 21 · 62 · 18 | Colori spenti (verde-bruno). |
 
-## Orto, frutteto ed erbe aromatiche
-
-_Orti, frutteti, campi coltivati ed erbe aromatiche; per alcune specie contano i frutti._
-
-| # | Specie | Livello | Rarità | Colori | Periodo | Foto | N · C · S | Note |
-|---|---|---|---|---|---|---|---|---|
-| 01 | **Borragine**<br>*Borago officinalis* | specie | comune | blu | feb–mag | ✅ 2135† | 7 · 49 · 44 | Anche spontanea nei campi. Sosia: Buglossa azzurra (in catalogo, Campi). |
-| 02 | **Nasturzio**<br>*Tropaeolum majus* | specie | comune | arancio, rosso, giallo | mar–giu, ago–ott | 🟡 233† (UE 5022) | 11 · 23 · 66 |   |
-| 03 | **Zucca (fiori)**<br>*Cucurbita sp.* | genere | comune | giallo, arancio | apr–nov\* | 🟡 201† (UE 3032) | 28 · 40 · 32 | Genere; si collezionano i fiori. |
-| 04 | **Fagiolo di Spagna**<br>*Phaseolus coccineus* | specie | non comune | rosso | giu–set\* | 🟡 14† (UE 300, mondo 2462) | pochi dati |   |
-| 05 | **Carciofo e cardo**<br>*Cynara cardunculus* | specie | comune | viola | mar–lug\* | ✅ 384† | 9 · 36 · 55 |   |
-| 06 | **Erba cipollina**<br>*Allium schoenoprasum* | specie | comune | rosa, viola | apr–ago | ✅ 301† | 76 · 15 · 9 |   |
-| 07 | **Salvia**<br>*Salvia officinalis* | specie | comune | viola | mar–ott\* | ✅ 415† | 21 · 41 · 37 | Sosia: Salvia dei prati (in catalogo, Prati). |
-| 08 | **Rosmarino**<br>*Salvia rosmarinus* | specie | comune | azzurro | set–ott, gen–mag | ✅ 1795† | 11 · 37 · 52 |   |
-| 09 | **Lavanda**<br>*Lavandula angustifolia / × intermedia* | gruppo | comune | viola | mag–ago | ✅ 380† | 29 · 42 · 28 | Sosia: Lavanda selvatica (in catalogo, Macchia). |
-| 10 | **Calendula**<br>*Calendula officinalis* | specie | comune | arancio | mar–giu, ago–ott | 🟡 240† (UE 8278) | 34 · 38 · 28 | Sosia: Fiorrancio selvatico (in catalogo, Campi). |
-| 11 | **Melograno**<br>*Punica granatum* | specie | comune | rosso, arancio | ago–ott | ✅ 1117† | 17 · 39 · 44 | Fiori rossi in primavera, frutti in autunno. |
-| 12 | **Cachi**<br>*Diospyros kaki* | specie | comune | arancio | giu–nov | ✅ 393† | 28 · 50 · 23 |   |
-| 13 | **Agrumi**<br>*Citrus sp.* | genere | comune | giallo, arancio | gen–ott | ✅ 1479† | 10 · 34 · 56 | Genere: limoni, arance, mandarini. |
-| 14 | **Mandorlo**<br>*Prunus dulcis* | specie | comune | rosa, bianco | feb–apr | ✅ 315† | 9 · 28 · 63 | Fioritura a fine inverno. Sosia: Pesco e altri Prunus (→ altro). |
-| 15 | **Cotogno**<br>*Cydonia oblonga* | specie | non comune | giallo | apr, set\* | 🟡 198† (UE 3281) | 18 · 42 · 40 |   |
-| 16 | **Vite**<br>*Vitis vinifera* | specie | comune | viola | giu–set | ✅ 433† | 17 · 41 · 42 | Si collezionano i grappoli. |
-| 17 | **Pomodoro**<br>*Solanum lycopersicum* | specie | comune | rosso | giu–ott | ✅ 424† | 19 · 47 · 34 |   |
-| 18 | **Peperone e peperoncino**<br>*Capsicum annuum* | specie | comune | rosso | giu–ott\* | 🟡 177† (UE 1222) | 10 · 45 · 46 |   |
-| 19 | **Melanzana**<br>*Solanum melongena* | specie | comune | viola | apr, giu–ott\* | 🟡 54† (UE 428, mondo 5213) | 12 · 43 · 45 |   |
-| 20 | **Girasole**<br>*Helianthus annuus* | specie | comune | giallo | mag–ott | 🟡 228† (UE 6727) | 30 · 49 · 21 |   |
-| 21 | **Facelia**<br>*Phacelia tanacetifolia* | specie | non comune | viola | apr–giu | 🟡 189† (UE 11044) | 63 · 28 · 9 | Seminata per le api e come sovescio. |
-| 22 | **Zafferano**<br>*Crocus sativus* | specie | **rara** | viola | ott–nov\* | 🔴 13† (UE 157, mondo 292) | 39 · 48 · 13 | Coltivato in poche zone (Abruzzo, Sardegna, Toscana, Umbria); fiorisce in autunno. Sosia: Colchico d'autunno (in catalogo, velenoso). |
-
-**Riserve**
-
-| # | Specie | Livello | Rarità | Colori | Periodo | Foto | N · C · S | Note |
-|---|---|---|---|---|---|---|---|---|
-| 01 | **Pesco**<br>*Prunus persica* | specie | comune | rosa | mar–apr | ✅ 336† | 30 · 28 · 42 | Sosia: Mandorlo (in catalogo). |
-| 02 | **Origano**<br>*Origanum vulgare* | specie | comune | rosa | giu–set | ✅ 460† | 46 · 33 · 21 | Anche spontaneo. |
-
 ## Carta leggendaria (segreta)
 
 _Un solo fiore segreto, fuori dagli album._
@@ -444,7 +362,7 @@ _Un solo fiore segreto, fuori dagli album._
 
 ## Note tecniche
 
-- Nomi che iNaturalist tratta come sinonimi (i conteggi li includono): *Leopoldia comosa* → *Muscari comosum*; *Consolida regalis* → *Delphinium consolida*; *Consolida ajacis* → *Delphinium ajacis*; *Leontopodium alpinum* → *Leontopodium nivale alpinum*; *Crocus albiflorus* → *Crocus vernus*; *Otanthus maritimus* → *Achillea maritima maritima*; *Anemone nemorosa* → *Anemonoides nemorosa*; *Anemone hepatica* → *Hepatica nobilis*; *Anemone ranunculoides* → *Anemonoides ranunculoides*; *Callistemon citrinus* → *Melaleuca citrina*; *Callistemon viminalis* → *Melaleuca viminalis*; *Callistemon rigidus* → *Melaleuca linearis linearis*; *Callistemon linearis* → *Melaleuca linearis*; *Physalis alkekengi* → *Alkekengi officinarum*; *Barlia robertiana* → *Himantoglossum robertianum*; *Ophrys phryganae* → *Ophrys lutea phryganae*; *Ophrys apulica* → *Ophrys fuciflora apulica*; *Ophrys incubacea* → *Ophrys sphegodes atrata*; *Ophrys passionis* → *Ophrys sphegodes passionis*; *Prunus dulcis* → *Prunus amygdalus*.
+- Nomi che iNaturalist tratta come sinonimi (i conteggi li includono): *Leopoldia comosa* → *Muscari comosum*; *Consolida regalis* → *Delphinium consolida*; *Consolida ajacis* → *Delphinium ajacis*; *Leontopodium alpinum* → *Leontopodium nivale alpinum*; *Crocus albiflorus* → *Crocus vernus*; *Otanthus maritimus* → *Achillea maritima maritima*; *Anemone nemorosa* → *Anemonoides nemorosa*; *Anemone hepatica* → *Hepatica nobilis*; *Anemone ranunculoides* → *Anemonoides ranunculoides*; *Physalis alkekengi* → *Alkekengi officinarum*; *Barlia robertiana* → *Himantoglossum robertianum*; *Ophrys phryganae* → *Ophrys lutea phryganae*; *Ophrys apulica* → *Ophrys fuciflora apulica*; *Ophrys incubacea* → *Ophrys sphegodes atrata*; *Ophrys passionis* → *Ophrys sphegodes passionis*.
 - I conteggi sono osservazioni, non foto: un'osservazione ha di solito 1–4 foto. Per gli album di genere o gruppo nella fase ML si potranno usare anche osservazioni identificate solo a livello di genere.
 - Il dettaglio per mese e per area è in `catalog/proposal/inat_stats.json`.
 

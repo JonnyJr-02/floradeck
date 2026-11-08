@@ -1,0 +1,97 @@
+# FloraDeck dataset settings, read by `python -m floradeck_ml` (see ml/README.md).
+# Every key is optional: a missing key keeps the default written in floradeck_ml/config.py.
+# A few values can also be overridden on the command line (`--help` lists them).
+
+[inat]
+api = "https://api.inaturalist.org/v2"
+# Generic client name, no personal contact details.
+user_agent = "FloraDeck-dataset/0.1 (personal non-commercial project)"
+min_interval_s = 1.0          # iNaturalist asks for about one request per second
+max_requests_per_run = 9500   # and at most ~10,000 requests per day; cached responses are free
+licenses = ["cc0", "cc-by", "cc-by-nc"]
+photo_size = "medium"         # 500 px on the long side
+photo_host = "inaturalist-open-data.s3.amazonaws.com"
+page_size = 200               # API maximum
+concurrency = 2               # requests in flight; their starts stay at least min_interval_s apart
+
+# Geography, in order of preference. Each place excludes the previous one, so the queries never overlap.
+[[inat.places]]
+name = "italy"
+place_id = 6973
+
+[[inat.places]]
+name = "europe"
+place_id = 97391
+not_in_place = 6973
+
+[[inat.places]]
+name = "world"
+not_in_place = 97391
+
+[classes]
+target_min = 300              # widen the search (Europe, world, relaxed caps) until this many observations
+target_max = 500              # never more than this many (800 would mean ~33 GB instead of ~22 GB to download;
+                              # the 500 selection is a prefix of the 800 one, so raising it later only adds photos)
+max_per_observer = 20         # observations per observer and class; relaxed only below target_min
+photos_per_observation = 1    # the observer's main photo
+photos_per_observation_low = 2  # for classes that stay below target_min
+min_side = 224                # shortest side of the downloaded image, in pixels
+max_aspect = 3.0              # skip panoramas and screenshots
+
+# Cards that cover flowers and fruits train on both phases (CLAUDE.md, "Species whose card covers
+# flowers and fruits (e.g. Punica)"). The catalogue phenology always comes first.
+# Other fruit cards whose text also describes the flowers, left out until decided:
+# arbutus-unedo, citrus, cydonia-oblonga, fragaria-vesca, rosa-canina, rubus.
+[classes.extra_phenology]
+punica-granatum = ["flowering"]
+
+[altro]
+label = "altro"
+# 1. Lookalikes outside the catalogue (lookalikesOutside in catalog/species.json).
+lookalike_target = 100
+lookalike_max_per_observer = 10
+# 2. The most observed vascular plants in Italy (research grade, open licence) not in the catalogue.
+common_root_taxon = 211194    # Tracheophyta
+common_species = 300
+common_target = 20
+common_max_per_observer = 5
+# 3. Catalogue species photographed without flowers or fruits (annotation "No Flowers or Fruits").
+leaves_target = 2000
+leaves_max_per_class = 10
+leaves_max_per_observer = 5
+# 4. Non-plant iNaturalist observations. Insects and spiders are left out: they are often shot on flowers.
+nonplant_target = 250
+nonplant_max_per_observer = 10
+nonplant_taxa = [
+    { id = 47170, name = "Fungi" },
+    { id = 3, name = "Aves" },
+    { id = 40151, name = "Mammalia" },
+    { id = 26036, name = "Reptilia" },
+    { id = 20978, name = "Amphibia" },
+    { id = 47115, name = "Mollusca" },
+]
+# 5. Everyday scenes without plants from the Open Images V7 validation split (CC BY 2.0 images).
+openimages_count = 2000
+
+[download]
+max_gb_per_hour = 5.0         # iNaturalist asks to keep media downloads under ~5 GB/hour
+max_gb_per_day = 24.0         # and ~24 GB/day; a run stops there and resumes on the next one
+workers = 8                   # parallel downloads; the byte-rate cap applies to all of them
+timeout_s = 60.0
+retries = 4
+openimages_max_side = 500     # Open Images files are larger: resized to match iNaturalist "medium"
+min_free_gb = 2.0             # a run stops before the disk fills up
+jpeg_quality = 90             # recent iNaturalist "medium" files are JPEG quality ~100 (~180 KB): re-encode; 0 = keep as is
+
+[clean]
+min_side = 224
+max_aspect = 3.0
+phash_max_distance = 4        # Hamming distance on the 64-bit perceptual hash
+workers = 0                   # 0 = one process per CPU core
+
+[split]
+test = 0.10                   # whole observers go to test: nobody appears in both test and train/val
+val = 0.10                    # by observation, among the observers left for train/val
+seed = "floradeck-v1"
+min_test_per_class = 10       # whole observers are moved into test until each class has this many
+min_val_per_class = 5

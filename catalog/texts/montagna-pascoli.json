@@ -50,7 +50,7 @@
     "sizeNote": "Fiore 3–5 cm",
     "description": "Calici bianchi o viola che spuntano a migliaia appena la neve si ritira, con stami arancio vivo. Si aprono al sole e si chiudono al freddo.",
     "funFact": "È parente stretto dello zafferano, ma i suoi stigmi non hanno lo stesso aroma.",
-    "lookalikes": ["colchicum-autumnale", "crocus-sativus"]
+    "lookalikes": ["colchicum-autumnale"]
   },
   "soldanella": {
     "habitat": "Vallette nivali, pascoli umidi e boschi di montagna",
@@ -188,8 +188,7 @@
     "description": "Grandi coppe arancio fuoco, punteggiate di scuro e rivolte verso l'alto. Fiorisce attorno alla festa di San Giovanni, a fine giugno.",
     "funFact": "In alcune popolazioni alpine porta piccoli bulbilli all'ascella delle foglie, da cui il nome bulbiferum.",
     "protected": null,
-    "protectionNote": "Tutelato in diverse regioni: da verificare.",
-    "lookalikes": ["hemerocallis-fulva"]
+    "protectionNote": "Tutelato in diverse regioni: da verificare."
   },
   "bistorta-officinalis": {
     "habitat": "Prati umidi e pascoli di montagna",

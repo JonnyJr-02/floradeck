@@ -26,8 +26,7 @@
     "habitat": "Siepi, margini dei boschi, prati ombrosi e giardini",
     "sizeNote": "Fiore 1,5–2 cm",
     "description": "Piccoli fiori viola o bianchi con uno sperone posteriore, nascosti tra foglie a cuore. La mammola vera è profumatissima; le viole dei boschi, quasi identiche, non hanno profumo.",
-    "funFact": "Il profumo della mammola sembra svanire dopo pochi respiri: lo ionone che contiene «spegne» per un attimo i recettori dell'olfatto.",
-    "lookalikes": ["viola-wittrockiana"]
+    "funFact": "Il profumo della mammola sembra svanire dopo pochi respiri: lo ionone che contiene «spegne» per un attimo i recettori dell'olfatto."
   },
   "muscari": {
     "habitat": "Prati, oliveti, vigneti e incolti erbosi",
@@ -47,7 +46,6 @@
     "sizeNote": "Fiore 2–3 cm",
     "description": "Spighe di fiori blu-viola a forma di labbra spalancate, che si alzano da una rosetta di foglie rugose. Quando un bombo entra nel fiore, uno stame basculante gli spolvera il polline sulla schiena.",
     "funFact": "Questo meccanismo a leva è uno degli esempi più eleganti di impollinazione studiati dai botanici.",
-    "lookalikes": ["salvia-officinalis"],
     "lookalikesOutside": ["Salvia verbenaca"]
   },
   "ajuga-reptans": {

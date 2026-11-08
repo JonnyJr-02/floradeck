@@ -12,7 +12,7 @@
     "name": "Campi e bordi di strada",
     "description": "Fiori di campi coltivati, incolti, bordi delle strade e vecchi muri.",
     "order": 2,
-    "speciesCount": 29,
+    "speciesCount": 30,
     "rareSpeciesId": "tulipa-sylvestris"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Macchia mediterranea e coste",
     "description": "Macchia, garighe, dune e scogliere.",
     "order": 4,
-    "speciesCount": 25,
+    "speciesCount": 26,
     "rareSpeciesId": "pancratium-maritimum"
   },
   {
@@ -48,18 +48,10 @@
     "rareSpeciesId": "leucojum-aestivum"
   },
   {
-    "id": "giardini-balconi",
-    "name": "Giardini, parchi e balconi",
-    "description": "Piante coltivate comunissime in giardini, parchi, vasi e balconi; la rara è naturalizzata.",
-    "order": 7,
-    "speciesCount": 30,
-    "rareSpeciesId": "nelumbo-nucifera"
-  },
-  {
     "id": "bacche-autunno",
     "name": "Bacche e colori d'autunno",
     "description": "Frutti e semi da collezionare, più qualche fioritura d'autunno.",
-    "order": 8,
+    "order": 7,
     "speciesCount": 29,
     "rareSpeciesId": "iris-foetidissima"
   },
@@ -67,16 +59,8 @@
     "id": "orchidee",
     "name": "Orchidee spontanee",
     "description": "Tutte tutelate: si fotografano e non si raccolgono.",
-    "order": 9,
+    "order": 8,
     "speciesCount": 24,
     "rareSpeciesId": "ophrys-bertolonii"
-  },
-  {
-    "id": "orto-frutteto",
-    "name": "Orto, frutteto ed erbe aromatiche",
-    "description": "Orti, frutteti, campi coltivati ed erbe aromatiche; per alcune specie contano i frutti.",
-    "order": 10,
-    "speciesCount": 22,
-    "rareSpeciesId": "crocus-sativus"
   }
 ]

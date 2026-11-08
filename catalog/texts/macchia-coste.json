@@ -16,8 +16,7 @@
     "habitat": "Garighe, macchia bassa e pinete su suoli acidi",
     "sizeNote": "Spiga 2–4 cm",
     "description": "Spighe compatte di fiorellini viola scuro, sormontate da un ciuffo di brattee lilla come orecchie di coniglio. Tutta la pianta ha un profumo intenso e resinoso.",
-    "funFact": "Il nome stoechas viene dalle isole Stecadi, le attuali isole di Hyères in Francia.",
-    "lookalikes": ["lavandula-giardino"]
+    "funFact": "Il nome stoechas viene dalle isole Stecadi, le attuali isole di Hyères in Francia."
   },
   "spartium-junceum": {
     "habitat": "Scarpate, macchia, incolti e bordi delle strade",
@@ -174,5 +173,11 @@
     "sizeNote": "Spighe 10–20 cm; arbusto fino a 4 m",
     "description": "Arbusti aromatici con foglie a forma di mano e lunghe spighe di fiori viola-lilla a fine estate. Cresce lungo i torrenti e le foci, vicino al mare.",
     "funFact": "La pianta aveva fama di calmare i desideri: nei monasteri i suoi semi sostituivano il pepe."
+  },
+  "salvia-rosmarinus": {
+    "habitat": "Macchia, garighe e rupi costiere; coltivato in orti e giardini",
+    "sizeNote": "Fiore 1–1,5 cm",
+    "description": "Piccoli fiori azzurro pallido lungo i rami di un arbusto sempreverde dalle foglie aghiformi e profumatissime. Fiorisce quasi tutto l'anno.",
+    "funFact": "Rosmarino viene da ros marinus, «rugiada del mare»: dal 2017 i botanici lo considerano una salvia."
   }
 }
