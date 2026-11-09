@@ -1,19 +1,24 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useLocation } from 'wouter'
 import { deleteCard } from '../../db/collection'
 import { Sheet } from '../../ui/Sheet'
 
-/** At the bottom of a card: remove it, as if it had never been found (with a confirmation). */
+/**
+ * At the bottom of a card: give it away (the `gift` slot, above), or remove it as if it had never
+ * been found (with a confirmation).
+ */
 export function DeleteCard({
   cardId,
   copies,
   speciesName,
   albumHref,
+  gift,
 }: {
   cardId: string
   copies: number
   speciesName: string
   albumHref: string
+  gift?: ReactNode
 }) {
   const [, navigate] = useLocation()
   const [confirming, setConfirming] = useState(false)
@@ -28,11 +33,14 @@ export function DeleteCard({
   return (
     <section className="mt-10 border-t border-line pt-6" aria-labelledby="delete-card-title">
       <h2 id="delete-card-title" className="sr-only">
-        Elimina la carta
+        {gift ? 'Regala o elimina la carta' : 'Elimina la carta'}
       </h2>
-      <button type="button" className="btn btn--ghost press" onClick={() => setConfirming(true)}>
-        Elimina questa carta
-      </button>
+      <div className="grid gap-2.5">
+        {gift}
+        <button type="button" className="btn btn--ghost press" onClick={() => setConfirming(true)}>
+          Elimina questa carta
+        </button>
+      </div>
       <Sheet open={confirming} labelledBy="delete-card-sheet" onClose={() => setConfirming(false)}>
         <h2 id="delete-card-sheet" className="text-[1.75rem] leading-[1.05]">
           Eliminare questa carta?

@@ -66,11 +66,41 @@ test('the all-plants model downloads once and names a plant on request', async (
   const sheet = page.getByRole('dialog', { name: 'Non la trovo nel catalogo' })
   await expect(sheet).toBeVisible()
   await expect(sheet.getByRole('list', { name: 'I nomi più probabili' })).toHaveCount(0)
+  // iNaturalist stands in: every name it is asked about gets one openly licensed photo.
+  const picture = await readFile(new URL('../public/plates/papaver-rhoeas.webp', import.meta.url))
+  await page.context().route('https://api.inaturalist.org/v1/taxa?**', async (route) => {
+    const name = new URL(route.request().url()).searchParams.get('q') ?? ''
+    await route.fulfill({
+      json: {
+        results: [
+          {
+            id: 1,
+            name,
+            default_photo: {
+              medium_url: 'https://inaturalist-open-data.s3.amazonaws.com/photos/1/medium.webp',
+              attribution: '(c) Prova, some rights reserved (CC BY)',
+              license_code: 'cc-by',
+            },
+          },
+        ],
+      },
+    })
+  })
+  // The context, not the page: image requests can pass through the service worker.
+  await page.context().route('https://inaturalist-open-data.s3.amazonaws.com/**', (route) =>
+    route.fulfill({ body: picture, contentType: 'image/webp' }),
+  )
   await sheet.getByRole('button', { name: 'Cerca il nome tra tutte le piante' }).click()
   const names = sheet.getByRole('list', { name: 'I nomi più probabili' })
   await expect(names.getByRole('listitem')).toHaveCount(3, { timeout: 120_000 })
   // The parity photo is a mullein (Verbascum): the big model should say so too.
   await expect(names.getByRole('listitem').first()).toContainText(/Verbascum/)
+  // Each name has a photo to compare with: the card's own for a name that is also a card, else iNaturalist's, credited.
+  await expect
+    .poll(() => names.locator('img').evaluateAll((images) => images.filter((image) => (image as HTMLImageElement).naturalWidth > 0).length))
+    .toBe(3)
+  const rows = await names.getByRole('listitem').allTextContents()
+  for (const row of rows) expect(row).toMatch(/È anche una figurina|Foto: Prova · CC BY · iNaturalist/)
 
   await page.goto('./impostazioni')
   await page.getByRole('button', { name: /^Elimina e libera/ }).click()

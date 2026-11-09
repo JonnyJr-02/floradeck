@@ -50,7 +50,7 @@ async function axe(page: Page, testInfo: TestInfo) {
 /** On the iPhone project the link opens "in Safari": the main button copies, the second adds here. */
 const addButton = (page: Page) => page.getByRole('button', { name: /Aggiungi alla collezione|Aggiungilo qui in Safari/ })
 
-test('a duplicate travels to the other phone once and leaves the sender', async ({ page, browser }, testInfo) => {
+test('a duplicate travels to the other phone once and leaves the sender, kept only until sent', async ({ page, browser }, testInfo) => {
   await stubShare(page)
   const [, duplicate] = await seed(page, [{ speciesId: 'papaver-rhoeas' }, { speciesId: 'papaver-rhoeas' }])
 
@@ -64,15 +64,22 @@ test('a duplicate travels to the other phone once and leaves the sender', async 
   await expect(page.getByRole('heading', { level: 1, name: 'Regalo pronto' })).toBeVisible()
   await expect(page.getByText('«Il primo di novembre, per te»')).toBeVisible()
   await axe(page, testInfo)
+
+  // Not sent yet: Coppia keeps it until it leaves the phone, then it is gone (the chat keeps it).
+  await page.goto('./coppia')
+  await page.getByRole('link', { name: /Papavero comune.*Invia/ }).click()
+  await expect(page.getByRole('heading', { level: 1, name: 'Regalo da inviare' })).toBeVisible()
   await page.getByRole('button', { name: 'Invia il regalo' }).click()
+  await expect(page.getByText(/^Inviato\./)).toBeVisible()
   const link = await lastShared(page)
   expect(link).toMatch(/\/floradeck\/regalo#g1\./)
+  await page.goto('./coppia')
+  await expect(page.getByRole('heading', { name: 'Regali' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Da inviare' })).toHaveCount(0)
 
-  // The duplicate has left phone A: one papavero is left, and the gift can be sent again from Coppia.
+  // The duplicate has left phone A.
   await page.goto(`./carta/${duplicate}`)
   await expect(page.getByRole('heading', { name: 'Carta non trovata' })).toBeVisible()
-  await page.goto('./coppia')
-  await expect(page.getByRole('link', { name: /Papavero comune.*Rimanda/ })).toBeVisible()
 
   // Phone B opens the link and adds the card.
   const other = await phone(browser, testInfo)
@@ -92,12 +99,23 @@ test('a duplicate travels to the other phone once and leaves the sender', async 
   await page.goto(link)
   await expect(page.getByRole('heading', { name: 'È un regalo che hai fatto tu' })).toBeVisible()
 
-  // Phone B's Coppia lists the gift, and its diary marks it.
-  await other.goto('./coppia')
-  await expect(other.getByRole('link', { name: /Papavero comune.*da Gianni/ })).toBeVisible()
+  // Phone B's diary marks it.
   await other.goto('./diario')
   await expect(other.getByRole('link', { name: /Papavero comune.*Regalo/ })).toBeVisible()
   await other.context().close()
+})
+
+test('the only card of a species can be given too, and the species is missing again', async ({ page }) => {
+  const [only] = await seed(page, [{ speciesId: 'bellis-perennis' }])
+  await page.goto(`./carta/${only}`)
+  await page.getByRole('button', { name: 'Regala questa carta' }).click()
+  const sheet = page.getByRole('dialog', { name: 'Regala questa carta' })
+  await expect(sheet.getByText('È la tua unica carta di Pratolina')).toBeVisible()
+  await sheet.getByLabel('Il tuo nome').fill('Gianni')
+  await sheet.getByRole('button', { name: 'Crea il regalo' }).click()
+  await expect(page.getByRole('heading', { level: 1, name: 'Regalo pronto' })).toBeVisible()
+  await page.goto('./album/bianchi')
+  await expect(page.getByText('0 di 45')).toBeVisible()
 })
 
 test('progress travels by link and fills the couple album', async ({ page, browser }, testInfo) => {

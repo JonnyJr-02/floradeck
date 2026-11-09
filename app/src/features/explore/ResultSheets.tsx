@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link } from 'wouter'
 import { species, speciesById } from '../../domain/catalog'
 import { identifyPlant, useAllPlants, type PlantName } from '../../recognition/allPlants'
+import { plantPhoto, type PlantPhoto } from '../../recognition/plantPhotos'
 import type { Candidate } from '../../recognition/types'
-import { IconChevron } from '../../ui/icons'
+import { IconChevron, IconLeaf } from '../../ui/icons'
 import { IN_APP } from '../../ui/Page'
 import { Sheet } from '../../ui/Sheet'
 import { SpeciesPicture } from '../../ui/SpeciesPicture'
@@ -83,6 +84,79 @@ const catalogueNames = new Map(
 
 type Search = { step: 'idle' } | { step: 'searching'; progress: number } | { step: 'done'; names: PlantName[] } | { step: 'failed' }
 
+/** A photo for a name found: the card's own pictures when it is also a card, else iNaturalist's. */
+function NamePicture({ scientific, cardId, onCredit }: { scientific: string; cardId?: string; onCredit: (credit: string) => void }) {
+  const [photo, setPhoto] = useState<PlantPhoto | null>(null)
+  const [broken, setBroken] = useState(false)
+  useEffect(() => {
+    if (cardId) return
+    let live = true
+    plantPhoto(scientific).then(
+      (found) => {
+        if (!live) return
+        setPhoto(found)
+        if (found) onCredit(found.credit)
+      },
+      () => undefined,
+    )
+    return () => {
+      live = false
+    }
+  }, [scientific, cardId, onCredit])
+  if (cardId) return <SpeciesPicture speciesId={cardId} className="candidate__picture" />
+  return (
+    <span className="candidate__picture" aria-hidden="true">
+      {photo && !broken ? (
+        <img src={photo.url} alt="" decoding="async" referrerPolicy="no-referrer" onError={() => setBroken(true)} />
+      ) : (
+        <IconLeaf className="candidate__placeholder" />
+      )}
+    </span>
+  )
+}
+
+function NameResult({ name, cardId }: { name: PlantName; cardId?: string }) {
+  const [credit, setCredit] = useState('')
+  return (
+    <a
+      className="candidate press"
+      href={`https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(name.scientific)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <NamePicture scientific={name.scientific} cardId={cardId} onCredit={setCredit} />
+      <span className="min-w-0">
+        <span className="block font-medium leading-tight">
+          {name.italian ? name.italian.charAt(0).toUpperCase() + name.italian.slice(1) : name.scientific}
+        </span>
+        {name.italian ? <span className="block text-[0.8125rem] italic text-muted">{name.scientific}</span> : null}
+        {cardId ? (
+          <span className="mt-0.5 block text-[0.8125rem] text-accent">È anche una figurina: riprova la foto più da vicino.</span>
+        ) : null}
+        {credit ? (
+          <span className="mt-1 block text-[0.6875rem] leading-tight text-muted">
+            Foto:{' '}
+            {credit.split(' · ').map((part, i) => (
+              <span key={part}>
+                {i > 0 ? ' · ' : ''}
+                {/* The licence ("CC BY-NC-SA") never breaks at its hyphens. */}
+                <span className={i === 1 ? 'whitespace-nowrap' : undefined}>{part}</span>
+              </span>
+            ))}
+          </span>
+        ) : null}
+      </span>
+      <span className="grid justify-items-end gap-1">
+        <span className="font-semibold tabular-nums">
+          <span className="sr-only">probabilità </span>
+          {share(name.confidence)}
+        </span>
+        <IconChevron className="size-[1.125rem] text-muted" />
+      </span>
+    </a>
+  )
+}
+
 /** The optional name search among 7,806 species: only on request, after a confirming tap. */
 function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean }) {
   const { state } = useAllPlants()
@@ -111,41 +185,19 @@ function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean })
         <h3 id="names-title" className="text-[1.25rem] leading-tight">
           Forse è…
         </h3>
-        <ul role="list" className="mt-3 grid gap-2" aria-label="I nomi più probabili">
+        <ul role="list" className="mt-3 grid gap-2.5" aria-label="I nomi più probabili">
           {search.names.map((name) => {
             const card = catalogueNames.get(name.scientific.toLowerCase())
             return (
               <li key={name.scientific}>
-                <a
-                  className="choice press"
-                  href={`https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(name.scientific)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                <span className="min-w-0">
-                  <span className="block font-medium leading-tight">
-                    {name.italian ? name.italian.charAt(0).toUpperCase() + name.italian.slice(1) : name.scientific}
-                  </span>
-                  {name.italian ? <span className="block text-[0.8125rem] italic text-muted">{name.scientific}</span> : null}
-                  {card ? (
-                    <span className="mt-0.5 block text-[0.8125rem] text-accent">
-                      È anche una figurina: riprova la foto più da vicino.
-                    </span>
-                  ) : null}
-                </span>
-                <span className="font-semibold tabular-nums">
-                  <span className="sr-only">probabilità </span>
-                  {share(name.confidence)}
-                </span>
-                <IconChevron className="size-[1.125rem] text-muted" />
-                </a>
+                <NameResult name={name} cardId={card?.id} />
               </li>
             )
           })}
         </ul>
         <p className="mt-2 text-[0.8125rem] leading-snug text-muted">
-          Solo un&apos;indicazione: non è tra le figurine, quindi niente carta. Tocca un nome per leggerne su
-          Wikipedia (serve la rete).
+          Solo un&apos;indicazione: non è tra le figurine, quindi niente carta. Con la rete arrivano le foto da
+          iNaturalist; tocca un nome per leggerne su Wikipedia.
         </p>
       </section>
     )
@@ -206,7 +258,7 @@ export function OutOfCatalogSheet({
   onAgain: () => void
 }) {
   return (
-    <Sheet open={open} labelledBy="out-title" onClose={onAgain}>
+    <Sheet open={open} labelledBy="out-title" onClose={onAgain} tall>
       <h2 id="out-title" className="text-[1.75rem] leading-[1.05]">
         {afterNone ? 'Allora non è una figurina' : 'Non la trovo nel catalogo'}
       </h2>

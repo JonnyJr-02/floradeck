@@ -8,10 +8,20 @@ import { Sheet } from '../../ui/Sheet'
 const MESSAGE_MAX = 200
 
 /**
- * On a duplicate card: give it to the other player. The card leaves this collection when the gift
- * is made (CLAUDE.md, Gifts and couple), then the sent-gift page sends the link.
+ * At the bottom of any card: give it to the other player. The card leaves this collection when the
+ * gift is made (CLAUDE.md, Couple), then the sent-gift page sends the link.
  */
-export function GiveGift({ cardId, photo, speciesName }: { cardId: string; photo: PhotoRecord; speciesName: string }) {
+export function GiveGift({
+  cardId,
+  photo,
+  speciesName,
+  copies,
+}: {
+  cardId: string
+  photo: PhotoRecord
+  speciesName: string
+  copies: number
+}) {
   const [, navigate] = useLocation()
   const profile = useProfile()
   const partner = usePartner()
@@ -60,6 +70,11 @@ export function GiveGift({ cardId, photo, speciesName }: { cardId: string; photo
           {speciesName} con questa foto lascia la tua collezione e diventa un link da mandare a {partnerName}. Vale una
           volta sola: chi lo apre la trova tra le sue carte.
         </p>
+        {copies <= 1 ? (
+          <p className="notice mt-3 text-[0.875rem] leading-snug">
+            È la tua unica carta di {speciesName}: regalandola, la specie torna tra quelle da trovare.
+          </p>
+        ) : null}
         <form
           className="mt-5 grid gap-4"
           onSubmit={(event) => {

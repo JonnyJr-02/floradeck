@@ -78,9 +78,10 @@ export function usePartner(): Snapshot | undefined | null {
 export class GiftError extends Error {}
 
 /**
- * Turn one duplicate into a gift. The card (and its photo) leaves this collection at once, so a
- * duplicate cannot be given twice; the link is kept in sentGifts to send it again unchanged.
- * `photo` is the gift's small photo (~20 KB), prepared by the caller.
+ * Turn a card into a gift: any card, the last of its species too (then the species is missing again,
+ * as after deleting it). The card and its photo leave this collection at once, so a card cannot be
+ * given twice; the link waits in sentGifts until it has been sent, then only the chat keeps it.
+ * `photo` is the gift's small photo (under 18 KB), prepared by the caller.
  */
 export async function createGift(
   input: { cardId: string; message: string; photo: { type: string; bytes: Uint8Array } },
@@ -91,8 +92,6 @@ export async function createGift(
   return database.transaction('rw', [database.cards, database.photos, database.settings, database.sentGifts], async () => {
     const card = await database.cards.get(input.cardId)
     if (!card) throw new GiftError('Questa carta non c’è più.')
-    const copies = await database.cards.where('speciesId').equals(card.speciesId).count()
-    if (copies < 2) throw new GiftError('Si possono regalare solo i doppioni: questa è la tua unica carta di questa specie.')
     const gift: Gift = {
       giftId: crypto.randomUUID(),
       speciesId: card.speciesId,
@@ -171,10 +170,12 @@ export async function importGift(gift: Gift, photo: PreparedPhoto, database: Flo
   })
 }
 
-export function useSentGifts(): SentGiftRecord[] | undefined {
-  return useLiveQuery(() => defaultDb.sentGifts.orderBy('createdAt').reverse().toArray(), [])
+/** Once the link has left the phone (share sheet, copy or file) the gift is not kept: the chat has it. */
+export async function markGiftSent(giftId: string, database: FloraDeckDB = defaultDb): Promise<void> {
+  await database.sentGifts.delete(giftId)
 }
 
-export function useImportedGifts(): ImportedGiftRecord[] | undefined {
-  return useLiveQuery(async () => (await defaultDb.importedGifts.toArray()).sort((a, b) => b.importedAt.localeCompare(a.importedAt)), [])
+/** Gifts made but not sent yet. */
+export function useSentGifts(): SentGiftRecord[] | undefined {
+  return useLiveQuery(() => defaultDb.sentGifts.orderBy('createdAt').reverse().toArray(), [])
 }

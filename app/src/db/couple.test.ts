@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { decodeGift } from '../domain/share'
 import { createBackup, parseBackup, restoreBackup } from './backup'
 import { addCard, getCovers, setCover } from './collection'
-import { checkGift, createGift, getPartner, getProfile, importGift, saveProfile, savePartner } from './couple'
+import { checkGift, createGift, getPartner, getProfile, importGift, markGiftSent, saveProfile, savePartner } from './couple'
 import { FloraDeckDB } from './db'
 
 let alice: FloraDeckDB
@@ -80,10 +80,22 @@ describe('gifts between two phones', () => {
     expect(await bea.cards.count()).toBe(1)
   })
 
-  it('only gives duplicates', async () => {
+  it('gives the last card of a species too: the species is missing again', async () => {
     const only = await addCard(shot('bellis-perennis'), alice)
-    await expect(createGift({ cardId: only.card.id, message: '', photo: small }, alice)).rejects.toThrow(/solo i doppioni/)
-    expect(await alice.cards.count()).toBe(1)
+    const sent = await createGift({ cardId: only.card.id, message: '', photo: small }, alice)
+    expect(await alice.cards.where('speciesId').equals('bellis-perennis').count()).toBe(0)
+    expect(await alice.photos.count()).toBe(0)
+    expect(decodeGift(sent.payload).speciesId).toBe('bellis-perennis')
+  })
+
+  it('keeps a gift only until it has been sent', async () => {
+    await addCard(shot('papaver-rhoeas'), alice)
+    const sent = await createGift({ cardId: (await alice.cards.toArray())[0]!.id, message: '', photo: small }, alice)
+    expect(await alice.sentGifts.count()).toBe(1)
+    await markGiftSent(sent.giftId, alice)
+    expect(await alice.sentGifts.count()).toBe(0)
+    // Still its own gift for this phone: the profile id says so.
+    expect((await checkGift(sent.payload, alice)).status).toBe('own')
   })
 
   it('does not let the sender take its own gift back', async () => {

@@ -1,7 +1,7 @@
 import { useMemo, useState, type CSSProperties } from 'react'
 import { Link } from 'wouter'
 import { useCards } from '../../db/collection'
-import { forgetPartner, useImportedGifts, usePartner, useProfile, useSentGifts } from '../../db/couple'
+import { forgetPartner, usePartner, useProfile, useSentGifts } from '../../db/couple'
 import { albumById, speciesById } from '../../domain/catalog'
 import { formatFoundDate } from '../../domain/collection'
 import { coupleProgress, coupleTotal, foundSpecies } from '../../domain/couple'
@@ -24,60 +24,26 @@ function PlateThumb({ speciesId }: { speciesId: string }) {
   return <span className="journal-row__img">{url ? <img src={url} alt="" loading="lazy" data-plate="" /> : null}</span>
 }
 
+/** Gifts: how to give one, the paste bridge, and only the gifts made but not sent yet (no history). */
 function Gifts({ onPaste }: { onPaste: () => void }) {
-  const received = useImportedGifts()
-  const sent = useSentGifts()
+  const pending = useSentGifts()
   return (
     <section className="mt-9" aria-labelledby="gifts-title">
       <h2 id="gifts-title" className="text-[1.375rem] leading-tight">
         Regali
       </h2>
       <p className="mt-1 text-[0.875rem] text-muted">
-        Per regalare un doppione aprilo dall’album e tocca «Regala questa carta». Un regalo arrivato in chat si apre con il
-        link; se si apre nel posto sbagliato, incollalo qui.
+        Per regalare una carta aprila dall’album e tocca «Regala questa carta», in fondo. Un regalo arrivato in chat si apre
+        con il link; se si apre nel posto sbagliato, incollalo qui.
       </p>
       <button type="button" className="btn btn--ghost press mt-3" onClick={onPaste}>
         Incolla un link
       </button>
-      {received && received.length > 0 ? (
+      {pending && pending.length > 0 ? (
         <>
-          <h3 className="mt-6 text-[1.125rem] leading-tight">Ricevuti</h3>
+          <h3 className="mt-6 text-[1.125rem] leading-tight">Da inviare</h3>
           <ul role="list" className="mt-2 grid gap-2">
-            {received.map((gift) => {
-              const entry = gift.speciesId ? speciesById(gift.speciesId) : undefined
-              const row = (
-                <>
-                  {gift.speciesId ? <PlateThumb speciesId={gift.speciesId} /> : <span className="journal-row__img" />}
-                  <span className="min-w-0">
-                    <span className="block truncate font-medium leading-tight">{entry?.commonNameIt ?? 'Un regalo'}</span>
-                    <span className="mt-0.5 block truncate text-[0.8125rem] text-muted">
-                      {gift.from ? `da ${gift.from} · ` : ''}
-                      {formatFoundDate(gift.importedAt)}
-                    </span>
-                  </span>
-                  <span />
-                </>
-              )
-              return (
-                <li key={gift.giftId}>
-                  {gift.cardId ? (
-                    <Link href={`/carta/${gift.cardId}`} state={IN_APP} className="journal-row press">
-                      {row}
-                    </Link>
-                  ) : (
-                    <div className="journal-row">{row}</div>
-                  )}
-                </li>
-              )
-            })}
-          </ul>
-        </>
-      ) : null}
-      {sent && sent.length > 0 ? (
-        <>
-          <h3 className="mt-6 text-[1.125rem] leading-tight">Fatti da te</h3>
-          <ul role="list" className="mt-2 grid gap-2">
-            {sent.map((gift) => (
+            {pending.map((gift) => (
               <li key={gift.giftId}>
                 <Link href={`/coppia/regalo/${gift.giftId}`} state={IN_APP} className="journal-row press">
                   <PlateThumb speciesId={gift.speciesId} />
@@ -85,9 +51,11 @@ function Gifts({ onPaste }: { onPaste: () => void }) {
                     <span className="block truncate font-medium leading-tight">
                       {speciesById(gift.speciesId)?.commonNameIt ?? 'Specie non più nel catalogo'}
                     </span>
-                    <span className="mt-0.5 block truncate text-[0.8125rem] text-muted">{formatFoundDate(gift.createdAt)}</span>
+                    <span className="mt-0.5 block truncate text-[0.8125rem] text-muted">
+                      Preparato il {formatFoundDate(gift.createdAt)}
+                    </span>
                   </span>
-                  <span className="shrink-0 text-[0.75rem] font-semibold text-muted">Rimanda</span>
+                  <span className="shrink-0 text-[0.75rem] font-semibold text-accent">Invia</span>
                 </Link>
               </li>
             ))}

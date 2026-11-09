@@ -159,3 +159,12 @@ export function IconFlash(props: IconProps) {
     </Icon>
   )
 }
+
+export function IconLeaf(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z" />
+      <path d="M5 19 13 11" />
+    </Icon>
+  )
+}

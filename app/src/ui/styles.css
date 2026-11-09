@@ -642,6 +642,16 @@
     padding: 0.25rem;
     object-fit: contain;
   }
+  /* No photo for a name (offline, or none openly licensed): a quiet leaf keeps the row's shape. */
+  .candidate__picture {
+    color: #8f8672;
+  }
+  .candidate__placeholder {
+    width: 40%;
+    height: 40%;
+    margin: 30%;
+    opacity: 0.6;
+  }
   /* A proposal of the all-plants names list. */
   .choice {
     display: grid;

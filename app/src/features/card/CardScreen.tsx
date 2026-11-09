@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'wouter'
 import { setCover, useCard, useCovers, usePhotos, useSpeciesCards } from '../../db/collection'
-import type { PhotoRecord } from '../../db/db'
 import { speciesById } from '../../domain/catalog'
 import { formatFoundDate } from '../../domain/collection'
 import { IconClose } from '../../ui/icons'
@@ -34,17 +33,7 @@ export function closeDetail(navigate: (to: string, options?: { replace?: boolean
 }
 
 /** Your other photos of the same species, with the cover marked; any of them can become the cover. */
-function Copies({
-  speciesId,
-  speciesName,
-  currentId,
-  currentPhoto,
-}: {
-  speciesId: string
-  speciesName: string
-  currentId: string
-  currentPhoto: PhotoRecord | undefined
-}) {
+function Copies({ speciesId, currentId }: { speciesId: string; currentId: string }) {
   const cards = useSpeciesCards(speciesId)
   const covers = useCovers()
   const photos = usePhotos((cards ?? []).flatMap((card) => (card.photoId ? [card.photoId] : [])))
@@ -56,7 +45,7 @@ function Copies({
         Le tue foto ({cards.length})
       </h2>
       <p className="mt-1 text-[0.875rem] text-muted">
-        La copertina rappresenta la specie nell&apos;album; le altre sono doppioni da regalare.
+        La copertina rappresenta la specie nell&apos;album; le altre sono doppioni.
       </p>
       <ul role="list" className="copies mt-3">
         {cards.map((card) => (
@@ -75,14 +64,11 @@ function Copies({
           </li>
         ))}
       </ul>
-      <div className="mt-4 grid gap-2.5">
-        {currentId !== coverId ? (
-          <button type="button" className="btn btn--ghost press" onClick={() => void setCover(speciesId, currentId)}>
-            Usa questa foto come copertina
-          </button>
-        ) : null}
-        {currentPhoto ? <GiveGift cardId={currentId} photo={currentPhoto} speciesName={speciesName} /> : null}
-      </div>
+      {currentId !== coverId ? (
+        <button type="button" className="btn btn--ghost press mt-4" onClick={() => void setCover(speciesId, currentId)}>
+          Usa questa foto come copertina
+        </button>
+      ) : null}
     </section>
   )
 }
@@ -193,9 +179,19 @@ export function CardScreen() {
           </Link>
         </div>
 
-        <Copies speciesId={entry.id} speciesName={entry.commonNameIt} currentId={data.card.id} currentPhoto={data.photo} />
+        <Copies speciesId={entry.id} currentId={data.card.id} />
         <SpeciesSheet entry={entry} />
-        <DeleteCard cardId={data.card.id} copies={data.copies} speciesName={entry.commonNameIt} albumHref={albumHref} />
+        <DeleteCard
+          cardId={data.card.id}
+          copies={data.copies}
+          speciesName={entry.commonNameIt}
+          albumHref={albumHref}
+          gift={
+            data.photo ? (
+              <GiveGift cardId={data.card.id} photo={data.photo} speciesName={entry.commonNameIt} copies={data.copies} />
+            ) : null
+          }
+        />
       </section>
     </main>
   )
