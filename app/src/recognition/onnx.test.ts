@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { topNames } from './allPlants'
+import { stageProgress, topNames } from './allPlants'
 import { excludedClasses, maxSimilarity } from './onnx'
 
 describe('trained model wiring', () => {
@@ -19,5 +19,13 @@ describe('trained model wiring', () => {
       { scientific: 'B b', italian: 'Bi', confidence: 0.7 },
       { scientific: 'C c', italian: 'Ci', confidence: 0.2 },
     ])
+  })
+
+  it('maps the big model stages onto one progress bar that never reaches 100% before the end', () => {
+    expect(stageProgress('load', 0)).toBe(0)
+    expect(stageProgress('load', 1)).toBeCloseTo(0.3)
+    expect(stageProgress('prepare', 0.5)).toBeCloseTo(0.45)
+    expect(stageProgress('run', 1)).toBeCloseTo(0.97)
+    expect(stageProgress('run', 5)).toBeCloseTo(0.97)
   })
 })

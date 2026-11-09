@@ -1,29 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- FloraDeck icon B "Mirino" (picked by the user on 2026-11-09): a poppy framed by a viewfinder. -->
   <rect width="512" height="512" rx="116" fill="#f2ede3"/>
+  <g fill="none" stroke="#0f1320" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 176v-40a32 32 0 0 1 32-32h40"/>
+    <path d="M336 104h40a32 32 0 0 1 32 32v40"/>
+    <path d="M408 336v40a32 32 0 0 1-32 32h-40"/>
+    <path d="M176 408h-40a32 32 0 0 1-32-32v-40"/>
+  </g>
   <g transform="translate(256 256)">
     <g fill="#a83e2b">
-      <circle cx="0" cy="-74" r="88"/>
-      <circle cx="74" cy="0" r="88"/>
-      <circle cx="0" cy="74" r="88"/>
-      <circle cx="-74" cy="0" r="88"/>
+      <circle cx="0" cy="-50" r="60"/>
+      <circle cx="50" cy="0" r="60"/>
+      <circle cx="0" cy="50" r="60"/>
+      <circle cx="-50" cy="0" r="60"/>
     </g>
     <g fill="#c25a40">
-      <circle cx="50" cy="-50" r="56"/>
-      <circle cx="50" cy="50" r="56"/>
-      <circle cx="-50" cy="50" r="56"/>
-      <circle cx="-50" cy="-50" r="56"/>
+      <circle cx="34" cy="-34" r="38"/>
+      <circle cx="34" cy="34" r="38"/>
+      <circle cx="-34" cy="34" r="38"/>
+      <circle cx="-34" cy="-34" r="38"/>
     </g>
-    <circle r="33" fill="#1d1a15"/>
-    <g fill="#1d1a15">
-      <circle cx="52" cy="0" r="7"/>
-      <circle cx="36.8" cy="36.8" r="7"/>
-      <circle cx="0" cy="52" r="7"/>
-      <circle cx="-36.8" cy="36.8" r="7"/>
-      <circle cx="-52" cy="0" r="7"/>
-      <circle cx="-36.8" cy="-36.8" r="7"/>
-      <circle cx="0" cy="-52" r="7"/>
-      <circle cx="36.8" cy="-36.8" r="7"/>
-    </g>
-    <circle r="13" fill="#6f7a45"/>
+    <circle r="22" fill="#1d1a15"/>
   </g>
 </svg>

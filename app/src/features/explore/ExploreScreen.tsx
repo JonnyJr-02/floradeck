@@ -4,7 +4,7 @@ import { addCard } from '../../db/collection'
 import { decodeFile, preparePhoto, type PhotoSource, type PreparedPhoto } from '../../photo/photo'
 import { recognizer } from '../../recognition/recognizer'
 import type { Candidate, Recognition } from '../../recognition/types'
-import { IconCamera, IconGallery } from '../../ui/icons'
+import { IconCamera, IconFlash, IconGallery } from '../../ui/icons'
 import { SettingsLink } from '../../ui/Page'
 import { setStatusBarOverride } from '../../ui/theme'
 import { InstallNudge } from '../settings/InstallNudge'
@@ -61,7 +61,7 @@ function CameraPrompt({ status, onStart }: { status: CameraStatus; onStart: () =
 
 export function ExploreScreen() {
   const [, navigate] = useLocation()
-  const { videoRef, status, start } = useCamera()
+  const { videoRef, status, start, torchAvailable, torchOn, setTorch } = useCamera()
   const [flow, setFlow] = useState<Flow>({ step: 'aim' })
   const [problem, setProblem] = useState<string | null>(null)
   // «Nessuna di queste» in «Non sono sicuro»: treat the shot as outside the catalogue.
@@ -221,7 +221,20 @@ export function ExploreScreen() {
           disabled={status !== 'live' || flow.step !== 'aim'}
           onClick={shoot}
         />
-        <span className="size-11" aria-hidden="true" />
+        {torchAvailable && status === 'live' ? (
+          <button
+            type="button"
+            className="round-btn press"
+            aria-label="Luce"
+            aria-pressed={torchOn}
+            data-on={torchOn || undefined}
+            onClick={() => void setTorch(!torchOn)}
+          >
+            <IconFlash />
+          </button>
+        ) : (
+          <span className="size-11" aria-hidden="true" />
+        )}
         <input
           ref={fileRef}
           type="file"

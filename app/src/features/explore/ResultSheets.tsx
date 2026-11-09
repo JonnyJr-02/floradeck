@@ -6,6 +6,7 @@ import type { Candidate } from '../../recognition/types'
 import { IconChevron } from '../../ui/icons'
 import { IN_APP } from '../../ui/Page'
 import { Sheet } from '../../ui/Sheet'
+import { SpeciesPicture } from '../../ui/SpeciesPicture'
 
 const percent = new Intl.NumberFormat('it-IT', { style: 'percent', maximumFractionDigits: 0 })
 /** "48%", or "<1%" rather than a misleading 0%. */
@@ -32,29 +33,32 @@ export function UnsureSheet({
   onAgain: () => void
 }) {
   return (
-    <Sheet open={open} labelledBy="unsure-title" onClose={onAgain}>
+    <Sheet open={open} labelledBy="unsure-title" onClose={onAgain} tall>
       <h2 id="unsure-title" className="text-[1.75rem] leading-[1.05]">
         Non sono sicuro
       </h2>
       <p className="mt-1.5 text-[0.875rem] leading-snug text-muted">
-        Potrebbe essere una di queste. Scegli quella giusta, oppure scatta di nuovo più da vicino.
+        Potrebbe essere una di queste: confronta le foto e scegli quella giusta, oppure scatta di nuovo più da vicino.
       </p>
-      <ul role="list" className="mt-4 grid gap-2" aria-label="Le specie più probabili">
+      <ul role="list" className="mt-4 grid gap-2.5" aria-label="Le specie più probabili">
         {candidates.map((candidate) => {
           const entry = speciesById(candidate.speciesId)
           if (!entry) return null
           return (
             <li key={candidate.speciesId}>
-              <button type="button" className="choice press" onClick={() => onPick(candidate)}>
+              <button type="button" className="candidate press" onClick={() => onPick(candidate)}>
+                <SpeciesPicture speciesId={candidate.speciesId} className="candidate__picture" />
                 <span className="min-w-0">
                   <span className="block font-medium leading-tight">{entry.commonNameIt}</span>
                   <span className="block text-[0.8125rem] italic text-muted">{entry.scientificName}</span>
                 </span>
-                <span className="font-semibold tabular-nums">
-                  <span className="sr-only">probabilità </span>
-                  {share(candidate.confidence)}
+                <span className="grid justify-items-end gap-1">
+                  <span className="font-semibold tabular-nums">
+                    <span className="sr-only">probabilità </span>
+                    {share(candidate.confidence)}
+                  </span>
+                  <IconChevron className="size-[1.125rem] text-muted" />
                 </span>
-                <IconChevron className="size-[1.125rem] text-muted" />
               </button>
             </li>
           )
@@ -77,7 +81,7 @@ const catalogueNames = new Map(
   species.flatMap((entry) => [entry.scientificName, ...entry.modelLabels].map((name) => [name.toLowerCase(), entry] as const)),
 )
 
-type Search = { step: 'idle' } | { step: 'searching' } | { step: 'done'; names: PlantName[] } | { step: 'failed' }
+type Search = { step: 'idle' } | { step: 'searching'; progress: number } | { step: 'done'; names: PlantName[] } | { step: 'failed' }
 
 /** The optional name search among 7,806 species: only on request, after a confirming tap. */
 function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean }) {
@@ -111,7 +115,13 @@ function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean })
           {search.names.map((name) => {
             const card = catalogueNames.get(name.scientific.toLowerCase())
             return (
-              <li key={name.scientific} className="choice">
+              <li key={name.scientific}>
+                <a
+                  className="choice press"
+                  href={`https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(name.scientific)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <span className="min-w-0">
                   <span className="block font-medium leading-tight">
                     {name.italian ? name.italian.charAt(0).toUpperCase() + name.italian.slice(1) : name.scientific}
@@ -127,13 +137,15 @@ function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean })
                   <span className="sr-only">probabilità </span>
                   {share(name.confidence)}
                 </span>
-                <span aria-hidden="true" />
+                <IconChevron className="size-[1.125rem] text-muted" />
+                </a>
               </li>
             )
           })}
         </ul>
         <p className="mt-2 text-[0.8125rem] leading-snug text-muted">
-          Solo un&apos;indicazione: non è tra le figurine, quindi niente carta.
+          Solo un&apos;indicazione: non è tra le figurine, quindi niente carta. Tocca un nome per leggerne su
+          Wikipedia (serve la rete).
         </p>
       </section>
     )
@@ -145,15 +157,31 @@ function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean })
         className="btn btn--ghost press"
         disabled={search.step === 'searching'}
         onClick={() => {
-          setSearch({ step: 'searching' })
-          identifyPlant(photo).then(
+          setSearch({ step: 'searching', progress: 0 })
+          identifyPlant(photo, (progress) =>
+            setSearch((current) => (current.step === 'searching' ? { step: 'searching', progress } : current)),
+          ).then(
             (names) => setSearch({ step: 'done', names }),
             () => setSearch({ step: 'failed' }),
           )
         }}
       >
-        {search.step === 'searching' ? 'Sto cercando tra 7.806 specie…' : 'Cerca il nome tra tutte le piante'}
+        {search.step === 'searching'
+          ? `Sto cercando tra 7.806 specie… ${Math.round(search.progress * 100)} %`
+          : 'Cerca il nome tra tutte le piante'}
       </button>
+      {search.step === 'searching' ? (
+        <span
+          className="track mt-3"
+          role="progressbar"
+          aria-label="Avanzamento della ricerca"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(search.progress * 100)}
+        >
+          <i style={{ width: `${search.progress * 100}%` }} />
+        </span>
+      ) : null}
       <p className="mt-2 text-[0.8125rem] leading-snug text-muted" role="status">
         {search.step === 'failed'
           ? 'Non sono riuscito a cercare il nome. Riprova.'

@@ -1,7 +1,7 @@
 {
   "name": "floradeck-app",
   "private": true,
-  "version": "0.7.0",
+  "version": "0.7.1",
   "type": "module",
   "description": "FloraDeck PWA: Italian wild flowers and plants as trading cards, for two.",
   "scripts": {

@@ -8,7 +8,7 @@ import * as ort from 'onnxruntime-web/wasm'
 import mjsUrl from 'onnxruntime-web/ort-wasm-simd-threaded.mjs?url'
 import wasmUrl from 'onnxruntime-web/ort-wasm-simd-threaded.wasm?url'
 import { allPlantsView, catalogueView, rgbaToRgb, toTensor, type View } from './preprocess'
-import type { WorkerRequest, WorkerResponse } from './workerProtocol'
+import type { WorkerProgress, WorkerRequest, WorkerResponse } from './workerProtocol'
 
 ort.env.wasm.wasmPaths = { mjs: mjsUrl, wasm: wasmUrl }
 ort.env.wasm.numThreads = 1
@@ -48,14 +48,20 @@ async function fetchBytes(url: string): Promise<Uint8Array> {
   return new Uint8Array(await response.arrayBuffer())
 }
 
-async function cachedParts(cacheName: string, urls: string[]): Promise<Uint8Array> {
+function report(id: number, progress: WorkerProgress['progress']) {
+  self.postMessage({ id, progress } satisfies WorkerProgress)
+}
+
+async function cachedParts(cacheName: string, urls: string[], id: number): Promise<Uint8Array> {
   const cache = await caches.open(cacheName)
   const parts: Uint8Array[] = []
-  for (const url of urls) {
+  for (const [i, url] of urls.entries()) {
     const response = await cache.match(url)
     if (!response) throw new Error('all-plants model not downloaded')
     parts.push(new Uint8Array(await response.arrayBuffer()))
+    report(id, { stage: 'load', fraction: (i + 1) / urls.length })
   }
+  report(id, { stage: 'prepare' })
   const joined = new Uint8Array(parts.reduce((sum, part) => sum + part.length, 0))
   let offset = 0
   for (const part of parts) {
@@ -79,7 +85,8 @@ async function handle(request: WorkerRequest): Promise<WorkerResponse> {
     }
     return { id: request.id, ok: true, logits, embeddings }
   }
-  const model = await session('allplants', () => cachedParts(request.cacheName, request.partUrls))
+  const model = await session('allplants', () => cachedParts(request.cacheName, request.partUrls, request.id))
+  report(request.id, { stage: 'run' })
   const data = toTensor(allPlantsView(rgb, request.size), request.mean, request.std)
   const output = await model.run({ image: new ort.Tensor('float32', data, [1, 3, request.size, request.size]) })
   scheduleRelease('allplants')

@@ -151,3 +151,11 @@ export function IconLock(props: IconProps) {
     </Icon>
   )
 }
+
+export function IconFlash(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M13 3 5.5 13.5H11L10 21l7.5-10.5H12L13 3z" />
+    </Icon>
+  )
+}

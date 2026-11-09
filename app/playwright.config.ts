@@ -13,6 +13,8 @@ export default defineConfig({
   use: {
     baseURL,
     trace: 'retain-on-failure',
+    // The monthly season screen is switched off for every test except the one that checks it.
+    storageState: 'e2e/storage.json',
   },
   projects: [
     // Android: the Google Chrome installed on this PC, with a Pixel 7 screen and touch.

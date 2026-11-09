@@ -43,11 +43,16 @@ export function useCamera() {
   /** Only the latest getUserMedia call may keep its stream (StrictMode, quick taps). */
   const requestRef = useRef(0)
   const [status, setStatus] = useState<CameraStatus>(() => (cameraSupported() ? 'off' : 'unavailable'))
+  /** The phone's flash as a steady light ("torch"), where the browser exposes it (Android Chrome). */
+  const [torchAvailable, setTorchAvailable] = useState(false)
+  const [torchOn, setTorchOn] = useState(false)
 
   const stopTracks = useCallback(() => {
     streamRef.current?.getTracks().forEach((track) => track.stop())
     streamRef.current = null
     if (videoRef.current) videoRef.current.srcObject = null
+    setTorchAvailable(false)
+    setTorchOn(false)
   }, [])
 
   const start = useCallback(async () => {
@@ -74,6 +79,9 @@ export function useCamera() {
       }
       rememberAllowed(true)
       setStatus('live')
+      const track = stream.getVideoTracks()[0]
+      const capabilities = (track?.getCapabilities?.() ?? {}) as MediaTrackCapabilities & { torch?: boolean }
+      setTorchAvailable(capabilities.torch === true)
     } catch (error) {
       if (request !== requestRef.current) return
       stopTracks()
@@ -120,5 +128,17 @@ export function useCamera() {
     return () => document.removeEventListener('visibilitychange', onVisibility)
   }, [start, stopTracks])
 
-  return { videoRef, status, start, stop }
+  const setTorch = useCallback(async (on: boolean) => {
+    const track = streamRef.current?.getVideoTracks()[0]
+    if (!track) return
+    try {
+      await track.applyConstraints({ advanced: [{ torch: on } as MediaTrackConstraintSet] })
+      setTorchOn(on)
+    } catch {
+      setTorchAvailable(false)
+      setTorchOn(false)
+    }
+  }, [])
+
+  return { videoRef, status, start, stop, torchAvailable, torchOn, setTorch }
 }

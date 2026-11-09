@@ -15,16 +15,24 @@ export type WorkerResponse =
   | { id: number; ok: true; logits: Float32Array[]; embeddings: Float32Array[] }
   | { id: number; ok: false; error: string }
 
+/** Sent while the all-plants model is read (real bytes), prepared and run (start of each stage). */
+export type WorkerProgress = { id: number; progress: { stage: 'load'; fraction: number } | { stage: 'prepare' | 'run' } }
+
 let worker: Worker | null = null
 let nextId = 1
-const pending = new Map<number, { resolve: (r: WorkerResponse) => void }>()
+const pending = new Map<number, { resolve: (r: WorkerResponse) => void; progress?: (p: WorkerProgress['progress']) => void }>()
 
 function getWorker(): Worker {
   if (!worker) {
     worker = new Worker(new URL('./inference.worker.ts', import.meta.url), { type: 'module' })
-    worker.onmessage = (event: MessageEvent<WorkerResponse>) => {
-      pending.get(event.data.id)?.resolve(event.data)
-      pending.delete(event.data.id)
+    worker.onmessage = (event: MessageEvent<WorkerResponse | WorkerProgress>) => {
+      const message = event.data
+      if ('progress' in message) {
+        pending.get(message.id)?.progress?.(message.progress)
+        return
+      }
+      pending.get(message.id)?.resolve(message)
+      pending.delete(message.id)
     }
   }
   return worker
@@ -33,11 +41,15 @@ function getWorker(): Worker {
 type Request = WorkerRequest extends infer R ? (R extends WorkerRequest ? Omit<R, 'id'> : never) : never
 
 /** Send pixels to the inference worker; the pixel buffer is transferred, not copied. */
-export function runInWorker(request: Request): Promise<Extract<WorkerResponse, { ok: true }>> {
+export function runInWorker(
+  request: Request,
+  onProgress?: (progress: WorkerProgress['progress']) => void,
+): Promise<Extract<WorkerResponse, { ok: true }>> {
   const id = nextId++
   return new Promise((resolve, reject) => {
     pending.set(id, {
       resolve: (response) => (response.ok ? resolve(response) : reject(new Error(response.error))),
+      progress: onProgress,
     })
     getWorker().postMessage({ ...request, id }, [request.pixels.data.buffer])
   })

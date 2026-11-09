@@ -121,22 +121,85 @@ async function names(): Promise<Array<[string, string]>> {
   return namesCache
 }
 
+const TIMING_KEY = 'floradeck:allplants-timing'
+
+/** How long this phone took last time to prepare and to run the big model (ms). */
+function lastTiming(): { prepare: number; run: number } {
+  try {
+    const stored = JSON.parse(localStorage.getItem(TIMING_KEY) ?? 'null') as { prepare?: number; run?: number } | null
+    return { prepare: stored?.prepare ?? 4000, run: stored?.run ?? 6000 }
+  } catch {
+    return { prepare: 4000, run: 6000 }
+  }
+}
+
+function saveTiming(timing: { prepare: number; run: number }) {
+  try {
+    localStorage.setItem(TIMING_KEY, JSON.stringify(timing))
+  } catch {
+    // no storage: next time uses the default guess
+  }
+}
+
+/**
+ * Progress shown while the big model works: reading the model from the phone is measured (0–30 %);
+ * preparing it (30–60 %) and recognising (60–97 %) report no progress of their own, so they advance
+ * with the time this phone took last time, easing off near the end of each stage.
+ */
+export function stageProgress(stage: 'load' | 'prepare' | 'run', fraction: number): number {
+  const [from, to] = stage === 'load' ? [0, 0.3] : stage === 'prepare' ? [0.3, 0.6] : [0.6, 0.97]
+  return from + (to - from) * Math.max(0, Math.min(1, fraction))
+}
+
+const eased = (elapsed: number, expected: number) => 1 - Math.exp((-2 * elapsed) / Math.max(expected, 1))
+
 /** The three most likely names among the 7,806 species (a few seconds on a phone). */
-export async function identifyPlant(image: Blob): Promise<PlantName[]> {
+export async function identifyPlant(image: Blob, onProgress?: (fraction: number) => void): Promise<PlantName[]> {
   const manifest = await cachedManifest()
   if (!manifest) throw new Error('all-plants model not downloaded')
   const [pixels, classes] = await Promise.all([decodePixels(image), names()])
-  const result = await runInWorker({
-    kind: 'allplants',
-    pixels,
-    cacheName: ALL_PLANTS_CACHE,
-    partUrls: manifest.parts.map((part) => absolute(part.file)),
-    size: SIZE,
-    mean: MEAN,
-    std: STD,
-  })
-  const probabilities = softmax(result.logits[0]!)
-  return topNames(probabilities, classes, 3)
+  const expected = lastTiming()
+  const measured = { prepare: expected.prepare, run: expected.run }
+  // Changed from the worker's progress callback: kept in an object so TypeScript does not narrow it.
+  const now = { stage: 'load' as 'load' | 'prepare' | 'run', start: performance.now() }
+  let loadFraction = 0
+  const tick = () => {
+    const elapsed = performance.now() - now.start
+    const fraction = now.stage === 'load' ? loadFraction : eased(elapsed, expected[now.stage])
+    onProgress?.(stageProgress(now.stage, fraction))
+  }
+  const timer = onProgress ? setInterval(tick, 200) : undefined
+  try {
+    const result = await runInWorker(
+      {
+        kind: 'allplants',
+        pixels,
+        cacheName: ALL_PLANTS_CACHE,
+        partUrls: manifest.parts.map((part) => absolute(part.file)),
+        size: SIZE,
+        mean: MEAN,
+        std: STD,
+      },
+      (progress) => {
+        const at = performance.now()
+        if (progress.stage === 'load') {
+          loadFraction = progress.fraction
+        } else {
+          if (now.stage === 'prepare') measured.prepare = at - now.start
+          now.stage = progress.stage
+          now.start = at
+        }
+        tick()
+      },
+    )
+    if (now.stage === 'run') measured.run = performance.now() - now.start
+    saveTiming(measured)
+    onProgress?.(1)
+    const probabilities = softmax(result.logits[0]!)
+    return topNames(probabilities, classes, 3)
+  } finally {
+    if (timer) clearInterval(timer)
+  }
 }
 
 export function topNames(probabilities: readonly number[], classes: ReadonlyArray<readonly [string, string]>, count: number): PlantName[] {

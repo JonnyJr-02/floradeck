@@ -491,6 +491,11 @@
   .camera .round-btn:disabled {
     opacity: 0.45;
   }
+  /* The light, switched on: the button lights up too. */
+  .camera .round-btn[data-on] {
+    background: var(--color-camera-ink);
+    color: var(--color-camera);
+  }
   .nudge {
     display: flex;
     gap: 0.75rem;
@@ -560,63 +565,84 @@
   }
 
   /*
-   * Bottom sheet on a modal <dialog> (animate skill, "Drawer / sheet"): it slides up from its own
-   * height on the iOS-like drawer curve and leaves the same way. Without @starting-style or
-   * allow-discrete (older Safari) it simply appears and disappears.
+   * Bottom sheet in a layer of its own (animate skill, "Drawer / sheet"): it slides up from its own
+   * height on the iOS-like drawer curve and leaves the same way; the backdrop fades with it.
+   * Transitions, so a sheet closed mid-way turns back smoothly.
    */
-  .sheet {
+  .sheet-layer {
     position: fixed;
+    inset: 0;
+    z-index: 50;
+  }
+  .sheet-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 0.4);
+    opacity: 0;
+    transition: opacity 500ms var(--ease-drawer);
+  }
+  .sheet-layer[data-shown] .sheet-backdrop {
+    opacity: 1;
+  }
+  .sheet {
+    position: absolute;
     inset: auto 0 0;
     width: 100%;
     max-width: 30rem;
     max-height: min(88dvh, 42rem);
     margin: 0 auto;
-    padding: 0;
     overflow-y: auto;
     overscroll-behavior: contain;
-    border: 0;
     border-radius: 1.75rem 1.75rem 0 0;
     background: var(--p-bg);
     color: var(--p-ink);
     box-shadow: 0 -10px 30px rgb(0 0 0 / 0.22);
-    transform: translateY(0);
-    transition:
-      transform 500ms var(--ease-drawer),
-      overlay 500ms var(--ease-drawer) allow-discrete,
-      display 500ms var(--ease-drawer) allow-discrete;
-  }
-  .sheet:not([open]) {
     transform: translateY(100%);
+    transition: transform 500ms var(--ease-drawer);
+  }
+  .sheet-layer[data-shown] .sheet {
+    transform: translateY(0);
+  }
+  .sheet[data-tall] {
+    max-height: calc(100dvh - 1.5rem - env(safe-area-inset-top, 0px));
   }
   .sheet:focus {
     outline: none;
-  }
-  @starting-style {
-    .sheet[open] {
-      transform: translateY(100%);
-    }
-  }
-  .sheet::backdrop {
-    background: rgb(0 0 0 / 0.4);
-    opacity: 1;
-    transition:
-      opacity 500ms var(--ease-drawer),
-      overlay 500ms var(--ease-drawer) allow-discrete,
-      display 500ms var(--ease-drawer) allow-discrete;
-  }
-  .sheet:not([open])::backdrop {
-    opacity: 0;
-  }
-  @starting-style {
-    .sheet[open]::backdrop {
-      opacity: 0;
-    }
   }
   .sheet__body {
     padding: 1.5rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
   }
 
-  /* One of the three proposals in "Non sono sicuro". */
+  /* A proposal in "Non sono sicuro": a large photo to compare with, names, likelihood. */
+  .candidate {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.875rem;
+    width: 100%;
+    padding: 0.5rem 0.875rem 0.5rem 0.5rem;
+    border-radius: var(--radius-card);
+    background: var(--p-surface);
+    color: inherit;
+    text-align: left;
+  }
+  .candidate__picture {
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius-tile);
+    background: #f6f1e4;
+  }
+  .candidate__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .candidate__picture img[data-plate] {
+    padding: 0.25rem;
+    object-fit: contain;
+  }
+  /* A proposal of the all-plants names list. */
   .choice {
     display: grid;
     grid-template-columns: 1fr auto 1.125rem;
@@ -775,6 +801,14 @@
   /* The album's legendary slot: gold ring from the start, the holographic card once found. */
   .rare-slot.legendary-slot {
     box-shadow: inset 0 0 0 2px var(--gold-2);
+  }
+  /*
+   * The monthly season screen (animate skill: once a month, so a short welcome is allowed): the
+   * plates rise in one after another, 40 ms apart; reduced motion keeps a fade.
+   */
+  .season-intro__item {
+    animation: rise 300ms var(--ease-out) both;
+    animation-delay: calc(120ms + var(--i, 0) * 40ms);
   }
   .album-row {
     color: inherit;
@@ -1253,30 +1287,18 @@
       transition-duration: 200ms;
     }
     .sheet,
-    .sheet:not([open]) {
+    .sheet-layer[data-shown] .sheet {
       transform: none;
     }
     .sheet {
-      opacity: 1;
-      transition:
-        opacity 200ms ease,
-        overlay 200ms ease allow-discrete,
-        display 200ms ease allow-discrete;
-    }
-    .sheet:not([open]) {
       opacity: 0;
+      transition: opacity 200ms ease;
     }
-    @starting-style {
-      .sheet[open] {
-        transform: none;
-        opacity: 0;
-      }
+    .sheet-layer[data-shown] .sheet {
+      opacity: 1;
     }
-    .sheet::backdrop {
-      transition:
-        opacity 200ms ease,
-        overlay 200ms ease allow-discrete,
-        display 200ms ease allow-discrete;
+    .sheet-backdrop {
+      transition-duration: 200ms;
     }
     .card-view--reveal .card-view__hero {
       animation: fade 300ms ease both;
@@ -1309,6 +1331,9 @@
     }
     .petals {
       display: none;
+    }
+    .season-intro__item {
+      animation: fade 200ms ease both;
     }
   }
 }

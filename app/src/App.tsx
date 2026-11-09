@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Redirect, Route, Router, Switch, useLocation } from 'wouter'
 import { AlbumsScreen } from './features/albums/AlbumsScreen'
+import { SeasonIntro, useSeasonIntro } from './features/albums/SeasonIntro'
 import { AlbumScreen } from './features/albums/AlbumScreen'
 import { CardScreen } from './features/card/CardScreen'
 import { SpeciesScreen } from './features/card/SpeciesScreen'
@@ -24,6 +25,15 @@ function ScrollToTop() {
 }
 
 export function App() {
+  const season = useSeasonIntro()
+  if (season.due) {
+    return (
+      <>
+        <SeasonIntro onDone={season.dismiss} />
+        <PwaStatus />
+      </>
+    )
+  }
   return (
     <Router base={base}>
       <ScrollToTop />
