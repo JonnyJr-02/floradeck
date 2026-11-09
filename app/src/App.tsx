@@ -5,7 +5,9 @@ import { SeasonIntro, useSeasonIntro } from './features/albums/SeasonIntro'
 import { AlbumScreen } from './features/albums/AlbumScreen'
 import { CardScreen } from './features/card/CardScreen'
 import { SpeciesScreen } from './features/card/SpeciesScreen'
+import { CoupleAlbumScreen } from './features/couple/CoupleAlbumScreen'
 import { CoupleScreen } from './features/couple/CoupleScreen'
+import { ProgressImportScreen } from './features/couple/ProgressImportScreen'
 import { ReceiveGiftScreen } from './features/couple/ReceiveGiftScreen'
 import { SentGiftScreen } from './features/couple/SentGiftScreen'
 import { ExploreScreen } from './features/explore/ExploreScreen'
@@ -45,6 +47,8 @@ export function App() {
         <Route path="/diario" component={JournalScreen} />
         <Route path="/coppia" component={CoupleScreen} />
         <Route path="/coppia/regalo/:id" component={SentGiftScreen} />
+        <Route path="/coppia/album/:id" component={CoupleAlbumScreen} />
+        <Route path="/coppia/progressi" component={ProgressImportScreen} />
         <Route path="/regalo" component={ReceiveGiftScreen} />
         <Route path="/album/:id" component={AlbumScreen} />
         <Route path="/carta/:id" component={CardScreen} />

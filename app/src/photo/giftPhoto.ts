@@ -2,8 +2,8 @@ import { photoBlob } from '../db/collection'
 import type { PhotoRecord } from '../db/db'
 import { canEncodeWebp, fitWithin } from './photo'
 
-/** A gift travels inside a link: its photo is shrunk to about 20 KB (CLAUDE.md, Gifts and couple). */
-export const GIFT_PHOTO_MAX_BYTES = 22_000
+/** A gift travels inside a link, so its photo is shrunk under 18 KB (the spec asks for 15–20 KB). */
+export const GIFT_PHOTO_MAX_BYTES = 18_000
 const SIZES = [640, 560, 480, 400, 320] as const
 const QUALITIES = [0.72, 0.6, 0.5] as const
 

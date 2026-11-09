@@ -13,11 +13,6 @@ export function useGiftPhotoUrl(gift: Gift | undefined): string | undefined {
   return url
 }
 
-/** Only a plain hex colour from another phone reaches a style attribute. */
-export function safeColour(colour: string | undefined, fallback = 'var(--p-accent)'): string {
-  return colour && /^#[0-9a-f]{6}$/i.test(colour) ? colour : fallback
-}
-
 /** The gift as both phones see it: photo, who sends it, the species, the message. */
 export function GiftPreview({
   gift,

@@ -116,7 +116,7 @@ export function ReceiveGiftScreen() {
                 <ol className="steps mt-3 text-[0.9375rem]">
                   <li>Tocca «Copia il regalo».</li>
                   <li>Apri FloraDeck dalla schermata Home.</li>
-                  <li>In Coppia tocca «Incolla o apri un regalo».</li>
+                  <li>In Coppia tocca «Incolla un link».</li>
                 </ol>
               </section>
               <div className="mt-5 grid gap-2.5">

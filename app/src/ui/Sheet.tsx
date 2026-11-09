@@ -60,7 +60,11 @@ export function Sheet({
     const previous = document.activeElement as HTMLElement | null
     openSheets++
     setAppInert(true)
-    const focus = requestAnimationFrame(() => panelRef.current?.focus())
+    // Move focus into the sheet, unless something inside already has it (typing must not be cut).
+    const focus = requestAnimationFrame(() => {
+      const panel = panelRef.current
+      if (panel && !panel.contains(document.activeElement)) panel.focus()
+    })
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') closeRef.current()
     }

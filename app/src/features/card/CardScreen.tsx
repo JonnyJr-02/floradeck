@@ -150,9 +150,19 @@ export function CardScreen() {
         ) : null}
         <SpeciesTitle entry={entry} extraChips={duplicate ? <li className="chip">Doppione</li> : null} />
         <p className="reveal-item mt-3 text-[0.875rem] text-muted" style={at(4)}>
-          Trovata il {formatFoundDate(data.card.foundAt)}
-          {data.card.identifiedBy === 'user' ? ' · specie scelta da te' : ''}
-          {gift ? ` · regalo${gift.from ? ` di ${gift.from}` : ''}${gift.at ? `, arrivato il ${formatFoundDate(gift.at)}` : ''}` : ''}
+          {gift ? (
+            <>
+              Trovata{gift.from ? ` da ${gift.from}` : ''} il {formatFoundDate(data.card.foundAt)}
+              {gift.at && formatFoundDate(gift.at) !== formatFoundDate(data.card.foundAt)
+                ? ` · arrivata il ${formatFoundDate(gift.at)}`
+                : ''}
+            </>
+          ) : (
+            <>
+              Trovata il {formatFoundDate(data.card.foundAt)}
+              {data.card.identifiedBy === 'user' ? ' · specie scelta da te' : ''}
+            </>
+          )}
         </p>
         {gift?.message ? (
           <blockquote className="reveal-item gift__message" style={at(4)}>

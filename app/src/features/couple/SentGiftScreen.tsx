@@ -65,7 +65,7 @@ export function SentGiftScreen() {
           : `Preparato il ${formatFoundDate(record.createdAt)}. Se il link si è perso, rimandalo pure: vale sempre una volta sola.`}
       </p>
       <div className="mt-5">
-        <GiftPreview gift={gift} entry={entry} heading={gift.from ? `Da ${gift.from} per ${to}` : `Per ${to}`} />
+        <GiftPreview gift={gift} entry={entry} heading={[gift.from && `Da ${gift.from}`, partner?.name && `per ${partner.name}`].filter(Boolean).join(' ') || 'Il tuo regalo'} />
       </div>
       <div className="mt-6 grid gap-2.5">
         <button
@@ -91,8 +91,8 @@ export function SentGiftScreen() {
           Il link non arriva intero?
         </h2>
         <p className="mt-1 text-[0.875rem] text-muted">
-          Alcune chat accorciano i link lunghi. Manda il regalo come file: chi lo riceve lo apre da Coppia, con «Incolla o
-          apri un regalo».
+          Alcune chat accorciano i link lunghi. Manda il regalo come file: chi lo riceve lo salva e lo apre da Coppia, con
+          «Incolla un link».
         </p>
         <button type="button" className="btn btn--ghost press mt-3" onClick={() => void run(() => shareFile(url, fileName))}>
           Invia come file

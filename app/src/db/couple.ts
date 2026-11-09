@@ -1,4 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
+import { useEffect } from 'react'
 import type { PreparedPhoto } from '../photo/photo'
 import { decodeGift, encodeGift, type Gift, type Snapshot } from '../domain/share'
 import { db as defaultDb, type CardRecord, type FloraDeckDB, type ImportedGiftRecord, type SentGiftRecord } from './db'
@@ -15,13 +16,23 @@ export const PROFILE_COLOURS = ['#a83e2b', '#c9a24a', '#3d5fb8', '#5b7a3a', '#b4
 const PROFILE_KEY = 'profile'
 const PARTNER_KEY = 'partner'
 
-export async function getProfile(database: FloraDeckDB = defaultDb): Promise<Profile> {
+async function readProfile(database: FloraDeckDB): Promise<Profile | null> {
   const row = await database.settings.get(PROFILE_KEY)
   const stored = row?.value as Partial<Profile> | undefined
-  if (stored?.id) return { id: stored.id, name: stored.name ?? '', colour: stored.colour ?? PROFILE_COLOURS[0] }
-  const profile: Profile = { id: crypto.randomUUID(), name: '', colour: PROFILE_COLOURS[0] }
-  await database.settings.put({ key: PROFILE_KEY, value: profile })
-  return profile
+  return stored?.id ? { id: stored.id, name: stored.name ?? '', colour: stored.colour ?? PROFILE_COLOURS[0] } : null
+}
+
+/** This phone's profile, made on first use. */
+export async function getProfile(database: FloraDeckDB = defaultDb): Promise<Profile> {
+  return database.transaction('rw', database.settings, async () => {
+    const existing = await readProfile(database)
+    if (existing) return existing
+    // A random colour, so two new phones rarely start with the same one.
+    const colour = PROFILE_COLOURS[crypto.getRandomValues(new Uint8Array(1))[0]! % PROFILE_COLOURS.length]!
+    const profile: Profile = { id: crypto.randomUUID(), name: '', colour }
+    await database.settings.put({ key: PROFILE_KEY, value: profile })
+    return profile
+  })
 }
 
 export async function saveProfile(changes: Partial<Omit<Profile, 'id'>>, database: FloraDeckDB = defaultDb): Promise<Profile> {
@@ -31,8 +42,13 @@ export async function saveProfile(changes: Partial<Omit<Profile, 'id'>>, databas
   return profile
 }
 
+/** undefined while loading. Live queries may not write, so a missing profile is made outside. */
 export function useProfile(): Profile | undefined {
-  return useLiveQuery(() => getProfile(), [])
+  const profile = useLiveQuery(() => readProfile(defaultDb), [], undefined)
+  useEffect(() => {
+    if (profile === null) void getProfile()
+  }, [profile])
+  return profile ?? undefined
 }
 
 /** The partner's last progress snapshot (read-only), or undefined before pairing. */
