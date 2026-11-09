@@ -1,8 +1,10 @@
 /**
- * What travels between the two phones without a server (CLAUDE.md, Gifts and couple):
- * - a gift: one duplicate card with its photo, inside the URL fragment of a link (or a .floradeck file);
+ * What travels between the two phones without a server (CLAUDE.md, Couple):
+ * - a gift: since 2026-11-09 a picture (the card's photo plus a QR code holding the gift code, which
+ *   also carries the sender's progress). Chat apps deliver pictures whole; the older gift link (g1,
+ *   photo inside the URL fragment) was cut short by WhatsApp and stays readable for old links;
  * - a progress snapshot: profile plus one bit per catalogue species, small enough for a QR code.
- * The fragment never reaches the web server. Everything is checked on arrival.
+ * Everything is checked on arrival.
  */
 
 export const GIFT_PREFIX = 'g1.'
@@ -36,6 +38,9 @@ export function catalogueFingerprint(ids: readonly string[]): string {
 }
 
 // ---------- Gifts ----------
+
+/** A gift without its photo: what the gift code carries (the photo comes from the picture). */
+export type GiftInfo = Omit<Gift, 'photo'>
 
 export interface Gift {
   giftId: string
@@ -115,7 +120,84 @@ export function extractPayload(text: string, prefix: string): string | null {
   return match ? match[0] : null
 }
 
+// ---------- Gift codes (inside the QR code of a gift picture) ----------
+
+/** Longest message a gift carries: it must fit the QR code with room to spare. */
+export const GIFT_MESSAGE_MAX = 140
+
+export interface GiftCode {
+  gift: GiftInfo
+  /** The sender's progress at the time, when both apps share the catalogue. */
+  progress?: Snapshot
+}
+
+/** Compact JSON, raw in the QR code: {"fd":2, i: gift id, s: species, f/p: sender name/id, m, d/t: dates, progress fields}. */
+export function encodeGiftCode(gift: GiftInfo, progress: Snapshot | undefined, catalogue: readonly string[]): string {
+  const body: Record<string, unknown> = {
+    fd: 2,
+    i: gift.giftId,
+    s: gift.speciesId,
+    f: gift.from.slice(0, 40),
+    p: gift.fromId,
+    m: gift.message.slice(0, GIFT_MESSAGE_MAX),
+    d: gift.foundAt,
+    t: gift.sentAt,
+  }
+  if (progress) {
+    body.c = progress.colour
+    body.a = progress.at
+    body.h = catalogueFingerprint(catalogue)
+    body.b = toBase64Url(bitset(progress.found, catalogue))
+  }
+  return JSON.stringify(body)
+}
+
+export function isGiftCode(text: string): boolean {
+  return /^\s*\{\s*"fd"\s*:\s*2[,}]/.test(text)
+}
+
+export function decodeGiftCode(text: string, catalogue: readonly string[]): GiftCode {
+  let body: Record<string, unknown>
+  try {
+    body = JSON.parse(text) as Record<string, unknown>
+  } catch {
+    throw new ShareError('Questo non è un regalo di FloraDeck.')
+  }
+  if (body.fd !== 2) throw new ShareError('Questo non è un regalo di FloraDeck.')
+  const text_ = (key: string) => (typeof body[key] === 'string' ? (body[key] as string) : '')
+  if (!UUID.test(text_('i')) || !text_('s') || !text_('p')) throw new ShareError('Il regalo è danneggiato.')
+  const gift: GiftInfo = {
+    giftId: text_('i').toLowerCase(),
+    speciesId: text_('s'),
+    from: text_('f').slice(0, 40),
+    fromId: text_('p'),
+    message: text_('m').slice(0, GIFT_MESSAGE_MAX),
+    foundAt: text_('d'),
+    sentAt: text_('t'),
+  }
+  // Progress rides along only between apps with the same catalogue; a gift is fine without it.
+  const progress =
+    text_('b') && text_('h') === catalogueFingerprint(catalogue)
+      ? { profileId: gift.fromId, name: gift.from, colour: text_('c'), at: text_('a') || gift.sentAt, found: fromBitset(text_('b'), catalogue) }
+      : undefined
+  return { gift, progress }
+}
+
 // ---------- Progress snapshots ----------
+
+function bitset(found: readonly string[], catalogue: readonly string[]): Uint8Array {
+  const bits = new Uint8Array(Math.ceil(catalogue.length / 8))
+  const set = new Set(found)
+  catalogue.forEach((id, i) => {
+    if (set.has(id)) bits[i >> 3]! |= 1 << (i & 7)
+  })
+  return bits
+}
+
+function fromBitset(text: string, catalogue: readonly string[]): string[] {
+  const bits = fromBase64Url(text)
+  return catalogue.filter((_, i) => ((bits[i >> 3] ?? 0) >> (i & 7)) & 1)
+}
 
 export interface Snapshot {
   profileId: string
@@ -127,11 +209,7 @@ export interface Snapshot {
 }
 
 export function encodeSnapshot(snapshot: Snapshot, catalogue: readonly string[]): string {
-  const bits = new Uint8Array(Math.ceil(catalogue.length / 8))
-  const found = new Set(snapshot.found)
-  catalogue.forEach((id, i) => {
-    if (found.has(id)) bits[i >> 3]! |= 1 << (i & 7)
-  })
+  const bits = bitset(snapshot.found, catalogue)
   const header = {
     p: snapshot.profileId,
     n: snapshot.name.slice(0, 40),
@@ -156,8 +234,7 @@ export function decodeSnapshot(text: string, catalogue: readonly string[]): Snap
     throw new ShareError('Le due app hanno cataloghi diversi: aggiornatele tutte e due e riprova.')
   }
   if (typeof header.p !== 'string' || typeof header.b !== 'string') throw new ShareError('I progressi sono danneggiati.')
-  const bits = fromBase64Url(header.b)
-  const found = catalogue.filter((_, i) => ((bits[i >> 3] ?? 0) >> (i & 7)) & 1)
+  const found = fromBitset(header.b, catalogue)
   return {
     profileId: header.p,
     name: typeof header.n === 'string' ? header.n.slice(0, 40) : '',

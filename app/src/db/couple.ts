@@ -1,7 +1,8 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect } from 'react'
 import type { PreparedPhoto } from '../photo/photo'
-import { decodeGift, encodeGift, type Gift, type Snapshot } from '../domain/share'
+import { catalogueIds, mySnapshot } from '../domain/couple'
+import { decodeGift, encodeGiftCode, GIFT_MESSAGE_MAX, type Gift, type GiftInfo, type Snapshot } from '../domain/share'
 import { db as defaultDb, type CardRecord, type FloraDeckDB, type ImportedGiftRecord, type SentGiftRecord } from './db'
 
 /** This phone's player: a stable id (made once), a display name and a colour. */
@@ -79,35 +80,46 @@ export class GiftError extends Error {}
 
 /**
  * Turn a card into a gift: any card, the last of its species too (then the species is missing again,
- * as after deleting it). The card and its photo leave this collection at once, so a card cannot be
- * given twice; the link waits in sentGifts until it has been sent, then only the chat keeps it.
- * `photo` is the gift's small photo (under 18 KB), prepared by the caller.
+ * as after deleting it). The gift code (with this player's progress after the gift) goes into the
+ * picture that `render` draws; then, in one transaction, the card and its photo leave this
+ * collection, so a card cannot be given twice. The picture waits in sentGifts until it has been
+ * sent; then only the chat keeps it.
  */
 export async function createGift(
-  input: { cardId: string; message: string; photo: { type: string; bytes: Uint8Array } },
+  input: {
+    cardId: string
+    message: string
+    render: (gift: GiftInfo, code: string) => Promise<{ type: string; bytes: ArrayBuffer }>
+  },
   database: FloraDeckDB = defaultDb,
   now = new Date(),
 ): Promise<SentGiftRecord> {
   const profile = await getProfile(database)
+  const card = await database.cards.get(input.cardId)
+  if (!card) throw new GiftError('Questa carta non c’è più.')
+  const gift: GiftInfo = {
+    giftId: crypto.randomUUID(),
+    speciesId: card.speciesId,
+    from: profile.name,
+    fromId: profile.id,
+    message: input.message.trim().slice(0, GIFT_MESSAGE_MAX),
+    foundAt: card.foundAt,
+    sentAt: now.toISOString(),
+  }
+  const remaining = (await database.cards.toArray()).filter((other) => other.id !== card.id)
+  const code = encodeGiftCode(gift, mySnapshot(profile, remaining, now), catalogueIds)
+  // Drawing the picture is not a database step: it happens before the transaction opens.
+  const image = await input.render(gift, code)
   return database.transaction('rw', [database.cards, database.photos, database.settings, database.sentGifts], async () => {
-    const card = await database.cards.get(input.cardId)
-    if (!card) throw new GiftError('Questa carta non c’è più.')
-    const gift: Gift = {
-      giftId: crypto.randomUUID(),
-      speciesId: card.speciesId,
-      from: profile.name,
-      fromId: profile.id,
-      message: input.message.trim().slice(0, 200),
-      foundAt: card.foundAt,
-      sentAt: now.toISOString(),
-      photo: input.photo,
-    }
+    if (!(await database.cards.get(card.id))) throw new GiftError('Questa carta non c’è più.')
     const record: SentGiftRecord = {
       giftId: gift.giftId,
       speciesId: gift.speciesId,
       createdAt: gift.sentAt,
       message: gift.message,
-      payload: encodeGift(gift),
+      payload: code,
+      image: image.bytes,
+      imageType: image.type,
     }
     await database.sentGifts.add(record)
     if (card.photoId) await database.photos.delete(card.photoId)
@@ -120,13 +132,12 @@ export async function createGift(
 }
 
 export type GiftCheck =
-  | { status: 'new'; gift: Gift }
-  | { status: 'imported'; gift: Gift; cardId?: string }
-  | { status: 'own'; gift: Gift }
+  | { status: 'new'; gift: GiftInfo }
+  | { status: 'imported'; gift: GiftInfo; cardId?: string }
+  | { status: 'own'; gift: GiftInfo }
 
-/** What happens if this phone opens a gift link: new, already received, or one it gave itself. */
-export async function checkGift(text: string, database: FloraDeckDB = defaultDb): Promise<GiftCheck> {
-  const gift = decodeGift(text)
+/** What happens if this phone opens a gift: new, already received, or one it gave itself. */
+export async function checkGiftInfo(gift: GiftInfo, database: FloraDeckDB = defaultDb): Promise<GiftCheck> {
   const profile = await getProfile(database)
   if (gift.fromId === profile.id || (await database.sentGifts.get(gift.giftId))) return { status: 'own', gift }
   const imported = await database.importedGifts.get(gift.giftId)
@@ -134,8 +145,28 @@ export async function checkGift(text: string, database: FloraDeckDB = defaultDb)
   return { status: 'new', gift }
 }
 
+/** The same for an older gift link (g1). */
+export async function checkGift(text: string, database: FloraDeckDB = defaultDb): Promise<GiftCheck & { photo: Gift['photo'] }> {
+  const { photo, ...gift } = decodeGift(text)
+  return { ...(await checkGiftInfo(gift, database)), photo }
+}
+
+/**
+ * A gift also carries the sender's progress: it pairs the two phones when they are not paired yet,
+ * and refreshes the partner's progress; it never replaces a different partner.
+ */
+export async function receiveProgress(progress: Snapshot | undefined, database: FloraDeckDB = defaultDb): Promise<boolean> {
+  if (!progress) return false
+  const me = await getProfile(database)
+  const partner = await getPartner(database)
+  if (progress.profileId === me.id || (partner && partner.profileId !== progress.profileId)) return false
+  if (partner && partner.at && progress.at && partner.at > progress.at) return false
+  await database.settings.put({ key: PARTNER_KEY, value: progress })
+  return true
+}
+
 /** Add a received gift as a card; the giftId is recorded so the same link never counts twice. */
-export async function importGift(gift: Gift, photo: PreparedPhoto, database: FloraDeckDB = defaultDb, now = new Date()): Promise<CardRecord> {
+export async function importGift(gift: GiftInfo, photo: PreparedPhoto, database: FloraDeckDB = defaultDb, now = new Date()): Promise<CardRecord> {
   const profile = await getProfile(database)
   if (gift.fromId === profile.id) throw new GiftError('È un regalo che hai fatto tu: mandalo all’altro telefono.')
   const [image, thumbnail] = await Promise.all([photo.image.arrayBuffer(), photo.thumbnail.arrayBuffer()])

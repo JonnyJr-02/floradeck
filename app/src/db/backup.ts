@@ -31,8 +31,12 @@ export interface Backup {
   photos: StoredPhoto[]
   settings: SettingRecord[]
   importedGifts: ImportedGiftRecord[]
-  /** Since phase 8; older backups have none. */
-  sentGifts?: SentGiftRecord[]
+  /** Since phase 8; older backups have none. Pictures in base64. */
+  sentGifts?: StoredSentGift[]
+}
+
+interface StoredSentGift extends Omit<SentGiftRecord, 'image'> {
+  image?: string
 }
 
 export function toBase64(buffer: ArrayBuffer): string {
@@ -67,7 +71,7 @@ export async function createBackup(appVersion: string, database: FloraDeckDB = d
     photos: photos.map((photo) => ({ ...photo, image: toBase64(photo.image), thumbnail: toBase64(photo.thumbnail) })),
     settings,
     importedGifts,
-    sentGifts,
+    sentGifts: sentGifts.map((gift) => ({ ...gift, image: gift.image ? toBase64(gift.image) : undefined })),
   }
 }
 
@@ -129,7 +133,11 @@ export async function restoreBackup(backup: Backup, database: FloraDeckDB = defa
     if (profile) await database.settings.put(profile)
     await database.importedGifts.bulkAdd(backup.importedGifts.filter((gift) => !haveGifts.has(gift.giftId)))
     const haveSent = new Set(await database.sentGifts.toCollection().primaryKeys())
-    await database.sentGifts.bulkAdd((backup.sentGifts ?? []).filter((gift) => !haveSent.has(gift.giftId)))
+    await database.sentGifts.bulkAdd(
+      (backup.sentGifts ?? [])
+        .filter((gift) => !haveSent.has(gift.giftId))
+        .map((gift) => ({ ...gift, image: gift.image ? fromBase64(gift.image) : undefined })),
+    )
     return { cardsAdded: newCards.length, cardsAlreadyThere: backup.cards.length - newCards.length }
   })
 }

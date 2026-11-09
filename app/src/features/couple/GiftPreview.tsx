@@ -1,31 +1,33 @@
 import { useEffect, useMemo } from 'react'
 import type { Species } from '../../domain/catalog'
 import { formatFoundDate } from '../../domain/collection'
-import type { Gift } from '../../domain/share'
+import type { GiftInfo } from '../../domain/share'
 
-/** An object URL for a gift's photo bytes, released when the gift changes or the view leaves. */
-export function useGiftPhotoUrl(gift: Gift | undefined): string | undefined {
-  const url = useMemo(
-    () => (gift ? URL.createObjectURL(new Blob([gift.photo.bytes.slice()], { type: gift.photo.type })) : undefined),
-    [gift],
-  )
+/** An object URL for a blob (or bytes), released when it changes or the view leaves. */
+export function useObjectUrl(source: Blob | { type: string; bytes: Uint8Array } | undefined): string | undefined {
+  const url = useMemo(() => {
+    if (!source) return undefined
+    const blob = source instanceof Blob ? source : new Blob([source.bytes.slice()], { type: source.type })
+    return URL.createObjectURL(blob)
+  }, [source])
   useEffect(() => () => (url ? URL.revokeObjectURL(url) : undefined), [url])
   return url
 }
 
-/** The gift as both phones see it: photo, who sends it, the species, the message. */
+/** A received gift before it is added: photo, who sends it, the species, the message. */
 export function GiftPreview({
   gift,
   entry,
+  photoUrl,
   heading,
   headingLevel = 'h2',
 }: {
-  gift: Gift
+  gift: GiftInfo
   entry: Species
+  photoUrl: string | undefined
   heading: string
-  headingLevel?: 'h1' | 'h2'
+  headingLevel?: 'h1' | 'h2' | 'h3'
 }) {
-  const photoUrl = useGiftPhotoUrl(gift)
   const Title = headingLevel
   return (
     <article className="gift" aria-labelledby="gift-title">

@@ -1,60 +1,71 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'wouter'
 import { markGiftSent, usePartner } from '../../db/couple'
-import { db, type SentGiftRecord } from '../../db/db'
-import { speciesById } from '../../domain/catalog'
-import { decodeGift, type Gift } from '../../domain/share'
+import { db } from '../../db/db'
+import { catalogueIds } from '../../domain/couple'
+import { speciesById, type Species } from '../../domain/catalog'
+import { decodeGift, encodeGiftCode, isGiftCode } from '../../domain/share'
 import { BackHeader, Page } from '../../ui/Page'
-import { GiftPreview } from './GiftPreview'
-import { copyText, giftLink, shareFile, shareLink, type ShareResult } from './links'
+import { renderGiftImage } from './giftImage'
+import { useObjectUrl } from './GiftPreview'
+import { saveFile, sharePicture } from './links'
 
-const MESSAGES: Record<ShareResult, string | null> = {
-  shared: 'Inviato. Se il link si perde, inoltra di nuovo il messaggio dalla chat.',
-  copied: 'Link copiato: incollalo nella chat.',
-  cancelled: null,
-  failed: 'Non sono riuscito a copiare il link: prova «Invia come file».',
+interface Ready {
+  file: File
+  entry: Species
+}
+
+/** The gift picture of a stored gift; an older link gift (photo inside the link) is drawn now. */
+async function pictureOf(giftId: string): Promise<Ready | null> {
+  const record = await db.sentGifts.get(giftId)
+  if (!record) return null
+  const entry = speciesById(record.speciesId)
+  if (!entry) return null
+  const name = `regalo-floradeck-${entry.id}.jpg`
+  if (record.image) return { file: new File([record.image], name, { type: record.imageType ?? 'image/jpeg' }), entry }
+  if (isGiftCode(record.payload)) return null
+  const { photo, ...gift } = decodeGift(record.payload)
+  const picture = await renderGiftImage({
+    photo: new Blob([photo.bytes.slice()], { type: photo.type }),
+    entry,
+    from: gift.from,
+    message: gift.message,
+    code: encodeGiftCode(gift, undefined, catalogueIds),
+  })
+  return { file: new File([picture], name, { type: picture.type }), entry }
 }
 
 /**
- * A gift made and not sent yet. Once its link has left the phone (share sheet, copy or file) the
- * gift is not kept, to save space: the chat holds it. While this page stays open it can still be
- * sent again.
+ * A gift made and not sent yet: its picture, to send on WhatsApp (or any chat). Once it has left
+ * the phone the gift is not kept, to save space: the chat holds it. While this page stays open it
+ * can still be sent again.
  */
 export function SentGiftScreen() {
   const { id = '' } = useParams<{ id: string }>()
-  // Read once: after sending, the record goes, but the open page keeps the link.
-  const [record, setRecord] = useState<SentGiftRecord | null | undefined>(undefined)
+  const [ready, setReady] = useState<Ready | null | undefined>(undefined)
   const partner = usePartner()
   const [status, setStatus] = useState<string | null>(null)
+  const [sent, setSent] = useState(false)
   const [fresh] = useState(() => (window.history.state as { fresh?: boolean } | null)?.fresh === true)
+  const url = useObjectUrl(ready?.file)
 
   useEffect(() => {
     let live = true
-    void db.sentGifts.get(id).then((found) => live && setRecord(found ?? null))
+    pictureOf(id).then(
+      (found) => live && setReady(found),
+      () => live && setReady(null),
+    )
     return () => {
       live = false
     }
   }, [id])
 
-  const gift = useMemo<Gift | undefined>(() => {
-    if (!record) return undefined
-    try {
-      return decodeGift(record.payload)
-    } catch {
-      return undefined
-    }
-  }, [record])
-
-  if (record === undefined) return <main className="page" aria-busy="true" />
-  const entry = gift ? speciesById(gift.speciesId) : undefined
-  if (!record || !gift || !entry) {
+  if (ready === undefined) return <main className="page" aria-busy="true" />
+  if (!ready) {
     return (
       <Page>
         <BackHeader title="Regalo" fallback="/coppia" />
-        <p className="mt-6 text-muted">
-          Questo regalo è già partito e non resta sul telefono. Se il link si è perso, inoltra di nuovo il messaggio dalla
-          chat in cui l’hai mandato.
-        </p>
+        <p className="mt-6 text-muted">Questo regalo è già partito: non resta sul telefono, lo tiene la chat.</p>
         <Link href="/coppia" className="btn press mt-6">
           Vai a Coppia
         </Link>
@@ -62,70 +73,50 @@ export function SentGiftScreen() {
     )
   }
 
-  const url = giftLink(record.payload)
   const to = partner?.name || 'chi gioca con te'
-  const fileName = `regalo-${entry.id}.floradeck`
+  const { file, entry } = ready
 
-  async function run(action: () => Promise<ShareResult>) {
+  async function send() {
     setStatus(null)
-    const result = await action()
-    setStatus(MESSAGES[result])
-    if (result === 'shared' || result === 'copied') await markGiftSent(id)
+    const result = await sharePicture(file)
+    if (result === 'cancelled') return
+    if (result === 'failed') {
+      setStatus('Non sono riuscito a inviarla: prova «Salva l’immagine» e mandala dalla galleria.')
+      return
+    }
+    setSent(true)
+    setStatus(result === 'saved' ? 'Immagine salvata: mandala su WhatsApp dalla galleria.' : 'Inviato!')
+    await markGiftSent(id)
+  }
+
+  async function save() {
+    saveFile(file)
+    setSent(true)
+    setStatus('Immagine salvata: mandala su WhatsApp dalla galleria.')
+    await markGiftSent(id)
   }
 
   return (
     <Page>
       <BackHeader title={fresh ? 'Regalo pronto' : 'Regalo da inviare'} fallback="/coppia" />
       <p className="mt-3 text-muted">
-        {fresh ? 'La carta ha lasciato la tua collezione: ora è in questo link. ' : ''}
-        Mandalo a {to} su WhatsApp, Messaggi o dove preferisci. Appena è partito non resta sul telefono: lo tiene la
-        chat.
+        {sent
+          ? `${to} salva l’immagine e la apre in FloraDeck, da Coppia → «Apri un regalo».`
+          : `Ecco il tuo regalo: ${entry.commonNameIt}. Mandalo a ${to} su WhatsApp come una foto.`}
       </p>
-      <div className="mt-5">
-        <GiftPreview
-          gift={gift}
-          entry={entry}
-          heading={
-            [gift.from && `Da ${gift.from}`, partner?.name && `per ${partner.name}`].filter(Boolean).join(' ') ||
-            'Il tuo regalo'
-          }
-        />
-      </div>
+      {url ? <img className="gift-picture mt-5" src={url} alt={`L’immagine del regalo: ${entry.commonNameIt}`} /> : null}
       <div className="mt-6 grid gap-2.5">
-        <button
-          type="button"
-          className="btn press"
-          onClick={() =>
-            void run(() =>
-              shareLink(url, `Un regalo: ${entry.commonNameIt}`, `Ti ho regalato una carta di FloraDeck: ${entry.commonNameIt}.`),
-            )
-          }
-        >
-          Invia il regalo
+        <button type="button" className="btn press" onClick={() => void send()}>
+          {sent ? 'Invialo di nuovo' : 'Invia su WhatsApp'}
         </button>
-        <button
-          type="button"
-          className="btn btn--ghost press"
-          onClick={() => void run(async () => ((await copyText(url)) ? 'copied' : 'failed'))}
-        >
-          Copia il link
+        <p className="text-center text-[0.8125rem] text-muted">Nel menu che si apre scegli WhatsApp, poi la chat.</p>
+        <button type="button" className="btn btn--ghost press" onClick={() => void save()}>
+          Salva l’immagine
         </button>
       </div>
       <p role="status" className="mt-3 min-h-[1.5em] text-[0.875rem] font-semibold">
         {status}
       </p>
-      <section className="mt-4 border-t border-line pt-5" aria-labelledby="gift-file-title">
-        <h2 id="gift-file-title" className="text-[1.375rem] leading-tight">
-          Il link non arriva intero?
-        </h2>
-        <p className="mt-1 text-[0.875rem] text-muted">
-          Alcune chat accorciano i link lunghi. Manda il regalo come file: chi lo riceve lo salva e lo apre da Coppia, con
-          «Incolla un link».
-        </p>
-        <button type="button" className="btn btn--ghost press mt-3" onClick={() => void run(() => shareFile(url, fileName))}>
-          Invia come file
-        </button>
-      </section>
     </Page>
   )
 }

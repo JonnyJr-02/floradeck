@@ -1,10 +1,22 @@
 import 'fake-indexeddb/auto'
 import Dexie from 'dexie'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { decodeGift } from '../domain/share'
+import { catalogueIds } from '../domain/couple'
+import { decodeGiftCode, encodeGift, type GiftInfo } from '../domain/share'
 import { createBackup, parseBackup, restoreBackup } from './backup'
 import { addCard, getCovers, setCover } from './collection'
-import { checkGift, createGift, getPartner, getProfile, importGift, markGiftSent, saveProfile, savePartner } from './couple'
+import {
+  checkGift,
+  checkGiftInfo,
+  createGift,
+  getPartner,
+  getProfile,
+  importGift,
+  markGiftSent,
+  receiveProgress,
+  saveProfile,
+  savePartner,
+} from './couple'
 import { FloraDeckDB } from './db'
 
 let alice: FloraDeckDB
@@ -34,7 +46,6 @@ const shot = (speciesId: string) => ({
   source: 'camera' as const,
 })
 
-const small = { type: 'image/webp', bytes: new Uint8Array([1, 2, 3, 4]) }
 const prepared = {
   image: new Blob([new Uint8Array([1, 2, 3, 4])], { type: 'image/webp' }),
   thumbnail: new Blob([new Uint8Array([1, 2])], { type: 'image/webp' }),
@@ -58,6 +69,11 @@ describe('profiles', () => {
   })
 })
 
+/** Stands in for the picture drawing: the "picture" is just the gift code's bytes. */
+const render = async (_gift: GiftInfo, code: string) => ({ type: 'image/jpeg', bytes: new TextEncoder().encode(code).buffer as ArrayBuffer })
+/** What the other phone reads from the picture's QR code. */
+const received = (sent: { payload: string }) => decodeGiftCode(sent.payload, catalogueIds)
+
 describe('gifts between two phones', () => {
   it('gives a duplicate once: it leaves the sender, arrives once, and never twice', async () => {
     await saveProfile({ name: 'Alice' }, alice)
@@ -65,46 +81,77 @@ describe('gifts between two phones', () => {
     const duplicate = await addCard(shot('papaver-rhoeas'), alice)
     await setCover('papaver-rhoeas', duplicate.card.id, alice)
 
-    const sent = await createGift({ cardId: duplicate.card.id, message: 'Pensando a te', photo: small }, alice)
+    const sent = await createGift({ cardId: duplicate.card.id, message: 'Pensando a te', render }, alice)
+    expect(sent.image?.byteLength).toBeGreaterThan(0)
     expect(await alice.cards.count()).toBe(1)
     expect(await alice.photos.count()).toBe(1)
     expect((await getCovers(alice)).has('papaver-rhoeas')).toBe(false)
-    await expect(createGift({ cardId: duplicate.card.id, message: '', photo: small }, alice)).rejects.toThrow(/non c’è più/)
+    await expect(createGift({ cardId: duplicate.card.id, message: '', render }, alice)).rejects.toThrow(/non c’è più/)
 
-    const check = await checkGift(`https://example.test/floradeck/regalo#${sent.payload}`, bea)
-    expect(check.status).toBe('new')
-    const card = await importGift(check.gift, prepared, bea)
+    const { gift } = received(sent)
+    expect((await checkGiftInfo(gift, bea)).status).toBe('new')
+    const card = await importGift(gift, prepared, bea)
     expect(card).toMatchObject({ speciesId: 'papaver-rhoeas', source: 'gift', giftFrom: 'Alice', giftMessage: 'Pensando a te' })
-    expect((await checkGift(sent.payload, bea)).status).toBe('imported')
-    await expect(importGift(check.gift, prepared, bea)).rejects.toThrow(/già nella tua collezione/)
+    expect((await checkGiftInfo(gift, bea)).status).toBe('imported')
+    await expect(importGift(gift, prepared, bea)).rejects.toThrow(/già nella tua collezione/)
     expect(await bea.cards.count()).toBe(1)
+  })
+
+  it('carries the sender’s progress after the gift, which pairs the phones', async () => {
+    await saveProfile({ name: 'Alice' }, alice)
+    await addCard(shot('bellis-perennis'), alice)
+    const poppy = await addCard(shot('papaver-rhoeas'), alice)
+    const sent = await createGift({ cardId: poppy.card.id, message: '', render }, alice)
+    const { progress } = received(sent)
+    expect(progress?.found).toEqual(['bellis-perennis'])
+    expect(await receiveProgress(progress, bea)).toBe(true)
+    expect((await getPartner(bea))?.name).toBe('Alice')
+    // Never on the sender's own phone, and never over a different partner.
+    expect(await receiveProgress(progress, alice)).toBe(false)
+    await savePartner({ profileId: 'carla', name: 'Carla', colour: '', at: '', found: [] }, bea)
+    expect(await receiveProgress(progress, bea)).toBe(false)
   })
 
   it('gives the last card of a species too: the species is missing again', async () => {
     const only = await addCard(shot('bellis-perennis'), alice)
-    const sent = await createGift({ cardId: only.card.id, message: '', photo: small }, alice)
+    const sent = await createGift({ cardId: only.card.id, message: '', render }, alice)
     expect(await alice.cards.where('speciesId').equals('bellis-perennis').count()).toBe(0)
     expect(await alice.photos.count()).toBe(0)
-    expect(decodeGift(sent.payload).speciesId).toBe('bellis-perennis')
+    expect(received(sent).gift.speciesId).toBe('bellis-perennis')
   })
 
   it('keeps a gift only until it has been sent', async () => {
     await addCard(shot('papaver-rhoeas'), alice)
-    const sent = await createGift({ cardId: (await alice.cards.toArray())[0]!.id, message: '', photo: small }, alice)
+    const sent = await createGift({ cardId: (await alice.cards.toArray())[0]!.id, message: '', render }, alice)
     expect(await alice.sentGifts.count()).toBe(1)
     await markGiftSent(sent.giftId, alice)
     expect(await alice.sentGifts.count()).toBe(0)
     // Still its own gift for this phone: the profile id says so.
-    expect((await checkGift(sent.payload, alice)).status).toBe('own')
+    expect((await checkGiftInfo(received(sent).gift, alice)).status).toBe('own')
   })
 
   it('does not let the sender take its own gift back', async () => {
     await addCard(shot('papaver-rhoeas'), alice)
     const duplicate = await addCard(shot('papaver-rhoeas'), alice)
-    const sent = await createGift({ cardId: duplicate.card.id, message: '', photo: small }, alice)
-    expect((await checkGift(sent.payload, alice)).status).toBe('own')
-    await expect(importGift(decodeGift(sent.payload), prepared, alice)).rejects.toThrow(/fatto tu/)
+    const sent = await createGift({ cardId: duplicate.card.id, message: '', render }, alice)
+    await expect(importGift(received(sent).gift, prepared, alice)).rejects.toThrow(/fatto tu/)
     expect(await alice.cards.count()).toBe(1)
+  })
+
+  it('still opens an older gift link', async () => {
+    const link = encodeGift({
+      giftId: crypto.randomUUID(),
+      speciesId: 'papaver-rhoeas',
+      from: 'Alice',
+      fromId: 'alice-id',
+      message: '',
+      foundAt: '2026-05-01T10:00:00Z',
+      sentAt: '2026-11-09T10:00:00Z',
+      photo: { type: 'image/webp', bytes: new Uint8Array([1, 2, 3]) },
+    })
+    const check = await checkGift(`https://example.test/floradeck/regalo#${link}`, bea)
+    expect(check.status).toBe('new')
+    expect(check.photo.bytes).toHaveLength(3)
   })
 })
 

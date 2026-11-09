@@ -2,9 +2,9 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useCards } from '../../db/collection'
 import { CoupleError, saveProfile, savePartner, useProfile } from '../../db/couple'
 import { catalogueIds, mySnapshot } from '../../domain/couple'
-import { decodeSnapshot, encodeSnapshot, ShareError, type Snapshot } from '../../domain/share'
+import { decodeSnapshot, encodeSnapshot, isGiftCode, ShareError, type Snapshot } from '../../domain/share'
 import { Sheet } from '../../ui/Sheet'
-import { progressLink, shareLink } from './links'
+import { progressLink } from './links'
 
 /** My progress as a link: in a QR code to scan, or sent through a chat. */
 function useMyProgressLink(): string | undefined {
@@ -36,77 +36,6 @@ function QrCode({ text }: { text: string }) {
         <div className="aspect-square" aria-busy="true" />
       )}
     </div>
-  )
-}
-
-export function MyCodeSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const profile = useProfile()
-  const link = useMyProgressLink()
-  const [name, setName] = useState('')
-  const [status, setStatus] = useState<string | null>(null)
-  const needsName = profile !== undefined && !profile.name
-
-  async function send() {
-    if (!link) return
-    setStatus(null)
-    const result = await shareLink(link, 'I miei progressi su FloraDeck', 'I miei progressi su FloraDeck: aprilo per vederli.')
-    if (result === 'copied') setStatus('Link copiato: incollalo nella chat.')
-    if (result === 'failed') setStatus('Non sono riuscito a copiare il link.')
-  }
-
-  return (
-    <Sheet open={open} labelledBy="my-code-title" onClose={onClose} tall>
-      <h2 id="my-code-title" className="text-[1.75rem] leading-[1.05]">
-        Il tuo codice
-      </h2>
-      {needsName ? (
-        <form
-          className="mt-4 grid gap-4"
-          onSubmit={(event) => {
-            event.preventDefault()
-            if (name.trim()) void saveProfile({ name })
-          }}
-        >
-          <p className="text-[0.875rem] leading-snug text-muted">
-            Prima il tuo nome: l’altro telefono lo mostra accanto ai tuoi progressi.
-          </p>
-          <label className="field">
-            Il tuo nome
-            <input
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-              maxLength={40}
-              autoComplete="given-name"
-              enterKeyHint="done"
-            />
-          </label>
-          <button type="submit" className="btn press" disabled={!name.trim()}>
-            Mostra il codice
-          </button>
-        </form>
-      ) : (
-        <>
-          <p className="mt-1.5 text-[0.875rem] leading-snug text-muted">
-            Sull’altro telefono apri Coppia e tocca «Inquadra il suo codice». Vedrà quali specie hai trovato, fino a oggi.
-          </p>
-          <div className="mt-5">{link ? <QrCode text={link} /> : null}</div>
-          <p className="mt-4 text-center text-[0.8125rem] text-muted">
-            Il codice porta solo il tuo nome e le specie trovate: niente foto, niente posizione.
-          </p>
-          <div className="mt-5 grid gap-2.5">
-            <button type="button" className="btn btn--ghost press" disabled={!link} onClick={() => void send()}>
-              Mandali come link
-            </button>
-            <button type="button" className="btn press" onClick={onClose}>
-              Fatto
-            </button>
-          </div>
-          <p role="status" className="mt-3 min-h-[1.5em] text-[0.875rem] font-semibold">
-            {status}
-          </p>
-        </>
-      )}
-    </Sheet>
   )
 }
 
@@ -205,36 +134,57 @@ function useQrScanner(active: boolean, onText: (text: string) => void) {
   return { videoRef, problem }
 }
 
-/** Scan the other phone's code; its progress is saved as the partner's. */
-export function ScanSheet({
+type Step = 'show' | 'scan' | 'done'
+
+/**
+ * «Collega i telefoni», in one sheet: this phone's code first (the other phone scans it), then
+ * «Inquadra il suo codice» turns the same sheet into the scanner. Updating the progress later is
+ * the same gesture; gifts also carry the sender's progress, so it seldom needs doing.
+ */
+export function PairSheet({
   open,
+  partnerName,
   onClose,
   onPaired,
 }: {
   open: boolean
+  partnerName: string | undefined
   onClose: () => void
-  onPaired: (snapshot: Snapshot) => void
+  onPaired?: (snapshot: Snapshot) => void
 }) {
+  const profile = useProfile()
+  const link = useMyProgressLink()
+  const [step, setStep] = useState<Step>('show')
+  const [name, setName] = useState('')
   const [error, setError] = useState<string | null>(null)
+  const [paired, setPaired] = useState<string | null>(null)
   const lastText = useRef('')
   const busy = useRef(false)
+  const needsName = profile !== undefined && !profile.name
 
   useEffect(() => {
-    if (open) {
-      setError(null)
-      lastText.current = ''
-    }
+    if (!open) return
+    setStep('show')
+    setError(null)
+    setPaired(null)
+    lastText.current = ''
   }, [open])
 
-  const { videoRef, problem } = useQrScanner(open, (text) => {
+  const { videoRef, problem } = useQrScanner(open && step === 'scan', (text) => {
     if (busy.current || text === lastText.current) return
     lastText.current = text
+    if (isGiftCode(text)) {
+      setError('Questo è un regalo: aprilo da «Apri un regalo», scegliendo l’immagine arrivata in chat.')
+      return
+    }
     busy.current = true
     void (async () => {
       try {
         const snapshot = decodeSnapshot(text, catalogueIds)
         await savePartner(snapshot)
-        onPaired(snapshot)
+        setPaired(snapshot.name || 'l’altro telefono')
+        setStep('done')
+        onPaired?.(snapshot)
       } catch (caught) {
         setError(
           caught instanceof ShareError || caught instanceof CoupleError ? caught.message : 'Questo codice non è di FloraDeck.',
@@ -246,30 +196,90 @@ export function ScanSheet({
   })
 
   return (
-    <Sheet open={open} labelledBy="scan-title" onClose={onClose} tall>
-      <h2 id="scan-title" className="text-[1.75rem] leading-[1.05]">
-        Inquadra il suo codice
+    <Sheet open={open} labelledBy="pair-title" onClose={onClose} tall>
+      <h2 id="pair-title" className="text-[1.75rem] leading-[1.05]">
+        {step === 'scan' ? 'Inquadra il suo codice' : step === 'done' ? 'Collegati!' : 'Collega i telefoni'}
       </h2>
-      <p className="mt-1.5 text-[0.875rem] leading-snug text-muted">
-        Sull’altro telefono apri Coppia e tocca «Mostra il mio codice», poi tienilo dentro il riquadro.
-      </p>
-      <div className="mt-5">
-        {problem ? (
-          <p role="alert" className="notice text-[0.9375rem]">
-            {problem}
+      {needsName ? (
+        <form
+          className="mt-4 grid gap-4"
+          onSubmit={(event) => {
+            event.preventDefault()
+            if (name.trim()) void saveProfile({ name })
+          }}
+        >
+          <p className="text-[0.875rem] leading-snug text-muted">Prima il tuo nome: l’altro telefono lo mostra accanto ai tuoi progressi.</p>
+          <label className="field">
+            Il tuo nome
+            <input
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              maxLength={40}
+              autoComplete="given-name"
+              enterKeyHint="done"
+            />
+          </label>
+          <button type="submit" className="btn press" disabled={!name.trim()}>
+            Continua
+          </button>
+        </form>
+      ) : step === 'scan' ? (
+        <>
+          <p className="mt-1.5 text-[0.875rem] leading-snug text-muted">
+            Tieni il codice dell’altro telefono dentro il riquadro: si legge da solo.
           </p>
-        ) : (
-          <div className="scanner">
-            <video ref={videoRef} playsInline muted autoPlay aria-label="Fotocamera" />
+          <div className="mt-5">
+            {problem ? (
+              <p role="alert" className="notice text-[0.9375rem]">
+                {problem}
+              </p>
+            ) : (
+              <div className="scanner">
+                <video ref={videoRef} playsInline muted autoPlay aria-label="Fotocamera" />
+              </div>
+            )}
           </div>
-        )}
-      </div>
-      <p role="status" className="mt-3 min-h-[1.5em] text-[0.875rem] font-semibold text-accent">
-        {error}
-      </p>
-      <button type="button" className="btn btn--ghost press mt-2" onClick={onClose}>
-        Annulla
-      </button>
+          <p role="status" className="mt-3 min-h-[1.5em] text-[0.875rem] font-semibold text-accent">
+            {error}
+          </p>
+          <button type="button" className="btn btn--ghost press mt-2" onClick={() => setStep('show')}>
+            Indietro
+          </button>
+        </>
+      ) : (
+        <>
+          <ol className="steps mt-4 text-[0.9375rem]">
+            {step === 'done' ? (
+              <li>
+                Ora vedi i progressi di {paired}. Se non l’ha già fatto, fagli inquadrare il tuo codice qui sotto.
+              </li>
+            ) : (
+              <>
+                <li>Mettete i telefoni vicini, con questa schermata aperta su tutti e due.</li>
+                <li>Uno inquadra il codice dell’altro, poi vi scambiate.</li>
+              </>
+            )}
+          </ol>
+          <div className="mt-5">{link ? <QrCode text={link} /> : null}</div>
+          <p className="mt-3 text-center text-[0.8125rem] text-muted">Il tuo codice: solo nome e specie trovate.</p>
+          <div className="mt-5 grid gap-2.5">
+            {step === 'done' ? (
+              <button type="button" className="btn press" onClick={onClose}>
+                Fatto
+              </button>
+            ) : (
+              <>
+                <button type="button" className="btn press" onClick={() => setStep('scan')}>
+                  {partnerName ? `Inquadra il codice di ${partnerName}` : 'Inquadra il codice dell’altro telefono'}
+                </button>
+                <button type="button" className="btn btn--ghost press" onClick={onClose}>
+                  Chiudi
+                </button>
+              </>
+            )}
+          </div>
+        </>
+      )}
     </Sheet>
   )
 }

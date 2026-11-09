@@ -188,7 +188,7 @@ export function CardScreen() {
           albumHref={albumHref}
           gift={
             data.photo ? (
-              <GiveGift cardId={data.card.id} photo={data.photo} speciesName={entry.commonNameIt} copies={data.copies} />
+              <GiveGift cardId={data.card.id} photo={data.photo} entry={entry} copies={data.copies} />
             ) : null
           }
         />

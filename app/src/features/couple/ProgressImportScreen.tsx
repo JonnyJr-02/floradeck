@@ -94,7 +94,7 @@ export function ProgressImportScreen() {
             <ol className="steps mt-3 text-[0.9375rem]">
               <li>Tocca «Copia i progressi».</li>
               <li>Apri FloraDeck dalla schermata Home.</li>
-              <li>In Coppia tocca «Incolla un link».</li>
+              <li>In Coppia tocca «Apri un regalo», poi «Ti è arrivato un link invece di un’immagine?».</li>
             </ol>
           </section>
           <div className="mt-5 grid gap-2.5">

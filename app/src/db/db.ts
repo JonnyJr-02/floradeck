@@ -64,8 +64,11 @@ export interface SentGiftRecord {
   speciesId: string
   createdAt: string
   message: string
-  /** The gift link's payload (g1.…). */
+  /** The gift code inside the picture's QR (since 2026-11-09), or an older gift link's payload (g1.…). */
   payload: string
+  /** The gift picture (JPEG), kept until it has been sent; older link gifts have none. */
+  image?: ArrayBuffer
+  imageType?: string
 }
 
 export class FloraDeckDB extends Dexie {

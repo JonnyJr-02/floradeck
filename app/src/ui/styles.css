@@ -1113,6 +1113,10 @@
     height: 100%;
     object-fit: cover;
   }
+  /* A row inside a card sits on the page colour, so it stands out from the card. */
+  .journal-row--on-card {
+    background: var(--p-bg);
+  }
   .journal-row__img img[data-plate] {
     padding: 0.125rem;
     object-fit: contain;
@@ -1322,6 +1326,15 @@
     color: var(--p-muted);
     font-size: 0.75rem;
     line-height: 1.2;
+  }
+
+  /* The gift picture as it will arrive in the chat. */
+  .gift-picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-card);
+    box-shadow: var(--p-lift);
   }
 
   /* Someone else's good photo of the species, in the sheet. */

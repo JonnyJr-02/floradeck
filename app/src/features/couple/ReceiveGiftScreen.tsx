@@ -8,14 +8,20 @@ import { ShareError } from '../../domain/share'
 import { decodeFile, preparePhoto } from '../../photo/photo'
 import { currentPlatform, isInstalled } from '../../pwa/environment'
 import { IN_APP } from '../../ui/Page'
-import { GiftPreview } from './GiftPreview'
+import { GiftPreview, useObjectUrl } from './GiftPreview'
 import { copyText } from './links'
 
-type View = { kind: 'loading' } | { kind: 'error'; message: string } | { kind: 'ready'; check: GiftCheck }
+type LinkCheck = GiftCheck & { photo: { type: string; bytes: Uint8Array } }
+type View = { kind: 'loading' } | { kind: 'error'; message: string } | { kind: 'ready'; check: LinkCheck }
+
+/** WhatsApp cut long gift links right after "#g1": say so, and how to still open the gift. */
+const CUT_LINK =
+  'Il link del regalo è arrivato tagliato: WhatsApp accorcia i link molto lunghi. Su WhatsApp tieni premuto il messaggio intero, scegli «Copia», poi in FloraDeck vai su Coppia → «Apri un regalo» → «Ti è arrivato un link invece di un’immagine?» e incollalo. I nuovi regali arrivano come immagini e non hanno questo problema.'
 
 /**
- * Opening a gift link (/regalo#g1.…). On iPhone the link opens in Safari, whose storage is not the
- * Home-screen app's: there the main action copies the gift, to paste it inside the app.
+ * Opening an older gift link (/regalo#g1.…; since 2026-11-09 gifts travel as pictures). On iPhone
+ * the link opens in Safari, whose storage is not the Home-screen app's: there the main action
+ * copies the gift, to paste it inside the app.
  */
 export function ReceiveGiftScreen() {
   const [, navigate] = useLocation()
@@ -33,7 +39,15 @@ export function ReceiveGiftScreen() {
     checkGift(payload).then(
       (check) => live && setView({ kind: 'ready', check }),
       (caught: unknown) =>
-        live && setView({ kind: 'error', message: caught instanceof ShareError ? caught.message : 'Questo regalo non si apre.' }),
+        live &&
+        setView({
+          kind: 'error',
+          message: /^#?g1\.?$/.test(payload)
+            ? CUT_LINK
+            : caught instanceof ShareError
+              ? caught.message
+              : 'Questo regalo non si apre.',
+        }),
     )
     return () => {
       live = false
@@ -41,6 +55,7 @@ export function ReceiveGiftScreen() {
   }, [payload])
 
   const check = view.kind === 'ready' ? view.check : undefined
+  const photoUrl = useObjectUrl(check?.photo)
   const ownSent = useLiveQuery(
     async () => (check?.status === 'own' ? ((await db.sentGifts.get(check.gift.giftId)) ?? null) : null),
     [check],
@@ -75,7 +90,7 @@ export function ReceiveGiftScreen() {
     setSaving(true)
     setError(null)
     try {
-      const bitmap = await decodeFile(new Blob([gift.photo.bytes.slice()], { type: gift.photo.type }))
+      const bitmap = await decodeFile(new Blob([check!.photo.bytes.slice()], { type: check!.photo.type }))
       let photo
       try {
         photo = await preparePhoto(bitmap)
@@ -103,7 +118,7 @@ export function ReceiveGiftScreen() {
     <main className="page page--plain">
       {check.status === 'new' ? (
         <>
-          <GiftPreview gift={gift} entry={entry} heading={from} headingLevel="h1" />
+          <GiftPreview gift={gift} entry={entry} photoUrl={photoUrl} heading={from} headingLevel="h1" />
           {bridge ? (
             <>
               <section className="notice mt-5" aria-labelledby="bridge-title">
@@ -116,7 +131,7 @@ export function ReceiveGiftScreen() {
                 <ol className="steps mt-3 text-[0.9375rem]">
                   <li>Tocca «Copia il regalo».</li>
                   <li>Apri FloraDeck dalla schermata Home.</li>
-                  <li>In Coppia tocca «Incolla un link».</li>
+                  <li>In Coppia tocca «Apri un regalo», poi «Ti è arrivato un link invece di un’immagine?».</li>
                 </ol>
               </section>
               <div className="mt-5 grid gap-2.5">

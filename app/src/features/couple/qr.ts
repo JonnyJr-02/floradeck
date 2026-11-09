@@ -24,3 +24,18 @@ export function qrModules(text: string): boolean[][] {
   const size = code.getModuleCount()
   return Array.from({ length: size }, (_, row) => Array.from({ length: size }, (_, col) => code.isDark(row, col)))
 }
+
+/**
+ * A QR code for any text, as raw UTF-8 bytes in byte mode (the library maps one character to one
+ * byte, so the UTF-8 bytes go in as a binary string). Readers get the bytes back with jsQR's binaryData.
+ */
+export function qrModulesUtf8(text: string, level: 'L' | 'M' | 'Q' | 'H' = 'M'): boolean[][] {
+  const bytes = new TextEncoder().encode(text)
+  let binary = ''
+  for (const byte of bytes) binary += String.fromCharCode(byte)
+  const code = qrcode(0, level)
+  code.addData(binary, 'Byte')
+  code.make()
+  const size = code.getModuleCount()
+  return Array.from({ length: size }, (_, row) => Array.from({ length: size }, (_, col) => code.isDark(row, col)))
+}

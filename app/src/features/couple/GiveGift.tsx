@@ -1,28 +1,32 @@
 import { useState } from 'react'
 import { useLocation } from 'wouter'
 import { createGift, GiftError, saveProfile, usePartner, useProfile } from '../../db/couple'
+import { photoBlob } from '../../db/collection'
 import type { PhotoRecord } from '../../db/db'
-import { giftPhoto } from '../../photo/giftPhoto'
+import type { Species } from '../../domain/catalog'
+import { GIFT_MESSAGE_MAX } from '../../domain/share'
 import { IconGift } from '../../ui/icons'
 import { Sheet } from '../../ui/Sheet'
+import { renderGiftImage } from './giftImage'
 
-const MESSAGE_MAX = 200
+const MESSAGE_MAX = GIFT_MESSAGE_MAX
 
 /**
  * At the bottom of any card: give it to the other player. The card leaves this collection when the
- * gift is made (CLAUDE.md, Couple), then the sent-gift page sends the link.
+ * gift is made (CLAUDE.md, Couple), then the sent-gift page sends its picture.
  */
 export function GiveGift({
   cardId,
   photo,
-  speciesName,
+  entry,
   copies,
 }: {
   cardId: string
   photo: PhotoRecord
-  speciesName: string
+  entry: Species
   copies: number
 }) {
+  const speciesName = entry.commonNameIt
   const [, navigate] = useLocation()
   const profile = useProfile()
   const partner = usePartner()
@@ -49,8 +53,14 @@ export function GiveGift({
     setError(null)
     try {
       if (needsName) await saveProfile({ name })
-      const small = await giftPhoto(photo)
-      const sent = await createGift({ cardId, message, photo: small })
+      const sent = await createGift({
+        cardId,
+        message,
+        render: async (gift, code) => {
+          const picture = await renderGiftImage({ photo: photoBlob(photo, 'image'), entry, from: gift.from, message: gift.message, code })
+          return { type: picture.type, bytes: await picture.arrayBuffer() }
+        },
+      })
       navigate(`/coppia/regalo/${sent.giftId}`, { replace: true, state: { inApp: true, fresh: true } })
     } catch (caught) {
       setBusy(false)
@@ -69,7 +79,7 @@ export function GiveGift({
           Regala questa carta
         </h2>
         <p className="mt-1.5 text-[0.875rem] leading-snug text-muted">
-          {speciesName} con questa foto lascia la tua collezione e diventa un link da mandare a {partnerName}. Vale una
+          {speciesName} con questa foto lascia la tua collezione e diventa un’immagine da mandare a {partnerName} su WhatsApp. Vale una
           volta sola: chi lo apre la trova tra le sue carte.
         </p>
         {copies <= 1 ? (
