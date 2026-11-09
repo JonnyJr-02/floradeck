@@ -6,6 +6,8 @@ import { AlbumScreen } from './features/albums/AlbumScreen'
 import { CardScreen } from './features/card/CardScreen'
 import { SpeciesScreen } from './features/card/SpeciesScreen'
 import { CoupleScreen } from './features/couple/CoupleScreen'
+import { ReceiveGiftScreen } from './features/couple/ReceiveGiftScreen'
+import { SentGiftScreen } from './features/couple/SentGiftScreen'
 import { ExploreScreen } from './features/explore/ExploreScreen'
 import { JournalScreen } from './features/journal/JournalScreen'
 import { InstallScreen } from './features/settings/InstallScreen'
@@ -42,6 +44,8 @@ export function App() {
         <Route path="/album" component={AlbumsScreen} />
         <Route path="/diario" component={JournalScreen} />
         <Route path="/coppia" component={CoupleScreen} />
+        <Route path="/coppia/regalo/:id" component={SentGiftScreen} />
+        <Route path="/regalo" component={ReceiveGiftScreen} />
         <Route path="/album/:id" component={AlbumScreen} />
         <Route path="/carta/:id" component={CardScreen} />
         <Route path="/specie/:id" component={SpeciesScreen} />

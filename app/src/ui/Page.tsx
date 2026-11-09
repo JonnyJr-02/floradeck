@@ -31,12 +31,12 @@ export function ScreenHeader({ title, children }: { title: string; children?: Re
 }
 
 /** Title row of a secondary screen, with Back. */
-export function BackHeader({ title }: { title: string }) {
+export function BackHeader({ title, fallback = '/' }: { title: string; fallback?: string }) {
   const [, navigate] = useLocation()
   const goBack = () => {
     const state = window.history.state as { inApp?: boolean } | null
     if (state?.inApp) window.history.back()
-    else navigate('/', { replace: true })
+    else navigate(fallback, { replace: true })
   }
   return (
     <header className="flex items-center gap-3">

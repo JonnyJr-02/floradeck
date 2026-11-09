@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'wouter'
 import { setCover, useCard, useCovers, usePhotos, useSpeciesCards } from '../../db/collection'
+import type { PhotoRecord } from '../../db/db'
 import { speciesById } from '../../domain/catalog'
 import { formatFoundDate } from '../../domain/collection'
 import { IconClose } from '../../ui/icons'
 import { IN_APP } from '../../ui/Page'
 import { PhotoThumb, usePhotoUrl } from '../../ui/PhotoThumb'
 import { GOLD_COLOURS, Petals } from '../albums/Petals'
+import { GiveGift } from '../couple/GiveGift'
 import { DeleteCard } from './DeleteCard'
 import { RarityFrame } from './RarityFrame'
 import { at, SpeciesSheet, SpeciesTitle } from './SpeciesSheet'
@@ -32,7 +34,17 @@ export function closeDetail(navigate: (to: string, options?: { replace?: boolean
 }
 
 /** Your other photos of the same species, with the cover marked; any of them can become the cover. */
-function Copies({ speciesId, currentId }: { speciesId: string; currentId: string }) {
+function Copies({
+  speciesId,
+  speciesName,
+  currentId,
+  currentPhoto,
+}: {
+  speciesId: string
+  speciesName: string
+  currentId: string
+  currentPhoto: PhotoRecord | undefined
+}) {
   const cards = useSpeciesCards(speciesId)
   const covers = useCovers()
   const photos = usePhotos((cards ?? []).flatMap((card) => (card.photoId ? [card.photoId] : [])))
@@ -63,11 +75,14 @@ function Copies({ speciesId, currentId }: { speciesId: string; currentId: string
           </li>
         ))}
       </ul>
-      {currentId !== coverId ? (
-        <button type="button" className="btn btn--ghost press mt-4" onClick={() => void setCover(speciesId, currentId)}>
-          Usa questa foto come copertina
-        </button>
-      ) : null}
+      <div className="mt-4 grid gap-2.5">
+        {currentId !== coverId ? (
+          <button type="button" className="btn btn--ghost press" onClick={() => void setCover(speciesId, currentId)}>
+            Usa questa foto come copertina
+          </button>
+        ) : null}
+        {currentPhoto ? <GiveGift cardId={currentId} photo={currentPhoto} speciesName={speciesName} /> : null}
+      </div>
     </section>
   )
 }
@@ -96,6 +111,10 @@ export function CardScreen() {
   }
 
   const duplicate = data.copies > 1
+  const gift =
+    data.card.source === 'gift'
+      ? { from: data.card.giftFrom ?? '', message: data.card.giftMessage ?? '', at: data.card.receivedAt ?? '' }
+      : null
   const albumHref = `/album/${entry.albumId}`
 
   return (
@@ -120,14 +139,26 @@ export function CardScreen() {
       <section className="card-view__body">
         {reveal ? (
           <p className="reveal-item text-[0.875rem] font-semibold text-accent" style={at(0)}>
-            {duplicate ? 'Ancora una!' : entry.rarity === 'legendary' ? 'Carta leggendaria!' : 'Nuova carta!'}
+            {gift
+              ? `Un regalo${gift.from ? ` di ${gift.from}` : ''}!`
+              : duplicate
+                ? 'Ancora una!'
+                : entry.rarity === 'legendary'
+                  ? 'Carta leggendaria!'
+                  : 'Nuova carta!'}
           </p>
         ) : null}
         <SpeciesTitle entry={entry} extraChips={duplicate ? <li className="chip">Doppione</li> : null} />
         <p className="reveal-item mt-3 text-[0.875rem] text-muted" style={at(4)}>
           Trovata il {formatFoundDate(data.card.foundAt)}
           {data.card.identifiedBy === 'user' ? ' · specie scelta da te' : ''}
+          {gift ? ` · regalo${gift.from ? ` di ${gift.from}` : ''}${gift.at ? `, arrivato il ${formatFoundDate(gift.at)}` : ''}` : ''}
         </p>
+        {gift?.message ? (
+          <blockquote className="reveal-item gift__message" style={at(4)}>
+            «{gift.message}»
+          </blockquote>
+        ) : null}
         {reveal && duplicate ? (
           <p className="reveal-item mt-2 text-[0.875rem] text-muted" style={at(4)}>
             Ne avevi già {data.copies - 1 === 1 ? 'una' : data.copies - 1}: questa va tra i doppioni, da regalare.
@@ -152,7 +183,7 @@ export function CardScreen() {
           </Link>
         </div>
 
-        <Copies speciesId={entry.id} currentId={data.card.id} />
+        <Copies speciesId={entry.id} speciesName={entry.commonNameIt} currentId={data.card.id} currentPhoto={data.photo} />
         <SpeciesSheet entry={entry} />
         <DeleteCard cardId={data.card.id} copies={data.copies} speciesName={entry.commonNameIt} albumHref={albumHref} />
       </section>

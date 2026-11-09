@@ -42,6 +42,7 @@ describe('backup', () => {
     const b = await addCard(shot('papaver-rhoeas', 'poppy-2'), source)
     await setCover('papaver-rhoeas', b.card.id, source)
     await source.importedGifts.add({ giftId: 'gift-1', importedAt: '2026-11-08T10:00:00Z' })
+    await source.sentGifts.add({ giftId: 'gift-2', speciesId: 'papaver-rhoeas', createdAt: '2026-11-09T10:00:00Z', message: '', payload: 'g1.x' })
 
     const text = JSON.stringify(await createBackup('0.5.0', source))
     const result = await restoreBackup(parseBackup(text), target)
@@ -52,6 +53,7 @@ describe('backup', () => {
     expect(await photoBlob(photo!).text()).toBe('poppy-2')
     expect(await photoBlob(photo!, 'thumbnail').text()).toBe('poppy-2-thumb')
     expect((await getCovers(target)).get('papaver-rhoeas')).toBe(b.card.id)
+    expect((await target.sentGifts.get('gift-2'))?.payload).toBe('g1.x')
     // The gift redeemed before the backup is still refused after the restore.
     await expect(target.importedGifts.add({ giftId: 'gift-1', importedAt: 'later' })).rejects.toMatchObject({
       name: 'ConstraintError',

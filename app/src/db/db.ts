@@ -1,8 +1,8 @@
 import Dexie, { type EntityTable } from 'dexie'
 
 /**
- * Schema v1. Phase 4 stores the first real cards: from now on a new index or table is a new Dexie
- * version with a migration. Fields that are not indexed can be added without one.
+ * Schema v2 (phase 8: sentGifts). A new index or table is a new Dexie version; fields that are not
+ * indexed can be added without one. Never change an old version's stores: phones upgrade from it.
  */
 
 /** A card in the collection. A duplicate is simply another card of the same species. */
@@ -18,7 +18,12 @@ export interface CardRecord {
   confidence?: number
   /** "mock" until the real model ships, then the model version from labels.json. */
   recognizer?: string
-  source?: 'camera' | 'gallery'
+  source?: 'camera' | 'gallery' | 'gift'
+  /** A card received as a gift: who gave it, their message, the gift id and when it arrived. */
+  giftFrom?: string
+  giftMessage?: string
+  giftId?: string
+  receivedAt?: string
 }
 
 /**
@@ -45,6 +50,22 @@ export interface SettingRecord {
 export interface ImportedGiftRecord {
   giftId: string
   importedAt: string
+  from?: string
+  speciesId?: string
+  cardId?: string
+}
+
+/**
+ * Gifts given: the duplicate left the collection when the gift was made, and the link is kept so
+ * it can be sent again (same giftId, so the receiver still imports it once).
+ */
+export interface SentGiftRecord {
+  giftId: string
+  speciesId: string
+  createdAt: string
+  message: string
+  /** The gift link's payload (g1.…). */
+  payload: string
 }
 
 export class FloraDeckDB extends Dexie {
@@ -52,6 +73,7 @@ export class FloraDeckDB extends Dexie {
   photos!: EntityTable<PhotoRecord, 'id'>
   settings!: EntityTable<SettingRecord, 'key'>
   importedGifts!: EntityTable<ImportedGiftRecord, 'giftId'>
+  sentGifts!: EntityTable<SentGiftRecord, 'giftId'>
 
   constructor(name = 'floradeck') {
     super(name)
@@ -60,6 +82,9 @@ export class FloraDeckDB extends Dexie {
       photos: 'id',
       settings: 'key',
       importedGifts: 'giftId',
+    })
+    this.version(2).stores({
+      sentGifts: 'giftId, createdAt',
     })
   }
 }

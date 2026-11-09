@@ -23,11 +23,11 @@ function Entry({ card, firstOfSpecies, photo }: { card: CardRecord; firstOfSpeci
           </span>
           <span className="mt-0.5 block truncate text-[0.8125rem] text-muted">
             {day.format(new Date(card.foundAt))}
-            {album ? ` · ${album.name}` : ''}
+            {card.source === 'gift' && card.giftFrom ? ` · da ${card.giftFrom}` : album ? ` · ${album.name}` : ''}
           </span>
         </span>
         <span className="shrink-0 text-[0.75rem] font-semibold text-muted">
-          {entry ? (firstOfSpecies ? 'Nuova' : 'Doppione') : ''}
+          {entry ? (card.source === 'gift' ? 'Regalo' : firstOfSpecies ? 'Nuova' : 'Doppione') : ''}
         </span>
       </Link>
     </li>
@@ -57,7 +57,8 @@ export function JournalScreen() {
     )
   }
 
-  const groups = journalGroups(cards)
+  // A gift goes in the diary on the day it arrived, not the day the other player found it.
+  const groups = journalGroups(cards.map((card) => (card.source === 'gift' && card.receivedAt ? { ...card, foundAt: card.receivedAt } : card)))
   return (
     <Page>
       <ScreenHeader title="Diario">

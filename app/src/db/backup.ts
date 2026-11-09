@@ -1,4 +1,12 @@
-import { db as defaultDb, type CardRecord, type FloraDeckDB, type ImportedGiftRecord, type PhotoRecord, type SettingRecord } from './db'
+import {
+  db as defaultDb,
+  type CardRecord,
+  type FloraDeckDB,
+  type ImportedGiftRecord,
+  type PhotoRecord,
+  type SentGiftRecord,
+  type SettingRecord,
+} from './db'
 
 /**
  * Full backup as one JSON file: cards, photos (base64), settings (covers) and the gifts already
@@ -23,6 +31,8 @@ export interface Backup {
   photos: StoredPhoto[]
   settings: SettingRecord[]
   importedGifts: ImportedGiftRecord[]
+  /** Since phase 8; older backups have none. */
+  sentGifts?: SentGiftRecord[]
 }
 
 export function toBase64(buffer: ArrayBuffer): string {
@@ -41,11 +51,12 @@ export function fromBase64(text: string): ArrayBuffer {
 }
 
 export async function createBackup(appVersion: string, database: FloraDeckDB = defaultDb): Promise<Backup> {
-  const [cards, photos, settings, importedGifts] = await Promise.all([
+  const [cards, photos, settings, importedGifts, sentGifts] = await Promise.all([
     database.cards.toArray(),
     database.photos.toArray(),
     database.settings.toArray(),
     database.importedGifts.toArray(),
+    database.sentGifts.toArray(),
   ])
   return {
     format: BACKUP_FORMAT,
@@ -56,6 +67,7 @@ export async function createBackup(appVersion: string, database: FloraDeckDB = d
     photos: photos.map((photo) => ({ ...photo, image: toBase64(photo.image), thumbnail: toBase64(photo.thumbnail) })),
     settings,
     importedGifts,
+    sentGifts,
   }
 }
 
@@ -101,7 +113,8 @@ export async function restoreBackup(backup: Backup, database: FloraDeckDB = defa
     image: fromBase64(photo.image),
     thumbnail: fromBase64(photo.thumbnail),
   }))
-  return database.transaction('rw', [database.cards, database.photos, database.settings, database.importedGifts], async () => {
+  const tables = [database.cards, database.photos, database.settings, database.importedGifts, database.sentGifts]
+  return database.transaction('rw', tables, async () => {
     const haveCards = new Set(await database.cards.toCollection().primaryKeys())
     const havePhotos = new Set(await database.photos.toCollection().primaryKeys())
     const haveSettings = new Set(await database.settings.toCollection().primaryKeys())
@@ -110,7 +123,13 @@ export async function restoreBackup(backup: Backup, database: FloraDeckDB = defa
     await database.cards.bulkAdd(newCards)
     await database.photos.bulkAdd(photos.filter((photo) => !havePhotos.has(photo.id)))
     await database.settings.bulkAdd(backup.settings.filter((setting) => !haveSettings.has(setting.key)))
+    // Restoring onto a new phone is the same player: the backup's profile wins over the one the new
+    // phone made on its first start, so the partner and the gifts still recognise them.
+    const profile = backup.settings.find((setting) => setting.key === 'profile')
+    if (profile) await database.settings.put(profile)
     await database.importedGifts.bulkAdd(backup.importedGifts.filter((gift) => !haveGifts.has(gift.giftId)))
+    const haveSent = new Set(await database.sentGifts.toCollection().primaryKeys())
+    await database.sentGifts.bulkAdd((backup.sentGifts ?? []).filter((gift) => !haveSent.has(gift.giftId)))
     return { cardsAdded: newCards.length, cardsAlreadyThere: backup.cards.length - newCards.length }
   })
 }
