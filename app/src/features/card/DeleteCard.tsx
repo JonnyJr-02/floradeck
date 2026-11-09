@@ -37,7 +37,7 @@ export function DeleteCard({
       </h2>
       <div className="grid gap-2.5">
         {gift}
-        <button type="button" className="btn btn--ghost press" onClick={() => setConfirming(true)}>
+        <button type="button" className="btn btn--danger press" onClick={() => setConfirming(true)}>
           Elimina questa carta
         </button>
       </div>

@@ -168,3 +168,13 @@ export function IconLeaf(props: IconProps) {
     </Icon>
   )
 }
+
+export function IconGift(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <rect x="4" y="9" width="16" height="11" rx="2" />
+      <path d="M3.5 9h17M12 9v11" />
+      <path d="M12 9c-1.5-3.5-5.5-4-5.5-1.5S10 9 12 9zM12 9c1.5-3.5 5.5-4 5.5-1.5S14 9 12 9z" />
+    </Icon>
+  )
+}

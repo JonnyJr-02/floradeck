@@ -3,6 +3,7 @@ import { useLocation } from 'wouter'
 import { createGift, GiftError, saveProfile, usePartner, useProfile } from '../../db/couple'
 import type { PhotoRecord } from '../../db/db'
 import { giftPhoto } from '../../photo/giftPhoto'
+import { IconGift } from '../../ui/icons'
 import { Sheet } from '../../ui/Sheet'
 
 const MESSAGE_MAX = 200
@@ -59,7 +60,8 @@ export function GiveGift({
 
   return (
     <>
-      <button type="button" className="btn btn--ghost press" onClick={start}>
+      <button type="button" className="btn btn--gift press" onClick={start}>
+        <IconGift className="size-5" />
         Regala questa carta
       </button>
       <Sheet open={open} labelledBy="give-gift-title" onClose={() => (busy ? undefined : setOpen(false))}>

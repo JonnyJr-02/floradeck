@@ -197,6 +197,18 @@
   .btn:disabled {
     opacity: 0.45;
   }
+  /* Giving a card: gift-wrap gold, the same gold leaf as the legendary cards (user's choice). */
+  .btn--gift {
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-2) 55%, var(--gold-3));
+    color: #2a1f0a;
+    font-weight: 600;
+  }
+  /* Removing a card: the page colour, with red words and a red edge (user's choice). */
+  .btn--danger {
+    background: transparent;
+    color: var(--p-accent);
+    box-shadow: inset 0 0 0 1.5px var(--p-accent);
+  }
 
   .round-btn {
     display: grid;
