@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlantCLEF bench</title>
+<!-- onnxruntime-web 1.30.0: WASM + WebGPU in one bundle -->
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.30.0/dist/ort.all.min.js"></script>
+<style>body { font: 14px system-ui; margin: 16px; background: #fff; color: #111 } pre { white-space: pre-wrap }</style>
+</head>
+<body>
+<p>Query: <code>?model=plantclef-336-int8.onnx&amp;ep=wasm&amp;threads=1&amp;size=336&amp;runs=5</code></p>
+<pre id="out">running…</pre>
+<script>
+// Times one model in the browser: download, session creation, first run, then the median of `runs` runs.
+(async () => {
+  const q = new URLSearchParams(location.search)
+  const model = q.get('model') ?? 'plantclef-336-int8.onnx'
+  const ep = q.get('ep') ?? 'wasm'
+  const threads = Number(q.get('threads') ?? 1)
+  const size = Number(q.get('size') ?? 336)
+  const runs = Number(q.get('runs') ?? 5)
+  const out = document.getElementById('out')
+  const result = { model, ep, threads, size, crossOriginIsolated: self.crossOriginIsolated, webgpu: !!navigator.gpu }
+  try {
+    ort.env.wasm.numThreads = threads
+    let t = performance.now()
+    let bytes
+    if (q.get('parts')) {
+      // split model: download the parts listed in <name>.parts.json, join them, check the SHA-256
+      const base = q.get('parts').replace(/[^/]*$/, '')
+      const manifest = await (await fetch(q.get('parts'))).json()
+      bytes = new Uint8Array(manifest.bytes)
+      let offset = 0
+      for (const part of manifest.parts) {
+        const chunk = new Uint8Array(await (await fetch(base + part.file)).arrayBuffer())
+        bytes.set(chunk, offset)
+        offset += chunk.length
+      }
+      const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), b => b.toString(16).padStart(2, '0')).join('')
+      result.sha256ok = digest === manifest.sha256
+      result.parts = manifest.parts.length
+    } else {
+      bytes = new Uint8Array(await (await fetch(model)).arrayBuffer())
+    }
+    result.downloadMs = Math.round(performance.now() - t)
+    result.mb = +(bytes.length / 1e6).toFixed(1)
+    t = performance.now()
+    const session = await ort.InferenceSession.create(bytes, { executionProviders: [ep], graphOptimizationLevel: 'all' })
+    result.createMs = Math.round(performance.now() - t)
+    const data = new Float32Array(3 * size * size)
+    for (let i = 0; i < data.length; i++) data[i] = Math.sin(i) * 1.5
+    const feeds = { image: new ort.Tensor('float32', data, [1, 3, size, size]) }
+    t = performance.now()
+    let output = await session.run(feeds)
+    result.firstRunMs = Math.round(performance.now() - t)
+    const times = []
+    for (let r = 0; r < runs; r++) {
+      t = performance.now()
+      output = await session.run(feeds)
+      times.push(performance.now() - t)
+    }
+    times.sort((a, b) => a - b)
+    result.medianMs = Math.round(times[Math.floor(times.length / 2)])
+    result.minMs = Math.round(times[0])
+    const logits = output.logits.data
+    let best = 0
+    for (let i = 1; i < logits.length; i++) if (logits[i] > logits[best]) best = i
+    result.top1 = best
+  } catch (err) {
+    result.error = String(err && err.message || err)
+  }
+  window.benchResult = result
+  out.textContent = JSON.stringify(result, null, 1)
+  document.title = 'done'
+})()
+</script>
+</body>
+</html>
