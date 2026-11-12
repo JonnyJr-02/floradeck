@@ -22,6 +22,7 @@ Personal PWA for collecting Italian wild flowers and plants as trading cards ("f
 - Python: use `py -3.13` (plain `python` is 3.9).
 - GPU: GeForce MX130 2 GB, not usable for training. Training, evaluation and ONNX export run in a Kaggle notebook (free T4, chosen over Colab on 2026-11-07: the ~9 GB dataset would fill a free Drive); download, cleaning and packing run locally on CPU.
 - Google Chrome is installed: Playwright MCP default browser and the Android E2E project (`channel: 'chrome'`). Playwright's WebKit was downloaded on 2026-11-07 with the user's OK (`%LOCALAPPDATA%\ms-playwright`).
+- 2026-11-12, work closed: the training images (`ml/data/images`), the Kaggle packs (`ml/data/kaggle`) and `ml/artifacts` were deleted to free ~19 GB (the models live in `app/public/models/`, the dataset on Kaggle); to retrain, run `fetch` (it resumes from the manifest) and `pack` again.
 - Disk C: is small and nearly full (237 GB; on 2026-11-07 it ran out completely, then about 11 GB were free): check `df -h /c` before large downloads.
 
 ## Skills and MCP
