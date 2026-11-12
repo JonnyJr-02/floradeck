@@ -229,3 +229,22 @@ test('the album screen shows this week’s three challenges, and a find ticks on
   // A card found today is a new species this week: «Trova una specie…» or «Trova 3 carte» moved on.
   await expect(challenges.getByText(/[1-3] di 3/).first()).toBeVisible()
 })
+
+test('every album complete: gold albums and a full-screen finale, once', async ({ page }, testInfo) => {
+  const catalogue = JSON.parse(await readFile(new URL('../../catalog/species.json', import.meta.url), 'utf8')) as Array<{ id: string }>
+  await seed(page, catalogue.map((entry) => ({ speciesId: entry.id })))
+  const finale = page.getByRole('dialog', { name: 'Tutti gli album completati!' })
+  await expect(finale).toBeVisible()
+  await expect(finale.getByText('210 specie su 210')).toBeVisible()
+  if (testInfo.project.name === 'android') {
+    await settled(page)
+    const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze()
+    expect(results.violations.map((v) => v.id)).toEqual([])
+  }
+  await finale.getByRole('button', { name: 'Che meraviglia' }).click()
+  await expect(finale).toBeHidden()
+  await expect(page.locator('.album-row[data-complete]')).toHaveCount(6)
+  await page.reload()
+  await expect(page.getByRole('heading', { level: 1, name: 'Album' })).toBeVisible()
+  await expect(page.getByRole('dialog', { name: 'Tutti gli album completati!' })).toHaveCount(0)
+})

@@ -853,11 +853,34 @@
   .album-progress .track {
     background: var(--p-surface);
   }
+  /*
+   * A completed album turns gold leaf (user's request on 2026-11-12), the same gold as the
+   * legendary cards: on the list, on its progress bar and on its «Album completato» line.
+   * Dark brown words on gold in both themes (contrast checked by the axe scans).
+   */
+  .album-row[data-complete],
+  .album-done {
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-2) 60%, var(--gold-3));
+    color: #2a1f0a;
+  }
+  .album-row[data-complete] .text-muted {
+    color: #4a3a17;
+  }
+  .album-row[data-complete] .track {
+    background: rgb(42 31 10 / 0.18);
+  }
+  .album-row[data-complete] .track > i,
+  .album-progress[data-complete] .track > i {
+    background: linear-gradient(90deg, var(--gold-3), var(--gold-2));
+  }
+  .album-row[data-complete] .pill {
+    background: #2a1f0a;
+    color: var(--gold-1);
+  }
   .album-done {
     padding: 0.75rem 1rem;
     border-radius: var(--radius-tile);
-    background: var(--p-surface);
-    font-weight: 500;
+    font-weight: 600;
   }
   .filters {
     display: flex;
@@ -1375,6 +1398,82 @@
     text-underline-offset: 0.2em;
   }
 
+  /*
+   * Every album complete: a full-screen finale, once (choreograph skill: one focal point at a time).
+   * Night falls (400 ms), the six legendary cards fan out from the centre one after another
+   * (90 ms apart, 750 ms ease-out), one sweep of light crosses them, then the words rise and gold
+   * and petals fall. Transform and opacity only; reduced motion keeps fades.
+   */
+  .finale {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 2rem;
+    padding: calc(2rem + env(safe-area-inset-top, 0px)) 1.5rem calc(2rem + env(safe-area-inset-bottom, 0px));
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 38%, #24305a, #0b0f19 72%);
+    color: #eee9df;
+    text-align: center;
+    animation: fade 400ms ease-out both;
+  }
+  .finale:focus {
+    outline: none;
+  }
+  .finale__fan {
+    position: relative;
+    width: 100%;
+    max-width: 22rem;
+    height: 13rem;
+  }
+  .finale__card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6rem;
+    aspect-ratio: 3 / 4;
+    margin: -4rem 0 0 -3rem;
+    overflow: hidden;
+    border-radius: 0.875rem;
+    background: #f6f1e4;
+    box-shadow:
+      0 0 0 2px var(--gold-2),
+      0 14px 30px rgb(0 0 0 / 0.45);
+    opacity: 0;
+    transform: translate(0, 2.5rem) scale(0.92);
+    animation: finale-card 750ms var(--ease-out) both;
+    animation-delay: calc(300ms + var(--i) * 90ms);
+  }
+  .finale__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .finale__card img[data-plate] {
+    padding: 0.25rem;
+    object-fit: contain;
+  }
+  .finale__sweep {
+    position: absolute;
+    inset: -20% -40%;
+    background: linear-gradient(100deg, transparent 40%, rgb(255 244 207 / 0.55) 50%, transparent 60%);
+    opacity: 0;
+    pointer-events: none;
+    animation: light-sweep 900ms var(--ease-in-out) 1150ms both;
+  }
+  .finale__words > * {
+    animation: rise 400ms var(--ease-out) both;
+    animation-delay: calc(1350ms + var(--i, 0) * 80ms);
+  }
+  .finale__title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
   /* Someone else's good photo of the species, in the sheet. */
   .reference {
     overflow: hidden;
@@ -1568,6 +1667,18 @@
     .card-view--reveal[data-rarity="legendary"] .reveal-item {
       animation: fade 300ms ease 200ms both;
     }
+    .finale__card {
+      opacity: 1;
+      transform: translate(var(--x), var(--y)) rotate(var(--r));
+      animation: fade 400ms ease both;
+      animation-delay: calc(200ms + var(--i) * 60ms);
+    }
+    .finale__sweep {
+      display: none;
+    }
+    .finale__words > * {
+      animation: fade 300ms ease 700ms both;
+    }
     .tile[data-filling] .tile__img::after,
     .rare-slot[data-filling] .rare-slot__img::after {
       animation: slot-ring 600ms ease both;
@@ -1601,6 +1712,12 @@
   to {
     clip-path: inset(0 round 0);
     transform: scale(1);
+  }
+}
+@keyframes finale-card {
+  to {
+    opacity: 1;
+    transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(1);
   }
 }
 @keyframes rise {

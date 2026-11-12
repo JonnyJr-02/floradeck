@@ -15,6 +15,7 @@ import { plateUrl } from '../../domain/plates'
 import { IconBack, IconLock } from '../../ui/icons'
 import { IN_APP } from '../../ui/Page'
 import { PhotoThumb } from '../../ui/PhotoThumb'
+import { GrandFinale, useAllComplete, useGrandFinale } from './GrandFinale'
 import { Petals } from './Petals'
 
 const FILTERS: ReadonlyArray<{ value: SlotFilter; label: string }> = [
@@ -165,6 +166,9 @@ export function AlbumScreen() {
   const filledSlot = fill ? slots.find((slot) => slot.species.id === fill) : undefined
   // The celebration plays when the card just added was the last one missing.
   const celebrate = complete && filledSlot !== undefined && filledSlot.cards.length === 1
+  // The last slot of the last album: the full-screen finale instead of the petals.
+  const allComplete = useAllComplete()
+  const finale = useGrandFinale(celebrate && allComplete)
 
   useEffect(() => {
     if (!filledSlot) return
@@ -194,7 +198,7 @@ export function AlbumScreen() {
           <h1 className="text-[1.875rem] leading-[1.05]">{album.name}</h1>
         </div>
       </header>
-      <div className="album-progress mt-4">
+      <div className="album-progress mt-4" data-complete={complete || undefined}>
         <b className="tabular-nums">
           {found} di {album.speciesCount}
         </b>
@@ -209,7 +213,8 @@ export function AlbumScreen() {
           Album completato: hai trovato tutte le {album.speciesCount} specie.
         </p>
       ) : null}
-      {celebrate ? <Petals /> : null}
+      {celebrate && !allComplete ? <Petals /> : null}
+      {finale.show ? <GrandFinale onClose={finale.close} /> : null}
 
       <div className="filters mt-4" role="group" aria-label="Mostra">
         {FILTERS.map((option) => (
