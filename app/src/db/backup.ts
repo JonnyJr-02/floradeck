@@ -6,6 +6,7 @@ import {
   type PhotoRecord,
   type SentGiftRecord,
   type SettingRecord,
+  type SightingRecord,
 } from './db'
 
 /**
@@ -33,6 +34,8 @@ export interface Backup {
   importedGifts: ImportedGiftRecord[]
   /** Since phase 8; older backups have none. Pictures in base64. */
   sentGifts?: StoredSentGift[]
+  /** Plants outside the albums kept in the diary (since 2026-11-12). */
+  sightings?: SightingRecord[]
 }
 
 interface StoredSentGift extends Omit<SentGiftRecord, 'image'> {
@@ -55,12 +58,13 @@ export function fromBase64(text: string): ArrayBuffer {
 }
 
 export async function createBackup(appVersion: string, database: FloraDeckDB = defaultDb): Promise<Backup> {
-  const [cards, photos, settings, importedGifts, sentGifts] = await Promise.all([
+  const [cards, photos, settings, importedGifts, sentGifts, sightings] = await Promise.all([
     database.cards.toArray(),
     database.photos.toArray(),
     database.settings.toArray(),
     database.importedGifts.toArray(),
     database.sentGifts.toArray(),
+    database.sightings.toArray(),
   ])
   return {
     format: BACKUP_FORMAT,
@@ -72,6 +76,7 @@ export async function createBackup(appVersion: string, database: FloraDeckDB = d
     settings,
     importedGifts,
     sentGifts: sentGifts.map((gift) => ({ ...gift, image: gift.image ? toBase64(gift.image) : undefined })),
+    sightings,
   }
 }
 
@@ -117,7 +122,7 @@ export async function restoreBackup(backup: Backup, database: FloraDeckDB = defa
     image: fromBase64(photo.image),
     thumbnail: fromBase64(photo.thumbnail),
   }))
-  const tables = [database.cards, database.photos, database.settings, database.importedGifts, database.sentGifts]
+  const tables = [database.cards, database.photos, database.settings, database.importedGifts, database.sentGifts, database.sightings]
   return database.transaction('rw', tables, async () => {
     const haveCards = new Set(await database.cards.toCollection().primaryKeys())
     const havePhotos = new Set(await database.photos.toCollection().primaryKeys())
@@ -138,6 +143,8 @@ export async function restoreBackup(backup: Backup, database: FloraDeckDB = defa
         .filter((gift) => !haveSent.has(gift.giftId))
         .map((gift) => ({ ...gift, image: gift.image ? fromBase64(gift.image) : undefined })),
     )
+    const haveSightings = new Set(await database.sightings.toCollection().primaryKeys())
+    await database.sightings.bulkAdd((backup.sightings ?? []).filter((sighting) => !haveSightings.has(sighting.id)))
     return { cardsAdded: newCards.length, cardsAlreadyThere: backup.cards.length - newCards.length }
   })
 }

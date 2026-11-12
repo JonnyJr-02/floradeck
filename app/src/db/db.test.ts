@@ -13,10 +13,17 @@ afterEach(async () => {
 })
 
 describe('FloraDeckDB', () => {
-  it('opens schema version 2 with its tables', async () => {
+  it('opens schema version 3 with its tables', async () => {
     await db.open()
-    expect(db.verno).toBe(2)
-    expect(db.tables.map((table) => table.name).sort()).toEqual(['cards', 'importedGifts', 'photos', 'sentGifts', 'settings'])
+    expect(db.verno).toBe(3)
+    expect(db.tables.map((table) => table.name).sort()).toEqual([
+      'cards',
+      'importedGifts',
+      'photos',
+      'sentGifts',
+      'settings',
+      'sightings',
+    ])
   })
 
   it('stores settings by key', async () => {

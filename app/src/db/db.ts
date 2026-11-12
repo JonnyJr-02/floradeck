@@ -1,7 +1,7 @@
 import Dexie, { type EntityTable } from 'dexie'
 
 /**
- * Schema v2 (phase 8: sentGifts). A new index or table is a new Dexie version; fields that are not
+ * Schema v3 (2026-11-12: sightings; v2, phase 8: sentGifts). A new index or table is a new Dexie version; fields that are not
  * indexed can be added without one. Never change an old version's stores: phones upgrade from it.
  */
 
@@ -71,12 +71,29 @@ export interface SentGiftRecord {
   imageType?: string
 }
 
+/**
+ * A plant outside the albums, named by the all-plants model and kept in the diary when the user
+ * taps its name (user's request on 2026-11-12): the photo, the chosen name, the day. Never a card.
+ */
+export interface SightingRecord {
+  id: string
+  scientific: string
+  /** Italian name when one exists; empty otherwise (never invented). */
+  italian: string
+  foundAt: string
+  photoId?: string
+  /** The all-plants model's probability for this name. */
+  confidence?: number
+  source?: 'camera' | 'gallery'
+}
+
 export class FloraDeckDB extends Dexie {
   cards!: EntityTable<CardRecord, 'id'>
   photos!: EntityTable<PhotoRecord, 'id'>
   settings!: EntityTable<SettingRecord, 'key'>
   importedGifts!: EntityTable<ImportedGiftRecord, 'giftId'>
   sentGifts!: EntityTable<SentGiftRecord, 'giftId'>
+  sightings!: EntityTable<SightingRecord, 'id'>
 
   constructor(name = 'floradeck') {
     super(name)
@@ -88,6 +105,9 @@ export class FloraDeckDB extends Dexie {
     })
     this.version(2).stores({
       sentGifts: 'giftId, createdAt',
+    })
+    this.version(3).stores({
+      sightings: 'id, foundAt',
     })
   }
 }

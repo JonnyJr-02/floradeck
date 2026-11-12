@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'wouter'
-import { species, speciesById } from '../../domain/catalog'
+import { cardForName } from '../../domain/allPlantsCards'
+import { speciesById } from '../../domain/catalog'
 import { identifyPlant, useAllPlants, type PlantName } from '../../recognition/allPlants'
 import { plantPhoto, type PlantPhoto } from '../../recognition/plantPhotos'
 import type { Candidate } from '../../recognition/types'
@@ -77,11 +78,6 @@ export function UnsureSheet({
   )
 }
 
-/** Catalogue species known under a scientific name, to say when a name found is also a card. */
-const catalogueNames = new Map(
-  species.flatMap((entry) => [entry.scientificName, ...entry.modelLabels].map((name) => [name.toLowerCase(), entry] as const)),
-)
-
 type Search = { step: 'idle' } | { step: 'searching'; progress: number } | { step: 'done'; names: PlantName[] } | { step: 'failed' }
 
 /** A photo for a name found: the card's own pictures when it is also a card, else iNaturalist's. */
@@ -115,15 +111,11 @@ function NamePicture({ scientific, cardId, onCredit }: { scientific: string; car
   )
 }
 
-function NameResult({ name, cardId }: { name: PlantName; cardId?: string }) {
+/** Names, photo and credit of one proposal, shared by the card button and the Wikipedia link. */
+function NameBody({ name, cardId, saved }: { name: PlantName; cardId?: string; saved: boolean }) {
   const [credit, setCredit] = useState('')
   return (
-    <a
-      className="candidate press"
-      href={`https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(name.scientific)}`}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <>
       <NamePicture scientific={name.scientific} cardId={cardId} onCredit={setCredit} />
       <span className="min-w-0">
         <span className="block font-medium leading-tight">
@@ -131,7 +123,9 @@ function NameResult({ name, cardId }: { name: PlantName; cardId?: string }) {
         </span>
         {name.italian ? <span className="block text-[0.8125rem] italic text-muted">{name.scientific}</span> : null}
         {cardId ? (
-          <span className="mt-0.5 block text-[0.8125rem] text-accent">È anche una figurina: riprova la foto più da vicino.</span>
+          <span className="mt-0.5 block text-[0.8125rem] font-semibold text-accent">È una figurina: toccala per metterla nell’album</span>
+        ) : saved ? (
+          <span className="mt-0.5 block text-[0.8125rem] font-semibold text-accent">Salvata nel diario</span>
         ) : null}
         {credit ? (
           <span className="mt-1 block text-[0.6875rem] leading-tight text-muted">
@@ -153,16 +147,66 @@ function NameResult({ name, cardId }: { name: PlantName; cardId?: string }) {
         </span>
         <IconChevron className="size-[1.125rem] text-muted" />
       </span>
+    </>
+  )
+}
+
+/**
+ * One of the three names (user's request on 2026-11-12): a name that is also a card adds the card,
+ * as a confirmed proposal; any other name opens Wikipedia and keeps the plant in the diary.
+ */
+function NameResult({
+  name,
+  cardId,
+  saved,
+  onPickCard,
+  onSaveSighting,
+}: {
+  name: PlantName
+  cardId?: string
+  saved: boolean
+  onPickCard: (speciesId: string, confidence: number) => void
+  onSaveSighting: (name: PlantName) => void
+}) {
+  if (cardId) {
+    return (
+      <button type="button" className="candidate press" onClick={() => onPickCard(cardId, name.confidence)}>
+        <NameBody name={name} cardId={cardId} saved={false} />
+      </button>
+    )
+  }
+  return (
+    <a
+      className="candidate press"
+      href={`https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(name.scientific)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => onSaveSighting(name)}
+    >
+      <NameBody name={name} saved={saved} />
     </a>
   )
 }
 
 /** The optional name search among 7,806 species: only on request, after a confirming tap. */
-function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean }) {
+function NameSearch({
+  photo,
+  open,
+  onPickCard,
+  onSaveSighting,
+}: {
+  photo: Blob | undefined
+  open: boolean
+  onPickCard: (speciesId: string, confidence: number) => void
+  onSaveSighting: (name: PlantName) => Promise<void>
+}) {
   const { state } = useAllPlants()
   const [search, setSearch] = useState<Search>({ step: 'idle' })
+  const [saved, setSaved] = useState<string | null>(null)
   useEffect(() => {
-    if (!open) setSearch({ step: 'idle' })
+    if (open) return
+    setSearch({ step: 'idle' })
+    setSaved(null)
   }, [open])
 
   if (!photo) return null
@@ -187,17 +231,26 @@ function NameSearch({ photo, open }: { photo: Blob | undefined; open: boolean })
         </h3>
         <ul role="list" className="mt-3 grid gap-2.5" aria-label="I nomi più probabili">
           {search.names.map((name) => {
-            const card = catalogueNames.get(name.scientific.toLowerCase())
+            const cardId = cardForName(name.scientific)
             return (
               <li key={name.scientific}>
-                <NameResult name={name} cardId={card?.id} />
+                <NameResult
+                  name={name}
+                  cardId={cardId}
+                  saved={saved === name.scientific}
+                  onPickCard={onPickCard}
+                  onSaveSighting={(picked) => {
+                    setSaved(picked.scientific)
+                    void onSaveSighting(picked)
+                  }}
+                />
               </li>
             )
           })}
         </ul>
         <p className="mt-2 text-[0.8125rem] leading-snug text-muted">
-          Solo un&apos;indicazione: non è tra le figurine, quindi niente carta. Con la rete arrivano le foto da
-          iNaturalist; tocca un nome per leggerne su Wikipedia.
+          Tocca il nome giusto: se è una figurina va nell&apos;album, altrimenti si apre Wikipedia e la pianta resta nel
+          Diario. Con la rete arrivano le foto da iNaturalist.
         </p>
       </section>
     )
@@ -251,11 +304,15 @@ export function OutOfCatalogSheet({
   afterNone = false,
   photo,
   onAgain,
+  onPickCard,
+  onSaveSighting,
 }: {
   open: boolean
   afterNone?: boolean
   photo?: Blob
   onAgain: () => void
+  onPickCard: (speciesId: string, confidence: number) => void
+  onSaveSighting: (name: PlantName) => Promise<void>
 }) {
   return (
     <Sheet open={open} labelledBy="out-title" onClose={onAgain} tall>
@@ -270,7 +327,7 @@ export function OutOfCatalogSheet({
           <li key={tip}>{tip}</li>
         ))}
       </ul>
-      <NameSearch photo={photo} open={open} />
+      <NameSearch photo={photo} open={open} onPickCard={onPickCard} onSaveSighting={onSaveSighting} />
       <button type="button" className="btn press mt-5" onClick={onAgain}>
         Scatta di nuovo
       </button>

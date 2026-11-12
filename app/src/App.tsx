@@ -12,6 +12,7 @@ import { ReceiveGiftScreen } from './features/couple/ReceiveGiftScreen'
 import { SentGiftScreen } from './features/couple/SentGiftScreen'
 import { ExploreScreen } from './features/explore/ExploreScreen'
 import { JournalScreen } from './features/journal/JournalScreen'
+import { SightingScreen } from './features/journal/SightingScreen'
 import { InstallScreen } from './features/settings/InstallScreen'
 import { SettingsScreen } from './features/settings/SettingsScreen'
 import { PwaStatus } from './pwa/PwaStatus'
@@ -53,6 +54,7 @@ export function App() {
         <Route path="/album/:id" component={AlbumScreen} />
         <Route path="/carta/:id" component={CardScreen} />
         <Route path="/specie/:id" component={SpeciesScreen} />
+        <Route path="/avvistamento/:id" component={SightingScreen} />
         <Route path="/impostazioni" component={SettingsScreen} />
         <Route path="/installa" component={InstallScreen} />
         <Route>

@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'wouter'
 import { addCard } from '../../db/collection'
+import { addSighting, deleteSighting, renameSighting } from '../../db/sightings'
+import type { PlantName } from '../../recognition/allPlants'
 import { decodeFile, preparePhoto, type PhotoSource, type PreparedPhoto } from '../../photo/photo'
 import { recognizer } from '../../recognition/recognizer'
 import type { Candidate, Recognition } from '../../recognition/types'
@@ -59,6 +61,9 @@ function CameraPrompt({ status, onStart }: { status: CameraStatus; onStart: () =
   )
 }
 
+/** Cards confirmed from the all-plants names say so, for the record. */
+const ALL_PLANTS_RECOGNIZER = 'plantclef-2024'
+
 export function ExploreScreen() {
   const [, navigate] = useLocation()
   const { videoRef, status, start, torchAvailable, torchOn, setTorch } = useCamera()
@@ -88,6 +93,7 @@ export function ExploreScreen() {
     shot: { photo: PreparedPhoto; preview: string; source: Source },
     candidate: Candidate,
     identifiedBy: 'model' | 'user',
+    recognizerName = recognizer.name,
   ) {
     setFlow({ step: 'saving', preview: shot.preview })
     try {
@@ -96,7 +102,7 @@ export function ExploreScreen() {
         photo: shot.photo,
         identifiedBy,
         confidence: candidate.confidence,
-        recognizer: recognizer.name,
+        recognizer: recognizerName,
         source: shot.source,
       })
       navigate(`/carta/${card.id}`, { state: REVEAL })
@@ -137,6 +143,22 @@ export function ExploreScreen() {
     if (flow.step === 'result') void save(flow, candidate, 'user')
   }
 
+  // The all-plants names (user's request on 2026-11-12): a card when the name is one, else the
+  // plant goes into the diary; one shot is one sighting, renamed if another name is tapped.
+  const sightingRef = useRef<string | null>(null)
+  async function pickFromAllPlants(speciesId: string, confidence: number) {
+    if (flow.step !== 'result') return
+    if (sightingRef.current) await deleteSighting(sightingRef.current)
+    sightingRef.current = null
+    await save(flow, { speciesId, confidence }, 'user', ALL_PLANTS_RECOGNIZER)
+  }
+  async function saveSighting(name: PlantName) {
+    if (flow.step !== 'result') return
+    const label = { scientific: name.scientific, italian: name.italian, confidence: name.confidence }
+    if (sightingRef.current) await renameSighting(sightingRef.current, label)
+    else sightingRef.current = (await addSighting({ ...label, photo: flow.photo, source: flow.source })).id
+  }
+
   function shoot() {
     const video = videoRef.current
     if (!video || status !== 'live' || video.videoWidth === 0) return
@@ -156,6 +178,7 @@ export function ExploreScreen() {
 
   function again() {
     abortRef.current?.abort()
+    sightingRef.current = null
     setNoneOfThese(false)
     setFlow({ step: 'aim' })
   }
@@ -261,6 +284,8 @@ export function ExploreScreen() {
         afterNone={noneOfThese}
         photo={flow.step === 'result' ? flow.photo.image : undefined}
         onAgain={again}
+        onPickCard={(speciesId, confidence) => void pickFromAllPlants(speciesId, confidence)}
+        onSaveSighting={saveSighting}
       />
     </main>
   )

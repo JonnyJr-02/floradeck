@@ -107,7 +107,7 @@ test('the diary lists discoveries by month, newest first', async ({ page }) => {
     { speciesId: 'bellis-perennis', foundAt: '2026-06-12T10:00:00Z' },
   ])
   await page.getByRole('navigation', { name: 'Sezioni' }).getByRole('link', { name: 'Diario' }).click()
-  await expect(page.getByText('3 scoperte, dalla più recente.')).toBeVisible()
+  await expect(page.getByText('3 carte, dalla più recente.')).toBeVisible()
   const months = page.getByRole('heading', { level: 2 })
   await expect(months).toHaveText(['Giugno 2026', 'Maggio 2026'])
   const june = page.getByRole('region', { name: 'Giugno 2026' }).getByRole('link')
@@ -220,4 +220,12 @@ test('a card can be deleted, and its species is missing again', async ({ page })
   await sheet.getByRole('button', { name: 'Elimina' }).click()
   await expect(page).toHaveURL(/\/album\/rossi-arancio$/)
   await expect(page.getByText('0 di 34')).toBeVisible()
+})
+
+test('the album screen shows this week’s three challenges, and a find ticks one off', async ({ page }) => {
+  await seed(page, [{ speciesId: 'bellis-perennis', foundAt: new Date().toISOString() }])
+  const challenges = page.getByRole('region', { name: 'Sfide della settimana' })
+  await expect(challenges.getByRole('listitem')).toHaveCount(3)
+  // A card found today is a new species this week: «Trova una specie…» or «Trova 3 carte» moved on.
+  await expect(challenges.getByText(/[1-3] di 3/).first()).toBeVisible()
 })

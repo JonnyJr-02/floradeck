@@ -18,7 +18,7 @@ export interface AddedCard {
   duplicate: boolean
 }
 
-async function toRecord(photo: PreparedPhoto): Promise<PhotoRecord> {
+export async function toRecord(photo: PreparedPhoto): Promise<PhotoRecord> {
   const [image, thumbnail] = await Promise.all([photo.image.arrayBuffer(), photo.thumbnail.arrayBuffer()])
   return {
     id: crypto.randomUUID(),

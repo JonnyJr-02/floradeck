@@ -5,6 +5,7 @@ import { albumById, albums, species, speciesById, totalSpecies } from '../../dom
 import { foundPerAlbum, speciesFound } from '../../domain/collection'
 import { plateUrl } from '../../domain/plates'
 import { IN_APP, Page, ScreenHeader } from '../../ui/Page'
+import { WeeklyChallenges } from './WeeklyChallenges'
 
 const albumsOf = (speciesId: string) => speciesById(speciesId)?.albums
 const albumOrder = (albumId: string) => albumById(albumId)?.order ?? 0
@@ -91,6 +92,7 @@ export function AlbumsScreen() {
           )
         })}
       </ol>
+      <WeeklyChallenges />
       <InSeason owned={owned} />
     </Page>
   )

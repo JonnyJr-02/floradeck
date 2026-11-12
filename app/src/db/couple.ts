@@ -15,6 +15,7 @@ export interface Profile {
 export const PROFILE_COLOURS = ['#a83e2b', '#c9a24a', '#3d5fb8', '#5b7a3a', '#b45f8a', '#2f6f73'] as const
 
 const PROFILE_KEY = 'profile'
+const GIFTS_GIVEN_KEY = 'gifts-given'
 const PARTNER_KEY = 'partner'
 
 async function readProfile(database: FloraDeckDB): Promise<Profile | null> {
@@ -122,6 +123,10 @@ export async function createGift(
       imageType: image.type,
     }
     await database.sentGifts.add(record)
+    // The weekly «Regala una carta» challenge counts gifts by date (the last 50 are enough).
+    const log = await database.settings.get(GIFTS_GIVEN_KEY)
+    const dates = Array.isArray(log?.value) ? (log.value as string[]) : []
+    await database.settings.put({ key: GIFTS_GIVEN_KEY, value: [...dates, gift.sentAt].slice(-50) })
     if (card.photoId) await database.photos.delete(card.photoId)
     await database.cards.delete(card.id)
     const coverKey = `cover:${card.speciesId}`
@@ -199,6 +204,14 @@ export async function importGift(gift: GiftInfo, photo: PreparedPhoto, database:
     await database.importedGifts.add(record)
     return card
   })
+}
+
+/** When gifts were made (ISO dates), for the weekly challenges; undefined while loading. */
+export function useGiftsGiven(): string[] | undefined {
+  return useLiveQuery(async () => {
+    const row = await defaultDb.settings.get(GIFTS_GIVEN_KEY)
+    return Array.isArray(row?.value) ? (row.value as string[]) : []
+  }, [])
 }
 
 /** Once the link has left the phone (share sheet, copy or file) the gift is not kept: the chat has it. */
