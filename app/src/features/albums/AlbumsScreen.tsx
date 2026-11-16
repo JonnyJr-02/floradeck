@@ -5,7 +5,7 @@ import { albumById, albums, species, speciesById, totalSpecies } from '../../dom
 import { foundPerAlbum, speciesFound } from '../../domain/collection'
 import { plateUrl } from '../../domain/plates'
 import { IN_APP, Page, ScreenHeader } from '../../ui/Page'
-import { GrandFinale, useGrandFinale } from './GrandFinale'
+import { Celebrations } from './Celebrations'
 import { WeeklyChallenges } from './WeeklyChallenges'
 
 const albumsOf = (speciesId: string) => speciesById(speciesId)?.albums
@@ -52,8 +52,6 @@ export function AlbumsScreen() {
   const ownedIds = new Set(owned.map((card) => card.speciesId))
   const legendaryFound = albums.filter((album) => ownedIds.has(album.legendarySpeciesId)).length
   const duplicates = duplicateCount(owned.filter((card) => speciesById(card.speciesId)))
-  // Every album complete: the finale, once, also when the last card came another way (a gift).
-  const finale = useGrandFinale(cards !== undefined && total === totalSpecies)
 
   return (
     <Page>
@@ -102,7 +100,8 @@ export function AlbumsScreen() {
       </ol>
       <WeeklyChallenges />
       <InSeason owned={owned} />
-      {finale.show ? <GrandFinale onClose={finale.close} /> : null}
+      {/* An album completed another way (a gift) is celebrated here, then the finale when due. */}
+      <Celebrations />
     </Page>
   )
 }

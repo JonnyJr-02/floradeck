@@ -10,6 +10,7 @@ import { BackHeader, IN_APP, Page } from '../../ui/Page'
 import { Segmented } from '../../ui/Segmented'
 import { AllPlantsSection } from './AllPlantsSection'
 import { BackupSection, TestCardsSection } from './BackupSection'
+import { ResetSection } from './ResetSection'
 import { setThemePreference, useThemePreference } from '../../ui/theme'
 
 const THEME_OPTIONS = [
@@ -155,6 +156,8 @@ export function SettingsScreen() {
       <Section id="settings-about" title="Informazioni">
         <p className="mt-2 text-muted">FloraDeck {__APP_VERSION__}</p>
       </Section>
+
+      <ResetSection />
     </Page>
   )
 }

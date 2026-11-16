@@ -1,50 +1,12 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { createPortal } from 'react-dom'
 import { useCards, useCovers, usePhotos } from '../../db/collection'
-import { albums, speciesById, totalSpecies } from '../../domain/catalog'
-import { speciesFound } from '../../domain/collection'
+import { albums, totalSpecies } from '../../domain/catalog'
 import { plateUrl } from '../../domain/plates'
 import { PhotoThumb } from '../../ui/PhotoThumb'
 import { GOLD_COLOURS, Petals } from './Petals'
 
-const SEEN_KEY = 'floradeck:grand-finale'
 const FINALE_COLOURS = [...GOLD_COLOURS, '#c8322a', '#e7a3b8', '#3d5fb8']
-
-function seen(): boolean {
-  try {
-    return localStorage.getItem(SEEN_KEY) === 'seen'
-  } catch {
-    return true
-  }
-}
-
-function markSeen() {
-  try {
-    localStorage.setItem(SEEN_KEY, 'seen')
-  } catch {
-    // Private mode: the finale may come back once more, harmless.
-  }
-}
-
-/** Every catalogue species found: every album complete. */
-export function useAllComplete(): boolean {
-  const cards = useCards()
-  return cards !== undefined && speciesFound(cards, speciesById) === totalSpecies
-}
-
-/**
- * The finale shows once, the first time every album is complete and `ready` says the moment has
- * come (the last slot filled, or the album list opened afterwards).
- */
-export function useGrandFinale(ready: boolean): { show: boolean; close: () => void } {
-  const [show, setShow] = useState(false)
-  useEffect(() => {
-    if (!ready || seen()) return
-    markSeen()
-    setShow(true)
-  }, [ready])
-  return { show, close: () => setShow(false) }
-}
 
 /** Fan positions of the six legendary cards, centre out (x, y in rem; rotation in degrees). */
 function fan(i: number, count: number): CSSProperties {

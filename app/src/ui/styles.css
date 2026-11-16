@@ -1474,6 +1474,75 @@
     letter-spacing: -0.02em;
   }
 
+  /*
+   * One album complete (choreograph skill): the album's colour fills the screen (300 ms fade),
+   * five of the player's photos rise one after another (80 ms apart, 600 ms ease-out), then the
+   * words, and petals in the album's tones. Transform and opacity only; reduced motion fades.
+   */
+  .celebration {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 2.25rem;
+    padding: calc(2rem + env(safe-area-inset-top, 0px)) 1.5rem calc(2rem + env(safe-area-inset-bottom, 0px));
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--ink);
+    text-align: center;
+    animation: fade 300ms ease-out both;
+  }
+  .celebration__cards {
+    display: flex;
+    justify-content: center;
+  }
+  .celebration__card {
+    width: 4.75rem;
+    aspect-ratio: 3 / 4;
+    margin-inline: -0.5rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: rgb(255 255 255 / 0.4);
+    box-shadow:
+      0 0 0 2px rgb(255 255 255 / 0.85),
+      0 12px 26px rgb(0 0 0 / 0.28);
+    opacity: 0;
+    transform: translateY(2rem) rotate(var(--r));
+    animation: celebration-card 600ms var(--ease-out) both;
+    animation-delay: calc(200ms + var(--i) * 80ms);
+  }
+  .celebration__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .celebration__words > * {
+    animation: rise 400ms var(--ease-out) both;
+    animation-delay: calc(650ms + var(--i, 0) * 70ms);
+  }
+  .celebration__title {
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .celebration__button {
+    min-height: 3rem;
+    padding: 0.875rem 2.25rem;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .celebration__button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+
   /* Someone else's good photo of the species, in the sheet. */
   .reference {
     overflow: hidden;
@@ -1667,6 +1736,15 @@
     .card-view--reveal[data-rarity="legendary"] .reveal-item {
       animation: fade 300ms ease 200ms both;
     }
+    .celebration__card {
+      opacity: 1;
+      transform: rotate(var(--r));
+      animation: fade 300ms ease both;
+      animation-delay: calc(100ms + var(--i) * 50ms);
+    }
+    .celebration__words > * {
+      animation: fade 300ms ease 300ms both;
+    }
     .finale__card {
       opacity: 1;
       transform: translate(var(--x), var(--y)) rotate(var(--r));
@@ -1712,6 +1790,12 @@
   to {
     clip-path: inset(0 round 0);
     transform: scale(1);
+  }
+}
+@keyframes celebration-card {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--r));
   }
 }
 @keyframes finale-card {

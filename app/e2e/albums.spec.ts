@@ -124,10 +124,16 @@ test('a completed album says so on the list and on its page', async ({ page }) =
     .filter((entry) => entry.albums.some((m) => m.albumId === 'blu-azzurri'))
     .map((entry) => ({ speciesId: entry.id }))
   await seed(page, ids)
+  // Its own full-screen celebration first, once.
+  const celebration = page.getByRole('dialog', { name: 'Blu e azzurri' })
+  await expect(celebration.getByText('Album completato')).toBeVisible()
+  await celebration.getByRole('button', { name: 'Che bello!' }).click()
+  await expect(celebration).toBeHidden()
   const row = page.getByRole('link', { name: /Blu e azzurri/ })
   await expect(row.getByText('Completo')).toBeVisible()
   await row.click()
   await expect(page.getByText(/Album completato: hai trovato tutte le \d+ specie/)).toBeVisible()
+  await expect(page.getByRole('dialog')).toHaveCount(0)
 })
 
 test('backup: save, wipe the phone, restore', async ({ page }, testInfo) => {
@@ -230,9 +236,21 @@ test('the album screen shows this week’s three challenges, and a find ticks on
   await expect(challenges.getByText(/[1-3] di 3/).first()).toBeVisible()
 })
 
-test('every album complete: gold albums and a full-screen finale, once', async ({ page }, testInfo) => {
+test('every album complete: one celebration per album, then the finale, once; then a reset', async ({ page }, testInfo) => {
+  test.setTimeout(90_000)
   const catalogue = JSON.parse(await readFile(new URL('../../catalog/species.json', import.meta.url), 'utf8')) as Array<{ id: string }>
   await seed(page, catalogue.map((entry) => ({ speciesId: entry.id })))
+  for (const name of ['Fiori bianchi', 'Fiori gialli', 'Fiori rosa', 'Rossi e arancio', 'Viola e lilla', 'Blu e azzurri']) {
+    const celebration = page.getByRole('dialog', { name })
+    await expect(celebration.getByText('Album completato')).toBeVisible()
+    if (testInfo.project.name === 'android' && name === 'Fiori gialli') {
+      await settled(page)
+      const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze()
+      expect(results.violations.map((v) => v.id)).toEqual([])
+    }
+    await celebration.getByRole('button', { name: 'Che bello!' }).click()
+    await expect(celebration).toBeHidden()
+  }
   const finale = page.getByRole('dialog', { name: 'Tutti gli album completati!' })
   await expect(finale).toBeVisible()
   await expect(finale.getByText('210 specie su 210')).toBeVisible()
@@ -246,5 +264,13 @@ test('every album complete: gold albums and a full-screen finale, once', async (
   await expect(page.locator('.album-row[data-complete]')).toHaveCount(6)
   await page.reload()
   await expect(page.getByRole('heading', { level: 1, name: 'Album' })).toBeVisible()
-  await expect(page.getByRole('dialog', { name: 'Tutti gli album completati!' })).toHaveCount(0)
+  await expect(page.getByRole('dialog')).toHaveCount(0)
+
+  // «Azzera tutti i progressi», at the bottom of Impostazioni.
+  await page.goto('./impostazioni')
+  await page.getByRole('button', { name: 'Azzera tutti i progressi' }).click()
+  await page.getByRole('dialog', { name: 'Azzerare tutti i progressi?' }).getByRole('button', { name: 'Sì, azzera tutto' }).click()
+  await expect(page).toHaveURL(/\/album$/)
+  await expect(page.getByText('0 specie trovate su 210, in 6 album')).toBeVisible()
+  await expect(page.locator('.album-row[data-complete]')).toHaveCount(0)
 })
